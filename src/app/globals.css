@@ -1,0 +1,200 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0e1a;
+  --foreground: #f0f0f0;
+  --sky-top: #0a1628;
+  --sky-bottom: #1a3a5c;
+  --gold: #c8a45e;
+  --navy: #0d1b2a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-gold: var(--gold);
+  --color-navy: var(--navy);
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
+}
+
+/* NOTE: deliberately no bare universal margin/padding reset here. Unlayered
+   rules outrank Tailwind's layered utilities, so such a reset silently kills
+   every padding and margin utility on the site. Preflight already handles it. */
+
+/* Lenis owns the scroll — native smooth scrolling would fight it. */
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+.font-display {
+  font-family: var(--font-display), Georgia, serif;
+  font-weight: 400;
+}
+
+/* ---------- cinematic hero ---------- */
+
+.hero-vignette {
+  background:
+    radial-gradient(ellipse 88% 74% at 50% 46%, transparent 42%, rgba(4, 6, 12, 0.5) 82%, rgba(3, 5, 10, 0.82) 100%);
+}
+
+/* Static turbulence, rasterised once. Breaks up the gradients so nothing bands. */
+.hero-grain {
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.hero-drift {
+  animation-name: hero-drift;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  will-change: transform;
+}
+
+@keyframes hero-drift {
+  from {
+    transform: translate3d(-2.5%, 0, 0);
+  }
+  to {
+    transform: translate3d(2.5%, -1.5%, 0);
+  }
+}
+
+.hero-trace {
+  animation: hero-trace 2.6s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+@keyframes hero-trace {
+  0% {
+    transform: translateY(-100%);
+  }
+  60%,
+  100% {
+    transform: translateY(360%);
+  }
+}
+
+/* ---------- boarding pass ---------- */
+
+/* Rounded card with the ticket's own corner rhythm. The side notches at the
+   perforation are punched by positioned circles in the component, matching the
+   page background. */
+.pass-shape {
+  border-radius: 18px;
+}
+
+/* ---------- hidden route ---------- */
+
+/* Slow drifting polar light. Deliberately the only moving colour on the site,
+   so the secret reveal feels unlike anything else here. */
+.secret-aurora {
+  background:
+    radial-gradient(ellipse 52% 38% at 22% 26%, rgba(86, 214, 178, 0.5), transparent 62%),
+    radial-gradient(ellipse 44% 34% at 76% 22%, rgba(120, 156, 255, 0.42), transparent 64%),
+    radial-gradient(ellipse 60% 30% at 50% 82%, rgba(200, 164, 94, 0.28), transparent 68%);
+  filter: blur(46px);
+  animation: secret-aurora 15s ease-in-out infinite alternate;
+}
+
+@keyframes secret-aurora {
+  from {
+    transform: translate3d(-3%, -2%, 0) scale(1.04);
+  }
+  to {
+    transform: translate3d(3%, 2%, 0) scale(1.14);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-drift,
+  .hero-trace,
+  .secret-aurora {
+    animation: none;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--navy);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gold);
+  border-radius: 3px;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.glass-dark {
+  background: rgba(10, 14, 26, 0.6);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Lumora Hero Styles */
+.liquid-glass {
+  background: rgba(255, 255, 255, 0.01);
+  background-blend-mode: luminosity;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: none;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.liquid-glass::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.4px;
+  background: linear-gradient(180deg,
+    rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.15) 20%,
+    rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%,
+    rgba(255,255,255,0.15) 80%, rgba(255,255,255,0.45) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+@keyframes train-bob {
+  0%, 100% { transform: translateY(0) scale(1.03); }
+  50% { transform: translateY(-6px) scale(1.03); }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}

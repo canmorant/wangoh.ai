@@ -1,0 +1,679 @@
+export interface CountryHubContent {
+  seoTitle: string;
+  seoDescription: string;
+  planningHeading: string;
+  essentialsHeading?: string;
+  citiesHeading?: string;
+  intro: string[];
+  essentials?: { title: string; body: string }[];
+  routeIdeas: {
+    title: string;
+    duration: string;
+    cities: string[];
+    description: string;
+  }[];
+}
+
+const HUBS: Record<string, CountryHubContent> = {
+  JP: {
+    seoTitle: "Japonya Gezi Rehberi: 8 Şehir ve Rota Planı",
+    seoDescription:
+      "Japonya gezi rehberi: Tokyo, Kyoto, Osaka, Kobe, Okinawa, Hiroshima, Nara ve Sapporo için kapsamlı şehir yazıları, ulaşım ve rota önerileri.",
+    planningHeading: "Japonya rotası nasıl kurulur?",
+    intro: [
+      "Japonya'yı tek bir uzun kontrol listesi gibi değil, birbirini tamamlayan bölgesel duraklar olarak planlamak daha iyi sonuç verir. Tokyo büyük şehir ritmini; Kyoto tarihî mahalleleri; Osaka gündelik mutfağı; Kobe liman, sake ve kaplıcaları; Hiroshima hafıza ile ada doğasını; Nara eski başkent dokusunu; Sapporo Hokkaido'nun iklimini, Okinawa ise ayrı Ryukyu tarihini ve mercan denizlerini açar.",
+      "İlk yolculukta Honshu üzerindeki Tokyo–Kyoto–Osaka omurgasını hızlı trenle bağlayın; Kobe ve Nara'yı Kansai ayağına, Hiroshima'yı batıya devam eden rotaya yerleştirin. Sapporo ile Okinawa haritanın iki iklim ucudur: ikisini de kısa Honshu programına sıkıştırmak yerine ayrı uçuşlu bölge ayağı sayın.",
+    ],
+    routeIdeas: [
+      {
+        title: "İlk Japonya yolculuğu",
+        duration: "9–11 gün",
+        cities: ["Tokyo", "Kyoto", "Osaka"],
+        description:
+          "Tokyo'da dört gün, Kyoto'da üç gün, Osaka'da iki gün. Nara'yı Kyoto veya Osaka'dan günübirlik ekleyin.",
+      },
+      {
+        title: "Kansai ve Seto İç Denizi",
+        duration: "10–12 gün",
+        cities: ["Kyoto", "Nara", "Osaka", "Kobe", "Hiroshima"],
+        description:
+          "Tapınaklardan sokak mutfağına, Kobe'nin liman ve sake kültüründen Barış Anıtı Parkı ile Miyajima'ya uzanan dengeli batı rotası.",
+      },
+      {
+        title: "Ryukyu adası yolculuğu",
+        duration: "5–7 gün",
+        cities: ["Okinawa"],
+        description:
+          "Naha ve Shuri'den başlayıp Onna, Churaumi, Nakijin ve Yanbaru'ya ilerleyin. Miyako ile Ishigaki'yi aynı ana ada rotası sanmayın; onlar ayrı uçuş ayağıdır.",
+      },
+      {
+        title: "Kışın kuzeye",
+        duration: "5–7 gün",
+        cities: ["Sapporo"],
+        description:
+          "Sapporo'yu Otaru veya Jozankei ile birleştirin. Festival döneminde uçuş ve konaklamayı çok önceden planlayın.",
+      },
+    ],
+  },
+  US: {
+    seoTitle: "Amerika Gezi Rehberi: Şehirler, Ulaşım ve Pratik Bilgiler",
+    seoDescription:
+      "New York, Los Angeles, Miami, Chicago, San Francisco ve Las Vegas için güncel Türkçe rehberler; vergi, bahşiş, ulaşım, otel ve rota bilgileri.",
+    planningHeading: "Amerika rotası nasıl kurulur?",
+    essentialsHeading: "Amerika'ya gitmeden önce bilinmesi gerekenler",
+    citiesHeading: "Amerika Birleşik Devletleri'nde gezilecek şehirler",
+    intro: [
+      "Amerika Birleşik Devletleri'ni tek bir ülke gezisi gibi değil, kıta ölçeğinde ayrı bölgesel yolculuklar gibi düşünün. New York ve Chicago toplu taşımayla rahat şehir tatilleri sunarken Los Angeles'ta mahalle seçimi ile trafik, Miami'de ana kara ile Miami Beach ayrımı, Las Vegas'ta ise otel toplam maliyeti yolculuğun şeklini belirler.",
+      "Bu altı şehri tek rotaya sıkıştırmak çoğu gezgin için iyi fikir değildir. Kıtalar arası uçuşunuzu bir giriş şehrine bağlayın; iç hat uçuşu ekleyecekseniz bagaj, havalimanına gidiş ve güvenlik için kaybolan yarım günü de hesaba katın. Kaliforniya ikilisi coğrafi olarak anlamlıdır; New York–Miami veya Chicago–Las Vegas ise karayolu rotası değil, ayrı bir uçuş ayağıdır.",
+    ],
+    essentials: [
+      {
+        title: "Etiket fiyatı son fiyat olmayabilir",
+        body: "Satış vergisi eyalet ve yerel yönetimlere göre değişir ve çoğu mağaza/menü fiyatına kasada eklenir. Otel ve etkinlik biletlerinde zorunlu ücretler artık önden görünen toplam fiyata dahil edilmelidir; devlet vergileri ile seçtiğiniz ek hizmetler son adımda eklenebilir.",
+      },
+      {
+        title: "Bahşişi faturadan sonra hesaplayın",
+        body: "Masa servisinde vergi öncesi tutarın yüzde 15–20'si yaygın gelenektir; bar, taksi ve otel hizmetleri farklıdır. Counter tabletindeki öneri zorunluluk değildir. Önce service charge veya automatic gratuity satırı var mı kontrol edin; aynı hizmet için ikinci kez tam bahşiş bırakmayın.",
+      },
+      {
+        title: "Provizyon çekim değildir",
+        body: "Otel ve kiralık araç şirketi, oda/araç bedelinden daha yüksek bir tutarı geçici olarak kullanılabilir limitten düşebilir. Debit kartta bu bloke doğrudan bakiyeyi bağlar ve çözülmesi bankaya göre sürebilir; yeterli limitli kredi kartı genellikle daha rahattır.",
+      },
+      {
+        title: "Telefon bölgesini aceleyle değiştirmeyin",
+        body: "Apple hesap ülkesini değiştirmek kalan bakiyeyi harcamayı, bazı abonelikleri bitirmeyi, Aile Paylaşımı'ndan ayrılmayı ve geçerli ödeme yöntemi girmeyi gerektirebilir. Bir uygulama Türkiye mağazasında yoksa önce web/QR ödeme, misafir kullanımı, fiziksel kart veya temassız banka kartı alternatifine bakın.",
+      },
+      {
+        title: "Araba kararı şehir bazındadır",
+        body: "New York, Chicago ve San Francisco merkezinde araç yük olur. Los Angeles'ta rota dağınıksa faydalı; Miami'de plaj dışı planlara, Las Vegas'ta şehir dışı doğa gününe göre değişir. Kiralamadan önce otel parkı, vale, elektronik geçiş ve şirketin toll programı ücretini birlikte karşılaştırın.",
+      },
+      {
+        title: "Vize durumunu resmî kaynaktan kontrol edin",
+        body: "Türkiye, ABD Visa Waiver Program ülke listesinde değildir; olağan turist seyahati için ESTA varsayımı yapmayın. Başvuru ve giriş koşulları kişiye göre değişebildiğinden yalnız U.S. Department of State ve resmî temsilcilik sayfalarındaki güncel yönlendirmeyi izleyin.",
+      },
+    ],
+    routeIdeas: [
+      {
+        title: "İlk büyük şehir yolculuğu",
+        duration: "5–7 gün",
+        cities: ["New York"],
+        description:
+          "Arabasız, mahalle odaklı ve yoğun bir ilk Amerika deneyimi. Başka şehir eklemek yerine Brooklyn ve Queens için zaman bırakmak geziyi daha dengeli yapar.",
+      },
+      {
+        title: "Kaliforniya ikilisi",
+        duration: "9–12 gün",
+        cities: ["San Francisco", "Los Angeles"],
+        description:
+          "San Francisco'da araçsız başlayıp Los Angeles ayağında araç kiralayın. Kıyı yolunu sürmek istiyorsanız tek güne sıkıştırmayın; yol durumunu ve kapanmaları ayrıca kontrol edin.",
+      },
+      {
+        title: "Tek şehir, güçlü tema",
+        duration: "4–6 gün",
+        cities: ["Chicago", "Miami", "Las Vegas"],
+        description:
+          "Mimari ve yemek için Chicago, kış güneşi ve Latin kültürü için Miami, gösteriler ile çöl doğası için Las Vegas. Bunlar birbirine yakın duraklar değil; ilginize göre birini seçin.",
+      },
+    ],
+  },
+  TH: {
+    seoTitle: "Tayland Gezi Rehberi: Bangkok, Adalar ve Rota Planı",
+    seoDescription:
+      "Tayland gezi rehberi: Bangkok, Chiang Mai, Phuket, Krabi, Koh Samui ve Ayutthaya için güncel ulaşım, mevsim, ödeme, hukuk ve rota bilgileri.",
+    planningHeading: "Tayland rotası nasıl kurulur?",
+    essentialsHeading: "Tayland'a gitmeden önce bilinmesi gerekenler",
+    citiesHeading: "Tayland'da gezilecek yerler ve şehir rehberleri",
+    intro: [
+      "Tayland'ı Bangkok'a birkaç tapınak, kuzeye bir fil turu ve güneye tek tip bir plaj tatili eklenen paket gibi planlamayın. Bangkok nehir ile raylı sistemlerin birlikte okunduğu büyük bir metropol; Chiang Mai dağlarla çevrili kuzey kültürü; Phuket ve Krabi Andaman Denizi'nin mevsimine bağlı iki ayrı üs; Koh Samui ise Tayland Körfezi'nde farklı yağış takvimi olan bir ada. Ayutthaya da yalnız fotoğraf molası değil, nehirler arasındaki eski başkentin katmanlarını anlatan bağımsız bir duraktır.",
+      "İlk yolculuk için iki veya üç coğrafya yeterlidir. Bangkok'u başlangıç düğümü yapıp kuzeye uçabilir ya da trenle ilerleyebilir; deniz ayağında ise Phuket–Krabi ikilisini karadan/tekneyle birleştirebilirsiniz. Koh Samui'yi sırf haritada güneyde göründüğü için Phuket'in yanına koymak zaman kaybettirir: iki kıyı arasında kara, iskele ve feribot ya da ayrı uçuş gerekir. Muson takvimi de aynı değildir; önce ayı, sonra doğru kıyıyı seçin.",
+    ],
+    essentials: [
+      {
+        title: "TDAC'yi resmî siteden doldurun",
+        body: "Tayland vatandaşı olmayan yolcular ülkeye girişten önce Thailand Digital Arrival Card kaydı yapmalıdır. Alan adı tdac.immigration.go.th olmayan ücretli aracı sitelere güvenmeyin. 2026'da yeni bir göçmenlik uygulamasına geçiş duyurulsa da resmî geçiş tamamlanana kadar TDAC kuralını izleyin; vize ve pasaport koşulunu ayrıca Tayland'ın resmî temsilciliklerinden doğrulayın.",
+      },
+      {
+        title: "PromptPay logosu yabancı kart demek değildir",
+        body: "Tezgâhlardaki QR kodlar çoğunlukla yerel PromptPay ağına bağlıdır; Türk bankacılık uygulamasının bu kodu okuyabilmesi beklenmez. Kartınızı büyük işletmeler için, küçük banknotları pazar, tekne ve songthaew için hazırlayın. Resmî turist cüzdanı hizmeti varsa kayıt koşulunu yerinde kontrol edin ama tüm bütçeyi ona bağlamayın. ATM veya POS yabancı para dönüşümü önerirse hesabın THB olarak kesilmesini tercih etmek genellikle daha şeffaftır.",
+      },
+      {
+        title: "Doğru uygulamalar: Grab, Bolt, LINE ve harita",
+        body: "Grab şehir ve havalimanlarında en yaygın çağırma uygulamalarından; Bolt kapsaması bölgeye göre değişir. Bangkok toplu taşıması için Google Maps yanında BTS ve MRT'nin resmî sayfalarını, ada/tekne günlerinde operatör duyurularını kullanın. LINE rezervasyon ve işletme iletişiminde sık görülür. Uygulamaları Türkiye'deyken indirin; hesap ülkesini değiştirmek yerine web, telefon veya otel resepsiyonu alternatifini kullanın.",
+      },
+      {
+        title: "Scooter kiralamak ehliyet yerine geçmez",
+        body: "Tayland makamları turistin Tayland'da geçerli sürücü belgesi taşımasını ister; 1949 Cenevre Sözleşmesi kapsamındaki uluslararası sürücü belgesi kabul edilir ve araç sınıfı eşleşmelidir. Otomobil yetkisi motosiklet sürme hakkı vermez. Kask, alkol, hasar kaydı ve sigortanın motosiklet kullanımını kapsayıp kapsamadığı gerçek risklerdir; kiralayıcının anahtarı vermesi yasal veya sigortalı olduğunuzu kanıtlamaz.",
+      },
+      {
+        title: "Tek bir 'Tayland musonu' yoktur",
+        body: "Bangkok, Chiang Mai ve Ayutthaya'da sıcak ve yağış; kuzeyde ayrıca şubat–nisan pus riski planı etkiler. Phuket ile Krabi'nin Andaman kıyısında mayıs–ekim döneminde deniz daha değişken olabilir. Koh Samui'nin Körfez düzeninde ise özellikle ekim sonu–aralık yağışlı ve dalgalı dönem öne çıkar. Kırmızı bayrakta yüzmeyin; tekne gününü yolculuğun son saatine sıkıştırmayın.",
+      },
+      {
+        title: "E-sigara ve keyif amaçlı kenevir tuzağı",
+        body: "E-sigara ve vape ürünlerinin ithali, satışı ve bulundurulması Tayland'da yasaktır. Haziran 2025'ten beri kenevir çiçeği kontrollü madde olarak tıbbi reçeteye bağlanmıştır; turistik caddede dükkân görmeniz serbestçe satın alabileceğiniz anlamına gelmez. Ürünü ülke sınırından geçirmeyin. Alkol için yasal yaş 20'dir; tapınak, toplu taşıma alanı ve bazı kamusal yerlerde satış/tüketim kısıtları vardır.",
+      },
+      {
+        title: "Tapınakta kıyafet ve beden dili önemlidir",
+        body: "Omuz ile dizleri örten kıyafet taşıyın, kutsal alana girerken ayakkabıyı çıkarın ve ayak tabanınızı Buda heykeline ya da insana doğrultmayın. Birinin başına dokunmayın. Buda tasvirini yalnız dekor veya uygunsuz poz malzemesi gibi kullanmayın. Kraliyet ve inançla ilgili yasalar ile toplumsal hassasiyetler ciddidir; tartışmayı turistik eğlenceye çevirmeyin.",
+      },
+      {
+        title: "Sigorta poliçesindeki istisnaları okuyun",
+        body: "Seyahat sigortasında motosiklet, dalış, kaya tırmanışı, alkol ve mevcut hastalık istisnaları bulunabilir. Ada transferlerinde hava kaynaklı iptal ve kaçırılan ayrı biletli uçuş da her poliçede karşılanmaz. Yalnız teminat tutarına değil, aktivite ile araç sınıfına ve feribot–uçuş bağlantısının aynı rezervasyonda olup olmadığına bakın.",
+      },
+      {
+        title: "Pazarlık ile dolandırıcılığı ayırın",
+        body: "Turistik pazarda nazik pazarlık olağandır; taksimetrenin reddedilmesi, 'tapınak bugün kapalı' bahanesi, ücretsiz şehir turu karşılığında kuyumcu/terzi ziyareti ve belirsiz tekne paketleri değildir. Fiyatı, güzergâhı ve bekleme süresini binmeden önce yazılı gösterin. Pasaportu scooter teminatı olarak bırakmak yerine kopya ve para depozitosu seçeneğini sorun; hasarı teslimde video ile kaydedin.",
+      },
+    ],
+    routeIdeas: [
+      {
+        title: "İlk Tayland yolculuğu",
+        duration: "10–12 gün",
+        cities: ["Bangkok", "Chiang Mai", "Krabi"],
+        description:
+          "Bangkok'ta dört, Chiang Mai'de üç ve Ao Nang/Railay merkezli Krabi'de dört gece. Büyük şehir, kuzey kültürü ve Andaman kıyısı birbirini tekrar etmez.",
+      },
+      {
+        title: "Andaman kıyısı",
+        duration: "8–10 gün",
+        cities: ["Phuket", "Krabi"],
+        description:
+          "Phuket'te doğru plaj üssünü seçin, ardından Krabi'de Ao Nang veya Railay'a geçin. Feribotu hava ve deniz durumuna göre esnek bırakın; iki yerde de aynı ada turunu satın almayın.",
+      },
+      {
+        title: "Bangkok, tarih ve Körfez",
+        duration: "8–11 gün",
+        cities: ["Bangkok", "Ayutthaya", "Koh Samui"],
+        description:
+          "Ayutthaya'yı Bangkok'tan günübirlik veya bir gecelik ekleyin; sonra Koh Samui'ye uçun. Samui'nin yağış takvimini Phuket/Krabi ile aynı sanmayın.",
+      },
+    ],
+  },
+  IT: {
+    seoTitle: "İtalya Gezi Rehberi: Şehirler, Ulaşım ve Rota Planı",
+    seoDescription:
+      "İtalya gezi rehberi: Roma, Venedik, Floransa, Milano, Napoli ve Amalfi Kıyısı için güncel bilet, tren, ZTL, yemek ve rota bilgileri.",
+    planningHeading: "İtalya rotası nasıl kurulur?",
+    essentialsHeading: "İtalya'ya gitmeden önce bilinmesi gerekenler",
+    citiesHeading: "İtalya'da gezilecek şehirler ve kıyı rotaları",
+    intro: [
+      "İtalya'yı Roma, Floransa ve Venedik'i birer gecede işaretleyen hızlı tren yarışına çevirmeyin. Roma antik kent ve Vatikan için en az dört gün; Floransa yoğun müzeler için üç; Venedik lagün ritmini görmek için iki gece ister. Milano kuzeyin sanat–tasarım kapısı, Napoli yaşayan tarih ve Campania mutfağının merkezi, Amalfi Kıyısı ise istasyonsuz ve mevsimsel deniz ulaşımına bağlı ayrı bir lojistik bölgedir.",
+      "Hızlı tren Roma–Floransa–Milano–Venedik omurgasında etkilidir; Napoli güneye aynı ağla bağlanır. Amalfi Kıyısı'na son adım Salerno, Napoli/Sorrento ve feribot–otobüs kombinasyonuyla çözülür. Şehir sayısından önce gün sayısını belirleyin: 8–10 günde en fazla üç ana üs, 12–14 günde dört durak sürdürülebilir. Müze bileti kadar otel–istasyon ve son feribot bağlantısını da rota kararı sayın.",
+    ],
+    essentials: [
+      {
+        title: "Vize ve 2026 sınır sistemini resmî kaynaktan kontrol edin",
+        body: "Umuma mahsus Türk pasaportuyla turistik seyahatte genel olarak Schengen vizesi gerekir; kişisel pasaport/vize durumunuzu İtalya Dışişleri'nin Visa for Italy aracı ve yetkili konsolosluktan doğrulayın. EES, Schengen dış sınırlarında 10 Nisan 2026'dan beri tam faaldir. ETIAS ise Ağustos 2026 itibarıyla henüz başvuru almıyor; 2026'nın son çeyreğinde başlaması bekleniyor ve kesin tarih resmî kanaldan duyurulacak. Ücret isteyen erken ETIAS sitelerinden kaçının.",
+      },
+      {
+        title: "Hızlı tren ile bölgesel trenin bilet mantığı farklıdır",
+        body: "Trenitalia ve Italo hızlı trenlerinde bilet belirli tren/saat ve çoğunlukla koltuğa bağlıdır; ucuz tarifenin değişiklik koşulu kısıtlı olabilir. Bölgesel kâğıt bileti binmeden doğrulatın. Trenitalia'nın güncel Dijital Bölgesel Bileti tarifeli kalkışta otomatik doğrulanır; yine de bilet ekranındaki güncel talimatı esas alın ve kimlik taşıyın. Grev/bakım gününde resmî operatör duyurusuna bakın.",
+      },
+      {
+        title: "ZTL kameraları navigasyonun önerisini dinlemez",
+        body: "Roma, Floransa, Milano, Napoli ve küçük kıyı kasabalarında kamera denetimli sınırlı trafik bölgeleri vardır; saat ve izin kuralı belediyeye göre değişir. Merkez oteli rezervasyonu otomatik giriş hakkı değildir. Otel veya garajın plakanızı yetkili sisteme nasıl bildireceğini yazılı doğrulamadan tabelayı geçmeyin. Aracı şehir merkezinde değil kırsal ayağa çıkarken almak daha kolaydır.",
+      },
+      {
+        title: "Türk ehliyetiyle araç için IDP gereksinimini doğrulayın",
+        body: "AB dışı ehliyetle İtalya'da araç kullanırken uluslararası sürücü belgesi veya resmî çeviri gerekebilir; araç sınıfı eşleşmelidir. Kiralama şirketinin aracı teslim etmesi trafik mevzuatı ve sigortanın tüm koşullarını karşıladığınız anlamına gelmez. ZTL, park rengi, otoyol gişesi ve yakıt politikasını birlikte okuyun.",
+      },
+      {
+        title: "Coperto, servizio ve bahşiş aynı kalem değildir",
+        body: "Coperto masa/ekmek düzeni için kişi başı bedel, servizio ise faturaya eklenen hizmet ücretidir; menüde açıkça gösterilmelidir. Bahşiş ABD'deki gibi zorunlu yüzde değildir. Önce faturadaki iki satırı kontrol edin, memnun kaldıysanız küçük yuvarlama veya nakit ek bırakın. Meydan terası, bar tezgâhına göre farklı fiyat uygulayabilir.",
+      },
+      {
+        title: "Kart yaygın, küçük nakit hâlâ işe yarar",
+        body: "Otel, müze ve restoranlarda kart yaygındır; küçük bar, pazar, otobüs bileti, kıyı teknesi ve tuvalet için euro nakit taşıyın. ATM veya POS Türk lirasına dönüşüm önerirse hesabın EUR olarak kesilmesini seçmek çoğunlukla daha şeffaftır; kendi bankanızın kur/komisyonunu bilin. Kartı alıp arka odaya götürmek yerine terminali görmeyi isteyin.",
+      },
+      {
+        title: "Turist vergisi oda fiyatından ayrı olabilir",
+        body: "Belediye konaklama vergisi şehir, tesis sınıfı, yaş ve gece sayısına göre değişir; rezervasyon ekranında dahil görünmeyebilir ve tesiste tahsil edilebilir. Eski blogdaki sabit tutarı kullanmayın. Otelden güncel kişi/gece tutarını, ödeme biçimini ve makbuzu sorun.",
+      },
+      {
+        title: "Resmî bilet alan adlarını önceden kaydedin",
+        body: "Kolezyum, Vatikan Müzeleri, Uffizi, Accademia, Duomo, Son Akşam Yemeği, Pompeii ve San Marco çevresinde reklamla öne çıkan benzer alan adları pahalı aracı olabilir. Müzenin kurumsal sayfasından satış kanalına ilerleyin. İsimli bilette pasaporttaki yazımı kullanın; ücretsiz/indirimli biletin Türk ziyaretçiye otomatik uygulanacağını varsaymayın.",
+      },
+      {
+        title: "Telefon hattında AB dolaşımını varsaymayın",
+        body: "Türkiye hattı AB 'roam like at home' kapsamına otomatik girmez; operatörünüzün İtalya paketini kontrol edin. Seyahat eSIM'i veri sağlar ama çoğu zaman İtalyan telefon numarası vermez. Tren, müze ve restoran rezervasyonlarını e-posta/WhatsApp ile yönetebilirsiniz; uygulama için hesap ülkesini değiştirmeden önce web veya misafir ödeme seçeneğini deneyin.",
+      },
+      {
+        title: "Grev ve çalışma duyurusuna bir gün önce bakın",
+        body: "Tren, yerel ulaşım ve havayolu grevleri programı etkileyebilir; bazı uzun mesafe trenlerinde garantili sefer listeleri yayımlanır. Söylenti hesabı yerine Ulaştırma Bakanlığı grev takvimi, Trenitalia/Italo ve yerel işletme duyurusunu izleyin. Ayrı biletli uçuş–tren–feribot arasında geniş pay bırakın.",
+      },
+    ],
+    routeIdeas: [
+      {
+        title: "İlk İtalya yolculuğu",
+        duration: "10–12 gün",
+        cities: ["Roma", "Floransa", "Venedik"],
+        description:
+          "Roma'da dört, Floransa'da üç, Venedik'te üç gece. Hızlı tren omurgasıyla ilerleyin; büyük müzeleri ve Vatikan'ı aynı günlere yığmayın.",
+      },
+      {
+        title: "Kuzeyde sanat ve tasarım",
+        duration: "7–9 gün",
+        cities: ["Milano", "Venedik", "Floransa"],
+        description:
+          "Milano'da üç, Venedik'te iki–üç, Floransa'da üç gece. Son Akşam Yemeği bileti rotanın tarihlerini belirleyen ilk rezervasyon olsun.",
+      },
+      {
+        title: "Roma ve Campania",
+        duration: "10–13 gün",
+        cities: ["Roma", "Napoli", "Amalfi Kıyısı"],
+        description:
+          "Roma'da dört, Napoli'de üç ve kıyıda dört–beş gece. Pompeii'yi Napoli ayağına, kıyı ulaşımını Salerno veya Sorrento kapısına göre yerleştirin.",
+      },
+      {
+        title: "Güneyde yemek ve deniz",
+        duration: "7–9 gün",
+        cities: ["Napoli", "Amalfi Kıyısı"],
+        description:
+          "Napoli'de tarih, pizza ve MANN için üç gün; Amalfi Kıyısı'nda tek üs üzerinden köy, yürüyüş ve feribot için dört–beş gece.",
+      },
+    ],
+  },
+  FR: {
+    seoTitle: "Fransa Gezi Rehberi: Şehirler, Trenler ve Rota Planı",
+    seoDescription:
+      "Fransa gezi rehberi: Paris, Nice, Lyon, Marsilya, Bordo ve Strazburg için güncel ulaşım, yemek, bilet, konaklama ve rota bilgileri.",
+    planningHeading: "Fransa rotası nasıl kurulur?",
+    essentialsHeading: "Fransa'ya gitmeden önce bilinmesi gerekenler",
+    citiesHeading: "Fransa'da gezilecek şehirler ve şehir rehberleri",
+    intro: [
+      "Fransa'yı yalnız Paris'e eklenen birkaç hızlı durak gibi planlamayın. Paris büyük müzeler ve mahalleler için başlı başına bir yolculuk; Lyon gastronomi ile Roma mirasını, Marsilya Akdeniz'in çok kültürlü liman kimliğini, Nice Côte d'Azur kıyılarını, Bordo şarap coğrafyasını, Strazburg ise Alsace'ın Fransız–Alman katmanlarını açar. Aynı ülke içinde iklim, mutfak ve kent ritmi belirgin biçimde değişir.",
+      "TGV ağı Paris'i Lyon, Marsilya, Bordo ve Strazburg'a hızlı bağlar; Nice daha uzun bir güneydoğu ayağıdır. Her hattın Paris'te aynı gardan kalkmadığını, OUIGO ile TGV INOUI'nin bagaj ve değişiklik koşullarının farklı olabildiğini unutmayın. 8–10 günde Paris ile tek bir bölge, 12–14 günde Paris ve iki ana üs dengelidir. Şehirleri haritadaki yakınlığa göre değil, tren süresi ile istediğiniz deneyime göre eşleştirin.",
+    ],
+    essentials: [
+      {
+        title: "Vize ve sınır sistemini resmî kanaldan doğrulayın",
+        body: "Umuma mahsus Türk pasaportuyla kısa turistik seyahatte genel olarak Schengen vizesi gerekir; pasaport türü ve kişisel durumunuza göre sonucu France-Visas'ın vize asistanından kontrol edin. EES, Schengen dış sınırlarında kısa süreli ziyaretçilerin giriş–çıkışını elektronik kaydeder. ETIAS ise Ağustos 2026 itibarıyla henüz çalışmıyor; başlangıç tarihi için yalnız Avrupa Birliği'nin resmî sayfasını izleyin ve erken başvuru sattığını söyleyen sitelere ödeme yapmayın.",
+      },
+      {
+        title: "TGV, OUIGO ve TER aynı bilet mantığıyla çalışmaz",
+        body: "TGV INOUI ile OUIGO belirli tren ve koltuğa bağlıdır; bagaj, istasyon, değişiklik ve iade şartı tarifeye göre değişebilir. TER bölgesel trenlerinde koltuk rezervasyonu çoğunlukla yoktur ve kurallar bölgeye göre farklılaşabilir. SNCF Connect e-bileti peronda ayrıca damgalanmaz; çevrimdışı indirin, bilette yazan yolcu kimliğiyle aynı kimliği taşıyın ve kalkıştan önce doğru garı kontrol edin.",
+      },
+      {
+        title: "Paris'e ait ulaşım kuralını bütün Fransa'ya taşımayın",
+        body: "Temassız banka kartı kullanımı şehirden şehre değişir: Lyon'da TCL ağında yaygınken Paris metrosunda 2026 yazında genel turnike ödeme yöntemi değildir; Strazburg'da açık ödeme sistemi henüz tam devrede değildir. Nice, Marsilya ve Bordo'nun kendi kart, uygulama ve doğrulama kuralları vardır. Biletinizi ilk binişte ve gerekiyorsa her aktarmada doğrulayın; aynı banka kartının grup bileti sayılacağını varsaymayın.",
+      },
+      {
+        title: "Restoran fiyatına vergi ve servis dahildir",
+        body: "Fransa'da menü fiyatı vergi ile servisi içerir; 'prix service compris' ibaresi bunu açıklar. Bahşiş zorunlu değildir, memnun kaldığınız serviste küçük nakit veya yuvarlama tercihtir. Yemekle birlikte musluk suyu için 'une carafe d'eau, s'il vous plaît' diyebilirsiniz; ücretsiz su sürahisi talebi şişe su siparişi değildir. Popüler küçük restoranlarda akşam rezervasyonu yapın ve pazar–pazartesi kapanışını kontrol edin.",
+      },
+      {
+        title: "Otomobil için ehliyet, ZFE ve Crit'Air birlikte düşünülür",
+        body: "Kısa ziyarette AB dışı ehliyet geçerli olmalı ve Fransızca değilse resmî çeviri veya uluslararası sürücü belgesiyle desteklenmelidir; IDP asıl ehliyetin yerine geçmez. Düşük emisyon bölgeleri şehir bazında farklı kural uygular ve yabancı plakalı araç da Crit'Air etiketine ihtiyaç duyabilir. Etiketi yalnız certificat-air.gouv.fr üzerinden önceden alın; kiralık araçla merkeze girmeden şirketten plaka ve etiket durumunu yazılı doğrulayın.",
+      },
+      {
+        title: "Otoyol ve parkta sonradan ödeme tuzağına dikkat edin",
+        body: "Bazı Fransız otoyollarında bariyersiz 'flux libre' gişe sistemi vardır; plaka okunur ve ödeme belirlenen süre içinde çevrimiçi ya da yetkili noktadan yapılır. Kiralama şirketinin bunu otomatik çözeceğini varsaymayın; yönetim ücreti eklenebilir. Şehir içinde yol kenarı parkının bölge, saat ve çevre etiketine göre değişen kuralını tabeladan okuyun. Altı rehber şehrin merkezinde araç çoğunlukla avantaj değil yüktür.",
+      },
+      {
+        title: "Turist vergisi rezervasyon toplamından ayrı çıkabilir",
+        body: "Konaklama vergisi belediye, tesis sınıfı, kişi ve geceye göre değişir; bazı platformlarda ödeme anında, bazılarında tesiste tahsil edilir. Paris ile Nice'teki tutarı başka şehre kopyalamayın ve eski blogdaki sabit rakama güvenmeyin. Rezervasyon dökümünde 'taxe de séjour' satırını, yaş muafiyetini ve ödeme yöntemini doğrudan tesisten doğrulayın.",
+      },
+      {
+        title: "Türkiye hattı AB içi dolaşım sayılmaz",
+        body: "Türkiye'deki mobil hattınız otomatik olarak AB 'roam like at home' kapsamında değildir; Fransa paketini operatörünüzden kontrol edin. Veri eSIM'i harita ve bilet uygulamalarını çalıştırır fakat çoğu Fransız telefon numarası vermez. Uygulama mağazası ülkesini değiştirmeden önce SNCF Connect, şehir ulaşım uygulaması ve müze sitelerinin web veya mobil cüzdan seçeneklerine bakın.",
+      },
+      {
+        title: "Grev ve bakım duyurusunu seyahatten hemen önce okuyun",
+        body: "Ulusal tren, kent içi ulaşım ve hava trafiği grevleri ile planlı mühendislik çalışmaları bağlantıları değiştirebilir. Bir gün önce SNCF Connect ve yerel işletmenin trafik sayfasına, havalimanına gideceğiniz sabah yeniden bakın. Ayrı biletli tren–uçuş arasında geniş pay bırakın; aynı gün son uluslararası uçuşa bağlanan uzak günübirlik gezi planlamayın.",
+      },
+    ],
+    routeIdeas: [
+      {
+        title: "İlk Fransa yolculuğu",
+        duration: "9–11 gün",
+        cities: ["Paris", "Lyon", "Nice"],
+        description:
+          "Paris'te beş, Lyon'da iki–üç, Nice'te üç gece. TGV ile kuzeyden güneye ilerleyin; Côte d'Azur günübirliklerini Nice ayağında tutun.",
+      },
+      {
+        title: "Akdeniz ve Rhône hattı",
+        duration: "8–10 gün",
+        cities: ["Lyon", "Marsilya", "Nice"],
+        description:
+          "Gastronomiden liman kültürüne ve Riviera kıyılarına uzanan mantıklı tren rotası. Calanques ile plaj günlerini hava ve deniz koşuluna göre esnek bırakın.",
+      },
+      {
+        title: "Şarap ve Atlantik",
+        duration: "7–9 gün",
+        cities: ["Paris", "Bordo"],
+        description:
+          "Paris'te dört–beş, Bordo'da üç–dört gece. Saint-Émilion veya Médoc bağ gezisini Bordo'dan rezervasyonlu bir tam gün olarak ekleyin.",
+      },
+      {
+        title: "Kuzeydoğuda iki kültür",
+        duration: "6–8 gün",
+        cities: ["Paris", "Strazburg"],
+        description:
+          "Paris müzelerinden TGV ile Alsace'a geçin. Strazburg'u Colmar veya şarap yolu ile birleştirin; Noel pazarı döneminde çok erken konaklama ayırın.",
+      },
+    ],
+  },
+  KR: {
+    seoTitle: "Güney Kore Gezi Rehberi: 6 Şehir ve Rota Planı",
+    seoDescription:
+      "Güney Kore gezi rehberi: Seul, Busan, Jeju, Gyeongju, Incheon ve Sokcho için güncel ulaşım, giriş, yemek, konaklama ve rota bilgileri.",
+    planningHeading: "Güney Kore rotası nasıl kurulur?",
+    essentialsHeading: "Güney Kore'ye gitmeden önce bilinmesi gerekenler",
+    citiesHeading: "Güney Kore'de gezilecek şehirler ve ada rehberleri",
+    intro: [
+      "Güney Kore'yi yalnız Seul'deki saraylar ve K-pop alışverişi olarak planlamayın. Seul büyük metropol ve Joseon tarihini; Gyeongju Silla mirasını; Busan plajlar ile liman mutfağını; Sokcho Seoraksan doğasını; Jeju volkanik ada kültürünü; Incheon ise modern liman tarihiyle havalimanının ötesindeki şehri açar.",
+      "Seul–Gyeongju–Busan hattı KTX ile mantıklı bir kara omurgasıdır. Sokcho'ya şehirlerarası otobüsle, Jeju'ya uçuşla gidilir. Incheon Havalimanı, merkez Incheon ve Songdo aynı nokta değildir. İlk yolculukta 10–12 gün Seul, Gyeongju ve Busan için dengeli; Jeju veya Sokcho eklendiğinde 14 güne yaklaşmak transferleri geziye dönüştürür.",
+    ],
+    essentials: [
+      {
+        title: "Türk vatandaşları K-ETA koşulunu özellikle kontrol etmeli",
+        body: "Kore Cumhuriyeti İstanbul Başkonsolosluğu'nun 2026 yönlendirmesine göre Türk vatandaşları turistik, kültürel, aile ziyareti ve belirli iş amaçlarıyla 90 güne kadar vizeden muaf olabilir; ancak seyahatten önce K-ETA gerekir. Muaf ülke listelerindeki genel haberi Türkiye'ye otomatik uygulamayın. Yalnız k-eta.go.kr alanını kullanın ve pasaport bilgilerini birebir girin.",
+      },
+      {
+        title: "e-Arrival Card ile K-ETA aynı işlem değildir",
+        body: "Elektronik geliş kartı ücretsizdir ve resmî e-arrivalcard.go.kr alanından varıştan önceki üç gün içinde gönderilebilir. Geçerli K-ETA sahipleri e-Arrival Card'dan muaf olabilir; kişisel statünüzü resmî yönlendiricide kontrol edin. Ücret isteyen benzer alan adlarına pasaport yüklemeyin.",
+      },
+      {
+        title: "T-money için nakit yedeği taşıyın",
+        body: "T-money veya EZL kartı metro, otobüs ve bazı başka ulaşım hizmetlerinde kullanılır. Kart satın alma ve bakiye yükleme noktalarının çoğu nakit ister. Yabancı temassız banka kartını her metro turnikesinde kullanabileceğinizi varsaymayın; inerken otobüste yeniden okutmak aktarma hesabı için önemlidir.",
+      },
+      {
+        title: "Naver Map, Papago ve Kakao T üç temel araçtır",
+        body: "Naver Map veya KakaoMap çıkış, otobüs durağı ve yürüme yönünde genellikle daha ayrıntılıdır; adresin Korece adını kaydedin. Papago menü/konuşma çevirisi, Kakao T resmî taksi çağırma için faydalıdır. Çevrimdışı otel adresi, son tren ve acil durum bilgisi de saklayın.",
+      },
+      {
+        title: "KTX biletini KORAIL'ın resmî kanalından alın",
+        body: "Şehir adıyla arama yapan taklit veya komisyonlu siteler yerine KORAIL'ın resmî web/app yönlendirmesini kullanın. Seul–Busan omurgası kolaydır; Gyeongju KTX Station tarihî merkezin dışındadır. Koltuk, tren istasyonu, bagaj ve iki uçtaki transferi toplam süreye ekleyin.",
+      },
+      {
+        title: "Kart yaygın, nakit hâlâ işlevlidir",
+        body: "Otel, mağaza ve restoranlarda kart yaygındır; pazar, küçük işletme ve ulaşım kartı yüklemesi için won taşıyın. Terminal size TL veya başka para birimi teklif ederse dinamik kur dönüşümünün maliyetini okuyun; çoğu durumda yerel para birimiyle ödeme daha şeffaftır. Bahşiş genel beklenti değildir.",
+      },
+      {
+        title: "Restoranın servis ritmini okuyun",
+        body: "Banchan yan tabakları çoğu yerde yemeğin parçasıdır; yenileme mümkün olsa da israf etmeyin. Su, çatal-kaşık ve ödeme self-servis olabilir; masa tableti veya kasada ön ödeme yaygındır. Mangal/set menüsünde kişi başı minimum, gramaj ve aynı masanın tek menü seçme kuralını siparişten önce sorun.",
+      },
+      {
+        title: "eSIM her zaman Kore telefon numarası vermez",
+        body: "Veri eSIM'i harita ve mesajlaşma için yeterli olabilir ama restoran sıra sistemi, teslimat veya bazı doğrulamalar Kore numarası isteyebilir. Üründe ses/SMS ve yerel numara olup olmadığını ayırın; kimlik kayıtlı turist SIM'i ile yalnız veri eSIM'ini aynı saymayın.",
+      },
+      {
+        title: "Muson, tayfun ve hava kalitesini aynı gün izleyin",
+        body: "Yaz sıcak, nemli ve yağışlı; güney kıyısı ile Jeju tayfundan etkilenebilir. İlkbaharda ince toz/hava kalitesi, kışın buz ve dağ karı programı değiştirir. Resmî hava uyarısını izleyin; feribot, Hallasan ve Seoraksan günlerine yedek bırakın.",
+      },
+      {
+        title: "Yaşayan mahallelerde mahremiyet turizmden önce gelir",
+        body: "Bukchon, Gamcheon ve hanok köyleri dekor değil konuttur. Özel kapı/çatıya girmeyin, yüksek sesle konuşmayın ve insanları izinsiz yakın plandan çekmeyin. Tapınak/saray tabelasına, metroda sessizliğe ve ayakkabı çıkarılan mekân kuralına uyun.",
+      },
+    ],
+    routeIdeas: [
+      {
+        title: "İlk Güney Kore yolculuğu",
+        duration: "10–12 gün",
+        cities: ["Seul", "Gyeongju", "Busan"],
+        description:
+          "Seul'de beş, Gyeongju'da iki–üç, Busan'da üç–dört gece. KTX omurgasını kullanın; istasyon–merkez transferlerini ayrı planlayın.",
+      },
+      {
+        title: "Kültür ve ada doğası",
+        duration: "10–13 gün",
+        cities: ["Busan", "Gyeongju", "Jeju Adası"],
+        description:
+          "Busan limanından Silla başkentine, ardından uçuşla Jeju'nun volkanik kıyılarına geçin. Hallasan ve Udo için iki ayrı hava yedeği düşünün.",
+      },
+      {
+        title: "Başkent ve Seoraksan",
+        duration: "7–9 gün",
+        cities: ["Seul", "Sokcho"],
+        description:
+          "Seul'e beş gün, Sokcho'ya iki–üç gün. Şehirlerarası otobüs terminalini doğru seçin ve dağ gününü varış/dönüş gününe sıkıştırmayın.",
+      },
+      {
+        title: "Havalimanından öte Incheon",
+        duration: "2–3 gün",
+        cities: ["Incheon"],
+        description:
+          "Chinatown ve Open Port'a bir, Songdo'ya bir gün verin. Ganghwa'yı ekleyecekseniz üçüncü tam gün ve ayrı ulaşım planı gerekir.",
+      },
+    ],
+  },
+  ES: {
+    seoTitle: "İspanya Gezi Rehberi: 16 Şehir, Adalar ve Rotalar",
+    seoDescription:
+      "İspanya gezi rehberi: Barcelona, Madrid, Endülüs, Bask kıyısı, Mallorca, Ibiza ve Kanarya Adaları için 16 kapsamlı Türkçe rota.",
+    planningHeading: "İspanya rotası nasıl kurulur?",
+    essentialsHeading: "İspanya'ya gitmeden önce bilinmesi gerekenler",
+    citiesHeading: "İspanya'da gezilecek şehirler ve adalar",
+    intro: [
+      "İspanya'yı yalnız Barcelona–Madrid ikilisi olarak planlamayın. Katalonya modernisme ve Akdeniz şehir hayatını; Madrid büyük sanat koleksiyonlarını; Endülüs İslam, Yahudi ve Hristiyan mirasının katmanlarını; Bask kıyısı Atlantik ve pintxos kültürünü; Balear Adaları koylarla tarihî şehirleri; Kanarya Adaları ise volkanik doğa ve yıl boyu değişken mikroiklimleri açar.",
+      "Anakara omurgasında hızlı tren güçlüdür: Barcelona–Valencia–Madrid doğu hattı, Madrid–Córdoba–Sevilla/Málaga güney hattı mantıklı akışlardır. San Sebastián–Bilbao otobüsle iyi bağlanır. Mallorca, Ibiza, Tenerife ve Gran Canaria'yı kısa anakara programına sıkıştırmayın; her biri uçuş/feribot ve en az üç–beş günlük ayrı ada ayağıdır.",
+    ],
+    essentials: [
+      {
+        title: "Schengen vizesi ve EES",
+        body: "Umuma mahsus Türk pasaportu taşıyanlar kısa turistik ziyaret için Schengen vizesi almalıdır. EES 10 Nisan 2026'dan beri dış sınır geçişlerini elektronik kaydeder. ETIAS Türk vatandaşının vizesinin yerine geçmez; pasaport türünüz ve kişisel statünüzü İspanya dış temsilciliğinden doğrulayın.",
+      },
+      {
+        title: "Tren biletini erken karşılaştırın",
+        body: "Renfe yanında aynı hızlı hatlarda farklı işletmeciler bulunabilir. Biletin değişiklik, bagaj, istasyon ve tren koşulunu okuyun. Madrid Atocha ile Chamartín; Barcelona Sants; Sevilla Santa Justa gibi doğru istasyonu kontrol edin.",
+      },
+      {
+        title: "Bölgesel diller görünürdür",
+        body: "İspanyolca ülke genelinde çalışır; Katalanca/Valensiyaca, Baskça ve diğer bölgesel diller tabela ile yer adlarında kullanılır. Şehrin iki yazımını kaydetmek durak ve navigasyonu kolaylaştırır.",
+      },
+      {
+        title: "Öğün saatini rotaya katın",
+        body: "Öğle ve akşam birçok Türk gezginin alıştığından geçtir. Paella gibi bazı yemekler özellikle öğlen hazırlanır; küçük şehirlerde mutfak öğle sonrası kapanabilir. Popüler restoranda servis saatini önceden doğrulayın.",
+      },
+      {
+        title: "Kart yaygın, avro yedeği iyi",
+        body: "Kart çoğu yerde çalışır; küçük pazar ve kırsal işletme için nakit taşıyın. Terminal TL dönüşümü önerirse kur ve komisyonu okuyun; çoğu durumda yerel para birimiyle ödeme daha şeffaftır.",
+      },
+      {
+        title: "Ada ve anakara iklimi aynı değildir",
+        body: "Sevilla yazı, Bask yağmuru, Balear sezonu ve Kanarya mikroiklimi tek hava tahminiyle planlanmaz. Dağ, kıyı ve şehir katmanlarını aynı gün için ayrı kontrol edin.",
+      },
+    ],
+    routeIdeas: [
+      {
+        title: "İlk İspanya yolculuğu",
+        duration: "7–9 gün",
+        cities: ["Barcelona", "Madrid", "Toledo"],
+        description:
+          "Barcelona'da dört, Madrid'de üç gece; Toledo'yu Madrid'den günübirlik veya bir gece ekleyin. İki ana şehri hızlı trenle bağlayın.",
+      },
+      {
+        title: "Klasik Endülüs",
+        duration: "8–10 gün",
+        cities: ["Sevilla", "Córdoba", "Granada", "Málaga"],
+        description:
+          "Sevilla üç, Córdoba bir–iki, Granada iki–üç, Málaga iki gece. Elhamra ve Alcázar biletlerini rota netleşince resmî kanaldan alın.",
+      },
+      {
+        title: "Akdeniz şehirleri",
+        duration: "8–10 gün",
+        cities: ["Barcelona", "Valencia", "Alicante"],
+        description:
+          "Mimari yoğun Barcelona'dan bisiklet ve paella odaklı Valencia'ya, ardından kale–plaj ölçekli Alicante'ye trenle güneye inin.",
+      },
+      {
+        title: "Bask gastronomi hattı",
+        duration: "5–7 gün",
+        cities: ["Bilbao", "San Sebastián"],
+        description:
+          "Bilbao'ya iki–üç, San Sebastián'a üç gece ayırın; Getxo, Getaria veya Hondarribia'dan yalnız bir kıyı günü seçin.",
+      },
+      {
+        title: "Ada rotası",
+        duration: "5–7 gün",
+        cities: ["Palma de Mallorca", "Ibiza", "Tenerife", "Gran Canaria"],
+        description:
+          "Bu dört adayı tek haftaya koymayın. Mallorca–Ibiza ikilisi veya Tenerife/Gran Canaria'dan biri için ayrı beş–yedi günlük rota seçin.",
+      },
+    ],
+  },
+  TR: {
+    seoTitle: "Türkiye Gezi Rehberi: 19 Şehir, Kıyı ve Kültür Rotası",
+    seoDescription:
+      "Türkiye gezi rehberi: İstanbul, Antalya, Ege kıyıları, Kapadokya, Karadeniz ve Mezopotamya için 19 kapsamlı şehir ve bölge yazısı.",
+    planningHeading: "Türkiye rotası nasıl kurulur?",
+    essentialsHeading: "Türkiye içinde seyahati kolaylaştıran bilgiler",
+    citiesHeading: "Türkiye'de gezilecek şehirler ve bölgeler",
+    intro: [
+      "Türkiye'yi tek bir kıyı tatili veya İstanbul–Kapadokya kontrol listesi gibi değil, ayrı coğrafyalar halinde planlayın. İstanbul iki kıtalı metropolü; Ege ve Akdeniz yarımada–antik kent–deniz dengesini; İç Anadolu Selçuklu, Cumhuriyet ve kaya yerleşimlerini; Karadeniz hava odaklı doğayı; Güneydoğu ise Neolitik arkeoloji, taş şehir ve çok katmanlı mutfakları açar.",
+      "Bodrum, Fethiye ve Marmaris idari olarak Muğla sınırlarında olsa da ayrı arama ve seyahat niyetleridir. Bu nedenle Muğla rehberi Akyaka–Gökova–Datça eksenine odaklanır. Kapadokya şehir değil bölgedir; Göreme, Uçhisar, Ürgüp ve Avanos üsleriyle planlanır. Kaş ve Alanya da Antalya merkezden saatler uzakta bağımsız kıyı duraklarıdır.",
+    ],
+    essentials: [
+      {
+        title: "Şehir kartları birbirinin yerine geçmez",
+        body: "İstanbulkart, İzmirim Kart, Antalyakart ve diğer belediye kartları ayrı sistemlerdir. QR, temassız banka kartı ve aktarma koşulu şehirden şehre değişir; yerel ulaşım kurumunun güncel bilgisini kontrol edin.",
+      },
+      {
+        title: "MüzeKart ile MuseumPass ayrı ürünlerdir",
+        body: "T.C. vatandaşları MüzeKart, yabancı ziyaretçiler MuseumPass ürünlerini kullanır. Geçerli kurum, gece müzeciliği ve Topkapı Harem, Göreme Karanlık Kilise, Efes Yamaç Evler gibi özel bölümler ayrıca kontrol edilmelidir.",
+      },
+      {
+        title: "İl adı mesafeyi gizleyebilir",
+        body: "Antalya merkez–Kaş–Alanya veya Muğla merkez–Bodrum–Datça aynı ilde olsa da saatler süren kara yoludur. Haritayı idari sınıra değil gerçek sürüş, viraj, trafik ve son dolmuş saatine göre okuyun.",
+      },
+      {
+        title: "YHT omurgasını kullanın",
+        body: "İstanbul–Eskişehir–Ankara–Konya hattında YHT güçlüdür. Kıyı ve doğu rotalarında uçuş/otobüs daha baskın olabilir. Gar, otogar ve havalimanı çoğu şehirde merkezden farklı yerde bulunur.",
+      },
+      {
+        title: "Kart + nakit birlikte çalışır",
+        body: "Şehir oteli ve restoranlarda kart yaygın; dolmuş, pazar, küçük esnaf ve kırsal durakta nakit gerekebilir. Menü, kilo fiyatı, kuver ve tekne/aktivite dahilini siparişten önce netleştirin.",
+      },
+      {
+        title: "İklim bölgeseldir",
+        body: "Antalya sıcağı, Karadeniz sisi, Kapadokya rüzgârı ve Doğu/Güneydoğu yazı tek valiz kuralına uymaz. Balon, feribot, yayla ve tekne günlerine hava yedeği bırakın.",
+      },
+      {
+        title: "Yunan adaları uluslararası çıkıştır",
+        body: "Bodrum–Kos, Kaş–Meis ve Marmaris–Rodos feribotları iç hat değildir. Pasaport, Yunanistan/Schengen giriş koşulu, liman vergisi ve sefer durumunu resmî kanaldan doğrulayın.",
+      },
+    ],
+    routeIdeas: [
+      {
+        title: "İlk Türkiye yolculuğu",
+        duration: "9–11 gün",
+        cities: ["İstanbul", "Kapadokya", "Antalya"],
+        description:
+          "İstanbul'a dört–beş, Kapadokya'ya üç–dört, Antalya merkeze iki–üç gece. İki uzun geçişi uçuşla bağlayın ve balona hava yedeği bırakın.",
+      },
+      {
+        title: "Ege kıyısı ve antik kentler",
+        duration: "10–14 gün",
+        cities: ["İzmir", "Bodrum", "Muğla", "Marmaris", "Fethiye"],
+        description:
+          "İzmir–Efes'ten Bodrum'a, ardından Akyaka/Datça, Marmaris ve Fethiye'ye inin. Her tatil beldesine tek gecelik durak koymak yerine üç üs seçin.",
+      },
+      {
+        title: "Likya ve Batı Akdeniz",
+        duration: "8–10 gün",
+        cities: ["Fethiye", "Kaş", "Antalya"],
+        description:
+          "Fethiye'de Ölüdeniz/Kayaköy, Kaş'ta Kekova/dalış, Antalya'da Kaleiçi/antik kent. Sahil yolu manzaralı ama yavaştır.",
+      },
+      {
+        title: "Güneydoğu gastronomi ve arkeoloji",
+        duration: "7–9 gün",
+        cities: ["Gaziantep", "Şanlıurfa", "Mardin"],
+        description:
+          "Zeugma ve Antep mutfağından Göbeklitepe'ye, ardından Dara–Midyat–Mardin'e ilerleyin. Öğünleri ve açık alan sıcağını günlere dağıtın.",
+      },
+      {
+        title: "YHT ile İç Anadolu",
+        duration: "6–8 gün",
+        cities: ["İstanbul", "Eskişehir", "Ankara", "Konya"],
+        description:
+          "Trenle kompakt şehirler, başkent müzeleri ve Selçuklu mirasını birleştirin; Kapadokya'yı karayoluyla eklemek için üç gün daha ayırın.",
+      },
+    ],
+  },
+  GB: {
+    seoTitle: "Birleşik Krallık Gezi Rehberi: 16 Şehir ve Doğa Rotası",
+    seoDescription:
+      "Londra, Edinburgh, Manchester, Liverpool, Bath, York, Highlands, Cotswolds ve Lake District için 16 kapsamlı Türkçe Birleşik Krallık rehberi.",
+    planningHeading: "Birleşik Krallık rotası nasıl kurulur?",
+    essentialsHeading: "Birleşik Krallık'a gitmeden önce bilinmesi gerekenler",
+    citiesHeading: "Birleşik Krallık'ta gezilecek şehirler ve bölgeler",
+    intro: [
+      "Birleşik Krallık'ı yalnız Londra ve birkaç günübirlik gezi gibi planlamayın. Londra dünya müzeleri ve mahalle mutfaklarını; İngiltere'nin üniversite ve tarih kentleri farklı dönemleri; Manchester–Liverpool kuzeyin sanayi, müzik ve futbol kültürünü; Edinburgh–Glasgow İskoçya'nın tarih ile çağdaş sanat karşıtlığını; Belfast ve Cardiff ise Kuzey İrlanda ile Galler'in ayrı kimliğini açar.",
+      "Demiryolu Londra–York–Edinburgh ve Londra–Manchester–Liverpool omurgalarında güçlüdür; Advance bilet saatli ve daha kısıtlı, Off-Peak esnek olabilir. Highlands, Cotswolds ve Lake District tek şehir değildir: hava, seyrek otobüs, araç ve en az birkaç gece isteyen kırsal bölgelerdir.",
+    ],
+    essentials: [
+      {
+        title: "Türk vatandaşına ziyaretçi vizesi gerekir",
+        body: "Türkiye Birleşik Krallık'ın vizeye tabi ülke listesindedir. Umuma mahsus pasaportla Standard Visitor vizesi yolculuk öncesi alınmalıdır; ETA vizenin yerine geçmez. Kişisel pasaport ve seyahat amacınızı yalnız GOV.UK üzerinden doğrulayın.",
+      },
+      {
+        title: "Tren bileti türünü okuyun",
+        body: "Advance çoğunlukla belirli tren, Off-Peak saat kısıtı, Anytime daha yüksek esneklik sunar. İstasyon adı, operatör, railcard uygunluğu ve aktarmayı National Rail'den kontrol edin; gecikmede yolcu haklarını saklayın.",
+      },
+      {
+        title: "Londra temassız sistemi ülke geneli değildir",
+        body: "TfL'de banka kartı/telefonla günlük üst sınır kullanışlıdır; her yolcu ayrı ve yolculuğun iki ucunda aynı ödeme aracını kullanmalıdır. Bu düzeni Manchester tramvayı, Glasgow Subway veya ülke trenlerine otomatik uygulamayın.",
+      },
+      {
+        title: "Sterlin ve servis ücreti",
+        body: "Kart/temassız ödeme yaygındır; küçük kırsal durak için az nakit taşıyın. Restoranda discretionary service charge eklenmişse aynı hizmet için tekrar tam bahşiş beklenmez. Terminalde yerel para birimi GBP'yi seçin.",
+      },
+      {
+        title: "İngiltere, İskoçya, Galler ve Kuzey İrlanda",
+        body: "Dört ülkenin yerel kimliği, bazı tatilleri ve ulaşım kurumları farklıdır. Galler'i veya İskoçya'yı 'İngiltere' diye adlandırmayın; iki dilli tabela ve yerel adlara saygı gösterin.",
+      },
+      {
+        title: "Yağmurdan çok değişkenlik",
+        body: "Su geçirmez ince katman yıl boyu gerekir. Highlands ve Lake District'te şehir hava uygulaması dağ tahmini değildir; yürüyüşte gün ışığı, rüzgâr, çevrimdışı harita ve geri dönüş planı kullanın.",
+      },
+    ],
+    routeIdeas: [
+      {
+        title: "İlk Birleşik Krallık yolculuğu",
+        duration: "8–10 gün",
+        cities: ["Londra", "York", "Edinburgh"],
+        description:
+          "Londra'da beş, York'ta bir–iki, Edinburgh'da üç gece. East Coast Main Line üzerinde doğrudan trenlerle ilerleyin.",
+      },
+      {
+        title: "Güney İngiltere kültür rotası",
+        duration: "7–9 gün",
+        cities: ["Londra", "Oxford", "Bath", "Bristol"],
+        description:
+          "Londra'dan Oxford kolejlerine, Bath Roma–Georgian mirasına ve Bristol liman/sokak sanatına. Cotswolds için iki–üç gün ekleyin.",
+      },
+      {
+        title: "Kuzeyin müzik ve futbol şehirleri",
+        duration: "5–7 gün",
+        cities: ["Manchester", "Liverpool", "York"],
+        description:
+          "Manchester ve Liverpool'a ikişer gece, York'a iki gece. Maç ve konser fikstürü otel ile tren kararını belirlesin.",
+      },
+      {
+        title: "İskoçya şehir ve doğa",
+        duration: "10–14 gün",
+        cities: ["Edinburgh", "Glasgow", "İskoçya Highlands"],
+        description:
+          "İki şehre ikişer–üçer gece, Glencoe–Skye–Inverness hattına en az altı–sekiz gün. Highlands'i Edinburgh'dan tek günlük otobüse indirmeyin.",
+      },
+      {
+        title: "Batı başkentleri ve limanlar",
+        duration: "7–9 gün",
+        cities: ["Bristol", "Cardiff", "Belfast"],
+        description:
+          "Bristol ve Cardiff'i kısa trenle bağlayın; Belfast'a uçuşla geçip şehir + Causeway kıyısına üç gün ayırın.",
+      },
+      {
+        title: "İngiltere'nin doğa molası",
+        duration: "5–7 gün",
+        cities: ["Lake District"],
+        description:
+          "Windermere/Ambleside ve Keswick'te iki üs kurun. Göl teknesi, düşük seviye yürüyüş ve hava yedeğini aynı programa koyun.",
+      },
+    ],
+  },
+};
+
+export const countryHubFor = (countryCode: string): CountryHubContent | null =>
+  HUBS[countryCode] ?? null;

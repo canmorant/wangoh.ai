@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(mkdir -p \"/Users/canmorant/Desktop/wangoh cloude/.claude\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:56508/lumora)",
+      "Bash(npx next *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3001/lumora)",
+      "Bash(npx tsc *)",
+      "Bash(npm run *)",
+      "Bash(npx --yes tsx scripts/shake.test.ts)",
+      "Bash(curl -s -o /dev/null -w \"page: %{http_code}\\\\n\" http://localhost:3000/)",
+      "Bash(kill 85297)",
+      "Bash(pkill -f \"next dev\")",
+      "Bash(rm -rf .next)",
+      "Bash(python3 -)",
+      "Bash(npx tsx *)",
+      "Bash(npx eslint *)",
+      "Bash(python3 -c ' *)",
+      "Bash(node -e ' *)",
+      "Bash(cd \"/Users/canmorant/Desktop/wangoh cloude\" && npm install flag-icons 2>&1 | tail -2 && ls node_modules/flag-icons/flags/4x3/ | head -3 && ls node_modules/flag-icons/flags/4x3/ | wc -l && mkdir -p public/flags && cp node_modules/flag-icons/flags/4x3/*.svg public/flags/ && ls public/flags | wc -l && du -sh public/flags)",
+      "Bash(mkdir -p src/features/country-wheel src/features/flag-game)",
+      "Bash(ls -la \"/Users/canmorant/Downloads/IMG_4769.MOV\" 2>&1; echo \"---\"; which ffmpeg ffprobe 2>&1 || echo \"no ffmpeg on PATH\")",
+      "Bash(python3 -c \"import cv2; print\\('cv2 ok'\\)\")",
+      "Read(//opt/homebrew/bin/**)",
+      "Bash(mdls -name kMDItemDurationSeconds -name kMDItemPixelHeight -name kMDItemPixelWidth \"/Users/canmorant/Downloads/IMG_4769.MOV\")",
+      "Bash(node scripts/gen-countries.js)",
+      "WebSearch",
+      "Bash(echo \"lint exit: $?\")",
+      "Bash(echo \"exit=$?\")",
+      "Bash(kill 7877)",
+      "Bash(rm -rf .next/cache)"
+    ]
+  }
+}
