@@ -6,6 +6,7 @@ import { Country, ISTANBUL_COORDINATES } from "@/data/destinations";
 import { geoNaturalEarth1, geoPath, geoInterpolate } from "d3-geo";
 import * as topojson from "topojson-client";
 import type { Topology } from "topojson-specification";
+import { useAdaptiveMotionQuality } from "@/hooks/useAdaptiveMotionQuality";
 
 interface FlightAnimationProps {
   country: Country;
@@ -16,6 +17,7 @@ const MAP_WIDTH = 960;
 const MAP_HEIGHT = 500;
 
 export default function FlightAnimation({ country, onComplete }: FlightAnimationProps) {
+  const motionQuality = useAdaptiveMotionQuality();
   const [progress, setProgress] = useState(0);
   const [phase, setPhase] = useState<"intro" | "flying" | "arriving">("intro");
   const [worldData, setWorldData] = useState<string[]>([]);
@@ -82,22 +84,24 @@ export default function FlightAnimation({ country, onComplete }: FlightAnimation
     const timer1 = setTimeout(() => setPhase("flying"), 800);
     let interval: NodeJS.Timeout;
     const timer2 = setTimeout(() => {
+      const frameDelay = motionQuality === "lite" ? 45 : 30;
+      const step = motionQuality === "lite" ? 0.025 : 0.012;
       interval = setInterval(() => {
         setProgress(p => {
           if (p >= 1) {
             clearInterval(interval);
             return 1;
           }
-          return p + 0.012;
+          return p + step;
         });
-      }, 30);
+      }, frameDelay);
     }, 1000);
     return () => {
       clearTimeout(timer1);
       clearTimeout(timer2);
       clearInterval(interval);
     };
-  }, []);
+  }, [motionQuality]);
 
   useEffect(() => {
     if (progress >= 1) {
@@ -135,7 +139,7 @@ export default function FlightAnimation({ country, onComplete }: FlightAnimation
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5 }}
-        className="fixed inset-0 z-50 flex flex-col items-center justify-center"
+        className="fixed inset-0 z-50 flex flex-col items-center justify-center overflow-hidden px-4 py-[max(1rem,env(safe-area-inset-top))]"
         style={{ background: "linear-gradient(135deg, #070d1a 0%, #0d1b2a 50%, #132338 100%)" }}
       >
         {/* Map container */}
@@ -143,7 +147,7 @@ export default function FlightAnimation({ country, onComplete }: FlightAnimation
           initial={{ scale: 0.85, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="relative w-full max-w-5xl px-4 md:px-8"
+          className="relative w-full max-w-5xl md:px-8"
         >
           <svg
             ref={svgRef}
@@ -236,19 +240,19 @@ export default function FlightAnimation({ country, onComplete }: FlightAnimation
 
         {/* Status */}
         <motion.div
-          className="mt-8 text-center"
+          className="mt-5 w-full text-center sm:mt-8"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
         >
-          <p className="text-white/70 text-lg md:text-xl tracking-wider font-light">
+          <p className="px-2 text-[16px] font-light tracking-wide text-white/70 sm:text-lg sm:tracking-wider md:text-xl">
             {phase === "intro" && messages[0]}
             {phase === "flying" && messages[1]}
             {phase === "arriving" && messages[2]}
           </p>
 
           {/* Progress bar */}
-          <div className="mt-5 w-72 h-[2px] bg-white/10 rounded-full mx-auto overflow-hidden">
+          <div className="mx-auto mt-5 h-[2px] w-[min(18rem,calc(100vw-2rem))] overflow-hidden rounded-full bg-white/10">
             <motion.div
               className="h-full rounded-full"
               style={{

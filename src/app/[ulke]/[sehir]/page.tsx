@@ -15,6 +15,7 @@ import { SITE, absolute } from "@/lib/site";
 import GuideArticle from "@/components/guide/GuideArticle";
 import Breadcrumbs from "@/components/guide/Breadcrumbs";
 import JsonLd from "@/components/guide/JsonLd";
+import { dietaryGuideFor, googleMapsSearchUrl } from "@/content/dietary";
 
 type Params = { ulke: string; sehir: string };
 
@@ -34,7 +35,12 @@ export async function generateMetadata({
   if (!country || !city) return {};
 
   const guide = guideFor(country.code, city.name);
+  const dietary = dietaryGuideFor(country.code, city.name);
   const path = `/${ulke}/${sehir}`;
+
+  if (guide && !dietary) {
+    throw new Error(`Beslenme tercihleri verisi eksik: ${country.code}:${city.name}`);
+  }
 
   // Rehber yazılmışsa kendi başlığını kullanır; yazılmamışsa şehre özgü ama
   // dürüst bir başlık üretilir. İki şehir asla aynı meta veriyi paylaşmaz.
@@ -73,7 +79,12 @@ export default async function CityGuidePage({ params }: { params: Promise<Params
   if (!country || !city) notFound();
 
   const guide = guideFor(country.code, city.name);
+  const dietary = dietaryGuideFor(country.code, city.name);
   const path = `/${ulke}/${sehir}`;
+
+  if (guide && !dietary) {
+    throw new Error(`Beslenme tercihleri verisi eksik: ${country.code}:${city.name}`);
+  }
 
   const breadcrumbs = [
     { name: "Ana sayfa", href: "/" },
@@ -93,7 +104,7 @@ export default async function CityGuidePage({ params }: { params: Promise<Params
   };
 
   return (
-    <main className="relative min-h-screen bg-[#080b14] pt-28">
+    <main className="relative min-h-screen bg-[#080b14] pt-24 sm:pt-28">
       <JsonLd data={breadcrumbSchema} />
 
       {guide && (
@@ -139,14 +150,43 @@ export default async function CityGuidePage({ params }: { params: Promise<Params
         </>
       )}
 
+      {dietary && (
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            name: `${city.name} vegan ve helal restoran önerileri`,
+            itemListElement: [...dietary.vegan, ...dietary.halal].map((pick, index) => ({
+              "@type": "ListItem",
+              position: index + 1,
+              item: {
+                "@type": "Restaurant",
+                name: pick.name,
+                servesCuisine: pick.cuisine,
+                address: {
+                  "@type": "PostalAddress",
+                  addressLocality: city.name,
+                  addressCountry: country.code,
+                },
+                suitableForDiet:
+                  pick.category === "vegan"
+                    ? "https://schema.org/VeganDiet"
+                    : "https://schema.org/HalalDiet",
+                sameAs: googleMapsSearchUrl(pick.name, city.name, country.name),
+              },
+            })),
+          }}
+        />
+      )}
+
       {/* ---------------- hero ---------------- */}
       <header className="relative">
-        <div className="mx-auto max-w-[1100px] px-5 sm:px-8">
+        <div className="mx-auto max-w-[1100px] px-4 sm:px-8">
           <Breadcrumbs items={breadcrumbs} />
         </div>
 
-        <div className="relative mx-auto max-w-[1100px] px-5 sm:px-8">
-          <div className="relative aspect-[16/9] w-full overflow-hidden rounded-[26px] sm:aspect-[21/9]">
+        <div className="relative mx-auto max-w-[1100px] px-4 sm:px-8">
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[22px] sm:aspect-[21/9] sm:rounded-[26px]">
             {city.image ? (
               <Image
                 src={city.image}
@@ -169,13 +209,13 @@ export default async function CityGuidePage({ params }: { params: Promise<Params
                 <span className="inline-block h-px w-8 bg-[var(--gold)]/35" />
                 {country.flag} {country.name}
               </p>
-              <h1 className="font-display mt-4 text-[clamp(2.4rem,6.5vw,4.2rem)] leading-[1.02] text-white">
+              <h1 className="font-display mt-3 text-[clamp(2rem,10vw,4.2rem)] leading-[1.02] text-white sm:mt-4">
                 {guide?.h1 ?? `${city.name} Gezi Rehberi`}
               </h1>
             </div>
           </div>
 
-          <p className="mt-8 max-w-[62ch] text-[17px] leading-relaxed text-white/60">
+          <p className="mt-7 max-w-[62ch] text-[16px] leading-relaxed text-white/60 sm:mt-8 sm:text-[17px]">
             {guide?.lede ?? city.description}
           </p>
         </div>
@@ -183,7 +223,7 @@ export default async function CityGuidePage({ params }: { params: Promise<Params
 
       <div className="mt-14">
         {guide ? (
-          <GuideArticle guide={guide} country={country} city={city} />
+          <GuideArticle guide={guide} country={country} city={city} dietary={dietary!} />
         ) : (
           <PendingGuide country={country} city={city} />
         )}
@@ -210,7 +250,7 @@ function PendingGuide({
   const written = country.cities.filter((c) => guideFor(country.code, c.name));
 
   return (
-    <div className="mx-auto max-w-[1100px] px-5 pb-32 sm:px-8">
+    <div className="mx-auto max-w-[1100px] px-4 pb-24 sm:px-8 sm:pb-32">
       <div className="rounded-2xl border border-white/[0.08] bg-white/[0.025] p-8 sm:p-10">
         <h2 className="font-display text-[1.6rem] leading-tight text-white">
           {city.name} rehberi hazırlanıyor

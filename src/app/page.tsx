@@ -2,18 +2,20 @@
 
 import { useState, useCallback, useEffect } from "react";
 import dynamic from "next/dynamic";
-import { Country, countries } from "@/data/destinations";
+import { countries, type Country } from "@/data/destinations";
 import { useScrollShake } from "@/hooks/useScrollShake";
 import FloatingNav from "@/components/FloatingNav";
 import SecretRoute from "@/components/SecretRoute";
-import ClubReveal from "@/components/ClubReveal";
-import CountryWheel from "@/features/country-wheel/CountryWheel";
 
 import DestinationsSection from "@/components/DestinationsSection";
 
 const CinematicHero = dynamic(() => import("@/components/CinematicHero"), { ssr: false });
 const FlightAnimation = dynamic(() => import("@/components/FlightAnimation"), { ssr: false });
 const CityCards = dynamic(() => import("@/components/CityCards"), { ssr: false });
+const ClubReveal = dynamic(() => import("@/components/ClubReveal"), { ssr: false });
+const CountryWheel = dynamic(() => import("@/features/country-wheel/CountryWheel"), {
+  ssr: false,
+});
 
 type View = "landing" | "flying" | "cities";
 
@@ -23,6 +25,8 @@ export default function Home() {
   const [secretOpen, setSecretOpen] = useState(false);
   const [clubOpen, setClubOpen] = useState(false);
   const [wheelOpen, setWheelOpen] = useState(false);
+  const [clubRequested, setClubRequested] = useState(false);
+  const [wheelRequested, setWheelRequested] = useState(false);
 
   const flyTo = useCallback((country: Country) => {
     setSecretOpen(false);
@@ -45,10 +49,16 @@ export default function Home() {
   // Stable identities. Inline arrows here previously re-created these on every
   // render, which reset the wheel mid-spin via its own effect deps.
   const closeWheel = useCallback(() => setWheelOpen(false), []);
-  const openWheel = useCallback(() => setWheelOpen(true), []);
+  const openWheel = useCallback(() => {
+    setWheelRequested(true);
+    setWheelOpen(true);
+  }, []);
   const closeSecret = useCallback(() => setSecretOpen(false), []);
   const closeClub = useCallback(() => setClubOpen(false), []);
-  const openClubReveal = useCallback(() => setClubOpen(true), []);
+  const openClubReveal = useCallback(() => {
+    setClubRequested(true);
+    setClubOpen(true);
+  }, []);
 
   // Deep link from the travel test: /?fly=JP
   useEffect(() => {
@@ -72,6 +82,7 @@ export default function Home() {
   return (
     <main className="relative min-h-screen bg-[var(--background)]">
       <FloatingNav
+        onHome={handleBack}
         onSelectCountry={flyTo}
         actions={[
           { label: "Testler", href: "/tests" },
@@ -100,6 +111,7 @@ export default function Home() {
 
       {view === "landing" && (
         <>
+          <h1 className="sr-only">Hiç gitmediğin bir yere var</h1>
           <CinematicHero />
           <DestinationsSection onSelectCountry={flyTo} />
           <Footer />
@@ -114,8 +126,8 @@ export default function Home() {
       )}
 
       <SecretRoute open={secretOpen} onClose={closeSecret} onFly={flyTo} />
-      <ClubReveal open={clubOpen} onClose={closeClub} onFly={flyTo} />
-      <CountryWheel open={wheelOpen} onClose={closeWheel} onFly={flyTo} />
+      {clubRequested && <ClubReveal open={clubOpen} onClose={closeClub} onFly={flyTo} />}
+      {wheelRequested && <CountryWheel open={wheelOpen} onClose={closeWheel} onFly={flyTo} />}
     </main>
   );
 }

@@ -5,10 +5,39 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, X, Globe, MapPin, ArrowRight, CornerDownLeft } from "lucide-react";
-import { countries, Country } from "@/data/destinations";
-import { citySlug, cityHref, countryHref } from "@/content/guides";
+import { countries, type City, type Country } from "@/data/destinations";
+import { SECRET_DESTINATION } from "@/data/secret";
 import { slugify } from "@/lib/slug";
 import { EASE_OUT } from "@/lib/motion";
+
+// Arama yalnızca küçük destinasyon kataloğuna ihtiyaç duyar. Rehber kaydını
+// buraya bağlamak, 89 uzun makalenin tamamını ana sayfanın JavaScript paketine
+// taşıyordu. Rota biçimi aynı kalırken içerik artık sunucuda kalır.
+const searchCountries: Country[] = [...countries, SECRET_DESTINATION];
+const countrySlug = (country: Country) => slugify(country.name);
+const citySlug = (city: City) => slugify(city.name);
+const countryHref = (country: Country) => `/${countrySlug(country)}`;
+const cityHref = (country: Country, city: City) =>
+  `/${countrySlug(country)}/${citySlug(city)}`;
+
+const DEFAULT_RESULT_LIMIT = 12;
+const SEARCH_RESULT_LIMIT = 24;
+
+function thumbnailFor(src: string) {
+  try {
+    const url = new URL(src);
+    if (url.hostname === "images.unsplash.com") {
+      url.searchParams.set("w", "160");
+      url.searchParams.set("q", "58");
+      url.searchParams.set("auto", "format");
+      url.searchParams.set("fit", "crop");
+      return url.toString();
+    }
+  } catch {
+    // A relative/local asset is already suitable for Next Image.
+  }
+  return src;
+}
 
 export interface SearchResultItem {
   id: string;
@@ -26,7 +55,7 @@ export interface SearchResultItem {
 export function buildSearchIndex(): SearchResultItem[] {
   const items: SearchResultItem[] = [];
 
-  for (const country of countries) {
+  for (const country of searchCountries) {
     const shortName = country.shortName || country.name;
 
     // Add Country
@@ -91,14 +120,22 @@ export default function SearchModal({ open, onClose, onSelectCountry }: SearchMo
         if (activeFilter === "country") return item.type === "country";
         if (activeFilter === "city") return item.type === "city";
         return true;
-      });
+      }).slice(0, DEFAULT_RESULT_LIMIT);
     }
 
-    return searchIndex.filter((item) => {
-      if (activeFilter === "country" && item.type !== "country") return false;
-      if (activeFilter === "city" && item.type !== "city") return false;
-      return item.keywords.includes(q) || slugify(item.title).includes(q);
-    });
+    return searchIndex
+      .filter((item) => {
+        if (activeFilter === "country" && item.type !== "country") return false;
+        if (activeFilter === "city" && item.type !== "city") return false;
+        return item.keywords.includes(q) || slugify(item.title).includes(q);
+      })
+      .sort((a, b) => {
+        const aTitle = slugify(a.title);
+        const bTitle = slugify(b.title);
+        const score = (title: string) => title === q ? 0 : title.startsWith(q) ? 1 : 2;
+        return score(aTitle) - score(bTitle) || aTitle.localeCompare(bTitle, "tr");
+      })
+      .slice(0, SEARCH_RESULT_LIMIT);
   }, [query, activeFilter, searchIndex]);
 
   // Focus input when opened
@@ -113,6 +150,15 @@ export default function SearchModal({ open, onClose, onSelectCountry }: SearchMo
     }
   }, [open]);
 
+  useEffect(() => {
+    if (!open) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [open]);
+
   // Handle item selection
   const handleSelect = useCallback(
     (item: SearchResultItem) => {
@@ -120,7 +166,7 @@ export default function SearchModal({ open, onClose, onSelectCountry }: SearchMo
 
       // If selecting a country on home page with an onSelectCountry callback
       if (item.type === "country" && onSelectCountry) {
-        const countryObj = countries.find((c) => c.code === item.id.replace("country-", ""));
+        const countryObj = searchCountries.find((c) => c.code === item.id.replace("country-", ""));
         if (countryObj) {
           onSelectCountry(countryObj);
           return;
@@ -160,7 +206,7 @@ export default function SearchModal({ open, onClose, onSelectCountry }: SearchMo
   return (
     <AnimatePresence>
       {open && (
-        <div className="fixed inset-0 z-[100] flex items-start justify-center pt-16 sm:pt-24 px-4">
+        <div className="fixed inset-0 z-[100] flex items-start justify-center p-3 pt-[max(0.75rem,env(safe-area-inset-top))] sm:px-4 sm:pt-24">
           {/* Backdrop */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -178,10 +224,13 @@ export default function SearchModal({ open, onClose, onSelectCountry }: SearchMo
             exit={{ opacity: 0, scale: 0.96, y: -12 }}
             transition={{ duration: 0.3, ease: EASE_OUT }}
             onKeyDown={handleKeyDown}
-            className="relative z-10 w-full max-w-2xl overflow-hidden rounded-2xl border border-white/15 bg-[#0b0e17]/95 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.8)] backdrop-blur-2xl text-white"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Şehir ve ülke ara"
+            className="relative z-10 flex max-h-[calc(100dvh_-_1.5rem_-_env(safe-area-inset-top)_-_env(safe-area-inset-bottom))] w-full max-w-2xl flex-col overflow-hidden rounded-[24px] border border-white/15 bg-[#0b0e17]/95 text-white shadow-[0_25px_60px_-15px_rgba(0,0,0,0.8)] backdrop-blur-2xl sm:max-h-[calc(100dvh_-_7rem)] sm:rounded-2xl"
           >
             {/* Input Header */}
-            <div className="relative flex items-center border-b border-white/10 px-5 py-4">
+            <div className="relative flex shrink-0 items-center border-b border-white/10 px-4 py-3 sm:px-5 sm:py-4">
               <Search className="h-5 w-5 shrink-0 text-white/50" />
               <input
                 ref={inputRef}
@@ -197,7 +246,7 @@ export default function SearchModal({ open, onClose, onSelectCountry }: SearchMo
               <button
                 type="button"
                 onClick={onClose}
-                className="ml-2 rounded-full p-1.5 text-white/50 hover:bg-white/10 hover:text-white transition-colors"
+                className="ml-2 flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-white/50 transition-colors hover:bg-white/10 hover:text-white"
                 aria-label="Aramayı kapat"
               >
                 <X className="h-5 w-5" />
@@ -205,14 +254,14 @@ export default function SearchModal({ open, onClose, onSelectCountry }: SearchMo
             </div>
 
             {/* Filter Tabs */}
-            <div className="flex items-center gap-2 border-b border-white/5 px-5 py-2.5 text-[12px]">
+            <div className="scrollbar-none flex shrink-0 items-center gap-1.5 overflow-x-auto border-b border-white/5 px-4 py-2.5 text-[12px] sm:gap-2 sm:px-5">
               <button
                 type="button"
                 onClick={() => {
                   setActiveFilter("all");
                   setSelectedIndex(0);
                 }}
-                className={`rounded-full px-3 py-1 transition-colors ${
+                className={`min-h-10 rounded-full px-3 py-1 transition-colors ${
                   activeFilter === "all"
                     ? "bg-white text-black font-semibold"
                     : "text-white/60 hover:text-white hover:bg-white/10"
@@ -226,7 +275,7 @@ export default function SearchModal({ open, onClose, onSelectCountry }: SearchMo
                   setActiveFilter("city");
                   setSelectedIndex(0);
                 }}
-                className={`rounded-full px-3 py-1 transition-colors flex items-center gap-1.5 ${
+                className={`flex min-h-10 items-center gap-1.5 rounded-full px-3 py-1 transition-colors ${
                   activeFilter === "city"
                     ? "bg-white text-black font-semibold"
                     : "text-white/60 hover:text-white hover:bg-white/10"
@@ -240,7 +289,7 @@ export default function SearchModal({ open, onClose, onSelectCountry }: SearchMo
                   setActiveFilter("country");
                   setSelectedIndex(0);
                 }}
-                className={`rounded-full px-3 py-1 transition-colors flex items-center gap-1.5 ${
+                className={`flex min-h-10 items-center gap-1.5 rounded-full px-3 py-1 transition-colors ${
                   activeFilter === "country"
                     ? "bg-white text-black font-semibold"
                     : "text-white/60 hover:text-white hover:bg-white/10"
@@ -251,17 +300,18 @@ export default function SearchModal({ open, onClose, onSelectCountry }: SearchMo
             </div>
 
             {/* Results List */}
-            <div className="max-h-[60vh] overflow-y-auto p-2 scrollbar-thin scrollbar-thumb-white/10">
+            <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain p-2 scrollbar-thin scrollbar-thumb-white/10">
               {results.length > 0 ? (
                 <div className="space-y-1">
                   {results.map((item, index) => {
                     const isSelected = index === selectedIndex;
                     return (
-                      <div
+                      <button
+                        type="button"
                         key={item.id}
                         onClick={() => handleSelect(item)}
                         onMouseEnter={() => setSelectedIndex(index)}
-                        className={`group flex cursor-pointer items-center justify-between rounded-xl p-3 transition-colors ${
+                        className={`group flex min-h-[68px] w-full cursor-pointer items-center justify-between rounded-xl p-3 text-left transition-colors ${
                           isSelected
                             ? "bg-white/10 text-white"
                             : "text-white/80 hover:bg-white/5 hover:text-white"
@@ -271,10 +321,14 @@ export default function SearchModal({ open, onClose, onSelectCountry }: SearchMo
                           {/* Image thumbnail */}
                           <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-lg border border-white/10 bg-white/5">
                             <Image
-                              src={item.image}
+                              src={thumbnailFor(item.image)}
                               alt={item.title}
                               fill
-                              unoptimized={item.image.includes("upload.wikimedia.org")}
+                              loading="lazy"
+                              unoptimized={
+                                item.image.includes("images.unsplash.com") ||
+                                item.image.includes("upload.wikimedia.org")
+                              }
                               sizes="48px"
                               className="object-cover transition-transform duration-500 group-hover:scale-110"
                             />
@@ -314,7 +368,7 @@ export default function SearchModal({ open, onClose, onSelectCountry }: SearchMo
                             <ArrowRight className="h-4 w-4" />
                           </div>
                         </div>
-                      </div>
+                      </button>
                     );
                   })}
                 </div>

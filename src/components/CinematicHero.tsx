@@ -2,8 +2,8 @@
 
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import WindowShade, { SHADE_CONFIG } from "./WindowShade";
+import { useAdaptiveMotionQuality } from "@/hooks/useAdaptiveMotionQuality";
 import {
   CAMERA,
   clamp01,
@@ -17,10 +17,6 @@ import {
   worldScale,
 } from "@/lib/camera";
 
-if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger);
-}
-
 /* ------------------------------------------------------------------ *
  *  Motion model
  *
@@ -30,19 +26,19 @@ if (typeof window !== "undefined") {
  *  The maths lives in `@/lib/camera` so it can be verified in Node
  *  against the five storyboard stages — `npx tsx scripts/camera.test.ts`.
  *
- *  `p` is smoothed by ScrollTrigger's scrub, which is itself fed by
- *  Lenis — two stages of inertia. That is what makes it feel like a
- *  camera on a dolly instead of a value bound to a scrollbar.
+ *  `p` follows the browser's native scroll position. That keeps the camera
+ *  deterministic without forcing a page-wide animation ticker to run while
+ *  the user is idle.
  * ------------------------------------------------------------------ */
 
 /**
  * The destination plate. A genuine Central Park aerial — the park's green mass,
  * the reservoir and Manhattan wrapping around it, with real atmospheric haze
- * toward the horizon. Requested at 3200px because by the end of the sequence it
- * fills the whole viewport and any softness would read as a low-quality asset.
+ * toward the horizon. 2400px keeps the full-screen composition crisp while
+ * avoiding the decode and transfer cost of the previous 3200px plate.
  */
 const PLATE =
-  "https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?w=3200&q=88&auto=format&fit=crop";
+  "https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?w=2400&q=82&auto=format&fit=crop";
 
 function measure(): Dims {
   // Floor the viewport: a hidden iframe, a display:none ancestor, or certain
@@ -81,8 +77,10 @@ function ring(d: Dims, pad: number) {
 }
 
 export default function CinematicHero() {
+  const motionQuality = useAdaptiveMotionQuality();
   const stageRef = useRef<HTMLDivElement>(null);
   const viewportRef = useRef<HTMLDivElement>(null);
+  const heroVisibleRef = useRef(true);
 
   // world (behind the glass)
   const worldRef = useRef<HTMLDivElement>(null);
@@ -160,7 +158,6 @@ export default function CinematicHero() {
       // Only re-render when the viewport genuinely changed size; ResizeObserver
       // is chatty and identical dims would loop.
       setDims((prev) => (prev && prev.w === next.w && prev.h === next.h ? prev : next));
-      ScrollTrigger.refresh();
     };
 
     remeasure();
@@ -177,6 +174,19 @@ export default function CinematicHero() {
       ro.disconnect();
       window.removeEventListener("resize", remeasure);
     };
+  }, []);
+
+  useEffect(() => {
+    const stage = stageRef.current;
+    if (!stage) return;
+
+    const observer = new IntersectionObserver(([entry]) => {
+      const visible = entry.isIntersecting;
+      heroVisibleRef.current = visible;
+      stage.dataset.heroActive = String(visible);
+    });
+    observer.observe(stage);
+    return () => observer.disconnect();
   }, []);
 
   /* ---------------- scroll-driven camera ---------------- */
@@ -214,11 +224,21 @@ export default function CinematicHero() {
       const setHazeOp = gsap.quickSetter(hazeRef.current, "opacity");
       const setBloomOp = gsap.quickSetter(bloomRef.current, "opacity");
 
-      const clouds = [
-        { set: gsap.quickSetter(cloudFarRef.current, "scale"), op: gsap.quickSetter(cloudFarRef.current, "opacity"), rush: 1.4, out: 0.62 },
-        { set: gsap.quickSetter(cloudMidRef.current, "scale"), op: gsap.quickSetter(cloudMidRef.current, "opacity"), rush: 2.3, out: 0.5 },
-        { set: gsap.quickSetter(cloudNearRef.current, "scale"), op: gsap.quickSetter(cloudNearRef.current, "opacity"), rush: 3.6, out: 0.38 },
-      ];
+      const clouds =
+        motionQuality === "lite"
+          ? [
+              {
+                set: gsap.quickSetter(cloudFarRef.current, "scale"),
+                op: gsap.quickSetter(cloudFarRef.current, "opacity"),
+                rush: 1.4,
+                out: 0.62,
+              },
+            ]
+          : [
+              { set: gsap.quickSetter(cloudFarRef.current, "scale"), op: gsap.quickSetter(cloudFarRef.current, "opacity"), rush: 1.4, out: 0.62 },
+              { set: gsap.quickSetter(cloudMidRef.current, "scale"), op: gsap.quickSetter(cloudMidRef.current, "opacity"), rush: 2.3, out: 0.5 },
+              { set: gsap.quickSetter(cloudNearRef.current, "scale"), op: gsap.quickSetter(cloudNearRef.current, "opacity"), rush: 3.6, out: 0.38 },
+            ];
 
       const setIntroOp = gsap.quickSetter(introRef.current, "opacity");
       const setIntroY = gsap.quickSetter(introRef.current, "y", "px");
@@ -317,8 +337,8 @@ export default function CinematicHero() {
       };
 
       /**
-       * The camera is driven by the scroll position itself, synchronously in
-       * the scroll event.
+       * The camera is driven by the scroll position itself and coalesced to one
+       * update per animation frame.
        *
        * It used to hang off a scrubbed ScrollTrigger tween, which meant the
        * chain Lenis → gsap.ticker → ScrollTrigger → scrub → render had to be
@@ -328,25 +348,36 @@ export default function CinematicHero() {
        * responding to the scrollbar.
        *
        * Reading the position directly makes scroll the single source of truth:
-       * more scroll is always a bigger window, with no ticker in between.
-       * Lenis still interpolates the scroll position it writes, so the motion
-       * keeps its inertia where Lenis is running, and stays correct where it
-       * is not.
+       * more scroll is always a bigger window, with no permanent ticker in
+       * between. Native scrolling remains responsive even when animation
+       * frames are throttled.
        */
-      const onScroll = () => render(readProgress());
+      let frame = 0;
+      let lastProgress = -1;
+      const update = () => {
+        frame = 0;
+        const nextProgress = readProgress();
+        if (Math.abs(nextProgress - lastProgress) < 0.0001) return;
+        lastProgress = nextProgress;
+        render(nextProgress);
+      };
+      const onScroll = () => {
+        if (!frame) frame = requestAnimationFrame(update);
+      };
 
-      render(readProgress());
+      update();
 
       window.addEventListener("scroll", onScroll, { passive: true });
       window.addEventListener("resize", onScroll);
       return () => {
         window.removeEventListener("scroll", onScroll);
         window.removeEventListener("resize", onScroll);
+        if (frame) cancelAnimationFrame(frame);
       };
     }, stageRef);
 
     return () => ctx.revert();
-  }, [applyGlass, dims]);
+  }, [applyGlass, dims, motionQuality]);
 
   /* ---------------- entrance ---------------- */
   useEffect(() => {
@@ -400,6 +431,7 @@ export default function CinematicHero() {
   /* ---------------- pointer parallax ---------------- */
   useEffect(() => {
     if (!dims) return;
+    if (motionQuality === "lite") return;
     if (window.matchMedia("(pointer: coarse)").matches) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
@@ -410,18 +442,31 @@ export default function CinematicHero() {
     const worldX = gsap.quickTo(worldTiltRef.current, "x", { duration: 1.4, ease: "power3.out" });
     const worldY = gsap.quickTo(worldTiltRef.current, "y", { duration: 1.4, ease: "power3.out" });
 
-    const onMove = (e: PointerEvent) => {
-      const nx = e.clientX / window.innerWidth - 0.5;
-      const ny = e.clientY / window.innerHeight - 0.5;
+    let frame = 0;
+    let pointerX = window.innerWidth / 2;
+    let pointerY = window.innerHeight / 2;
+    const update = () => {
+      frame = 0;
+      if (!heroVisibleRef.current) return;
+      const nx = pointerX / window.innerWidth - 0.5;
+      const ny = pointerY / window.innerHeight - 0.5;
       cabinX(-nx * 26);
       cabinY(-ny * 18);
       worldX(nx * 10);
       worldY(ny * 7);
     };
+    const onMove = (e: PointerEvent) => {
+      pointerX = e.clientX;
+      pointerY = e.clientY;
+      if (!frame) frame = requestAnimationFrame(update);
+    };
 
     window.addEventListener("pointermove", onMove, { passive: true });
-    return () => window.removeEventListener("pointermove", onMove);
-  }, [dims]);
+    return () => {
+      window.removeEventListener("pointermove", onMove);
+      if (frame) cancelAnimationFrame(frame);
+    };
+  }, [dims, motionQuality]);
 
   const outer = dims && ring(dims, dims.bez);
   const mid = dims && ring(dims, dims.bez * 0.62);
@@ -430,11 +475,16 @@ export default function CinematicHero() {
 
   // Halved from 620vh. The camera curve was reshaped to match — see `render`.
   return (
-    <div ref={stageRef} className="relative h-[310vh]">
+    <div
+      ref={stageRef}
+      data-motion-quality={motionQuality}
+      data-hero-active="true"
+      className="hero-stage relative h-[265svh] sm:h-[310vh]"
+    >
       <div ref={viewportRef} className="sticky top-0 h-[100svh] w-full overflow-hidden bg-[#0b0d12]">
         {/* ============ WORLD — everything beyond the glass ============ */}
-        <div ref={worldTiltRef} className="absolute inset-0">
-          <div ref={worldRef} className="absolute inset-0 will-change-transform">
+        <div ref={worldTiltRef} className="hero-composite-layer absolute inset-0">
+          <div ref={worldRef} className="hero-composite-layer absolute inset-0 will-change-transform">
             {/* ------------------------------------------------------------ *
              *  Central Park is present from the very first frame — never faded
              *  in at a threshold. What changes is CLARITY.
@@ -462,7 +512,7 @@ export default function CinematicHero() {
             {/* medium focus */}
             <div
               ref={cityMidRef}
-              className="absolute -inset-[8%]"
+              className="hero-focus-medium absolute -inset-[8%]"
               style={{
                 backgroundImage: `url('${PLATE}')`,
                 backgroundSize: "cover",
@@ -474,7 +524,7 @@ export default function CinematicHero() {
                 The negative inset keeps the blur's soft edge off-screen. */}
             <div
               ref={cityRef}
-              className="absolute -inset-[10%]"
+              className="hero-focus-far absolute -inset-[10%]"
               style={{
                 backgroundImage: `url('${PLATE}')`,
                 backgroundSize: "cover",
@@ -494,7 +544,7 @@ export default function CinematicHero() {
             />
             {/* split tone — warm highlights, cool shadows */}
             <div
-              className="pointer-events-none absolute inset-0 mix-blend-soft-light"
+              className="hero-split-tone pointer-events-none absolute inset-0 mix-blend-soft-light"
               style={{
                 background:
                   "linear-gradient(175deg,#ffd9a8 0%,rgba(255,217,168,0.15) 38%,rgba(90,120,160,0.35) 100%)",
@@ -521,13 +571,13 @@ export default function CinematicHero() {
 
             {/* Thin wisps drifting between the camera and the park. They clear
                 early, which is what sells the descent. */}
-            <div ref={cloudFarRef} className="absolute inset-0 will-change-transform">
+            <div ref={cloudFarRef} className="hero-cloud-far absolute inset-0 will-change-transform">
               <CloudDeck seed={11} count={6} blur={14} opacity={0.20} band={[2, 34]} width={[280, 520]} />
             </div>
-            <div ref={cloudMidRef} className="absolute inset-0 will-change-transform">
+            <div ref={cloudMidRef} className="hero-cloud-mid absolute inset-0 will-change-transform">
               <CloudDeck seed={29} count={4} blur={22} opacity={0.24} band={[62, 86]} width={[420, 760]} />
             </div>
-            <div ref={cloudNearRef} className="absolute inset-0 will-change-transform">
+            <div ref={cloudNearRef} className="hero-cloud-near absolute inset-0 will-change-transform">
               <CloudDeck seed={47} count={3} blur={34} opacity={0.28} band={[82, 108]} width={[620, 1040]} />
             </div>
           </div>
@@ -552,10 +602,10 @@ export default function CinematicHero() {
         </div>
 
         {/* ============ CABIN — wall, bezel and glass, as one camera rig ============ */}
-        <div ref={cabinTiltRef} className="absolute inset-0">
+        <div ref={cabinTiltRef} className="hero-composite-layer absolute inset-0">
           {dims && outer && mid && lip && glass && (
             <svg
-              className="absolute inset-0 h-full w-full will-change-transform"
+              className="hero-composite-layer absolute inset-0 h-full w-full will-change-transform"
               viewBox={`0 0 ${dims.w} ${dims.h}`}
               preserveAspectRatio="none"
               aria-hidden
@@ -685,7 +735,7 @@ export default function CinematicHero() {
             comes down, which is what actually sells the shade as a light source. */}
         <div
           ref={cabinLightRef}
-          className="pointer-events-none absolute inset-0 z-[15] mix-blend-screen"
+          className="hero-cabin-light pointer-events-none absolute inset-0 z-[15] mix-blend-screen"
           style={{
             background:
               "radial-gradient(ellipse 46% 52% at 50% 50%, rgba(180,214,240,0.16) 0%, transparent 68%)",
@@ -702,9 +752,12 @@ export default function CinematicHero() {
         {/* opening title — bottom-left, out of the window's way */}
         <div
           ref={introRef}
-          className="absolute bottom-0 left-0 z-40 max-w-[min(560px,86vw)] px-6 pb-14 sm:px-10 sm:pb-16"
+          className="absolute bottom-0 left-0 z-40 max-w-[min(560px,88vw)] px-5 pb-[calc(2rem_+_env(safe-area-inset-bottom))] sm:px-10 sm:pb-16"
         >
-          <h1 className="font-display text-[clamp(2.6rem,6.4vw,4.9rem)] leading-[0.94] text-white">
+          <div
+            aria-hidden="true"
+            className="font-display text-[clamp(2.2rem,11vw,4.9rem)] leading-[0.94] text-white"
+          >
             <span className="block overflow-hidden">
               <span className="hero-line block italic font-light text-white/95">Hiç</span>
             </span>
@@ -714,8 +767,8 @@ export default function CinematicHero() {
             <span className="block overflow-hidden">
               <span className="hero-line block">bir yere var</span>
             </span>
-          </h1>
-          <p className="hero-sub mt-6 max-w-sm text-[14px] leading-relaxed text-white/45">
+          </div>
+          <p className="hero-sub mt-4 max-w-sm text-[13px] leading-relaxed text-white/45 sm:mt-6 sm:text-[14px]">
             Dünyanın en güzel şehirlerine açılan bir cam kenarı. Unutulmaz rotalar,
             büyüleyici duraklar ve kesintisiz tek bir manzara.
           </p>
@@ -735,7 +788,7 @@ export default function CinematicHero() {
         {/* arrival */}
         <div
           ref={arriveRef}
-          className="pointer-events-none absolute inset-x-0 bottom-0 z-40 px-6 pb-16 text-center opacity-0 sm:pb-20"
+          className="pointer-events-none absolute inset-x-0 bottom-0 z-40 px-5 pb-[calc(2.5rem_+_env(safe-area-inset-bottom))] text-center opacity-0 sm:px-6 sm:pb-20"
         >
           <p className="text-[11px] tracking-[0.42em] text-white/55 uppercase">Şimdi iniyoruz</p>
           <h2 className="font-display mt-3 text-[clamp(2.8rem,8vw,6rem)] leading-[0.95] text-white">

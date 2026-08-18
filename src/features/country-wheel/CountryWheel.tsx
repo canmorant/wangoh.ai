@@ -180,6 +180,8 @@ export default function CountryWheel({
   useEffect(() => {
     if (!open) return;
     wheel.reset();
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
 
     const id = requestAnimationFrame(() => draw());
     const onResize = () => {
@@ -195,6 +197,7 @@ export default function CountryWheel({
       cancelAnimationFrame(id);
       window.removeEventListener("resize", onResize);
       window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = previousOverflow;
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open]);
@@ -231,7 +234,10 @@ export default function CountryWheel({
     <AnimatePresence>
       {open && (
         <motion.div
-          className="fixed inset-0 z-[80] overflow-y-auto"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Ülke çarkı"
+          className="fixed inset-0 z-[80] overflow-y-auto overscroll-contain"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -249,8 +255,8 @@ export default function CountryWheel({
             transition={{ duration: 0.8, ease: EASE_SOFT }}
           />
 
-          <div className="relative mx-auto flex min-h-[100svh] max-w-6xl flex-col items-center justify-center gap-10 px-5 py-24 lg:flex-row lg:gap-14">
-            <div className="relative w-full max-w-[min(90vw,600px)] shrink-0 lg:max-w-[560px]">
+          <div className="relative mx-auto flex min-h-[100svh] max-w-6xl flex-col items-center justify-center gap-8 px-4 py-20 sm:px-5 sm:py-24 lg:flex-row lg:gap-14">
+            <div className="relative w-full max-w-[min(88vw,600px)] shrink-0 lg:max-w-[560px]">
               <div className="absolute top-0 left-1/2 z-20 -translate-x-1/2 -translate-y-[7px]">
                 <svg width="32" height="36" viewBox="0 0 32 36" aria-hidden>
                   <path d="M16 36 L3 8 A14.5 14.5 0 0 1 29 8 Z" fill="#f6f4f0" />
@@ -301,7 +307,7 @@ export default function CountryWheel({
                 </span>
               </button>
 
-              <p className="mt-5 text-center text-[11px] tracking-[0.26em] text-white/30 uppercase">
+              <p className="mt-4 text-center text-[10px] tracking-[0.2em] text-white/30 uppercase sm:mt-5 sm:text-[11px] sm:tracking-[0.26em]">
                 Çevir · ya da çarkı sürükle
               </p>
             </div>
@@ -310,7 +316,7 @@ export default function CountryWheel({
               <motion.div
                 animate={{ boxShadow: `0 0 100px -45px ${accent}` }}
                 transition={{ duration: 0.7, ease: EASE_SOFT }}
-                className="rounded-[24px] border border-white/[0.08] bg-white/[0.04] p-7 backdrop-blur-2xl"
+                className="rounded-[22px] border border-white/[0.08] bg-white/[0.04] p-5 backdrop-blur-2xl sm:rounded-[24px] sm:p-7"
               >
                 <p className="text-[10px] tracking-[0.42em] text-white/40 uppercase">
                   {wheel.settled
@@ -346,7 +352,7 @@ export default function CountryWheel({
                       />
                     )}
                     <div className="min-w-0 flex-1">
-                      <h3 className="font-display text-[1.75rem] leading-[1.05] text-white">
+                      <h3 className="font-display break-words text-[1.5rem] leading-[1.05] text-white sm:text-[1.75rem]">
                         {shown?.name}
                       </h3>
                       <div className="mt-1 flex flex-wrap items-center gap-2">
@@ -377,7 +383,7 @@ export default function CountryWheel({
                 <button
                   disabled={!result}
                   onClick={() => result && onFly(toCountryRoute(result))}
-                  className="mt-7 w-full rounded-full bg-white px-6 py-3.5 text-[11.5px] font-semibold tracking-[0.2em] text-black uppercase transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:scale-[1.03] disabled:pointer-events-none disabled:opacity-25"
+                  className="mt-7 min-h-12 w-full rounded-full bg-white px-5 py-3 text-[11px] font-semibold leading-relaxed tracking-[0.16em] text-black uppercase transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:scale-[1.03] disabled:pointer-events-none disabled:opacity-25 sm:px-6 sm:py-3.5 sm:text-[11.5px] sm:tracking-[0.2em]"
                 >
                   {result ? `Beni ${result.name} ülkesine götür` : "Seçmek için çevir"}
                 </button>
@@ -387,7 +393,7 @@ export default function CountryWheel({
 
           <button
             onClick={onClose}
-            className="fixed top-5 right-5 z-30 rounded-full border border-white/12 bg-black/30 px-5 py-2.5 text-[11px] tracking-[0.18em] text-white/70 uppercase backdrop-blur-md transition-colors duration-500 hover:border-white/35 hover:text-white"
+            className="fixed top-[max(0.75rem,env(safe-area-inset-top))] right-3 z-30 min-h-11 rounded-full border border-white/12 bg-black/30 px-4 py-2.5 text-[10.5px] tracking-[0.16em] text-white/70 uppercase backdrop-blur-md transition-colors duration-500 hover:border-white/35 hover:text-white sm:top-5 sm:right-5 sm:px-5 sm:text-[11px] sm:tracking-[0.18em]"
           >
             Kapat
           </button>

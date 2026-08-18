@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { countries, Country } from "@/data/destinations";
 import { clubs } from "@/data/clubs";
 import { EASE_OUT, EASE_SOFT } from "@/lib/motion";
+import { turkishDative } from "@/lib/turkish";
 
 /**
  * Rastgele futbol kulübü çekilişi.
@@ -58,9 +59,14 @@ export default function ClubReveal({
 
   useEffect(() => {
     if (!open) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
     window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", onKey);
+    };
   }, [open, onClose]);
 
   const club = clubs[index];
@@ -70,7 +76,10 @@ export default function ClubReveal({
     <AnimatePresence>
       {open && (
         <motion.div
-          className="fixed inset-0 z-[80] flex items-center justify-center px-6"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Rastgele futbol kulübü"
+          className="fixed inset-0 z-[80] flex items-center justify-center overflow-y-auto overscroll-contain px-4 py-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -87,7 +96,7 @@ export default function ClubReveal({
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 16, scale: 0.98 }}
             transition={{ duration: 0.7, ease: EASE_OUT }}
-            className="relative w-full max-w-md overflow-hidden rounded-[28px] border border-white/[0.08] bg-white/[0.035] p-8 text-center backdrop-blur-2xl sm:p-10"
+            className="relative w-full max-w-md overflow-hidden rounded-[24px] border border-white/[0.08] bg-white/[0.035] p-6 text-center backdrop-blur-2xl sm:rounded-[28px] sm:p-10"
           >
             <motion.span
               aria-hidden
@@ -138,17 +147,17 @@ export default function ClubReveal({
                 {club?.city}
               </p>
 
-              <div className="mt-8 flex items-center justify-center gap-3">
+              <div className="mt-8 flex flex-col items-stretch justify-center gap-3 min-[360px]:flex-row min-[360px]:items-center">
                 <button
                   disabled={!settled}
                   onClick={() => clubCountry && onFly(clubCountry)}
-                  className="rounded-full bg-white px-6 py-3 text-[12px] font-medium tracking-[0.16em] text-black uppercase transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:scale-[1.04] disabled:pointer-events-none disabled:opacity-40"
+                  className="min-h-12 rounded-full bg-white px-6 py-3 text-[12px] font-medium tracking-[0.16em] text-black uppercase transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:scale-[1.04] disabled:pointer-events-none disabled:opacity-40"
                 >
-                  {club ? `${club.city}'e uç` : "Uç"}
+                  {club ? `${turkishDative(club.city)} uç` : "Uç"}
                 </button>
                 <button
                   onClick={onClose}
-                  className="rounded-full border border-white/12 px-6 py-3 text-[12px] tracking-[0.16em] text-white/60 uppercase transition-colors duration-500 hover:border-white/30 hover:text-white"
+                  className="min-h-12 rounded-full border border-white/12 px-6 py-3 text-[12px] tracking-[0.16em] text-white/60 uppercase transition-colors duration-500 hover:border-white/30 hover:text-white"
                 >
                   Kapat
                 </button>

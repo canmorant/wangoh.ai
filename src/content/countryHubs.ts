@@ -4,6 +4,8 @@ export interface CountryHubContent {
   planningHeading: string;
   essentialsHeading?: string;
   citiesHeading?: string;
+  /** Şehir kartlarının hemen üstünde kullanılan kısa, arama odaklı ülke özeti. */
+  cityGridIntro: string;
   intro: string[];
   essentials?: { title: string; body: string }[];
   routeIdeas: {
@@ -20,6 +22,8 @@ const HUBS: Record<string, CountryHubContent> = {
     seoDescription:
       "Japonya gezi rehberi: Tokyo, Kyoto, Osaka, Kobe, Okinawa, Hiroshima, Nara ve Sapporo için kapsamlı şehir yazıları, ulaşım ve rota önerileri.",
     planningHeading: "Japonya rotası nasıl kurulur?",
+    cityGridIntro:
+      "Japonya'da gezilecek şehirler, aynı yolculuk içinde geleneksel mahallelerden geleceğin metropollerine uzanan güçlü bir çeşitlilik sunar. Tokyo büyük şehir enerjisiyle, Kyoto ve Nara tapınaklarıyla, Osaka ile Kobe ise mutfak ve liman kültürüyle öne çıkar. Hiroshima yakın tarihi, Sapporo kuzeyin doğasını, Okinawa da Ryukyu mirası ve tropik kıyıları keşfetmek isteyenler için farklı bir rota açar.",
     intro: [
       "Japonya'yı tek bir uzun kontrol listesi gibi değil, birbirini tamamlayan bölgesel duraklar olarak planlamak daha iyi sonuç verir. Tokyo büyük şehir ritmini; Kyoto tarihî mahalleleri; Osaka gündelik mutfağı; Kobe liman, sake ve kaplıcaları; Hiroshima hafıza ile ada doğasını; Nara eski başkent dokusunu; Sapporo Hokkaido'nun iklimini, Okinawa ise ayrı Ryukyu tarihini ve mercan denizlerini açar.",
       "İlk yolculukta Honshu üzerindeki Tokyo–Kyoto–Osaka omurgasını hızlı trenle bağlayın; Kobe ve Nara'yı Kansai ayağına, Hiroshima'yı batıya devam eden rotaya yerleştirin. Sapporo ile Okinawa haritanın iki iklim ucudur: ikisini de kısa Honshu programına sıkıştırmak yerine ayrı uçuşlu bölge ayağı sayın.",
@@ -62,6 +66,8 @@ const HUBS: Record<string, CountryHubContent> = {
     planningHeading: "Amerika rotası nasıl kurulur?",
     essentialsHeading: "Amerika'ya gitmeden önce bilinmesi gerekenler",
     citiesHeading: "Amerika Birleşik Devletleri'nde gezilecek şehirler",
+    cityGridIntro:
+      "Amerika Birleşik Devletleri'nde gezilecek şehirler arasındaki mesafeler kadar karakter farkları da büyüktür. New York ve Chicago mimari, müze ve mahalle yaşamıyla; Los Angeles ile San Francisco Batı Kıyısı kültürüyle öne çıkar. Miami tropik ve Latin etkili bir şehir tatili sunarken Las Vegas gösterileri ve çöl rotalarıyla ayrışır. En iyi Amerika gezisi, bütün şehirleri sıkıştırmak yerine tek bir bölgeye odaklanan plandır.",
     intro: [
       "Amerika Birleşik Devletleri'ni tek bir ülke gezisi gibi değil, kıta ölçeğinde ayrı bölgesel yolculuklar gibi düşünün. New York ve Chicago toplu taşımayla rahat şehir tatilleri sunarken Los Angeles'ta mahalle seçimi ile trafik, Miami'de ana kara ile Miami Beach ayrımı, Las Vegas'ta ise otel toplam maliyeti yolculuğun şeklini belirler.",
       "Bu altı şehri tek rotaya sıkıştırmak çoğu gezgin için iyi fikir değildir. Kıtalar arası uçuşunuzu bir giriş şehrine bağlayın; iç hat uçuşu ekleyecekseniz bagaj, havalimanına gidiş ve güvenlik için kaybolan yarım günü de hesaba katın. Kaliforniya ikilisi coğrafi olarak anlamlıdır; New York–Miami veya Chicago–Las Vegas ise karayolu rotası değil, ayrı bir uçuş ayağıdır.",
@@ -123,6 +129,8 @@ const HUBS: Record<string, CountryHubContent> = {
     planningHeading: "Tayland rotası nasıl kurulur?",
     essentialsHeading: "Tayland'a gitmeden önce bilinmesi gerekenler",
     citiesHeading: "Tayland'da gezilecek yerler ve şehir rehberleri",
+    cityGridIntro:
+      "Tayland'da gezilecek yerler; hareketli başkentlerden eski krallık kalıntılarına, kuzey dağlarından tropik adalara kadar uzanır. Bangkok şehir hayatı ve sokak yemekleriyle, Chiang Mai kuzey kültürüyle, Ayutthaya tarihî tapınaklarıyla öne çıkar. Phuket ve Krabi Andaman kıyısını, Koh Samui ise Tayland Körfezi'ni keşfetmek için iyi üslerdir. Şehir ve ada seçerken yalnız mesafeyi değil, bölgelerin farklı yağış dönemlerini de hesaba katın.",
     intro: [
       "Tayland'ı Bangkok'a birkaç tapınak, kuzeye bir fil turu ve güneye tek tip bir plaj tatili eklenen paket gibi planlamayın. Bangkok nehir ile raylı sistemlerin birlikte okunduğu büyük bir metropol; Chiang Mai dağlarla çevrili kuzey kültürü; Phuket ve Krabi Andaman Denizi'nin mevsimine bağlı iki ayrı üs; Koh Samui ise Tayland Körfezi'nde farklı yağış takvimi olan bir ada. Ayutthaya da yalnız fotoğraf molası değil, nehirler arasındaki eski başkentin katmanlarını anlatan bağımsız bir duraktır.",
       "İlk yolculuk için iki veya üç coğrafya yeterlidir. Bangkok'u başlangıç düğümü yapıp kuzeye uçabilir ya da trenle ilerleyebilir; deniz ayağında ise Phuket–Krabi ikilisini karadan/tekneyle birleştirebilirsiniz. Koh Samui'yi sırf haritada güneyde göründüğü için Phuket'in yanına koymak zaman kaybettirir: iki kıyı arasında kara, iskele ve feribot ya da ayrı uçuş gerekir. Muson takvimi de aynı değildir; önce ayı, sonra doğru kıyıyı seçin.",
@@ -196,6 +204,8 @@ const HUBS: Record<string, CountryHubContent> = {
     planningHeading: "İtalya rotası nasıl kurulur?",
     essentialsHeading: "İtalya'ya gitmeden önce bilinmesi gerekenler",
     citiesHeading: "İtalya'da gezilecek şehirler ve kıyı rotaları",
+    cityGridIntro:
+      "İtalya'da gezilecek şehirler sanat, tarih, yemek ve kıyı manzaralarını birbirine bağlayan doğal bir rota oluşturur. Roma antik mirası, Floransa Rönesans eserleri, Venedik lagün yaşamı ve Milano tasarım kültürüyle farklı beklentilere cevap verir. Napoli ile Amalfi Kıyısı ise Güney İtalya'nın mutfağını ve Akdeniz ritmini öne çıkarır. İlk İtalya gezisinde hızlı trenle bağlanan iki veya üç ana şehir seçmek daha dengeli bir deneyim sağlar.",
     intro: [
       "İtalya'yı Roma, Floransa ve Venedik'i birer gecede işaretleyen hızlı tren yarışına çevirmeyin. Roma antik kent ve Vatikan için en az dört gün; Floransa yoğun müzeler için üç; Venedik lagün ritmini görmek için iki gece ister. Milano kuzeyin sanat–tasarım kapısı, Napoli yaşayan tarih ve Campania mutfağının merkezi, Amalfi Kıyısı ise istasyonsuz ve mevsimsel deniz ulaşımına bağlı ayrı bir lojistik bölgedir.",
       "Hızlı tren Roma–Floransa–Milano–Venedik omurgasında etkilidir; Napoli güneye aynı ağla bağlanır. Amalfi Kıyısı'na son adım Salerno, Napoli/Sorrento ve feribot–otobüs kombinasyonuyla çözülür. Şehir sayısından önce gün sayısını belirleyin: 8–10 günde en fazla üç ana üs, 12–14 günde dört durak sürdürülebilir. Müze bileti kadar otel–istasyon ve son feribot bağlantısını da rota kararı sayın.",
@@ -280,6 +290,8 @@ const HUBS: Record<string, CountryHubContent> = {
     planningHeading: "Fransa rotası nasıl kurulur?",
     essentialsHeading: "Fransa'ya gitmeden önce bilinmesi gerekenler",
     citiesHeading: "Fransa'da gezilecek şehirler ve şehir rehberleri",
+    cityGridIntro:
+      "Fransa'da gezilecek şehirler yalnız Paris'ten ibaret değildir. Paris müzeleri ve mahalleleriyle klasik başlangıç noktasıdır; Lyon gastronomi, Marsilya liman kültürü, Nice Akdeniz kıyıları, Bordo şarap coğrafyası ve Strazburg Alsace mimarisiyle yolculuğa farklı katmanlar ekler. Hızlı tren ağı sayesinde şehirleri birleştirmek kolaydır; ancak kısa bir Fransa gezisinde Paris'in yanına tek bir bölge eklemek, sürekli yer değiştirmekten daha keyifli olur.",
     intro: [
       "Fransa'yı yalnız Paris'e eklenen birkaç hızlı durak gibi planlamayın. Paris büyük müzeler ve mahalleler için başlı başına bir yolculuk; Lyon gastronomi ile Roma mirasını, Marsilya Akdeniz'in çok kültürlü liman kimliğini, Nice Côte d'Azur kıyılarını, Bordo şarap coğrafyasını, Strazburg ise Alsace'ın Fransız–Alman katmanlarını açar. Aynı ülke içinde iklim, mutfak ve kent ritmi belirgin biçimde değişir.",
       "TGV ağı Paris'i Lyon, Marsilya, Bordo ve Strazburg'a hızlı bağlar; Nice daha uzun bir güneydoğu ayağıdır. Her hattın Paris'te aynı gardan kalkmadığını, OUIGO ile TGV INOUI'nin bagaj ve değişiklik koşullarının farklı olabildiğini unutmayın. 8–10 günde Paris ile tek bir bölge, 12–14 günde Paris ve iki ana üs dengelidir. Şehirleri haritadaki yakınlığa göre değil, tren süresi ile istediğiniz deneyime göre eşleştirin.",
@@ -360,6 +372,8 @@ const HUBS: Record<string, CountryHubContent> = {
     planningHeading: "Güney Kore rotası nasıl kurulur?",
     essentialsHeading: "Güney Kore'ye gitmeden önce bilinmesi gerekenler",
     citiesHeading: "Güney Kore'de gezilecek şehirler ve ada rehberleri",
+    cityGridIntro:
+      "Güney Kore'de gezilecek şehirler modern kültür, tarih, kıyı ve doğayı kısa mesafelerde buluşturur. Seul sarayları ve çağdaş mahalleleriyle, Busan sahilleri ve deniz ürünleriyle, Gyeongju eski krallık mirasıyla öne çıkar. Incheon ilk veya son gece için pratik bir durak, Sokcho Seoraksan yürüyüşlerinin kapısı, Jeju Adası ise volkanik manzaralarıyla ayrı bir tatil rotasıdır. Hızlı tren ve iç hat uçuşlarını birlikte kullanmak dengeli bir gezi sağlar.",
     intro: [
       "Güney Kore'yi yalnız Seul'deki saraylar ve K-pop alışverişi olarak planlamayın. Seul büyük metropol ve Joseon tarihini; Gyeongju Silla mirasını; Busan plajlar ile liman mutfağını; Sokcho Seoraksan doğasını; Jeju volkanik ada kültürünü; Incheon ise modern liman tarihiyle havalimanının ötesindeki şehri açar.",
       "Seul–Gyeongju–Busan hattı KTX ile mantıklı bir kara omurgasıdır. Sokcho'ya şehirlerarası otobüsle, Jeju'ya uçuşla gidilir. Incheon Havalimanı, merkez Incheon ve Songdo aynı nokta değildir. İlk yolculukta 10–12 gün Seul, Gyeongju ve Busan için dengeli; Jeju veya Sokcho eklendiğinde 14 güne yaklaşmak transferleri geziye dönüştürür.",
@@ -444,6 +458,8 @@ const HUBS: Record<string, CountryHubContent> = {
     planningHeading: "İspanya rotası nasıl kurulur?",
     essentialsHeading: "İspanya'ya gitmeden önce bilinmesi gerekenler",
     citiesHeading: "İspanya'da gezilecek şehirler ve adalar",
+    cityGridIntro:
+      "İspanya'da gezilecek şehirler, ülkenin bölgesel kimlikleri sayesinde her durakta değişen bir deneyim sunar. Madrid sanat müzeleriyle, Barcelona Gaudí mimarisiyle, Sevilla ve Granada Endülüs mirasıyla, Valencia ise Akdeniz yaşamıyla öne çıkar. Bilbao ile San Sebastián Bask kültürünü; Mallorca, Ibiza, Tenerife ve Gran Canaria ada rotalarını temsil eder. İlk seyahatte birbirine trenle bağlanan iki veya üç şehir seçmek, ülkeyi daha yavaş ve anlamlı keşfetmenizi sağlar.",
     intro: [
       "İspanya'yı yalnız Barcelona–Madrid ikilisi olarak planlamayın. Katalonya modernisme ve Akdeniz şehir hayatını; Madrid büyük sanat koleksiyonlarını; Endülüs İslam, Yahudi ve Hristiyan mirasının katmanlarını; Bask kıyısı Atlantik ve pintxos kültürünü; Balear Adaları koylarla tarihî şehirleri; Kanarya Adaları ise volkanik doğa ve yıl boyu değişken mikroiklimleri açar.",
       "Anakara omurgasında hızlı tren güçlüdür: Barcelona–Valencia–Madrid doğu hattı, Madrid–Córdoba–Sevilla/Málaga güney hattı mantıklı akışlardır. San Sebastián–Bilbao otobüsle iyi bağlanır. Mallorca, Ibiza, Tenerife ve Gran Canaria'yı kısa anakara programına sıkıştırmayın; her biri uçuş/feribot ve en az üç–beş günlük ayrı ada ayağıdır.",
@@ -519,6 +535,8 @@ const HUBS: Record<string, CountryHubContent> = {
     planningHeading: "Türkiye rotası nasıl kurulur?",
     essentialsHeading: "Türkiye içinde seyahati kolaylaştıran bilgiler",
     citiesHeading: "Türkiye'de gezilecek şehirler ve bölgeler",
+    cityGridIntro:
+      "Türkiye'de gezilecek şehirler; İstanbul'un tarihî mahallelerinden Ege ve Akdeniz kıyılarına, Kapadokya vadilerinden Güneydoğu'nun gastronomi rotalarına uzanır. İzmir, Muğla, Bodrum ve Fethiye deniz odaklı bir geziye; Mardin, Gaziantep ve Şanlıurfa kültür ile mutfağa; Trabzon doğaya, Ankara ve Bursa ise şehir tarihine güçlü başlangıçlar sunar. Mesafeler uzun olduğu için aynı yolculukta yakın bölgeleri eşleştirmek en rahat plandır.",
     intro: [
       "Türkiye'yi tek bir kıyı tatili veya İstanbul–Kapadokya kontrol listesi gibi değil, ayrı coğrafyalar halinde planlayın. İstanbul iki kıtalı metropolü; Ege ve Akdeniz yarımada–antik kent–deniz dengesini; İç Anadolu Selçuklu, Cumhuriyet ve kaya yerleşimlerini; Karadeniz hava odaklı doğayı; Güneydoğu ise Neolitik arkeoloji, taş şehir ve çok katmanlı mutfakları açar.",
       "Bodrum, Fethiye ve Marmaris idari olarak Muğla sınırlarında olsa da ayrı arama ve seyahat niyetleridir. Bu nedenle Muğla rehberi Akyaka–Gökova–Datça eksenine odaklanır. Kapadokya şehir değil bölgedir; Göreme, Uçhisar, Ürgüp ve Avanos üsleriyle planlanır. Kaş ve Alanya da Antalya merkezden saatler uzakta bağımsız kıyı duraklarıdır.",
@@ -598,6 +616,8 @@ const HUBS: Record<string, CountryHubContent> = {
     planningHeading: "Birleşik Krallık rotası nasıl kurulur?",
     essentialsHeading: "Birleşik Krallık'a gitmeden önce bilinmesi gerekenler",
     citiesHeading: "Birleşik Krallık'ta gezilecek şehirler ve bölgeler",
+    cityGridIntro:
+      "Birleşik Krallık'ta gezilecek şehirler, başkent deneyiminden üniversite kasabalarına ve büyük doğa rotalarına kadar geniş bir seçenek sunar. Londra müzeler ve mahalleler için güçlü bir başlangıçtır; Edinburgh ile York tarih, Manchester ve Liverpool müzik ile futbol, Bath ve Oxford mimari miras için öne çıkar. Highlands, Cotswolds ve Lake District şehir gezisini doğayla birleştirir. İngiltere, İskoçya, Galler ve Kuzey İrlanda duraklarını yol sürelerine göre bölmek en dengeli plandır.",
     intro: [
       "Birleşik Krallık'ı yalnız Londra ve birkaç günübirlik gezi gibi planlamayın. Londra dünya müzeleri ve mahalle mutfaklarını; İngiltere'nin üniversite ve tarih kentleri farklı dönemleri; Manchester–Liverpool kuzeyin sanayi, müzik ve futbol kültürünü; Edinburgh–Glasgow İskoçya'nın tarih ile çağdaş sanat karşıtlığını; Belfast ve Cardiff ise Kuzey İrlanda ile Galler'in ayrı kimliğini açar.",
       "Demiryolu Londra–York–Edinburgh ve Londra–Manchester–Liverpool omurgalarında güçlüdür; Advance bilet saatli ve daha kısıtlı, Off-Peak esnek olabilir. Highlands, Cotswolds ve Lake District tek şehir değildir: hava, seyrek otobüs, araç ve en az birkaç gece isteyen kırsal bölgelerdir.",
@@ -670,6 +690,27 @@ const HUBS: Record<string, CountryHubContent> = {
         cities: ["Lake District"],
         description:
           "Windermere/Ambleside ve Keswick'te iki üs kurun. Göl teknesi, düşük seviye yürüyüş ve hava yedeğini aynı programa koyun.",
+      },
+    ],
+  },
+  SJ: {
+    seoTitle: "Svalbard Gezi Rehberi: Longyearbyen, Ny-Ålesund ve Rotalar",
+    seoDescription:
+      "78. enlemde kutup gezisi rehberi: Longyearbyen, Ny-Ålesund, Pyramiden ve Barentsburg için yerel ulaşım, iklim, bütçe ve keşif rehberleri.",
+    planningHeading: "Svalbard rotası nasıl planlanır?",
+    cityGridIntro:
+      "Svalbard gezisi klasik bir şehir tatilinden çok, kutup koşullarına göre planlanan bir keşif yolculuğudur. Longyearbyen takımadaların ulaşım ve konaklama merkezi; Ny-Ålesund bilimsel araştırma yerleşimi, Pyramiden ile Barentsburg ise rehberli tekne veya kar motoru rotalarıyla ulaşılabilen özel duraklardır. Mevsim, gün ışığı, deniz buzu ve hava koşulları programı doğrudan belirlediği için yerleşimler arası geçişleri bağımsız şehir ulaşımı gibi düşünmeyin.",
+    intro: [
+      "Svalbard takımadaları 78. ve 81. kuzey enlemleri arasında yer alan dünyanın en kuzeydeki yerleşim alanıdır. Longyearbyen ana üs ve giriş kapısıdır; Ny-Ålesund bilimsel araştırma yerleşimi, Pyramiden terk edilmiş Sovyet maden şehri, Barentsburg ise yaşayan kömür kasabasıdır.",
+      "Kışın kutup gecesi ve Kuzey Işıkları, bahar ve yaz aylarında ise Gece Yarısı Güneşi, deniz turları ve kutup doğası deneyimlenir.",
+    ],
+    routeIdeas: [
+      {
+        title: "Kutup İhtişamı Rotası",
+        duration: "4–6 gün",
+        cities: ["Longyearbyen", "Ny-Ålesund"],
+        description:
+          "Longyearbyen merkezli konaklama, tekne turlarıyla Ny-Ålesund ve fiyort gezisi.",
       },
     ],
   },

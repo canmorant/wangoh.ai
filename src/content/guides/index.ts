@@ -1,4 +1,5 @@
 import { countries, Country, City } from "@/data/destinations";
+import { SECRET_DESTINATION } from "@/data/secret";
 import { slugify } from "@/lib/slug";
 import { CityGuide } from "./types";
 import { hiroshima } from "./hiroshima";
@@ -42,6 +43,10 @@ import { sokcho } from "./sokcho";
 import { spainGuides } from "./spain";
 import { turkeyGuides } from "./turkey";
 import { unitedKingdomGuides } from "./unitedKingdom";
+import { nyAlesund } from "./ny-alesund";
+import { longyearbyen } from "./longyearbyen";
+
+export const allCountries: Country[] = [...countries, SECRET_DESTINATION];
 
 /**
  * Yazılmış rehberlerin kaydı.
@@ -88,6 +93,8 @@ export const GUIDES: CityGuide[] = [
   gyeongju,
   incheon,
   sokcho,
+  nyAlesund,
+  longyearbyen,
   ...spainGuides,
   ...turkeyGuides,
   ...unitedKingdomGuides,
@@ -107,7 +114,7 @@ export const countrySlug = (c: Country) => slugify(c.name);
 export const citySlug = (c: City) => slugify(c.name);
 
 export function findCountryBySlug(slug: string): Country | null {
-  return countries.find((c) => countrySlug(c) === slug) ?? null;
+  return allCountries.find((c) => countrySlug(c) === slug) ?? null;
 }
 
 export function findCityBySlug(country: Country, slug: string): City | null {
@@ -116,7 +123,7 @@ export function findCityBySlug(country: Country, slug: string): City | null {
 
 /** Her şehir kartı için bir rota — rehber yazılmış olsun ya da olmasın. */
 export function allCityPaths(): { ulke: string; sehir: string }[] {
-  return countries.flatMap((c) =>
+  return allCountries.flatMap((c) =>
     c.cities.map((city) => ({ ulke: countrySlug(c), sehir: citySlug(city) }))
   );
 }

@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { countries } from "@/data/destinations";
 import {
   findCountryBySlug,
   countrySlug,
   citySlug,
   guideFor,
+  allCountries,
 } from "@/content/guides";
 import { SITE, absolute } from "@/lib/site";
 import Breadcrumbs from "@/components/guide/Breadcrumbs";
@@ -17,7 +17,7 @@ import { countryHubFor } from "@/content/countryHubs";
 type Params = { ulke: string };
 
 export function generateStaticParams(): Params[] {
-  return countries.map((c) => ({ ulke: countrySlug(c) }));
+  return allCountries.map((c) => ({ ulke: countrySlug(c) }));
 }
 
 export async function generateMetadata({
@@ -71,7 +71,7 @@ export default async function CountryPage({ params }: { params: Promise<Params> 
   const crumbs = [{ name: "Ana sayfa", href: "/" }, { name: country.name }];
 
   return (
-    <main className="relative min-h-screen bg-[#080b14] pt-28">
+    <main className="relative min-h-screen bg-[#080b14] pt-24 sm:pt-28">
       <JsonLd
         data={{
           "@context": "https://schema.org",
@@ -110,17 +110,17 @@ export default async function CountryPage({ params }: { params: Promise<Params> 
         }}
       />
 
-      <div className="mx-auto max-w-[1100px] px-5 sm:px-8">
+      <div className="mx-auto max-w-[1100px] px-4 sm:px-8">
         <Breadcrumbs items={crumbs} />
 
         <p className="flex items-center gap-3 text-[11px] tracking-[0.34em] text-[var(--gold)]/70 uppercase">
           <span className="inline-block h-px w-8 bg-[var(--gold)]/35" />
           {country.flag} Ülke rehberi
         </p>
-        <h1 className="font-display mt-4 text-[clamp(2.4rem,6.5vw,4rem)] leading-[1.02] text-white">
+        <h1 className="font-display mt-4 text-[clamp(2.1rem,10vw,4rem)] leading-[1.02] text-white">
           {country.name} Gezi Rehberi
         </h1>
-        <p className="mt-5 max-w-[62ch] text-[17px] leading-relaxed text-white/60">
+        <p className="mt-5 max-w-[62ch] text-[16px] leading-relaxed text-white/60 sm:text-[17px]">
           {country.description}
         </p>
 
@@ -216,9 +216,12 @@ export default async function CountryPage({ params }: { params: Promise<Params> 
             {hub?.citiesHeading ?? `${country.name}’da gezilecek şehirler`}
           </h2>
           <p className="mt-3 max-w-[60ch] text-[15px] leading-relaxed text-white/50">
+            {hub?.cityGridIntro ?? country.description}
+          </p>
+          <p className="mt-4 text-[11px] tracking-[0.12em] text-[var(--gold)]/65 uppercase">
             {writtenCount === country.cities.length
-              ? `${country.cities.length} şehrin tamamı için özgün, karar vermeyi kolaylaştıran rehberler yayında.`
-              : `${country.cities.length} rota. Her şehir için ayrı, karar vermeyi kolaylaştıran bir rehber; yayında olanları aşağıda işaretledik.`}
+              ? `${country.cities.length} şehrin tamamı için özgün rehber yayında`
+              : `${writtenCount}/${country.cities.length} şehir rehberi yayında`}
           </p>
 
           <div className="mt-9 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -273,9 +276,9 @@ export default async function CountryPage({ params }: { params: Promise<Params> 
 
 function Fact({ label, value }: { label: string; value: string }) {
   return (
-    <div className="bg-[#0a0e18] px-5 py-5">
+    <div className="min-w-0 bg-[#0a0e18] px-4 py-5 sm:px-5">
       <p className="text-[9.5px] tracking-[0.24em] text-white/35 uppercase">{label}</p>
-      <p className="mt-1.5 text-[13.5px] leading-snug text-white/90">{value}</p>
+      <p className="mt-1.5 break-words text-[13px] leading-snug text-white/90 sm:text-[13.5px]">{value}</p>
     </div>
   );
 }

@@ -138,7 +138,7 @@ export const seul: CityGuide = {
     { name: "Airport Railroad AREX", url: "https://www.airportrailroad.com/" },
     { name: "VISITKOREA — ulaşım kartları", url: "https://english.visitkorea.or.kr/svc/contents/infoBscView.do?menuSn=479&vcontsId=140663" },
     { name: "Michelin Guide — Hadongkwan", url: "https://guide.michelin.com/us/en/seoul-capital-area/kr-seoul/restaurant/hadongkwan" },
-    { name: "Visit Seoul — Hadongkwan güncel işletme bilgisi", url: "https://english.visitseoul.net/City-Hall-Area/Hadonggwan/ENP005614" },
+    { name: "Visit Seoul — Hadongkwan güncel işletme bilgisi", url: "https://english.visitseoul.net/eat/hadonggwan/ENP005614" },
   ],
   volatileNote: "Saray programları, Secret Garden biletleri, Bukchon uygulamaları, DMZ erişimi, Climate Card kapsamı ve restoran bekleme düzeni değişebilir. Seyahat günü resmî kaynakları kontrol edin.",
   reviewed: "2026-08-10",

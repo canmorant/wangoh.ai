@@ -9,9 +9,10 @@ import {
   useTransform,
   useMotionTemplate,
 } from "framer-motion";
-import { Country } from "@/data/destinations";
+import type { Country } from "@/data/destinations";
 import { boardingFor, barcodeBars } from "@/lib/boarding";
 import { EASE_OUT, SPRING } from "@/lib/motion";
+import { turkishDative } from "@/lib/turkish";
 
 /**
  * A destination rendered as a boarding pass.
@@ -49,6 +50,7 @@ export default function BoardingPass({
   const glare = useMotionTemplate`linear-gradient(105deg, transparent 30%, rgba(255,255,255,0.18) ${gx}%, transparent 70%)`;
 
   const onMove = (e: React.PointerEvent) => {
+    if (e.pointerType !== "mouse") return;
     const el = ref.current;
     if (!el) return;
     const r = el.getBoundingClientRect();
@@ -106,7 +108,7 @@ export default function BoardingPass({
           style={{ ["--accent" as string]: country.accent }}
         >
           {/* ---------------- header ---------------- */}
-          <div className="relative h-[190px] overflow-hidden">
+          <div className="relative h-[172px] overflow-hidden sm:h-[190px]">
             <motion.div className="absolute -inset-4" style={{ x: imgX }}>
               <Image
                 src={country.image}
@@ -161,17 +163,14 @@ export default function BoardingPass({
               {/* route line — the dot travels on hover */}
               <div className="relative mx-1 h-6 flex-1">
                 <span className="absolute top-1/2 right-0 left-0 h-px -translate-y-1/2 border-t border-dashed border-[#14161c]/25" />
-                <motion.span
+                <span
                   aria-hidden
-                  className="absolute top-1/2 -translate-y-1/2"
-                  initial={{ left: "0%" }}
-                  animate={{ left: ["0%", "100%"] }}
-                  transition={{ duration: 3.2, ease: EASE_OUT, repeat: Infinity, repeatDelay: 1.4 }}
+                  className="absolute top-1/2 left-0 -translate-y-1/2 transition-[left] duration-[1600ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:left-full"
                 >
                   <svg viewBox="0 0 24 24" className="h-3.5 w-3.5 -translate-x-1/2 rotate-90 fill-[#14161c]/70">
                     <path d="M21 16v-2l-8-5V3.5A1.5 1.5 0 0 0 11.5 2 1.5 1.5 0 0 0 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z" />
                   </svg>
-                </motion.span>
+                </span>
               </div>
 
               <Endpoint code={d.to} label="Varış" align="right" />
@@ -279,7 +278,7 @@ export default function BoardingPass({
             aria-hidden
             className="flex-1 rounded-full bg-white px-4 py-2.5 text-[11px] font-medium tracking-[0.18em] text-black uppercase transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:scale-[1.03] group-hover:scale-[1.02]"
           >
-            {country.shortName || country.name}&apos;ye Git
+            {turkishDative(country.shortName || country.name)} Git
           </button>
           <button
             onClick={() => setFlipped((f) => !f)}

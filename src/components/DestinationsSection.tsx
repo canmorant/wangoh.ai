@@ -36,11 +36,11 @@ export default function DestinationsSection({ onSelectCountry }: Props) {
     <section
       ref={ref}
       id="destinations"
-      className="relative px-5 py-28 sm:px-10 sm:py-40"
+      className="relative px-4 py-24 sm:px-10 sm:py-40"
       style={{ background: "linear-gradient(180deg,#06090f 0%,#0a0e1a 46%,#080b14 100%)" }}
     >
       <div className="relative mx-auto max-w-[1360px]">
-        <header className="mb-16 flex flex-col gap-8 sm:mb-24 md:flex-row md:items-end md:justify-between">
+        <header className="mb-14 flex flex-col gap-7 sm:mb-24 sm:gap-8 md:flex-row md:items-end md:justify-between">
           <div>
             <motion.p
               initial={{ opacity: 0, y: 14 }}
@@ -79,7 +79,7 @@ export default function DestinationsSection({ onSelectCountry }: Props) {
           </motion.p>
         </header>
 
-        <div className="grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-8">
+        <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-12 lg:grid-cols-3 lg:gap-x-8">
           {countries.map((country, i) => (
             <motion.div
               key={country.code}

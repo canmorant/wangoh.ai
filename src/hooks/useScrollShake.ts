@@ -31,7 +31,18 @@ export function useScrollShake(
 
     const det = new ShakeDetector(config);
     let raf = 0;
+    let decayTimer = 0;
     let lastTouchY: number | null = null;
+
+    const scheduleDecay = () => {
+      window.clearTimeout(decayTimer);
+      const decay = () => {
+        const next = det.charge(performance.now());
+        setCharge((current) => (Math.abs(current - next) > 0.01 ? next : current));
+        if (next > 0.01) decayTimer = window.setTimeout(decay, 220);
+      };
+      decayTimer = window.setTimeout(decay, 220);
+    };
 
     const feed = (delta: number) => {
       const now = performance.now();
@@ -44,9 +55,11 @@ export function useScrollShake(
       if (!raf) {
         raf = requestAnimationFrame(() => {
           raf = 0;
-          setCharge(det.charge(performance.now()));
+          const next = det.charge(performance.now());
+          setCharge((current) => (Math.abs(current - next) > 0.01 ? next : current));
         });
       }
+      scheduleDecay();
     };
 
     const onWheel = (e: WheelEvent) => {
@@ -74,17 +87,12 @@ export function useScrollShake(
     window.addEventListener("touchmove", onTouchMove, { passive: true });
     window.addEventListener("touchend", onTouchEnd, { passive: true });
 
-    // Decay the charge indicator when the user stops.
-    const decay = setInterval(() => {
-      setCharge((c) => (c > 0.01 ? det.charge(performance.now()) : 0));
-    }, 220);
-
     return () => {
       window.removeEventListener("wheel", onWheel);
       window.removeEventListener("touchstart", onTouchStart);
       window.removeEventListener("touchmove", onTouchMove);
       window.removeEventListener("touchend", onTouchEnd);
-      clearInterval(decay);
+      window.clearTimeout(decayTimer);
       if (raf) cancelAnimationFrame(raf);
     };
   }, [enabled, config]);

@@ -1,7 +1,9 @@
 import Link from "next/link";
-import { CityGuide } from "@/content/guides/types";
-import { Country, City } from "@/data/destinations";
+import type { CityGuide } from "@/content/guides/types";
+import type { Country, City } from "@/data/destinations";
 import { cityHref, countryHref, hasGuide } from "@/content/guides";
+import type { DestinationDietaryGuide } from "@/content/dietary";
+import DietaryPicks from "./DietaryPicks";
 
 /**
  * Şehir rehberinin editoryal gövdesi.
@@ -14,33 +16,35 @@ export default function GuideArticle({
   guide,
   country,
   city,
+  dietary,
 }: {
   guide: CityGuide;
   country: Country;
   city: City;
+  dietary: DestinationDietaryGuide;
 }) {
   const siblings = country.cities.filter((c) => c.name !== city.name);
 
   return (
-    <div className="mx-auto max-w-[1100px] px-5 pb-32 sm:px-8">
+    <div className="mx-auto max-w-[1100px] px-4 pb-24 sm:px-8 sm:pb-32">
       {/* ---------------- hızlı bilgi ---------------- */}
       <section
         aria-label="Hızlı bilgiler"
         className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.06] sm:grid-cols-3 lg:grid-cols-5"
       >
         {guide.quickFacts.map((f) => (
-          <div key={f.label} className="bg-[#0a0e18] px-5 py-5">
+          <div key={f.label} className="min-w-0 bg-[#0a0e18] px-4 py-5 sm:px-5">
             <p className="text-[9.5px] tracking-[0.24em] text-white/35 uppercase">{f.label}</p>
-            <p className="mt-1.5 text-[13.5px] leading-snug text-white/90">{f.value}</p>
+            <p className="mt-1.5 break-words text-[13px] leading-snug text-white/90 sm:text-[13.5px]">{f.value}</p>
           </div>
         ))}
       </section>
 
-      <div className="mt-16 grid gap-14 lg:grid-cols-[minmax(0,1fr)_260px] lg:items-start">
+      <div className="mt-12 grid gap-10 sm:mt-16 sm:gap-14 lg:grid-cols-[minmax(0,1fr)_260px] lg:items-start">
         {/* ---------------- makale ---------------- */}
         <article className="min-w-0">
           {guide.sections.map((s) => (
-            <section key={s.id} id={s.id} className="mb-16 scroll-mt-28">
+            <section key={s.id} id={s.id} className="mb-12 scroll-mt-24 sm:mb-16 sm:scroll-mt-28">
               <h2 className="font-display text-[clamp(1.6rem,3.2vw,2.2rem)] leading-tight text-white">
                 {s.heading}
               </h2>
@@ -81,7 +85,7 @@ export default function GuideArticle({
                 {guide.places.map((p) => (
                   <div
                     key={p.name}
-                    className="rounded-2xl border border-white/[0.08] bg-white/[0.025] p-6 transition-colors duration-500 hover:border-white/[0.16]"
+                    className="rounded-2xl border border-white/[0.08] bg-white/[0.025] p-5 transition-colors duration-500 hover:border-white/[0.16] sm:p-6"
                   >
                     <div className="flex items-baseline justify-between gap-3">
                       <h3 className="font-display text-[1.25rem] leading-none text-white">
@@ -108,6 +112,8 @@ export default function GuideArticle({
             </section>
           )}
 
+          <DietaryPicks dietary={dietary} city={city.name} country={country.name} />
+
           {/* ---------------- gezi planı ---------------- */}
           {guide.itinerary.length > 0 && (
             <section id="gezi-plani" className="mb-16 scroll-mt-28">
@@ -118,12 +124,12 @@ export default function GuideArticle({
                 {guide.itinerary.map((d, i) => (
                   <li
                     key={d.title}
-                    className="relative rounded-2xl border border-white/[0.08] bg-white/[0.025] p-6 pl-14"
+                    className="relative rounded-2xl border border-white/[0.08] bg-white/[0.025] p-5 sm:p-6 sm:pl-14"
                   >
-                    <span className="font-display absolute top-6 left-6 text-[1.1rem] text-[var(--gold)]/70 tabular-nums">
+                    <span className="font-display absolute top-5 left-5 text-[1.1rem] text-[var(--gold)]/70 tabular-nums sm:top-6 sm:left-6">
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <h3 className="text-[1.05rem] font-semibold text-white/90">{d.title}</h3>
+                    <h3 className="pl-9 text-[1.05rem] font-semibold text-white/90 sm:pl-0">{d.title}</h3>
                     <dl className="mt-4 space-y-3">
                       <Slot label="Sabah" value={d.morning} />
                       <Slot label="Öğleden sonra" value={d.afternoon} />
@@ -281,6 +287,11 @@ export default function GuideArticle({
                 )}
               </li>
               <li>
+                <a href="#vegan-helal-restoranlar" className="text-[13px] text-white/50 transition-colors duration-300 hover:text-white">
+                  Vegan &amp; helal restoranlar
+                </a>
+              </li>
+              <li>
                 {guide.itinerary.length > 0 && (
                   <a href="#gezi-plani" className="text-[13px] text-white/50 transition-colors duration-300 hover:text-white">
                     Gün gün gezi planı
@@ -376,8 +387,8 @@ function Paragraph({ text }: { text: string }) {
 
 function Slot({ label, value }: { label: string; value: string }) {
   return (
-    <div className="flex gap-4">
-      <dt className="w-28 shrink-0 text-[10px] tracking-[0.18em] text-white/30 uppercase">
+    <div className="flex flex-col gap-1 sm:flex-row sm:gap-4">
+      <dt className="text-[10px] tracking-[0.18em] text-white/30 uppercase sm:w-28 sm:shrink-0">
         {label}
       </dt>
       <dd className="text-[14px] leading-relaxed text-white/65">{value}</dd>

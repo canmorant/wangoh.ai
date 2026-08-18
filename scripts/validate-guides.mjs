@@ -106,6 +106,19 @@ for (const scope of scopes) {
     assert(html.includes("Resmî kaynaklar ve son kontrol"), `${path}: görünür kaynak bölümü eksik`);
     assert(html.includes('lang="tr"'), `${path}: Türkçe belge dili eksik`);
     assert(!html.toLocaleLowerCase("tr").includes("hazırlanıyor"), `${path}: taslak metni görünüyor`);
+    assert(html.includes("Beslenme tercihleri"), `${path}: beslenme tercihleri bölümü eksik`);
+    assert(html.includes("Vegan Pick"), `${path}: vegan önerisi eksik`);
+    assert(html.includes("Halal Pick"), `${path}: helal önerisi eksik`);
+    assert(html.includes("Google Maps"), `${path}: restoran harita bağlantısı eksik`);
+    assert(html.includes("Doğrulama notu"), `${path}: restoran doğrulama notu eksik`);
+    assert((html.match(/dateTime="2026-08-12"/g) ?? []).length >= 2, `${path}: restoran kontrol tarihi eksik`);
+    const dietaryCards = html.match(/<article\b[^>]*data-dietary-card[^>]*>/gi) ?? [];
+    const dietaryCategories = dietaryCards.map((tag) => attributeValue(tag, "data-dietary-category"));
+    const dietaryNames = dietaryCards.map((tag) => attributeValue(tag, "data-restaurant-name"));
+    assert(dietaryCards.length === 2, `${path}: iki beslenme kartı bekleniyordu, ${dietaryCards.length} bulundu`);
+    assert(dietaryCategories.includes("vegan"), `${path}: vegan kart kategorisi eksik`);
+    assert(dietaryCategories.includes("halal"), `${path}: helal kart kategorisi eksik`);
+    assert(new Set(dietaryNames).size === 2, `${path}: aynı restoran iki kez kullanılmış`);
 
     for (const sibling of scope.cities.filter((candidate) => candidate !== city)) {
       assert(html.includes(`href="/${scope.country}/${sibling}"`), `${path}: ${sibling} iç bağlantısı eksik`);

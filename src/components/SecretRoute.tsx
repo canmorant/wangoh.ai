@@ -58,16 +58,24 @@ export default function SecretRoute({
 
   useEffect(() => {
     if (!open) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
     window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", onKey);
+    };
   }, [open, onClose]);
 
   return (
     <AnimatePresence>
       {open && (
         <motion.div
-          className="fixed inset-0 z-[80] flex items-center justify-center px-6"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Gizli rota"
+          className="fixed inset-0 z-[80] flex items-center justify-center overflow-y-auto overscroll-contain px-4 py-8"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -144,17 +152,17 @@ export default function SecretRoute({
               initial={{ opacity: 0, y: 14 }}
               animate={stage >= 3 ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.9, ease: EASE_OUT, delay: 0.12 }}
-              className="mt-10 flex items-center justify-center gap-3"
+              className="mt-9 flex flex-col items-stretch justify-center gap-3 min-[360px]:flex-row min-[360px]:items-center sm:mt-10"
             >
               <button
                 onClick={() => onFly(SECRET_DESTINATION)}
-                className="group relative overflow-hidden rounded-full bg-white px-7 py-3 text-[12px] font-medium tracking-[0.16em] text-black uppercase transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:scale-[1.04]"
+                className="group relative min-h-12 overflow-hidden rounded-full bg-white px-7 py-3 text-[12px] font-medium tracking-[0.16em] text-black uppercase transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:scale-[1.04]"
               >
                 <span className="relative z-10">Bu rotayı seç</span>
               </button>
               <button
                 onClick={onClose}
-                className="rounded-full border border-white/12 px-7 py-3 text-[12px] tracking-[0.16em] text-white/60 uppercase transition-colors duration-500 hover:border-white/30 hover:text-white"
+                className="min-h-12 rounded-full border border-white/12 px-7 py-3 text-[12px] tracking-[0.16em] text-white/60 uppercase transition-colors duration-500 hover:border-white/30 hover:text-white"
               >
                 Şimdi değil
               </button>

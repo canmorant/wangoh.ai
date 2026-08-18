@@ -53,7 +53,7 @@ export default function LumoraHero() {
   const contentColor = isDark ? "#182C41" : "white";
 
   return (
-    <section className="relative w-full h-screen overflow-hidden bg-black">
+    <section className="relative min-h-[100svh] w-full overflow-hidden bg-black">
       {/* Video Layer */}
       {VIDEOS.map((v, i) => (
         <video

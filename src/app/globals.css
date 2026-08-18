@@ -3,6 +3,8 @@
 :root {
   --background: #0a0e1a;
   --foreground: #f0f0f0;
+  --font-sans: var(--font-geist-sans);
+  --font-display: "Instrument Serif";
   --sky-top: #0a1628;
   --sky-bottom: #1a3a5c;
   --gold: #c8a45e;
@@ -22,16 +24,37 @@
    rules outrank Tailwind's layered utilities, so such a reset silently kills
    every padding and margin utility on the site. Preflight already handles it. */
 
-/* Lenis owns the scroll — native smooth scrolling would fight it. */
+/* Native scrolling keeps long guides responsive and lets the browser schedule
+   frames without a page-wide JavaScript ticker. */
 html {
   scroll-behavior: auto;
+  overflow-x: clip;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
-  overflow-x: hidden;
+  min-width: 320px;
+  overflow-x: clip;
+  overscroll-behavior-x: none;
+}
+
+button,
+a,
+[role="button"] {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+@media (max-width: 640px) {
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
 }
 
 .scrollbar-none {
@@ -67,6 +90,34 @@ body {
   animation-iteration-count: infinite;
   animation-direction: alternate;
   will-change: transform;
+}
+
+/* Görünmeyen sinematik sahne CPU/GPU zamanı tüketmez. */
+.hero-stage[data-hero-active="false"] .hero-drift {
+  animation-play-state: paused;
+}
+
+/* Zayıf donanımda aynı kompozisyonun daha ucuz sürümü kullanılır: ana fotoğraf,
+   uçak penceresi, tipografi ve odak geçişi korunur; yalnızca ara blur yüzeyi ve
+   iki görünmez atmosfer katmanı devreden çıkar. */
+.hero-stage[data-motion-quality="lite"] .hero-focus-medium,
+.hero-stage[data-motion-quality="lite"] .hero-cloud-mid,
+.hero-stage[data-motion-quality="lite"] .hero-cloud-near,
+.hero-stage[data-motion-quality="lite"] .hero-grain {
+  display: none;
+}
+
+.hero-stage[data-motion-quality="lite"] .hero-drift {
+  animation: none;
+}
+
+.hero-stage[data-motion-quality="lite"] .hero-split-tone,
+.hero-stage[data-motion-quality="lite"] .hero-cabin-light {
+  mix-blend-mode: normal;
+}
+
+.hero-stage[data-motion-quality="lite"] .hero-composite-layer {
+  will-change: auto;
 }
 
 @keyframes hero-drift {
@@ -128,6 +179,13 @@ body {
   .hero-trace,
   .secret-aurora {
     animation: none;
+  }
+
+  .hero-focus-medium,
+  .hero-cloud-mid,
+  .hero-cloud-near,
+  .hero-grain {
+    display: none;
   }
 }
 

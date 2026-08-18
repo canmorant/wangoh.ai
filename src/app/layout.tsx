@@ -1,20 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Instrument_Serif } from "next/font/google";
+import { GeistSans } from "geist/font/sans";
+import "@fontsource/instrument-serif/400.css";
+import "@fontsource/instrument-serif/400-italic.css";
 import "./globals.css";
-import SmoothScroll from "@/components/SmoothScroll";
 import { SITE, absolute } from "@/lib/site";
-
-const geistSans = Geist({
-  variable: "--font-sans",
-  subsets: ["latin"],
-});
-
-const display = Instrument_Serif({
-  variable: "--font-display",
-  subsets: ["latin"],
-  weight: "400",
-  style: ["normal", "italic"],
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -31,10 +20,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="tr" className={`${geistSans.variable} ${display.variable} antialiased`}>
-      <body>
-        <SmoothScroll>{children}</SmoothScroll>
-      </body>
+    <html lang="tr" className={`${GeistSans.variable} antialiased`}>
+      <body>{children}</body>
     </html>
   );
 }

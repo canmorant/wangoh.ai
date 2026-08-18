@@ -123,7 +123,7 @@ export default function TravelTest() {
         />
       </div>
 
-      <div className="relative mx-auto flex min-h-[100svh] max-w-3xl flex-col justify-center px-6 py-28 sm:px-10">
+      <div className="relative mx-auto flex min-h-[100svh] max-w-3xl flex-col justify-center px-4 py-20 sm:px-10 sm:py-28">
         <AnimatePresence mode="wait">
           {!done ? (
             <motion.section
@@ -143,7 +143,7 @@ export default function TravelTest() {
                 {QUESTIONS[step].prompt}
               </h1>
 
-              <div className="mt-12 flex flex-col gap-3">
+              <div className="mt-9 flex flex-col gap-3 sm:mt-12">
                 {QUESTIONS[step].options.map((opt, i) => (
                   <motion.button
                     key={opt.label}
@@ -152,7 +152,7 @@ export default function TravelTest() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, ease: EASE_OUT, delay: 0.12 + i * 0.07 }}
                     whileHover={{ x: 8 }}
-                    className="group flex items-center justify-between gap-6 rounded-2xl border border-white/[0.07] bg-white/[0.02] px-6 py-5 text-left backdrop-blur-sm transition-colors duration-500 hover:border-white/[0.16] hover:bg-white/[0.05]"
+                    className="group flex min-h-16 items-center justify-between gap-4 rounded-2xl border border-white/[0.07] bg-white/[0.02] px-5 py-4 text-left backdrop-blur-sm transition-colors duration-500 hover:border-white/[0.16] hover:bg-white/[0.05] sm:gap-6 sm:px-6 sm:py-5"
                   >
                     <span>
                       <span className="block text-[15.5px] text-white/90">{opt.label}</span>

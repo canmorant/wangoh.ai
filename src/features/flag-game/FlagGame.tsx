@@ -41,7 +41,7 @@ export default function FlagGame() {
           frame budget — leaves the player staring at nothing. Screen changes
           are user-initiated and infrequent; replaying an entrance on a keyed
           remount looks the same and cannot deadlock. */}
-      <div className="relative mx-auto flex min-h-[100svh] max-w-5xl flex-col px-5 py-20 sm:px-8">
+      <div className="relative mx-auto flex min-h-[100svh] max-w-5xl flex-col px-4 py-16 sm:px-8 sm:py-20">
         {g.screen === "setup" && <Setup key="setup" g={g} />}
         {g.screen === "playing" && <Playing key="playing" g={g} accent={accent} />}
         {g.screen === "results" && <Results key="results" g={g} accent={accent} />}
@@ -235,7 +235,7 @@ function Playing({ g, accent }: { g: G; accent: string }) {
         </div>
         <button
           onClick={g.quit}
-          className="rounded-full border border-white/12 px-4 py-1.5 text-[10.5px] tracking-[0.16em] text-white/50 uppercase transition-colors duration-400 hover:border-white/30 hover:text-white"
+          className="min-h-11 rounded-full border border-white/12 px-4 py-1.5 text-[10.5px] tracking-[0.16em] text-white/50 uppercase transition-colors duration-400 hover:border-white/30 hover:text-white"
         >
           Oturumu bitir
         </button>
@@ -371,7 +371,7 @@ function Playing({ g, accent }: { g: G; accent: string }) {
                 />
                 <button
                   type="submit"
-                  className="shrink-0 rounded-full bg-white px-5 py-2.5 text-[11px] font-semibold tracking-[0.18em] text-black uppercase transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:scale-[1.04]"
+                  className="min-h-11 shrink-0 rounded-full bg-white px-4 py-2.5 text-[10.5px] font-semibold tracking-[0.14em] text-black uppercase transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:scale-[1.04] sm:px-5 sm:text-[11px] sm:tracking-[0.18em]"
                 >
                   Tahmin et
                 </button>
@@ -382,14 +382,14 @@ function Playing({ g, accent }: { g: G; accent: string }) {
                   type="button"
                   onClick={g.revealHint}
                   disabled={g.hints >= MAX_HINTS}
-                  className="rounded-full border border-white/12 px-4 py-2 text-[10.5px] tracking-[0.16em] text-white/60 uppercase transition-colors duration-400 hover:border-white/30 hover:text-white disabled:opacity-40"
+                  className="min-h-11 rounded-full border border-white/12 px-4 py-2 text-[10.5px] tracking-[0.16em] text-white/60 uppercase transition-colors duration-400 hover:border-white/30 hover:text-white disabled:opacity-40"
                 >
                   {g.hints >= MAX_HINTS ? "Tüm ipuçları açıldı" : `İpucu ver (${g.hints}/${MAX_HINTS})`}
                 </button>
                 <button
                   type="button"
                   onClick={g.giveUp}
-                  className="rounded-full border border-white/12 px-4 py-2 text-[10.5px] tracking-[0.16em] text-white/45 uppercase transition-colors duration-400 hover:border-white/30 hover:text-white"
+                  className="min-h-11 rounded-full border border-white/12 px-4 py-2 text-[10.5px] tracking-[0.16em] text-white/45 uppercase transition-colors duration-400 hover:border-white/30 hover:text-white"
                 >
                   Cevabı göster
                 </button>
@@ -562,7 +562,7 @@ function Review({ g }: { g: G }) {
             Bilemediğin {g.misses.length} bayrak
           </h1>
         </div>
-        <div className="flex gap-2">
+        <div className="flex flex-wrap gap-2">
           <button
             onClick={g.replayMissed}
             className="rounded-full bg-white px-6 py-2.5 text-[11px] font-semibold tracking-[0.18em] text-black uppercase transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:scale-[1.04]"
@@ -682,7 +682,7 @@ function Chip({
     <button
       onClick={onClick}
       aria-pressed={active}
-      className="rounded-full px-4 py-2 text-[11px] tracking-[0.14em] uppercase transition-all duration-400"
+      className="min-h-11 rounded-full px-4 py-2 text-[11px] tracking-[0.14em] uppercase transition-all duration-400"
       style={{
         background: active ? accent + "22" : "transparent",
         color: active ? accent : "rgba(255,255,255,0.45)",
