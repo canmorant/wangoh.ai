@@ -6,6 +6,8 @@ import { countries, type Country } from "@/data/destinations";
 import { useScrollShake } from "@/hooks/useScrollShake";
 import FloatingNav from "@/components/FloatingNav";
 import SecretRoute from "@/components/SecretRoute";
+import SiteFooter from "@/components/SiteFooter";
+import AdSenseScript from "@/components/AdSenseScript";
 
 import DestinationsSection from "@/components/DestinationsSection";
 
@@ -81,6 +83,7 @@ export default function Home() {
 
   return (
     <main className="relative min-h-screen bg-[var(--background)]">
+      <AdSenseScript />
       <FloatingNav
         onHome={handleBack}
         onSelectCountry={flyTo}
@@ -114,14 +117,14 @@ export default function Home() {
           <h1 className="sr-only">Hiç gitmediğin bir yere var</h1>
           <CinematicHero />
           <DestinationsSection onSelectCountry={flyTo} />
-          <Footer />
+          <SiteFooter />
         </>
       )}
 
       {view === "cities" && selectedCountry && (
         <>
           <CityCards country={selectedCountry} onBack={handleBack} />
-          <Footer />
+          <SiteFooter />
         </>
       )}
 
@@ -129,18 +132,5 @@ export default function Home() {
       {clubRequested && <ClubReveal open={clubOpen} onClose={closeClub} onFly={flyTo} />}
       {wheelRequested && <CountryWheel open={wheelOpen} onClose={closeWheel} onFly={flyTo} />}
     </main>
-  );
-}
-
-function Footer() {
-  return (
-    <footer className="relative border-t border-white/5 px-6 py-14 sm:px-10">
-      <div className="mx-auto flex max-w-[1360px] flex-col items-center justify-between gap-4 md:flex-row">
-        <div className="text-[13px] tracking-[0.34em] text-white/30 uppercase">Wangoh</div>
-        <p className="text-[12px] text-white/20">
-          &copy; {new Date().getFullYear()} Wangoh. Tüm hakları saklıdır. Görseller Unsplash&rsquo;ten.
-        </p>
-      </div>
-    </footer>
   );
 }

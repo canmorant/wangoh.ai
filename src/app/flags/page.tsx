@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import FlagGame from "@/features/flag-game/FlagGame";
 import { absolute } from "@/lib/site";
+import SiteFooter from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
   title: "Wangoh — Bayrağı Bil",
@@ -10,5 +11,10 @@ export const metadata: Metadata = {
 };
 
 export default function FlagsPage() {
-  return <FlagGame />;
+  return (
+    <>
+      <FlagGame />
+      <SiteFooter />
+    </>
+  );
 }

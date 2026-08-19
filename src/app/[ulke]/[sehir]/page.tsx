@@ -16,6 +16,8 @@ import GuideArticle from "@/components/guide/GuideArticle";
 import Breadcrumbs from "@/components/guide/Breadcrumbs";
 import JsonLd from "@/components/guide/JsonLd";
 import { dietaryGuideFor, googleMapsSearchUrl } from "@/content/dietary";
+import SiteFooter from "@/components/SiteFooter";
+import AdSenseScript from "@/components/AdSenseScript";
 
 type Params = { ulke: string; sehir: string };
 
@@ -105,6 +107,7 @@ export default async function CityGuidePage({ params }: { params: Promise<Params
 
   return (
     <main className="relative min-h-screen bg-[#080b14] pt-24 sm:pt-28">
+      <AdSenseScript />
       <JsonLd data={breadcrumbSchema} />
 
       {guide && (
@@ -228,6 +231,7 @@ export default async function CityGuidePage({ params }: { params: Promise<Params
           <PendingGuide country={country} city={city} />
         )}
       </div>
+      <SiteFooter />
     </main>
   );
 }

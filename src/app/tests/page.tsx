@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import TravelTest from "@/components/TravelTest";
 import { absolute } from "@/lib/site";
+import SiteFooter from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
   title: "Wangoh — Cam Kenarını Bul",
@@ -10,5 +11,10 @@ export const metadata: Metadata = {
 };
 
 export default function TestsPage() {
-  return <TravelTest />;
+  return (
+    <>
+      <TravelTest />
+      <SiteFooter />
+    </>
+  );
 }

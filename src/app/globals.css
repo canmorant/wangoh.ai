@@ -70,6 +70,85 @@ a,
   font-weight: 400;
 }
 
+/* ---------- corporate and policy pages ---------- */
+
+.legal-copy a {
+  color: color-mix(in srgb, var(--gold) 85%, white 15%);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--gold) 35%, transparent);
+  text-underline-offset: 0.2em;
+  transition: color 180ms ease, text-decoration-color 180ms ease;
+}
+
+.legal-copy a:hover {
+  color: #f2d28d;
+  text-decoration-color: #f2d28d;
+}
+
+.legal-copy strong {
+  color: rgba(255, 255, 255, 0.84);
+  font-weight: 600;
+}
+
+.legal-copy ul,
+.legal-copy ol {
+  display: grid;
+  gap: 0.65rem;
+  padding-left: 1.2rem;
+}
+
+.legal-copy ul {
+  list-style: disc;
+}
+
+.legal-copy ol {
+  list-style: decimal;
+}
+
+.legal-copy li::marker {
+  color: color-mix(in srgb, var(--gold) 65%, transparent);
+}
+
+.legal-table-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.018);
+}
+
+.legal-table-wrap table {
+  width: 100%;
+  min-width: 680px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.legal-table-wrap th,
+.legal-table-wrap td {
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  vertical-align: top;
+}
+
+.legal-table-wrap th {
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 0.64rem;
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.legal-table-wrap td {
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.82rem;
+  line-height: 1.65;
+}
+
+.legal-table-wrap tbody tr:last-child td {
+  border-bottom: 0;
+}
+
 /* ---------- cinematic hero ---------- */
 
 .hero-vignette {

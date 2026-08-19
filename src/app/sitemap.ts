@@ -15,6 +15,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: absolute("/"), lastModified: now, priority: 1 },
     { url: absolute("/tests"), lastModified: now, priority: 0.5 },
     { url: absolute("/flags"), lastModified: now, priority: 0.5 },
+    { url: absolute("/hakkimizda"), lastModified: now, priority: 0.4 },
+    { url: absolute("/iletisim"), lastModified: now, priority: 0.4 },
+    { url: absolute("/gizlilik-politikasi"), lastModified: now, priority: 0.2 },
+    { url: absolute("/cerez-politikasi"), lastModified: now, priority: 0.2 },
+    { url: absolute("/kullanim-kosullari"), lastModified: now, priority: 0.2 },
   ];
 
   const countryPages: MetadataRoute.Sitemap = countries.map((c) => ({

@@ -13,6 +13,8 @@ import { SITE, absolute } from "@/lib/site";
 import Breadcrumbs from "@/components/guide/Breadcrumbs";
 import JsonLd from "@/components/guide/JsonLd";
 import { countryHubFor } from "@/content/countryHubs";
+import SiteFooter from "@/components/SiteFooter";
+import AdSenseScript from "@/components/AdSenseScript";
 
 type Params = { ulke: string };
 
@@ -72,6 +74,7 @@ export default async function CountryPage({ params }: { params: Promise<Params> 
 
   return (
     <main className="relative min-h-screen bg-[#080b14] pt-24 sm:pt-28">
+      <AdSenseScript />
       <JsonLd
         data={{
           "@context": "https://schema.org",
@@ -270,6 +273,7 @@ export default async function CountryPage({ params }: { params: Promise<Params> 
           </div>
         </section>
       </div>
+      <SiteFooter />
     </main>
   );
 }

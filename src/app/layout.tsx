@@ -4,6 +4,7 @@ import "@fontsource/instrument-serif/400.css";
 import "@fontsource/instrument-serif/400-italic.css";
 import "./globals.css";
 import { SITE, absolute } from "@/lib/site";
+import { ADSENSE_CLIENT } from "@/lib/adsense";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -12,6 +13,9 @@ export const metadata: Metadata = {
     "Dünyanın en güzel şehirlerine açılan bir cam kenarı. Unutulmaz rotalar, büyüleyici duraklar, kesintisiz tek bir manzara.",
   keywords: ["seyahat", "keşif", "uçuş", "rotalar", "wangoh"],
   alternates: { canonical: absolute("/") },
+  other: ADSENSE_CLIENT
+    ? { "google-adsense-account": ADSENSE_CLIENT }
+    : undefined,
 };
 
 export default function RootLayout({
@@ -21,7 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr" className={`${GeistSans.variable} antialiased`}>
-      <body>{children}</body>
+      <body>
+        {children}
+      </body>
     </html>
   );
 }
