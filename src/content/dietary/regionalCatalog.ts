@@ -94,6 +94,33 @@ const seeds: Seed[] = [
   ["HU", "Debrecen", "Kis Padlizsán", "Aladdin Gyros", "Belváros"],
   ["HU", "Balaton Gölü", "Veganeeta Home", "Mamma Mia Kebab", "Balatonalmádi / Siófok"],
   ["HU", "Sopron", "Várkerület Kávézó", "Ottoman Kebab", "Belváros"],
+
+  ["CZ", "Prag", "Vegan's Prague", "Istanbul Kebab", "Malá Strana / merkez"],
+  ["CZ", "Český Krumlov", "Laibon", "Babylon Restaurant", "Nehir / eski şehir"],
+  ["CZ", "Brno", "Forky's", "Anatolia Kebap", "Brno-střed"],
+  ["CZ", "Karlovy Vary", "Go Vegan", "Istanbul Kebab", "Spa merkezi"],
+  ["CZ", "Kutná Hora", "Factory Bistro", "Istanbul Kebab", "Tarihî merkez"],
+  ["CZ", "Olomouc", "Koza zůstala celá", "Istanbul Kebab", "Merkez"],
+  ["CZ", "Plzeň", "Satyr", "Antalya Kebab", "Náměstí Republiky"],
+  ["CZ", "Bohemya İsviçresi", "Kafe Republika", "Taj Mahal Děčín", "Děčín"],
+
+  ["PL", "Varşova", "Vegan Ramen Shop", "Le Cedre", "Śródmieście"],
+  ["PL", "Kraków", "Vegab", "Sami Am Am", "Kazimierz"],
+  ["PL", "Gdańsk", "Manna 68", "Marmaris Kebab", "Główne Miasto"],
+  ["PL", "Wrocław", "Vega", "Istanbul Kebab", "Stare Miasto"],
+  ["PL", "Poznań", "Wypas", "Sultan Kebab", "Jeżyce / merkez"],
+  ["PL", "Zakopane", "Las", "Samanta Halal", "Merkez"],
+  ["PL", "Toruń", "Chwast Prast", "Royal India", "Stare Miasto"],
+  ["PL", "Lublin", "Zielony Talerzyk", "Habibi Kebab", "Śródmieście"],
+
+  ["RU", "Moskova", "Jagannath", "Mr. Livanets", "Tverskoy / merkez"],
+  ["RU", "St. Petersburg", "Ukrop", "Beirut", "Tsentralny"],
+  ["RU", "Kazan", "Green Life", "Halal Cafe", "Vakhitovsky"],
+  ["RU", "Soçi", "Raw & Vegan", "Kavkaz Halal", "Soçi Merkez"],
+  ["RU", "Kaliningrad", "Sattva", "Shafran", "Merkez"],
+  ["RU", "Murmansk", "White Rabbit", "Halal House", "Şehir merkezi"],
+  ["RU", "Baykal Gölü", "Govinda", "Khinkalnaya", "Irkutsk"],
+  ["RU", "Vladivostok", "Ganga", "Kebab House", "Svetlanskaya"],
 ];
 
 const veganPick = (name: string, area: string): DietaryRestaurant => ({

@@ -23,7 +23,7 @@ type RelatedInput = [city: string, anchor: string, description: string];
 
 export interface ExpandedGuideProfile {
   city: string;
-  countryCode: "ES" | "TR" | "GB" | "ID" | "CN" | "NL" | "AT" | "PT" | "DE" | "MX" | "BR" | "AR" | "CA" | "CH" | "BE" | "HU";
+  countryCode: "ES" | "TR" | "GB" | "ID" | "CN" | "NL" | "AT" | "PT" | "DE" | "MX" | "BR" | "AR" | "CA" | "CH" | "BE" | "HU" | "CZ" | "PL" | "RU";
   /** Bir ülkenin birden fazla saat dilimi olduğunda destinasyon bazında kullanılır. */
   timezone?: string;
   /** Başlıktaki ikinci arama niyeti; her destinasyonda farklıdır. */
@@ -373,6 +373,67 @@ const countryResearch = {
       { name: "BKK — Budapeşte toplu taşıması", url: "https://bkk.hu/en/" },
     ],
   },
+  CZ: {
+    country: "Çek Cumhuriyeti",
+    entry:
+      "Umuma mahsus Türk pasaportuyla kısa turistik ziyaret için Schengen vizesi gerekir; yeşil pasaport sahipleri kısa ve kazanç amacı taşımayan ziyaretlerde muafiyet koşullarını seyahat öncesinde resmî temsilcilikten doğrulamalıdır. Başvuruyu ana destinasyon kuralıyla yetkili vize merkezinden yapın; EES biyometrik giriş–çıkış kaydı tutar, ETIAS ise vize yerine geçmez.",
+    payments:
+      "Çek korunası kullanılır. Kart şehirlerde yaygın olsa da pazar, küçük kasaba, kırsal otobüs ve bahşiş için az miktarda CZK yararlıdır. Avro fiyatı çoğu zaman elverişsiz kurla çevrilir; banka ATM'sini, ekrandaki toplam komisyonu ve terminalde CZK seçeneğini kullanın.",
+    language:
+      "Çekçe resmî dildir; Prag ile turistik merkezlerde İngilizce daha yaygındır. Český Krumlov, Plzeň ve Kutná Hora gibi adları yerel yazımıyla kaydetmek peron ile durak ekranını okumayı kolaylaştırır. Slovakça anlaşılabilir olsa da iki dili aynı saymak yerine kısa Çekçe ifadeler kullanın.",
+    languageLabel: "Çekçe · İngilizce turistik bölgelerde yaygın",
+    connectivity:
+      "České dráhy ülke trenlerinin önemli bölümünü, PID Lítačka Prag ve çevresini planlamada işe yarar; RegioJet ve Leo Express ayrı işletmelerdir. Bir bileti bütün operatörlerde geçerli sanmayın. Kaya parkı, kırsal kale ve kaplıca gününde son otobüsü, patika kapanışını ve çevrimdışı haritayı önceden kaydedin.",
+    budgetFrame:
+      "Ekonomik planda pansiyon/hostel, günlük menü, bölgesel tren ve ücretsiz merkez yürüyüşü; orta bütçede merkezî oda, iki müze ve bir kale/spa deneyimi; rahat planda butik otel, iyi restoran ve özel transfer öne çıkar. Prag hafta sonu ile Karlovy Vary etkinlik takviminde konaklama ülke ortalamasını aşabilir.",
+    sources: [
+      { name: "Visit Czechia — resmî destinasyon portalı", url: "https://www.visitczechia.com/en-us" },
+      { name: "Çekya Ankara Büyükelçiliği — vize bilgisi", url: "https://mzv.gov.cz/ankara/en/visa_and_consular_information/visas/index.html" },
+      { name: "České dráhy — resmî tren planlama", url: "https://www.cd.cz/en/" },
+      { name: "CzechTourism — erişim ve rota planı", url: "https://www.visitczechia.com/en-us" },
+    ],
+  },
+  PL: {
+    country: "Polonya",
+    entry:
+      "Umuma mahsus Türk pasaportuyla kısa turistik ziyaret için Schengen vizesi gerekir. Başvuruyu yalnız Polonya'nın Türkiye'deki resmî temsilciliği ve yetkili VFS kanalı üzerinden, Polonya ana destinasyon olacak şekilde yürütün. C tipi Schengen vizesi 180 günde en fazla 90 günlük kısa kalış çerçevesindedir; verilen vizenin giriş sayısı ve süresi ayrıca belirleyicidir.",
+    payments:
+      "Polonya zlotisi kullanılır; kart ve temassız ödeme çok yaygındır. Pazar, dağ kulübesi, küçük emanet dolabı ve kırsal minibüs için biraz PLN taşıyın. Bağımsız ATM'nin yüksek sabit ücretini okuyun; terminalde TL veya avro yerine PLN seçerek dinamik kur dönüşümünü reddedin.",
+    language:
+      "Lehçe resmî dildir; büyük şehir ve turistik alanlarda İngilizceyle ilerlemek çoğu zaman mümkündür. Wrocław, Łódź ve Gdańsk gibi adları yerel yazımıyla saklamak bilet aramasını kolaylaştırır. Savaş, işgal, Holokost ve komünist dönem mekânlarında kelime seçimi ile fotoğraf davranışı özellikle önemlidir.",
+    languageLabel: "Lehçe · İngilizce büyük şehirlerde yaygın",
+    connectivity:
+      "PKP Intercity uzun mesafe trenlerinde temel kaynaktır; bölgesel trenler farklı işletmelerce yürütülür. Jakdojade birçok şehirde yerel toplu taşımayı gösterse de bilet geçerliliğini işletmeden doğrulayın. Tatra gününde TOPR/TPN hava ve patika duyurularını, kıyıda rüzgârı ve son dönüşü aynı gün kontrol edin.",
+    budgetFrame:
+      "Ekonomik planda hostel/pansiyon, süt barı, belediye ulaşımı ve seçilmiş müze; orta bütçede merkezî oda, hızlı tren ve iki ücretli ziyaret; rahat planda butik otel, iyi restoran ve rehberli hafıza/doğa turu öne çıkar. Kraków, Gdańsk yazı, yılbaşı ve Zakopane kayak haftaları fiyatları hızlı yükseltir.",
+    sources: [
+      { name: "Poland Travel — resmî destinasyon portalı", url: "https://www.poland.travel/en/" },
+      { name: "Polonya'nın Türkiye temsilciliği — vize bilgisi", url: "https://www.gov.pl/web/turcja/wizy-informacje-ogolne" },
+      { name: "PKP Intercity — resmî tren planlama", url: "https://www.intercity.pl/en/" },
+      { name: "Tatra Milli Parkı — resmî patika ve bilet", url: "https://tpn.gov.pl/" },
+    ],
+  },
+  RU: {
+    country: "Rusya",
+    entry:
+      "Rusya'daki güvenlik durumu öngörülemez biçimde değişebilir; Birleşik Krallık FCDO 21 Ağustos 2026 itibarıyla devam eden savaş, güvenlik olayları, uçuş kesintileri ve sınırlı konsolosluk desteği nedeniyle Rusya'ya tüm seyahatlere karşı uyarıyor. Bu yabancı uyarı Türk vatandaşları için bağlayıcı değildir; karar vermeden hemen önce T.C. Dışişleri, Türkiye'nin Moskova Büyükelçiliği, sigortacı ve taşıyıcınızın güncel duyurularını birlikte değerlendirin. Türk vatandaşları turistik amaçla seyahat amacına uygun Rusya vizesi veya koşulları sağlanıyorsa birleşik elektronik vize kullanmalıdır. Rusya Dışişleri'nin güncel sisteminde Türkiye uygun ülkeler arasındadır; e-vize tek girişli, düzenlendiği tarihten itibaren 120 gün geçerli ve girişten itibaren en fazla 30 gün kalış sağlar. Başvuru 86 gün ile en geç 4 gün önce yapılabilir; yalnız listelenen sınır noktaları, geçerli sağlık sigortası ve en az altı ay geçerli makine okunur pasaport koşullarını resmî sayfadan yeniden doğrulayın.",
+    payments:
+      "Rus rublesi kullanılır. Yurt dışında düzenlenmiş kartların fiziksel mağaza, ATM veya çevrimiçi ödemede çalışacağını varsaymayın; seyahatten önce kendi bankanız ve kart ağınızla yazılı teyit alın. Yalnız yasal döviz ve ödeme kanallarını kullanın, nakit taşıma ile gümrük beyan sınırlarını doğrulayın ve tek ödeme yöntemine bağımlı kalmayın.",
+    language:
+      "Rusça ve Kiril alfabesi günlük seyahatin temelidir; büyük otel ve turistik noktalar dışında İngilizce sınırlı kalabilir. Otel adresini, istasyon adını, ilaç/alerji bilgisini ve acil kişiyi Rusça çevrimdışı saklayın. Tataristan gibi cumhuriyetlerde yerel dil ve dinî kimliğe de saygı gösterin.",
+    languageLabel: "Rusça · bölgesel diller",
+    connectivity:
+      "Uluslararası uygulama, mobil ödeme, roaming ve harita erişimi değişebilir. Yola çıkmadan önce eSIM/roaming uygunluğunu, cihaz ve uygulama erişimini kendi sağlayıcınızdan doğrulayın; bilet, otel ve sigorta belgelerini çevrimdışı saklayın. Uzun mesafede RZD ve resmî havayolu/havalimanı kaynaklarını kullanın; saat dilimi, pasaport kontrolü ve sefer değişikliğine geniş pay bırakın.",
+    budgetFrame:
+      "Ekonomik planda merkez dışı oda, metro, market/lokanta ve seçilmiş müze; orta bütçede merkezî otel, uzun mesafe tren/uçuş ve birkaç biletli saray; rahat planda iyi otel, rehber ve özel doğa transferi öne çıkar. Kur, uluslararası ödeme erişimi, yaptırımlar ve ulaşım arzı hızlı değişebildiği için sabit ruble hesabını rezervasyon günündeki yasal ödeme olanağıyla birlikte yenileyin.",
+    sources: [
+      { name: "Rusya Dışişleri — birleşik elektronik vize", url: "https://evisa.kdmid.ru/Home/Instruction" },
+      { name: "T.C. Dışişleri — Rusya seyahat duyurusu", url: "https://www.mfa.gov.tr/rusya-federasyonu_na-seyahat-edecek-vatandaslarimizin-dikkatine_.tr.mfa" },
+      { name: "Russian Railways — resmî tren bilgisi", url: "https://eng.rzd.ru/" },
+      { name: "Birleşik Krallık FCDO — güncel Rusya seyahat uyarısı", url: "https://www.gov.uk/foreign-travel-advice/russia" },
+      { name: "Rusya Hükümeti — Turizm ve Konukseverlik projesi", url: "https://government.ru/rugovclassifier/920/" },
+    ],
+  },
 } as const;
 
 const toPlaces = (items: PlaceInput[]): PlaceCard[] =>
@@ -422,6 +483,8 @@ export function makeExpandedGuide(profile: ExpandedGuideProfile): CityGuide {
                     ? "UTC−3"
                     : profile.countryCode === "CA"
                       ? "Bölgeye göre UTC−8–UTC−3:30"
+        : profile.countryCode === "RU"
+          ? "Bölgeye göre UTC+2–UTC+12"
         : ["Tenerife", "Gran Canaria"].includes(profile.city)
           ? "WET · yazın WEST"
           : "CET · yazın CEST");
@@ -436,6 +499,12 @@ export function makeExpandedGuide(profile: ExpandedGuideProfile): CityGuide {
           ? "İsviçre frangı · kart yaygın"
           : profile.countryCode === "HU"
             ? "Macar forinti · kart + nakit"
+          : profile.countryCode === "CZ"
+            ? "Çek korunası · kart + nakit"
+          : profile.countryCode === "PL"
+            ? "Polonya zlotisi · kart yaygın"
+          : profile.countryCode === "RU"
+            ? "Rus rublesi · ödeme yedeği şart"
         : profile.countryCode === "ID"
           ? "Rupi · kart + nakit"
           : profile.countryCode === "CN"
@@ -550,6 +619,6 @@ export function makeExpandedGuide(profile: ExpandedGuideProfile): CityGuide {
     ],
     volatileNote:
       "Müze ve işletme saatleri, etkinlik takvimi, ulaşım tarifeleri ve giriş ücretleri dönemsel olarak değişir. Rezervasyon gerektiren yerleri yalnız resmî kanaldan, ziyaret gününe yakın yeniden kontrol edin.",
-    reviewed: ["ID", "CN", "NL", "CH", "BE", "HU"].includes(profile.countryCode) ? "2026-08-25" : "2026-08-12",
+    reviewed: ["ID", "CN", "NL", "CH", "BE", "HU", "CZ", "PL", "RU"].includes(profile.countryCode) ? "2026-08-25" : "2026-08-12",
   };
 }

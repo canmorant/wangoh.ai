@@ -111,6 +111,21 @@ const scopes = [
     cities: ["budapeste", "szentendre", "eger", "pecs", "szeged", "debrecen", "balaton-golu", "sopron"],
     planningHeading: "Macaristan rotası nasıl kurulur?",
   },
+  {
+    country: "cek-cumhuriyeti",
+    cities: ["prag", "cesky-krumlov", "brno", "karlovy-vary", "kutna-hora", "olomouc", "plzen", "bohemya-isvicresi"],
+    planningHeading: "Çek Cumhuriyeti rotası nasıl kurulur?",
+  },
+  {
+    country: "polonya",
+    cities: ["varsova", "krakow", "gdansk", "wroclaw", "poznan", "zakopane", "torun", "lublin"],
+    planningHeading: "Polonya rotası nasıl kurulur?",
+  },
+  {
+    country: "rusya",
+    cities: ["moskova", "st-petersburg", "kazan", "soci", "kaliningrad", "murmansk", "baykal-golu", "vladivostok"],
+    planningHeading: "Rusya rotası nasıl kurulur?",
+  },
 ];
 
 function assert(condition, message) {

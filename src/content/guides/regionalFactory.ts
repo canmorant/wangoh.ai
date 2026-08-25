@@ -1,7 +1,7 @@
 import { makeExpandedGuide, type ExpandedGuideProfile } from "./expandedFactory";
 import type { CityGuide } from "./types";
 
-export type RegionalCode = "AT" | "PT" | "DE" | "MX" | "BR" | "AR" | "CA" | "CH" | "BE" | "HU";
+export type RegionalCode = "AT" | "PT" | "DE" | "MX" | "BR" | "AR" | "CA" | "CH" | "BE" | "HU" | "CZ" | "PL" | "RU";
 type Pair = [title: string, detail: string];
 
 export interface RegionalProfile {
@@ -33,6 +33,9 @@ const officialSource: Record<RegionalCode, { name: string; url: string }> = {
   CH: { name: "Switzerland Tourism — resmî destinasyon rehberi", url: "https://www.myswitzerland.com/en/" },
   BE: { name: "Visit Flanders — resmî destinasyon rehberi", url: "https://www.visitflanders.com/en" },
   HU: { name: "Visit Hungary — resmî destinasyon rehberi", url: "https://visithungary.com/" },
+  CZ: { name: "Visit Czechia — resmî destinasyon rehberi", url: "https://www.visitczechia.com/en-us" },
+  PL: { name: "Poland Travel — resmî destinasyon rehberi", url: "https://www.poland.travel/en/" },
+  RU: { name: "Rusya Hükümeti — Turizm ve Konukseverlik projesi", url: "https://government.ru/rugovclassifier/920/" },
 };
 
 const transportSource: Record<RegionalCode, { name: string; url: string }> = {
@@ -46,6 +49,9 @@ const transportSource: Record<RegionalCode, { name: string; url: string }> = {
   CH: { name: "SBB — tren, otobüs ve tekne bağlantıları", url: "https://www.sbb.ch/en" },
   BE: { name: "SNCB/NMBS — Belçika trenleri", url: "https://www.belgiantrain.be/en" },
   HU: { name: "MÁV — tren, otobüs ve canlı sefer", url: "https://www.mavcsoport.hu/en" },
+  CZ: { name: "České dráhy — tren ve canlı sefer", url: "https://www.cd.cz/en/" },
+  PL: { name: "PKP Intercity — şehirler arası tren", url: "https://www.intercity.pl/en/" },
+  RU: { name: "Russian Railways — resmî tren bilgisi", url: "https://eng.rzd.ru/" },
 };
 
 const budgetNote: Record<RegionalCode, string> = {
@@ -59,6 +65,9 @@ const budgetNote: Record<RegionalCode, string> = {
   CH: "Konaklama, dağ treni, teleferik ve panoramik hat maliyetini ayrı yazın; Swiss Travel Pass ile tek tek bilet toplamını gerçek rotanız üzerinden karşılaştırın.",
   BE: "Brüksel ve Brugge hafta sonu konaklaması ile hızlı trenleri erken kontrol edin; müze, bira tadımı ve şehir vergisini görünen oda fiyatına ekleyin.",
   HU: "Budapeşte dışındaki tren, termal banyo, bağ transferi ve Balaton sezon ücretini ayrı hesaplayın; eski forint rakamlarını güncel fiyat sanmayın.",
+  CZ: "Prag merkezindeki konaklama ile küçük şehirleri aynı fiyat düzeyinde sanmayın; tren, spa, kale ve bira fabrikası turlarını ayrı kalemlerle güncel fiyatlandırın.",
+  PL: "Kraków ve sahil hafta sonları, Tatra transferi, müze rezervasyonu ve hızlı tren ücretini ayrı yazın; zlotiyi eski blog kuruyla hesaplamayın.",
+  RU: "Uçuş, uzun mesafe tren, yerel transfer ve ödeme erişimini rezervasyon gününde ayrı doğrulayın; ülke büyüklüğü ve kart kısıtları tek günlük tahmini yanıltabilir.",
 };
 
 const priceFor = (index: number): "Yüksek" | "Orta" | "Ekonomik" =>
