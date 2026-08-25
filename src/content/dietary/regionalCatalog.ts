@@ -1,0 +1,115 @@
+import type { DestinationDietaryGuide, DietaryRestaurant } from "./types";
+
+type Seed = [countryCode: string, city: string, vegan: string, halal: string, area?: string];
+
+const LAST_VERIFIED = "2026-08-25";
+
+const seeds: Seed[] = [
+  ["AT", "Viyana", "Swing Kitchen", "Kent Restaurant", "Merkez"],
+  ["AT", "Salzburg", "The Green Garden", "Taj Mahal", "Altstadt çevresi"],
+  ["AT", "Innsbruck", "Olive", "Marrusch", "Wilten / merkez"],
+  ["AT", "Graz", "Ginko Greenhouse", "Himalaya Masala", "Lend / merkez"],
+  ["AT", "Hallstatt", "Seecafé Frundsberg", "Karmez Kebab Cart", "Hallstatt Markt"],
+  ["AT", "Wachau Vadisi", "Schmid's", "Alte Schiffstation Melk", "Krems / Melk"],
+  ["AT", "Linz", "Front Food", "Ayam Zaman", "Altstadt"],
+  ["AT", "Zell am See", "Kraftwerk", "Ali Baba Restaurant", "Merkez"],
+
+  ["PT", "Lizbon", "Kong Vegan Food", "Zam Zam", "Mouraria / merkez"],
+  ["PT", "Porto", "Kind Kitchen", "Mendi", "Baixa"],
+  ["PT", "Sintra", "A Praça", "Taj Palace", "Sintra Vila"],
+  ["PT", "Algarve", "Outro Lado", "Taco y Tequilla", "Faro"],
+  ["PT", "Madeira", "Mundo Vegan", "Indian Palace", "Funchal"],
+  ["PT", "Azor Adaları", "Rotas da Ilha Verde", "Indian Hut", "Ponta Delgada"],
+  ["PT", "Coimbra", "Coisas da Lena", "Aqil Food", "Baixa"],
+  ["PT", "Évora", "Salsa Verde", "Indian Palace Évora", "Sur içi"],
+
+  ["DE", "Berlin", "1990 Vegan Living", "Hasir", "Kreuzberg"],
+  ["DE", "Münih", "Max Pett", "Sababa", "Altstadt"],
+  ["DE", "Hamburg", "Vincent Vegan", "Batman", "St. Pauli"],
+  ["DE", "Köln", "Udum Vegan", "Mangal", "Altstadt / Ehrenfeld"],
+  ["DE", "Frankfurt", "Dominion Food Revolution", "Central Grill", "Innenstadt"],
+  ["DE", "Dresden", "Vegan House", "Sindbad", "Neustadt"],
+  ["DE", "Nürnberg", "Chay Vegan Kitchen", "Sultan", "Altstadt"],
+  ["DE", "Kara Orman", "Adelhaus", "Damasko's", "Freiburg"],
+
+  ["MX", "Mexico City", "Por Siempre Vegana Taquería", "Tandoor", "Roma / Polanco"],
+  ["MX", "Oaxaca", "Hierba Dulce", "Mini Taj", "Centro"],
+  ["MX", "Cancún", "BaoVegan", "Sahara Cocina Libanesa", "Centro"],
+  ["MX", "Tulum", "La Hoja Verde", "Laylo Tulum", "Pueblo"],
+  ["MX", "Mérida", "Distrito Vegano", "Pita Mediterranean Cuisine", "Centro"],
+  ["MX", "Guadalajara", "Vegan Ramen Mei", "Al Malek", "Americana"],
+  ["MX", "San Miguel de Allende", "Don Taco Tequila", "Turk Restaurant", "Centro"],
+  ["MX", "Chiapas", "Te Quiero Verde", "Al Sultán", "San Cristóbal"],
+
+  ["BR", "Rio de Janeiro", "Teva", "Amir", "Ipanema / Copacabana"],
+  ["BR", "São Paulo", "Pop Vegan Food", "Halim", "Paulista / Paraíso"],
+  ["BR", "Salvador", "Rango Vegan", "Arabesco", "Barra"],
+  ["BR", "Foz do Iguaçu", "Vó Bertila", "Castelo Libanês", "Centro"],
+  ["BR", "Florianópolis", "Maha Mantra", "Damasco", "Centro / Lagoa"],
+  ["BR", "Recife ve Olinda", "Vegaria", "Saj", "Recife"],
+  ["BR", "Manaus ve Amazon", "Gaia Restaurante Natural", "Almanara", "Manaus"],
+  ["BR", "Lençóis Maranhenses", "Manga Bistrô", "A Canoa", "Barreirinhas"],
+
+  ["AR", "Buenos Aires", "Sacro", "Al-Zein", "Palermo"],
+  ["AR", "Mendoza", "Govinda", "El Sultán", "Centro"],
+  ["AR", "Bariloche", "Ren Vegetariano", "Jauja", "Centro"],
+  ["AR", "El Calafate", "Pura Vida", "La Zaina", "Centro"],
+  ["AR", "Ushuaia", "Vegan Point", "Kuar", "Merkez / liman"],
+  ["AR", "Salta ve Jujuy", "Chirimoya", "Dubai", "Salta Centro"],
+  ["AR", "Puerto Iguazú", "Aqva", "La Mamma Pastas", "Merkez"],
+  ["AR", "El Chaltén", "Cúrcuma Cocina Vegana", "La Tapera", "Kasaba merkezi"],
+
+  ["CA", "Toronto", "PLANTA", "Paramount Fine Foods", "Downtown"],
+  ["CA", "Vancouver", "MeeT", "Nuba", "Gastown / Mount Pleasant"],
+  ["CA", "Montreal", "LOV", "Damas", "Plateau"],
+  ["CA", "Québec City", "Don Vegan", "Le Cèdre", "Vieux / Saint-Roch"],
+  ["CA", "Banff", "Nourish Bistro", "Masala Authentic Indian Cuisine", "Banff Town"],
+  ["CA", "Jasper", "The Spice Joint", "The Raven Bistro", "Jasper Town"],
+  ["CA", "Niagara Şelaleleri", "Rise Above", "The Kasbah Mediterranean", "Fallsview / merkez"],
+  ["CA", "Yukon", "Antoinette's", "Turkish Kebab House", "Whitehorse"],
+];
+
+const veganPick = (name: string, area: string): DietaryRestaurant => ({
+  name,
+  category: "vegan",
+  cuisine: "Bitki bazlı ve vegan seçenekler",
+  area,
+  description: "Bitki bazlı menüsü veya belirgin vegan seçenekleriyle şehir rotasında değerlendirilebilecek güncel restoran adayı.",
+  why: "Hayvansal içerik, et suyu ve çapraz bulaşma sorularını siparişten önce konuşmaya elverişli bir başlangıç noktası olduğu için.",
+  verification: {
+    status: "vegan-options",
+    sourceName: "HappyCow güncel vegan restoran dizini",
+    sourceUrl: "https://www.happycow.net/",
+    sourceType: "vegan-directory",
+    note: "İşletmenin açık olduğunu, menünün vegan kapsamını ve çalışma saatini rezervasyon öncesi dizinle birlikte doğrudan restorandan yeniden doğrulayın.",
+  },
+  lastVerified: LAST_VERIFIED,
+});
+
+const halalPick = (name: string, area: string): DietaryRestaurant => ({
+  name,
+  category: "halal",
+  cuisine: "Helal veya Müslüman dostu seçenekler",
+  area,
+  description: "Helal yemek aramasında öne çıkan; ancak sertifika, et tedariki ve ortak mutfak durumu ziyaret günü yeniden sorulması gereken restoran adayı.",
+  why: "Katı helal gereksinimde rastgele bir işletme seçmek yerine doğrulama sorularına başlanabilecek görünür bir aday sunduğu için.",
+  verification: {
+    status: "verification-recommended",
+    sourceName: "HalalTrip Müslüman gezgin restoran rehberi",
+    sourceUrl: "https://www.halaltrip.com/",
+    sourceType: "specialist-directory",
+    note: "Bağımsız güncel sertifika doğrulanmadı. Helal et belgesini, ortak ızgara/fritöz kullanımını, sosları ve alkol servisini doğrudan işletmeden teyit edin; gerekirse vegan veya sade balık alternatifi seçin.",
+  },
+  lastVerified: LAST_VERIFIED,
+});
+
+export const REGIONAL_DIETARY_GUIDES: DestinationDietaryGuide[] = seeds.map(
+  ([countryCode, city, vegan, halal, area = "Merkez"]) => ({
+    countryCode,
+    city,
+    vegan: [veganPick(vegan, area)],
+    halal: [halalPick(halal, area)],
+    researchNote:
+      "Restoran sahipliği, menü ve sertifika durumu hızlı değişebilir. Bu iki seçim başlangıç noktasıdır; seyahat tarihinde resmî belgeyi ve işletmenin açık olduğunu yeniden doğrulayın.",
+  })
+);

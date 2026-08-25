@@ -23,7 +23,7 @@ type RelatedInput = [city: string, anchor: string, description: string];
 
 export interface ExpandedGuideProfile {
   city: string;
-  countryCode: "ES" | "TR" | "GB" | "ID" | "CN" | "NL";
+  countryCode: "ES" | "TR" | "GB" | "ID" | "CN" | "NL" | "AT" | "PT" | "DE" | "MX" | "BR" | "AR" | "CA";
   /** Bir ülkenin birden fazla saat dilimi olduğunda destinasyon bazında kullanılır. */
   timezone?: string;
   /** Başlıktaki ikinci arama niyeti; her destinasyonda farklıdır. */
@@ -175,6 +175,144 @@ const countryResearch = {
       { name: "9292 — ülke çapında yolculuk planlama", url: "https://9292.nl/en" },
     ],
   },
+  AT: {
+    country: "Avusturya",
+    entry:
+      "Umuma mahsus Türk pasaportuyla kısa turistik ziyaret için Schengen vizesi gerekir; pasaport türüne bağlı istisnayı resmî temsilcilikten doğrulayın. EES 10 Nisan 2026'dan beri dış sınırda biyometrik giriş–çıkış kaydı tutuyor; ETIAS ise 2026'nın son çeyreğinden önce başlamayacak ve Schengen vizesinin yerine geçmeyecek.",
+    payments:
+      "Avro kullanılır. Kart şehirlerde yaygın olsa da dağ kulübesi, küçük pansiyon, pazar ve kırsal otopark için nakit yararlıdır. Terminal TL önerirse avroyu seçin; restoranda servis dahilse yalnız memnuniyet ölçüsünde yuvarlama yeterlidir.",
+    language:
+      "Almanca resmî dildir; turistik şehirlerde İngilizceyle ilerlemek kolaydır. Tirol, Salzburg gölleri ve kırsal vadilerde yer adını Almanca kaydetmek, son otobüs ve teleferik duyurularını anlamayı kolaylaştırır.",
+    languageLabel: "Almanca · İngilizce turistik bölgelerde yaygın",
+    connectivity:
+      "Türkiye hattı AB dolaşımına otomatik girmez. Tren ve bölgesel otobüs için ÖBB, Viyana'da Wiener Linien; dağ günlerinde ilgili teleferik ve eyalet ulaşım kurumunun resmî duyurusu kullanılmalıdır. Bilet ekranını ve konaklama adresini çevrimdışı saklayın.",
+    budgetFrame:
+      "Ekonomik planda tren ön alımı, pansiyon, market–fırın öğünü ve ücretsiz yürüyüş; orta bütçede merkezî oda, müze ve bir dağ hattı; rahat planda iyi konumlu otel, teleferik, spa ve restoran öne çıkar. Kayak, festival ve Noel pazarı haftalarında oda ile tren fiyatını ayrı ayrı güncelleyin.",
+    sources: [
+      { name: "Austria.info — resmî destinasyon rehberi", url: "https://www.austria.info/en/" },
+      { name: "AB Türkiye Delegasyonu — Schengen vizesi", url: "https://www.eeas.europa.eu/delegations/t%C3%BCrkiye/visa_en" },
+      { name: "Avrupa Komisyonu — EES ve ETIAS", url: "https://home-affairs.ec.europa.eu/news/main-differences-between-ees-and-etias-what-travellers-need-know-2026-04-28_en" },
+      { name: "ÖBB — Avusturya tren bağlantıları", url: "https://www.oebb.at/en/reiseplanung-services/oebb-zugverbindungen/zugverbindungen-oesterreich" },
+    ],
+  },
+  PT: {
+    country: "Portekiz",
+    entry:
+      "Umuma mahsus Türk pasaportuyla kısa turistik ziyaret için Schengen vizesi gerekir. Başvuruyu en uzun kalacağınız ülkeye yapın; EES dış sınırda biyometrik giriş–çıkış kaydı tutar. ETIAS vizeye tabi Türk pasaportunun yerine geçen bir izin değildir.",
+    payments:
+      "Avro kullanılır; kart Lizbon, Porto ve turistik adalarda yaygındır. Küçük tasca, pazar, kırsal otobüs ve otopark için nakit tutun. Bazı ATM'ler ek ücret gösterebilir; işlemi onaylamadan toplamı okuyun ve TL dönüşümünü reddedin.",
+    language:
+      "Portekizce ülke genelinde yeterlidir; İngilizce turistik merkezlerde yaygındır. Madeira ve Azorlar'da yerel telaffuz farklılaşabilir; feribot, yürüyüş ve hava duyurusunda resmî Portekizce adı kaydedin.",
+    languageLabel: "Portekizce · İngilizce turistik bölgelerde yaygın",
+    connectivity:
+      "Şehirler arası tren için CP, Lizbon'da Carris/Metro, Porto'da Metro do Porto; Madeira ve Azorlar'da yerel otobüs ile hava yolu kaynaklarını kullanın. Ada ve kıyı rotasında rüzgâr, dalga ve yol kapanışını aynı gün resmî kanaldan kontrol edin.",
+    budgetFrame:
+      "Ekonomik planda hostel/pansiyon, tasca, tren ön alımı ve ücretsiz miradouro; orta bütçede merkezî oda, bir iyi deniz ürünü yemeği ve seçilmiş müze; rahat planda butik otel, özel transfer ve tekne turu öne çıkar. Lizbon, Algarve ve ada uçuşlarında yüksek sezon fiyatı ülke ortalamasını aşar.",
+    sources: [
+      { name: "Visit Portugal — resmî turizm portalı", url: "https://www.visitportugal.com/en" },
+      { name: "AB Türkiye Delegasyonu — Schengen vizesi", url: "https://www.eeas.europa.eu/delegations/t%C3%BCrkiye/visa_en" },
+      { name: "CP — Portekiz demiryolları", url: "https://www.cp.pt/passageiros/en" },
+      { name: "Visit Portugal — trenle Portekiz", url: "https://www.visitportugal.com/en/content/portugal-train" },
+    ],
+  },
+  DE: {
+    country: "Almanya",
+    entry:
+      "Umuma mahsus Türk pasaportuyla kısa turistik ziyaret için Schengen vizesi gerekir. Başvuru ana destinasyona yapılmalı; EES 10 Nisan 2026'dan beri kısa süreli ziyaretçilerin dış sınır geçişlerini biyometrik olarak kaydediyor. ETIAS, Türk vatandaşının Schengen vizesi yerine kullanabileceği bir belge değildir.",
+    payments:
+      "Avro kullanılır. Kart ve temassız ödeme yaygınlaşmış olsa da küçük fırın, pazar, bira bahçesi ve kırsal işletmelerde nakit istenebilir. Restoranda servis dahildir; iyi hizmette yuvarlama veya yaklaşık yüzde 5–10 yaygındır.",
+    language:
+      "Almanca resmî dildir; büyük şehirlerde İngilizceyle ilerlenir. Bölgesel tren değişikliği, peron ve yedek otobüs duyuruları Almanca olabilir; sefer numarası ile istasyon adını çevrimdışı saklayın.",
+    languageLabel: "Almanca · İngilizce büyük şehirlerde yaygın",
+    connectivity:
+      "Deutsche Bahn uygulaması uzun mesafe ve bölgesel tren için temel araçtır; her şehirde yerel ulaşım birliği ayrıca çalışır. Deutschlandticket kuralları ve geçerlilik alanı değişebileceğinden hızlı ICE/IC trenlerini kapsadığını varsaymayın. Grev ve hat çalışmasında resmî canlı duyuruyu izleyin.",
+    budgetFrame:
+      "Ekonomik planda hostel, fırın/market öğünü, bölgesel ulaşım ve ücretsiz müze zamanı; orta bütçede merkezî oda, bir ICE bağlantısı ve ücretli koleksiyon; rahat planda iyi otel, esnek tren bileti ve uzun akşam yemeği öne çıkar. Fuar, Oktoberfest, maç ve Noel pazarı tarihleri konaklamayı sert yükseltir.",
+    sources: [
+      { name: "Germany Travel — resmî turizm portalı", url: "https://www.germany.travel/en/home.html" },
+      { name: "AB Türkiye Delegasyonu — Schengen vizesi", url: "https://www.eeas.europa.eu/delegations/t%C3%BCrkiye/visa_en" },
+      { name: "Deutsche Bahn — resmî tren planlama", url: "https://int.bahn.de/en" },
+      { name: "Germany Travel — Almanya'da tren yolculuğu", url: "https://www.germany.travel/en/inspiring-germany/rail-travel.html" },
+    ],
+  },
+  MX: {
+    country: "Meksika",
+    entry:
+      "Türk umuma mahsus bordo pasaport sahipleri, yalnız hava yoluyla ve SAE sistemine katılan bir havayoluyla geliyorsa ücretsiz elektronik izin kullanabilir; izin tek girişli ve düzenlendiği tarihten itibaren 30 gün geçerlidir. Kara veya deniz girişinde ya da SAE uygun değilse konsolosluk vizesi gerekir. Geçerli çok girişli ABD, Kanada, Japonya, Birleşik Krallık veya Schengen vizesi ya da belirli daimi oturumlar ayrı muafiyet sağlayabilir; seyahat öncesi Meksika'nın resmî temsilciliğinden doğrulayın.",
+    payments:
+      "Meksika pesosu kullanılır. Büyük şehir ve otellerde kart yaygın, pazar, colectivo, küçük lokanta ve uzak köyde nakit önemlidir. ATM'yi banka şubesi içinde kullanın; terminalin TL veya dolar dönüşümünü reddedip pesoyu seçin. Restoranda servis dahil değilse yüzde 10–15 bahşiş yaygındır.",
+    language:
+      "İspanyolca ülke genelinde çalışır; Maya, Zapotek ve başka yerli diller bölgesel olarak yaşar. Turistik kıyıda İngilizce yaygındır, iç bölgede adres ve otobüs terminalini İspanyolca kaydetmek gerekir.",
+    languageLabel: "İspanyolca · yerli diller",
+    connectivity:
+      "Şehirler arası otobüste yalnız resmî işletme ve terminali kullanın; ADO güneydoğuda güçlüdür. Tren Maya güzergâhı ve bağlantıları 2026'da gelişmeye devam ettiği için istasyon–şehir transferini ayrı doğrulayın. Çevrimdışı harita, konaklama adresi ve acil numaraları indirin.",
+    budgetFrame:
+      "Ekonomik planda otobüs, merkez dışı oda, mercado ve yerel lokanta; orta bütçede butik otel, seçilmiş iç hat ve küçük grup turu; rahat planda kıyı tesisi, özel transfer ve rehberli arkeoloji günü öne çıkar. Riviera Maya, Los Cabos ve festival dönemleri ülke ortalamasından belirgin pahalıdır.",
+    sources: [
+      { name: "Visit Mexico — resmî destinasyon portalı", url: "https://visitmexico.com/en/" },
+      { name: "Meksika İstanbul Başkonsolosluğu — Türk vatandaşları için elektronik vize", url: "https://consulmex.sre.gob.mx/estambul/index.php/consular-services" },
+      { name: "Tren Maya — resmî yolcu bilgileri", url: "https://trenmaya.gob.mx/" },
+      { name: "ADO — resmî otobüs bileti", url: "https://international.ado.com.mx/?locale=en" },
+    ],
+  },
+  BR: {
+    country: "Brezilya",
+    entry:
+      "Brezilya Dışişleri Bakanlığı'nın güncel VIVIS muafiyet listesinde Türkiye yer alır; kısa turistik ziyarette vize aranmaz. İzin verilen kalış, pasaport geçerliliği, dönüş bileti ve olası sağlık koşullarını yolculuk öncesi resmî konsolosluk kaynağından doğrulayın; vize muafiyeti sınırda otomatik giriş garantisi değildir.",
+    payments:
+      "Brezilya reali kullanılır. Kart ve temassız ödeme şehirlerde çok yaygındır; pazar, plaj satıcısı, küçük tekne ve uzak doğa rotası için sınırlı nakit taşıyın. ATM'yi banka/alışveriş merkezi içinde kullanın; dinamik kur dönüşümünde reali seçin. Restoranda yüzde 10 servis çoğu kez hesaba eklenir.",
+    language:
+      "Portekizce günlük iletişimin anahtarıdır; İspanyolca aynı dil değildir. Rio ve São Paulo'da İngilizce bazı turistik hizmetlerde çalışır, Amazon ve iç bölgelerde adres, sağlık ihtiyacı ve tur ayrıntısını Portekizce yazılı saklayın.",
+    languageLabel: "Brezilya Portekizcesi",
+    connectivity:
+      "Ülke ölçeği nedeniyle iç hat uçuşu sık gerekir; şehirler arası otobüste ANTT yetkili işletmesini ve resmî terminali doğrulayın. Amazon, Pantanal ve Lençóis rotasında telefon kesilebilir; lisanslı rehber, uydu/acil durum planı ve çevrimdışı belge bulundurun.",
+    budgetFrame:
+      "Ekonomik planda pousada/hostel, kilo restoranı, belediye ulaşımı ve ücretsiz sahil; orta bütçede iyi konumlu otel, bir iç hat uçuşu ve küçük grup doğa turu; rahat planda özel transfer, lodge ve rehber öne çıkar. Karnaval, yılbaşı ve okul tatilinde uçuş ile oda fiyatını erken sabitleyin.",
+    sources: [
+      { name: "Visit Brasil — resmî turizm portalı", url: "https://visitbrasil.com/en/" },
+      { name: "Brezilya Dışişleri — VIVIS muafiyet listesi", url: "https://www.gov.br/mre/pt-br/embaixada-manama/setor-consular/servicos/vistos/do-i-need-a-visa-1/list-of-countries-exempt-from-vivis-do-not-need-a-visit-visa" },
+      { name: "ANTT — şehirler arası yolcu taşımacılığı", url: "https://www.gov.br/antt/pt-br/assuntos/passageiros" },
+    ],
+  },
+  AR: {
+    country: "Arjantin",
+    entry:
+      "Arjantin Göç İdaresi'nin güncel ülke tablosunda Türk umuma mahsus pasaport sahipleri turistik ziyaret için vizeden muaftır. İzin verilen kalış süresini, pasaport ve dönüş/konaklama belgelerini bilet almadan önce resmî göç kaynağından doğrulayın; komşu ülkeye çıkıp dönüşte yeni süre verileceğini varsaymayın.",
+    payments:
+      "Arjantin pesosu kullanılır; kur ve fiyatlar hızlı değişebilir. Kart şehirlerde yaygınlaşsa da küçük işletme, taksi, uzak park ve bahşiş için nakit gerekir. Yasal döviz ve ödeme kurallarını güncel kaynaktan kontrol edin; sokak dövizcisi ve bilinmeyen bağlantılardan kaçının.",
+    language:
+      "İspanyolca ana dildir; Rioplatense telaffuzu ve vos kullanımı özellikle Buenos Aires'te belirgindir. Patagonya ve kuzeyde son otobüs, park kapısı ve tur toplantı noktasını İspanyolca kaydedin.",
+    languageLabel: "İspanyolca",
+    connectivity:
+      "Buenos Aires ve birçok şehirde SUBE kartı otobüs, metro veya tren için kullanılır; kapsama ve satın alma noktası şehre göre değişir. Patagonya ile kuzeybatıda uzun mesafe uçuş/otobüsleri ayrı gün sayın. Park, yürüyüş ve sınır geçişi için çevrimdışı harita ile resmî hava duyurusu indirin.",
+    budgetFrame:
+      "Ekonomik planda hostel, menú del día, SUBE ve ücretsiz parkurlar; orta bütçede merkezî oda, iç hat uçuşu ve grup turu; rahat planda estancia/lodge, özel transfer ve tadım öne çıkar. Enflasyon nedeniyle eski bloglardaki peso veya dolar günlük bütçesini kullanmayın; uçuş, oda, öğün ve aktiviteyi rezervasyon gününde ayrı fiyatlandırın.",
+    sources: [
+      { name: "Visit Argentina — resmî turizm portalı", url: "https://www.argentina.travel/en" },
+      { name: "Arjantin Göç İdaresi — vize ülke tablosu", url: "https://www.migraciones.gov.ar/accesible/indexdnm.php?visas=" },
+      { name: "SUBE — resmî ulaşım kartı", url: "https://www.argentina.gob.ar/sube" },
+    ],
+  },
+  CA: {
+    country: "Kanada",
+    entry:
+      "Türkiye, Kanada'nın vizeye tabi ülkeler listesinde yer alır; umuma mahsus Türk pasaportuyla turistik ziyaret veya transit için geçerli ziyaretçi vizesi gerekir. eTA, Türk vatandaşları için ziyaretçi vizesinin genel alternatifi değildir. Başvuru, biyometri ve işlem süresini yalnız IRCC üzerinden kontrol edin.",
+    payments:
+      "Kanada doları kullanılır; kart ve temassız ödeme çok yaygındır. Bazı terminal ve oteller geçici provizyon alabilir. Restoranda vergi fiyat etiketine sonradan eklenir ve masa servisinde vergi öncesi yüzde 15–20 bahşiş yaygındır; otomatik service charge varsa ikinci kez bırakmayın.",
+    language:
+      "İngilizce ve Fransızca federal resmî dillerdir. Québec'te Fransızca kamusal yaşamın merkezindedir; turistik noktalarda İngilizce çoğunlukla çalışır. Yerli toprakları ve topluluk adlarını yerel yazımıyla kullanın; ziyaret kurallarını doğrudan topluluk veya park kaynağından öğrenin.",
+    languageLabel: "İngilizce · Fransızca",
+    connectivity:
+      "Şehirler arası mesafe büyüktür; VIA Rail koridorlarda işe yarasa da Rockies, Yukon ve Atlantik için uçuş/araç gerekebilir. Milli parkta rezervasyon, yol durumu, yangın ve yaban hayatı duyurusu için Parks Canada ile eyalet kaynaklarını kullanın; çevrimdışı harita ve yakıt planı hazırlayın.",
+    budgetFrame:
+      "Ekonomik planda hostel, market, toplu taşıma ve ücretsiz şehir parkı; orta bütçede merkezî oda, tren/iç hat ve bir milli park günü; rahat planda iyi otel, kiralık araç ve rehberli doğa turu öne çıkar. Yaz, kayak, yaprak ve kuzey ışığı sezonlarında konaklama ile araç fiyatını çok erken kontrol edin.",
+    sources: [
+      { name: "Destination Canada — resmî gezi portalı", url: "https://travel.destinationcanada.com/en-ca" },
+      { name: "IRCC — ülkeye göre giriş belgesi", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/entry-requirements-country.html" },
+      { name: "Parks Canada — park planlama", url: "https://parks.canada.ca/" },
+      { name: "VIA Rail — şehirler arası tren", url: "https://www.viarail.ca/en" },
+    ],
+  },
 } as const;
 
 const toPlaces = (items: PlaceInput[]): PlaceCard[] =>
@@ -214,8 +352,16 @@ export function makeExpandedGuide(profile: ExpandedGuideProfile): CityGuide {
           ? "UTC+8"
           : profile.countryCode === "NL"
             ? "CET · yazın CEST"
-            : profile.countryCode === "ID"
+          : profile.countryCode === "ID"
               ? "WIB · UTC+7"
+              : profile.countryCode === "MX"
+                ? "Bölgeye göre UTC−8–UTC−5"
+                : profile.countryCode === "BR"
+                  ? "Bölgeye göre UTC−5–UTC−2"
+                  : profile.countryCode === "AR"
+                    ? "UTC−3"
+                    : profile.countryCode === "CA"
+                      ? "Bölgeye göre UTC−8–UTC−3:30"
         : ["Tenerife", "Gran Canaria"].includes(profile.city)
           ? "WET · yazın WEST"
           : "CET · yazın CEST");
@@ -224,10 +370,20 @@ export function makeExpandedGuide(profile: ExpandedGuideProfile): CityGuide {
       ? "Sterlin · kart yaygın"
       : ["ES", "NL"].includes(profile.countryCode)
         ? "Avro · kart yaygın"
+        : ["AT", "PT", "DE"].includes(profile.countryCode)
+          ? "Avro · kart + nakit"
         : profile.countryCode === "ID"
           ? "Rupi · kart + nakit"
           : profile.countryCode === "CN"
             ? "Renminbi · mobil ödeme"
+            : profile.countryCode === "MX"
+              ? "Meksika pesosu · kart + nakit"
+              : profile.countryCode === "BR"
+                ? "Brezilya reali · kart + nakit"
+                : profile.countryCode === "AR"
+                  ? "Arjantin pesosu · kur değişken"
+                  : profile.countryCode === "CA"
+                    ? "Kanada doları · kart yaygın"
             : "TL · kart + nakit";
 
   return {

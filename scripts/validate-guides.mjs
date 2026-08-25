@@ -61,6 +61,41 @@ const scopes = [
     cities: ["amsterdam", "rotterdam", "lahey", "utrecht", "haarlem", "leiden", "delft", "maastricht", "groningen", "eindhoven", "giethoorn", "zaanse-schans", "keukenhof-ve-lisse", "texel"],
     planningHeading: "Hollanda rotası nasıl kurulur?",
   },
+  {
+    country: "avusturya",
+    cities: ["viyana", "salzburg", "innsbruck", "graz", "hallstatt", "wachau-vadisi", "linz", "zell-am-see"],
+    planningHeading: "Avusturya rotası nasıl kurulur?",
+  },
+  {
+    country: "portekiz",
+    cities: ["lizbon", "porto", "sintra", "algarve", "madeira", "azor-adalari", "coimbra", "evora"],
+    planningHeading: "Portekiz rotası nasıl kurulur?",
+  },
+  {
+    country: "almanya",
+    cities: ["berlin", "munih", "hamburg", "koln", "frankfurt", "dresden", "nurnberg", "kara-orman"],
+    planningHeading: "Almanya rotası nasıl kurulur?",
+  },
+  {
+    country: "meksika",
+    cities: ["mexico-city", "oaxaca", "cancun", "tulum", "merida", "guadalajara", "san-miguel-de-allende", "chiapas"],
+    planningHeading: "Meksika rotası nasıl kurulur?",
+  },
+  {
+    country: "brezilya",
+    cities: ["rio-de-janeiro", "sao-paulo", "salvador", "foz-do-iguacu", "florianopolis", "recife-ve-olinda", "manaus-ve-amazon", "lencois-maranhenses"],
+    planningHeading: "Brezilya rotası nasıl kurulur?",
+  },
+  {
+    country: "arjantin",
+    cities: ["buenos-aires", "mendoza", "bariloche", "el-calafate", "ushuaia", "salta-ve-jujuy", "puerto-iguazu", "el-chalten"],
+    planningHeading: "Arjantin rotası nasıl kurulur?",
+  },
+  {
+    country: "kanada",
+    cities: ["toronto", "vancouver", "montreal", "quebec-city", "banff", "jasper", "niagara-selaleleri", "yukon"],
+    planningHeading: "Kanada rotası nasıl kurulur?",
+  },
 ];
 
 function assert(condition, message) {
