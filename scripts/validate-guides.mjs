@@ -46,6 +46,21 @@ const scopes = [
     cities: ["londra", "edinburgh", "manchester", "liverpool", "oxford", "cambridge", "bath", "york", "glasgow", "belfast", "brighton", "bristol", "cardiff", "iskocya-highlands", "cotswolds", "lake-district"],
     planningHeading: "Birleşik Krallık rotası nasıl kurulur?",
   },
+  {
+    country: "endonezya",
+    cities: ["jakarta", "yogyakarta", "ubud", "canggu", "uluwatu", "nusa-penida", "lombok", "gili-adalari", "labuan-bajo", "bromo-dagi", "banyuwangi", "bandung", "surabaya", "toba-golu", "bukittinggi", "raja-ampat", "makassar", "tana-toraja"],
+    planningHeading: "Endonezya rotası nasıl kurulur?",
+  },
+  {
+    country: "cin",
+    cities: ["pekin", "sanghay", "xi-an", "chengdu", "chongqing", "hangzhou", "suzhou", "nanjing", "guilin-ve-yangshuo", "zhangjiajie", "guangzhou", "shenzhen", "kunming", "dali", "lijiang", "harbin"],
+    planningHeading: "Çin rotası nasıl kurulur?",
+  },
+  {
+    country: "hollanda",
+    cities: ["amsterdam", "rotterdam", "lahey", "utrecht", "haarlem", "leiden", "delft", "maastricht", "groningen", "eindhoven", "giethoorn", "zaanse-schans", "keukenhof-ve-lisse", "texel"],
+    planningHeading: "Hollanda rotası nasıl kurulur?",
+  },
 ];
 
 function assert(condition, message) {
@@ -111,7 +126,7 @@ for (const scope of scopes) {
     assert(html.includes("Halal Pick"), `${path}: helal önerisi eksik`);
     assert(html.includes("Google Maps"), `${path}: restoran harita bağlantısı eksik`);
     assert(html.includes("Doğrulama notu"), `${path}: restoran doğrulama notu eksik`);
-    assert((html.match(/dateTime="2026-08-12"/g) ?? []).length >= 2, `${path}: restoran kontrol tarihi eksik`);
+    assert((html.match(/dateTime="\d{4}-\d{2}-\d{2}"/g) ?? []).length >= 2, `${path}: restoran kontrol tarihi eksik`);
     const dietaryCards = html.match(/<article\b[^>]*data-dietary-card[^>]*>/gi) ?? [];
     const dietaryCategories = dietaryCards.map((tag) => attributeValue(tag, "data-dietary-category"));
     const dietaryNames = dietaryCards.map((tag) => attributeValue(tag, "data-restaurant-name"));

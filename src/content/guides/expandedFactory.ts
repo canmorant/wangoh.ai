@@ -23,7 +23,9 @@ type RelatedInput = [city: string, anchor: string, description: string];
 
 export interface ExpandedGuideProfile {
   city: string;
-  countryCode: "ES" | "TR" | "GB";
+  countryCode: "ES" | "TR" | "GB" | "ID" | "CN" | "NL";
+  /** Bir ülkenin birden fazla saat dilimi olduğunda destinasyon bazında kullanılır. */
+  timezone?: string;
   /** Başlıktaki ikinci arama niyeti; her destinasyonda farklıdır. */
   searchFocus: string;
   lede: string;
@@ -113,6 +115,66 @@ const countryResearch = {
       { name: "National Rail — yolculuk planlama", url: "https://www.nationalrail.co.uk/" },
     ],
   },
+  ID: {
+    country: "Endonezya",
+    entry:
+      "Türk vatandaşlarının güncel e-VOA/VOA uygunluğu, kalış süresi ve giriş noktaları Endonezya Göç İdaresi'nin resmî eVisa portalından yolculuk öncesinde kontrol edilmelidir. Pasaportun ülkeye giriş tarihinde en az altı ay geçerli olması ve dönüş ya da devam bileti istenebilir. Acente görünümlü kopya siteler yerine yalnız resmî uzantıyı kullanın; ada içi uçuşlarda da pasaportu yanınızda taşıyın.",
+    payments:
+      "Endonezya rupisiyle kart kullanımı Jakarta, Bali ve büyük otellerde yaygınlaşsa da pazar, warung, tekne iskelesi ve uzak adalarda nakit hâlâ önemlidir. ATM'yi banka şubesi veya güvenli kapalı alanda kullanın; terminal TL önerirse rupiyi seçin. QRIS yerel hayatta çok yaygındır fakat yabancı banka uygulaması her QR'ı çalıştırmayabilir.",
+    language:
+      "Bahasa Indonesia ülke genelinde ortak dildir; Bali dili, Cava dili, Sundaca ve yüzlerce yerel dil günlük yaşamda sürer. Turistik merkezlerde İngilizceyle ilerlenir, uzak köy ve iskelelerde adresi Bahasa Indonesia olarak kaydetmek işleri kolaylaştırır. Tapınak, köy ve tören alanlarında kıyafet ile fotoğraf kurallarına yerel yönlendirme üzerinden uyun.",
+    languageLabel: "Bahasa Indonesia · yerel diller",
+    connectivity:
+      "Büyük adalarda yerel SIM/eSIM ve 4G/5G yeterli olabilir; deniz geçişi, dağ, milli park ve Raja Ampat gibi uzak rotalarda kapsama hızla kesilir. Grab ve Gojek hizmet alanı şehirden şehre değişir. Uçuş için resmî havayolu, tren için KAI Access; hava ve volkan uyarıları için BMKG ile MAGMA Indonesia duyurularını izleyin. Çevrimdışı harita, otel adresi ve bilet ekran görüntüsü indirin.",
+    budgetFrame:
+      "Ekonomik planda aile işletmesi konaklama, warung, paylaşımlı tekne ve yerel transfer; orta bütçede iyi konumlu butik otel, özel sürücülü birkaç gün ve küçük grup turu; rahat planda iç hat uçuşu, özel tekne ve resort öne çıkar. Bali dışı adalar ucuz görünse de son kilometre teknesi, rehber ve bagaj ücretleri toplamı büyütebilir; fiyatı kişi başı mı araç/tekne başı mı olduğunu yazılı sorun.",
+    sources: [
+      { name: "Indonesia Travel — resmî destinasyon rehberi", url: "https://www.indonesia.travel/gb/en/destination" },
+      { name: "Endonezya Göç İdaresi — resmî eVisa portalı", url: "https://evisa.imigrasi.go.id/" },
+      { name: "KAI — Endonezya demiryolları", url: "https://www.kai.id/" },
+      { name: "BMKG — hava, deprem ve erken uyarılar", url: "https://www.bmkg.go.id/" },
+    ],
+  },
+  CN: {
+    country: "Çin",
+    entry:
+      "Umuma mahsus Türk pasaportuyla Çin ana karasına turistik seyahat için kural olarak önceden vize gerekir. Türkiye'deki Çin Vize Başvuru Merkezi, bireysel turistik başvuruların güncel kabul yönteminin yerel seyahat acenteleri üzerinden yürüyebileceğini belirtiyor; başvuru biçimini satın alma yapmadan önce resmî merkezden doğrulayın. Ağustos 2026 tarihli 240 saatlik vizesiz transit ülke listesinde Türkiye yer almıyor; bu istisnayı kullanabileceğinizi varsaymayın.",
+    payments:
+      "Alipay ve WeChat Pay günlük ödemede baskındır; yabancı kart bağlama desteği bulunur fakat banka onayı, kimlik doğrulaması, işlem limiti ve küçük işletme kabulü değişebilir. Visa/Mastercard büyük otellerde daha olası, sokak düzeyinde sınırlıdır. Yedek bir mobil cüzdan, fiziksel kart ve ölçülü miktarda renminbi nakit taşıyın; her sistemi daha Türkiye'deyken küçük bir işlemle test edin.",
+    language:
+      "Standart Mandarin ortak dildir; Kantonca ve çok sayıda bölgesel dil gündelik hayatta güçlüdür. İngilizce turistik merkez dışında sınırlı kalabilir. Otel adı, istasyon, yemek kısıtı ve dönüş adresini Çince karakterlerle çevrimdışı kaydedin; yalnız Latin harfli yer adına güvenmeyin.",
+    languageLabel: "Mandarin · bölgesel diller",
+    connectivity:
+      "Google, WhatsApp ve bazı küresel servisler Çin ana karasında olağan biçimde çalışmayabilir. Yerel mevzuata uygun bağlantı seçeneklerini operatörünüzden önceden öğrenin; çevrimdışı harita, çeviri paketi, tren bileti ve otel adresi indirin. Tren için resmî Railway 12306, şehir içi için yerel metro uygulaması ve harita olarak Çin'de çalışan bir servis kullanın; pasaportla gerçek ad doğrulaması gerekebilir.",
+    budgetFrame:
+      "Ekonomik planda metro, hızlı trenin uygun sınıfı, yerel lokanta ve merkez dışı otel; orta bütçede merkezî konaklama, seçilmiş hızlı tren/uçuş ve birkaç biletli gösteri; rahat planda özel transfer, yüksek hızlı trenin üst sınıfı ve uluslararası otel öne çıkar. Ulusal tatil ile festival haftaları ulaşım ve oda fiyatlarını sert biçimde yükseltir; tek günlük rakamdan çok şehirler arası bilet, giriş ve konaklamayı ayrı bütçeleyin.",
+    sources: [
+      { name: "Çin Ulusal Göç İdaresi — 240 saat transit politikası", url: "https://www.nia.gov.cn/n741440/n741577/c1731205/content.html" },
+      { name: "Çin Vize Başvuru Merkezi — İstanbul", url: "https://bio.visaforchina.cn/IST3_EN" },
+      { name: "China Railway 12306 — resmî bilet", url: "https://www.12306.cn/en/index.html" },
+      { name: "Çin Kültür ve Turizm Bakanlığı", url: "https://www.mct.gov.cn/" },
+    ],
+  },
+  NL: {
+    country: "Hollanda",
+    entry:
+      "Umuma mahsus Türk pasaportuyla kısa turistik seyahat için Schengen vizesi gerekir; kişisel pasaport istisnası ve belge listesi NetherlandsWorldwide üzerinden kontrol edilmelidir. Türkiye'den başvurular yetkili merkez üzerinden yapılır; başvuru en erken altı ay önce ve genel olarak seyahatten en geç 45 gün önce verilebilir. Vize 180 gün içinde en fazla 90 gün kalış kuralını aşma hakkı vermez.",
+    payments:
+      "Banka kartı ve temassız ödeme çok yaygındır; bazı küçük işletmeler yalnız Maestro/V Pay veya yerel kart düzenini tercih edebilir. Bir yedek kart ile az miktarda avro taşıyın. OVpay'de aynı fiziksel ya da dijital kartla giriş ve çıkış yapmak gerekir; telefonla girip fiziksel kartla çıkmak iki ayrı yolculuk sayılabilir.",
+    language:
+      "Felemenkçe resmî ve günlük dildir; İngilizceyle hemen her turistik durumda rahat ilerlenir. Friesland'da Frizce, Limburg'da bölgesel lehçeler görünür. Bisiklet yolu, sessiz vagon ve toplu taşıma görgü kurallarını İngilizce iletişim kolaylığı kadar ciddiye alın.",
+    languageLabel: "Felemenkçe · İngilizce yaygın",
+    connectivity:
+      "Türkiye hattı AB dolaşımına otomatik dahil değildir; operatör paketi veya eSIM karşılaştırın. Ülke çapında tren için NS, tüm toplu taşıma bağlantıları için 9292 ve yerel işletme uygulamaları çalışır. OVpay ile banka kartı kullanıyorsanız her aktarmada cihaz talimatını okuyun; bakım ve grev günlerinde uygulamadaki canlı duyuru planlayıcıdan daha önemlidir.",
+    budgetFrame:
+      "Ekonomik planda hostel/merkez dışı oda, süpermarket–pazar öğünü, OVpay ve ücretsiz yürüyüş; orta bütçede merkezî oda, müze kartı hesabı ve bir iyi restoran; rahat planda kanal manzaralı otel, taksi ve özel tur öne çıkar. Amsterdam konaklaması ile bahar lale haftaları ülke ortalamasını yanıltır; Utrecht, Haarlem, Leiden veya Rotterdam'ı üs yapmak hem bütçeyi hem günü dengeleyebilir.",
+    sources: [
+      { name: "Holland.com — resmî Hollanda turizm portalı", url: "https://www.holland.com/global/tourism.htm" },
+      { name: "NetherlandsWorldwide — Türkiye'den Schengen vizesi", url: "https://www.netherlandsworldwide.nl/visa-the-netherlands/schengen-visa/apply-turkiye" },
+      { name: "NS — banka kartıyla OVpay", url: "https://www.ns.nl/en/travel-information/check-in-check-out/debit-card" },
+      { name: "9292 — ülke çapında yolculuk planlama", url: "https://9292.nl/en" },
+    ],
+  },
 } as const;
 
 const toPlaces = (items: PlaceInput[]): PlaceCard[] =>
@@ -143,14 +205,30 @@ export function makeExpandedGuide(profile: ExpandedGuideProfile): CityGuide {
     metaLead.length <= 158
       ? metaLead
       : `${metaLead.slice(0, 157).replace(/\s+\S*$/, "").replace(/[,:;–—-]+$/, "")}…`;
-  const timezone =
-    profile.countryCode === "TR"
+  const timezone = profile.timezone ??
+    (profile.countryCode === "TR"
       ? "UTC+3"
       : profile.countryCode === "GB"
         ? "GMT · yazın BST"
+        : profile.countryCode === "CN"
+          ? "UTC+8"
+          : profile.countryCode === "NL"
+            ? "CET · yazın CEST"
+            : profile.countryCode === "ID"
+              ? "WIB · UTC+7"
         : ["Tenerife", "Gran Canaria"].includes(profile.city)
           ? "WET · yazın WEST"
-          : "CET · yazın CEST";
+          : "CET · yazın CEST");
+  const money =
+    profile.countryCode === "GB"
+      ? "Sterlin · kart yaygın"
+      : ["ES", "NL"].includes(profile.countryCode)
+        ? "Avro · kart yaygın"
+        : profile.countryCode === "ID"
+          ? "Rupi · kart + nakit"
+          : profile.countryCode === "CN"
+            ? "Renminbi · mobil ödeme"
+            : "TL · kart + nakit";
 
   return {
     city: profile.city,
@@ -165,7 +243,7 @@ export function makeExpandedGuide(profile: ExpandedGuideProfile): CityGuide {
       { label: "Varış", value: profile.arrival },
       { label: "Şehir içi", value: profile.gettingAround },
       { label: "En iyi dönem", value: profile.bestTime },
-      { label: "Para", value: profile.countryCode === "GB" ? "Sterlin · kart yaygın" : profile.countryCode === "ES" ? "Avro · kart yaygın" : "TL · kart + nakit" },
+      { label: "Para", value: money },
       { label: "Dil", value: shared.languageLabel },
       { label: "Saat dilimi", value: timezone },
     ],
@@ -252,6 +330,6 @@ export function makeExpandedGuide(profile: ExpandedGuideProfile): CityGuide {
     ],
     volatileNote:
       "Müze ve işletme saatleri, etkinlik takvimi, ulaşım tarifeleri ve giriş ücretleri dönemsel olarak değişir. Rezervasyon gerektiren yerleri yalnız resmî kanaldan, ziyaret gününe yakın yeniden kontrol edin.",
-    reviewed: "2026-08-12",
+    reviewed: ["ID", "CN", "NL"].includes(profile.countryCode) ? "2026-08-25" : "2026-08-12",
   };
 }
