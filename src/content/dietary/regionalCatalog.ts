@@ -121,6 +121,42 @@ const seeds: Seed[] = [
   ["RU", "Murmansk", "White Rabbit", "Halal House", "Şehir merkezi"],
   ["RU", "Baykal Gölü", "Govinda", "Khinkalnaya", "Irkutsk"],
   ["RU", "Vladivostok", "Ganga", "Kebab House", "Svetlanskaya"],
+
+  ["RS", "Belgrad", "Radost Fina Kuhinjica", "Hanan", "Dorćol / merkez"],
+  ["RS", "Novi Sad", "Ananda", "Taverna Sat", "Stari Grad"],
+  ["RS", "Niş", "Tramvaj", "Istanbul Doner", "Merkez"],
+  ["RS", "Subotica", "Boss Caffe", "Bates", "Centar"],
+  ["RS", "Zlatibor", "Feniks", "Kafana Ljubiš", "Merkez"],
+  ["RS", "Tara Milli Parkı", "Dve Lipe", "Kafe Alija", "Bajina Bašta"],
+  ["RS", "Kopaonik", "Alo Alo", "Bombay", "Konaci"],
+  ["RS", "Demir Kapı", "Kapetan Mišin Breg", "Čarobna Ribica", "Donji Milanovac"],
+
+  ["ME", "Kotor", "Konoba Scala Santa", "Tanjga Family Restaurant", "Stari Grad"],
+  ["ME", "Budva", "Paradise Food", "Taste of Asia", "Merkez"],
+  ["ME", "Podgorica", "Gurman", "Byblos", "Centar"],
+  ["ME", "Cetinje", "Metro Food", "Konoba Korzo", "Merkez"],
+  ["ME", "Perast", "Conte", "Armonia", "Kıyı"],
+  ["ME", "Herceg Novi", "Gradska Kafana", "Taverna Galija", "Eski şehir / kıyı"],
+  ["ME", "Durmitor", "Oro", "Podgora", "Žabljak"],
+  ["ME", "Ulcinj", "La Tavola", "Restaurant Lovac", "Merkez"],
+
+  ["BA", "Saraybosna", "Zdravo", "Ćevabdžinica Željo", "Baščaršija / merkez"],
+  ["BA", "Mostar", "Food House Mostar", "Tima-Irma", "Eski şehir"],
+  ["BA", "Blagaj", "Bunski Biser", "Restoran Vrelo", "Buna kaynağı"],
+  ["BA", "Travnik", "Lutvina Kahva", "Ćevabdžinica Hari", "Merkez"],
+  ["BA", "Jajce", "Kod Asima", "Restoran Divan", "Tarihî merkez"],
+  ["BA", "Banja Luka", "Vege Corner", "Kod Muje", "Centar"],
+  ["BA", "Trebinje", "Botanik Coffee & More", "Ćevabdžinica Kastel", "Stari Grad"],
+  ["BA", "Una Milli Parkı", "Panache", "Sofra", "Bihać"],
+
+  ["AL", "Tiran", "Veggies", "Oda", "Blloku / merkez"],
+  ["AL", "Berat", "Temi Albanian Food", "Homemade Food Lili", "Mangalem"],
+  ["AL", "Gjirokastër", "Edua", "Kujtimi", "Eski çarşı"],
+  ["AL", "Shkodër", "Arti'Zanave", "Fisi", "Merkez"],
+  ["AL", "Krujë", "Rooms Emiliano", "Kroi", "Kale / çarşı"],
+  ["AL", "Theth", "Villa Gjecaj", "Bujtina Polia", "Köy merkezi"],
+  ["AL", "Sarandë", "Green Life Market", "Taverna Laberia", "Promenad / merkez"],
+  ["AL", "Himarë", "To Steki", "Taverna Lefteri", "Spile"],
 ];
 
 const veganPick = (name: string, area: string): DietaryRestaurant => ({

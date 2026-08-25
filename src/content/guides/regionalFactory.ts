@@ -1,7 +1,7 @@
 import { makeExpandedGuide, type ExpandedGuideProfile } from "./expandedFactory";
 import type { CityGuide } from "./types";
 
-export type RegionalCode = "AT" | "PT" | "DE" | "MX" | "BR" | "AR" | "CA" | "CH" | "BE" | "HU" | "CZ" | "PL" | "RU";
+export type RegionalCode = "AT" | "PT" | "DE" | "MX" | "BR" | "AR" | "CA" | "CH" | "BE" | "HU" | "CZ" | "PL" | "RU" | "RS" | "ME" | "BA" | "AL";
 type Pair = [title: string, detail: string];
 
 export interface RegionalProfile {
@@ -36,6 +36,10 @@ const officialSource: Record<RegionalCode, { name: string; url: string }> = {
   CZ: { name: "Visit Czechia — resmî destinasyon rehberi", url: "https://www.visitczechia.com/en-us" },
   PL: { name: "Poland Travel — resmî destinasyon rehberi", url: "https://www.poland.travel/en/" },
   RU: { name: "Rusya Hükümeti — Turizm ve Konukseverlik projesi", url: "https://government.ru/rugovclassifier/920/" },
+  RS: { name: "Serbia Travel — resmî destinasyon rehberi", url: "https://www.serbia.travel/en/" },
+  ME: { name: "Montenegro Travel — resmî destinasyon rehberi", url: "https://www.montenegro.travel/en" },
+  BA: { name: "Tourism BiH — destinasyon rehberi", url: "https://www.tourismbih.com/" },
+  AL: { name: "Arnavutluk Ulusal Turizm Ajansı", url: "https://akt.gov.al/en/" },
 };
 
 const transportSource: Record<RegionalCode, { name: string; url: string }> = {
@@ -52,6 +56,10 @@ const transportSource: Record<RegionalCode, { name: string; url: string }> = {
   CZ: { name: "České dráhy — tren ve canlı sefer", url: "https://www.cd.cz/en/" },
   PL: { name: "PKP Intercity — şehirler arası tren", url: "https://www.intercity.pl/en/" },
   RU: { name: "Russian Railways — resmî tren bilgisi", url: "https://eng.rzd.ru/" },
+  RS: { name: "Srbija Voz — resmî tren bilgisi", url: "https://srbijavoz.rs/en/" },
+  ME: { name: "ŽPCG — Karadağ trenleri", url: "https://zpcg.me/en" },
+  BA: { name: "ŽFBH — Bosna-Hersek Federasyonu trenleri", url: "https://www.zfbh.ba/en/" },
+  AL: { name: "Arnavutluk Ulusal Turizm Ajansı — ulaşım bilgisi", url: "https://akt.gov.al/en/" },
 };
 
 const budgetNote: Record<RegionalCode, string> = {
@@ -68,6 +76,10 @@ const budgetNote: Record<RegionalCode, string> = {
   CZ: "Prag merkezindeki konaklama ile küçük şehirleri aynı fiyat düzeyinde sanmayın; tren, spa, kale ve bira fabrikası turlarını ayrı kalemlerle güncel fiyatlandırın.",
   PL: "Kraków ve sahil hafta sonları, Tatra transferi, müze rezervasyonu ve hızlı tren ücretini ayrı yazın; zlotiyi eski blog kuruyla hesaplamayın.",
   RU: "Uçuş, uzun mesafe tren, yerel transfer ve ödeme erişimini rezervasyon gününde ayrı doğrulayın; ülke büyüklüğü ve kart kısıtları tek günlük tahmini yanıltabilir.",
+  RS: "Belgrad ile Novi Sad etkinlik haftaları, dağ transferi, milli park teknesi ve manastır turunu ayrı kalemlerle hesaplayın; eski dinar kuruna güvenmeyin.",
+  ME: "Kotor Körfezi yaz konaklaması, sahil otoparkı, tekne, feribot ve Durmitor transferini ayrı yazın; ülkenin küçük görünmesi günlük ulaşımı otomatik ucuz yapmaz.",
+  BA: "Nakit ağırlıklı küçük işletme, şehirler arası otobüs, milli park girişi ve son kilometre taksi/transferini ayrı hesaplayın; KM fiyatını avro etiketiyle karıştırmayın.",
+  AL: "Kıyı yaz konaklaması, nakit lek, minibüs, araç sigortası ve dağ transferini ayrı fiyatlandırın; Tiran fiyatını Theth ya da Riviera geneline taşımayın.",
 };
 
 const priceFor = (index: number): "Yüksek" | "Orta" | "Ekonomik" =>

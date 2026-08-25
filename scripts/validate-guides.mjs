@@ -126,6 +126,26 @@ const scopes = [
     cities: ["moskova", "st-petersburg", "kazan", "soci", "kaliningrad", "murmansk", "baykal-golu", "vladivostok"],
     planningHeading: "Rusya rotası nasıl kurulur?",
   },
+  {
+    country: "sirbistan",
+    cities: ["belgrad", "novi-sad", "nis", "subotica", "zlatibor", "tara-milli-parki", "kopaonik", "demir-kapi"],
+    planningHeading: "Sırbistan rotası nasıl kurulur?",
+  },
+  {
+    country: "karadag",
+    cities: ["kotor", "budva", "podgorica", "cetinje", "perast", "herceg-novi", "durmitor", "ulcinj"],
+    planningHeading: "Karadağ rotası nasıl kurulur?",
+  },
+  {
+    country: "bosna-hersek",
+    cities: ["saraybosna", "mostar", "blagaj", "travnik", "jajce", "banja-luka", "trebinje", "una-milli-parki"],
+    planningHeading: "Bosna-Hersek rotası nasıl kurulur?",
+  },
+  {
+    country: "arnavutluk",
+    cities: ["tiran", "berat", "gjirokaster", "shkoder", "kruje", "theth", "sarande", "himare"],
+    planningHeading: "Arnavutluk rotası nasıl kurulur?",
+  },
 ];
 
 function assert(condition, message) {

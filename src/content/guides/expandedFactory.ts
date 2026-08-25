@@ -23,7 +23,7 @@ type RelatedInput = [city: string, anchor: string, description: string];
 
 export interface ExpandedGuideProfile {
   city: string;
-  countryCode: "ES" | "TR" | "GB" | "ID" | "CN" | "NL" | "AT" | "PT" | "DE" | "MX" | "BR" | "AR" | "CA" | "CH" | "BE" | "HU" | "CZ" | "PL" | "RU";
+  countryCode: "ES" | "TR" | "GB" | "ID" | "CN" | "NL" | "AT" | "PT" | "DE" | "MX" | "BR" | "AR" | "CA" | "CH" | "BE" | "HU" | "CZ" | "PL" | "RU" | "RS" | "ME" | "BA" | "AL";
   /** Bir ülkenin birden fazla saat dilimi olduğunda destinasyon bazında kullanılır. */
   timezone?: string;
   /** Başlıktaki ikinci arama niyeti; her destinasyonda farklıdır. */
@@ -434,6 +434,63 @@ const countryResearch = {
       { name: "Rusya Hükümeti — Turizm ve Konukseverlik projesi", url: "https://government.ru/rugovclassifier/920/" },
     ],
   },
+  RS: {
+    country: "Sırbistan",
+    entry: "Sırbistan Dışişleri Bakanlığına göre umuma mahsus Türk pasaportu sahipleri ilk girişten başlayan altı aylık dönem içinde 90 güne kadar vizeden muaftır. Vizesiz giriş çalışma veya uzun ikamet hakkı vermez; pasaport geçerliliği, dönüş/konaklama belgesi, sağlık sigortası ve sınırda istenebilecek yeterli maddi imkânı seyahat öncesi resmî kaynaktan doğrulayın.",
+    payments: "Sırp dinarı kullanılır. Kart büyük şehirlerde yaygın, küçük kasaba, pazar, kırsal otobüs ve dağ işletmelerinde nakit önemlidir. Avro günlük ödeme parası değildir; banka ATM'si ve yetkili menjačnica kullanın, kur/komisyonu görün ve kart terminalinde RSD seçin.",
+    language: "Sırpça resmî dildir ve hem Kiril hem Latin alfabe kullanılır. Belgrad/Novi Sad'da İngilizce yaygınlaşır; kırsal rota, manastır ve otobüs istasyonunda yer adının iki alfabeli ekran görüntüsü yardımcıdır. Macarca Subotica çevresinde, bölgesel azınlık dilleri Vojvodina'da görünür.",
+    languageLabel: "Sırpça · Kiril ve Latin alfabe",
+    connectivity: "Srbija Voz tren bilgisi için, şehirlerde resmî ulaşım işletmesi ve otobüs terminali kaynakları için kullanılır. Belgrad–Novi Sad hızlı hattı güçlü olsa da bütün ülke demiryoluyla aynı kolaylıkta bağlanmaz. Dağ ve milli parkta son otobüs, telefon kapsaması, yol/tekne kapanışı ile çevrimdışı haritayı önceden kaydedin.",
+    budgetFrame: "Ekonomik planda pansiyon/hostel, pekara, günlük menü ve toplu taşıma; orta bütçede merkezî oda, müze, tren/otobüs ve bir doğa turu; rahat planda butik otel, iyi restoran ve özel transfer öne çıkar. EXIT, yılbaşı, büyük maç ve kayak haftalarında oda fiyatı ülke ortalamasını aşar.",
+    sources: [
+      { name: "Sırbistan Dışişleri — Türkiye vize rejimi", url: "https://www.mfa.gov.rs/en/citizens/travel-serbia/visa-regime/turska" },
+      { name: "Serbia Travel — resmî destinasyon portalı", url: "https://www.serbia.travel/en/" },
+      { name: "Srbija Voz — resmî tren bilgisi", url: "https://srbijavoz.rs/en/" },
+    ],
+  },
+  ME: {
+    country: "Karadağ",
+    entry: "Karadağ Hükümeti 23 Aralık 2025'te Türk vatandaşları için vizesiz rejimi yeniden açıp izinli kalışı 30 güne indirdi. 23 Temmuz 2026 tarihli yeni resmî karara göre Türkiye vatandaşları 1 Kasım 2026'dan itibaren Karadağ'a girişte vizeye tabi olacak. Bu nedenle seyahat tarihi belirleyicidir: 31 Ekim 2026'ya kadar olan yolculukta 30 günlük muafiyetin güncel uygulamasını, 1 Kasım ve sonrasında ise vize prosedürünü Karadağ Dışişleri ve Ankara Büyükelçiliğinden yeniden doğrulayın.",
+    payments: "Avro kullanılır; Karadağ avro bölgesine resmen üye değildir ancak günlük ödeme para birimi avrodur. Kart sahil ve şehirlerde yaygınlaşsa da pansiyon, otopark, küçük tekne, kırsal lokanta ve otobüste nakit gerekebilir. ATM ücretini okuyun ve konaklamada şehir vergisi/fişini kontrol edin.",
+    language: "Karadağca resmî dildir; Sırpça, Boşnakça, Arnavutça ve Hırvatça da kamusal hayatta kullanılır. Latin ve Kiril alfabe görülebilir. Kotor Körfezi'nde İngilizce yaygın, kuzey köylerinde daha sınırlıdır; yer adını yerel yazımıyla ve çevrimdışı saklayın.",
+    languageLabel: "Karadağca · Sırpça · Boşnakça · Arnavutça",
+    connectivity: "Kıyıda otobüs ana omurgadır; yaz trafiği harita süresini katlayabilir. ŽPCG Podgorica–Bar ve kuzey trenlerinde temel kaynaktır. Kotor–Lepetane feribotu, milli park yolları, kanjon/rafting ve teleferik için işletme duyurusunu aynı gün kontrol edin; son otobüsü çevrimdışı kaydedin.",
+    budgetFrame: "Ekonomik planda merkez dışı pansiyon, otobüs, fırın ve ücretsiz koy yürüyüşü; orta bütçede eski şehir yakını oda, tekne ve milli park; rahat planda koy manzaralı otel, iyi restoran ve özel kuzey transferi öne çıkar. Temmuz–Ağustos'ta Kotor/Budva konaklaması Balkan iç bölgesinden belirgin pahalıdır.",
+    sources: [
+      { name: "Karadağ Hükümeti — 1 Kasım 2026 vize değişikliği", url: "https://www.gov.me/en/article/montenegro-fully-aligns-its-visa-policy-with-the-european-union-citizens-of-numerous-countries-can-now-apply-for-a-montenegrin-visa" },
+      { name: "Karadağ Hükümeti — Türkler için 30 günlük muafiyet", url: "https://www.gov.me/en/article/montenegro-continues-to-align-its-visa-policy-with-the-eu" },
+      { name: "Montenegro Travel — resmî destinasyon portalı", url: "https://www.montenegro.travel/en" },
+      { name: "ŽPCG — resmî tren bilgisi", url: "https://zpcg.me/en" },
+    ],
+  },
+  BA: {
+    country: "Bosna-Hersek",
+    entry: "T.C. Dışişleri Bakanlığının güncel vize tablosuna göre umuma mahsus, diplomatik, hususi ve hizmet pasaportu sahibi Türk vatandaşları 180 gün içinde 90 günü aşmayan ziyaretlerde vizeden muaftır. Vizesiz giriş çalışma hakkı değildir; pasaport süresi, konaklama kaydı, dönüş belgesi ve sınırda istenebilecek şartları seyahat öncesi Bosna-Hersek makamlarıyla doğrulayın.",
+    payments: "Dönüştürülebilir mark (BAM/KM) kullanılır ve avroya sabitlenmiştir. Kart şehirlerde yaygın, küçük lokanta, pazar, otobüs, park ve kırsalda nakit gerekir. Avro bazı turistik yerlerde kabul edilse de para üstü/kur sorunlu olabilir; banka ATM'si kullanın ve BAM çekin.",
+    language: "Boşnakça, Sırpça ve Hırvatça resmî kullanımdadır; Latin alfabe yaygın, Republika Srpska'da Kiril de görünür. İngilizce ve Türkçe turistik işletmelerde yardımcı olabilir fakat savaş, kimlik ve din konularında genellemeden kaçınmak önemlidir.",
+    languageLabel: "Boşnakça · Sırpça · Hırvatça",
+    connectivity: "Ülkenin ulaşımı idari yapılara göre parçalıdır. ŽFBH Sarajevo–Mostar–Čapljina hattında, ŽRS kuzeyde çalışır; otobüs çoğu rota için daha yaygındır fakat tek ulusal canlı sistem yoktur. Terminali, kalkış peronunu, sınır geçişini ve son bağlantıyı doğrudan işletmeden doğrulayın.",
+    budgetFrame: "Ekonomik planda pansiyon, börek/čevapi, yürüyüş ve şehirler arası otobüs; orta bütçede merkezî oda, müze ve bir şelale/doğa günü; rahat planda butik otel, rehber ve özel transfer öne çıkar. Mostar yazı, Saraybosna Film Festivali ve rafting haftalarında fiyat hızla değişir.",
+    sources: [
+      { name: "T.C. Dışişleri — Türk vatandaşlarının vize uygulamaları", url: "https://www.mfa.gov.tr/turk-vatandaslarinin-tabi-oldugu-vize-uygulamalari.tr.mfa" },
+      { name: "Bosna-Hersek Dışişleri — yabancılar ve vize mevzuatı", url: "https://mvp.gov.ba/konzularne_informacije/vize/default.aspx?id=8685&langTag=en-US" },
+      { name: "ŽFBH — tren bilgisi", url: "https://www.zfbh.ba/en/" },
+    ],
+  },
+  AL: {
+    country: "Arnavutluk",
+    entry: "T.C. Dışişleri ve Tiran Büyükelçiliğine göre diplomatik, hususi, hizmet ve umuma mahsus Türk pasaportlarıyla 180 gün içinde 90 günü aşmayan ziyaretlerde vize gerekmez. Sınır kontrolleri düzensiz göçle mücadele amacıyla ayrıntılı olabilir; dönüş bileti, konaklama, yeterli maddi imkân ve seyahat amacını gösteren belgeleri taşıyın.",
+    payments: "Arnavut leki kullanılır. Kart Tiran ve büyük otellerde yaygınlaşsa da furgon, küçük pansiyon, plaj, pazar ve dağ köyünde nakit şart olabilir. Avro fiyatı her zaman iyi kur değildir; yetkili döviz bürosu/banka ATM'si kullanın ve lek cinsinden toplamı netleştirin.",
+    language: "Arnavutça resmî dildir; kuzeyde Geg, güneyde Tosk lehçe farkları duyulur. Turistik kıyı ve Tiran'da İngilizce/İtalyanca yaygınlaşır, kırsalda sınırlıdır. Otel, durak ve dağ transferini Arnavutça yazılı olarak saklamak işe yarar.",
+    languageLabel: "Arnavutça · İngilizce/İtalyanca turistik bölgelerde",
+    connectivity: "Şehirler arası omurga otobüs ve furgondur; çevrimiçi saatler eksik veya gayriresmî olabilir. Kalkış terminalini ve ücreti konaklama/işletmeden bir gün önce doğrulayın. Theth, Valbona ve Riviera'da yol, feribot, parkur, nakit ve kapsama planı yapın; çevrimdışı harita taşıyın.",
+    budgetFrame: "Ekonomik planda aile pansiyonu, furgon, byrek ve plaj; orta bütçede merkezî oda, araç/otobüs ve arkeoloji bileti; rahat planda butik taş ev, iyi restoran ve özel dağ/kıyı transferi öne çıkar. Temmuz–Ağustos'ta Ksamil–Sarandë–Himarë fiyatı ülke ortalamasını aşar.",
+    sources: [
+      { name: "T.C. Dışişleri — Arnavutluk seyahat duyurusu", url: "https://www.mfa.gov.tr/arnavutluk-seyahat-edecek-turk-vatandaslarinin-dikkatine.tr.mfa" },
+      { name: "Tiran Büyükelçiliği — sınır ve giriş bilgisi", url: "https://tiran-be.mfa.gov.tr/Mission/ShowInfoNote/395001" },
+      { name: "Arnavutluk Ulusal Turizm Ajansı", url: "https://akt.gov.al/en/" },
+    ],
+  },
 } as const;
 
 const toPlaces = (items: PlaceInput[]): PlaceCard[] =>
@@ -505,6 +562,14 @@ export function makeExpandedGuide(profile: ExpandedGuideProfile): CityGuide {
             ? "Polonya zlotisi · kart yaygın"
           : profile.countryCode === "RU"
             ? "Rus rublesi · ödeme yedeği şart"
+          : profile.countryCode === "RS"
+            ? "Sırp dinarı · kart + nakit"
+          : profile.countryCode === "ME"
+            ? "Avro · kart + nakit"
+          : profile.countryCode === "BA"
+            ? "Dönüştürülebilir mark · nakit önemli"
+          : profile.countryCode === "AL"
+            ? "Arnavut leki · nakit önemli"
         : profile.countryCode === "ID"
           ? "Rupi · kart + nakit"
           : profile.countryCode === "CN"
@@ -619,6 +684,6 @@ export function makeExpandedGuide(profile: ExpandedGuideProfile): CityGuide {
     ],
     volatileNote:
       "Müze ve işletme saatleri, etkinlik takvimi, ulaşım tarifeleri ve giriş ücretleri dönemsel olarak değişir. Rezervasyon gerektiren yerleri yalnız resmî kanaldan, ziyaret gününe yakın yeniden kontrol edin.",
-    reviewed: ["ID", "CN", "NL", "CH", "BE", "HU", "CZ", "PL", "RU"].includes(profile.countryCode) ? "2026-08-25" : "2026-08-12",
+    reviewed: ["ID", "CN", "NL", "CH", "BE", "HU", "CZ", "PL", "RU", "RS", "ME", "BA", "AL"].includes(profile.countryCode) ? "2026-08-25" : "2026-08-12",
   };
 }
