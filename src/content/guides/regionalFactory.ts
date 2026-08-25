@@ -1,7 +1,7 @@
 import { makeExpandedGuide, type ExpandedGuideProfile } from "./expandedFactory";
 import type { CityGuide } from "./types";
 
-export type RegionalCode = "AT" | "PT" | "DE" | "MX" | "BR" | "AR" | "CA";
+export type RegionalCode = "AT" | "PT" | "DE" | "MX" | "BR" | "AR" | "CA" | "CH" | "BE" | "HU";
 type Pair = [title: string, detail: string];
 
 export interface RegionalProfile {
@@ -30,6 +30,9 @@ const officialSource: Record<RegionalCode, { name: string; url: string }> = {
   BR: { name: "Visit Brasil — resmî destinasyon rehberi", url: "https://visitbrasil.com/en/" },
   AR: { name: "Visit Argentina — resmî destinasyon rehberi", url: "https://www.argentina.travel/en" },
   CA: { name: "Destination Canada — resmî destinasyon rehberi", url: "https://travel.destinationcanada.com/en-ca" },
+  CH: { name: "Switzerland Tourism — resmî destinasyon rehberi", url: "https://www.myswitzerland.com/en/" },
+  BE: { name: "Visit Flanders — resmî destinasyon rehberi", url: "https://www.visitflanders.com/en" },
+  HU: { name: "Visit Hungary — resmî destinasyon rehberi", url: "https://visithungary.com/" },
 };
 
 const transportSource: Record<RegionalCode, { name: string; url: string }> = {
@@ -40,6 +43,9 @@ const transportSource: Record<RegionalCode, { name: string; url: string }> = {
   BR: { name: "ANTT — yetkili şehirler arası ulaşım", url: "https://www.gov.br/antt/pt-br/assuntos/passageiros" },
   AR: { name: "SUBE — resmî toplu taşıma bilgisi", url: "https://www.argentina.gob.ar/sube" },
   CA: { name: "VIA Rail — şehirler arası tren", url: "https://www.viarail.ca/en" },
+  CH: { name: "SBB — tren, otobüs ve tekne bağlantıları", url: "https://www.sbb.ch/en" },
+  BE: { name: "SNCB/NMBS — Belçika trenleri", url: "https://www.belgiantrain.be/en" },
+  HU: { name: "MÁV — tren, otobüs ve canlı sefer", url: "https://www.mavcsoport.hu/en" },
 };
 
 const budgetNote: Record<RegionalCode, string> = {
@@ -50,6 +56,9 @@ const budgetNote: Record<RegionalCode, string> = {
   BR: "İç hat, doğa rehberi ve son kilometre tekne/4x4 maliyeti toplamı büyütür; fiyatın kişi başı mı araç başı mı olduğunu yazılı teyit edin.",
   AR: "Kur ve enflasyon nedeniyle eski günlük rakamlara güvenmeyin; uçuş, oda, öğün ve turu rezervasyon gününde ayrı ayrı fiyatlandırın.",
   CA: "Vergi, bahşiş, park girişi, araç sigortası ve tek yön bırakma ücretini görünen oda/araç fiyatına ekleyin.",
+  CH: "Konaklama, dağ treni, teleferik ve panoramik hat maliyetini ayrı yazın; Swiss Travel Pass ile tek tek bilet toplamını gerçek rotanız üzerinden karşılaştırın.",
+  BE: "Brüksel ve Brugge hafta sonu konaklaması ile hızlı trenleri erken kontrol edin; müze, bira tadımı ve şehir vergisini görünen oda fiyatına ekleyin.",
+  HU: "Budapeşte dışındaki tren, termal banyo, bağ transferi ve Balaton sezon ücretini ayrı hesaplayın; eski forint rakamlarını güncel fiyat sanmayın.",
 };
 
 const priceFor = (index: number): "Yüksek" | "Orta" | "Ekonomik" =>

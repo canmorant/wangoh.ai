@@ -96,6 +96,21 @@ const scopes = [
     cities: ["toronto", "vancouver", "montreal", "quebec-city", "banff", "jasper", "niagara-selaleleri", "yukon"],
     planningHeading: "Kanada rotası nasıl kurulur?",
   },
+  {
+    country: "isvicre",
+    cities: ["zurih", "luzern", "bern", "cenevre", "lozan", "interlaken", "zermatt", "st-moritz"],
+    planningHeading: "İsviçre rotası nasıl kurulur?",
+  },
+  {
+    country: "belcika",
+    cities: ["bruksel", "brugge", "gent", "anvers", "leuven", "liege", "dinant", "ardenler"],
+    planningHeading: "Belçika rotası nasıl kurulur?",
+  },
+  {
+    country: "macaristan",
+    cities: ["budapeste", "szentendre", "eger", "pecs", "szeged", "debrecen", "balaton-golu", "sopron"],
+    planningHeading: "Macaristan rotası nasıl kurulur?",
+  },
 ];
 
 function assert(condition, message) {

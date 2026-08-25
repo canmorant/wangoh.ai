@@ -67,6 +67,33 @@ const seeds: Seed[] = [
   ["CA", "Jasper", "The Spice Joint", "The Raven Bistro", "Jasper Town"],
   ["CA", "Niagara Şelaleleri", "Rise Above", "The Kasbah Mediterranean", "Fallsview / merkez"],
   ["CA", "Yukon", "Antoinette's", "Turkish Kebab House", "Whitehorse"],
+
+  ["CH", "Zürih", "Haus Hiltl", "New Point", "Altstadt / Langstrasse"],
+  ["CH", "Luzern", "Karls Kraut", "Tassnim Orient", "Altstadt"],
+  ["CH", "Bern", "tibits", "Restaurant Damas", "Bahnhof / Altstadt"],
+  ["CH", "Cenevre", "Alive", "Sultan Beyrouth", "Eaux-Vives / merkez"],
+  ["CH", "Lozan", "Végé Café", "Istanbul Grill", "Centre / Ouchy"],
+  ["CH", "Interlaken", "Pure8", "Layaly Beirut", "Merkez"],
+  ["CH", "Zermatt", "Vegistube", "Golden India", "Köy merkezi"],
+  ["CH", "St. Moritz", "Veltlinerkeller", "Banfi's", "Dorf / Bad"],
+
+  ["BE", "Brüksel", "Humus x Hortense", "L'Express", "Ixelles / merkez"],
+  ["BE", "Brugge", "Garlic n Greens", "The Olive Tree", "Historisch Centrum"],
+  ["BE", "Gent", "Le Botaniste", "Ankara", "Merkez / Sleepstraat"],
+  ["BE", "Anvers", "Wild Project", "Finjan", "Zuid / merkez"],
+  ["BE", "Leuven", "Loving Hut", "Kebab Company", "Merkez"],
+  ["BE", "Liège", "Greenburger", "O'Kebap", "Centre"],
+  ["BE", "Dinant", "La Broche", "Le Jardin de Fiorine", "Nehir merkezi"],
+  ["BE", "Ardenler", "La Canette", "Le Karawa", "Durbuy / Marche-en-Famenne"],
+
+  ["HU", "Budapeşte", "Napfényes Restaurant", "Szeráj", "V. bölge / Szent István körút"],
+  ["HU", "Szentendre", "Vegabont Bistro", "Török Kávézó", "Fő tér / merkez"],
+  ["HU", "Eger", "Govinda Étterem", "Kebab Club", "Belváros"],
+  ["HU", "Pécs", "LYR", "Sultan Kebab", "Belváros"],
+  ["HU", "Szeged", "VegaLife", "Taj Mahal", "Belváros"],
+  ["HU", "Debrecen", "Kis Padlizsán", "Aladdin Gyros", "Belváros"],
+  ["HU", "Balaton Gölü", "Veganeeta Home", "Mamma Mia Kebab", "Balatonalmádi / Siófok"],
+  ["HU", "Sopron", "Várkerület Kávézó", "Ottoman Kebab", "Belváros"],
 ];
 
 const veganPick = (name: string, area: string): DietaryRestaurant => ({

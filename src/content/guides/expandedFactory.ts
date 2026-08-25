@@ -23,7 +23,7 @@ type RelatedInput = [city: string, anchor: string, description: string];
 
 export interface ExpandedGuideProfile {
   city: string;
-  countryCode: "ES" | "TR" | "GB" | "ID" | "CN" | "NL" | "AT" | "PT" | "DE" | "MX" | "BR" | "AR" | "CA";
+  countryCode: "ES" | "TR" | "GB" | "ID" | "CN" | "NL" | "AT" | "PT" | "DE" | "MX" | "BR" | "AR" | "CA" | "CH" | "BE" | "HU";
   /** Bir ülkenin birden fazla saat dilimi olduğunda destinasyon bazında kullanılır. */
   timezone?: string;
   /** Başlıktaki ikinci arama niyeti; her destinasyonda farklıdır. */
@@ -313,6 +313,66 @@ const countryResearch = {
       { name: "VIA Rail — şehirler arası tren", url: "https://www.viarail.ca/en" },
     ],
   },
+  CH: {
+    country: "İsviçre",
+    entry:
+      "Umuma mahsus Türk pasaportuyla kısa turistik ziyaret için Schengen vizesi gerekir; İsviçre Schengen'e dahil olsa da AB üyesi değildir. Başvuruyu ana destinasyon kuralına göre yetkili resmî merkezden yapın. EES dış sınırda biyometrik giriş–çıkış kaydı tutar; ETIAS vizeye tabi Türk pasaportunun yerine geçmez.",
+    payments:
+      "İsviçre frangı kullanılır. Kart ve temassız ödeme çok yaygındır; küçük dağ kulübesi, pazar, kilitli dolap veya kırsal otomat için az miktarda frank yararlıdır. Bazı yerler avro kabul etse de para üstünü frankla ve zayıf kurla verebilir; terminalde CHF seçin.",
+    language:
+      "Almanca, Fransızca, İtalyanca ve Romanşça resmî dillerdir; bölge değiştikçe tabela ve duyuru dili de değişir. Turistik noktalarda İngilizce yaygındır. İstasyon ile dağ hattı adını yerel yazımıyla kaydetmek, aktarma ve son iniş duyurusunu izlemeyi kolaylaştırır.",
+    languageLabel: "Almanca · Fransızca · İtalyanca · Romanşça",
+    connectivity:
+      "SBB uygulaması tren, otobüs, tekne ve birçok dağ bağlantısını tek planda gösterir; ancak teleferik, özel dağ treni ve koltuk rezervasyonu geçerliliğini ayrıca okuyun. Türkiye hattı İsviçre'de AB dolaşımına otomatik girmez. Dağ gününde MeteoSwiss, işletme durumu ve son iniş saatini aynı gün kontrol edin.",
+    budgetFrame:
+      "Ekonomik planda hostel, market öğünü, belediye çeşmesi ve ön alımlı ulaşım; orta bütçede merkezî oda, birkaç müze ve tek bir dağ hattı; rahat planda iyi otel, panoramik tren, teleferik ve uzun akşam yemeği öne çıkar. Swiss Travel Pass her rotada otomatik en ucuz seçenek değildir; Half Fare Card ve tek bilet toplamıyla karşılaştırın.",
+    sources: [
+      { name: "Switzerland Tourism — resmî destinasyon portalı", url: "https://www.myswitzerland.com/en/" },
+      { name: "AB Türkiye Delegasyonu — Schengen vizesi", url: "https://www.eeas.europa.eu/delegations/t%C3%BCrkiye/visa_en" },
+      { name: "SBB — resmî yolculuk planlama", url: "https://www.sbb.ch/en" },
+      { name: "MeteoSwiss — resmî hava ve uyarılar", url: "https://www.meteoswiss.admin.ch/" },
+    ],
+  },
+  BE: {
+    country: "Belçika",
+    entry:
+      "Umuma mahsus Türk pasaportuyla kısa turistik ziyaret için Schengen vizesi gerekir. Türkiye'den başvurular, ana destinasyon kuralı doğrultusunda Belçika'nın yetkili resmî dış hizmet sağlayıcısı üzerinden yürütülür. EES dış sınır geçişini biyometrik kaydeder; ETIAS Türk vatandaşının Schengen vizesine alternatif değildir.",
+    payments:
+      "Avro kullanılır; kart ve temassız ödeme şehirlerde yaygındır. Küçük pazar, yerel etkinlik ve bazı tuvalet/emanet noktaları için bozuk para yararlı olabilir. Restoranda servis genellikle fiyata dahildir; olağanüstü hizmette küçük yuvarlama yeterlidir. Terminalde TL yerine avroyu seçin.",
+    language:
+      "Felemenkçe, Fransızca ve Almanca resmî dillerdir. Brüksel resmen iki dilli; Flandre'da Felemenkçe, Valonya'da Fransızca baskındır. İstasyonların iki adı olabilir: Bruxelles-Midi/Brussel-Zuid gibi. Biletteki yerel adı ve doğru garı birlikte kaydedin.",
+    languageLabel: "Felemenkçe · Fransızca · Almanca",
+    connectivity:
+      "Şehirler arası tren için SNCB/NMBS kullanılır; rezervasyon gerekmeyen iç hatlarda bile doğru istasyon, ilk/ikinci sınıf ve etkinlik tarifesini okuyun. Brüksel'de STIB/MIVB, Flandre'da De Lijn, Valonya'da TEC ayrı işletmelerdir. Tek bir şehir kartının bütün ülkede geçerli olduğunu varsaymayın.",
+    budgetFrame:
+      "Ekonomik planda tren, hostel/merkez dışı oda, fırın ve ücretsiz meydan yürüyüşü; orta bütçede merkezî oda, seçilmiş müze ve bira/çikolata deneyimi; rahat planda butik otel, iyi restoran ve özel tur öne çıkar. Brüksel kurum takvimi, Brugge hafta sonu ve festival günleri konaklamayı hızla yükseltebilir.",
+    sources: [
+      { name: "Visit Flanders — resmî Flandre rehberi", url: "https://www.visitflanders.com/en" },
+      { name: "Visit Wallonia — resmî Valonya rehberi", url: "https://visitwallonia.com/en-gb" },
+      { name: "AB Türkiye Delegasyonu — Schengen vizesi", url: "https://www.eeas.europa.eu/delegations/t%C3%BCrkiye/visa_en" },
+      { name: "SNCB/NMBS — resmî tren planlama", url: "https://www.belgiantrain.be/en" },
+    ],
+  },
+  HU: {
+    country: "Macaristan",
+    entry:
+      "Umuma mahsus Türk pasaportuyla kısa turistik ziyaret için Schengen vizesi gerekir. Türkiye'den başvuru, Macaristan'ın yetkilendirdiği resmî dış hizmet sağlayıcısı üzerinden ana destinasyon kuralına göre yapılır. EES dış sınırda biyometrik giriş–çıkış kaydı tutar; ETIAS vizeye tabi Türk pasaportunun yerine geçmez.",
+    payments:
+      "Macar forinti kullanılır; kart şehirlerde yaygındır fakat pazar, kırsal otobüs, küçük büfe ve bahşiş için nakit gerekebilir. Turistik merkezlerde avro fiyatı görülebilir ama kur elverişsiz olabilir. Banka ATM'si kullanın, bağımsız döviz bürosunun komisyonunu okuyun ve terminalde HUF seçin.",
+    language:
+      "Macarca günlük ve resmî dildir; İngilizce Budapeşte ile turistik merkezlerde daha yaygındır. Yer adları ve telaffuz ilk bakışta zor olabilir; otel, istasyon, termal banyo ve yemek kısıtını Macarca yazılı saklayın. Almanca batı sınırında ve turizmde yardımcı olabilir.",
+    languageLabel: "Macarca · İngilizce turistik bölgelerde yaygın",
+    connectivity:
+      "Ülke içi tren ve birçok bölgesel otobüs için MÁV, Budapeşte'de BKK/BudapestGO temel kaynaklardır. HÉV banliyö hattı, havaalanı otobüsü ve ülke bileti farklı kurallara sahip olabilir. Balaton ile küçük şehirlerde son tren/otobüsü çevrimdışı kaydedin; bakım ve grev duyurusunda resmî canlı bilgiye öncelik verin.",
+    budgetFrame:
+      "Ekonomik planda pansiyon/hostel, günlük menü, toplu taşıma ve ücretsiz yürüyüş; orta bütçede merkezî oda, termal banyo, tren ve seçilmiş şarap deneyimi; rahat planda butik otel, taksi/özel transfer ve uzun akşam yemeği öne çıkar. Formula 1, Sziget, yılbaşı ve Balaton yazı fiyatları ülke ortalamasını aşar.",
+    sources: [
+      { name: "Visit Hungary — resmî destinasyon portalı", url: "https://visithungary.com/" },
+      { name: "AB Türkiye Delegasyonu — Schengen vizesi", url: "https://www.eeas.europa.eu/delegations/t%C3%BCrkiye/visa_en" },
+      { name: "MÁV — resmî tren ve otobüs bilgisi", url: "https://www.mavcsoport.hu/en" },
+      { name: "BKK — Budapeşte toplu taşıması", url: "https://bkk.hu/en/" },
+    ],
+  },
 } as const;
 
 const toPlaces = (items: PlaceInput[]): PlaceCard[] =>
@@ -370,8 +430,12 @@ export function makeExpandedGuide(profile: ExpandedGuideProfile): CityGuide {
       ? "Sterlin · kart yaygın"
       : ["ES", "NL"].includes(profile.countryCode)
         ? "Avro · kart yaygın"
-        : ["AT", "PT", "DE"].includes(profile.countryCode)
+        : ["AT", "PT", "DE", "BE"].includes(profile.countryCode)
           ? "Avro · kart + nakit"
+        : profile.countryCode === "CH"
+          ? "İsviçre frangı · kart yaygın"
+          : profile.countryCode === "HU"
+            ? "Macar forinti · kart + nakit"
         : profile.countryCode === "ID"
           ? "Rupi · kart + nakit"
           : profile.countryCode === "CN"
@@ -486,6 +550,6 @@ export function makeExpandedGuide(profile: ExpandedGuideProfile): CityGuide {
     ],
     volatileNote:
       "Müze ve işletme saatleri, etkinlik takvimi, ulaşım tarifeleri ve giriş ücretleri dönemsel olarak değişir. Rezervasyon gerektiren yerleri yalnız resmî kanaldan, ziyaret gününe yakın yeniden kontrol edin.",
-    reviewed: ["ID", "CN", "NL"].includes(profile.countryCode) ? "2026-08-25" : "2026-08-12",
+    reviewed: ["ID", "CN", "NL", "CH", "BE", "HU"].includes(profile.countryCode) ? "2026-08-25" : "2026-08-12",
   };
 }
