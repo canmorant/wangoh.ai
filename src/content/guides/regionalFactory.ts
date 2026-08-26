@@ -1,7 +1,7 @@
 import { makeExpandedGuide, type ExpandedGuideProfile } from "./expandedFactory";
 import type { CityGuide } from "./types";
 
-export type RegionalCode = "AT" | "PT" | "DE" | "MX" | "BR" | "AR" | "CA" | "CH" | "BE" | "HU" | "CZ" | "PL" | "RU" | "RS" | "ME" | "BA" | "AL";
+export type RegionalCode = "AT" | "PT" | "DE" | "MX" | "BR" | "AR" | "CA" | "CH" | "BE" | "HU" | "CZ" | "PL" | "RU" | "RS" | "ME" | "BA" | "AL" | "GR" | "HR" | "SI";
 type Pair = [title: string, detail: string];
 
 export interface RegionalProfile {
@@ -40,6 +40,9 @@ const officialSource: Record<RegionalCode, { name: string; url: string }> = {
   ME: { name: "Montenegro Travel — resmî destinasyon rehberi", url: "https://www.montenegro.travel/en" },
   BA: { name: "Tourism BiH — destinasyon rehberi", url: "https://www.tourismbih.com/" },
   AL: { name: "Arnavutluk Ulusal Turizm Ajansı", url: "https://akt.gov.al/en/" },
+  GR: { name: "Visit Greece — resmî destinasyon rehberi", url: "https://www.visitgreece.gr/" },
+  HR: { name: "Croatia Full of Life — resmî destinasyon rehberi", url: "https://croatia.hr/en-gb" },
+  SI: { name: "I feel Slovenia — resmî destinasyon rehberi", url: "https://www.slovenia.info/en" },
 };
 
 const transportSource: Record<RegionalCode, { name: string; url: string }> = {
@@ -60,6 +63,9 @@ const transportSource: Record<RegionalCode, { name: string; url: string }> = {
   ME: { name: "ŽPCG — Karadağ trenleri", url: "https://zpcg.me/en" },
   BA: { name: "ŽFBH — Bosna-Hersek Federasyonu trenleri", url: "https://www.zfbh.ba/en/" },
   AL: { name: "Arnavutluk Ulusal Turizm Ajansı — ulaşım bilgisi", url: "https://akt.gov.al/en/" },
+  GR: { name: "Hellenic Train — tren ve canlı sefer", url: "https://www.hellenictrain.gr/en" },
+  HR: { name: "HŽPP — Hırvatistan trenleri", url: "https://www.hzpp.hr/en" },
+  SI: { name: "Slovenske železnice — Slovenya trenleri", url: "https://potniski.sz.si/en/" },
 };
 
 const budgetNote: Record<RegionalCode, string> = {
@@ -80,6 +86,9 @@ const budgetNote: Record<RegionalCode, string> = {
   ME: "Kotor Körfezi yaz konaklaması, sahil otoparkı, tekne, feribot ve Durmitor transferini ayrı yazın; ülkenin küçük görünmesi günlük ulaşımı otomatik ucuz yapmaz.",
   BA: "Nakit ağırlıklı küçük işletme, şehirler arası otobüs, milli park girişi ve son kilometre taksi/transferini ayrı hesaplayın; KM fiyatını avro etiketiyle karıştırmayın.",
   AL: "Kıyı yaz konaklaması, nakit lek, minibüs, araç sigortası ve dağ transferini ayrı fiyatlandırın; Tiran fiyatını Theth ya da Riviera geneline taşımayın.",
+  GR: "Ada uçuşu veya feribotu, bagaj, plaj hizmeti ve arkeoloji biletini ayrı yazın; Santorini ve Mykonos yaz fiyatını ana kara geneline taşımayın.",
+  HR: "Dubrovnik, Split ve ada yaz konaklaması; feribot, milli park bileti, otopark ve şehir vergisini ayrı hesaplayın; kıyı ile Zagreb fiyatını eşitlemeyin.",
+  SI: "Tren/otobüs, mağara bileti, göl teknesi, park shuttle'ı ve dağ ulaşımını ayrı hesaplayın; küçük ülke haritasını düşük günlük maliyet sanmayın.",
 };
 
 const priceFor = (index: number): "Yüksek" | "Orta" | "Ekonomik" =>

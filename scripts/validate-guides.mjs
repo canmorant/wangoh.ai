@@ -146,6 +146,21 @@ const scopes = [
     cities: ["tiran", "berat", "gjirokaster", "shkoder", "kruje", "theth", "sarande", "himare"],
     planningHeading: "Arnavutluk rotası nasıl kurulur?",
   },
+  {
+    country: "yunanistan",
+    cities: ["atina", "selanik", "santorini", "mikonos", "girit", "rodos", "korfu", "meteora"],
+    planningHeading: "Yunanistan rotası nasıl kurulur?",
+  },
+  {
+    country: "hirvatistan",
+    cities: ["zagreb", "dubrovnik", "split", "zadar", "hvar", "istria", "plitvice-golleri", "sibenik"],
+    planningHeading: "Hırvatistan rotası nasıl kurulur?",
+  },
+  {
+    country: "slovenya",
+    cities: ["ljubljana", "bled-golu", "bohinj", "piran", "postojna-ve-predjama", "soca-vadisi", "maribor", "kranjska-gora"],
+    planningHeading: "Slovenya rotası nasıl kurulur?",
+  },
 ];
 
 function assert(condition, message) {

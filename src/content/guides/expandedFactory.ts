@@ -23,7 +23,7 @@ type RelatedInput = [city: string, anchor: string, description: string];
 
 export interface ExpandedGuideProfile {
   city: string;
-  countryCode: "ES" | "TR" | "GB" | "ID" | "CN" | "NL" | "AT" | "PT" | "DE" | "MX" | "BR" | "AR" | "CA" | "CH" | "BE" | "HU" | "CZ" | "PL" | "RU" | "RS" | "ME" | "BA" | "AL";
+  countryCode: "ES" | "TR" | "GB" | "ID" | "CN" | "NL" | "AT" | "PT" | "DE" | "MX" | "BR" | "AR" | "CA" | "CH" | "BE" | "HU" | "CZ" | "PL" | "RU" | "RS" | "ME" | "BA" | "AL" | "GR" | "HR" | "SI";
   /** Bir ülkenin birden fazla saat dilimi olduğunda destinasyon bazında kullanılır. */
   timezone?: string;
   /** Başlıktaki ikinci arama niyeti; her destinasyonda farklıdır. */
@@ -491,6 +491,48 @@ const countryResearch = {
       { name: "Arnavutluk Ulusal Turizm Ajansı", url: "https://akt.gov.al/en/" },
     ],
   },
+  GR: {
+    country: "Yunanistan",
+    entry: "Yunanistan Dışişleri Bakanlığına göre umuma mahsus Türk pasaportu sahipleri kısa ziyaret için Schengen vizesine tabidir; diplomatik, hususi ve hizmet pasaportları için 180 gün içinde 90 güne kadar muafiyet uygulanır. Başvuruyu Yunanistan ana destinasyon olduğunda yalnız yetkili resmî kanal üzerinden yapın; geçerli vize sınırda otomatik giriş garantisi değildir.",
+    payments: "Avro kullanılır. Kart şehir, otel ve büyük işletmelerde yaygındır; küçük ada, pazar, otobüs, plaj ve aile tavernasında nakit gerekebilir. ATM ile kart terminalinde avroyu seçin, işletmenin kart/fiş politikasını ve servis ücretini siparişten önce sorun.",
+    language: "Yunanca ve Yunan alfabesi resmîdir. Turistik bölgelerde İngilizce yaygın olsa da ada otobüsü, küçük köy ve liman duyurusunda yer adının Yunanca yazımını çevrimdışı saklamak yararlıdır. Dinî yapılarda kıyafet, sessizlik ve fotoğraf kuralına uyun.",
+    languageLabel: "Yunanca · İngilizce turistik bölgelerde",
+    connectivity: "Atina–Selanik ve bazı ana kara hatlarında Hellenic Train, adalarda ise ayrı feribot/havayolu işletmeleri kullanılır. Rüzgâr, grev veya teknik durum feribot ve uçuşu değiştirebilir; liman adını, gemi şirketini, check-in süresini ve son yerel otobüsü resmî kaynaktan kontrol edip belgeleri çevrimdışı saklayın.",
+    budgetFrame: "Ekonomik planda merkez dışı oda, fırın/taverna, otobüs ve seçilmiş arkeoloji; orta bütçede merkezî konaklama, müze, feribot ve bir ada teknesi; rahat planda butik otel, iyi restoran ve özel transfer öne çıkar. Paskalya, temmuz–ağustos ve kruvaziyer günlerinde ada fiyatı keskin yükselir.",
+    sources: [
+      { name: "Yunanistan Dışişleri — ülkelere göre vize şartı", url: "https://www.mfa.gr/en/services/visas-for-foreigners-traveling-to-greece/countries-requiring-or-not-requiring-a-visa/" },
+      { name: "Visit Greece — resmî turizm portalı", url: "https://www.visitgreece.gr/" },
+      { name: "Hellenic Train — resmî tren bilgisi", url: "https://www.hellenictrain.gr/en" },
+    ],
+  },
+  HR: {
+    country: "Hırvatistan",
+    entry: "Hırvatistan Dışişleri Bakanlığına göre umuma mahsus Türk pasaportu sahipleri kısa ziyaret için vizeye tabidir. Diplomatik, resmî ve hususi pasaport sahipleri 90 güne kadar muaf olabilir. Hırvatistan Schengen alanındadır; başvuruyu ana destinasyon kuralıyla yalnız resmî temsilcilik veya yetkili VFS üzerinden yürütün ve kişisel pasaport durumunuzu yeniden doğrulayın.",
+    payments: "Avro kullanılır. Kart yaygındır; pazar, küçük ada, otobüs, konobe ve otoparkta nakit gerekebilir. Restoran, plaj seti, tekne ve takside fiyatın kişi/masa/saat veya kilo başı olup olmadığını netleştirin; banka ATM'si ve avro seçimi kullanın.",
+    language: "Hırvatça ve Latin alfabe resmîdir. Kıyı, Zagreb ve turistik adalarda İngilizce yaygın; kırsal otobüs ve küçük konaklamada yerel adları yazılı saklamak yararlıdır. Savaş hafızası, kimlik ve komşu ülkeler üzerine genellemeden kaçının.",
+    languageLabel: "Hırvatça · İngilizce turistik bölgelerde",
+    connectivity: "Zagreb merkezli ana kara treninde HŽPP kullanılır; Dalmaçya kıyısı ve adalarda otobüs ile feribot daha önemlidir. Ada seferi, araç yeri ve son bağlantı yazın dolabilir; HŽPP, liman işletmesi ve feribot şirketinin resmî duyurusunu aynı gün kontrol edin.",
+    budgetFrame: "Ekonomik planda pansiyon, fırın, otobüs ve ücretsiz kıyı; orta bütçede eski şehir dışı oda, feribot, müze ve park bileti; rahat planda sur içi/butik konaklama, tekne ve özel transfer öne çıkar. Dubrovnik, Hvar ve Split yazı ülke ortalamasından belirgin pahalıdır.",
+    sources: [
+      { name: "Hırvatistan Dışişleri — Türkiye vize şartları", url: "https://mvep.gov.hr/services-for-citizens/consular-informations/visas-22807/visa-requirements-overview-22879/22879?country=140" },
+      { name: "Croatia Full of Life — resmî turizm portalı", url: "https://croatia.hr/en-gb" },
+      { name: "HŽPP — resmî tren bilgisi", url: "https://www.hzpp.hr/en" },
+    ],
+  },
+  SI: {
+    country: "Slovenya",
+    entry: "Slovenya'nın Ankara Büyükelçiliğine göre Türk vatandaşlarının umuma mahsus pasaportla kısa Schengen ziyareti için C tipi vize alması gerekir; diplomatik, hususi ve hizmet pasaportu sahipleri 90 güne kadar muaftır. Başvuruyu Slovenya ana destinasyon olduğunda yalnız resmî temsilcilik veya yetkili başvuru kanalıyla yapın.",
+    payments: "Avro kullanılır. Kart şehirlerde ve turistik işletmelerde yaygın; dağ kulübesi, pazar, küçük pansiyon ve bazı otobüs/otopark noktalarında nakit gerekir. ATM ücretini okuyun, avro seçin ve konaklama şehir vergisini görünen oda fiyatına ekleyin.",
+    language: "Slovence resmî dildir; İtalyanca ve Macarca belirli bölgelerde ortak resmî statü taşır. İngilizce turizmde yaygındır; dağ rotası, durak ve konaklama adını Slovence yazımıyla saklayın. İtalyanca/Hırvatça yer adı benzerliklerini doğru ülke ve istasyonla eşleştirin.",
+    languageLabel: "Slovence · İngilizce yaygın",
+    connectivity: "Slovenske železnice Ljubljana–Maribor, Bled çevresi ve bazı kıyı bağlantılarında yararlıdır; Bohinj, Soča ve dağ köylerinde otobüs/shuttle gerekir. Park rezervasyonu, yol çalışması, son otobüs, teleferik ve dağ havasını aynı gün kontrol edin; çevrimdışı harita taşıyın.",
+    budgetFrame: "Ekonomik planda pansiyon/hostel, tren-otobüs, market/gostilna ve yürüyüş; orta bütçede merkezî oda, mağara, göl teknesi ve shuttle; rahat planda göl/dağ oteli, iyi restoran ve özel transfer öne çıkar. Bled yazı, kayak haftası ve hafta sonu spa fiyatı ortalamayı yükseltir.",
+    sources: [
+      { name: "Slovenya Ankara Büyükelçiliği — vize bilgisi", url: "https://www.gov.si/en/representations/embassy-ankara/visa-information/" },
+      { name: "I feel Slovenia — resmî turizm portalı", url: "https://www.slovenia.info/en" },
+      { name: "Slovenske železnice — resmî tren bilgisi", url: "https://potniski.sz.si/en/" },
+    ],
+  },
 } as const;
 
 const toPlaces = (items: PlaceInput[]): PlaceCard[] =>
@@ -570,6 +612,8 @@ export function makeExpandedGuide(profile: ExpandedGuideProfile): CityGuide {
             ? "Dönüştürülebilir mark · nakit önemli"
           : profile.countryCode === "AL"
             ? "Arnavut leki · nakit önemli"
+          : ["GR", "HR", "SI"].includes(profile.countryCode)
+            ? "Avro · kart + nakit"
         : profile.countryCode === "ID"
           ? "Rupi · kart + nakit"
           : profile.countryCode === "CN"
@@ -684,6 +728,10 @@ export function makeExpandedGuide(profile: ExpandedGuideProfile): CityGuide {
     ],
     volatileNote:
       "Müze ve işletme saatleri, etkinlik takvimi, ulaşım tarifeleri ve giriş ücretleri dönemsel olarak değişir. Rezervasyon gerektiren yerleri yalnız resmî kanaldan, ziyaret gününe yakın yeniden kontrol edin.",
-    reviewed: ["ID", "CN", "NL", "CH", "BE", "HU", "CZ", "PL", "RU", "RS", "ME", "BA", "AL"].includes(profile.countryCode) ? "2026-08-25" : "2026-08-12",
+    reviewed: ["GR", "HR", "SI"].includes(profile.countryCode)
+      ? "2026-08-26"
+      : ["ID", "CN", "NL", "CH", "BE", "HU", "CZ", "PL", "RU", "RS", "ME", "BA", "AL"].includes(profile.countryCode)
+        ? "2026-08-25"
+        : "2026-08-12",
   };
 }

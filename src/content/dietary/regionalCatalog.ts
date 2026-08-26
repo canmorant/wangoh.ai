@@ -157,6 +157,33 @@ const seeds: Seed[] = [
   ["AL", "Theth", "Villa Gjecaj", "Bujtina Polia", "Köy merkezi"],
   ["AL", "Sarandë", "Green Life Market", "Taverna Laberia", "Promenad / merkez"],
   ["AL", "Himarë", "To Steki", "Taverna Lefteri", "Spile"],
+
+  ["GR", "Atina", "Vegan Beat", "Mirch", "Monastiraki / merkez"],
+  ["GR", "Selanik", "Roots Vegan & Vegetarian Place", "Falafel Taste Middle East", "Merkez"],
+  ["GR", "Santorini", "Falafeland", "Jaipur Palace Santorini", "Fira"],
+  ["GR", "Mikonos", "Koukoumi Vegan Hotel", "Indian Palace", "Ano Mera / Chora"],
+  ["GR", "Girit", "To Stachi", "Namaste Indian Restaurant", "Hanya"],
+  ["GR", "Rodos", "ONO by Marouli", "Marrakech", "Rodos şehri"],
+  ["GR", "Korfu", "Bizou Vegan Café", "Tandoori Bites", "Korfu şehri"],
+  ["GR", "Meteora", "Valia Calda", "Taverna Gardenia", "Kalambaka / Kastraki"],
+
+  ["HR", "Zagreb", "Vegehop", "Ali Kebaba", "Donji Grad"],
+  ["HR", "Dubrovnik", "Urban & Veggie", "Taj Mahal", "Gruž / eski şehir"],
+  ["HR", "Split", "Pandora Greenbox", "Kantun Paulina", "Grad"],
+  ["HR", "Zadar", "The Botanist", "Harbor CookHouse", "Poluotok"],
+  ["HR", "Hvar", "Fig Hvar", "Dalmatino", "Hvar Town"],
+  ["HR", "Istria", "Tivoli", "Epulon", "Pula"],
+  ["HR", "Plitvice Gölleri", "Lička Kuća", "Restaurant Degenija", "Park çevresi"],
+  ["HR", "Šibenik", "SHE Bio Bistro", "Bava Dining", "Eski şehir"],
+
+  ["SI", "Ljubljana", "Veganika", "Abi Falafel", "Merkez / Trubarjeva"],
+  ["SI", "Bled Gölü", "Public & Vegan Kitchen", "Maharaja", "Bled merkezi"],
+  ["SI", "Bohinj", "Foksner", "Restaurant Triglav", "Ribčev Laz / Stara Fužina"],
+  ["SI", "Piran", "Mersii Gelato", "Sarajevo '84", "Piran / Koper"],
+  ["SI", "Postojna ve Predjama", "Bistro Štorja", "Restaurant Erasmus", "Postojna"],
+  ["SI", "Soča Vadisi", "Gostišče Jazbec", "Topli Val", "Kobarid"],
+  ["SI", "Maribor", "Loving Hut", "Baščaršija", "Merkez"],
+  ["SI", "Kranjska Gora", "Restaurant Lipa", "Lačni Kekec", "Kranjska Gora merkezi"],
 ];
 
 const veganPick = (name: string, area: string): DietaryRestaurant => ({
