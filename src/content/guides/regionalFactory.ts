@@ -1,7 +1,7 @@
 import { makeExpandedGuide, type ExpandedGuideProfile } from "./expandedFactory";
 import type { CityGuide } from "./types";
 
-export type RegionalCode = "AT" | "PT" | "DE" | "MX" | "BR" | "AR" | "CA" | "CH" | "BE" | "HU" | "CZ" | "PL" | "RU" | "RS" | "ME" | "BA" | "AL" | "GR" | "HR" | "SI";
+export type RegionalCode = "AT" | "PT" | "DE" | "MX" | "BR" | "AR" | "CA" | "CH" | "BE" | "HU" | "CZ" | "PL" | "RU" | "RS" | "ME" | "BA" | "AL" | "GR" | "HR" | "SI" | "NO" | "SE" | "DK" | "FI";
 type Pair = [title: string, detail: string];
 
 export interface RegionalProfile {
@@ -43,6 +43,10 @@ const officialSource: Record<RegionalCode, { name: string; url: string }> = {
   GR: { name: "Visit Greece — resmî destinasyon rehberi", url: "https://www.visitgreece.gr/" },
   HR: { name: "Croatia Full of Life — resmî destinasyon rehberi", url: "https://croatia.hr/en-gb" },
   SI: { name: "I feel Slovenia — resmî destinasyon rehberi", url: "https://www.slovenia.info/en" },
+  NO: { name: "Visit Norway — resmî destinasyon rehberi", url: "https://www.visitnorway.com/" },
+  SE: { name: "Visit Sweden — resmî destinasyon rehberi", url: "https://visitsweden.com/" },
+  DK: { name: "VisitDenmark — resmî destinasyon rehberi", url: "https://www.visitdenmark.com/" },
+  FI: { name: "Visit Finland — resmî destinasyon rehberi", url: "https://www.visitfinland.com/en/" },
 };
 
 const transportSource: Record<RegionalCode, { name: string; url: string }> = {
@@ -66,6 +70,10 @@ const transportSource: Record<RegionalCode, { name: string; url: string }> = {
   GR: { name: "Hellenic Train — tren ve canlı sefer", url: "https://www.hellenictrain.gr/en" },
   HR: { name: "HŽPP — Hırvatistan trenleri", url: "https://www.hzpp.hr/en" },
   SI: { name: "Slovenske železnice — Slovenya trenleri", url: "https://potniski.sz.si/en/" },
+  NO: { name: "Entur — Norveç toplu taşıma planlayıcısı", url: "https://entur.no/" },
+  SE: { name: "SJ — İsveç trenleri", url: "https://www.sj.se/en/" },
+  DK: { name: "DSB — Danimarka trenleri", url: "https://www.dsb.dk/en/" },
+  FI: { name: "VR — Finlandiya trenleri", url: "https://www.vr.fi/en" },
 };
 
 const budgetNote: Record<RegionalCode, string> = {
@@ -89,6 +97,10 @@ const budgetNote: Record<RegionalCode, string> = {
   GR: "Ada uçuşu veya feribotu, bagaj, plaj hizmeti ve arkeoloji biletini ayrı yazın; Santorini ve Mykonos yaz fiyatını ana kara geneline taşımayın.",
   HR: "Dubrovnik, Split ve ada yaz konaklaması; feribot, milli park bileti, otopark ve şehir vergisini ayrı hesaplayın; kıyı ile Zagreb fiyatını eşitlemeyin.",
   SI: "Tren/otobüs, mağara bileti, göl teknesi, park shuttle'ı ve dağ ulaşımını ayrı hesaplayın; küçük ülke haritasını düşük günlük maliyet sanmayın.",
+  NO: "Konaklama, uzun mesafe tren, fiyort feribotu, bagaj ve doğa turunu ayrı hesaplayın; Norveç'in yüksek fiyatlarını market öğünü ve erken rezervasyonla dengeleyin.",
+  SE: "Tren, gece treni, takımada teknesi, müze ve kuzey aktivitesini ayrı fiyatlandırın; etkinlik haftası ile Lapland sezonunda konaklamayı erken sabitleyin.",
+  DK: "Kopenhag konaklaması, şehirler arası tren, köprü/feribot ve müze ücretlerini ayrı yazın; bisiklet kiralama ve restoran servis düzenini de toplam bütçeye ekleyin.",
+  FI: "Tren veya gece treni, sauna, göl teknesi, kış ekipmanı ve Lapland turunu ayrı hesaplayın; kuzeyde son kilometre transferi günlük bütçeyi belirgin yükseltebilir.",
 };
 
 const priceFor = (index: number): "Yüksek" | "Orta" | "Ekonomik" =>

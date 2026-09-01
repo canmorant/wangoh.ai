@@ -11,13 +11,13 @@ import AdSenseScript from "@/components/AdSenseScript";
 
 import DestinationsSection from "@/components/DestinationsSection";
 
-const CinematicHero = dynamic(() => import("@/components/CinematicHero"), { ssr: false });
 const FlightAnimation = dynamic(() => import("@/components/FlightAnimation"), { ssr: false });
 const CityCards = dynamic(() => import("@/components/CityCards"), { ssr: false });
 const ClubReveal = dynamic(() => import("@/components/ClubReveal"), { ssr: false });
 const CountryWheel = dynamic(() => import("@/features/country-wheel/CountryWheel"), {
   ssr: false,
 });
+const ResponsiveHero = dynamic(() => import("@/components/ResponsiveHero"));
 
 type View = "landing" | "flying" | "cities";
 
@@ -35,7 +35,11 @@ export default function Home() {
     setClubOpen(false);
     setWheelOpen(false);
     setSelectedCountry(country);
-    setView("flying");
+    const skipHeavyFlight = window.matchMedia(
+      "(max-width: 768px), (pointer: coarse), (prefers-reduced-motion: reduce)"
+    ).matches;
+    setView(skipHeavyFlight ? "cities" : "flying");
+    if (skipHeavyFlight) window.scrollTo({ top: 0, behavior: "instant" });
   }, []);
 
   const handleFlightComplete = useCallback(() => {
@@ -115,7 +119,7 @@ export default function Home() {
       {view === "landing" && (
         <>
           <h1 className="sr-only">Hiç gitmediğin bir yere var</h1>
-          <CinematicHero />
+          <ResponsiveHero />
           <DestinationsSection onSelectCountry={flyTo} />
           <SiteFooter />
         </>

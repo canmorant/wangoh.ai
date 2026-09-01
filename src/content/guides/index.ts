@@ -66,6 +66,10 @@ import { albaniaGuides } from "./albania";
 import { greeceGuides } from "./greece";
 import { croatiaGuides } from "./croatia";
 import { sloveniaGuides } from "./slovenia";
+import { norwayGuides } from "./norway";
+import { swedenGuides } from "./sweden";
+import { denmarkGuides } from "./denmark";
+import { finlandGuides } from "./finland";
 import { nyAlesund } from "./ny-alesund";
 import { longyearbyen } from "./longyearbyen";
 
@@ -144,6 +148,10 @@ export const GUIDES: CityGuide[] = [
   ...greeceGuides,
   ...croatiaGuides,
   ...sloveniaGuides,
+  ...norwayGuides,
+  ...swedenGuides,
+  ...denmarkGuides,
+  ...finlandGuides,
 ];
 
 const byKey = new Map(GUIDES.map((g) => [`${g.countryCode}:${g.city}`, g]));

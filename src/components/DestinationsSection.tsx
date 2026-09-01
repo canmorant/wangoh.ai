@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { countries, Country, ORIGIN } from "@/data/destinations";
 import BoardingPass from "./BoardingPass";
@@ -14,6 +14,15 @@ export default function DestinationsSection({ onSelectCountry }: Props) {
   const ref = useRef<HTMLElement>(null);
   const inView = useInView(ref, { once: true, margin: "200px" });
   const [boardingCode, setBoardingCode] = useState<string | null>(null);
+  const [visibleCount, setVisibleCount] = useState(8);
+
+  useEffect(() => {
+    const wideScreen = window.matchMedia("(min-width: 769px)");
+    const update = () => setVisibleCount(wideScreen.matches ? countries.length : 8);
+    update();
+    wideScreen.addEventListener("change", update);
+    return () => wideScreen.removeEventListener("change", update);
+  }, []);
 
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
   const drift = [
@@ -80,13 +89,13 @@ export default function DestinationsSection({ onSelectCountry }: Props) {
         </header>
 
         <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-12 lg:grid-cols-3 lg:gap-x-8">
-          {countries.map((country, i) => (
+          {countries.slice(0, visibleCount).map((country, i) => (
             <motion.div
               key={country.code}
               style={{ y: drift[i % 3] }}
               initial={{ opacity: 0, y: 54, rotate: i % 2 ? -1.5 : 1.5 }}
               animate={inView ? { opacity: 1, y: 0, rotate: 0 } : {}}
-              transition={{ duration: 1.1, ease: EASE_OUT, delay: 0.2 + i * 0.09 }}
+              transition={{ duration: 1.1, ease: EASE_OUT, delay: 0.2 + Math.min(i, 7) * 0.07 }}
             >
               <BoardingPass
                 country={country}
@@ -96,6 +105,18 @@ export default function DestinationsSection({ onSelectCountry }: Props) {
             </motion.div>
           ))}
         </div>
+
+        {visibleCount < countries.length && (
+          <div className="mt-12 flex justify-center sm:mt-16">
+            <button
+              type="button"
+              onClick={() => setVisibleCount((current) => Math.min(current + 8, countries.length))}
+              className="min-h-12 rounded-full border border-white/15 bg-white/[0.07] px-7 text-[12px] font-medium tracking-[0.16em] text-white/80 uppercase transition-colors hover:border-white/30 hover:bg-white/[0.12] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+            >
+              Daha fazla ülke göster
+            </button>
+          </div>
+        )}
 
         <motion.p
           initial={{ opacity: 0 }}

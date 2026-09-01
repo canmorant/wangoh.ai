@@ -23,7 +23,7 @@ type RelatedInput = [city: string, anchor: string, description: string];
 
 export interface ExpandedGuideProfile {
   city: string;
-  countryCode: "ES" | "TR" | "GB" | "ID" | "CN" | "NL" | "AT" | "PT" | "DE" | "MX" | "BR" | "AR" | "CA" | "CH" | "BE" | "HU" | "CZ" | "PL" | "RU" | "RS" | "ME" | "BA" | "AL" | "GR" | "HR" | "SI";
+  countryCode: "ES" | "TR" | "GB" | "ID" | "CN" | "NL" | "AT" | "PT" | "DE" | "MX" | "BR" | "AR" | "CA" | "CH" | "BE" | "HU" | "CZ" | "PL" | "RU" | "RS" | "ME" | "BA" | "AL" | "GR" | "HR" | "SI" | "NO" | "SE" | "DK" | "FI";
   /** Bir ülkenin birden fazla saat dilimi olduğunda destinasyon bazında kullanılır. */
   timezone?: string;
   /** Başlıktaki ikinci arama niyeti; her destinasyonda farklıdır. */
@@ -533,6 +533,62 @@ const countryResearch = {
       { name: "Slovenske železnice — resmî tren bilgisi", url: "https://potniski.sz.si/en/" },
     ],
   },
+  NO: {
+    country: "Norveç",
+    entry: "Norveç Göçmenlik Müdürlüğüne göre umuma mahsus Türk pasaportu taşıyanların 90 güne kadar turistik ziyaret için Schengen ziyaretçi vizesi alması gerekir; özel pasaport veya oturum iznine bağlı muafiyetler kişisel belge üzerinden ayrıca kontrol edilmelidir. Başvuruyu ana destinasyon kuralına göre yalnız resmî kanal ve yetkili başvuru merkezi üzerinden yürütün.",
+    payments: "Norveç kronu kullanılır ve kart temassız ödemede neredeyse standarttır; yine de kırsal durak veya teknik aksaklık için küçük bir nakit/kart yedeği taşıyın. Terminal TL teklif ederse dinamik kur dönüşümü yerine NOK seçin. Restoranda bahşiş zorunlu değildir; olağanüstü hizmette küçük yuvarlama yeterlidir.",
+    language: "Norveççe Bokmål ve Nynorsk yazı standartları kullanılır; Sápmi'de Sámi dilleri de görünür. Turizmde İngilizce çok yaygındır. Kuzeydeki yer adlarının Norveççe ve Sámi karşılıklarını, otobüs durağı ile liman adını çevrimdışı kaydedin.",
+    languageLabel: "Norveççe · İngilizce yaygın",
+    connectivity: "Entur ülke genelindeki tren, otobüs, feribot ve bazı yerel bağlantıları birlikte aramak için ana planlayıcıdır; işletmeci bileti ve koltuk rezervasyonu ayrıca gerekebilir. Fiyort feribotu, dağ yolu, kış konvoyu ve kuzey uçuşu hava nedeniyle değişebilir; her uzak gün için çevrimdışı bilet ve yedek rota tutun.",
+    budgetFrame: "Ekonomik planda hostel/hytte, market öğünü ve toplu taşıma; orta bütçede merkez dışı oda, tren ve birkaç fiyort deneyimi; rahat planda manzaralı otel, iç hat ve rehberli doğa turu öne çıkar. Oslo ile Lofoten veya Tromsø'yu aynı günlük maliyet sanmayın; araç, köprü/feribot ve tek yön bırakma ücretini ayrıca yazın.",
+    sources: [
+      { name: "Norveç Göçmenlik Müdürlüğü — Türkiye için ziyaretçi vizesi", url: "https://udi.no/en/want-to-apply/visit-and-holiday/visitors-visa-to-norway/?c=tur" },
+      { name: "Visit Norway — resmî gezi planlama portalı", url: "https://www.visitnorway.com/plan-your-trip/getting-around/" },
+      { name: "Entur — resmî toplu taşıma planlayıcısı", url: "https://entur.no/" },
+    ],
+  },
+  SE: {
+    country: "İsveç",
+    entry: "İsveç Hükümetinin güncel listesine göre umuma mahsus Türk pasaportu vizeye tabidir; diplomatik, hizmet ve hususi pasaport sahipleri kısa ziyaretlerde muaf olabilir. İsveç ana destinasyon olduğunda Schengen başvurusunu yalnız resmî temsilcilik ve yetkili hizmet sağlayıcısı üzerinden yapın; pasaport türü ile kalış süresini başvuru öncesi yeniden doğrulayın.",
+    payments: "İsveç kronu kullanılır; ülke belirgin biçimde kart ve mobil ödeme ağırlıklıdır, bazı işletmeler nakit kabul etmez. Yedek fiziksel kart taşıyın, terminalde SEK seçin ve toplu taşıma biletini araca binmeden resmî uygulama ya da makineden alın. Bahşiş zorunlu değildir; hesapta servis yoksa iyi hizmete küçük yuvarlama yapılabilir.",
+    language: "İsveççe ana dildir; Sámi, Fince, Meänkieli, Roman dili ve Yidiş resmî azınlık dilleri arasındadır. İngilizce yaygındır. Kiruna ve Abisko çevresinde Sámi yer adlarıyla karşılaşabilirsiniz; yerli kültürü turistik dekor değil yaşayan topluluk bağlamında ele alın.",
+    languageLabel: "İsveççe · İngilizce yaygın",
+    connectivity: "SJ birçok uzun mesafe hattında ana işletmecidir ancak İsveç'te bölgesel ve özel operatörler de vardır; tek uygulamanın bütün biletleri kapsadığını varsaymayın. Stockholm takımada teknesi, Gotland feribotu ve Kiruna–Abisko gece treni ayrı rezervasyon/işletmeci gerektirebilir. Kış gecikmesi ve bakım duyurusunu seyahat günü kontrol edin.",
+    budgetFrame: "Ekonomik planda hostel, günün öğünü ve bölgesel bilet; orta bütçede merkez dışı oda, hızlı/gece treni ve müzeler; rahat planda merkez oteli, takımada teknesi ve kuzey rehberli aktivitesi öne çıkar. Stockholm ile Dalarna veya Lapland fiyatlarını eşitlemeyin; festival, Nobel haftası ve kuzey ışığı sezonu kapasiteyi hızla daraltır.",
+    sources: [
+      { name: "İsveç Hükümeti — vize gereken ülke vatandaşları", url: "https://www.government.se/government-policy/migration-and-asylum/list-of-foreign-citizens-who-require-visa-for-entry-into-sweden/" },
+      { name: "Visit Sweden — trenle ulaşım rehberi", url: "https://visitsweden.com/about-sweden/getting-around-sweden-train/" },
+      { name: "SJ — resmî tren ve sefer bilgisi", url: "https://www.sj.se/en/" },
+    ],
+  },
+  DK: {
+    country: "Danimarka",
+    entry: "Danimarka Dışişleri Bakanlığının Türkiye sayfasına göre umuma mahsus Türk pasaportu Schengen vizesine tabidir; diplomatik, hizmet ve hususi pasaport sahipleri 180 günde 90 güne kadar vizeden muaf olabilir. Danimarka ana destinasyon olduğunda başvuruyu yalnız resmî dış temsilcilik ve VFS üzerinden yürütün; Grönland ve Faroe Adaları için ayrı geçerlilik gerekebileceğini unutmayın.",
+    payments: "Danimarka kronu kullanılır; kart ve temassız ödeme çok yaygındır. Bazı küçük işletmeler yabancı karta ek ücret uygulayabilir veya yalnız yerel mobil ödeme kabul edebilir; fiyatı onaylayın ve yedek kart taşıyın. Terminalde DKK seçin. Bahşiş ve servis çoğunlukla fiyata dahildir; ayrıca sabit yüzde zorunluluğu yoktur.",
+    language: "Danca ana dildir ve İngilizce turizmde çok yaygındır. İstasyon, peron, bisiklet ve liman yönlendirmelerinde Danca adları saklamak işe yarar. Bornholm, Ribe ve küçük kasabalarda yerel telaffuz değişse de yazılı adres yeterlidir; özel mülke ve kıyı çiftliklerine izinsiz girmeyin.",
+    languageLabel: "Danca · İngilizce yaygın",
+    connectivity: "DSB ana şehirler arası ve banliyö hatlarında temel kaynaktır; Rejseplanen farklı işletmecileri birlikte gösterebilir. Kopenhag metrosu, S-tren, bölgesel tren, otobüs ve liman otobüsü aynı yolculukta birleşebilir; doğru zon ve check-in kuralını kontrol edin. Bornholm feribotu ve ada otobüsü ayrı kapasite planı ister.",
+    budgetFrame: "Ekonomik planda hostel, fırın/market ve şehir kartı karşılaştırması; orta bütçede merkez dışı oda, tren ve birkaç müze; rahat planda merkez oteli, tasarım restoranı ve ada/şato günü öne çıkar. Kopenhag fiyatını Ribe veya Aalborg'a taşımayın; bisiklet, köprü/feribot, müze ve kahvaltıyı görünen oda fiyatına ekleyin.",
+    sources: [
+      { name: "Danimarka Dışişleri — Türkiye vatandaşları için vize bilgisi", url: "https://um.dk/tyrkiet/rejse-og-ophold/rejse-til-danmark/visum-og-opholdstilladelse-til-danmark/" },
+      { name: "VisitDenmark — resmî destinasyon portalı", url: "https://www.visitdenmark.com/" },
+      { name: "DSB — resmî tren ve sefer bilgisi", url: "https://www.dsb.dk/en/" },
+    ],
+  },
+  FI: {
+    country: "Finlandiya",
+    entry: "Finlandiya'nın Türkiye'deki resmî temsilciliğine göre umuma mahsus Türk pasaportu kısa Schengen ziyareti için vizeye tabidir; diplomatik, hizmet ve hususi pasaport sahipleri vizeden muaf olabilir. Finlandiya ana destinasyon olduğunda başvuruyu yalnız resmî temsilcilik ve yetkili başvuru merkezi üzerinden yapın; kişisel pasaport ve oturum durumunu seyahatten önce yeniden kontrol edin.",
+    payments: "Avro kullanılır; kart ve temassız ödeme kentlerde, kuzey tesislerinde ve toplu taşımada yaygındır. Küçük pazar, kır kafesi veya teknik kesinti için sınırlı nakit yedeği taşıyın. Terminalde avroyu seçin. Restoranda servis genellikle fiyata dahildir; bahşiş zorunlu değildir.",
+    language: "Fince ve İsveççe resmî dillerdir; Åland İsveççe ağırlıklıdır, kuzeyde Sámi dilleri yaşar. İngilizce yaygındır. İnari ve Saariselkä çevresindeki Sámi adlarını ve doğa terimlerini doğru kullanın; kültürel deneyimde yerli topluluk tarafından işletilen hizmetleri tercih edin.",
+    languageLabel: "Fince · İsveççe · İngilizce yaygın",
+    connectivity: "VR güney şehirleri ile kuzey arasındaki tren ve gece treni omurgasını işletir; şehirlerde yerel uygulamalar, takımadalarda feribot ve kuzeyde otobüs/transfer gerekir. Rovaniemi ve Kemijärvi gece treninde yatak, araç taşıma ve istasyon seçimini ayrı kontrol edin. Kışta kar, ren geyiği trafiği ve kısa gün ışığı nedeniyle aktarmalara geniş pay bırakın.",
+    budgetFrame: "Ekonomik planda hostel, market, tren ve halka açık sauna; orta bütçede merkezî oda, gece treni ve göl/ada günü; rahat planda cam kabin, özel transfer ve rehberli kış aktivitesi öne çıkar. Helsinki ile Lapland fiyatını eşitlemeyin; termal kıyafet, bagaj, sauna, milli park transferi ve tur iptal koşulunu ayrı hesaplayın.",
+    sources: [
+      { name: "Finlandiya'nın Türkiye temsilciliği — vize gerekliliği", url: "https://finlandabroad.fi/web/tur/find-out-if-you-need-a-visa" },
+      { name: "Visit Finland — resmî destinasyon portalı", url: "https://www.visitfinland.com/en/" },
+      { name: "VR — resmî tren ve gece treni bilgisi", url: "https://www.vr.fi/en" },
+    ],
+  },
 } as const;
 
 const toPlaces = (items: PlaceInput[]): PlaceCard[] =>
@@ -614,6 +670,14 @@ export function makeExpandedGuide(profile: ExpandedGuideProfile): CityGuide {
             ? "Arnavut leki · nakit önemli"
           : ["GR", "HR", "SI"].includes(profile.countryCode)
             ? "Avro · kart + nakit"
+          : profile.countryCode === "NO"
+            ? "Norveç kronu · kart yaygın"
+          : profile.countryCode === "SE"
+            ? "İsveç kronu · kart yaygın"
+          : profile.countryCode === "DK"
+            ? "Danimarka kronu · kart yaygın"
+          : profile.countryCode === "FI"
+            ? "Avro · kart yaygın"
         : profile.countryCode === "ID"
           ? "Rupi · kart + nakit"
           : profile.countryCode === "CN"
@@ -728,7 +792,7 @@ export function makeExpandedGuide(profile: ExpandedGuideProfile): CityGuide {
     ],
     volatileNote:
       "Müze ve işletme saatleri, etkinlik takvimi, ulaşım tarifeleri ve giriş ücretleri dönemsel olarak değişir. Rezervasyon gerektiren yerleri yalnız resmî kanaldan, ziyaret gününe yakın yeniden kontrol edin.",
-    reviewed: ["GR", "HR", "SI"].includes(profile.countryCode)
+    reviewed: ["GR", "HR", "SI", "NO", "SE", "DK", "FI"].includes(profile.countryCode)
       ? "2026-08-26"
       : ["ID", "CN", "NL", "CH", "BE", "HU", "CZ", "PL", "RU", "RS", "ME", "BA", "AL"].includes(profile.countryCode)
         ? "2026-08-25"

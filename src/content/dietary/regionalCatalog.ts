@@ -184,6 +184,42 @@ const seeds: Seed[] = [
   ["SI", "Soča Vadisi", "Gostišče Jazbec", "Topli Val", "Kobarid"],
   ["SI", "Maribor", "Loving Hut", "Baščaršija", "Merkez"],
   ["SI", "Kranjska Gora", "Restaurant Lipa", "Lačni Kekec", "Kranjska Gora merkezi"],
+
+  ["NO", "Oslo", "Nordvegan", "Istanbul Kebab", "Sentrum / Grünerløkka"],
+  ["NO", "Bergen", "Dirty Vegan", "Pasha Restaurant", "Sentrum"],
+  ["NO", "Tromsø", "Frø", "Cous Restaurant", "Merkez"],
+  ["NO", "Lofoten", "Kafé Lysstøperiet", "Restaurant Gammelbua", "Henningsvær / Reine"],
+  ["NO", "Geirangerfjord", "Brasserie Posten", "Westerås Restaurant", "Geiranger"],
+  ["NO", "Flåm", "Flåm Bakery", "Ægir BrewPub", "Flåm merkezi"],
+  ["NO", "Trondheim", "Hagen", "Istanbul Döner Chef", "Midtbyen"],
+  ["NO", "Stavanger", "Bellies", "Istanbul Pizza & Kebab", "Sentrum"],
+
+  ["SE", "Stockholm", "Hermans", "Amida Kolgrill", "Södermalm / merkez"],
+  ["SE", "Göteborg", "Blackbird", "Sultan Grill", "Majorna / merkez"],
+  ["SE", "Malmö", "Farm2Table", "Laziza", "Möllevången / merkez"],
+  ["SE", "Uppsala", "Los Vegos", "Jalla", "Merkez"],
+  ["SE", "Gotland", "Ett Rum För Resande", "Ali's Kök", "Visby"],
+  ["SE", "Kiruna", "Spill", "Annis Grill", "Yeni merkez"],
+  ["SE", "Abisko", "Abisko Mountain Lodge", "Brasserie Fjällköket", "Abisko / Björkliden"],
+  ["SE", "Dalarna", "Götgårdens Café", "Dala Wärdshus", "Falun / Siljan"],
+
+  ["DK", "Kopenhag", "Bistro Verde", "Kebabistan", "Indre By / Nørrebro"],
+  ["DK", "Aarhus", "Plant Food", "Faour", "Midtbyen"],
+  ["DK", "Odense", "Café Kosmos", "Istanbul Restaurant", "Centrum"],
+  ["DK", "Aalborg", "Café Peace", "Sam's Barbeque", "Centrum"],
+  ["DK", "Ribe", "Sælhunden", "Kammerslusen", "Eski şehir"],
+  ["DK", "Skagen", "Jakobs Café", "Green's Pub", "Merkez / liman"],
+  ["DK", "Bornholm", "Den Grønne Café", "Det Røde Pakhus", "Rønne / Gudhjem"],
+  ["DK", "Roskilde", "Café Freunde", "Shawarma Grill-House", "Merkez"],
+
+  ["FI", "Helsinki", "Magu", "Istanbul Grilli", "Kamppi / merkez"],
+  ["FI", "Rovaniemi", "Pure Pizza", "Ravintola Roka", "Merkez"],
+  ["FI", "Turku", "Roots Kitchen", "Delhi Darbar", "Aura / merkez"],
+  ["FI", "Tampere", "Gopal", "Baba's Kitchen", "Keskusta"],
+  ["FI", "Porvoo", "Ani's Café", "Hanna-Maria", "Vanha Porvoo"],
+  ["FI", "Finlandiya Göller Bölgesi", "Ravintola Waahto", "Muikkuterassi", "Savonlinna"],
+  ["FI", "Inari ve Saariselkä", "Petronella", "Restaurant Aanaar", "Saariselkä / Inari"],
+  ["FI", "Åland Adaları", "Bagel Bee", "Kvarter5", "Mariehamn"],
 ];
 
 const veganPick = (name: string, area: string): DietaryRestaurant => ({
