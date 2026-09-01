@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ImageCredits from "@/components/ImageCredits";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -230,6 +231,11 @@ export default async function CityGuidePage({ params }: { params: Promise<Params
         ) : (
           <PendingGuide country={country} city={city} />
         )}
+
+        {/* Wikimedia görselleri CC BY / CC BY-SA — atıf zorunlu. */}
+        <div className="mx-auto max-w-[1100px] px-4 sm:px-8">
+          <ImageCredits images={[city.image].filter(Boolean)} />
+        </div>
       </div>
       <SiteFooter />
     </main>

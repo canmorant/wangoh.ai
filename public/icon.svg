@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <rect width="64" height="64" fill="#0a0e1a"/>
+  <defs>
+    <clipPath id="win">
+      <rect x="14.0032" y="7.68" width="35.9936" height="48.64" rx="15.117312" ry="15.117312"/>
+    </clipPath>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b3a52"/>
+      <stop offset="1" stop-color="#4a6076"/>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#win)">
+    <rect x="14.0032" y="7.68" width="35.9936" height="48.64" fill="url(#sky)"/>
+    <rect x="14.0032" y="37.8368" width="35.9936" height="18.483200000000004" fill="#1b2b22"/>
+    <circle cx="32" cy="30.054399999999998" r="4.679168000000001" fill="#c8a45e" opacity="0.9"/>
+  </g>
+  <rect x="14.0032" y="7.68" width="35.9936" height="48.64" rx="15.117312" ry="15.117312"
+        fill="none" stroke="#c8a45e" stroke-width="2.88"/>
+</svg>

@@ -11,6 +11,7 @@ import {
 } from "@/content/guides";
 import { SITE, absolute } from "@/lib/site";
 import Breadcrumbs from "@/components/guide/Breadcrumbs";
+import ImageCredits from "@/components/ImageCredits";
 import JsonLd from "@/components/guide/JsonLd";
 import { countryHubFor } from "@/content/countryHubs";
 import SiteFooter from "@/components/SiteFooter";
@@ -272,6 +273,11 @@ export default async function CountryPage({ params }: { params: Promise<Params> 
             })}
           </div>
         </section>
+
+        {/* Wikimedia görsellerinin çoğu CC BY / CC BY-SA — atıf zorunlu. */}
+        <ImageCredits
+          images={[country.image, ...country.cities.map((c) => c.image)].filter(Boolean)}
+        />
       </div>
       <SiteFooter />
     </main>

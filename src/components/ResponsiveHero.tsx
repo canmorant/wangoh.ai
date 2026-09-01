@@ -41,7 +41,7 @@ function LightweightHero({ reserveDesktopHeight }: { reserveDesktopHeight: boole
           className="absolute inset-0 scale-[1.03] bg-cover bg-[center_62%]"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?w=1200&q=72&auto=format&fit=crop')",
+              "url('/images/photo-1568515387631-8b650bbcdb90-ff3791ae.avif')",
           }}
         />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,12,22,0.5)_0%,rgba(8,12,22,0.08)_38%,rgba(6,9,16,0.82)_100%)]" />

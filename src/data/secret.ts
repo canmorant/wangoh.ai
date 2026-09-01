@@ -14,7 +14,7 @@ export const SECRET_DESTINATION: Country = {
   // Every image below was checked in-browser to be genuinely polar. Antarctic
   // imagery (penguins in particular) is deliberately excluded — wrong
   // hemisphere for a place whose copy mentions polar bears.
-  image: "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=1600&q=85&auto=format&fit=crop",
+  image: "/images/photo-1531366936337-7c912a4589a7-c0909022.avif",
   coordinates: { lat: 78.2232, lng: 15.6469 },
   iata: "LYR",
   gateway: "Longyearbyen",
@@ -28,22 +28,22 @@ export const SECRET_DESTINATION: Country = {
     {
       name: "Longyearbyen",
       description: "Dünyanın en kuzeydeki kasabası — buz dağının altında boyalı ahşap evler.",
-      image: "https://images.unsplash.com/photo-1418985991508-e47386d96a71?w=800&q=80&auto=format&fit=crop",
+      image: "/images/longyearbyen-spisshus-2022-e290d300.avif",
     },
     {
       name: "Ny-Ålesund",
       description: "Bir avuç bilim insanının neredeyse tam karanlıkta kışladığı araştırma yerleşimi.",
-      image: "https://images.unsplash.com/photo-1483347756197-71ef80e95f73?w=800&q=80&auto=format&fit=crop",
+      image: "/images/ny-lesund-town-and-mine-museum-4b8593ab.avif",
     },
     {
       name: "Pyramiden",
       description: "1998'de bırakıldığı hâliyle donmuş, terk edilmiş bir Sovyet maden kasabası.",
-      image: "https://images.unsplash.com/photo-1491002052546-bf38f186af56?w=800&q=80&auto=format&fit=crop",
+      image: "/images/pyramiden-svalbard-buiobuione-bfe4be42.avif",
     },
     {
       name: "Barentsburg",
       description: "Hâlâ yaşayan, hâlâ Rus; yalnızca tekne ya da kar motoruyla ulaşılıyor.",
-      image: "https://images.unsplash.com/photo-1548777123-e216912df7d8?w=800&q=80&auto=format&fit=crop",
+      image: "/images/barentsburg-late-winter-38f625de.avif",
     },
   ],
 };

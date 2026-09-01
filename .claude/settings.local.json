@@ -29,7 +29,8 @@
       "Bash(echo \"lint exit: $?\")",
       "Bash(echo \"exit=$?\")",
       "Bash(kill 7877)",
-      "Bash(rm -rf .next/cache)"
+      "Bash(rm -rf .next/cache)",
+      "Bash(node scripts/images-experiment.mjs)"
     ]
   }
 }

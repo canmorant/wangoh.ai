@@ -1,0 +1,53 @@
+{
+  "name": "Wangoh — Gezi Rehberleri",
+  "short_name": "Wangoh",
+  "description": "36 ülke, 329 şehir için özgün Türkçe gezi rehberleri. İndirdiğin rehberler çevrimdışı da açılır.",
+  "lang": "tr",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0a0e1a",
+  "theme_color": "#0a0e1a",
+  "categories": ["travel", "navigation", "lifestyle"],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Ülke çarkı",
+      "short_name": "Çark",
+      "description": "Rastgele bir ülke seç",
+      "url": "/?carki=ac"
+    },
+    {
+      "name": "Testler",
+      "short_name": "Testler",
+      "description": "Seyahat testleri ve bayrak oyunu",
+      "url": "/tests"
+    }
+  ]
+}

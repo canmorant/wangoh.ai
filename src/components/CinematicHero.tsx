@@ -38,7 +38,7 @@ import {
  * avoiding the decode and transfer cost of the previous 3200px plate.
  */
 const PLATE =
-  "https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?w=2400&q=82&auto=format&fit=crop";
+  "/images/photo-1568515387631-8b650bbcdb90-c9f1da85.avif";
 
 function measure(): Dims {
   // Floor the viewport: a hidden iframe, a display:none ancestor, or certain
