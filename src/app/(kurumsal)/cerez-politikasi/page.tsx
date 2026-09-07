@@ -22,10 +22,9 @@ export default function CookiePolicyPage() {
       summary="Bu politika, wangoh.com üzerinde kullanılan çerezleri ve çerez benzeri tarayıcı depolama teknolojilerini; amaç, süre ve kontrol seçenekleriyle birlikte açıklar."
     >
       <LegalCallout>
-        Şu anda Wangoh kendi analiz veya pazarlama çerezini yerleştirmez. Bayrak oyunu
-        ilerlemesi yalnızca cihazınızdaki localStorage alanında tutulur. Google AdSense
-        etkinleştirildiğinde reklam/izin teknolojileri bu metinde açıklanan koşullarla devreye
-        girebilir.
+        Wangoh&rsquo;un anonim ziyaretçi ölçümü çerez kullanmaz. Bayrak oyunu ilerlemesi yalnızca
+        cihazınızdaki localStorage alanında tutulur. Google AdSense etkinleştirildiğinde
+        reklam/izin teknolojileri bu metinde açıklanan koşullarla devreye girebilir.
       </LegalCallout>
 
       <LegalSection title="1. Çerez ve benzer teknoloji nedir?">
@@ -64,7 +63,16 @@ export default function CookiePolicyPage() {
         </p>
       </LegalSection>
 
-      <LegalSection title="3. Barındırma ve güvenlik günlükleri">
+      <LegalSection title="3. Anonim ziyaretçi ölçümü">
+        <p>
+          Vercel Web Analytics; görüntülenen sayfaları, yönlendiren kaynağı, yaklaşık ülkeyi,
+          cihazı, işletim sistemini ve tarayıcı türünü toplu istatistikler hâlinde ölçer. Bu
+          özellik üçüncü taraf çerezi kullanmaz, farklı sitelerde izleme yapmaz ve Wangoh&rsquo;a
+          ziyaretçiyi doğrudan tanımlayan bir profil sunmaz.
+        </p>
+      </LegalSection>
+
+      <LegalSection title="4. Barındırma ve güvenlik günlükleri">
         <p>
           Vercel gibi barındırma/CDN sağlayıcıları, sitenin güvenliği ve çalışması için IP
           adresi, istek zamanı, istenen URL ve tarayıcı bilgisi gibi teknik günlükleri
@@ -74,7 +82,7 @@ export default function CookiePolicyPage() {
         </p>
       </LegalSection>
 
-      <LegalSection title="4. Google AdSense etkinleştirildiğinde">
+      <LegalSection title="5. Google AdSense etkinleştirildiğinde">
         <p>
           Wangoh reklam yayınlamaya başladığında Google ve yetkili reklam teknolojisi
           sağlayıcıları; reklam sunmak, sıklığı sınırlamak, dolandırıcılığı önlemek, reklam
@@ -109,7 +117,7 @@ export default function CookiePolicyPage() {
         </p>
       </LegalSection>
 
-      <LegalSection title="5. Hukuki dayanak ve tercih yönetimi">
+      <LegalSection title="6. Hukuki dayanak ve tercih yönetimi">
         <p>
           Siteyi güvenli biçimde sunmak veya açıkça talep ettiğiniz bir özelliği çalıştırmak
           için kesinlikle gerekli teknolojiler, uygulanabilir mevzuattaki açık rıza dışındaki
@@ -124,7 +132,7 @@ export default function CookiePolicyPage() {
         </p>
       </LegalSection>
 
-      <LegalSection title="6. Tarayıcıdan silme ve engelleme">
+      <LegalSection title="7. Tarayıcıdan silme ve engelleme">
         <p>
           Tarayıcı ayarlarından çerezleri ve site verilerini görüntüleyebilir, engelleyebilir
           veya silebilirsiniz. Bayrak oyunu ilerlemesini kaldırmak için `wangoh.com` site
@@ -155,7 +163,7 @@ export default function CookiePolicyPage() {
         </ul>
       </LegalSection>
 
-      <LegalSection title="7. Değişiklikler ve iletişim">
+      <LegalSection title="8. Değişiklikler ve iletişim">
         <p>
           Yeni bir analiz, reklam veya tercih teknolojisi eklendiğinde bu tablo ve izin
           mekanizması güncellenir. Sorularınız için <a href="mailto:info@wangoh.com">info@wangoh.com</a>{" "}
@@ -165,4 +173,3 @@ export default function CookiePolicyPage() {
     </LegalPage>
   );
 }
-

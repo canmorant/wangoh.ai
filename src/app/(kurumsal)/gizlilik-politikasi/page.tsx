@@ -51,6 +51,12 @@ export default function PrivacyPage() {
             istenen sayfa, tarayıcı/cihaz bilgisi, hata ve güvenlik sinyalleri.
           </li>
           <li>
+            <strong>Anonim kullanım istatistikleri:</strong> Ziyaret edilen sayfa, yönlendiren
+            kaynak, yaklaşık ülke, cihaz, işletim sistemi ve tarayıcı türü gibi toplu bilgiler
+            Vercel Web Analytics ile ölçülebilir. Bu ölçüm çerez kullanmaz ve raporlarda sizi
+            doğrudan tanımlayan bir kullanıcı profili oluşturmaz.
+          </li>
+          <li>
             <strong>Cihaz içi oyun verisi:</strong> Bayrak oyunundaki puan, seviye, seri ve
             öğrenilen bayrak bilgileri yalnızca tarayıcınızdaki localStorage alanında tutulur.
             Bu kayıt Wangoh sunucularına gönderilmez.
@@ -71,6 +77,7 @@ export default function PrivacyPage() {
         <ul>
           <li>İletişim taleplerini yanıtlamak ve editoryal düzeltmeleri değerlendirmek,</li>
           <li>Siteyi güvenli, hızlı ve erişilebilir biçimde sunmak; hataları gidermek,</li>
+          <li>Hangi rehberlerin faydalı bulunduğunu toplu istatistiklerle anlamak,</li>
           <li>Kötüye kullanım, yetkisiz erişim ve güvenlik olaylarını önlemek,</li>
           <li>Hukuki yükümlülükleri yerine getirmek ve hakları tesis, kullanma veya korumak,</li>
           <li>Açık tercih/izin bulunması hâlinde reklam sunmak ve izin kayıtlarını yönetmek.</li>
@@ -182,4 +189,3 @@ export default function PrivacyPage() {
     </LegalPage>
   );
 }
-
