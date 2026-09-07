@@ -607,13 +607,7 @@ const toRelated = (items: RelatedInput[]): RelatedGuide[] =>
 
 export function makeExpandedGuide(profile: ExpandedGuideProfile): CityGuide {
   const shared = countryResearch[profile.countryCode];
-  const titleSeed = [...profile.city].reduce((sum, character) => sum + (character.codePointAt(0) ?? 0), 0);
-  const seoTitles = [
-    `${profile.city} Gezi Rehberi: ${profile.searchFocus}`,
-    `${profile.city} Rehberi — ${profile.searchFocus}`,
-    `${profile.city}: ${profile.searchFocus} Gezi Rehberi`,
-  ];
-  const seoTitle = seoTitles[titleSeed % seoTitles.length];
+  const seoTitle = `${profile.city} Gezi Rehberi: ${profile.searchFocus}`;
   const metaLead = `${profile.city} gezi rehberi: ${profile.lede}`.replace(/\s+/g, " ").trim();
   const seoDescription =
     metaLead.length <= 158

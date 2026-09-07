@@ -120,11 +120,11 @@ export default async function CityGuidePage({ params }: { params: Promise<Params
               headline: guide.h1,
               description: guide.seoDescription,
               inLanguage: "tr-TR",
-              image: city.image || undefined,
+              image: city.image ? new URL(city.image, SITE.url).href : undefined,
               dateModified: guide.reviewed,
               mainEntityOfPage: { "@type": "WebPage", "@id": absolute(path) },
               publisher: { "@type": "Organization", name: SITE.name },
-              author: { "@type": "Organization", name: SITE.name },
+              author: { "@type": "Organization", name: SITE.name, url: absolute("/hakkimizda") },
               about: { "@type": "Place", name: `${city.name}, ${country.name}` },
             }}
           />
@@ -135,7 +135,7 @@ export default async function CityGuidePage({ params }: { params: Promise<Params
               name: `${city.name}, ${country.name}`,
               description: guide.seoDescription,
               url: absolute(path),
-              image: city.image || undefined,
+              image: city.image ? new URL(city.image, SITE.url).href : undefined,
               containedInPlace: { "@type": "Country", name: country.name },
             }}
           />

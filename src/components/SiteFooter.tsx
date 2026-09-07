@@ -2,6 +2,7 @@ import Link from "next/link";
 import { SITE } from "@/lib/site";
 
 const corporateLinks = [
+  { href: "/gezi-rehberleri", label: "Tüm gezi rehberleri" },
   { href: "/hakkimizda", label: "Hakkımızda" },
   { href: "/iletisim", label: "İletişim" },
 ] as const;

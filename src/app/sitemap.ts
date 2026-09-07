@@ -4,27 +4,35 @@ import { countrySlug, citySlug, guideFor } from "@/content/guides";
 import { absolute } from "@/lib/site";
 
 /**
+ * Statik export'ta (Capacitor uygulama derlemesi) bu metadata route'ları
+ * derleme anında üretilmek zorunda; aksi hâlde Next "force-static
+ * yapılandırılmamış" diye derlemeyi durduruyor. İçerik zaten tamamen
+ * statik veriden geliyor, dolayısıyla bir şey kaybetmiyoruz.
+ */
+export const dynamic = "force-static";
+
+
+/**
  * Yalnızca gerçekten içeriği olan sayfalar haritaya girer. Rehberi henüz
  * yazılmamış şehirler `noindex` olduğu için buraya da alınmıyor — ince içeriği
  * dizine göndermek sitenin tamamının değerlendirmesini düşürür.
  */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
 
   const staticPages: MetadataRoute.Sitemap = [
-    { url: absolute("/"), lastModified: now, priority: 1 },
-    { url: absolute("/tests"), lastModified: now, priority: 0.5 },
-    { url: absolute("/flags"), lastModified: now, priority: 0.5 },
-    { url: absolute("/hakkimizda"), lastModified: now, priority: 0.4 },
-    { url: absolute("/iletisim"), lastModified: now, priority: 0.4 },
-    { url: absolute("/gizlilik-politikasi"), lastModified: now, priority: 0.2 },
-    { url: absolute("/cerez-politikasi"), lastModified: now, priority: 0.2 },
-    { url: absolute("/kullanim-kosullari"), lastModified: now, priority: 0.2 },
+    { url: absolute("/"), priority: 1 },
+    { url: absolute("/gezi-rehberleri"), priority: 0.9 },
+    { url: absolute("/tests"), priority: 0.5 },
+    { url: absolute("/flags"), priority: 0.5 },
+    { url: absolute("/hakkimizda"), priority: 0.4 },
+    { url: absolute("/iletisim"), priority: 0.4 },
+    { url: absolute("/gizlilik-politikasi"), priority: 0.2 },
+    { url: absolute("/cerez-politikasi"), priority: 0.2 },
+    { url: absolute("/kullanim-kosullari"), priority: 0.2 },
   ];
 
   const countryPages: MetadataRoute.Sitemap = countries.map((c) => ({
     url: absolute(`/${countrySlug(c)}`),
-    lastModified: now,
     priority: 0.8,
   }));
 

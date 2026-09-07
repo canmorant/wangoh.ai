@@ -9,10 +9,11 @@ import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
-  title: "Wangoh — Hiç Gitmediğin Bir Yere Var",
+  title: "Wangoh | Şehir Gezi Rehberleri ve Seyahat Rotaları",
   description:
-    "Dünyanın en güzel şehirlerine açılan bir cam kenarı. Unutulmaz rotalar, büyüleyici duraklar, kesintisiz tek bir manzara.",
-  keywords: ["seyahat", "keşif", "uçuş", "rotalar", "wangoh"],
+    "New York, Madrid, Tokyo ve dünyanın şehirleri için Türkçe gezi rehberleri. Gezilecek yerler, konaklama, ulaşım, yemek ve gün gün seyahat rotaları.",
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large" } },
+  verification: { google: process.env.GOOGLE_SITE_VERIFICATION },
   manifest: "/manifest.webmanifest",
   applicationName: "Wangoh",
   appleWebApp: {
