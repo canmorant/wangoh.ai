@@ -3,3 +3,14 @@ node_modules/
 .env*
 !.env.example
 .DS_Store
+
+# Capacitor / mobil uygulama
+# out/ derleme çıktısı; native projelerdeki public/ kopyaları `cap sync` ile
+# her seferinde out/'tan yeniden üretiliyor. Native proje iskeletleri (ios/,
+# android/) kaynak sayılır ve commit'lenir.
+out/
+ios/App/App/public/
+ios/App/App/capacitor.config.json
+android/app/src/main/assets/public/
+android/app/src/main/assets/capacitor.config.json
+android/app/src/main/assets/capacitor.plugins.json
