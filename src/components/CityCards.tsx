@@ -4,18 +4,26 @@ import { useRef } from "react";
 import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 import type { Country, City } from "@/data/destinations";
-import { citySlug, countrySlug, guideFor } from "@/content/guides";
-import { countryHubFor } from "@/content/countryHubs";
+// Yalnızca tip — değer import edilirse 331 rehberin tamamı (~1.8 MB) bu
+// bileşenin parçasına geri sızar. Veri ana sayfadan prop olarak geliyor.
+import type { CityCardData } from "@/content/cityCardData";
+import { slugify } from "@/lib/slug";
 
 interface CityCardsProps {
   country: Country;
+  data: CityCardData;
   onBack: () => void;
 }
 
-export default function CityCards({ country, onBack }: CityCardsProps) {
+const countryPath = (country: Country) => `/${slugify(country.name)}`;
+const cityPath = (country: Country, city: City) =>
+  `/${slugify(country.name)}/${slugify(city.name)}`;
+
+export default function CityCards({ country, data, onBack }: CityCardsProps) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
-  const hub = countryHubFor(country.code);
+  const hub = data.hubs[country.code];
+  const missing = new Set(data.missingGuides);
 
   return (
     <motion.section
@@ -72,10 +80,10 @@ export default function CityCards({ country, onBack }: CityCardsProps) {
                   {country.name} hakkında kısa bilgiler
                 </h2>
                 <p className="mt-5 max-w-[70ch] text-[15px] leading-[1.8] text-white/60">
-                  {hub.cityGridIntro}
+                  {hub.intro}
                 </p>
                 <Link
-                  href={`/${countrySlug(country)}`}
+                  href={countryPath(country)}
                   className="mt-6 inline-flex items-center gap-2 text-[11px] tracking-[0.16em] text-[var(--gold)] uppercase transition-colors hover:text-white"
                 >
                   Ayrıntılı ülke rehberini oku
@@ -126,7 +134,7 @@ export default function CityCards({ country, onBack }: CityCardsProps) {
           <div className="mb-8">
             <p className="text-[10px] tracking-[0.28em] text-white/35 uppercase">Şehir rehberleri</p>
             <h2 className="font-display mt-3 text-[clamp(1.7rem,3.4vw,2.35rem)] text-white">
-              {hub?.citiesHeading ?? `${country.name}'da gezilecek şehirler`}
+              {hub?.heading ?? `${country.name}'da gezilecek şehirler`}
             </h2>
             <p className="mt-3 text-[13.5px] leading-relaxed text-white/45">
               {country.cities.length} özgün rota arasından sana en uygun şehri seç.
@@ -142,7 +150,11 @@ export default function CityCards({ country, onBack }: CityCardsProps) {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: i * 0.08 }}
             >
-              <CityCard city={city} country={country} />
+              <CityCard
+                city={city}
+                country={country}
+                ready={!missing.has(`${country.code}:${city.name}`)}
+              />
             </motion.div>
           ))}
         </div>
@@ -160,11 +172,10 @@ function OverviewFact({ label, value }: { label: string; value: string }) {
   );
 }
 
-function CityCard({ city, country }: { city: City; country: Country }) {
-  const ready = !!guideFor(country.code, city.name);
+function CityCard({ city, country, ready }: { city: City; country: Country; ready: boolean }) {
   return (
     <Link
-      href={`/${countrySlug(country)}/${citySlug(city)}`}
+      href={cityPath(country, city)}
       className="group relative block h-[280px] cursor-pointer overflow-hidden rounded-2xl transition-transform duration-500 hover:scale-[1.03] hover:shadow-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 sm:h-[320px]"
       aria-label={`${city.name} gezi rehberini aç`}
     >

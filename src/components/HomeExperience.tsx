@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 import { countries, type Country } from "@/data/destinations";
 import { SECRET_DESTINATION } from "@/data/secret";
 import { slugify } from "@/lib/slug";
+import type { CityCardData } from "@/content/cityCardData";
 import { useScrollShake } from "@/hooks/useScrollShake";
 import FloatingNav from "@/components/FloatingNav";
 import SecretRoute from "@/components/SecretRoute";
@@ -45,7 +46,13 @@ const countryAtPath = (pathname: string): Country | null => {
   return slug ? (ROUTABLE.find((c) => slugify(c.name) === slug) ?? null) : null;
 };
 
-export default function HomeExperience({ guideLinks }: { guideLinks: ReactNode }) {
+export default function HomeExperience({
+  guideLinks,
+  cityCardData,
+}: {
+  guideLinks: ReactNode;
+  cityCardData: CityCardData;
+}) {
   const [view, setView] = useState<View>("landing");
   const [selectedCountry, setSelectedCountry] = useState<Country | null>(null);
   const [secretOpen, setSecretOpen] = useState(false);
@@ -178,7 +185,7 @@ export default function HomeExperience({ guideLinks }: { guideLinks: ReactNode }
 
       {view === "cities" && selectedCountry && (
         <>
-          <CityCards country={selectedCountry} onBack={handleBack} />
+          <CityCards country={selectedCountry} data={cityCardData} onBack={handleBack} />
           <SiteFooter />
         </>
       )}
