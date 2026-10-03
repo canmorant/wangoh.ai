@@ -1,10 +1,13 @@
 "use client";
 
-import { useEffect, useState, useRef, useMemo } from "react";
+import { useEffect, useState, useRef, useMemo, type FormEvent } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLocale, useTranslations } from "next-intl";
 import { countryName } from "@/lib/countryNames";
-import { Country, ISTANBUL_COORDINATES } from "@/data/destinations";
+import type { Country } from "@/data/destinations";
+import { DEFAULT_ORIGIN_ID, TURKEY_ORIGINS, WORLD_ORIGINS, type OriginCity } from "@/data/origins";
+import { useFlightOrigin } from "@/hooks/useFlightOrigin";
+import { useContentText } from "@/components/ContentText";
 import { geoNaturalEarth1, geoPath, geoInterpolate } from "d3-geo";
 import * as topojson from "topojson-client";
 import type { Topology } from "topojson-specification";
@@ -22,11 +25,40 @@ export default function FlightAnimation({ country, onComplete }: FlightAnimation
   const motionQuality = useAdaptiveMotionQuality();
   const t = useTranslations("Flight");
   const locale = useLocale();
+  const tx = useContentText();
   const name = countryName(country.code, locale, country.name);
   const [progress, setProgress] = useState(0);
   const [phase, setPhase] = useState<"intro" | "flying" | "arriving">("intro");
   const [worldData, setWorldData] = useState<string[]>([]);
   const svgRef = useRef<SVGSVGElement>(null);
+
+  // Kalkış: ziyaretçinin konumu ya da seçtiği şehir (dil değil). Konum
+  // alınamadıysa uçuş başlamadan şehir sorulur; "Değiştir" ile her zaman
+  // değiştirilebilir, seçim bu cihazda hatırlanır.
+  const { origin, status, choose } = useFlightOrigin();
+  const [picking, setPicking] = useState(false);
+  const [selected, setSelected] = useState(DEFAULT_ORIGIN_ID);
+  const [run, setRun] = useState(0);
+  const choosing = status === "unknown" || picking;
+  const ready = origin !== null && !choosing;
+  const originLabel = origin?.name ? tx(origin.name) : t("yourLocation");
+
+  const sortCities = (cities: OriginCity[]) =>
+    [...cities].sort((a, b) => tx(a.name).localeCompare(tx(b.name), locale));
+
+  const openPicker = () => {
+    setSelected(origin?.id ?? DEFAULT_ORIGIN_ID);
+    setPicking(true);
+  };
+
+  const startFrom = (event: FormEvent) => {
+    event.preventDefault();
+    choose(selected);
+    setPicking(false);
+    setProgress(0);
+    setPhase("intro");
+    setRun((n) => n + 1);
+  };
 
   // D3 projection
   const projection = useMemo(() => {
@@ -38,16 +70,20 @@ export default function FlightAnimation({ country, onComplete }: FlightAnimation
   const pathGenerator = useMemo(() => geoPath().projection(projection), [projection]);
 
   // Project coordinates
-  const istanbulPos = projection([ISTANBUL_COORDINATES.lng, ISTANBUL_COORDINATES.lat]) || [0, 0];
+  const originLat = origin?.lat ?? null;
+  const originLng = origin?.lng ?? null;
+  const originPos = originLat !== null && originLng !== null ? projection([originLng, originLat]) : null;
   const destPos = projection([country.coordinates.lng, country.coordinates.lat]) || [0, 0];
 
-  // Great circle interpolator for curved flight path
+  // Great circle interpolator for curved flight path. Kalkış henüz belli
+  // değilken yol çizilmiyor; uçak hedefte bekliyormuş gibi davranıyor.
   const interpolator = useMemo(() => {
-    return geoInterpolate(
-      [ISTANBUL_COORDINATES.lng, ISTANBUL_COORDINATES.lat],
-      [country.coordinates.lng, country.coordinates.lat]
-    );
-  }, [country.coordinates.lat, country.coordinates.lng]);
+    if (originLat === null || originLng === null) {
+      const dest: [number, number] = [country.coordinates.lng, country.coordinates.lat];
+      return () => dest;
+    }
+    return geoInterpolate([originLng, originLat], [country.coordinates.lng, country.coordinates.lat]);
+  }, [originLat, originLng, country.coordinates.lat, country.coordinates.lng]);
 
   // Generate flight path points along the great circle
   const flightPathD = useMemo(() => {
@@ -84,8 +120,9 @@ export default function FlightAnimation({ country, onComplete }: FlightAnimation
       .catch(() => {});
   }, [pathGenerator]);
 
-  // Animation timers
+  // Animation timers — kalkış belli olunca ve şehir seçilmiyorken çalışır.
   useEffect(() => {
+    if (!ready) return;
     const timer1 = setTimeout(() => setPhase("flying"), 800);
     let interval: NodeJS.Timeout;
     const timer2 = setTimeout(() => {
@@ -106,7 +143,7 @@ export default function FlightAnimation({ country, onComplete }: FlightAnimation
       clearTimeout(timer2);
       clearInterval(interval);
     };
-  }, [motionQuality]);
+  }, [motionQuality, ready, run]);
 
   useEffect(() => {
     if (progress >= 1) {
@@ -198,7 +235,7 @@ export default function FlightAnimation({ country, onComplete }: FlightAnimation
 
             {/* Full flight path (faint) */}
             <path
-              d={flightPathD}
+              d={originPos ? flightPathD : ""}
               fill="none"
               stroke="rgba(200,164,94,0.12)"
               strokeWidth="1"
@@ -214,13 +251,17 @@ export default function FlightAnimation({ country, onComplete }: FlightAnimation
               filter="url(#glow)"
             />
 
-            {/* Istanbul marker */}
-            <circle cx={istanbulPos[0]} cy={istanbulPos[1]} r="5" fill="rgba(200,164,94,0.9)" filter="url(#markerGlow)" />
-            <circle cx={istanbulPos[0]} cy={istanbulPos[1]} r="10" fill="none" stroke="rgba(200,164,94,0.4)" strokeWidth="1">
-              <animate attributeName="r" values="8;14;8" dur="2s" repeatCount="indefinite" />
-              <animate attributeName="opacity" values="0.6;0.1;0.6" dur="2s" repeatCount="indefinite" />
-            </circle>
-            <text x={istanbulPos[0]} y={istanbulPos[1] - 14} textAnchor="middle" fill="white" fontSize="11" fontFamily="sans-serif" fontWeight="300" opacity="0.9">{t("origin")}</text>
+            {/* Origin marker */}
+            {originPos && (
+              <>
+                <circle cx={originPos[0]} cy={originPos[1]} r="5" fill="rgba(200,164,94,0.9)" filter="url(#markerGlow)" />
+                <circle cx={originPos[0]} cy={originPos[1]} r="10" fill="none" stroke="rgba(200,164,94,0.4)" strokeWidth="1">
+                  <animate attributeName="r" values="8;14;8" dur="2s" repeatCount="indefinite" />
+                  <animate attributeName="opacity" values="0.6;0.1;0.6" dur="2s" repeatCount="indefinite" />
+                </circle>
+                <text x={originPos[0]} y={originPos[1] - 14} textAnchor="middle" fill="white" fontSize="11" fontFamily="sans-serif" fontWeight="300" opacity="0.9">{originLabel}</text>
+              </>
+            )}
 
             {/* Destination marker */}
             <circle cx={destPos[0]} cy={destPos[1]} r="5" fill={progress > 0.9 ? "rgba(200,164,94,0.9)" : "rgba(200,164,94,0.4)"} filter={progress > 0.9 ? "url(#markerGlow)" : undefined} />
@@ -231,7 +272,7 @@ export default function FlightAnimation({ country, onComplete }: FlightAnimation
             <text x={destPos[0]} y={destPos[1] - 14} textAnchor="middle" fill="white" fontSize="11" fontFamily="sans-serif" fontWeight="300" opacity="0.9">{name}</text>
 
             {/* Airplane */}
-            {progress < 1 && progress > 0 && (
+            {originPos && progress < 1 && progress > 0 && (
               <g transform={`translate(${planePos[0]}, ${planePos[1]}) rotate(${angle})`}>
                 <polygon points="-8,0 -4,-3 10,0 -4,3" fill="white" />
                 <polygon points="-3,-2.5 -3,-7 1,-1.5" fill="white" opacity="0.7" />
@@ -269,7 +310,82 @@ export default function FlightAnimation({ country, onComplete }: FlightAnimation
           <p className="mt-2 text-white/30 text-xs tracking-widest uppercase">
             {Math.round(progress * 100)}%
           </p>
+
+          {origin && !choosing && (
+            <p className="mt-4 text-[12px] text-white/45">
+              {t("from", { city: originLabel })}
+              <span aria-hidden className="mx-2 text-white/20">·</span>
+              <button
+                type="button"
+                onClick={openPicker}
+                aria-label={t("changeLabel")}
+                className="text-[var(--gold)]/80 underline-offset-4 transition-colors hover:text-[var(--gold)] hover:underline"
+              >
+                {t("change")}
+              </button>
+            </p>
+          )}
         </motion.div>
+
+        {choosing && (
+          <div className="absolute inset-0 z-10 flex items-center justify-center bg-[#070d1a]/75 px-4 backdrop-blur-sm">
+            <form
+              onSubmit={startFrom}
+              className="w-full max-w-sm rounded-2xl border border-white/10 bg-[#0d1626]/95 p-6 shadow-2xl"
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="origin-title"
+            >
+              <p id="origin-title" className="font-display text-2xl text-white">
+                {t("chooseTitle")}
+              </p>
+              <p className="mt-2 text-[13px] leading-relaxed text-white/55">
+                {status === "unknown" ? t("chooseHint") : t("changeHint")}
+              </p>
+              <label className="mt-5 block">
+                <span className="text-[10px] tracking-[0.22em] text-white/40 uppercase">{t("cityLabel")}</span>
+                <select
+                  autoFocus
+                  value={selected}
+                  onChange={(e) => setSelected(e.target.value)}
+                  className="mt-2 w-full rounded-xl border border-white/15 bg-[#070d1a] px-3 py-3 text-[15px] text-white focus:border-[var(--gold)]/60 focus:outline-none"
+                >
+                  <optgroup label={t("turkey")}>
+                    {sortCities(TURKEY_ORIGINS).map((city) => (
+                      <option key={city.id} value={city.id}>
+                        {tx(city.name)}
+                      </option>
+                    ))}
+                  </optgroup>
+                  <optgroup label={t("world")}>
+                    {sortCities(WORLD_ORIGINS).map((city) => (
+                      <option key={city.id} value={city.id}>
+                        {tx(city.name)}
+                      </option>
+                    ))}
+                  </optgroup>
+                </select>
+              </label>
+              <div className="mt-6 flex items-center justify-end gap-3">
+                {picking && origin && (
+                  <button
+                    type="button"
+                    onClick={() => setPicking(false)}
+                    className="rounded-full px-4 py-2.5 text-[12px] tracking-[0.12em] text-white/55 uppercase transition-colors hover:text-white"
+                  >
+                    {t("cancel")}
+                  </button>
+                )}
+                <button
+                  type="submit"
+                  className="rounded-full bg-white px-5 py-2.5 text-[12px] font-medium tracking-[0.12em] text-black uppercase transition-transform hover:scale-[1.03]"
+                >
+                  {t("start")}
+                </button>
+              </div>
+            </form>
+          </div>
+        )}
       </motion.div>
     </AnimatePresence>
   );

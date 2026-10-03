@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import TravelTest from "@/components/TravelTest";
 import SiteFooter from "@/components/SiteFooter";
+import SiteHeader from "@/components/SiteHeader";
 import { resolveLocale } from "@/i18n/server";
 import { translatedAlternates } from "@/i18n/seo";
 import { destinationDictionary } from "@/content/localized";
@@ -25,6 +26,7 @@ export default async function TestsPage({ params }: Props) {
   const locale = await resolveLocale(params);
   return (
     <>
+      <SiteHeader locale={locale} />
       <ClientMessages namespaces={CLIENT_NAMESPACES.tests}>
         <ContentTextProvider dictionary={destinationDictionary(locale)}>
           <TravelTest />

@@ -10,6 +10,7 @@ import { getPathname } from "@/i18n/navigation";
 import { routing, type AppLocale } from "@/i18n/routing";
 import type { CityCardData } from "@/content/cityCardData";
 import { useScrollShake } from "@/hooks/useScrollShake";
+import { detectOrigin } from "@/hooks/useFlightOrigin";
 import FloatingNav from "@/components/FloatingNav";
 import SecretRoute from "@/components/SecretRoute";
 import SiteFooter from "@/components/SiteFooter";
@@ -109,6 +110,18 @@ export default function HomeExperience({
     if (window.location.pathname !== home) window.history.pushState(null, "", home);
   }, [locale]);
 
+  // Uçuşun kalkış noktası (yaklaşık konum) ziyaretçi bir ülke seçmeden,
+  // sayfa boştayken sorulur; animasyon başladığında hazır olur. Ağır uçuş
+  // animasyonunu görmeyen cihazlarda (mobil, azaltılmış hareket) sorulmaz.
+  useEffect(() => {
+    const flies = !window.matchMedia(
+      "(max-width: 768px), (pointer: coarse), (prefers-reduced-motion: reduce)"
+    ).matches;
+    if (!flies) return;
+    const timer = window.setTimeout(() => void detectOrigin(), 1500);
+    return () => window.clearTimeout(timer);
+  }, []);
+
   // Tarayıcının geri/ileri tuşları: adres neyse onu göster.
   useEffect(() => {
     const onPopState = () => {
@@ -140,17 +153,22 @@ export default function HomeExperience({
     setClubOpen(true);
   }, []);
 
-  // Deep link from the travel test: /?fly=JP
+  // Deep links: /?fly=JP from the travel test, /?open=club|wheel from the
+  // menu on the other pages (those layers only exist on the home page).
   useEffect(() => {
-    const code = new URLSearchParams(window.location.search).get("fly");
-    if (!code) return;
-    const match = countries.find((c) => c.code === code);
-    const timer = match ? window.setTimeout(() => flyTo(match), 0) : null;
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get("fly");
+    const open = params.get("open");
+    if (!code && !open) return;
+    const match = code ? countries.find((c) => c.code === code) : undefined;
+    const timer = window.setTimeout(() => {
+      if (match) flyTo(match);
+      else if (open === "club") openClubReveal();
+      else if (open === "wheel") openWheel();
+    }, 0);
     window.history.replaceState({}, "", getPathname({ href: "/", locale }));
-    return () => {
-      if (timer !== null) window.clearTimeout(timer);
-    };
-  }, [flyTo, locale]);
+    return () => window.clearTimeout(timer);
+  }, [flyTo, locale, openClubReveal, openWheel]);
 
   // The hidden route. Only armed on the landing view — firing it mid-flight
   // would fight the animation that's already running. `charge` rises as the

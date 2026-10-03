@@ -306,7 +306,18 @@
     "preparing": "Preparing your journey...",
     "nextStop": "Next stop: {country} {flag}",
     "welcome": "Welcome to {country}!",
-    "origin": "Istanbul"
+    "from": "Departing from {city}",
+    "change": "Change",
+    "changeLabel": "Change departure city",
+    "yourLocation": "Your location",
+    "chooseTitle": "Where are you flying from?",
+    "chooseHint": "We couldn't detect your location. The flight will depart from the city you choose; your choice is remembered on this device.",
+    "changeHint": "The flight will depart from the city you choose; your choice is remembered on this device.",
+    "cityLabel": "Departure city",
+    "turkey": "Turkey",
+    "world": "World",
+    "start": "Start flight",
+    "cancel": "Cancel"
   },
   "Footer": {
     "tagline": "An independent travel publication that does more than pin cities on a map — it captures the rhythm, the neighbourhoods and the tables of a journey.",

@@ -56,6 +56,9 @@ export default function LanguageSwitcher({ className = "" }: { className?: strin
     });
   };
 
+  // Yalnız Türkçe yayındayken seçilecek başka dil yok.
+  if (routing.locales.length < 2) return null;
+
   return (
     <label
       className={`relative inline-flex min-h-11 cursor-pointer items-center gap-1.5 rounded-full px-3 text-[12px] tracking-[0.12em] text-white/70 uppercase transition-colors hover:text-white md:min-h-0 md:py-1.5 ${isPending ? "opacity-60" : ""} ${className}`}

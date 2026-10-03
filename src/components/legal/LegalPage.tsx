@@ -3,7 +3,7 @@ import { useFormatter, useLocale, useTranslations } from "next-intl";
 import ContentNotice from "@/components/guide/ContentNotice";
 
 /** Politikaların son güncellenme tarihi (ISO); dile göre biçimlendirilir. */
-const POLICY_UPDATED = "2026-08-19";
+const POLICY_UPDATED = "2026-10-04";
 
 export default function LegalPage({
   eyebrow,

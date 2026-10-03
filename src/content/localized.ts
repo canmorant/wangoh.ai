@@ -1,4 +1,5 @@
 import { routing, type AppLocale } from "@/i18n/routing";
+import { ORIGIN_CITIES } from "@/data/origins";
 import type { Country } from "@/data/destinations";
 import { textKey, Translator, translateDeep } from "@/content/i18n/core";
 import { translationMemory } from "@/content/i18n/memory";
@@ -109,12 +110,14 @@ export function destinationDictionary(locale: AppLocale): Record<string, string>
   const memory = translationMemory(locale);
   if (!memory) return {};
   const dict: Record<string, string> = {};
-  for (const country of ALL_DESTINATIONS) {
-    for (const text of destinationTexts(country)) {
-      const key = textKey(text);
-      const hit = memory.get(key);
-      if (hit !== undefined) dict[key] = hit;
-    }
+  const texts = [
+    ...ALL_DESTINATIONS.flatMap(destinationTexts),
+    ...ORIGIN_CITIES.map((city) => city.name),
+  ];
+  for (const text of texts) {
+    const key = textKey(text);
+    const hit = memory.get(key);
+    if (hit !== undefined) dict[key] = hit;
   }
   return dict;
 }

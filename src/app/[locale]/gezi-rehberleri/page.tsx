@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { allCountries, countryHref, cityHref, hasGuide } from "@/content/guides";
 import SiteFooter from "@/components/SiteFooter";
+import SiteHeader from "@/components/SiteHeader";
 import Breadcrumbs from "@/components/guide/Breadcrumbs";
 import { Link } from "@/i18n/navigation";
 import { resolveLocale } from "@/i18n/server";
@@ -28,7 +29,8 @@ export default async function GuidesPage({ params }: Props) {
   const tContent = await getTranslations("Content");
   const tCountry = await getTranslations("Country");
   const tCity = await getTranslations("City");
-  return <main className="min-h-screen bg-[#080b14] pt-16">
+  return <main className="min-h-screen bg-[#080b14] pt-24 sm:pt-28">
+    <SiteHeader locale={locale} />
     <div className="mx-auto max-w-[1100px] px-5 pb-20 sm:px-8">
       <Breadcrumbs items={[{ name: tContent("home"), href: "/" }, { name: t("breadcrumb") }]} />
       <h1 className="font-display text-4xl text-white sm:text-6xl">{t("title")}</h1>

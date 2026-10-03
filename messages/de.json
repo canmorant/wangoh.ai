@@ -306,7 +306,18 @@
     "preparing": "Deine Reise wird vorbereitet …",
     "nextStop": "Nächster Halt: {country} {flag}",
     "welcome": "Angekommen: {country}!",
-    "origin": "Istanbul"
+    "from": "Abflug: {city}",
+    "change": "Ändern",
+    "changeLabel": "Abflugort ändern",
+    "yourLocation": "Dein Standort",
+    "chooseTitle": "Von wo startest du?",
+    "chooseHint": "Wir konnten deinen Standort nicht ermitteln. Der Flug startet in der Stadt, die du auswählst; deine Wahl wird auf diesem Gerät gespeichert.",
+    "changeHint": "Der Flug startet in der Stadt, die du auswählst; deine Wahl wird auf diesem Gerät gespeichert.",
+    "cityLabel": "Abflugort",
+    "turkey": "Türkei",
+    "world": "Welt",
+    "start": "Flug starten",
+    "cancel": "Abbrechen"
   },
   "Footer": {
     "tagline": "Ein unabhängiges Reisemagazin, das Städte nicht nur auf der Karte markiert – es erzählt vom Rhythmus einer Reise, von ihren Vierteln und ihren Tischen.",

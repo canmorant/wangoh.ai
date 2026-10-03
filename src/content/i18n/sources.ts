@@ -1,5 +1,6 @@
 import { countries, type Country } from "@/data/destinations";
 import { SECRET_DESTINATION } from "@/data/secret";
+import { ORIGIN_CITIES } from "@/data/origins";
 import { countryHubFor } from "@/content/countryHubs";
 import { DIETARY_GUIDES } from "@/content/dietary/catalog";
 import { buildGuides } from "@/content/guides";
@@ -62,6 +63,8 @@ export function collectSources(): Map<string, SourceText> {
   for (const country of ALL_DESTINATIONS) {
     for (const text of destinationTexts(country)) add(text, "destinations", country.code);
   }
+  // Uçuş animasyonunun kalkış şehirleri (ana sayfa).
+  for (const city of ORIGIN_CITIES) add(city.name, "destinations", "origins");
 
   for (const country of ALL_DESTINATIONS) {
     const hub = countryHubFor(country.code);

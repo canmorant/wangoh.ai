@@ -306,7 +306,18 @@
     "preparing": "Preparando tu viaje…",
     "nextStop": "Próxima parada: {country} {flag}",
     "welcome": "¡Te damos la bienvenida a {country}!",
-    "origin": "Estambul"
+    "from": "Salida: {city}",
+    "change": "Cambiar",
+    "changeLabel": "Cambiar la ciudad de salida",
+    "yourLocation": "Tu ubicación",
+    "chooseTitle": "¿Desde dónde sales?",
+    "chooseHint": "No hemos podido detectar tu ubicación. El vuelo saldrá de la ciudad que elijas; tu elección se recordará en este dispositivo.",
+    "changeHint": "El vuelo saldrá de la ciudad que elijas; tu elección se recordará en este dispositivo.",
+    "cityLabel": "Ciudad de salida",
+    "turkey": "Turquía",
+    "world": "Mundo",
+    "start": "Empezar el vuelo",
+    "cancel": "Cancelar"
   },
   "Footer": {
     "tagline": "Una publicación de viajes independiente que no se limita a marcar ciudades en el mapa: cuenta el ritmo de un viaje, sus barrios y sus mesas.",

@@ -30,6 +30,7 @@ import Breadcrumbs from "@/components/guide/Breadcrumbs";
 import JsonLd from "@/components/guide/JsonLd";
 import { googleMapsSearchUrl } from "@/content/dietary";
 import SiteFooter from "@/components/SiteFooter";
+import SiteHeader from "@/components/SiteHeader";
 import AdSenseScript from "@/components/AdSenseScript";
 import { canonicalCountrySlug } from "@/lib/countryAliases";
 import { countryName } from "@/lib/countryNames";
@@ -161,6 +162,7 @@ export default async function CityGuidePage({ params }: { params: Promise<Params
 
   return (
     <main className="relative min-h-screen bg-[#080b14] pt-24 sm:pt-28">
+      <SiteHeader locale={locale} />
       <AdSenseScript />
       <JsonLd data={breadcrumbSchema} />
 

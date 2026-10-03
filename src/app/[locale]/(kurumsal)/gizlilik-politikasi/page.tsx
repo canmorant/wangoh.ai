@@ -72,6 +72,14 @@ export default async function PrivacyPage({ params }: Props) {
             Bu kayıt Wangoh sunucularına gönderilmez.
           </li>
           <li>
+            <strong>Yaklaşık konum (uçuş animasyonu):</strong> Ana sayfadaki uçuş animasyonunun
+            kalkış noktası için, barındırma sağlayıcımız Vercel&rsquo;in IP adresinizden çıkardığı
+            yaklaşık şehir ve koordinat bilgisi tarayıcınıza gönderilir. Wangoh bu bilgiyi
+            kaydetmez ve bir kullanıcı profiliyle ilişkilendirmez; bilgi yalnızca o oturum boyunca
+            tarayıcınızın sessionStorage alanında tutulur. Kalkış şehrini kendiniz seçerseniz
+            seçiminiz localStorage alanında saklanır.
+          </li>
+          <li>
             <strong>Reklam ve izin verileri:</strong> Google AdSense etkinleştirildiğinde,
             tercihinize ve bulunduğunuz bölgedeki kurallara bağlı olarak çerez/benzer
             tanımlayıcılar, izin sinyalleri ve reklam etkileşimleri Google tarafından işlenebilir.

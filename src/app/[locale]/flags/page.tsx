@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import FlagGame from "@/features/flag-game/FlagGame";
 import SiteFooter from "@/components/SiteFooter";
+import SiteHeader from "@/components/SiteHeader";
 import { resolveLocale } from "@/i18n/server";
 import { translatedAlternates } from "@/i18n/seo";
 import { ClientMessages, CLIENT_NAMESPACES } from "@/i18n/clientMessages";
@@ -20,9 +21,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function FlagsPage({ params }: Props) {
-  await resolveLocale(params);
+  const locale = await resolveLocale(params);
   return (
     <>
+      <SiteHeader locale={locale} />
       <ClientMessages namespaces={CLIENT_NAMESPACES.flags}>
         <FlagGame />
       </ClientMessages>

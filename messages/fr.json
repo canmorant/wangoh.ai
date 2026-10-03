@@ -306,7 +306,18 @@
     "preparing": "Préparation de votre voyage…",
     "nextStop": "Prochaine escale : {country} {flag}",
     "welcome": "{country}, nous voilà !",
-    "origin": "Istanbul"
+    "from": "Départ : {city}",
+    "change": "Modifier",
+    "changeLabel": "Modifier la ville de départ",
+    "yourLocation": "Votre position",
+    "chooseTitle": "D’où partez-vous ?",
+    "chooseHint": "Nous n’avons pas pu détecter votre position. Le vol partira de la ville que vous choisissez ; votre choix est mémorisé sur cet appareil.",
+    "changeHint": "Le vol partira de la ville que vous choisissez ; votre choix est mémorisé sur cet appareil.",
+    "cityLabel": "Ville de départ",
+    "turkey": "Turquie",
+    "world": "Monde",
+    "start": "Commencer le vol",
+    "cancel": "Annuler"
   },
   "Footer": {
     "tagline": "Une publication de voyage indépendante qui ne se contente pas d’épingler des villes sur une carte : elle raconte le rythme d’un voyage, ses quartiers et ses tables.",

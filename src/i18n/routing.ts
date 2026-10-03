@@ -1,12 +1,33 @@
 import { defineRouting } from "next-intl/routing";
 
-/** Sitenin desteklediği diller. Varsayılan Türkçe. */
+/**
+ * Çeviri altyapısı hazırlanan bütün diller (mesajlar, içerik çeviri belleği,
+ * rehber şablonları). Hepsi yayında değil; bkz. PUBLISHED_LOCALES.
+ */
 export const LOCALES = ["tr", "en", "de", "ru", "es", "fr"] as const;
 export type AppLocale = (typeof LOCALES)[number];
 export const DEFAULT_LOCALE: AppLocale = "tr";
 
+/**
+ * Yayındaki diller. Varsayılan yalnız Türkçe: bir dil, sitenin bütün içeriği
+ * o dile çevrilip kontrol edilmeden canlıya çıkmıyor.
+ *
+ * Çevirisi biten bir dili önizlemek ya da yayına almak için derleme ortamında
+ *   NEXT_PUBLIC_SITE_LOCALES=tr,en
+ * verilir. Listede olmayan dillerin adresleri (/en/...) proxy'de geçici
+ * (307) olarak Türkçe karşılığına yönleniyor; dil seçici tek dil kaldığında
+ * görünmüyor; sitemap ve hreflang yalnız yayındaki dilleri içeriyor.
+ */
+const requested = (process.env.NEXT_PUBLIC_SITE_LOCALES ?? "").split(",").map((l) => l.trim());
+export const PUBLISHED_LOCALES: readonly AppLocale[] = LOCALES.filter(
+  (l) => l === DEFAULT_LOCALE || requested.includes(l)
+);
+export const UNPUBLISHED_LOCALES: readonly AppLocale[] = LOCALES.filter(
+  (l) => !PUBLISHED_LOCALES.includes(l)
+);
+
 export const routing = defineRouting({
-  locales: LOCALES,
+  locales: PUBLISHED_LOCALES,
   defaultLocale: DEFAULT_LOCALE,
 
   /**

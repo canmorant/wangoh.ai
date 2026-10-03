@@ -31,8 +31,8 @@ export default async function CookiePolicyPage({ params }: Props) {
       summary="Bu politika, wangoh.com üzerinde kullanılan çerezleri ve çerez benzeri tarayıcı depolama teknolojilerini; amaç, süre ve kontrol seçenekleriyle birlikte açıklar."
     >
       <LegalCallout>
-        Wangoh&rsquo;un anonim ziyaretçi ölçümü çerez kullanmaz. Bayrak oyunu ilerlemesi yalnızca
-        cihazınızdaki localStorage alanında tutulur. Google AdSense etkinleştirildiğinde
+        Wangoh&rsquo;un anonim ziyaretçi ölçümü çerez kullanmaz. Bayrak oyunu ilerlemesi ve uçuş
+        animasyonunun kalkış şehri yalnızca cihazınızdaki tarayıcı depolamasında tutulur. Google AdSense etkinleştirildiğinde
         reklam/izin teknolojileri bu metinde açıklanan koşullarla devreye girebilir.
       </LegalCallout>
 
@@ -63,12 +63,30 @@ export default async function CookiePolicyPage({ params }: Props) {
                 <td>Bayrak oyunundaki puan, seviye, seri ve öğrenilen bayrakları hatırlamak</td>
                 <td>Tarayıcı verisi silinene kadar</td>
               </tr>
+              <tr>
+                <td>wangoh.origin</td>
+                <td>Birinci taraf localStorage / işlevsel</td>
+                <td>
+                  Uçuş animasyonu için kendi seçtiğiniz kalkış şehrini hatırlamak. Yalnızca şehri
+                  elle seçtiğinizde oluşur.
+                </td>
+                <td>Tarayıcı verisi silinene kadar</td>
+              </tr>
+              <tr>
+                <td>wangoh.origin.detected</td>
+                <td>Birinci taraf sessionStorage / işlevsel</td>
+                <td>
+                  Bağlantınızdan tespit edilen yaklaşık şehir ve koordinatı, aynı oturumda yeniden
+                  sormamak için tutmak
+                </td>
+                <td>Sekme veya tarayıcı kapanana kadar</td>
+              </tr>
             </tbody>
           </table>
         </div>
         <p>
-          Bu kayıt Wangoh sunucusuna gönderilmez ve farklı sitelerde izleme amacıyla
-          kullanılmaz. Oyun özelliğini kullanmanızla bağlantılı, cihaz içi bir tercihtir.
+          Bu kayıtlar Wangoh sunucusuna gönderilmez ve farklı sitelerde izleme amacıyla
+          kullanılmaz. İlgili özelliği kullanmanızla bağlantılı, cihaz içi tercihlerdir.
         </p>
       </LegalSection>
 

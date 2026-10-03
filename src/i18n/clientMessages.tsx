@@ -36,6 +36,8 @@ export const CLIENT_NAMESPACES = {
     "Common",
     "Footer",
   ],
+  /** Ana sayfa dışındaki sayfaların üst menüsü ve içindeki arama. */
+  nav: ["LanguageSwitcher", "Nav", "Search"],
   tests: ["LanguageSwitcher", "TravelTest"],
   flags: ["LanguageSwitcher", "FlagGame", "Geo", "Common"],
 } as const;

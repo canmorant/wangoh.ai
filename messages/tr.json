@@ -306,7 +306,18 @@
     "preparing": "Yolculuğun hazırlanıyor...",
     "nextStop": "Sıradaki durak: {country} {flag}",
     "welcome": "{country} ülkesine hoş geldin!",
-    "origin": "İstanbul"
+    "from": "Kalkış: {city}",
+    "change": "Değiştir",
+    "changeLabel": "Kalkış şehrini değiştir",
+    "yourLocation": "Bulunduğun yer",
+    "chooseTitle": "Nereden yola çıkıyorsun?",
+    "chooseHint": "Konumunu tespit edemedik. Uçuş seçtiğin şehirden kalkacak; seçimin bu cihazda hatırlanır.",
+    "changeHint": "Uçuş seçtiğin şehirden kalkacak; seçimin bu cihazda hatırlanır.",
+    "cityLabel": "Kalkış şehri",
+    "turkey": "Türkiye",
+    "world": "Dünya",
+    "start": "Uçuşa başla",
+    "cancel": "Vazgeç"
   },
   "Footer": {
     "tagline": "Şehirleri yalnızca işaretlemeyen; bir yolculuğun ritmini, mahallesini ve sofrasını anlatan bağımsız seyahat yayını.",

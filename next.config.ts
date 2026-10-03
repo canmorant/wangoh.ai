@@ -32,6 +32,10 @@ const nextConfig: NextConfig = {
         images: { unoptimized: true },
       }
     : {
+        // route.web.ts dosyaları (sunucu gerektiren API'ler, ör. api/konum)
+        // yalnız web derlemesinde; statik export'ta sunucu olmadığı için
+        // uygulama derlemesi onları hiç görmüyor.
+        pageExtensions: ["tsx", "ts", "jsx", "js", "web.ts"],
         images: {
           // Yerel katalogdaki uzak görsellerin kaynaklarını açıkça sınırla.
           remotePatterns: [

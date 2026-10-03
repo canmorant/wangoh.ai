@@ -10,6 +10,7 @@ import Magnetic from "./Magnetic";
 import type { Country } from "@/data/destinations";
 import { EASE_OUT, EASE_SOFT } from "@/lib/motion";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { routing } from "@/i18n/routing";
 
 const SearchModal = dynamic(() => import("./SearchModal"), { ssr: false });
 
@@ -283,9 +284,11 @@ export default function FloatingNav({
                   </button>
                 );
               })}
-              <div className="mt-1 flex items-center justify-between rounded-2xl border-t border-white/[0.05] px-3 pt-1">
-                <LanguageSwitcher />
-              </div>
+              {routing.locales.length > 1 && (
+                <div className="mt-1 flex items-center justify-between rounded-2xl border-t border-white/[0.05] px-3 pt-1">
+                  <LanguageSwitcher />
+                </div>
+              )}
             </motion.nav>
           </motion.div>
         )}
