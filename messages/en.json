@@ -384,7 +384,8 @@
     "otherCities": "Other cities in {country}",
     "countryRoutes": "{country} routes",
     "inProgress": "in progress",
-    "countryGuide": "{country} guide →"
+    "countryGuide": "{country} guide →",
+    "audienceNote": "Entry, visa and phone-plan notes in this guide are written for travellers setting out from Turkey with a Turkish passport. Check the current rules for your own passport and mobile plan with official sources."
   },
   "Guides": {
     "metaTitle": "Travel Guides: Country by Country, City by City | Wangoh",

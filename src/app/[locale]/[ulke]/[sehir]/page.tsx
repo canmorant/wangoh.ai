@@ -2,11 +2,19 @@ import type { Metadata } from "next";
 import ImageCredits from "@/components/ImageCredits";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { Link, permanentRedirect } from "@/i18n/navigation";
 import { resolveLocale } from "@/i18n/server";
-import { localizedUrl, turkishOnlySeo } from "@/i18n/seo";
+import { contentSeo, localizedUrl, OG_LOCALE } from "@/i18n/seo";
+import type { AppLocale } from "@/i18n/routing";
+import {
+  cityPageLocales,
+  localizedCountry,
+  localizedDietary,
+  localizedGuide,
+  placeName,
+} from "@/content/localized";
 import {
   allCityPaths,
   findCountryBySlug,
@@ -20,7 +28,7 @@ import { SITE, absolute } from "@/lib/site";
 import GuideArticle from "@/components/guide/GuideArticle";
 import Breadcrumbs from "@/components/guide/Breadcrumbs";
 import JsonLd from "@/components/guide/JsonLd";
-import { dietaryGuideFor, googleMapsSearchUrl } from "@/content/dietary";
+import { googleMapsSearchUrl } from "@/content/dietary";
 import SiteFooter from "@/components/SiteFooter";
 import AdSenseScript from "@/components/AdSenseScript";
 import { canonicalCountrySlug } from "@/lib/countryAliases";
@@ -34,6 +42,41 @@ export function generateStaticParams(): Omit<Params, "locale">[] {
   return allCityPaths();
 }
 
+/**
+ * Sayfanın verisi, istenen dilde. Rehber, beslenme önerileri ve destinasyon
+ * metinleri o dile TAM çevrildiyse sayfa o dilde kendi başına yayında
+ * (canonical + hreflang); değilse eksik metinler Türkçe kalır, içerik notu
+ * gösterilir ve canonical Türkçe sürüme bakar.
+ */
+function loadCityPage(locale: AppLocale, ulke: string, sehir: string) {
+  const country = findCountryBySlug(ulke);
+  const city = country ? findCityBySlug(country, sehir) : null;
+  if (!country || !city) return null;
+
+  const guide = localizedGuide(country.code, city.name, locale)?.value ?? null;
+  const dietary = localizedDietary(country.code, city.name, locale)?.value ?? null;
+  if (guide && !dietary) {
+    throw new Error(`Beslenme tercihleri verisi eksik: ${country.code}:${city.name}`);
+  }
+  const localCountry = localizedCountry(country, locale).value;
+  const localCity = localCountry.cities.find((c) => c.name === city.name) ?? city;
+  const available = cityPageLocales(country, city.name);
+
+  return {
+    country,
+    city,
+    localCountry,
+    localCity,
+    guide,
+    dietary,
+    available,
+    complete: available.includes(locale),
+    path: `/${ulke}/${sehir}`,
+    cityLabel: placeName(city.name, locale),
+    countryLabel: countryName(country.code, locale, country.name),
+  };
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -41,30 +84,21 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const locale = await resolveLocale(params);
   const { ulke, sehir } = await params;
-  const country = findCountryBySlug(ulke);
-  const city = country ? findCityBySlug(country, sehir) : null;
-  if (!country || !city) return {};
+  const page = loadCityPage(locale, ulke, sehir);
+  if (!page) return {};
+  const { city, guide, complete, path, cityLabel, countryLabel, localCity, available } = page;
   const t = await getTranslations({ locale, namespace: "City" });
-  const countryLabel = countryName(country.code, locale, country.name);
-
-  const guide = guideFor(country.code, city.name);
-  const dietary = dietaryGuideFor(country.code, city.name);
-  const path = `/${ulke}/${sehir}`;
-
-  if (guide && !dietary) {
-    throw new Error(`Beslenme tercihleri verisi eksik: ${country.code}:${city.name}`);
-  }
 
   // Rehber yazılmışsa kendi başlığını kullanır; yazılmamışsa şehre özgü ama
   // dürüst bir başlık üretilir. İki şehir asla aynı meta veriyi paylaşmaz.
-  // Rehberin kendi SEO metni Türkçe; diğer dillerde arayüz dilindeki şablon.
-  const ownSeo = locale === "tr" ? guide : null;
-  const title = ownSeo?.seoTitle ?? t("metaTitle", { city: city.name, country: countryLabel });
+  // Rehberin SEO metni yalnız tam çevrildiği dilde kullanılıyor.
+  const ownSeo = complete ? guide : null;
+  const title = ownSeo?.seoTitle ?? t("metaTitle", { city: cityLabel, country: countryLabel });
   const description =
     ownSeo?.seoDescription ??
-    t("metaDescription", { city: city.name, summary: guide?.seoDescription ?? city.description });
-  // İçerik yalnızca Türkçe: canonical Türkçe sürüm, diğer diller noindex.
-  const seo = turkishOnlySeo(path, locale);
+    t("metaDescription", { city: cityLabel, summary: guide?.seoDescription ?? localCity.description });
+  const seo = contentSeo(path, locale, available);
+  const url = complete ? localizedUrl(path, locale) : absolute(path);
 
   return {
     title,
@@ -72,12 +106,12 @@ export async function generateMetadata({
     alternates: seo.alternates,
     openGraph: {
       type: "article",
-      locale: SITE.locale,
+      locale: complete ? OG_LOCALE[locale] : SITE.locale,
       siteName: SITE.name,
       title,
       description,
-      url: absolute(path),
-      images: city.image ? [{ url: city.image, alt: `${city.name}, ${countryLabel}` }] : undefined,
+      url,
+      images: city.image ? [{ url: city.image, alt: `${cityLabel}, ${countryLabel}` }] : undefined,
     },
     twitter: {
       card: "summary_large_image",
@@ -94,32 +128,24 @@ export async function generateMetadata({
 export default async function CityGuidePage({ params }: { params: Promise<Params> }) {
   const locale = await resolveLocale(params);
   const { ulke, sehir } = await params;
-  const country = findCountryBySlug(ulke);
-  if (!country) {
+  if (!findCountryBySlug(ulke)) {
     // /portugal/lizbon → /portekiz/lizbon; şehir kısmı korunur.
     const canonical = canonicalCountrySlug(ulke);
     if (canonical) permanentRedirect({ href: `/${canonical}/${sehir}`, locale });
     notFound();
   }
-  const city = findCityBySlug(country, sehir);
-  if (!city) notFound();
-
-  const guide = guideFor(country.code, city.name);
-  const dietary = dietaryGuideFor(country.code, city.name);
-  const path = `/${ulke}/${sehir}`;
-
-  if (guide && !dietary) {
-    throw new Error(`Beslenme tercihleri verisi eksik: ${country.code}:${city.name}`);
-  }
+  const page = loadCityPage(locale, ulke, sehir);
+  if (!page) notFound();
+  const { country, city, localCountry, localCity, guide, dietary, complete, path, cityLabel, countryLabel } = page;
 
   const t = await getTranslations("City");
   const tContent = await getTranslations("Content");
-  const countryLabel = countryName(country.code, locale, country.name);
+  const pageUrl = complete ? localizedUrl(path, locale) : absolute(path);
 
   const breadcrumbs = [
     { name: tContent("home"), href: "/" },
     { name: countryLabel, href: countryHref(country) },
-    { name: city.name },
+    { name: cityLabel },
   ];
 
   const breadcrumbSchema = {
@@ -146,24 +172,24 @@ export default async function CityGuidePage({ params }: { params: Promise<Params
               "@type": "Article",
               headline: guide.h1,
               description: guide.seoDescription,
-              inLanguage: "tr-TR",
+              inLanguage: complete ? (locale === "tr" ? "tr-TR" : locale) : "tr-TR",
               image: city.image ? new URL(city.image, SITE.url).href : undefined,
               dateModified: guide.reviewed,
-              mainEntityOfPage: { "@type": "WebPage", "@id": absolute(path) },
+              mainEntityOfPage: { "@type": "WebPage", "@id": pageUrl },
               publisher: { "@type": "Organization", name: SITE.name },
               author: { "@type": "Organization", name: SITE.name, url: absolute("/hakkimizda") },
-              about: { "@type": "Place", name: `${city.name}, ${country.name}` },
+              about: { "@type": "Place", name: `${cityLabel}, ${countryLabel}` },
             }}
           />
           <JsonLd
             data={{
               "@context": "https://schema.org",
               "@type": "TouristDestination",
-              name: `${city.name}, ${country.name}`,
+              name: `${cityLabel}, ${countryLabel}`,
               description: guide.seoDescription,
-              url: absolute(path),
+              url: pageUrl,
               image: city.image ? new URL(city.image, SITE.url).href : undefined,
-              containedInPlace: { "@type": "Country", name: country.name },
+              containedInPlace: { "@type": "Country", name: countryLabel },
             }}
           />
           {/* FAQPage sadece sayfada gerçekten görünen SSS için. */}
@@ -186,7 +212,7 @@ export default async function CityGuidePage({ params }: { params: Promise<Params
           data={{
             "@context": "https://schema.org",
             "@type": "ItemList",
-            name: t("dietaryListName", { city: city.name }),
+            name: t("dietaryListName", { city: cityLabel }),
             itemListElement: [...dietary.vegan, ...dietary.halal].map((pick, index) => ({
               "@type": "ListItem",
               position: index + 1,
@@ -196,14 +222,14 @@ export default async function CityGuidePage({ params }: { params: Promise<Params
                 servesCuisine: pick.cuisine,
                 address: {
                   "@type": "PostalAddress",
-                  addressLocality: city.name,
+                  addressLocality: cityLabel,
                   addressCountry: country.code,
                 },
                 suitableForDiet:
                   pick.category === "vegan"
                     ? "https://schema.org/VeganDiet"
                     : "https://schema.org/HalalDiet",
-                sameAs: googleMapsSearchUrl(pick.name, city.name, country.name),
+                sameAs: googleMapsSearchUrl(pick.name, cityLabel, countryLabel),
               },
             })),
           }}
@@ -214,7 +240,7 @@ export default async function CityGuidePage({ params }: { params: Promise<Params
       <header className="relative">
         <div className="mx-auto max-w-[1100px] px-4 sm:px-8">
           <Breadcrumbs items={breadcrumbs} />
-          <ContentNotice />
+          {!complete && <ContentNotice />}
         </div>
 
         <div className="relative mx-auto max-w-[1100px] px-4 sm:px-8">
@@ -222,7 +248,7 @@ export default async function CityGuidePage({ params }: { params: Promise<Params
             {city.image ? (
               <Image
                 src={city.image}
-                alt={t("heroAlt", { city: city.name, country: countryLabel })}
+                alt={t("heroAlt", { city: cityLabel, country: countryLabel })}
                 fill
                 priority
                 unoptimized={city.image.includes("upload.wikimedia.org")}
@@ -242,22 +268,22 @@ export default async function CityGuidePage({ params }: { params: Promise<Params
                 {country.flag} {countryLabel}
               </p>
               <h1 className="font-display mt-3 text-[clamp(2rem,10vw,4.2rem)] leading-[1.02] text-white sm:mt-4">
-                {guide?.h1 ?? t("heading", { city: city.name })}
+                {guide?.h1 ?? t("heading", { city: cityLabel })}
               </h1>
             </div>
           </div>
 
           <p className="mt-7 max-w-[62ch] text-[16px] leading-relaxed text-white/60 sm:mt-8 sm:text-[17px]">
-            {guide?.lede ?? city.description}
+            {guide?.lede ?? localCity.description}
           </p>
         </div>
       </header>
 
       <div className="mt-14">
         {guide ? (
-          <GuideArticle guide={guide} country={country} city={city} dietary={dietary!} />
+          <GuideArticle guide={guide} country={localCountry} city={localCity} dietary={dietary!} />
         ) : (
-          <PendingGuide country={country} countryLabel={countryLabel} city={city} />
+          <PendingGuide country={localCountry} countryLabel={countryLabel} city={localCity} cityLabel={cityLabel} />
         )}
 
         {/* Wikimedia görselleri CC BY / CC BY-SA — atıf zorunlu. */}
@@ -282,22 +308,25 @@ function PendingGuide({
   country,
   countryLabel,
   city,
+  cityLabel,
 }: {
   country: ReturnType<typeof findCountryBySlug> & object;
   countryLabel: string;
   city: { name: string; description: string };
+  cityLabel: string;
 }) {
   const t = useTranslations("City");
+  const locale = useLocale();
   const written = country.cities.filter((c) => guideFor(country.code, c.name));
 
   return (
     <div className="mx-auto max-w-[1100px] px-4 pb-24 sm:px-8 sm:pb-32">
       <div className="rounded-2xl border border-white/[0.08] bg-white/[0.025] p-8 sm:p-10">
         <h2 className="font-display text-[1.6rem] leading-tight text-white">
-          {t("pendingTitle", { city: city.name })}
+          {t("pendingTitle", { city: cityLabel })}
         </h2>
         <p className="mt-4 max-w-[62ch] text-[15px] leading-relaxed text-white/55">
-          {t("pendingBody", { city: city.name })}
+          {t("pendingBody", { city: cityLabel })}
         </p>
 
         <div className="mt-8 rounded-xl border border-white/[0.07] bg-white/[0.02] p-5">
@@ -320,7 +349,7 @@ function PendingGuide({
                 href={`/${countrySlug(country)}/${citySlug(c)}`}
                 className="group rounded-2xl border border-white/[0.08] bg-white/[0.025] p-6 transition-colors duration-500 hover:border-white/[0.18]"
               >
-                <h3 className="font-display text-[1.2rem] text-white">{c.name}</h3>
+                <h3 className="font-display text-[1.2rem] text-white">{placeName(c.name, locale)}</h3>
                 <p className="mt-2 text-[13.5px] leading-relaxed text-white/50">{c.description}</p>
                 <span className="mt-4 inline-block text-[10.5px] tracking-[0.2em] text-[var(--gold)] uppercase">
                   {t("readGuide")}

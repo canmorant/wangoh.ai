@@ -1,4 +1,5 @@
 import { makeWorldExpansionGuides, type WorldExpansionProfile } from "./worldExpansionFactory";
+import type { GuideContext } from "./context";
 
 const profiles: WorldExpansionProfile[] = [
   {
@@ -227,4 +228,4 @@ const profiles: WorldExpansionProfile[] = [
   },
 ];
 
-export const netherlandsGuides = makeWorldExpansionGuides(profiles);
+export const netherlandsGuides = (ctx?: GuideContext) => makeWorldExpansionGuides(profiles, ctx);

@@ -10,6 +10,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Search, X, Globe, MapPin, ArrowRight, CornerDownLeft } from "lucide-react";
 import { countries, type City, type Country } from "@/data/destinations";
 import { SECRET_DESTINATION } from "@/data/secret";
+import { useContentText } from "@/components/ContentText";
 import { slugify } from "@/lib/slug";
 import { EASE_OUT } from "@/lib/motion";
 
@@ -73,7 +74,11 @@ const searchNorm = (input: string) =>
 
 type SearchT = ReturnType<typeof useTranslations<"Search">>;
 
-export function buildSearchIndex(locale: AppLocale, t: SearchT): SearchResultItem[] {
+export function buildSearchIndex(
+  locale: AppLocale,
+  t: SearchT,
+  tx: (source: string) => string = (s) => s
+): SearchResultItem[] {
   const items: SearchResultItem[] = [];
 
   for (const country of searchCountries) {
@@ -87,7 +92,7 @@ export function buildSearchIndex(locale: AppLocale, t: SearchT): SearchResultIte
       type: "country",
       title: localName,
       shortTitle: localShort,
-      subtitle: t("countrySubtitle", { gateway: country.gateway, count: country.cities.length }),
+      subtitle: t("countrySubtitle", { gateway: tx(country.gateway), count: country.cities.length }),
       flag: country.flag,
       href: countryHref(country),
       image: country.image,
@@ -95,7 +100,7 @@ export function buildSearchIndex(locale: AppLocale, t: SearchT): SearchResultIte
       keywords: slugify(
         `${country.name} ${shortName} ${country.code} ${country.capital} ${country.gateway} ulke`
       ),
-      localKeywords: searchNorm(`${localName} ${localShort} ${country.name}`),
+      localKeywords: searchNorm(`${localName} ${localShort} ${country.name} ${tx(country.capital)}`),
     });
 
     // Add Cities
@@ -103,8 +108,8 @@ export function buildSearchIndex(locale: AppLocale, t: SearchT): SearchResultIte
       items.push({
         id: `city-${country.code}-${citySlug(city)}`,
         type: "city",
-        title: city.name,
-        shortTitle: city.name,
+        title: tx(city.name),
+        shortTitle: tx(city.name),
         subtitle: t("citySubtitle", { country: localShort, flag: country.flag }),
         flag: country.flag,
         href: cityHref(country, city),
@@ -113,7 +118,7 @@ export function buildSearchIndex(locale: AppLocale, t: SearchT): SearchResultIte
         keywords: slugify(
           `${city.name} ${city.description} ${country.name} ${shortName} ${country.code} sehir rehber`
         ),
-        localKeywords: searchNorm(`${city.name} ${localName} ${localShort}`),
+        localKeywords: searchNorm(`${city.name} ${tx(city.name)} ${tx(city.description)} ${localName} ${localShort}`),
       });
     }
   }
@@ -137,14 +142,15 @@ export default function SearchModal({ open, onClose, onSelectCountry }: SearchMo
   const t = useTranslations("Search");
   const locale = useLocale();
 
-  const searchIndex = useMemo(() => buildSearchIndex(locale, t), [locale, t]);
+  const tx = useContentText();
+  const searchIndex = useMemo(() => buildSearchIndex(locale, t, tx), [locale, t, tx]);
   const exampleQueries =
     locale === "tr"
       ? ["Tokyo", "Paris", "New York", "Roma", "Japonya", "Seul"]
       : [
-          "Tokyo",
-          "Paris",
-          "New York",
+          tx("Tokyo"),
+          tx("Paris"),
+          tx("New York"),
           countryName("JP", locale, "Japonya"),
           countryName("IT", locale, "İtalya"),
           countryName("KR", locale, "Güney Kore"),

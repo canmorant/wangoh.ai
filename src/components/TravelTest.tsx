@@ -4,6 +4,7 @@ import { useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { countries } from "@/data/destinations";
+import { useContentText } from "@/components/ContentText";
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { countryName } from "@/lib/countryNames";
@@ -73,6 +74,7 @@ const QUESTIONS: Question[] = [
 export default function TravelTest() {
   // Anahtarlar soru/seçenek kimliğinden kuruluyor; tip denetimi için kök namespace.
   const t = useTranslations("TravelTest");
+  const tx = useContentText();
   const locale = useLocale();
   const [step, setStep] = useState(0);
   const nextQuestion = useRef(0);
@@ -215,7 +217,7 @@ export default function TravelTest() {
                   {countryName(result.code, locale, result.name)}
                 </h1>
                 <p className="mx-auto mt-4 max-w-sm text-[14px] leading-relaxed text-white/50">
-                  {result.description}
+                  {tx(result.description)}
                 </p>
 
                 <motion.div

@@ -1,5 +1,10 @@
-import { makeExpandedGuide, type ExpandedGuideProfile } from "./expandedFactory";
+import { buildExpandedGuide, type ExpandedGuideProfile } from "./expandedFactory";
 import type { CityGuide } from "./types";
+import { translateDeep } from "@/content/i18n/core";
+import { TR_CONTEXT, type GuideContext } from "./context";
+
+/** Profil çevrilirken dokunulmayan anahtar alanlar. */
+const PROFILE_KEYS: ReadonlySet<string> = new Set(["city", "countryCode"]);
 
 type ExpansionCode = "ID" | "CN" | "NL";
 type Pair = [title: string, detail: string];
@@ -50,17 +55,28 @@ const transportByCountry: Record<ExpansionCode, { name: string; url: string }> =
 const priceFor = (index: number): "Yüksek" | "Orta" | "Ekonomik" =>
   index === 0 ? "Yüksek" : index === 1 ? "Orta" : "Ekonomik";
 
-export function makeWorldExpansionGuides(profiles: WorldExpansionProfile[]): CityGuide[] {
+export function makeWorldExpansionGuides(
+  profiles: WorldExpansionProfile[],
+  ctx: GuideContext = TR_CONTEXT
+): CityGuide[] {
+  const { t, T } = ctx;
   const grouped = new Map<ExpansionCode, WorldExpansionProfile[]>();
   for (const profile of profiles) {
     grouped.set(profile.countryCode, [...(grouped.get(profile.countryCode) ?? []), profile]);
   }
 
-  return profiles.map((profile) => {
-    const siblings = grouped.get(profile.countryCode) ?? [];
-    const current = siblings.findIndex((candidate) => candidate.city === profile.city);
+  return profiles.map((source) => {
+    ctx.scope(`${source.countryCode}:${source.city}`);
+    const siblings = grouped.get(source.countryCode) ?? [];
+    const current = siblings.findIndex((candidate) => candidate.city === source.city);
     const related = [1, 2, 3].map((offset) => siblings[(current + offset) % siblings.length]);
+    // Metinler hedef dilde; city/countryCode anahtar olarak Türkçe kalır.
+    const profile = ctx.locale === "tr" ? source : translateDeep(source, t, PROFILE_KEYS);
+    const city = t(source.city);
     const [firstSight, secondSight, thirdSight] = profile.sights;
+    const code = profile.countryCode;
+    /** "**Jordaan:** …" → "Jordaan" */
+    const areaName = (area: string) => area.replace(/^\*\*([^*]+)\*\*.*/, "$1");
 
     const expanded: ExpandedGuideProfile = {
       city: profile.city,
@@ -77,88 +93,62 @@ export function makeWorldExpansionGuides(profiles: WorldExpansionProfile[]): Cit
       neighborhoods: profile.areas,
       cuisine: profile.tastes,
       stay: [profile.stay],
-      nightlifeShopping: [
-        profile.evenings,
-        `${profile.city}'ta alışverişi tek bir turistik çarşıya sıkıştırmayın. Yerel üretim, tasarım veya gıda hediyesi alırken etiket, sabit fiyat ve bagaj kuralını kontrol edin; koruma altındaki doğal ürünleri ve belgesiz antikaları satın almayın.`,
-      ],
+      nightlifeShopping: [profile.evenings, T.world.shopping(city)],
       dayTrips: profile.dayTrips,
-      seasons: [
-        profile.season,
-        `Takvimde ${profile.best} öne çıksa da okul tatili, ulusal bayram, festival ve hafta sonu yoğunluğu deneyimi değiştirebilir. Hava ortalamasını son dakika tahmini sanmayın; açık hava gününe kapalı mekân veya yavaş mahalle yürüyüşü alternatifi ekleyin.`,
-      ],
-      budget: [
-        profile.budget,
-        `Konaklama, şehirler arası bağlantı ve ${firstSight[0]} gibi ana deneyimleri önce fiyatlandırın. Küçük ödemeler, bagaj, rezervasyon komisyonu ve son kilometre transferi için ayrı pay bırakın; yalnız uçak ve otel toplamını seyahat bütçesi sanmayın.`,
-      ],
+      seasons: [profile.season, T.world.season(profile.best)],
+      budget: [profile.budget, T.world.budget(firstSight[0])],
       avoid: profile.cautions,
       places: profile.sights.map(([name, ,], index) => [
         name,
-        index === 0 ? "Ana gezi hattı" : index === 1 ? "İkinci rota kümesi" : "Çevre rotası",
-        index === 0 ? "Şehrin simge deneyimi" : index === 1 ? "Yerel karakter ve kültür" : "Manzara ve ritim değişimi",
+        t(index === 0 ? "Ana gezi hattı" : index === 1 ? "İkinci rota kümesi" : "Çevre rotası"),
+        t(index === 0 ? "Şehrin simge deneyimi" : index === 1 ? "Yerel karakter ve kültür" : "Manzara ve ritim değişimi"),
         profile.sights[index][1],
         priceFor(index),
-        index === 0
-          ? "Bilet, giriş penceresi ve son ulaşımı resmî kanaldan önceden kontrol edin."
-          : "Yoğun saatten kaçınmak için sabahı veya günün son ziyaret aralığını seçin.",
+        t(
+          index === 0
+            ? "Bilet, giriş penceresi ve son ulaşımı resmî kanaldan önceden kontrol edin."
+            : "Yoğun saatten kaçınmak için sabahı veya günün son ziyaret aralığını seçin."
+        ),
       ]),
       itinerary: [
         [
-          `1. Gün — ${firstSight[0]} ve şehirle tanışma`,
-          `${firstSight[0]} için erken başlayın; giriş veya ulaşım belirsizliğini günün başında çözün.`,
-          `${profile.areas[0].replace(/^\*\*([^*]+)\*\*.*/, "$1")} çevresini yürüyerek okuyun ve plansız bir kahve molası bırakın.`,
-          `Akşamı ${profile.tastes[0].split(".")[0].toLocaleLowerCase("tr")} odağında sakin bir yemekle tamamlayın.`,
+          T.world.day1Title(firstSight[0]),
+          T.shared.day1Morning(firstSight[0]),
+          T.world.day1Afternoon(areaName(profile.areas[0])),
+          T.world.day1Evening(profile.tastes[0].split(".")[0]),
         ],
         [
-          `2. Gün — ${secondSight[0]} ve mahalleler`,
-          `${secondSight[0]} çevresindeki ana rotayı kalabalık büyümeden tamamlayın.`,
-          `${profile.areas[1].replace(/^\*\*([^*]+)\*\*.*/, "$1")} tarafında küçük sokak, pazar ve yerel gündelik hayatı programa ekleyin.`,
+          T.world.day2Title(secondSight[0]),
+          T.shared.day2Morning(secondSight[0]),
+          T.world.day2Afternoon(areaName(profile.areas[1])),
           profile.evenings,
         ],
         [
-          `3. Gün — ${thirdSight[0]} ve esnek kapanış`,
-          `${thirdSight[0]} için hava, bilet veya transfer durumunu bir gece önce doğrulayın.`,
+          T.world.day3Title(thirdSight[0]),
+          T.shared.day3Morning(thirdSight[0]),
           profile.dayTrips[0],
-          "Dönüşten önce ertesi gün bağlantısını, bagaj süresini ve çevrimdışı biletleri hazırlayın; program sıkıştıysa alışverişi bu saate bırakmayın.",
+          t("Dönüşten önce ertesi gün bağlantısını, bagaj süresini ve çevrimdışı biletleri hazırlayın; program sıkıştıysa alışverişi bu saate bırakmayın."),
         ],
       ],
       practical: [
-        ["Rezervasyon sırası", `${firstSight[0]}, şehirler arası bağlantı ve konaklamayı önce; esnek mahalle öğünlerini sonra sabitleyin.`],
-        ["Çevrimdışı hazırlık", "Otel adresini yerel dilde, biletlerin ekran görüntüsünü, acil numaraları ve çevrimdışı haritayı telefona indirin."],
-        ["Günlük tempo", `Aynı güne üç uzak bölge koymayın. ${profile.city}'ta bir ana deneyim, bir mahalle ve uzun bir öğün daha sürdürülebilir bir ritim verir.`],
-        ["Son kontrol", "Çalışma saati, hava, grev, deniz veya park erişimini ziyaret günü resmî kaynaktan yeniden doğrulayın."],
+        [t("Rezervasyon sırası"), T.shared.bookingOrder(firstSight[0])],
+        [t("Çevrimdışı hazırlık"), t("Otel adresini yerel dilde, biletlerin ekran görüntüsünü, acil numaraları ve çevrimdışı haritayı telefona indirin.")],
+        [t("Günlük tempo"), T.shared.dailyPace(city)],
+        [t("Son kontrol"), t("Çalışma saati, hava, grev, deniz veya park erişimini ziyaret günü resmî kaynaktan yeniden doğrulayın.")],
       ],
       faqs: [
-        [
-          `${profile.city} için kaç gün gerekir?`,
-          `${profile.days} dengeli bir ilk ziyaret sağlar. Ana gezi noktalarını işaretlemek yerine mahalle, yemek ve olası hava/ulaşım gecikmesi için boşluk bırakırsanız şehir daha anlamlı açılır.`,
-        ],
-        [
-          `${profile.city}'ta nerede kalınır?`,
-          profile.stay,
-        ],
-        [
-          `${profile.city}'a ne zaman gidilir?`,
-          `${profile.best} genel olarak en dengeli dönemdir. ${profile.season}`,
-        ],
-        [
-          `${profile.city}'ta araç kiralamak gerekir mi?`,
-          `${profile.local} Araç kararı vermeden otopark, ehliyet, sigorta ve gece dönüşünü birlikte değerlendirin.`,
-        ],
-        [
-          `${profile.city} hangi rota ile birleştirilir?`,
-          `${related.map((item) => item.city).join(", ")} bu rehberdeki doğal devam seçenekleridir. Yalnız haritadaki mesafeye değil, gerçek kapıdan kapıya ulaşım süresine bakın.`,
-        ],
+        [T.shared.faqDays(city), T.world.faqDaysAnswer(profile.days)],
+        [T.shared.faqStay(city), profile.stay],
+        [T.shared.faqWhen(city), T.world.faqWhenAnswer(profile.best, profile.season)],
+        [T.world.faqCarQuestion(city), T.world.faqCarAnswer(profile.local)],
+        [T.shared.faqCombine(city), T.world.faqCombineAnswer(related.map((item) => t(item.city)).join(", "))],
       ],
-      related: related.map((item) => [
-        item.city,
-        `${item.city} gezi rehberi`,
-        `${profile.city} sonrasında farklı bir şehir ritmi ve yeni bir rota katmanı ekler.`,
-      ]),
-      sourceName: sourceByCountry[profile.countryCode].name,
-      sourceUrl: sourceByCountry[profile.countryCode].url,
-      transportSource: transportByCountry[profile.countryCode],
+      related: related.map((item) => [item.city, T.shared.relatedAnchor(t(item.city)), T.shared.relatedDescription(city)]),
+      sourceName: t(sourceByCountry[code].name),
+      sourceUrl: sourceByCountry[code].url,
+      transportSource: { name: t(transportByCountry[code].name), url: transportByCountry[code].url },
     };
 
-    return makeExpandedGuide(expanded);
+    return buildExpandedGuide(expanded, ctx);
   });
 }

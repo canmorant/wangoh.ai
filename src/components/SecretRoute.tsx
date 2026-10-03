@@ -6,6 +6,7 @@ import { countryName } from "@/lib/countryNames";
 import { motion, AnimatePresence } from "framer-motion";
 import { Country } from "@/data/destinations";
 import { SECRET_DESTINATION } from "@/data/secret";
+import { useContentText } from "@/components/ContentText";
 import { EASE_OUT, EASE_SOFT } from "@/lib/motion";
 
 /**
@@ -23,6 +24,7 @@ export default function SecretRoute({
   onFly: (c: Country) => void;
 }) {
   const t = useTranslations("SecretRoute");
+  const tx = useContentText();
   const tc = useTranslations("Common");
   const format = useFormatter();
   const locale = useLocale();
@@ -153,7 +155,7 @@ export default function SecretRoute({
               transition={{ duration: 0.9, ease: EASE_OUT }}
               className="mx-auto mt-5 max-w-sm text-[14px] leading-relaxed text-white/50"
             >
-              {SECRET_DESTINATION.description}
+              {tx(SECRET_DESTINATION.description)}
             </motion.p>
 
             <motion.div

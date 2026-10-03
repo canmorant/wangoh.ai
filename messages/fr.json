@@ -384,6 +384,7 @@
     "otherCities": "Autres villes : {country}",
     "countryRoutes": "Itinéraires : {country}",
     "inProgress": "en préparation",
+    "audienceNote": "Les informations sur l’entrée, les visas et la téléphonie de ce guide sont rédigées pour des voyageurs partant de Turquie avec un passeport turc. Vérifiez auprès des sources officielles les règles en vigueur pour votre passeport et votre forfait mobile.",
     "countryGuide": "Guide {country} →"
   },
   "Guides": {

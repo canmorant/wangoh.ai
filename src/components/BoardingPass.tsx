@@ -10,6 +10,7 @@ import {
   useMotionTemplate,
 } from "framer-motion";
 import type { Country } from "@/data/destinations";
+import { useContentText } from "@/components/ContentText";
 import { boardingFor, barcodeBars } from "@/lib/boarding";
 import { EASE_OUT, SPRING } from "@/lib/motion";
 import { turkishDative } from "@/lib/turkish";
@@ -49,6 +50,7 @@ export default function BoardingPass({
   // boardingFor varışı Türkçe veriden üretiyor (uçuş no, kapı vb. de Türkçe
   // ada bağlı ki bilet her dilde aynı kalsın); görünen varış adı yerel.
   const to = locale === "tr" ? d.to : shortName.toLocaleUpperCase(locale);
+  const tx = useContentText();
   // "Portekiz'e Git": yönelme eki Türkçeye özgü, yalnız orada hesaplanıyor.
   const place = locale === "tr" ? turkishDative(shortName) : shortName;
   const bars = barcodeBars(country.code);
@@ -152,7 +154,7 @@ export default function BoardingPass({
             <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-4">
               <div>
                 <p className="text-[9.5px] tracking-[0.28em] text-white/75 uppercase">
-                  {country.gateway} &middot; {t("cityCount", { count: country.cities.length })}
+                  {tx(country.gateway)} &middot; {t("cityCount", { count: country.cities.length })}
                 </p>
                 <p className="font-display text-[1.8rem] sm:text-[2rem] leading-none text-white drop-shadow">
                   {shortName}
@@ -260,13 +262,13 @@ export default function BoardingPass({
             }`}
           >
             <Detail label={t("detail.country")} value={name} />
-            <Detail label={t("detail.capital")} value={country.capital} />
+            <Detail label={t("detail.capital")} value={tx(country.capital)} />
             <Detail
               label={t("detail.bestSeason")}
               value={localizeBestSeason(country.bestSeason, locale, tData, format)}
             />
             <Detail label={t("detail.budget")} value={localizeBudget(country.budget, locale, tData)} />
-            <Detail label={t("detail.highlight")} value={country.signature} />
+            <Detail label={t("detail.highlight")} value={tx(country.signature)} />
             <Detail
               label={t("detail.cities")}
               value={t("detail.cityGuides", { count: country.cities.length })}

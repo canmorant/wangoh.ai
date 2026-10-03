@@ -384,6 +384,7 @@
     "otherCities": "Otras ciudades de {country}",
     "countryRoutes": "Rutas por {country}",
     "inProgress": "en preparación",
+    "audienceNote": "Las notas sobre entrada, visados y telefonía de esta guía están escritas para viajeros que salen de Turquía con pasaporte turco. Consulta en fuentes oficiales las normas vigentes para tu pasaporte y tu tarifa móvil.",
     "countryGuide": "Guía de {country} →"
   },
   "Guides": {
@@ -452,7 +453,7 @@
   },
   "Search": {
     "dialogLabel": "Buscar ciudades y países",
-    "placeholder": "Busca una ciudad o un país… (p. ej., Tokyo, Japón, Paris, New York)",
+    "placeholder": "Busca una ciudad o un país… (p. ej., Tokio, Japón, París, Nueva York)",
     "inputLabel": "Buscar una ciudad o un país",
     "close": "Cerrar búsqueda",
     "filterAll": "Todo",

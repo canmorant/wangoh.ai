@@ -3,7 +3,8 @@ import type { ReactNode } from "react";
 import Script from "next/script";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
-import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { CLIENT_NAMESPACES, clientMessages } from "@/i18n/clientMessages";
 import { GeistSans } from "geist/font/sans";
 import "@fontsource/instrument-serif/400.css";
 import "@fontsource/instrument-serif/400-italic.css";
@@ -16,33 +17,6 @@ import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
 
 type Props = { children: ReactNode; params: Promise<{ locale: string }> };
 
-/**
- * Tarayıcıya yalnızca istemci bileşenlerinin kullandığı mesajlar gidiyor.
- * Rehber, ülke, kurumsal ve meta veri metinleri sunucuda çözülüyor; onları
- * her sayfanın HTML'ine gömmek boşuna ağırlık olurdu. İstemci bileşeninde
- * yeni bir namespace kullanılırsa buraya eklenmeli (eksikse next-intl
- * konsola MISSING_MESSAGE yazar).
- */
-const CLIENT_NAMESPACES = [
-  "Nav",
-  "LanguageSwitcher",
-  "Home",
-  "Hero",
-  "TravelData",
-  "BoardingPass",
-  "Destinations",
-  "Flight",
-  "CityCards",
-  "Search",
-  "Footer",
-  "Common",
-  "SecretRoute",
-  "ClubReveal",
-  "Geo",
-  "Wheel",
-  "FlagGame",
-  "TravelTest",
-] as const;
 
 /** Altı dilin hepsi derleme anında üretilsin (statik). */
 export function generateStaticParams() {
@@ -104,13 +78,14 @@ export default async function LocaleLayout({ children, params }: Props) {
   // Statik üretim için: bu istekte hangi dilin geçerli olduğunu next-intl'e
   // bildir. Aksi hâlde getTranslations başlıklara bakar ve sayfa dinamikleşir.
   setRequestLocale(locale);
-  const messages = await getMessages();
-  const clientMessages = Object.fromEntries(CLIENT_NAMESPACES.map((ns) => [ns, messages[ns]]));
+  // Yalnız her sayfada olan istemci bileşenlerinin mesajları; sayfalar kendi
+  // ihtiyaçlarını <ClientMessages> ile ekliyor (bkz. i18n/clientMessages.tsx).
+  const messages = await clientMessages(CLIENT_NAMESPACES.global);
 
   return (
     <html lang={locale} className={`${GeistSans.variable} antialiased`}>
       <body>
-        <NextIntlClientProvider messages={clientMessages}>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
         <ServiceWorkerRegister />
         {process.env.VERCEL ? (
           <Script src="/_vercel/insights/script.js" strategy="afterInteractive" />

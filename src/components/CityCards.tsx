@@ -6,6 +6,7 @@ import type { Country, City } from "@/data/destinations";
 // Yalnızca tip — değer import edilirse 331 rehberin tamamı (~1.8 MB) bu
 // bileşenin parçasına geri sızar. Veri ana sayfadan prop olarak geliyor.
 import type { CityCardData } from "@/content/cityCardData";
+import { useContentText } from "@/components/ContentText";
 import { slugify } from "@/lib/slug";
 import { useFormatter, useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
@@ -32,9 +33,10 @@ export default function CityCards({ country, data, onBack }: CityCardsProps) {
   const format = useFormatter();
   const locale = useLocale();
   const name = countryName(country.code, locale, country.name);
-  // Hub metinleri (giriş paragrafı, özel başlık) henüz yalnızca Türkçe; diğer
-  // dillerde okunamayacak bir paragraf göstermek yerine genel başlık kullanılıyor.
-  const hubText = locale === "tr" ? hub : undefined;
+  const tx = useContentText();
+  // Hub metni (giriş paragrafı, özel başlık) yalnız o dile tam çevrildiyse
+  // gelir (buildCityCardData); yoksa genel başlık kullanılıyor.
+  const hubText = hub?.intro ? hub : undefined;
 
   return (
     <motion.section
@@ -69,7 +71,7 @@ export default function CityCards({ country, data, onBack }: CityCardsProps) {
           <h1 className="mb-4 text-[clamp(2.1rem,10vw,3rem)] font-light leading-tight text-white">{t("title", { country: name })}</h1>
           <p className="text-white/50 max-w-lg mx-auto">
             {/* Çarktan gelen ülkelerin açıklaması worldAdapter'daki Türkçe yer tutucu. */}
-            {country.cities.length === 0 ? t("empty.description", { country: name }) : country.description}
+            {country.cities.length === 0 ? t("empty.description", { country: name }) : tx(country.description)}
           </p>
         </motion.div>
 
@@ -108,7 +110,7 @@ export default function CityCards({ country, data, onBack }: CityCardsProps) {
               </div>
 
               <dl className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.07] self-start">
-                <OverviewFact label={t("fact.capital")} value={country.capital} />
+                <OverviewFact label={t("fact.capital")} value={tx(country.capital)} />
                 <OverviewFact label={t("fact.budget")} value={localizeBudget(country.budget, locale, tData)} />
                 <OverviewFact
                   label={t("fact.bestSeason")}
@@ -196,11 +198,12 @@ function OverviewFact({ label, value }: { label: string; value: string }) {
 
 function CityCard({ city, country, ready }: { city: City; country: Country; ready: boolean }) {
   const t = useTranslations("CityCards");
+  const tx = useContentText();
   return (
     <Link
       href={cityPath(country, city)}
       className="group relative block h-[280px] cursor-pointer overflow-hidden rounded-2xl transition-transform duration-500 hover:scale-[1.03] hover:shadow-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 sm:h-[320px]"
-      aria-label={t("openCityGuide", { city: city.name })}
+      aria-label={t("openCityGuide", { city: tx(city.name) })}
     >
       <div
         className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
@@ -210,8 +213,8 @@ function CityCard({ city, country, ready }: { city: City; country: Country; read
       <div className="absolute inset-0 rounded-2xl border border-white/0 group-hover:border-white/15 transition-all duration-500" />
 
       <div className="absolute bottom-0 left-0 right-0 p-6">
-        <h3 className="text-xl font-light text-white mb-1">{city.name}</h3>
-        <p className="text-white/50 text-sm leading-relaxed">{city.description}</p>
+        <h3 className="text-xl font-light text-white mb-1">{tx(city.name)}</h3>
+        <p className="text-white/50 text-sm leading-relaxed">{tx(city.description)}</p>
         <div className="mt-3 flex items-center gap-2 text-[var(--gold)] text-xs tracking-wider uppercase opacity-0 translate-y-2 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0">
           <span>{ready ? t("readGuide") : t("goToGuide")}</span>
           <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">

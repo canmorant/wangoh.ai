@@ -1,5 +1,7 @@
+import type { AppLocale } from "@/i18n/routing";
 import { allCountries, hasGuide } from "@/content/guides";
 import { countryHubFor } from "@/content/countryHubs";
+import { localizedHub } from "@/content/localized";
 
 /**
  * Ana sayfadaki şehir görünümünün (CityCards) ihtiyaç duyduğu veri — ve
@@ -18,7 +20,8 @@ import { countryHubFor } from "@/content/countryHubs";
  */
 
 export interface CityCardHub {
-  intro: string;
+  /** Yalnız hub o dile tam çevrildiyse; yoksa bileşen genel başlığı kullanır. */
+  intro?: string;
   heading?: string;
 }
 
@@ -38,16 +41,19 @@ export interface CityCardData {
 const cityKey = (countryCode: string, cityName: string) =>
   `${countryCode}:${cityName}`;
 
-export function buildCityCardData(): CityCardData {
+export function buildCityCardData(locale: AppLocale = "tr"): CityCardData {
   const hubs: Record<string, CityCardHub> = {};
   const missingGuides: string[] = [];
 
   for (const country of allCountries) {
-    const hub = countryHubFor(country.code);
-    if (hub) {
-      hubs[country.code] = hub.citiesHeading
-        ? { intro: hub.cityGridIntro, heading: hub.citiesHeading }
-        : { intro: hub.cityGridIntro };
+    if (countryHubFor(country.code)) {
+      const localized = localizedHub(country.code, locale);
+      const hub = localized?.complete ? localized.value : null;
+      hubs[country.code] = !hub
+        ? {}
+        : hub.citiesHeading
+          ? { intro: hub.cityGridIntro, heading: hub.citiesHeading }
+          : { intro: hub.cityGridIntro };
     }
     for (const city of country.cities) {
       if (!hasGuide(country.code, city.name)) {

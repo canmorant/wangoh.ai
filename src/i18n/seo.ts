@@ -12,14 +12,35 @@ export const localizedUrl = (path: string, locale: AppLocale) =>
  * bayrak oyunu): her dilin kendi canonical'ı var ve hreflang altı dili
  * birden gösteriyor. x-default Türkçe.
  */
-export function translatedAlternates(path: string, locale: AppLocale): Metadata["alternates"] {
+export function translatedAlternates(
+  path: string,
+  locale: AppLocale,
+  locales: readonly AppLocale[] = routing.locales
+): Metadata["alternates"] {
   return {
     canonical: localizedUrl(path, locale),
     languages: {
-      ...Object.fromEntries(routing.locales.map((l) => [l, localizedUrl(path, l)])),
+      ...Object.fromEntries(locales.map((l) => [l, localizedUrl(path, l)])),
       "x-default": localizedUrl(path, routing.defaultLocale),
     },
   };
+}
+
+/**
+ * İçerik sayfaları (rehber, ülke, kurumsal): `available` o sayfanın içeriği
+ * TAM çevrilmiş diller (Türkçe her zaman dahil). Bu dillerde sayfa kendi
+ * canonical'ıyla dizine açık ve hreflang yalnız bu dilleri listeler; içeriği
+ * henüz çevrilmemiş bir dilde turkishOnlySeo geçerli. Böylece arama motoru
+ * hiçbir zaman yarım çevrilmiş bir sürüme yönlendirilmez.
+ */
+export function contentSeo(
+  path: string,
+  locale: AppLocale,
+  available: readonly AppLocale[]
+): Pick<Metadata, "alternates" | "robots"> {
+  return available.includes(locale)
+    ? { alternates: translatedAlternates(path, locale, available) }
+    : turkishOnlySeo(path, locale);
 }
 
 /**

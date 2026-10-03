@@ -4,6 +4,7 @@ import FlagGame from "@/features/flag-game/FlagGame";
 import SiteFooter from "@/components/SiteFooter";
 import { resolveLocale } from "@/i18n/server";
 import { translatedAlternates } from "@/i18n/seo";
+import { ClientMessages, CLIENT_NAMESPACES } from "@/i18n/clientMessages";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -22,7 +23,9 @@ export default async function FlagsPage({ params }: Props) {
   await resolveLocale(params);
   return (
     <>
-      <FlagGame />
+      <ClientMessages namespaces={CLIENT_NAMESPACES.flags}>
+        <FlagGame />
+      </ClientMessages>
       <SiteFooter />
     </>
   );

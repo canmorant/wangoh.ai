@@ -384,6 +384,7 @@
     "otherCities": "Weitere Städte: {country}",
     "countryRoutes": "Routen: {country}",
     "inProgress": "in Arbeit",
+    "audienceNote": "Die Hinweise zu Einreise, Visum und Mobilfunk in diesem Reiseführer sind für Reisende geschrieben, die mit türkischem Pass aus der Türkei aufbrechen. Prüf die aktuellen Regeln für deinen eigenen Pass und Mobilfunktarif bei offiziellen Quellen.",
     "countryGuide": "Reiseführer {country} →"
   },
   "Guides": {
@@ -452,7 +453,7 @@
   },
   "Search": {
     "dialogLabel": "Städte und Länder suchen",
-    "placeholder": "Stadt oder Land suchen … (z. B. Tokyo, Japan, Paris, New York)",
+    "placeholder": "Stadt oder Land suchen … (z. B. Tokio, Japan, Paris, New York)",
     "inputLabel": "Stadt oder Land suchen",
     "close": "Suche schließen",
     "filterAll": "Alle",

@@ -1,0 +1,83 @@
+import { countries, type Country } from "@/data/destinations";
+import { SECRET_DESTINATION } from "@/data/secret";
+import { countryHubFor } from "@/content/countryHubs";
+import { DIETARY_GUIDES } from "@/content/dietary/catalog";
+import { buildGuides } from "@/content/guides";
+import { createGuideContext } from "@/content/guides/context";
+import { en as anyTemplates } from "@/content/guides/templates/en";
+import { isTranslatable, textKey, translateDeep } from "./core";
+import { DIETARY_KEYS, HUB_KEYS } from "./keys";
+
+/**
+ * Çevrilmesi gereken bütün Türkçe kaynak metinler, gruplarıyla.
+ *
+ * Elle liste tutulmuyor: içerik, sitenin kullandığı yerelleştirme yoluyla
+ * "kayıt modunda" (boş bellekle) bir kez üretiliyor ve çeviriciye sorulan
+ * her metin kaydediliyor. Böylece buradaki küme, çalışma anında gerçekten
+ * çevrilmeye çalışılan metinlerle birebir aynı.
+ *
+ * Kullanan: scripts/content-i18n.ts (eksikleri çıkarma, birleştirme) ve
+ * scripts/i18n.test.ts (kapsam raporu).
+ */
+
+export type SourceGroup = "destinations" | "hubs" | "dietary" | "guides";
+
+export interface SourceText {
+  key: string;
+  text: string;
+  group: SourceGroup;
+  /** Bu metni kullanan sayfalar: "JP:Tokyo" (rehber/beslenme) ya da "JP" (ülke). */
+  scopes: Set<string>;
+}
+
+/** Ana sayfa ve ülke görünümlerinin gösterdiği destinasyon metinleri. */
+export function destinationTexts(country: Country): string[] {
+  return [
+    country.description,
+    country.signature,
+    country.capital,
+    country.gateway,
+    ...country.cities.flatMap((city) => [city.name, city.description]),
+  ];
+}
+
+export const ALL_DESTINATIONS: Country[] = [...countries, SECRET_DESTINATION];
+
+export function collectSources(): Map<string, SourceText> {
+  const out = new Map<string, SourceText>();
+  const add = (text: string, group: SourceGroup, scope: string) => {
+    if (!isTranslatable(text)) return;
+    const key = textKey(text);
+    const entry = out.get(key);
+    if (entry) entry.scopes.add(scope);
+    else out.set(key, { key, text, group, scopes: new Set([scope]) });
+  };
+  const recorder = (group: SourceGroup, scope: string) => (text: string) => {
+    add(text, group, scope);
+    return text;
+  };
+
+  // Sıra önemli: bir metin ilk geçtiği grupta tutulur. Yer adları ve kısa
+  // destinasyon metinleri en çok paylaşılanlar; önce onlar.
+  for (const country of ALL_DESTINATIONS) {
+    for (const text of destinationTexts(country)) add(text, "destinations", country.code);
+  }
+
+  for (const country of ALL_DESTINATIONS) {
+    const hub = countryHubFor(country.code);
+    if (hub) translateDeep(hub, recorder("hubs", country.code), HUB_KEYS);
+  }
+
+  for (const entry of DIETARY_GUIDES) {
+    translateDeep(entry, recorder("dietary", `${entry.countryCode}:${entry.city}`), DIETARY_KEYS);
+  }
+
+  // Rehberler: boş bellekli bir bağlam her eksiği kendi rehberine yazar.
+  // Kalıplar dilden bağımsız olarak aynı kaynak metinleri ister; hangi dilin
+  // kalıbının kullanıldığı burada önemsiz.
+  const ctx = createGuideContext("en", new Map(), anyTemplates);
+  buildGuides(ctx);
+  for (const [scope, texts] of ctx.missing) for (const text of texts) add(text, "guides", scope);
+
+  return out;
+}

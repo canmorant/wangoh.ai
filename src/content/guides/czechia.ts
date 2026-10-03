@@ -1,4 +1,5 @@
 import { makeRegionalGuides, type RegionalProfile } from "./regionalFactory";
+import type { GuideContext } from "./context";
 
 const profiles: RegionalProfile[] = [
   {
@@ -43,4 +44,4 @@ const profiles: RegionalProfile[] = [
   },
 ];
 
-export const czechiaGuides = makeRegionalGuides(profiles);
+export const czechiaGuides = (ctx?: GuideContext) => makeRegionalGuides(profiles, ctx);

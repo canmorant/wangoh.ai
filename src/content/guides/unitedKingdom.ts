@@ -1,4 +1,5 @@
-import { makeExpandedGuide, type ExpandedGuideProfile } from "./expandedFactory";
+import { makeExpandedGuides, type ExpandedGuideProfile } from "./expandedFactory";
+import type { GuideContext } from "./context";
 
 const profiles: ExpandedGuideProfile[] = [
   {
@@ -231,4 +232,4 @@ const profiles: ExpandedGuideProfile[] = [
   },
 ];
 
-export const unitedKingdomGuides = profiles.map(makeExpandedGuide);
+export const unitedKingdomGuides = (ctx?: GuideContext) => makeExpandedGuides(profiles, ctx);

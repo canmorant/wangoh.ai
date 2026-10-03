@@ -18,6 +18,8 @@ import { join } from "node:path";
 import { IntlMessageFormat } from "intl-messageformat";
 import { parse, TYPE, type MessageFormatElement } from "@formatjs/icu-messageformat-parser";
 import { LOCALES } from "../src/i18n/routing";
+import { collectSources } from "../src/content/i18n/sources";
+import { CLIENT_NAMESPACES } from "../src/i18n/clientMessages";
 
 let pass = 0;
 let fail = 0;
@@ -126,12 +128,9 @@ for (const locale of LOCALES) {
   ok(`${locale}: no raw syntax left after formatting`, leftovers.length === 0, leftovers.slice(0, 3).join(" | "));
 }
 
-/* ------------- istemciye giden namespace'ler (layout.tsx) ------------- */
+/* -------- istemciye giden namespace'ler (i18n/clientMessages.tsx) -------- */
 {
-  const layout = readFileSync(join(ROOT, "src/app/[locale]/layout.tsx"), "utf8");
-  const listed = new Set(
-    [...(layout.match(/CLIENT_NAMESPACES = \[([\s\S]*?)\]/)?.[1] ?? "").matchAll(/"(\w+)"/g)].map((m) => m[1])
-  );
+  const listed = new Set<string>(Object.values(CLIENT_NAMESPACES).flat());
   const walk = (dir: string): string[] =>
     readdirSync(dir, { withFileTypes: true }).flatMap((e) =>
       e.isDirectory() ? walk(join(dir, e.name)) : /\.tsx?$/.test(e.name) ? [join(dir, e.name)] : []
@@ -174,6 +173,36 @@ for (const locale of LOCALES) {
       ).filter((k) => !(k in flat))
     );
     ok(`${locale}: every TravelTest question/option has text`, absent.length === 0, absent.slice(0, 3).join(", "));
+  }
+}
+
+/* ------------------------ içerik çeviri belleği ------------------------ */
+{
+  // İstemci bileşenleri megabaytlık belleği ya da kaynak toplayıcıyı içe
+  // aktarmamalı; ihtiyaç duydukları metinler sunucudan prop olarak iner.
+  const walk = (dir: string): string[] =>
+    readdirSync(dir, { withFileTypes: true }).flatMap((e) =>
+      e.isDirectory() ? walk(join(dir, e.name)) : /\.tsx?$/.test(e.name) ? [join(dir, e.name)] : []
+    );
+  const leaking = walk(join(ROOT, "src"))
+    .filter((f) => /^\s*["']use client["']/.test(readFileSync(f, "utf8")))
+    .filter((f) => /from "@\/content\/(localized|i18n\/(memory|sources))"/.test(readFileSync(f, "utf8")));
+  ok("client components don't import the translation memory", leaking.length === 0, leaking.join(", "));
+
+  const sources = collectSources();
+  for (const locale of LOCALES.filter((l) => l !== "tr")) {
+    const tm = JSON.parse(readFileSync(join(ROOT, "src/content/i18n/tm", `${locale}.json`), "utf8")) as Record<
+      string,
+      Record<string, string>
+    >;
+    const keys = Object.values(tm).flatMap((g) => Object.keys(g));
+    const stale = keys.filter((k) => !sources.has(k));
+    const empty = Object.values(tm).flatMap((g) => Object.entries(g)).filter(([, v]) => !v.trim());
+    ok(`${locale}: content translations all belong to current Turkish texts`, stale.length === 0, `${stale.length} eski (npx tsx scripts/content-i18n.ts prune)`);
+    ok(`${locale}: no empty content translations`, empty.length === 0, empty.slice(0, 3).map(([k]) => k).join(", "));
+    const keySet = new Set(keys);
+    const done = [...sources.values()].filter((src) => keySet.has(src.key)).length;
+    console.log(`  info  ${locale}: içerik çevirisi ${done}/${sources.size}`);
   }
 }
 

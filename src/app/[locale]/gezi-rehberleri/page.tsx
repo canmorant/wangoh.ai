@@ -5,7 +5,8 @@ import SiteFooter from "@/components/SiteFooter";
 import Breadcrumbs from "@/components/guide/Breadcrumbs";
 import { Link } from "@/i18n/navigation";
 import { resolveLocale } from "@/i18n/server";
-import { localizedUrl, OG_LOCALE, turkishOnlySeo } from "@/i18n/seo";
+import { contentSeo, localizedUrl, OG_LOCALE } from "@/i18n/seo";
+import { guideIndexLocales, placeName } from "@/content/localized";
 import { countryName } from "@/lib/countryNames";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -16,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = t("metaTitle");
   const description = t("metaDescription");
   return {
-    title, description, ...turkishOnlySeo("/gezi-rehberleri", locale),
+    title, description, ...contentSeo("/gezi-rehberleri", locale, guideIndexLocales()),
     openGraph: { title, description, url: localizedUrl("/gezi-rehberleri", locale), type: "website", locale: OG_LOCALE[locale] },
   };
 }
@@ -40,7 +41,7 @@ export default async function GuidesPage({ params }: Props) {
           <h2 className="font-display text-2xl text-[var(--gold)]"><Link prefetch={false} href={countryHref(country)}>{tCountry("heading", { country: countryName(country.code, locale, country.name) })}</Link></h2>
           <ul className="mt-4 space-y-2">
             {country.cities.filter(city => hasGuide(country.code, city.name)).map(city => <li key={city.name}>
-              <Link prefetch={false} href={cityHref(country, city)} className="inline-block py-1 text-sm text-white/75 underline-offset-4 hover:underline">{tCity("heading", { city: city.name })}</Link>
+              <Link prefetch={false} href={cityHref(country, city)} className="inline-block py-1 text-sm text-white/75 underline-offset-4 hover:underline">{tCity("heading", { city: placeName(city.name, locale) })}</Link>
             </li>)}
           </ul>
         </section>)}

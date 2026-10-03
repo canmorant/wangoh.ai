@@ -4,6 +4,9 @@ import TravelTest from "@/components/TravelTest";
 import SiteFooter from "@/components/SiteFooter";
 import { resolveLocale } from "@/i18n/server";
 import { translatedAlternates } from "@/i18n/seo";
+import { destinationDictionary } from "@/content/localized";
+import { ContentTextProvider } from "@/components/ContentText";
+import { ClientMessages, CLIENT_NAMESPACES } from "@/i18n/clientMessages";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -19,10 +22,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function TestsPage({ params }: Props) {
-  await resolveLocale(params);
+  const locale = await resolveLocale(params);
   return (
     <>
-      <TravelTest />
+      <ClientMessages namespaces={CLIENT_NAMESPACES.tests}>
+        <ContentTextProvider dictionary={destinationDictionary(locale)}>
+          <TravelTest />
+        </ContentTextProvider>
+      </ClientMessages>
       <SiteFooter />
     </>
   );

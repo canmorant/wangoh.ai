@@ -4,7 +4,8 @@ import { notFound } from "next/navigation";
 import { getFormatter, getTranslations } from "next-intl/server";
 import { Link, permanentRedirect } from "@/i18n/navigation";
 import { resolveLocale } from "@/i18n/server";
-import { localizedUrl, turkishOnlySeo } from "@/i18n/seo";
+import { contentSeo, localizedUrl, OG_LOCALE } from "@/i18n/seo";
+import { countryPageLocales, localizedCountry, localizedHub, placeName } from "@/content/localized";
 import {
   findCountryBySlug,
   countrySlug,
@@ -16,7 +17,6 @@ import { SITE, absolute } from "@/lib/site";
 import Breadcrumbs from "@/components/guide/Breadcrumbs";
 import ImageCredits from "@/components/ImageCredits";
 import JsonLd from "@/components/guide/JsonLd";
-import { countryHubFor } from "@/content/countryHubs";
 import { canonicalCountrySlug } from "@/lib/countryAliases";
 import SiteFooter from "@/components/SiteFooter";
 import AdSenseScript from "@/components/AdSenseScript";
@@ -41,8 +41,10 @@ export async function generateMetadata({
   if (!country) return {};
   const t = await getTranslations({ locale, namespace: "Country" });
   const countryLabel = countryName(country.code, locale, country.name);
-  // Hub'ın kendi SEO metni Türkçe; diğer dillerde arayüz dilindeki şablon.
-  const hub = locale === "tr" ? countryHubFor(country.code) : null;
+  const available = countryPageLocales(country);
+  const complete = available.includes(locale);
+  // Hub'ın kendi SEO metni yalnız o dile tam çevrildiyse kullanılıyor.
+  const hub = complete ? (localizedHub(country.code, locale)?.value ?? null) : null;
 
   const title = hub?.seoTitle ?? t("metaTitle", { country: countryLabel });
   const description =
@@ -51,11 +53,10 @@ export async function generateMetadata({
       country: countryLabel,
       cities: country.cities
         .slice(0, 4)
-        .map((c) => c.name)
+        .map((c) => placeName(c.name, locale))
         .join(", "),
     });
-  // İçerik yalnızca Türkçe: canonical Türkçe sürüm, diğer diller noindex.
-  const seo = turkishOnlySeo(`/${ulke}`, locale);
+  const seo = contentSeo(`/${ulke}`, locale, available);
 
   return {
     title,
@@ -63,11 +64,11 @@ export async function generateMetadata({
     alternates: seo.alternates,
     openGraph: {
       type: "website",
-      locale: SITE.locale,
+      locale: complete ? OG_LOCALE[locale] : SITE.locale,
       siteName: SITE.name,
       title,
       description,
-      url: absolute(`/${ulke}`),
+      url: complete ? localizedUrl(`/${ulke}`, locale) : absolute(`/${ulke}`),
       images: country.image ? [{ url: country.image, alt: countryLabel }] : undefined,
     },
     twitter: {
@@ -92,7 +93,12 @@ export default async function CountryPage({ params }: { params: Promise<Params> 
     if (canonical) permanentRedirect({ href: `/${canonical}`, locale });
     notFound();
   }
-  const hub = countryHubFor(country.code);
+  const complete = countryPageLocales(country).includes(locale);
+  // Çevirisi eksik metinler Türkçe kalır; sayfa o zaman içerik notu gösterir.
+  const hub = localizedHub(country.code, locale)?.value ?? null;
+  const local = localizedCountry(country, locale).value;
+  const place = (name: string) => placeName(name, locale);
+  const pageUrl = complete ? localizedUrl(`/${ulke}`, locale) : absolute(`/${ulke}`);
   const writtenCount = country.cities.filter((city) => guideFor(country.code, city.name)).length;
 
   const t = await getTranslations("Country");
@@ -123,9 +129,9 @@ export default async function CountryPage({ params }: { params: Promise<Params> 
         data={{
           "@context": "https://schema.org",
           "@type": "TouristDestination",
-          name: country.name,
-          description: hub?.seoDescription ?? country.description,
-          url: absolute(`/${ulke}`),
+          name: countryLabel,
+          description: hub?.seoDescription ?? local.description,
+          url: pageUrl,
           image: country.image,
           touristType: t("touristType"),
         }}
@@ -139,15 +145,15 @@ export default async function CountryPage({ params }: { params: Promise<Params> 
           itemListElement: country.cities.map((city, index) => ({
             "@type": "ListItem",
             position: index + 1,
-            name: city.name,
-            url: absolute(`/${countrySlug(country)}/${citySlug(city)}`),
+            name: place(city.name),
+            url: localizedUrl(`/${countrySlug(country)}/${citySlug(city)}`, locale),
           })),
         }}
       />
 
       <div className="mx-auto max-w-[1100px] px-4 sm:px-8">
         <Breadcrumbs items={crumbs} />
-        <ContentNotice />
+        {!complete && <ContentNotice />}
 
         <p className="flex items-center gap-3 text-[11px] tracking-[0.34em] text-[var(--gold)]/70 uppercase">
           <span className="inline-block h-px w-8 bg-[var(--gold)]/35" />
@@ -157,7 +163,7 @@ export default async function CountryPage({ params }: { params: Promise<Params> 
           {t("heading", { country: countryLabel })}
         </h1>
         <p className="mt-5 max-w-[62ch] text-[16px] leading-relaxed text-white/60 sm:text-[17px]">
-          {country.description}
+          {local.description}
         </p>
 
         {/* hızlı bilgiler — hepsi mevcut, doğrulanmış veriden */}
@@ -165,8 +171,8 @@ export default async function CountryPage({ params }: { params: Promise<Params> 
           aria-label={tGuide("quickFacts")}
           className="mt-12 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.06] sm:grid-cols-3 lg:grid-cols-5"
         >
-          <Fact label={t("fact.gateway")} value={`${country.gateway} · ${country.iata}`} />
-          <Fact label={t("fact.capital")} value={country.capital} />
+          <Fact label={t("fact.gateway")} value={`${local.gateway} · ${country.iata}`} />
+          <Fact label={t("fact.capital")} value={local.capital} />
           <Fact
             label={t("fact.flightTime")}
             value={
@@ -184,7 +190,7 @@ export default async function CountryPage({ params }: { params: Promise<Params> 
 
         <div className="mt-10 rounded-2xl border border-white/[0.08] bg-white/[0.025] p-6">
           <p className="text-[9.5px] tracking-[0.24em] text-white/35 uppercase">{t("dontMiss")}</p>
-          <p className="mt-2 text-[15.5px] leading-relaxed text-white/75">{country.signature}</p>
+          <p className="mt-2 text-[15.5px] leading-relaxed text-white/75">{local.signature}</p>
         </div>
 
         {hub && (
@@ -242,7 +248,7 @@ export default async function CountryPage({ params }: { params: Promise<Params> 
                           href={`/${countrySlug(country)}/${citySlug(routeCity)}`}
                           className="text-[11px] tracking-[0.12em] text-white/65 uppercase transition-colors hover:text-[var(--gold)]"
                         >
-                          {cityName} →
+                          {place(cityName)} →
                         </Link>
                       );
                     })}
@@ -259,7 +265,7 @@ export default async function CountryPage({ params }: { params: Promise<Params> 
             {hub?.citiesHeading ?? t("citiesHeading", { country: countryLabel })}
           </h2>
           <p className="mt-3 max-w-[60ch] text-[15px] leading-relaxed text-white/50">
-            {hub?.cityGridIntro ?? country.description}
+            {hub?.cityGridIntro ?? local.description}
           </p>
           <p className="mt-4 text-[11px] tracking-[0.12em] text-[var(--gold)]/65 uppercase">
             {writtenCount === country.cities.length
@@ -268,7 +274,7 @@ export default async function CountryPage({ params }: { params: Promise<Params> 
           </p>
 
           <div className="mt-9 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {country.cities.map((city) => {
+            {local.cities.map((city) => {
               const ready = !!guideFor(country.code, city.name);
               return (
                 <Link
@@ -279,7 +285,7 @@ export default async function CountryPage({ params }: { params: Promise<Params> 
                   <div className="relative aspect-[4/3] overflow-hidden">
                     <Image
                       src={city.image}
-                      alt={`${city.name}, ${countryLabel}`}
+                      alt={`${place(city.name)}, ${countryLabel}`}
                       fill
                       unoptimized={city.image.includes("upload.wikimedia.org")}
                       sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw"
@@ -301,7 +307,7 @@ export default async function CountryPage({ params }: { params: Promise<Params> 
                   </div>
                   <div className="p-5">
                     <h3 className="font-display text-[1.3rem] leading-none text-white">
-                      {city.name}
+                      {place(city.name)}
                     </h3>
                     <p className="mt-2.5 text-[13.5px] leading-relaxed text-white/50">
                       {city.description}

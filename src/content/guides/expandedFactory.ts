@@ -6,6 +6,8 @@ import type {
   PracticalTip,
   RelatedGuide,
 } from "./types";
+import { countryName } from "@/lib/countryNames";
+import { TR_CONTEXT, type GuideContext } from "./context";
 
 type Price = NonNullable<PlaceCard["price"]>;
 type PlaceInput = [
@@ -605,16 +607,82 @@ const toFaqs = (items: FaqInput[]): Faq[] => items.map(([q, a]) => ({ q, a }));
 const toRelated = (items: RelatedInput[]): RelatedGuide[] =>
   items.map(([city, anchor, description]) => ({ city, anchor, description }));
 
-export function makeExpandedGuide(profile: ExpandedGuideProfile): CityGuide {
+/** Profilin metinlerini hedef dile çevirir; şehir anahtarı ve fiyat sınıfı yapısal. */
+function localizeExpandedProfile(profile: ExpandedGuideProfile, { locale, t }: GuideContext): ExpandedGuideProfile {
+  if (locale === "tr") return profile;
+  const all = (items: string[]) => items.map(t);
+  return {
+    ...profile,
+    timezone: profile.timezone && t(profile.timezone),
+    searchFocus: t(profile.searchFocus),
+    lede: t(profile.lede),
+    idealDays: t(profile.idealDays),
+    arrival: t(profile.arrival),
+    gettingAround: t(profile.gettingAround),
+    bestTime: t(profile.bestTime),
+    character: all(profile.character),
+    highlights: profile.highlights.map(([heading, text]) => [t(heading), t(text)]),
+    neighborhoods: all(profile.neighborhoods),
+    cuisine: all(profile.cuisine),
+    stay: all(profile.stay),
+    nightlifeShopping: all(profile.nightlifeShopping),
+    football: profile.football && all(profile.football),
+    dayTrips: all(profile.dayTrips),
+    seasons: all(profile.seasons),
+    budget: all(profile.budget),
+    avoid: all(profile.avoid),
+    places: profile.places.map(([name, area, known, why, price, tip]) =>
+      tip === undefined
+        ? price === undefined
+          ? [t(name), t(area), t(known), t(why)]
+          : [t(name), t(area), t(known), t(why), price]
+        : [t(name), t(area), t(known), t(why), price, t(tip)]
+    ),
+    itinerary: profile.itinerary.map(([title, morning, afternoon, evening]) => [
+      t(title),
+      t(morning),
+      t(afternoon),
+      t(evening),
+    ]),
+    practical: profile.practical.map(([title, body]) => [t(title), t(body)]),
+    faqs: profile.faqs.map(([q, a]) => [t(q), t(a)]),
+    related: profile.related.map(([city, anchor, description]) => [city, t(anchor), t(description)]),
+    sourceName: t(profile.sourceName),
+    transportSource: profile.transportSource && {
+      ...profile.transportSource,
+      name: t(profile.transportSource.name),
+    },
+  };
+}
+
+/** Elle yazılmış profillerden rehber üretir (her profil kendi kapsamında). */
+export function makeExpandedGuides(
+  profiles: ExpandedGuideProfile[],
+  ctx: GuideContext = TR_CONTEXT
+): CityGuide[] {
+  return profiles.map((profile) => {
+    ctx.scope(`${profile.countryCode}:${profile.city}`);
+    return buildExpandedGuide(localizeExpandedProfile(profile, ctx), ctx);
+  });
+}
+
+/**
+ * Rehberi kurar. `profile` zaten hedef dilde olmalı (regional/world
+ * fabrikaları kendi profillerini çevirip buraya verir); `city` anahtar
+ * olarak Türkçe kalır, görünen adı `t` üretir.
+ */
+export function buildExpandedGuide(profile: ExpandedGuideProfile, ctx: GuideContext = TR_CONTEXT): CityGuide {
+  const { t, T } = ctx;
   const shared = countryResearch[profile.countryCode];
-  const seoTitle = `${profile.city} Gezi Rehberi: ${profile.searchFocus}`;
-  const metaLead = `${profile.city} gezi rehberi: ${profile.lede}`.replace(/\s+/g, " ").trim();
+  const city = t(profile.city);
+  const seoTitle = T.expanded.seoTitle(city, profile.searchFocus);
+  const metaLead = T.expanded.metaLead(city, profile.lede).replace(/\s+/g, " ").trim();
   const seoDescription =
     metaLead.length <= 158
       ? metaLead
       : `${metaLead.slice(0, 157).replace(/\s+\S*$/, "").replace(/[,:;–—-]+$/, "")}…`;
   const timezone = profile.timezone ??
-    (profile.countryCode === "TR"
+    t(profile.countryCode === "TR"
       ? "UTC+3"
       : profile.countryCode === "GB"
         ? "GMT · yazın BST"
@@ -637,7 +705,7 @@ export function makeExpandedGuide(profile: ExpandedGuideProfile): CityGuide {
         : ["Tenerife", "Gran Canaria"].includes(profile.city)
           ? "WET · yazın WEST"
           : "CET · yazın CEST");
-  const money =
+  const money = t(
     profile.countryCode === "GB"
       ? "Sterlin · kart yaygın"
       : ["ES", "NL"].includes(profile.countryCode)
@@ -684,108 +752,108 @@ export function makeExpandedGuide(profile: ExpandedGuideProfile): CityGuide {
                   ? "Arjantin pesosu · kur değişken"
                   : profile.countryCode === "CA"
                     ? "Kanada doları · kart yaygın"
-            : "TL · kart + nakit";
+            : "TL · kart + nakit"
+  );
 
   return {
     city: profile.city,
     countryCode: profile.countryCode,
     seoTitle,
     seoDescription,
-    h1: `${profile.city} Gezi Rehberi`,
+    h1: T.expanded.h1(city),
     lede: profile.lede,
     quickFacts: [
-      { label: "Ülke", value: shared.country },
-      { label: "İdeal süre", value: profile.idealDays },
-      { label: "Varış", value: profile.arrival },
-      { label: "Şehir içi", value: profile.gettingAround },
-      { label: "En iyi dönem", value: profile.bestTime },
-      { label: "Para", value: money },
-      { label: "Dil", value: shared.languageLabel },
-      { label: "Saat dilimi", value: timezone },
+      { label: t("Ülke"), value: countryName(profile.countryCode, ctx.locale, shared.country) },
+      { label: t("İdeal süre"), value: profile.idealDays },
+      { label: t("Varış"), value: profile.arrival },
+      { label: t("Şehir içi"), value: profile.gettingAround },
+      { label: t("En iyi dönem"), value: profile.bestTime },
+      { label: t("Para"), value: money },
+      { label: t("Dil"), value: t(shared.languageLabel) },
+      { label: t("Saat dilimi"), value: timezone },
     ],
     sections: [
       {
-        heading: `${profile.city} nasıl bir yer? Rotayı doğru kurmak`,
+        heading: T.expanded.characterHeading(city),
         id: "rota-omurgasi",
         body: profile.character,
       },
       {
-        heading: `${profile.city}'ta gezilecek yerler`,
+        heading: T.expanded.sightsHeading(city),
         id: "gezilecek-yerler",
-        body: [
-          `Listeyi haritadaki yakınlığa göre kümelendirmek, ${profile.city}'ta aynı yolu tekrar yürümeyi ve günün iyi ışığını transferde harcamayı önler. Biletli büyük durakları sabitleyin; meydan, park, pazar ve kıyı yürüyüşlerini aralara yerleştirin.`,
-        ],
+        body: [T.expanded.sightsIntro(city)],
         subsections: profile.highlights.map(([heading, text]) => ({ heading, body: [text] })),
       },
       {
-        heading: "Semt semt gezi ve konaklama kararı",
+        heading: t("Semt semt gezi ve konaklama kararı"),
         id: "semtler-konaklama",
         body: profile.neighborhoods,
-        subsections: [{ heading: "Nerede kalınır?", body: profile.stay }],
+        subsections: [{ heading: t("Nerede kalınır?"), body: profile.stay }],
       },
       {
-        heading: `${profile.city} yeme içme rehberi`,
+        heading: T.expanded.foodHeading(city),
         id: "yeme-icme",
         body: profile.cuisine,
       },
       {
-        heading: "Havalimanı, tren ve şehir içi ulaşım",
+        heading: t("Havalimanı, tren ve şehir içi ulaşım"),
         id: "ulasim",
-        body: [profile.arrival, profile.gettingAround, shared.payments],
+        body: [profile.arrival, profile.gettingAround, t(shared.payments)],
       },
       {
-        heading: "Kahve, gece hayatı, alışveriş ve yerel ritim",
+        heading: t("Kahve, gece hayatı, alışveriş ve yerel ritim"),
         id: "gece-kahve-alisveris",
         body: profile.nightlifeShopping,
       },
       ...(profile.football
         ? [
             {
-              heading: `${profile.city}'ta futbol ve maç günü`,
+              heading: T.expanded.footballHeading(city),
               id: "futbol-mac-gunu",
               body: profile.football,
             },
           ]
         : []),
       {
-        heading: "Günübirlik geziler ve rotayı büyütmek",
+        heading: t("Günübirlik geziler ve rotayı büyütmek"),
         id: "gunubirlik-geziler",
         body: profile.dayTrips,
       },
       {
-        heading: "Ne zaman gidilir? Mevsim ve kalabalık hesabı",
+        heading: t("Ne zaman gidilir? Mevsim ve kalabalık hesabı"),
         id: "ne-zaman-gidilir",
         body: profile.seasons,
       },
       {
-        heading: "Bütçe nasıl yönetilir?",
+        heading: t("Bütçe nasıl yönetilir?"),
         id: "butce",
-        body: [...profile.budget, shared.budgetFrame],
+        body: [...profile.budget, t(shared.budgetFrame)],
       },
       {
-        heading: "Telefon, internet ve gerçekten işe yarayan uygulamalar",
+        heading: t("Telefon, internet ve gerçekten işe yarayan uygulamalar"),
         id: "telefon-uygulamalar",
-        body: [shared.connectivity],
+        body: [t(shared.connectivity)],
       },
       {
-        heading: "Güvenlik, giriş kuralları ve sık yapılan hatalar",
+        heading: t("Güvenlik, giriş kuralları ve sık yapılan hatalar"),
         id: "guvenlik-kurallar-hatalar",
-        body: [shared.entry, shared.language, ...profile.avoid],
+        body: [t(shared.entry), t(shared.language), ...profile.avoid],
       },
     ],
     places: toPlaces(profile.places),
     itinerary: toItinerary(profile.itinerary),
-    practicalHeading: `${profile.city}'ta bilmeden gitmemeniz gerekenler`,
+    practicalHeading: T.expanded.practicalHeading(city),
     practicalTips: toTips(profile.practical),
     faqs: toFaqs(profile.faqs),
     relatedGuides: toRelated(profile.related),
     sources: [
       { name: profile.sourceName, url: profile.sourceUrl },
       ...(profile.transportSource ? [profile.transportSource] : []),
-      ...shared.sources,
+      ...shared.sources.map((source) => ({ name: t(source.name), url: source.url })),
     ],
-    volatileNote:
-      "Müze ve işletme saatleri, etkinlik takvimi, ulaşım tarifeleri ve giriş ücretleri dönemsel olarak değişir. Rezervasyon gerektiren yerleri yalnız resmî kanaldan, ziyaret gününe yakın yeniden kontrol edin.",
+    volatileNote: t(
+      "Müze ve işletme saatleri, etkinlik takvimi, ulaşım tarifeleri ve giriş ücretleri dönemsel olarak değişir. Rezervasyon gerektiren yerleri yalnız resmî kanaldan, ziyaret gününe yakın yeniden kontrol edin."
+    ),
     reviewed: ["GR", "HR", "SI", "NO", "SE", "DK", "FI"].includes(profile.countryCode)
       ? "2026-08-26"
       : ["ID", "CN", "NL", "CH", "BE", "HU", "CZ", "PL", "RU", "RS", "ME", "BA", "AL"].includes(profile.countryCode)

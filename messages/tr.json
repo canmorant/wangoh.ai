@@ -384,7 +384,8 @@
     "otherCities": "{country} içindeki diğer şehirler",
     "countryRoutes": "{country} rotaları",
     "inProgress": "hazırlanıyor",
-    "countryGuide": "{country} rehberi →"
+    "countryGuide": "{country} rehberi →",
+    "audienceNote": "Giriş, vize ve telefon hattı notları Türkiye'den yola çıkan okur için yazılmıştır."
   },
   "Guides": {
     "metaTitle": "Gezi Rehberleri: Ülke Ülke, Şehir Şehir Seyahat | Wangoh",

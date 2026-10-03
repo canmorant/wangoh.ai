@@ -1,6 +1,7 @@
 import { useFormatter, useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { countryName } from "@/lib/countryNames";
+import { placeName } from "@/content/localized";
 import type { CityGuide } from "@/content/guides/types";
 import type { Country, City } from "@/data/destinations";
 import { cityHref, countryHref, hasGuide } from "@/content/guides";
@@ -29,8 +30,9 @@ export default function GuideArticle({
   const t = useTranslations("Guide");
   const format = useFormatter();
   const locale = useLocale();
-  // Arayüzdeki ülke adı dile göre; makale gövdesi (içerik) Türkçe kalıyor.
+  // Görünen adlar dile göre; `name` alanları anahtar olarak Türkçe kalır.
   const countryLabel = countryName(country.code, locale, country.name);
+  const place = (name: string) => placeName(name, locale);
 
   return (
     <div className="mx-auto max-w-[1100px] px-4 pb-24 sm:px-8 sm:pb-32">
@@ -50,6 +52,15 @@ export default function GuideArticle({
       <div className="mt-12 grid gap-10 sm:mt-16 sm:gap-14 lg:grid-cols-[minmax(0,1fr)_260px] lg:items-start">
         {/* ---------------- makale ---------------- */}
         <article className="min-w-0">
+          {/* İçerik Türkiye'den yola çıkan okur için yazıldı: giriş/vize ve hat
+              notları Türk pasaportu ve Türkiye hattına göre. Diğer dillerde
+              bunu açıkça söylüyoruz; bilgiyi başka pasaportlara uyarlamak
+              doğrulanmamış bilgi üretmek olurdu. */}
+          {locale !== "tr" && (
+            <p className="mb-10 rounded-xl border border-white/[0.08] bg-white/[0.025] px-5 py-4 text-[13px] leading-relaxed text-white/55">
+              {t("audienceNote")}
+            </p>
+          )}
           {guide.sections.map((s) => (
             <section key={s.id} id={s.id} className="mb-12 scroll-mt-24 sm:mb-16 sm:scroll-mt-28">
               <h2 className="font-display text-[clamp(1.6rem,3.2vw,2.2rem)] leading-tight text-white">
@@ -117,7 +128,7 @@ export default function GuideArticle({
             </section>
           )}
 
-          <DietaryPicks dietary={dietary} city={city.name} country={country.name} />
+          <DietaryPicks dietary={dietary} city={place(city.name)} country={countryLabel} />
 
           {/* ---------------- gezi planı ---------------- */}
           {guide.itinerary.length > 0 && (
@@ -152,7 +163,7 @@ export default function GuideArticle({
                 {t("beforeYouGo")}
               </p>
               <h2 className="font-display mt-3 text-[clamp(1.6rem,3.2vw,2.2rem)] leading-tight text-white">
-                {guide.practicalHeading ?? t("practicalFallback", { city: city.name })}
+                {guide.practicalHeading ?? t("practicalFallback", { city: place(city.name) })}
               </h2>
               <div className="mt-7 grid gap-4 sm:grid-cols-2">
                 {guide.practicalTips.map((tip) => (
@@ -347,7 +358,7 @@ export default function GuideArticle({
                       href={cityHref(country, c)}
                       className="flex items-baseline justify-between gap-2 text-[13px] text-white/50 transition-colors duration-300 hover:text-white"
                     >
-                      {c.name}
+                      {place(c.name)}
                       {!hasGuide(country.code, c.name) && (
                         <span className="shrink-0 text-[9px] tracking-[0.14em] text-white/20 uppercase">
                           {t("inProgress")}
