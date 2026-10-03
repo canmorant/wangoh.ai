@@ -257,55 +257,62 @@ export default function CountryWheel({
 
           <div className="relative mx-auto flex min-h-[100svh] max-w-6xl flex-col items-center justify-center gap-8 px-4 py-20 sm:px-5 sm:py-24 lg:flex-row lg:gap-14">
             <div className="relative w-full max-w-[min(88vw,600px)] shrink-0 lg:max-w-[560px]">
-              <div className="absolute top-0 left-1/2 z-20 -translate-x-1/2 -translate-y-[7px]">
-                <svg width="32" height="36" viewBox="0 0 32 36" aria-hidden>
-                  <path d="M16 36 L3 8 A14.5 14.5 0 0 1 29 8 Z" fill="#f6f4f0" />
-                  <circle cx="16" cy="11" r="4.2" fill="#0d1119" />
-                </svg>
+              <div className="relative aspect-square w-full">
+                <div className="absolute top-0 left-1/2 z-20 -translate-x-1/2 -translate-y-[7px]">
+                  <svg width="32" height="36" viewBox="0 0 32 36" aria-hidden>
+                    <path d="M16 36 L3 8 A14.5 14.5 0 0 1 29 8 Z" fill="#f6f4f0" />
+                    <circle cx="16" cy="11" r="4.2" fill="#0d1119" />
+                  </svg>
+                </div>
+
+                <canvas
+                  ref={canvasRef}
+                  onPointerDown={(e) => {
+                    if (!e.isPrimary || e.button !== 0) return;
+                    e.currentTarget.setPointerCapture(e.pointerId);
+                    wheel.dragStart(angleAt(e.clientX, e.clientY));
+                  }}
+                  onPointerMove={(e) => {
+                    if (e.currentTarget.hasPointerCapture(e.pointerId)) {
+                      wheel.dragMove(angleAt(e.clientX, e.clientY));
+                    }
+                  }}
+                  onPointerUp={(e) => {
+                    if (!e.currentTarget.hasPointerCapture(e.pointerId)) return;
+                    e.currentTarget.releasePointerCapture(e.pointerId);
+                    wheel.dragEnd();
+                  }}
+                  onPointerCancel={() => wheel.dragEnd()}
+                  onLostPointerCapture={() => wheel.dragEnd()}
+                  role="button"
+                  tabIndex={0}
+                  aria-label="Ülke çarkı"
+                  aria-disabled={wheel.busy}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      wheel.spin();
+                    }
+                  }}
+                  className="block aspect-square w-full cursor-grab touch-none rounded-full select-none active:cursor-grabbing"
+                  style={{ filter: "drop-shadow(0 40px 100px rgba(0,0,0,0.8))" }}
+                />
+
+                <button
+                  onClick={wheel.spin}
+                  disabled={wheel.busy}
+                  aria-disabled={wheel.busy}
+                  className="absolute top-1/2 left-1/2 flex h-[25%] w-[25%] -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-full border border-white/15 bg-[#0d1119] text-white transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:scale-105 active:scale-95 disabled:pointer-events-none disabled:opacity-60"
+                >
+                  <span className="text-[clamp(9px,1.5vw,11px)] font-semibold tracking-[0.2em] uppercase">
+                    {wheel.busy ? "…" : "Çevir"}
+                  </span>
+                  <span className="mt-0.5 text-[clamp(7px,1.1vw,9px)] tracking-[0.14em] text-white/40 tabular-nums">
+                    {N}
+                  </span>
+                </button>
+
               </div>
-
-              <canvas
-                ref={canvasRef}
-                onPointerDown={(e) => {
-                  e.currentTarget.setPointerCapture(e.pointerId);
-                  wheel.dragStart(angleAt(e.clientX, e.clientY));
-                }}
-                onPointerMove={(e) => wheel.dragMove(angleAt(e.clientX, e.clientY))}
-                onPointerUp={(e) => {
-                  e.currentTarget.releasePointerCapture?.(e.pointerId);
-                  wheel.dragEnd();
-                }}
-                onPointerCancel={() => wheel.dragEnd()}
-                role="slider"
-                tabIndex={0}
-                aria-label="Ülke çarkı"
-                aria-valuemin={0}
-                aria-valuemax={N - 1}
-                aria-valuenow={wheel.live}
-                aria-valuetext={shown?.name}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key === " ") {
-                    e.preventDefault();
-                    wheel.spin();
-                  }
-                }}
-                className="aspect-square w-full cursor-grab touch-none rounded-full select-none active:cursor-grabbing"
-                style={{ filter: "drop-shadow(0 40px 100px rgba(0,0,0,0.8))" }}
-              />
-
-              <button
-                onClick={wheel.spin}
-                disabled={wheel.busy}
-                aria-disabled={wheel.busy}
-                className="absolute top-1/2 left-1/2 flex h-[25%] w-[25%] -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-full border border-white/15 bg-[#0d1119] text-white transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:scale-105 active:scale-95 disabled:pointer-events-none disabled:opacity-60"
-              >
-                <span className="text-[clamp(9px,1.5vw,11px)] font-semibold tracking-[0.2em] uppercase">
-                  {wheel.busy ? "…" : "Çevir"}
-                </span>
-                <span className="mt-0.5 text-[clamp(7px,1.1vw,9px)] tracking-[0.14em] text-white/40 tabular-nums">
-                  {N}
-                </span>
-              </button>
 
               <p className="mt-4 text-center text-[10px] tracking-[0.2em] text-white/30 uppercase sm:mt-5 sm:text-[11px] sm:tracking-[0.26em]">
                 Çevir · ya da çarkı sürükle

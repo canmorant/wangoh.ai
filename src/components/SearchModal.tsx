@@ -107,6 +107,7 @@ export default function SearchModal({ open, onClose, onSelectCountry }: SearchMo
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [activeFilter, setActiveFilter] = useState<"all" | "country" | "city">("all");
   const inputRef = useRef<HTMLInputElement>(null);
+  const resultsRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
 
   const searchIndex = useMemo(() => buildSearchIndex(), []);
@@ -159,6 +160,12 @@ export default function SearchModal({ open, onClose, onSelectCountry }: SearchMo
     };
   }, [open]);
 
+  useEffect(() => {
+    if (!open) return;
+    resultsRef.current?.querySelector<HTMLElement>(`[data-result-index="${selectedIndex}"]`)
+      ?.scrollIntoView({ block: "nearest" });
+  }, [open, selectedIndex]);
+
   // Handle item selection
   const handleSelect = useCallback(
     (item: SearchResultItem) => {
@@ -182,6 +189,9 @@ export default function SearchModal({ open, onClose, onSelectCountry }: SearchMo
   // Keyboard navigation
   const handleKeyDown = useCallback(
     (e: React.KeyboardEvent) => {
+      // Result shortcuts belong to the input. Let focused filter/result
+      // buttons keep their native Enter and Space activation.
+      if (e.key !== "Escape" && e.target !== inputRef.current) return;
       if (e.key === "ArrowDown") {
         e.preventDefault();
         setSelectedIndex((prev) => (results.length > 0 ? (prev + 1) % results.length : 0));
@@ -241,7 +251,8 @@ export default function SearchModal({ open, onClose, onSelectCountry }: SearchMo
                   setSelectedIndex(0);
                 }}
                 placeholder="Şehir veya ülke ara... (örn: Tokyo, Japonya, Paris, New York)"
-                className="ml-3.5 flex-1 bg-transparent text-[15px] sm:text-[16px] text-white placeholder-white/40 outline-none"
+                aria-label="Şehir veya ülke ara"
+                className="ml-3.5 min-w-0 flex-1 bg-transparent text-[15px] sm:text-[16px] text-white placeholder-white/40 outline-none"
               />
               <button
                 type="button"
@@ -300,7 +311,7 @@ export default function SearchModal({ open, onClose, onSelectCountry }: SearchMo
             </div>
 
             {/* Results List */}
-            <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain p-2 scrollbar-thin scrollbar-thumb-white/10">
+            <div ref={resultsRef} className="min-h-0 flex-1 overflow-y-auto overscroll-contain p-2 scrollbar-thin scrollbar-thumb-white/10">
               {results.length > 0 ? (
                 <div className="space-y-1">
                   {results.map((item, index) => {
@@ -309,6 +320,7 @@ export default function SearchModal({ open, onClose, onSelectCountry }: SearchMo
                       <button
                         type="button"
                         key={item.id}
+                        data-result-index={index}
                         onClick={() => handleSelect(item)}
                         onMouseEnter={() => setSelectedIndex(index)}
                         className={`group flex min-h-[68px] w-full cursor-pointer items-center justify-between rounded-xl p-3 text-left transition-colors ${

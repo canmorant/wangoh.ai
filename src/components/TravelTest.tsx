@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
@@ -74,6 +74,7 @@ const QUESTIONS: Question[] = [
 
 export default function TravelTest() {
   const [step, setStep] = useState(0);
+  const nextQuestion = useRef(0);
   const [scores, setScores] = useState<Record<string, number>>({});
   const done = step >= QUESTIONS.length;
 
@@ -84,6 +85,10 @@ export default function TravelTest() {
   }, [done, scores]);
 
   const choose = (opt: Option) => {
+    // Exiting questions remain clickable during AnimatePresence's transition.
+    // Accept each question once, including multiple clicks before a render.
+    if (step !== nextQuestion.current || done) return;
+    nextQuestion.current += 1;
     setScores((prev) => {
       const next = { ...prev };
       for (const [code, w] of Object.entries(opt.weights)) {
@@ -95,6 +100,7 @@ export default function TravelTest() {
   };
 
   const restart = () => {
+    nextQuestion.current = 0;
     setScores({});
     setStep(0);
   };

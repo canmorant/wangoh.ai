@@ -79,7 +79,7 @@ export default function ClubReveal({
           role="dialog"
           aria-modal="true"
           aria-label="Rastgele futbol kulübü"
-          className="fixed inset-0 z-[80] flex items-center justify-center overflow-y-auto overscroll-contain px-4 py-6"
+          className="fixed inset-0 z-[80] flex items-start justify-center overflow-y-auto overscroll-contain px-4 py-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -88,7 +88,7 @@ export default function ClubReveal({
           <button
             aria-label="Kapat"
             onClick={onClose}
-            className="absolute inset-0 cursor-default bg-[#05070c]/90 backdrop-blur-2xl"
+            className="fixed inset-0 cursor-default bg-[#05070c]/90 backdrop-blur-2xl"
           />
 
           <motion.div
@@ -96,7 +96,7 @@ export default function ClubReveal({
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 16, scale: 0.98 }}
             transition={{ duration: 0.7, ease: EASE_OUT }}
-            className="relative w-full max-w-md overflow-hidden rounded-[24px] border border-white/[0.08] bg-white/[0.035] p-6 text-center backdrop-blur-2xl sm:rounded-[28px] sm:p-10"
+            className="relative my-auto w-full max-w-md shrink-0 overflow-hidden rounded-[24px] border border-white/[0.08] bg-white/[0.035] p-6 text-center backdrop-blur-2xl sm:rounded-[28px] sm:p-10"
           >
             <motion.span
               aria-hidden
@@ -135,25 +135,23 @@ export default function ClubReveal({
               </AnimatePresence>
             </div>
 
-            <motion.div
-              initial={false}
-              animate={{ opacity: settled ? 1 : 0, y: settled ? 0 : 10 }}
-              transition={{ duration: 0.6, ease: EASE_OUT, delay: settled ? 0.15 : 0 }}
-              className="relative"
-            >
-              <p className="mt-1 text-[13px] leading-relaxed text-white/50">
+            <div className="relative">
+              <p
+                className="mt-1 text-[13px] leading-relaxed text-white/50"
+                style={{ visibility: settled ? "visible" : "hidden" }}
+              >
                 {club?.stadium}
                 <span className="mx-2 text-white/20">·</span>
                 {club?.city}
               </p>
 
-              <div className="mt-8 flex flex-col items-stretch justify-center gap-3 min-[360px]:flex-row min-[360px]:items-center">
+              <div className="mt-8 flex flex-col flex-wrap items-stretch justify-center gap-3 min-[360px]:flex-row min-[360px]:items-center">
                 <button
-                  disabled={!settled}
+                  disabled={!settled || !clubCountry}
                   onClick={() => clubCountry && onFly(clubCountry)}
                   className="min-h-12 rounded-full bg-white px-6 py-3 text-[12px] font-medium tracking-[0.16em] text-black uppercase transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:scale-[1.04] disabled:pointer-events-none disabled:opacity-40"
                 >
-                  {club ? `${turkishDative(club.city)} uç` : "Uç"}
+                  {settled && club ? `${turkishDative(club.city)} uç` : "Kulüp seçiliyor…"}
                 </button>
                 <button
                   onClick={onClose}
@@ -162,7 +160,7 @@ export default function ClubReveal({
                   Kapat
                 </button>
               </div>
-            </motion.div>
+            </div>
           </motion.div>
         </motion.div>
       )}

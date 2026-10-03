@@ -27,6 +27,10 @@ export default function FlagGame() {
   const g = useFlagGame();
   const accent = modeById(g.mode).accent;
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, [g.screen]);
+
   return (
     <main className="relative min-h-[100svh] overflow-hidden bg-[#06090f]">
       <motion.div
