@@ -3,6 +3,8 @@
 import { useState, useCallback, useEffect, type ReactNode } from "react";
 import dynamic from "next/dynamic";
 import { countries, type Country } from "@/data/destinations";
+import { SECRET_DESTINATION } from "@/data/secret";
+import { slugify } from "@/lib/slug";
 import { useScrollShake } from "@/hooks/useScrollShake";
 import FloatingNav from "@/components/FloatingNav";
 import SecretRoute from "@/components/SecretRoute";
@@ -20,6 +22,28 @@ const CountryWheel = dynamic(() => import("@/features/country-wheel/CountryWheel
 const ResponsiveHero = dynamic(() => import("@/components/ResponsiveHero"));
 
 type View = "landing" | "flying" | "cities";
+
+/**
+ * Ülke görünümünün adresi.
+ *
+ * Seçilen ülkenin şehir görünümü eskiden yalnızca React state'iydi: adres
+ * çubuğu wangoh.com'da kalıyordu. Paylaşılamıyor, yer imine eklenemiyor,
+ * yenileyince kayboluyordu ve geri tuşu siteden çıkarıyordu.
+ *
+ * Artık uçuş başlarken adres /portekiz oluyor — sitenin zaten var olan, sunucu
+ * tarafında üretilen ülke sayfasının adresi. Yenilenirse ya da paylaşılırsa o
+ * tam sayfa açılıyor.
+ *
+ * slugify burada bilerek doğrudan kullanılıyor, @/content/guides'tan
+ * countrySlug değil: o modül 71 rehberin tamamını içeri çekiyor ve bu bileşen
+ * ana sayfanın ilk yüklemesinde. Oradan import etmek ~1.8 MB'ı açılışa taşırdı.
+ */
+const ROUTABLE: Country[] = [...countries, SECRET_DESTINATION];
+const hrefFor = (country: Country) => `/${slugify(country.name)}`;
+const countryAtPath = (pathname: string): Country | null => {
+  const slug = pathname.replace(/^\/+|\/+$/g, "");
+  return slug ? (ROUTABLE.find((c) => slugify(c.name) === slug) ?? null) : null;
+};
 
 export default function HomeExperience({ guideLinks }: { guideLinks: ReactNode }) {
   const [view, setView] = useState<View>("landing");
@@ -40,6 +64,12 @@ export default function HomeExperience({ guideLinks }: { guideLinks: ReactNode }
     ).matches;
     setView(skipHeavyFlight ? "cities" : "flying");
     if (skipHeavyFlight) window.scrollTo({ top: 0, behavior: "instant" });
+
+    // Uçuş başlarken adres de değişsin; böylece animasyon sırasında geri tuşuna
+    // basan da ana sayfaya döner, siteden çıkmaz. Next bu çağrıyı kendi
+    // router'ına entegre ediyor (sayfayı yeniden yüklemiyor).
+    const href = hrefFor(country);
+    if (window.location.pathname !== href) window.history.pushState(null, "", href);
   }, []);
 
   const handleFlightComplete = useCallback(() => {
@@ -50,6 +80,26 @@ export default function HomeExperience({ guideLinks }: { guideLinks: ReactNode }
   const handleBack = useCallback(() => {
     setSelectedCountry(null);
     setView("landing");
+    // history.back() değil: Portekiz'den sonra Japonya'ya uçulduysa geri gitmek
+    // Portekiz'i açardı. "Tüm rotalar" her zaman ana sayfaya dönmeli.
+    if (window.location.pathname !== "/") window.history.pushState(null, "", "/");
+  }, []);
+
+  // Tarayıcının geri/ileri tuşları: adres neyse onu göster.
+  useEffect(() => {
+    const onPopState = () => {
+      const country = countryAtPath(window.location.pathname);
+      if (country) {
+        setSelectedCountry(country);
+        setView("cities");
+        window.scrollTo({ top: 0, behavior: "instant" });
+      } else {
+        setSelectedCountry(null);
+        setView("landing");
+      }
+    };
+    window.addEventListener("popstate", onPopState);
+    return () => window.removeEventListener("popstate", onPopState);
   }, []);
 
   // Stable identities. Inline arrows here previously re-created these on every

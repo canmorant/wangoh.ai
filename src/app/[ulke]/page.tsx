@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import {
   findCountryBySlug,
   countrySlug,
@@ -14,6 +14,7 @@ import Breadcrumbs from "@/components/guide/Breadcrumbs";
 import ImageCredits from "@/components/ImageCredits";
 import JsonLd from "@/components/guide/JsonLd";
 import { countryHubFor } from "@/content/countryHubs";
+import { canonicalCountrySlug } from "@/lib/countryAliases";
 import SiteFooter from "@/components/SiteFooter";
 import AdSenseScript from "@/components/AdSenseScript";
 
@@ -67,7 +68,14 @@ export async function generateMetadata({
 export default async function CountryPage({ params }: { params: Promise<Params> }) {
   const { ulke } = await params;
   const country = findCountryBySlug(ulke);
-  if (!country) notFound();
+  if (!country) {
+    // /portugal, /japan, /türkiye → asıl Türkçe adrese kalıcı (308) yönlendirme.
+    // Yalnızca harf farkı olan /Portekiz bilerek yönlendirilmiyor; nedeni
+    // canonicalCountrySlug içinde.
+    const canonical = canonicalCountrySlug(ulke);
+    if (canonical) permanentRedirect(`/${canonical}`);
+    notFound();
+  }
   const hub = countryHubFor(country.code);
   const writtenCount = country.cities.filter((city) => guideFor(country.code, city.name)).length;
 

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ImageCredits from "@/components/ImageCredits";
 import Image from "next/image";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import {
   allCityPaths,
   findCountryBySlug,
@@ -19,6 +19,7 @@ import JsonLd from "@/components/guide/JsonLd";
 import { dietaryGuideFor, googleMapsSearchUrl } from "@/content/dietary";
 import SiteFooter from "@/components/SiteFooter";
 import AdSenseScript from "@/components/AdSenseScript";
+import { canonicalCountrySlug } from "@/lib/countryAliases";
 
 type Params = { ulke: string; sehir: string };
 
@@ -78,8 +79,14 @@ export async function generateMetadata({
 export default async function CityGuidePage({ params }: { params: Promise<Params> }) {
   const { ulke, sehir } = await params;
   const country = findCountryBySlug(ulke);
-  const city = country ? findCityBySlug(country, sehir) : null;
-  if (!country || !city) notFound();
+  if (!country) {
+    // /portugal/lizbon → /portekiz/lizbon; şehir kısmı korunur.
+    const canonical = canonicalCountrySlug(ulke);
+    if (canonical) permanentRedirect(`/${canonical}/${sehir}`);
+    notFound();
+  }
+  const city = findCityBySlug(country, sehir);
+  if (!city) notFound();
 
   const guide = guideFor(country.code, city.name);
   const dietary = dietaryGuideFor(country.code, city.name);
