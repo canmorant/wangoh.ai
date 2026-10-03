@@ -87,6 +87,18 @@ export default async function LocaleLayout({ children, params }: Props) {
       <body>
         <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
         <ServiceWorkerRegister />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-QJSHGD467K"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-QJSHGD467K');
+          `}
+        </Script>
         {process.env.VERCEL ? (
           <Script src="/_vercel/insights/script.js" strategy="afterInteractive" />
         ) : null}
