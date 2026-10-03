@@ -1,4 +1,7 @@
 import type { NextConfig } from "next";
+import createNextIntlPlugin from "next-intl/plugin";
+
+const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 /**
  * İki hedef, tek kod tabanı.
@@ -14,6 +17,12 @@ import type { NextConfig } from "next";
 const isApp = process.env.BUILD_TARGET === "app";
 
 const nextConfig: NextConfig = {
+  experimental: {
+    // Kök layout üst seviye dinamik bir segmentte (app/[locale]/layout.tsx).
+    // Next 16 dokümanı bu yapı için global-not-found.tsx öneriyor: hiçbir
+    // route'a uymayan istekleri layout render etmeden karşılıyor.
+    globalNotFound: true,
+  },
   ...(isApp
     ? {
         output: "export" as const,
@@ -63,4 +72,4 @@ const nextConfig: NextConfig = {
       }),
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);

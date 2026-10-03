@@ -1,4 +1,5 @@
 import { Country, countries } from "@/data/countries";
+import { COUNTRY_NAMES } from "@/lib/countryNames.gen";
 
 /**
  * Canonicalises a guess for comparison.
@@ -29,7 +30,20 @@ export function normalize(input: string): string {
 
 /** Every accepted spelling for a country, pre-normalised. */
 export function acceptedFor(c: Country): Set<string> {
-  const raw = [c.name, c.officialName, c.iso2, c.iso3, ...c.aliases, ...EXTRA_ALIASES[c.iso2] ?? []];
+  // Sitenin desteklediği diğer dillerdeki ortak adlar da kabul ediliyor
+  // (world-countries): Almanca arayüzde "Spanien", Rusçada "Испания".
+  // normalize() Latin dışı harfleri silmiyor, Kiril de çalışıyor. İki ülkenin
+  // aynı adı paylaştığı durumlar aşağıdaki belirsizlik korumasına takılır.
+  const localized = Object.values(COUNTRY_NAMES[c.iso2] ?? {});
+  const raw = [
+    c.name,
+    c.officialName,
+    c.iso2,
+    c.iso3,
+    ...c.aliases,
+    ...(EXTRA_ALIASES[c.iso2] ?? []),
+    ...localized,
+  ];
   const set = new Set<string>();
   for (const r of raw) {
     const n = normalize(r);

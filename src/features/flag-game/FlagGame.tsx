@@ -1,27 +1,44 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { countries } from "@/data/countries";
 import { useFlagGame } from "./useFlagGame";
-import { GAME_MODES, DURATION_LABEL, modeById } from "./gameModes";
+import { GAME_MODES, modeById } from "./gameModes";
 import { MAX_HINTS, currentTier } from "./scoring";
 import { EASE_OUT, EASE_SOFT } from "@/lib/motion";
-import { continentTr, subregionTr } from "@/lib/geoTr";
+import { useFormatter, useLocale, useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import { continentLabel, subregionLabel } from "@/lib/geo";
+import { countryName } from "@/lib/countryNames";
+import { COUNTRY_OFFICIAL_NAMES } from "@/lib/countryOfficialNames.gen";
+import type { ForeignLocale } from "@/lib/countryNames.gen";
+import type { Country } from "@/data/countries";
 
-const CONTINENTS: { id: string; label: string }[] = [
-  { id: "Europe", label: "Avrupa" },
-  { id: "Asia", label: "Asya" },
-  { id: "Africa", label: "Afrika" },
-  { id: "Americas", label: "Amerika" },
-  { id: "Oceania", label: "Okyanusya" },
-];
+// Etiketler Geo namespace'inden (çark ile ortak).
+const CONTINENTS = ["Europe", "Asia", "Africa", "Americas", "Oceania"] as const;
 
 
-/** iso3 -> common name, for turning border codes into readable hints. */
-const NAME_BY_ISO3 = new Map(countries.map((c) => [c.iso3, c.name]));
-const nameOf = (iso3: string) => NAME_BY_ISO3.get(iso3) ?? iso3;
+/** iso3 -> ülke, sınır kodlarını okunur ada çevirmek için. */
+const BY_ISO3 = new Map(countries.map((c) => [c.iso3, c]));
+
+/**
+ * Dile göre ad yardımcıları. Türkçede veri aynen; diğer dillerde world-countries.
+ * Cevap kontrolü bunlardan bağımsız (normalizeAnswer tüm dillerdeki adları kabul ediyor).
+ */
+function useCountryText() {
+  const locale = useLocale();
+  const name = (c: Country) => countryName(c.iso2, locale, c.name);
+  const official = (c: Country) =>
+    locale === "tr"
+      ? c.officialName
+      : (COUNTRY_OFFICIAL_NAMES[c.iso2]?.[locale as ForeignLocale] ?? c.officialName);
+  const nameOf = (iso3: string) => {
+    const c = BY_ISO3.get(iso3);
+    return c ? name(c) : iso3;
+  };
+  return { name, official, nameOf };
+}
 
 export default function FlagGame() {
   const g = useFlagGame();
@@ -65,26 +82,30 @@ const screenIn = {
 
 /* ============================== SETUP ============================== */
 function Setup({ g }: { g: G }) {
+  const t = useTranslations("FlagGame");
+  const tGeo = useTranslations("Geo");
   const mode = modeById(g.mode);
+  const durationLabel = (d: number) =>
+    d % 60 === 0 ? t("durationMinutes", { minutes: d / 60 }) : t("durationSeconds", { seconds: d });
   return (
     <motion.section {...screenIn} className="flex flex-1 flex-col justify-center">
       <p className="flex items-center gap-3 text-[11px] tracking-[0.4em] text-white/40 uppercase">
         <span className="inline-block h-px w-8 bg-white/20" />
-        {g.poolSize} bayrak
+        {t("poolSize", { count: g.poolSize })}
       </p>
       <h1 className="font-display mt-5 text-[clamp(2.4rem,6vw,3.8rem)] leading-[1.02] text-white">
-        Bayrağı Bil
+        {t("title")}
       </h1>
       <p className="mt-3 max-w-md text-[14px] leading-relaxed text-white/45">
-        Dünyadaki her ülke. Üç ipucu; her biri bir öncekinden daha az puan.
+        {t("intro")}
       </p>
 
       {g.loaded && g.saved.played > 0 && (
         <div className="mt-7 flex flex-wrap items-center gap-x-7 gap-y-3">
-          <Stat label="Seviye" value={g.progression.level} />
-          <Stat label="XP" value={g.saved.xp} />
-          <Stat label="En iyi seri" value={g.saved.bestStreak} />
-          <Stat label="Öğrenilen" value={g.saved.learned.length} />
+          <Stat label={t("level")} value={g.progression.level} />
+          <Stat label={t("xp")} value={g.saved.xp} />
+          <Stat label={t("bestStreak")} value={g.saved.bestStreak} />
+          <Stat label={t("learned")} value={g.saved.learned.length} />
         </div>
       )}
 
@@ -106,14 +127,14 @@ function Setup({ g }: { g: G }) {
                 className="block text-[13px] font-semibold tracking-[0.06em]"
                 style={{ color: active ? m.accent : "rgba(255,255,255,0.9)" }}
               >
-                {m.name}
+                {t(`modes.${m.id}.name`)}
               </span>
               <span className="mt-1.5 block text-[12.5px] leading-relaxed text-white/40">
-                {m.tagline}
+                {t(`modes.${m.id}.tagline`)}
               </span>
               {g.loaded && g.saved.bestScore[m.id] > 0 && (
                 <span className="mt-2 block text-[10px] tracking-[0.2em] text-white/30 uppercase tabular-nums">
-                  Rekor {g.saved.bestScore[m.id]}
+                  {t("record", { score: g.saved.bestScore[m.id] })}
                 </span>
               )}
             </button>
@@ -124,32 +145,32 @@ function Setup({ g }: { g: G }) {
       {/* mode-specific options */}
       <AnimatePresence mode="wait">
         {mode.durations && (
-          <Options key="dur" label="Ne kadar sürsün?">
+          <Options key="dur" label={t("howLong")}>
             {mode.durations.map((d) => (
               <Chip key={d} active={g.duration === d} onClick={() => g.setDuration(d)} accent={mode.accent}>
-                {DURATION_LABEL[d]}
+                {durationLabel(d)}
               </Chip>
             ))}
           </Options>
         )}
         {mode.lives && (
-          <Options key="lives" label="Kaç can?">
+          <Options key="lives" label={t("howManyLives")}>
             {mode.lives.map((l) => (
               <Chip key={l} active={g.lives === l} onClick={() => g.setLives(l)} accent={mode.accent}>
-                {l} can
+                {t("livesCount", { count: l })}
               </Chip>
             ))}
           </Options>
         )}
       </AnimatePresence>
 
-      <Options label="Hangi bölge?">
+      <Options label={t("whichRegion")}>
         <Chip active={g.continent === null} onClick={() => g.setContinent(null)} accent={mode.accent}>
-          Tüm dünya
+          {t("wholeWorld")}
         </Chip>
-        {CONTINENTS.map((c) => (
-          <Chip key={c.id} active={g.continent === c.id} onClick={() => g.setContinent(c.id)} accent={mode.accent}>
-            {c.label}
+        {CONTINENTS.map((id) => (
+          <Chip key={id} active={g.continent === id} onClick={() => g.setContinent(id)} accent={mode.accent}>
+            {continentLabel(id, tGeo)}
           </Chip>
         ))}
       </Options>
@@ -158,7 +179,7 @@ function Setup({ g }: { g: G }) {
         onClick={g.start}
         className="mt-10 self-start rounded-full bg-white px-9 py-3.5 text-[12px] font-semibold tracking-[0.2em] text-black uppercase transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:scale-[1.04]"
       >
-        Oynamaya başla
+        {t("start")}
       </button>
     </motion.section>
   );
@@ -166,6 +187,9 @@ function Setup({ g }: { g: G }) {
 
 /* ============================= PLAYING ============================= */
 function Playing({ g, accent }: { g: G; accent: string }) {
+  const t = useTranslations("FlagGame");
+  const tGeo = useTranslations("Geo");
+  const { name, nameOf } = useCountryText();
   const [guess, setGuess] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
   /** Timestamp guard against a double submit (Enter + click firing together). */
@@ -224,12 +248,12 @@ function Playing({ g, accent }: { g: G; accent: string }) {
       {/* ---- HUD ---- */}
       <header className="mb-6 flex flex-wrap items-center justify-between gap-x-6 gap-y-3">
         <div className="flex items-center gap-5">
-          <AnimatedStat label="Puan" value={g.score} />
-          <Stat label="Tur" value={g.round} />
-          <Stat label="Seri" value={g.streak} />
+          <AnimatedStat label={t("score")} value={g.score} />
+          <Stat label={t("round")} value={g.round} />
+          <Stat label={t("streak")} value={g.streak} />
           {g.mode === "survival" && (
             <div>
-              <p className="text-[9px] tracking-[0.26em] text-white/30 uppercase">Can</p>
+              <p className="text-[9px] tracking-[0.26em] text-white/30 uppercase">{t("lives")}</p>
               <p className="mt-0.5 text-[1.1rem] leading-none">
                 {"♥".repeat(Math.max(0, g.livesLeft))}
                 <span className="text-white/15">{"♥".repeat(Math.max(0, g.lives - g.livesLeft))}</span>
@@ -241,7 +265,7 @@ function Playing({ g, accent }: { g: G; accent: string }) {
           onClick={g.quit}
           className="min-h-11 rounded-full border border-white/12 px-4 py-1.5 text-[10.5px] tracking-[0.16em] text-white/50 uppercase transition-colors duration-400 hover:border-white/30 hover:text-white"
         >
-          Oturumu bitir
+          {t("endSession")}
         </button>
       </header>
 
@@ -249,7 +273,7 @@ function Playing({ g, accent }: { g: G; accent: string }) {
       {g.mode === "timeattack" && (
         <div className="mb-7">
           <div className="mb-2 flex items-baseline justify-between">
-            <span className="text-[9px] tracking-[0.26em] text-white/30 uppercase">Kalan süre</span>
+            <span className="text-[9px] tracking-[0.26em] text-white/30 uppercase">{t("timeLeft")}</span>
             <motion.span
               animate={{ color: low ? "#ff6b6b" : "#ffffff", scale: low ? [1, 1.06, 1] : 1 }}
               transition={{ duration: 0.6, repeat: low ? Infinity : 0 }}
@@ -287,7 +311,7 @@ function Playing({ g, accent }: { g: G; accent: string }) {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={`/flags/${c.iso2.toLowerCase()}.svg`}
-                  alt={revealed ? `${c.name} bayrağı` : "Tanımlanacak bayrak"}
+                  alt={revealed ? t("flagAlt", { country: name(c) }) : t("flagToIdentify")}
                   width={840}
                   height={630}
                   className="block aspect-[4/3] w-full bg-[#0d1119] object-contain"
@@ -312,7 +336,7 @@ function Playing({ g, accent }: { g: G; accent: string }) {
               >
                 <span>{g.combo.icon}</span>
                 <span className="tracking-[0.14em] uppercase">
-                  {g.combo.label} · üst üste {g.streak}
+                  {t(`combo.${g.combo.key}`)} · {t("inARow", { count: g.streak })}
                 </span>
               </motion.div>
             )}
@@ -322,7 +346,7 @@ function Playing({ g, accent }: { g: G; accent: string }) {
                 animate={{ opacity: 1 }}
                 className="text-center text-[11px] tracking-[0.2em] text-white/25 uppercase"
               >
-                {tier.icon} {g.streak} seri
+                {tier.icon} {t("streakCount", { count: g.streak })}
               </motion.p>
             )}
           </AnimatePresence>
@@ -332,22 +356,22 @@ function Playing({ g, accent }: { g: G; accent: string }) {
         <div className="w-full max-w-[420px] space-y-2">
           <AnimatePresence initial={false}>
             {c && g.hints >= 1 && (
-              <Hint key="h1" label="Başkent">
-                {c.capital.length ? c.capital.join(" · ") : "Kayıtlı resmî başkent yok"}
+              <Hint key="h1" label={t("hintCapital")}>
+                {c.capital.length ? c.capital.join(" · ") : t("noCapital")}
               </Hint>
             )}
             {c && g.hints >= 2 && (
-              <Hint key="h2" label="Kıta">
-                {continentTr(c.continent)}
-                {c.subregion ? ` — ${subregionTr(c.subregion)}` : ""}
+              <Hint key="h2" label={t("hintContinent")}>
+                {continentLabel(c.continent, tGeo)}
+                {c.subregion ? ` — ${subregionLabel(c.subregion, tGeo)}` : ""}
               </Hint>
             )}
             {c && g.hints >= 3 && (
-              <Hint key="h3" label="Kara sınırı">
+              <Hint key="h3" label={t("hintBorders")}>
                 {c.borders.length
                   ? c.borders.slice(0, 4).map(nameOf).join(", ") +
-                    (c.borders.length > 4 ? ` — ve ${c.borders.length - 4} tane daha` : "")
-                  : "Bu ülkenin kara sınırı yok."}
+                    (c.borders.length > 4 ? t("andMore", { count: c.borders.length - 4 }) : "")
+                  : t("noBordersSentence")}
               </Hint>
             )}
           </AnimatePresence>
@@ -358,7 +382,7 @@ function Playing({ g, accent }: { g: G; accent: string }) {
           {!revealed ? (
             <form onSubmit={onSubmit}>
               <label htmlFor="guess" className="sr-only">
-                Bu bayrak hangi ülkeye ait?
+                {t("guessLabel")}
               </label>
               <div className="flex items-center gap-2 rounded-full border border-white/12 bg-white/[0.04] p-1.5 backdrop-blur-xl transition-colors duration-500 focus-within:border-white/30">
                 <input
@@ -366,7 +390,7 @@ function Playing({ g, accent }: { g: G; accent: string }) {
                   ref={inputRef}
                   value={guess}
                   onChange={(e) => setGuess(e.target.value)}
-                  placeholder="Ülkenin adını yaz"
+                  placeholder={t("guessPlaceholder")}
                   autoComplete="off"
                   autoCorrect="off"
                   spellCheck={false}
@@ -377,7 +401,7 @@ function Playing({ g, accent }: { g: G; accent: string }) {
                   type="submit"
                   className="min-h-11 shrink-0 rounded-full bg-white px-4 py-2.5 text-[10.5px] font-semibold tracking-[0.14em] text-black uppercase transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:scale-[1.04] sm:px-5 sm:text-[11px] sm:tracking-[0.18em]"
                 >
-                  Tahmin et
+                  {t("submit")}
                 </button>
               </div>
 
@@ -388,14 +412,14 @@ function Playing({ g, accent }: { g: G; accent: string }) {
                   disabled={g.hints >= MAX_HINTS}
                   className="min-h-11 rounded-full border border-white/12 px-4 py-2 text-[10.5px] tracking-[0.16em] text-white/60 uppercase transition-colors duration-400 hover:border-white/30 hover:text-white disabled:opacity-40"
                 >
-                  {g.hints >= MAX_HINTS ? "Tüm ipuçları açıldı" : `İpucu ver (${g.hints}/${MAX_HINTS})`}
+                  {g.hints >= MAX_HINTS ? t("allHintsUsed") : t("giveHint", { used: g.hints, max: MAX_HINTS })}
                 </button>
                 <button
                   type="button"
                   onClick={g.giveUp}
                   className="min-h-11 rounded-full border border-white/12 px-4 py-2 text-[10.5px] tracking-[0.16em] text-white/45 uppercase transition-colors duration-400 hover:border-white/30 hover:text-white"
                 >
-                  Cevabı göster
+                  {t("showAnswer")}
                 </button>
               </div>
             </form>
@@ -414,7 +438,7 @@ function Playing({ g, accent }: { g: G; accent: string }) {
                   transition={{ duration: 0.28, ease: EASE_SOFT }}
                   className="text-[12.5px] text-white/45"
                 >
-                  {g.message}
+                  {t(`feedback.${g.message}`)}
                 </motion.p>
               )}
             </AnimatePresence>
@@ -427,6 +451,9 @@ function Playing({ g, accent }: { g: G; accent: string }) {
 
 /* --------------------------- round result --------------------------- */
 function RoundResult({ g, accent }: { g: G; accent: string }) {
+  const t = useTranslations("FlagGame");
+  const tGeo = useTranslations("Geo");
+  const { name, official, nameOf } = useCountryText();
   const c = g.current!;
   const correct = g.status === "correct";
   return (
@@ -442,10 +469,10 @@ function RoundResult({ g, accent }: { g: G; accent: string }) {
             className="text-[10px] tracking-[0.36em] uppercase"
             style={{ color: correct ? accent : "rgba(255,255,255,0.4)" }}
           >
-            {correct ? "Doğru" : "Cevap şuydu"}
+            {correct ? t("correct") : t("answerWas")}
           </p>
-          <h2 className="font-display mt-2 text-[2rem] leading-none text-white">{c.name}</h2>
-          <p className="mt-1 text-[12px] text-white/40">{c.officialName}</p>
+          <h2 className="font-display mt-2 text-[2rem] leading-none text-white">{name(c)}</h2>
+          <p className="mt-1 text-[12px] text-white/40">{official(c)}</p>
         </div>
         {correct && g.lastScore && (
           <motion.div
@@ -458,20 +485,23 @@ function RoundResult({ g, accent }: { g: G; accent: string }) {
               +{g.lastScore.total}
             </p>
             <p className="mt-1 text-[9.5px] tracking-[0.14em] text-white/35 uppercase tabular-nums">
-              {g.lastScore.base} temel
-              {g.lastScore.speedBonus > 0 && ` · +${g.lastScore.speedBonus} hız`}
-              {g.lastScore.comboBonus > 0 && ` · +${g.lastScore.comboBonus} kombo`}
+              {t("scoreBase", { points: g.lastScore.base })}
+              {g.lastScore.speedBonus > 0 && t("scoreSpeed", { points: g.lastScore.speedBonus })}
+              {g.lastScore.comboBonus > 0 && t("scoreCombo", { points: g.lastScore.comboBonus })}
             </p>
           </motion.div>
         )}
       </div>
 
       <div className="mt-5 space-y-2 border-t border-white/[0.08] pt-4 text-[13px]">
-        <Fact label="Başkent" value={c.capital.join(" · ") || "—"} />
-        <Fact label="Kıta" value={`${continentTr(c.continent)}${c.subregion ? ` — ${subregionTr(c.subregion)}` : ""}`} />
+        <Fact label={t("hintCapital")} value={c.capital.join(" · ") || "—"} />
         <Fact
-          label="Kara sınırı"
-          value={c.borders.length ? c.borders.map(nameOf).join(", ") : "Yok — bu ülkenin kara sınırı yok."}
+          label={t("hintContinent")}
+          value={`${continentLabel(c.continent, tGeo)}${c.subregion ? ` — ${subregionLabel(c.subregion, tGeo)}` : ""}`}
+        />
+        <Fact
+          label={t("hintBorders")}
+          value={c.borders.length ? c.borders.map(nameOf).join(", ") : t("noBordersFact")}
         />
       </div>
 
@@ -480,13 +510,13 @@ function RoundResult({ g, accent }: { g: G; accent: string }) {
           onClick={g.nextRound}
           className="rounded-full bg-white px-6 py-2.5 text-[11px] font-semibold tracking-[0.18em] text-black uppercase transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:scale-[1.04]"
         >
-          Sıradaki bayrak
+          {t("nextFlag")}
         </button>
         <Link
           href="/"
           className="rounded-full border border-white/12 px-5 py-2.5 text-[11px] tracking-[0.16em] text-white/60 uppercase transition-colors duration-400 hover:border-white/30 hover:text-white"
         >
-          Bu ülkeyi keşfet
+          {t("exploreCountry")}
         </Link>
       </div>
     </motion.div>
@@ -495,32 +525,47 @@ function RoundResult({ g, accent }: { g: G; accent: string }) {
 
 /* ============================= RESULTS ============================= */
 function Results({ g, accent }: { g: G; accent: string }) {
+  const t = useTranslations("FlagGame");
+  const format = useFormatter();
   return (
     <motion.section {...screenIn} className="flex flex-1 flex-col justify-center">
-      <p className="text-[11px] tracking-[0.42em] text-white/40 uppercase">Oturum bitti</p>
+      <p className="text-[11px] tracking-[0.42em] text-white/40 uppercase">{t("sessionOver")}</p>
       <h1 className="font-display mt-4 text-[clamp(3rem,9vw,5rem)] leading-none text-white">
         <AnimatedNumber value={g.score} />
-        <span className="ml-3 text-[0.35em] tracking-[0.2em] text-white/35 uppercase">puan</span>
+        <span className="ml-3 text-[0.35em] tracking-[0.2em] text-white/35 uppercase">{t("points")}</span>
       </h1>
 
       <div className="mt-10 grid grid-cols-2 gap-x-6 gap-y-6 sm:grid-cols-4">
-        <Stat label="Doğru" value={g.correct} />
-        <Stat label="Yanlış" value={g.wrong} />
-        <Stat label="İsabet" value={`%${g.accuracy}`} />
-        <Stat label="En iyi seri" value={g.bestStreak} />
-        <Stat label="Ort. süre" value={g.avgTime ? `${(g.avgTime / 1000).toFixed(1)} sn` : "—"} />
-        <Stat label="Kullanılan ipucu" value={g.hintsUsed} />
-        <Stat label="Öğrenilen ülke" value={g.loaded ? g.saved.learned.length : 0} />
-        <Stat label="Oynanan süre" value={`${Math.floor(g.elapsedSec / 60)}dk ${g.elapsedSec % 60}sn`} />
+        <Stat label={t("statCorrect")} value={g.correct} />
+        <Stat label={t("statWrong")} value={g.wrong} />
+        {/* Yüzde işaretinin yeri dile göre: tr %85, en 85%, de 85 % */}
+        <Stat label={t("accuracy")} value={format.number(g.accuracy / 100, { style: "percent" })} />
+        <Stat label={t("bestStreak")} value={g.bestStreak} />
+        <Stat
+          label={t("avgTime")}
+          value={
+            g.avgTime
+              ? t("secondsValue", {
+                  value: format.number(g.avgTime / 1000, { minimumFractionDigits: 1, maximumFractionDigits: 1 }),
+                })
+              : "—"
+          }
+        />
+        <Stat label={t("hintsUsed")} value={g.hintsUsed} />
+        <Stat label={t("learnedCountries")} value={g.loaded ? g.saved.learned.length : 0} />
+        <Stat
+          label={t("timePlayed")}
+          value={t("timePlayedValue", { minutes: Math.floor(g.elapsedSec / 60), seconds: g.elapsedSec % 60 })}
+        />
       </div>
 
       {/* level progress */}
       {g.loaded && (
         <div className="mt-10 max-w-sm">
           <div className="mb-2 flex items-baseline justify-between text-[10px] tracking-[0.2em] text-white/35 uppercase">
-            <span>Seviye {g.progression.level}</span>
+            <span>{t("levelValue", { level: g.progression.level })}</span>
             <span className="tabular-nums">
-              {g.progression.into} / {g.progression.needed} XP
+              {g.progression.into} / {g.progression.needed} {t("xp")}
             </span>
           </div>
           <div className="h-[3px] w-full overflow-hidden rounded-full bg-white/[0.07]">
@@ -540,15 +585,15 @@ function Results({ g, accent }: { g: G; accent: string }) {
           onClick={g.start}
           className="rounded-full bg-white px-7 py-3 text-[11.5px] font-semibold tracking-[0.18em] text-black uppercase transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:scale-[1.04]"
         >
-          Tekrar oyna
+          {t("playAgain")}
         </button>
-        <Ghost onClick={g.backToSetup}>Modu değiştir</Ghost>
-        {g.misses.length > 0 && <Ghost onClick={g.review}>{g.misses.length} yanlışı incele</Ghost>}
+        <Ghost onClick={g.backToSetup}>{t("changeMode")}</Ghost>
+        {g.misses.length > 0 && <Ghost onClick={g.review}>{t("reviewMisses", { count: g.misses.length })}</Ghost>}
         <Link
           href="/"
           className="rounded-full border border-white/12 px-6 py-3 text-[11.5px] tracking-[0.16em] text-white/60 uppercase transition-colors duration-400 hover:border-white/30 hover:text-white"
         >
-          Ülkeleri keşfet
+          {t("exploreCountries")}
         </Link>
       </div>
     </motion.section>
@@ -557,13 +602,17 @@ function Results({ g, accent }: { g: G; accent: string }) {
 
 /* ============================== REVIEW ============================== */
 function Review({ g }: { g: G }) {
+  const t = useTranslations("FlagGame");
+  const tc = useTranslations("Common");
+  const tGeo = useTranslations("Geo");
+  const { name, nameOf } = useCountryText();
   return (
     <motion.section {...screenIn} className="flex flex-1 flex-col py-6">
       <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
         <div>
-          <p className="text-[11px] tracking-[0.42em] text-white/40 uppercase">İnceleme</p>
+          <p className="text-[11px] tracking-[0.42em] text-white/40 uppercase">{t("review")}</p>
           <h1 className="font-display mt-3 text-[clamp(2rem,5vw,3rem)] leading-none text-white">
-            Bilemediğin {g.misses.length} bayrak
+            {t("missedTitle", { count: g.misses.length })}
           </h1>
         </div>
         <div className="flex flex-wrap gap-2">
@@ -571,9 +620,9 @@ function Review({ g }: { g: G }) {
             onClick={g.replayMissed}
             className="rounded-full bg-white px-6 py-2.5 text-[11px] font-semibold tracking-[0.18em] text-black uppercase transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:scale-[1.04]"
           >
-            Bunları tekrar oyna
+            {t("replayMissed")}
           </button>
-          <Ghost onClick={() => g.setScreen("results")}>Geri</Ghost>
+          <Ghost onClick={() => g.setScreen("results")}>{tc("back")}</Ghost>
         </div>
       </div>
 
@@ -589,18 +638,20 @@ function Review({ g }: { g: G }) {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={`/flags/${c.iso2.toLowerCase()}.svg`}
-              alt={`${c.name} bayrağı`}
+              alt={t("flagAlt", { country: name(c) })}
               width={84}
               height={63}
               className="h-[63px] w-[84px] shrink-0 rounded-[3px] object-cover ring-1 ring-white/12"
             />
             <div className="min-w-0">
-              <h3 className="font-display text-[1.15rem] leading-tight text-white">{c.name}</h3>
+              <h3 className="font-display text-[1.15rem] leading-tight text-white">{name(c)}</h3>
               <p className="mt-1 text-[12px] text-white/45">
-                {c.capital.join(" · ") || "—"} · {continentTr(c.continent)}
+                {c.capital.join(" · ") || "—"} · {continentLabel(c.continent, tGeo)}
               </p>
               <p className="mt-1 text-[11.5px] leading-relaxed text-white/35">
-                {c.borders.length ? `Komşuları: ${c.borders.map(nameOf).join(", ")}` : "Kara sınırı yok"}
+                {c.borders.length
+                  ? t("neighbours", { list: c.borders.map(nameOf).join(", ") })
+                  : t("noBorders")}
               </p>
             </div>
           </motion.div>

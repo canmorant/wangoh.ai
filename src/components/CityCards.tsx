@@ -1,13 +1,16 @@
 "use client";
 
 import { useRef } from "react";
-import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 import type { Country, City } from "@/data/destinations";
 // Yalnızca tip — değer import edilirse 331 rehberin tamamı (~1.8 MB) bu
 // bileşenin parçasına geri sızar. Veri ana sayfadan prop olarak geliyor.
 import type { CityCardData } from "@/content/cityCardData";
 import { slugify } from "@/lib/slug";
+import { useFormatter, useLocale, useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import { countryName } from "@/lib/countryNames";
+import { localizeBestSeason, localizeBudget, localizeFlightTime } from "@/lib/travelData";
 
 interface CityCardsProps {
   country: Country;
@@ -24,6 +27,14 @@ export default function CityCards({ country, data, onBack }: CityCardsProps) {
   const isInView = useInView(ref, { once: true, margin: "-50px" });
   const hub = data.hubs[country.code];
   const missing = new Set(data.missingGuides);
+  const t = useTranslations("CityCards");
+  const tData = useTranslations("TravelData");
+  const format = useFormatter();
+  const locale = useLocale();
+  const name = countryName(country.code, locale, country.name);
+  // Hub metinleri (giriş paragrafı, özel başlık) henüz yalnızca Türkçe; diğer
+  // dillerde okunamayacak bir paragraf göstermek yerine genel başlık kullanılıyor.
+  const hubText = locale === "tr" ? hub : undefined;
 
   return (
     <motion.section
@@ -40,12 +51,12 @@ export default function CityCards({ country, data, onBack }: CityCardsProps) {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
           className="group mb-10 flex min-h-11 items-center gap-2 text-white/50 transition-colors hover:text-[var(--gold)] sm:mb-12"
-          aria-label="Ülkelere dön"
+          aria-label={t("backLabel")}
         >
           <svg className="w-5 h-5 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16l-4-4m0 0l4-4m-4 4h18" />
           </svg>
-          <span className="text-sm tracking-wider uppercase">Tüm Rotalar</span>
+          <span className="text-sm tracking-wider uppercase">{t("allRoutes")}</span>
         </motion.button>
 
         <motion.div
@@ -55,8 +66,11 @@ export default function CityCards({ country, data, onBack }: CityCardsProps) {
           className="mb-12 text-center sm:mb-16"
         >
           <span className="text-5xl mb-4 block">{country.flag}</span>
-          <h1 className="mb-4 text-[clamp(2.1rem,10vw,3rem)] font-light leading-tight text-white">{country.name} rotasını keşfet</h1>
-          <p className="text-white/50 max-w-lg mx-auto">{country.description}</p>
+          <h1 className="mb-4 text-[clamp(2.1rem,10vw,3rem)] font-light leading-tight text-white">{t("title", { country: name })}</h1>
+          <p className="text-white/50 max-w-lg mx-auto">
+            {/* Çarktan gelen ülkelerin açıklaması worldAdapter'daki Türkçe yer tutucu. */}
+            {country.cities.length === 0 ? t("empty.description", { country: name }) : country.description}
+          </p>
         </motion.div>
 
         {hub && country.cities.length > 0 && (
@@ -71,33 +85,42 @@ export default function CityCards({ country, data, onBack }: CityCardsProps) {
               <div>
                 <p className="flex items-center gap-3 text-[10px] tracking-[0.28em] text-[var(--gold)]/75 uppercase">
                   <span className="inline-block h-px w-7 bg-[var(--gold)]/35" />
-                  {country.name} gezi rehberi
+                  {t("eyebrow", { country: name })}
                 </p>
                 <h2
                   id={`${country.code.toLowerCase()}-overview-title`}
                   className="font-display mt-4 text-[clamp(1.7rem,3.3vw,2.35rem)] leading-tight text-white"
                 >
-                  {country.name} hakkında kısa bilgiler
+                  {t("overviewTitle", { country: name })}
                 </h2>
-                <p className="mt-5 max-w-[70ch] text-[15px] leading-[1.8] text-white/60">
-                  {hub.intro}
-                </p>
+                {hubText && (
+                  <p className="mt-5 max-w-[70ch] text-[15px] leading-[1.8] text-white/60">
+                    {hubText.intro}
+                  </p>
+                )}
                 <Link
                   href={countryPath(country)}
                   className="mt-6 inline-flex items-center gap-2 text-[11px] tracking-[0.16em] text-[var(--gold)] uppercase transition-colors hover:text-white"
                 >
-                  Ayrıntılı ülke rehberini oku
+                  {t("readCountryGuide")}
                   <span aria-hidden>→</span>
                 </Link>
               </div>
 
               <dl className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.07] self-start">
-                <OverviewFact label="Başkent" value={country.capital} />
-                <OverviewFact label="Bütçe" value={country.budget} />
-                <OverviewFact label="En iyi dönem" value={country.bestSeason} />
+                <OverviewFact label={t("fact.capital")} value={country.capital} />
+                <OverviewFact label={t("fact.budget")} value={localizeBudget(country.budget, locale, tData)} />
                 <OverviewFact
-                  label={country.code === "TR" ? "Ulaşım" : "İstanbul'dan"}
-                  value={country.code === "TR" ? "Rotaya göre" : country.flightTime}
+                  label={t("fact.bestSeason")}
+                  value={localizeBestSeason(country.bestSeason, locale, tData, format)}
+                />
+                <OverviewFact
+                  label={country.code === "TR" ? t("fact.transport") : t("fact.fromIstanbul")}
+                  value={
+                    country.code === "TR"
+                      ? t("fact.byRoute")
+                      : localizeFlightTime(country.flightTime, locale, tData)
+                  }
                 />
               </dl>
             </div>
@@ -115,29 +138,28 @@ export default function CityCards({ country, data, onBack }: CityCardsProps) {
           >
             <span className="text-4xl">{country.flag}</span>
             <h3 className="font-display mt-4 text-2xl text-white">
-              Haritanın dışına indin
+              {t("empty.title")}
             </h3>
             <p className="mt-3 text-[13.5px] leading-relaxed text-white/50">
-              {country.name} için henüz bir rehber yazmadık. Rota gerçek,
-              varıştan sonrası sana kalmış.
+              {t("empty.body", { country: name })}
             </p>
             <button
               onClick={onBack}
               className="mt-7 rounded-full bg-white px-6 py-3 text-[11px] font-semibold tracking-[0.18em] text-black uppercase transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:scale-[1.04]"
             >
-              Kalkışlara dön
+              {t("empty.back")}
             </button>
           </motion.div>
         )}
 
         {country.cities.length > 0 && (
           <div className="mb-8">
-            <p className="text-[10px] tracking-[0.28em] text-white/35 uppercase">Şehir rehberleri</p>
+            <p className="text-[10px] tracking-[0.28em] text-white/35 uppercase">{t("cityGuides")}</p>
             <h2 className="font-display mt-3 text-[clamp(1.7rem,3.4vw,2.35rem)] text-white">
-              {hub?.heading ?? `${country.name}'da gezilecek şehirler`}
+              {hubText?.heading ?? t("citiesHeading", { country: name })}
             </h2>
             <p className="mt-3 text-[13.5px] leading-relaxed text-white/45">
-              {country.cities.length} özgün rota arasından sana en uygun şehri seç.
+              {t("chooseCity", { count: country.cities.length })}
             </p>
           </div>
         )}
@@ -173,11 +195,12 @@ function OverviewFact({ label, value }: { label: string; value: string }) {
 }
 
 function CityCard({ city, country, ready }: { city: City; country: Country; ready: boolean }) {
+  const t = useTranslations("CityCards");
   return (
     <Link
       href={cityPath(country, city)}
       className="group relative block h-[280px] cursor-pointer overflow-hidden rounded-2xl transition-transform duration-500 hover:scale-[1.03] hover:shadow-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 sm:h-[320px]"
-      aria-label={`${city.name} gezi rehberini aç`}
+      aria-label={t("openCityGuide", { city: city.name })}
     >
       <div
         className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
@@ -190,7 +213,7 @@ function CityCard({ city, country, ready }: { city: City; country: Country; read
         <h3 className="text-xl font-light text-white mb-1">{city.name}</h3>
         <p className="text-white/50 text-sm leading-relaxed">{city.description}</p>
         <div className="mt-3 flex items-center gap-2 text-[var(--gold)] text-xs tracking-wider uppercase opacity-0 translate-y-2 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0">
-          <span>{ready ? "Rehberi oku" : "Rehbere git"}</span>
+          <span>{ready ? t("readGuide") : t("goToGuide")}</span>
           <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>

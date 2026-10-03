@@ -229,12 +229,12 @@ console.log(`${countries.length} countries in play\n`);
 
 /* ------------------------------ combos -------------------------------- */
 {
-  ok("tier fires exactly at 3", comboTierAt(3)?.label === "Güzel");
-  ok("tier fires exactly at 5", comboTierAt(5)?.label === "Alev Aldın");
-  ok("tier fires exactly at 10", comboTierAt(10)?.label === "İnanılmaz");
-  ok("tier fires exactly at 20", comboTierAt(20)?.label === "Kâşif Ustası");
+  ok("tier fires exactly at 3", comboTierAt(3)?.key === "nice");
+  ok("tier fires exactly at 5", comboTierAt(5)?.key === "onFire");
+  ok("tier fires exactly at 10", comboTierAt(10)?.key === "incredible");
+  ok("tier fires exactly at 20", comboTierAt(20)?.key === "masterExplorer");
   ok("no tier between milestones", comboTierAt(7) === null);
-  ok("currentTier holds the highest earned", currentTier(14)?.label === "İnanılmaz");
+  ok("currentTier holds the highest earned", currentTier(14)?.key === "incredible");
   ok("currentTier is null before the first", currentTier(2) === null);
 }
 

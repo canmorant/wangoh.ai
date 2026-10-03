@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { creditFor } from "@/data/imageCredits";
 
 /**
@@ -12,6 +13,7 @@ import { creditFor } from "@/data/imageCredits";
  * CC0 ve kamu malı görseller atıf istemiyor, o yüzden listelenmiyorlar.
  */
 export default function ImageCredits({ images }: { images: string[] }) {
+  const t = useTranslations("Content");
   const credits = Array.from(new Set(images))
     .map(creditFor)
     .filter((c): c is NonNullable<typeof c> => !!c && c.attributionRequired);
@@ -24,7 +26,7 @@ export default function ImageCredits({ images }: { images: string[] }) {
         id="gorsel-atiflari"
         className="text-[9.5px] tracking-[0.24em] text-white/35 uppercase"
       >
-        Görsel atıfları
+        {t("imageCredits")}
       </h2>
       <ul className="mt-4 space-y-1.5">
         {credits.map((c) => (
@@ -36,7 +38,7 @@ export default function ImageCredits({ images }: { images: string[] }) {
               target="_blank"
               className="underline decoration-white/20 underline-offset-2 transition-colors hover:text-white/60"
             >
-              kaynak
+              {t("source")}
             </a>
             {c.licenseName && (
               <>

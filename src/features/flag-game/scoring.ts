@@ -63,17 +63,18 @@ export function scoreRevealed(): RoundScore {
 
 /* ----------------------------- combos ----------------------------- */
 
+/** Seviye adları messages/*.json'da: FlagGame.combo.<key>. */
 export interface ComboTier {
   at: number;
-  label: string;
+  key: "nice" | "onFire" | "incredible" | "masterExplorer";
   icon: string;
 }
 
 export const COMBO_TIERS: ComboTier[] = [
-  { at: 3, label: "Güzel", icon: "🔥" },
-  { at: 5, label: "Alev Aldın", icon: "⚡" },
-  { at: 10, label: "İnanılmaz", icon: "🚀" },
-  { at: 20, label: "Kâşif Ustası", icon: "🏆" },
+  { at: 3, key: "nice", icon: "🔥" },
+  { at: 5, key: "onFire", icon: "⚡" },
+  { at: 10, key: "incredible", icon: "🚀" },
+  { at: 20, key: "masterExplorer", icon: "🏆" },
 ];
 
 /** The tier newly reached at this exact streak, or null. */

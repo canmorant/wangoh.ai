@@ -13,6 +13,9 @@ import type { Country } from "@/data/destinations";
 import { boardingFor, barcodeBars } from "@/lib/boarding";
 import { EASE_OUT, SPRING } from "@/lib/motion";
 import { turkishDative } from "@/lib/turkish";
+import { useFormatter, useLocale, useTranslations } from "next-intl";
+import { countryName, countryShortName } from "@/lib/countryNames";
+import { localizeBestSeason, localizeBudget, localizeFlightTime } from "@/lib/travelData";
 
 /**
  * A destination rendered as a boarding pass.
@@ -36,6 +39,18 @@ export default function BoardingPass({
   const ref = useRef<HTMLDivElement>(null);
   const [flipped, setFlipped] = useState(false);
   const d = boardingFor(country);
+  const t = useTranslations("BoardingPass");
+  const tData = useTranslations("TravelData");
+  const format = useFormatter();
+  const locale = useLocale();
+  // Görünen adlar dile göre; slug ve eşleştirme hâlâ Türkçe country.name'de.
+  const name = countryName(country.code, locale, country.name);
+  const shortName = countryShortName(country.code, locale, country.name, country.shortName);
+  // boardingFor varışı Türkçe veriden üretiyor (uçuş no, kapı vb. de Türkçe
+  // ada bağlı ki bilet her dilde aynı kalsın); görünen varış adı yerel.
+  const to = locale === "tr" ? d.to : shortName.toLocaleUpperCase(locale);
+  // "Portekiz'e Git": yönelme eki Türkçeye özgü, yalnız orada hesaplanıyor.
+  const place = locale === "tr" ? turkishDative(shortName) : shortName;
   const bars = barcodeBars(country.code);
 
   const px = useMotionValue(0);
@@ -88,7 +103,7 @@ export default function BoardingPass({
         <div
           role="button"
           tabIndex={0}
-          aria-label={`${country.shortName || country.name} ülkesine ${d.flight} sefer numaralı uçuşa bin`}
+          aria-label={t("boardLabel", { country: shortName, flight: d.flight })}
           onClick={onSelect}
           onKeyDown={(e) => {
             if (e.key === "Enter" || e.key === " ") {
@@ -129,7 +144,7 @@ export default function BoardingPass({
 
             <div className="absolute inset-x-0 top-0 flex items-start justify-between p-4">
               <span className="rounded-full bg-white/90 px-2.5 py-1 text-[9.5px] font-semibold tracking-[0.18em] text-[#14161c] uppercase">
-                Ülke Rehberi
+                {t("badge")}
               </span>
               <span className="text-[22px] leading-none drop-shadow">{country.flag}</span>
             </div>
@@ -137,10 +152,10 @@ export default function BoardingPass({
             <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-4">
               <div>
                 <p className="text-[9.5px] tracking-[0.28em] text-white/75 uppercase">
-                  {country.gateway} &middot; {country.cities.length} Şehir
+                  {country.gateway} &middot; {t("cityCount", { count: country.cities.length })}
                 </p>
                 <p className="font-display text-[1.8rem] sm:text-[2rem] leading-none text-white drop-shadow">
-                  {country.shortName || country.name}
+                  {shortName}
                 </p>
               </div>
               <span
@@ -158,7 +173,7 @@ export default function BoardingPass({
           {/* ---------------- route ---------------- */}
           <div className="px-5 pt-5 pb-4">
             <div className="flex items-center justify-between gap-3">
-              <Endpoint code={d.from} label="Kalkış" />
+              <Endpoint code={d.from} label={t("from")} />
 
               {/* route line — the dot travels on hover */}
               <div className="relative mx-1 h-6 flex-1">
@@ -173,14 +188,14 @@ export default function BoardingPass({
                 </span>
               </div>
 
-              <Endpoint code={d.to} label="Varış" align="right" />
+              <Endpoint code={to} label={t("to")} align="right" />
             </div>
 
             <div className="mt-5 grid grid-cols-2 sm:grid-cols-4 gap-2.5">
-              <Field label="Sefer" value={d.flight} />
-              <Field label="Kapı" value={d.gate} />
-              <Field label="Koltuk" value={d.seat} />
-              <Field label="Biniş" value={d.boards} />
+              <Field label={t("flight")} value={d.flight} />
+              <Field label={t("gate")} value={d.gate} />
+              <Field label={t("seat")} value={d.seat} />
+              <Field label={t("boards")} value={d.boards} />
             </div>
           </div>
 
@@ -196,11 +211,13 @@ export default function BoardingPass({
           <div className="flex items-center justify-between gap-4 px-5 pt-1 pb-5">
             <div>
               <p className="text-[8.5px] tracking-[0.24em] text-[#14161c]/45 uppercase">
-                Süre
+                {t("duration")}
               </p>
-              <p className="text-[13px] font-semibold tabular-nums">{country.flightTime}</p>
+              <p className="text-[13px] font-semibold tabular-nums">
+                {localizeFlightTime(country.flightTime, locale, tData)}
+              </p>
               <p className="mt-2 text-[8.5px] tracking-[0.24em] text-[#14161c]/45 uppercase">
-                Sıra
+                {t("sequence")}
               </p>
               <p className="text-[11px] tabular-nums">{d.sequence}</p>
             </div>
@@ -242,12 +259,18 @@ export default function BoardingPass({
               flipped ? "" : "pointer-events-none"
             }`}
           >
-            <Detail label="Ülke" value={country.name} />
-            <Detail label="Başkent" value={country.capital} />
-            <Detail label="En iyi mevsim" value={country.bestSeason} />
-            <Detail label="Bütçe" value={country.budget} />
-            <Detail label="Kaçırma" value={country.signature} />
-            <Detail label="Şehirler" value={`bu ülkedeki ${country.cities.length} şehir rehberi`} />
+            <Detail label={t("detail.country")} value={name} />
+            <Detail label={t("detail.capital")} value={country.capital} />
+            <Detail
+              label={t("detail.bestSeason")}
+              value={localizeBestSeason(country.bestSeason, locale, tData, format)}
+            />
+            <Detail label={t("detail.budget")} value={localizeBudget(country.budget, locale, tData)} />
+            <Detail label={t("detail.highlight")} value={country.signature} />
+            <Detail
+              label={t("detail.cities")}
+              value={t("detail.cityGuides", { count: country.cities.length })}
+            />
           </motion.div>
 
           {/* ---------------- validation stamp ---------------- */}
@@ -262,7 +285,7 @@ export default function BoardingPass({
                 className="rounded-lg border-[3px] px-5 py-2 text-[15px] font-bold tracking-[0.22em] uppercase"
                 style={{ borderColor: country.accent, color: country.accent }}
               >
-                BİNİLDİ
+                {t("boarded")}
               </span>
             </motion.div>
           )}
@@ -278,20 +301,20 @@ export default function BoardingPass({
             aria-hidden
             className="flex-1 rounded-full bg-white px-4 py-2.5 text-[11px] font-medium tracking-[0.18em] text-black uppercase transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:scale-[1.03] group-hover:scale-[1.02]"
           >
-            {turkishDative(country.shortName || country.name)} Git
+            {t("goTo", { place })}
           </button>
           <button
             onClick={() => setFlipped((f) => !f)}
             aria-expanded={flipped}
-            aria-label={`${country.shortName || country.name} ayrıntılarını ${flipped ? "gizle" : "göster"}`}
+            aria-label={t(flipped ? "hideDetails" : "showDetails", { country: shortName })}
             className="rounded-full border border-white/15 px-4 py-2.5 text-[11px] tracking-[0.18em] text-white/60 uppercase transition-colors duration-500 hover:border-white/35 hover:text-white"
           >
-            {flipped ? "Geri" : "Ayrıntılar"}
+            {flipped ? t("back") : t("details")}
           </button>
         </div>
 
         <span className="sr-only">
-          {d.from} çıkışlı {d.to} varışlı {d.flight} sefer sayılı uçuş, kapı {d.gate}, koltuk {d.seat}
+          {t("summary", { from: d.from, to, flight: d.flight, gate: d.gate, seat: d.seat })}
         </span>
       </motion.div>
     </div>

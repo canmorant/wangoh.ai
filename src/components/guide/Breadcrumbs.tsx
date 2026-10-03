@@ -1,4 +1,5 @@
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 export interface Crumb {
   name: string;
@@ -6,8 +7,9 @@ export interface Crumb {
 }
 
 export default function Breadcrumbs({ items }: { items: Crumb[] }) {
+  const t = useTranslations("Content");
   return (
-    <nav aria-label="Sayfa yolu" className="mb-8">
+    <nav aria-label={t("breadcrumb")} className="mb-8">
       <ol className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[11px] tracking-[0.14em] text-white/35 uppercase">
         {items.map((c, i) => (
           <li key={c.name} className="flex items-center gap-2">

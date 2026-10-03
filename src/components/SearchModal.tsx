@@ -2,7 +2,10 @@
 
 import { useEffect, useState, useMemo, useCallback, useRef } from "react";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useLocale, useTranslations } from "next-intl";
+import { useRouter } from "@/i18n/navigation";
+import type { AppLocale } from "@/i18n/routing";
+import { countryName, countryShortName } from "@/lib/countryNames";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, X, Globe, MapPin, ArrowRight, CornerDownLeft } from "lucide-react";
 import { countries, type City, type Country } from "@/data/destinations";
@@ -50,21 +53,41 @@ export interface SearchResultItem {
   image: string;
   countryName: string;
   keywords: string;
+  /** Yerelleşmiş adlar; Kiril gibi Latin olmayan yazıları da koruyor. */
+  localKeywords: string;
 }
 
-export function buildSearchIndex(): SearchResultItem[] {
+/**
+ * slugify Latin dışındaki her harfi siliyor: "Япония" boş dizgeye dönüşür ve
+ * Rusça arama hiçbir sonuç vermezdi. Bu normalleştirme aksanları atıyor ama
+ * harfleri (her alfabede) koruyor. Türkçe eşleştirme eskisi gibi slugify ile.
+ */
+const searchNorm = (input: string) =>
+  input
+    .replace(/[ıİI]/g, "i")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/\p{M}/gu, "")
+    .replace(/[^\p{L}\p{N}]+/gu, "-")
+    .replace(/^-+|-+$/g, "");
+
+type SearchT = ReturnType<typeof useTranslations<"Search">>;
+
+export function buildSearchIndex(locale: AppLocale, t: SearchT): SearchResultItem[] {
   const items: SearchResultItem[] = [];
 
   for (const country of searchCountries) {
     const shortName = country.shortName || country.name;
+    const localName = countryName(country.code, locale, country.name);
+    const localShort = countryShortName(country.code, locale, country.name, country.shortName);
 
     // Add Country
     items.push({
       id: `country-${country.code}`,
       type: "country",
-      title: country.name,
-      shortTitle: shortName,
-      subtitle: `${country.gateway} · ${country.cities.length} Şehir Rehberi`,
+      title: localName,
+      shortTitle: localShort,
+      subtitle: t("countrySubtitle", { gateway: country.gateway, count: country.cities.length }),
       flag: country.flag,
       href: countryHref(country),
       image: country.image,
@@ -72,6 +95,7 @@ export function buildSearchIndex(): SearchResultItem[] {
       keywords: slugify(
         `${country.name} ${shortName} ${country.code} ${country.capital} ${country.gateway} ulke`
       ),
+      localKeywords: searchNorm(`${localName} ${localShort} ${country.name}`),
     });
 
     // Add Cities
@@ -81,7 +105,7 @@ export function buildSearchIndex(): SearchResultItem[] {
         type: "city",
         title: city.name,
         shortTitle: city.name,
-        subtitle: `${shortName} ${country.flag} · Gezi Rehberi`,
+        subtitle: t("citySubtitle", { country: localShort, flag: country.flag }),
         flag: country.flag,
         href: cityHref(country, city),
         image: city.image,
@@ -89,6 +113,7 @@ export function buildSearchIndex(): SearchResultItem[] {
         keywords: slugify(
           `${city.name} ${city.description} ${country.name} ${shortName} ${country.code} sehir rehber`
         ),
+        localKeywords: searchNorm(`${city.name} ${localName} ${localShort}`),
       });
     }
   }
@@ -109,13 +134,27 @@ export default function SearchModal({ open, onClose, onSelectCountry }: SearchMo
   const inputRef = useRef<HTMLInputElement>(null);
   const resultsRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
+  const t = useTranslations("Search");
+  const locale = useLocale();
 
-  const searchIndex = useMemo(() => buildSearchIndex(), []);
+  const searchIndex = useMemo(() => buildSearchIndex(locale, t), [locale, t]);
+  const exampleQueries =
+    locale === "tr"
+      ? ["Tokyo", "Paris", "New York", "Roma", "Japonya", "Seul"]
+      : [
+          "Tokyo",
+          "Paris",
+          "New York",
+          countryName("JP", locale, "Japonya"),
+          countryName("IT", locale, "İtalya"),
+          countryName("KR", locale, "Güney Kore"),
+        ];
 
   // Filter items based on query & category
   const results = useMemo(() => {
     const q = slugify(query.trim());
-    if (!q) {
+    const qLocal = searchNorm(query.trim());
+    if (!q && !qLocal) {
       // Popular / featured default list
       return searchIndex.filter((item) => {
         if (activeFilter === "country") return item.type === "country";
@@ -128,16 +167,19 @@ export default function SearchModal({ open, onClose, onSelectCountry }: SearchMo
       .filter((item) => {
         if (activeFilter === "country" && item.type !== "country") return false;
         if (activeFilter === "city" && item.type !== "city") return false;
-        return item.keywords.includes(q) || slugify(item.title).includes(q);
+        return (
+          (!!q && (item.keywords.includes(q) || slugify(item.title).includes(q))) ||
+          (!!qLocal && item.localKeywords.includes(qLocal))
+        );
       })
       .sort((a, b) => {
         const aTitle = slugify(a.title);
         const bTitle = slugify(b.title);
         const score = (title: string) => title === q ? 0 : title.startsWith(q) ? 1 : 2;
-        return score(aTitle) - score(bTitle) || aTitle.localeCompare(bTitle, "tr");
+        return score(aTitle) - score(bTitle) || a.title.localeCompare(b.title, locale);
       })
       .slice(0, SEARCH_RESULT_LIMIT);
-  }, [query, activeFilter, searchIndex]);
+  }, [query, activeFilter, searchIndex, locale]);
 
   // Focus input when opened
   useEffect(() => {
@@ -236,7 +278,7 @@ export default function SearchModal({ open, onClose, onSelectCountry }: SearchMo
             onKeyDown={handleKeyDown}
             role="dialog"
             aria-modal="true"
-            aria-label="Şehir ve ülke ara"
+            aria-label={t("dialogLabel")}
             className="relative z-10 flex max-h-[calc(100dvh_-_1.5rem_-_env(safe-area-inset-top)_-_env(safe-area-inset-bottom))] w-full max-w-2xl flex-col overflow-hidden rounded-[24px] border border-white/15 bg-[#0b0e17]/95 text-white shadow-[0_25px_60px_-15px_rgba(0,0,0,0.8)] backdrop-blur-2xl sm:max-h-[calc(100dvh_-_7rem)] sm:rounded-2xl"
           >
             {/* Input Header */}
@@ -250,15 +292,15 @@ export default function SearchModal({ open, onClose, onSelectCountry }: SearchMo
                   setQuery(e.target.value);
                   setSelectedIndex(0);
                 }}
-                placeholder="Şehir veya ülke ara... (örn: Tokyo, Japonya, Paris, New York)"
-                aria-label="Şehir veya ülke ara"
+                placeholder={t("placeholder")}
+                aria-label={t("inputLabel")}
                 className="ml-3.5 min-w-0 flex-1 bg-transparent text-[15px] sm:text-[16px] text-white placeholder-white/40 outline-none"
               />
               <button
                 type="button"
                 onClick={onClose}
                 className="ml-2 flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-white/50 transition-colors hover:bg-white/10 hover:text-white"
-                aria-label="Aramayı kapat"
+                aria-label={t("close")}
               >
                 <X className="h-5 w-5" />
               </button>
@@ -278,7 +320,7 @@ export default function SearchModal({ open, onClose, onSelectCountry }: SearchMo
                     : "text-white/60 hover:text-white hover:bg-white/10"
                 }`}
               >
-                Tümü
+                {t("filterAll")}
               </button>
               <button
                 type="button"
@@ -292,7 +334,7 @@ export default function SearchModal({ open, onClose, onSelectCountry }: SearchMo
                     : "text-white/60 hover:text-white hover:bg-white/10"
                 }`}
               >
-                <MapPin className="h-3 w-3" /> Şehirler
+                <MapPin className="h-3 w-3" /> {t("filterCities")}
               </button>
               <button
                 type="button"
@@ -306,7 +348,7 @@ export default function SearchModal({ open, onClose, onSelectCountry }: SearchMo
                     : "text-white/60 hover:text-white hover:bg-white/10"
                 }`}
               >
-                <Globe className="h-3 w-3" /> Ülkeler
+                <Globe className="h-3 w-3" /> {t("filterCountries")}
               </button>
             </div>
 
@@ -355,7 +397,7 @@ export default function SearchModal({ open, onClose, onSelectCountry }: SearchMo
                                 {item.title}
                               </h4>
                               <span className="rounded-full bg-white/10 px-2 py-0.5 text-[10px] text-white/70 uppercase font-semibold">
-                                {item.type === "country" ? "Ülke" : "Şehir"}
+                                {item.type === "country" ? t("typeCountry") : t("typeCity")}
                               </span>
                             </div>
                             <p className="mt-0.5 text-[12.5px] text-white/50 truncate">
@@ -367,7 +409,7 @@ export default function SearchModal({ open, onClose, onSelectCountry }: SearchMo
                         <div className="ml-3 flex items-center gap-2 shrink-0">
                           {isSelected && (
                             <span className="hidden sm:flex items-center gap-1 text-[11px] text-white/50">
-                              Git <CornerDownLeft className="h-3 w-3" />
+                              {t("go")} <CornerDownLeft className="h-3 w-3" aria-hidden />
                             </span>
                           )}
                           <div
@@ -390,14 +432,14 @@ export default function SearchModal({ open, onClose, onSelectCountry }: SearchMo
                     <Search className="h-6 w-6" />
                   </div>
                   <h3 className="mt-4 font-medium text-[15px] text-white">
-                    Sonuç bulunamadı
+                    {t("noResults")}
                   </h3>
                   <p className="mt-1 text-[13px] text-white/50">
-                    &quot;{query}&quot; ile eşleşen bir şehir veya ülke bulunamadı.
+                    {t("noResultsBody", { query })}
                   </p>
                   <div className="mt-6 flex flex-wrap items-center justify-center gap-2">
-                    <span className="text-[12px] text-white/40">Örnek aramalar:</span>
-                    {["Tokyo", "Paris", "New York", "Roma", "Japonya", "Seul"].map((tag) => (
+                    <span className="text-[12px] text-white/40">{t("examples")}</span>
+                    {exampleQueries.map((tag) => (
                       <button
                         key={tag}
                         type="button"
@@ -417,8 +459,8 @@ export default function SearchModal({ open, onClose, onSelectCountry }: SearchMo
 
             {/* Footer */}
             <div className="flex items-center justify-between border-t border-white/10 px-5 py-3 text-[11px] text-white/40">
-              <span>Wangoh Seyahat & Keşif Rehberi</span>
-              <span className="text-white/30">Hızlı Arama</span>
+              <span>{t("footerBrand")}</span>
+              <span className="text-white/30">{t("footerHint")}</span>
             </div>
           </motion.div>
         </div>

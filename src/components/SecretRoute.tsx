@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useFormatter, useLocale, useTranslations } from "next-intl";
+import { countryName } from "@/lib/countryNames";
 import { motion, AnimatePresence } from "framer-motion";
 import { Country } from "@/data/destinations";
 import { SECRET_DESTINATION } from "@/data/secret";
@@ -20,6 +22,10 @@ export default function SecretRoute({
   onClose: () => void;
   onFly: (c: Country) => void;
 }) {
+  const t = useTranslations("SecretRoute");
+  const tc = useTranslations("Common");
+  const format = useFormatter();
+  const locale = useLocale();
   const [stage, setStage] = useState(0);
   const [lat, setLat] = useState(0);
 
@@ -74,7 +80,7 @@ export default function SecretRoute({
         <motion.div
           role="dialog"
           aria-modal="true"
-          aria-label="Gizli rota"
+          aria-label={t("dialogLabel")}
           className="fixed inset-0 z-[80] flex items-center justify-center overflow-y-auto overscroll-contain px-4 py-8"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -83,7 +89,7 @@ export default function SecretRoute({
         >
           {/* backdrop */}
           <motion.button
-            aria-label="Kapat"
+            aria-label={tc("close")}
             onClick={onClose}
             className="absolute inset-0 cursor-default bg-[#05070c]/88 backdrop-blur-2xl"
             initial={{ opacity: 0 }}
@@ -116,7 +122,7 @@ export default function SecretRoute({
               transition={{ duration: 0.7, ease: EASE_OUT }}
               className="text-[10.5px] tracking-[0.5em] text-[var(--gold)]/80 uppercase"
             >
-              Listede olmayan rota
+              {t("eyebrow")}
             </motion.p>
 
             <motion.p
@@ -125,7 +131,9 @@ export default function SecretRoute({
               transition={{ duration: 0.6 }}
               className="mt-6 font-mono text-[13px] tracking-[0.2em] text-white/45 tabular-nums"
             >
-              {lat.toFixed(4)}&deg; K &nbsp;/&nbsp; 15,6469&deg; D
+              {/* Ondalık ayırıcı dile göre; eskiden enlem noktalı, boylam virgüllüydü. */}
+              {format.number(lat, { minimumFractionDigits: 4, maximumFractionDigits: 4 })}&deg; {tc("north")}
+              &nbsp;/&nbsp; {format.number(15.6469, { minimumFractionDigits: 4 })}&deg; {tc("east")}
             </motion.p>
 
             <div className="mt-3 overflow-hidden">
@@ -135,7 +143,7 @@ export default function SecretRoute({
                 transition={{ duration: 1.1, ease: EASE_OUT }}
                 className="font-display text-[clamp(3rem,11vw,5.5rem)] leading-[1.05] text-white"
               >
-                {SECRET_DESTINATION.name}
+                {countryName(SECRET_DESTINATION.code, locale, SECRET_DESTINATION.name)}
               </motion.h2>
             </div>
 
@@ -158,13 +166,13 @@ export default function SecretRoute({
                 onClick={() => onFly(SECRET_DESTINATION)}
                 className="group relative min-h-12 overflow-hidden rounded-full bg-white px-7 py-3 text-[12px] font-medium tracking-[0.16em] text-black uppercase transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:scale-[1.04]"
               >
-                <span className="relative z-10">Bu rotayı seç</span>
+                <span className="relative z-10">{t("choose")}</span>
               </button>
               <button
                 onClick={onClose}
                 className="min-h-12 rounded-full border border-white/12 px-7 py-3 text-[12px] tracking-[0.16em] text-white/60 uppercase transition-colors duration-500 hover:border-white/30 hover:text-white"
               >
-                Şimdi değil
+                {t("notNow")}
               </button>
             </motion.div>
           </div>

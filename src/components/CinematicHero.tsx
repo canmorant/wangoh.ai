@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
+import { useFormatter, useTranslations } from "next-intl";
 import WindowShade, { SHADE_CONFIG } from "./WindowShade";
 import { useAdaptiveMotionQuality } from "@/hooks/useAdaptiveMotionQuality";
 import {
@@ -77,6 +78,8 @@ function ring(d: Dims, pad: number) {
 }
 
 export default function CinematicHero() {
+  const t = useTranslations("Hero");
+  const format = useFormatter();
   const motionQuality = useAdaptiveMotionQuality();
   const stageRef = useRef<HTMLDivElement>(null);
   const viewportRef = useRef<HTMLDivElement>(null);
@@ -759,18 +762,17 @@ export default function CinematicHero() {
             className="font-display text-[clamp(2.2rem,11vw,4.9rem)] leading-[0.94] text-white"
           >
             <span className="block overflow-hidden">
-              <span className="hero-line block italic font-light text-white/95">Hiç</span>
+              <span className="hero-line block italic font-light text-white/95">{t("titleLine1")}</span>
             </span>
             <span className="block overflow-hidden">
-              <span className="hero-line block">gitmediğin</span>
+              <span className="hero-line block">{t("titleLine2")}</span>
             </span>
             <span className="block overflow-hidden">
-              <span className="hero-line block">bir yere var</span>
+              <span className="hero-line block">{t("titleLine3")}</span>
             </span>
           </div>
           <p className="hero-sub mt-4 max-w-sm text-[13px] leading-relaxed text-white/45 sm:mt-6 sm:text-[14px]">
-            Dünyanın en güzel şehirlerine açılan bir cam kenarı. Unutulmaz rotalar,
-            büyüleyici duraklar ve kesintisiz tek bir manzara.
+            {t("subtitle")}
           </p>
         </div>
 
@@ -779,7 +781,7 @@ export default function CinematicHero() {
           ref={cueRef}
           className="hero-cue absolute bottom-14 right-6 z-40 hidden items-center gap-4 sm:right-10 sm:flex"
         >
-          <span className="text-[11px] tracking-[0.3em] text-white/40 uppercase">Kaydır</span>
+          <span className="text-[11px] tracking-[0.3em] text-white/40 uppercase">{t("scroll")}</span>
           <span className="relative block h-14 w-px overflow-hidden bg-white/15">
             <span className="hero-trace absolute inset-x-0 top-0 block h-5 bg-gradient-to-b from-transparent to-white/70" />
           </span>
@@ -790,12 +792,13 @@ export default function CinematicHero() {
           ref={arriveRef}
           className="pointer-events-none absolute inset-x-0 bottom-0 z-40 px-5 pb-[calc(2.5rem_+_env(safe-area-inset-bottom))] text-center opacity-0 sm:px-6 sm:pb-20"
         >
-          <p className="text-[11px] tracking-[0.42em] text-white/55 uppercase">Şimdi iniyoruz</p>
+          <p className="text-[11px] tracking-[0.42em] text-white/55 uppercase">{t("landing")}</p>
           <h2 className="font-display mt-3 text-[clamp(2.8rem,8vw,6rem)] leading-[0.95] text-white">
             <span className="italic font-light">Central</span> Park
           </h2>
           <p className="mt-3 text-[13px] tracking-[0.16em] text-white/50 uppercase">
-            New York &middot; 40,7829&deg; K
+            {/* Ondalık ayırıcı dile göre: tr 40,7829 — en 40.7829 */}
+            New York &middot; {format.number(40.7829, { maximumFractionDigits: 4 })}&deg; {t("north")}
           </p>
         </div>
       </div>

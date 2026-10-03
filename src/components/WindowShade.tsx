@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef } from "react";
 import { animate, motion, useMotionValue, useTransform } from "framer-motion";
+import { useTranslations } from "next-intl";
 import {
   SHADE_CONFIG,
   clamp01,
@@ -50,6 +51,7 @@ export default function WindowShade({
   scale: React.MutableRefObject<number>;
   onChange?: (v: number) => void;
 }) {
+  const t = useTranslations("Hero");
   /** Tek doğruluk kaynağı: 0 = tam açık, 1 = tam kapalı. Ekrandaki konum budur. */
   const value = useMotionValue(SHADE_CONFIG.initial);
   const translateY = useTransform(value, (v) => (v - 1) * height);
@@ -275,7 +277,7 @@ export default function WindowShade({
         <rect
           role="slider"
           tabIndex={0}
-          aria-label="Pencere perdesi — aşağı sürükleyerek kapat, yukarı sürükleyerek aç"
+          aria-label={t("shadeLabel")}
           aria-valuemin={0}
           aria-valuemax={100}
           aria-orientation="vertical"

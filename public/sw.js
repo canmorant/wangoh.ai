@@ -6,7 +6,8 @@
  * bağlantı yokken oradan servis edilir.
  *
  * Stratejiler:
- *   gezinme (HTML)  → önce ağ, olmazsa önbellek, o da yoksa /cevrimdisi
+ *   gezinme (HTML)  → önce ağ, olmazsa önbellek, o da yoksa o dilin
+ *                     /cevrimdisi sayfası (Türkçe öneksiz, diğerleri /en/...)
  *   /images, /icons → önce önbellek (içerik sabit, adı hash'li)
  *   /_next/static   → önce önbellek (dosya adı zaten sürümlü)
  *   diğer GET       → önce ağ, sessizce önbelleğe düş
@@ -20,9 +21,20 @@ const PAGES = `wangoh-pages-${VERSION}`;
 const ASSETS = `wangoh-assets-${VERSION}`;
 
 const OFFLINE_URL = "/cevrimdisi";
+/** src/i18n/routing.ts ile aynı; Türkçe (varsayılan) öneksiz. */
+const PREFIXED_LOCALES = ["en", "de", "ru", "es", "fr"];
+const offlineUrlFor = (pathname) => {
+  const first = pathname.split("/")[1];
+  return PREFIXED_LOCALES.includes(first) ? `/${first}${OFFLINE_URL}` : OFFLINE_URL;
+};
 
 /** Açılışta mutlaka lazım olanlar. */
-const PRECACHE = [OFFLINE_URL, "/icons/icon-192.png", "/manifest.webmanifest"];
+const PRECACHE = [
+  OFFLINE_URL,
+  ...PREFIXED_LOCALES.map((l) => `/${l}${OFFLINE_URL}`),
+  "/icons/icon-192.png",
+  "/manifest.webmanifest",
+];
 
 /** Bu alan adlarına hiç karışma. */
 const BYPASS = /(googlesyndication|googletagmanager|google-analytics|doubleclick|adsbygoogle)/i;
@@ -96,7 +108,8 @@ self.addEventListener("fetch", (event) => {
           return await networkFirst(request, PAGES);
         } catch {
           const cache = await caches.open(SHELL);
-          const offline = await cache.match(OFFLINE_URL);
+          const offline =
+            (await cache.match(offlineUrlFor(url.pathname))) || (await cache.match(OFFLINE_URL));
           return (
             offline ||
             new Response("Çevrimdışısınız.", {

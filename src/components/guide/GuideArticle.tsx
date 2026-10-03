@@ -1,4 +1,6 @@
-import Link from "next/link";
+import { useFormatter, useLocale, useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import { countryName } from "@/lib/countryNames";
 import type { CityGuide } from "@/content/guides/types";
 import type { Country, City } from "@/data/destinations";
 import { cityHref, countryHref, hasGuide } from "@/content/guides";
@@ -24,12 +26,17 @@ export default function GuideArticle({
   dietary: DestinationDietaryGuide;
 }) {
   const siblings = country.cities.filter((c) => c.name !== city.name);
+  const t = useTranslations("Guide");
+  const format = useFormatter();
+  const locale = useLocale();
+  // Arayüzdeki ülke adı dile göre; makale gövdesi (içerik) Türkçe kalıyor.
+  const countryLabel = countryName(country.code, locale, country.name);
 
   return (
     <div className="mx-auto max-w-[1100px] px-4 pb-24 sm:px-8 sm:pb-32">
       {/* ---------------- hızlı bilgi ---------------- */}
       <section
-        aria-label="Hızlı bilgiler"
+        aria-label={t("quickFacts")}
         className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.06] sm:grid-cols-3 lg:grid-cols-5"
       >
         {guide.quickFacts.map((f) => (
@@ -73,12 +80,10 @@ export default function GuideArticle({
           {guide.places.length > 0 && (
             <section id="nerede-yenir" className="mb-16 scroll-mt-28">
               <h2 className="font-display text-[clamp(1.6rem,3.2vw,2.2rem)] leading-tight text-white">
-                Nerede yenir? Seçilmiş adresler
+                {t("whereToEat")}
               </h2>
               <p className="mt-4 text-[15px] leading-relaxed text-white/55">
-                Aşağıdakiler tek tek gezilecek adresler değil, şehrin yeme kültürünü
-                en iyi anlatan duraklar. Çalışma saatleri ve fiyatlar değişebildiği
-                için yola çıkmadan önce doğrulayın.
+                {t("whereToEatIntro")}
               </p>
 
               <div className="mt-7 grid gap-4 sm:grid-cols-2">
@@ -118,7 +123,7 @@ export default function GuideArticle({
           {guide.itinerary.length > 0 && (
             <section id="gezi-plani" className="mb-16 scroll-mt-28">
               <h2 className="font-display text-[clamp(1.6rem,3.2vw,2.2rem)] leading-tight text-white">
-                Gün gün gezi planı
+                {t("itinerary")}
               </h2>
               <ol className="mt-7 space-y-4">
                 {guide.itinerary.map((d, i) => (
@@ -131,9 +136,9 @@ export default function GuideArticle({
                     </span>
                     <h3 className="pl-9 text-[1.05rem] font-semibold text-white/90 sm:pl-0">{d.title}</h3>
                     <dl className="mt-4 space-y-3">
-                      <Slot label="Sabah" value={d.morning} />
-                      <Slot label="Öğleden sonra" value={d.afternoon} />
-                      <Slot label="Akşam" value={d.evening} />
+                      <Slot label={t("morning")} value={d.morning} />
+                      <Slot label={t("afternoon")} value={d.afternoon} />
+                      <Slot label={t("evening")} value={d.evening} />
                     </dl>
                   </li>
                 ))}
@@ -144,10 +149,10 @@ export default function GuideArticle({
           {guide.practicalTips && guide.practicalTips.length > 0 && (
             <section id="bilmeden-gitme" className="mb-16 scroll-mt-28">
               <p className="text-[9.5px] tracking-[0.26em] text-[var(--gold)]/70 uppercase">
-                Bilmeden gitme
+                {t("beforeYouGo")}
               </p>
               <h2 className="font-display mt-3 text-[clamp(1.6rem,3.2vw,2.2rem)] leading-tight text-white">
-                {guide.practicalHeading ?? `${city.name}'ta işinizi kolaylaştıracak bilgiler`}
+                {guide.practicalHeading ?? t("practicalFallback", { city: city.name })}
               </h2>
               <div className="mt-7 grid gap-4 sm:grid-cols-2">
                 {guide.practicalTips.map((tip) => (
@@ -166,11 +171,10 @@ export default function GuideArticle({
           {guide.relatedGuides && guide.relatedGuides.length > 0 && (
             <section id="rotayi-surdur" className="mb-16 scroll-mt-28">
               <h2 className="font-display text-[clamp(1.6rem,3.2vw,2.2rem)] leading-tight text-white">
-                {country.name} rotasını sürdürün
+                {t("continueRoute", { country: countryLabel })}
               </h2>
               <p className="mt-4 max-w-[64ch] text-[15px] leading-relaxed text-white/55">
-                Bu şehir tek başına güçlü bir rota; zamanı olanlar için aşağıdaki
-                duraklar aynı ülke yolculuğuna farklı bir bölge ve şehir deneyimi ekler.
+                {t("continueRouteIntro")}
               </p>
               <div className="mt-7 grid gap-4 sm:grid-cols-2">
                 {guide.relatedGuides.map((related) => {
@@ -190,7 +194,7 @@ export default function GuideArticle({
                         {related.description}
                       </p>
                       <span className="mt-4 inline-block text-[10.5px] tracking-[0.18em] text-[var(--gold)]/80 uppercase">
-                        Rehberi oku →
+                        {t("readGuide")}
                       </span>
                     </Link>
                   );
@@ -203,7 +207,7 @@ export default function GuideArticle({
           {guide.faqs.length > 0 && (
             <section id="sss" className="mb-16 scroll-mt-28">
               <h2 className="font-display text-[clamp(1.6rem,3.2vw,2.2rem)] leading-tight text-white">
-                Sık sorulan sorular
+                {t("faq")}
               </h2>
               <div className="mt-7 divide-y divide-white/[0.07] border-y border-white/[0.07]">
                 {guide.faqs.map((f) => (
@@ -225,10 +229,10 @@ export default function GuideArticle({
 
           {guide.volatileNote && (
             <p className="rounded-xl border border-white/[0.08] bg-white/[0.02] p-5 text-[13px] leading-relaxed text-white/45">
-              <strong className="font-semibold text-white/70">Not:</strong>{" "}
-              {guide.volatileNote} Son güncelleme:{" "}
+              <strong className="font-semibold text-white/70">{t("note")}</strong>{" "}
+              {guide.volatileNote} {t("lastUpdated")}{" "}
               <time dateTime={guide.reviewed}>
-                {new Date(guide.reviewed).toLocaleDateString("tr-TR", {
+                {format.dateTime(new Date(guide.reviewed), {
                   day: "numeric",
                   month: "long",
                   year: "numeric",
@@ -241,10 +245,10 @@ export default function GuideArticle({
           {guide.sources && guide.sources.length > 0 && (
             <section id="kaynaklar" className="mt-10 scroll-mt-28">
               <h2 className="font-display text-[clamp(1.45rem,3vw,1.9rem)] leading-tight text-white">
-                Resmî kaynaklar ve son kontrol
+                {t("sources")}
               </h2>
               <p className="mt-3 max-w-[64ch] text-[13.5px] leading-relaxed text-white/45">
-                Değişebilen vize, ulaşım, giriş ve ziyaret bilgilerini yolculuktan önce bu kurumsal kaynaklardan yeniden doğrulayın.
+                {t("sourcesIntro")}
               </p>
               <ul className="mt-5 grid gap-3 sm:grid-cols-2">
                 {guide.sources.map((source) => (
@@ -266,8 +270,8 @@ export default function GuideArticle({
 
         {/* ---------------- içindekiler ---------------- */}
         <aside className="lg:sticky lg:top-28">
-          <nav aria-label="İçindekiler" className="rounded-2xl border border-white/[0.08] bg-white/[0.025] p-6">
-            <p className="text-[9.5px] tracking-[0.26em] text-white/35 uppercase">İçindekiler</p>
+          <nav aria-label={t("toc")} className="rounded-2xl border border-white/[0.08] bg-white/[0.025] p-6">
+            <p className="text-[9.5px] tracking-[0.26em] text-white/35 uppercase">{t("toc")}</p>
             <ul className="mt-4 space-y-2.5">
               {guide.sections.map((s) => (
                 <li key={s.id}>
@@ -282,45 +286,45 @@ export default function GuideArticle({
               <li>
                 {guide.places.length > 0 && (
                   <a href="#nerede-yenir" className="text-[13px] text-white/50 transition-colors duration-300 hover:text-white">
-                    Nerede yenir?
+                    {t("tocWhereToEat")}
                   </a>
                 )}
               </li>
               <li>
                 <a href="#vegan-helal-restoranlar" className="text-[13px] text-white/50 transition-colors duration-300 hover:text-white">
-                  Vegan &amp; helal restoranlar
+                  {t("tocDietary")}
                 </a>
               </li>
               <li>
                 {guide.itinerary.length > 0 && (
                   <a href="#gezi-plani" className="text-[13px] text-white/50 transition-colors duration-300 hover:text-white">
-                    Gün gün gezi planı
+                    {t("itinerary")}
                   </a>
                 )}
               </li>
               {guide.practicalTips && guide.practicalTips.length > 0 && (
                 <li>
                   <a href="#bilmeden-gitme" className="text-[13px] text-white/50 transition-colors duration-300 hover:text-white">
-                    Bilmeden gitme
+                    {t("beforeYouGo")}
                   </a>
                 </li>
               )}
               {guide.relatedGuides && guide.relatedGuides.length > 0 && (
                 <li>
                   <a href="#rotayi-surdur" className="text-[13px] text-white/50 transition-colors duration-300 hover:text-white">
-                    Rotayı sürdür
+                    {t("tocContinue")}
                   </a>
                 </li>
               )}
               <li>
                 <a href="#sss" className="text-[13px] text-white/50 transition-colors duration-300 hover:text-white">
-                  Sık sorulan sorular
+                  {t("faq")}
                 </a>
               </li>
               {guide.sources && guide.sources.length > 0 && (
                 <li>
                   <a href="#kaynaklar" className="text-[13px] text-white/50 transition-colors duration-300 hover:text-white">
-                    Resmî kaynaklar
+                    {t("tocSources")}
                   </a>
                 </li>
               )}
@@ -330,11 +334,11 @@ export default function GuideArticle({
           {/* iç bağlantılar — aynı ülkedeki diğer şehirler */}
           {siblings.length > 0 && (
             <nav
-              aria-label={`${country.name} içindeki diğer şehirler`}
+              aria-label={t("otherCities", { country: countryLabel })}
               className="mt-4 rounded-2xl border border-white/[0.08] bg-white/[0.025] p-6"
             >
               <p className="text-[9.5px] tracking-[0.26em] text-white/35 uppercase">
-                {country.name} rotaları
+                {t("countryRoutes", { country: countryLabel })}
               </p>
               <ul className="mt-4 space-y-2.5">
                 {siblings.map((c) => (
@@ -346,7 +350,7 @@ export default function GuideArticle({
                       {c.name}
                       {!hasGuide(country.code, c.name) && (
                         <span className="shrink-0 text-[9px] tracking-[0.14em] text-white/20 uppercase">
-                          hazırlanıyor
+                          {t("inProgress")}
                         </span>
                       )}
                     </Link>
@@ -357,7 +361,7 @@ export default function GuideArticle({
                 href={countryHref(country)}
                 className="mt-5 inline-block text-[11px] tracking-[0.18em] text-[var(--gold)]/80 uppercase transition-colors duration-300 hover:text-[var(--gold)]"
               >
-                {country.name} rehberi →
+                {t("countryGuide", { country: countryLabel })}
               </Link>
             </nav>
           )}

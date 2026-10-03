@@ -2,77 +2,78 @@
 
 import { useMemo, useRef, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { countries } from "@/data/destinations";
+import { useLocale, useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import { countryName } from "@/lib/countryNames";
 import { EASE_OUT, EASE_SOFT } from "@/lib/motion";
 
+// Metinler messages/*.json'da: TravelTest.questions.<soru>.options.<seçenek>.
+// Burada yalnızca davranışı belirleyen şey var: hangi seçenek hangi ülkeye
+// kaç puan yazıyor. Ağırlıklar çeviriden bağımsız, her dilde aynı sonuç.
 interface Option {
-  label: string;
-  note: string;
+  id: string;
   weights: Partial<Record<string, number>>;
 }
 
 interface Question {
-  prompt: string;
-  kicker: string;
+  id: "firstMorning" | "texture" | "dinner" | "light" | "extraDay";
   options: Option[];
 }
 
 const QUESTIONS: Question[] = [
   {
-    kicker: "İlk sabah",
-    prompt: "Yeni bir yerde uyandın. Seni yataktan ne kaldırır?",
+    id: "firstMorning",
     options: [
-      { label: "Şehir uyanmadan önceki sessizlik", note: "Boş sokaklar, soğuk hava", weights: { JP: 3, KR: 1 } },
-      { label: "Çoktan uğuldayan bir pazar", note: "Buhar, bağırışlar, kahvaltı", weights: { TH: 3, KR: 1 } },
-      { label: "Ayakta, tezgâhta bir kahve", note: "Doksan saniye, sonra dışarı", weights: { IT: 3, FR: 1 } },
-      { label: "Silüet eşliğinde bir koşu", note: "Uçsuz bucaksız bir yerde", weights: { US: 3 } },
+      { id: "silence", weights: { JP: 3, KR: 1 } },
+      { id: "market", weights: { TH: 3, KR: 1 } },
+      { id: "espresso", weights: { IT: 3, FR: 1 } },
+      { id: "run", weights: { US: 3 } },
     ],
   },
   {
-    kicker: "Doku",
-    prompt: "Elinin altında hissetmek istediğin yüzeyi seç.",
+    id: "texture",
     options: [
-      { label: "Güneşten ısınmış, yıpranmış taş", note: "Yüzyılların izi", weights: { IT: 3, FR: 1 } },
-      { label: "İşlenmemiş sedir ağacı", note: "Yumuşak, soluk, özenli", weights: { JP: 3 } },
-      { label: "Fırçalanmış çelik ve cam", note: "Soğuk, keskin", weights: { US: 2, KR: 2 } },
-      { label: "Islak tik ağacı ve tuz", note: "Suya yakın bir yerde", weights: { TH: 3 } },
+      { id: "stone", weights: { IT: 3, FR: 1 } },
+      { id: "cedar", weights: { JP: 3 } },
+      { id: "steel", weights: { US: 2, KR: 2 } },
+      { id: "teak", weights: { TH: 3 } },
     ],
   },
   {
-    kicker: "Akşam yemeği",
-    prompt: "Yolculuğun en iyi yemeği nerede olur?",
+    id: "dinner",
     options: [
-      { label: "Sekiz kişilik bir tezgâh", note: "Menü yok, seçenek yok", weights: { JP: 3, KR: 1 } },
-      { label: "Kaldırımda plastik bir tabure", note: "Hayatında yediğin en iyi şey", weights: { TH: 3 } },
-      { label: "Sürekli uzayan uzun bir masa", note: "Kimse kalkmıyor", weights: { IT: 3 } },
-      { label: "Aylar önce rezervasyon yaptığın bir yer", note: "Her kuruşuna değer", weights: { FR: 3, US: 1 } },
+      { id: "counter", weights: { JP: 3, KR: 1 } },
+      { id: "stool", weights: { TH: 3 } },
+      { id: "longTable", weights: { IT: 3 } },
+      { id: "reservation", weights: { FR: 3, US: 1 } },
     ],
   },
   {
-    kicker: "Işık",
-    prompt: "Hangi ışık için şehri baştan sona geçersin?",
+    id: "light",
     options: [
-      { label: "Islak asfaltta neon", note: "Gece yarısından sonra", weights: { JP: 2, KR: 3 } },
-      { label: "Kireçtaşı üzerinde altın rengi", note: "Alacakaranlıktan önceki son saat", weights: { FR: 3, IT: 2 } },
-      { label: "Suyun üzerinde sert öğle güneşi", note: "Bakamayacak kadar parlak", weights: { TH: 3 } },
-      { label: "Gökdelenler arasında gün doğumu", note: "Bütün şehir ışıldıyor", weights: { US: 3 } },
+      { id: "neon", weights: { JP: 2, KR: 3 } },
+      { id: "limestone", weights: { FR: 3, IT: 2 } },
+      { id: "noon", weights: { TH: 3 } },
+      { id: "sunrise", weights: { US: 3 } },
     ],
   },
   {
-    kicker: "Bir gün daha",
-    prompt: "Beklemediğin fazladan bir gün kazandın.",
+    id: "extraDay",
     options: [
-      { label: "Plansız bir trene bin", note: "Doğru göründüğü yerde in", weights: { JP: 2, FR: 2 } },
-      { label: "En sevdiğin tek yere geri dön", note: "Bu sefer doğru dürüst gez", weights: { IT: 3 } },
-      { label: "Suyu bul ve içinde kal", note: "Başka hiçbir şey yok", weights: { TH: 3 } },
-      { label: "Bir mahalle daha gör", note: "Ayakların ağrıyana kadar yürü", weights: { US: 2, KR: 2 } },
+      { id: "train", weights: { JP: 2, FR: 2 } },
+      { id: "return", weights: { IT: 3 } },
+      { id: "water", weights: { TH: 3 } },
+      { id: "neighbourhood", weights: { US: 2, KR: 2 } },
     ],
   },
 ];
 
 export default function TravelTest() {
+  // Anahtarlar soru/seçenek kimliğinden kuruluyor; tip denetimi için kök namespace.
+  const t = useTranslations("TravelTest");
+  const locale = useLocale();
   const [step, setStep] = useState(0);
   const nextQuestion = useRef(0);
   const [scores, setScores] = useState<Record<string, number>>({});
@@ -142,17 +143,17 @@ export default function TravelTest() {
               <p className="flex items-center gap-3 text-[11px] tracking-[0.4em] text-[var(--gold)]/70 uppercase">
                 <span className="tabular-nums">{String(step + 1).padStart(2, "0")}</span>
                 <span className="inline-block h-px w-8 bg-[var(--gold)]/30" />
-                {QUESTIONS[step].kicker}
+                {t(`questions.${QUESTIONS[step].id}.kicker`)}
               </p>
 
               <h1 className="font-display mt-6 text-[clamp(2rem,5vw,3.4rem)] leading-[1.08] text-white">
-                {QUESTIONS[step].prompt}
+                {t(`questions.${QUESTIONS[step].id}.prompt`)}
               </h1>
 
               <div className="mt-9 flex flex-col gap-3 sm:mt-12">
                 {QUESTIONS[step].options.map((opt, i) => (
                   <motion.button
-                    key={opt.label}
+                    key={opt.id}
                     onClick={() => choose(opt)}
                     initial={{ opacity: 0, y: 16 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -161,8 +162,12 @@ export default function TravelTest() {
                     className="group flex min-h-16 items-center justify-between gap-4 rounded-2xl border border-white/[0.07] bg-white/[0.02] px-5 py-4 text-left backdrop-blur-sm transition-colors duration-500 hover:border-white/[0.16] hover:bg-white/[0.05] sm:gap-6 sm:px-6 sm:py-5"
                   >
                     <span>
-                      <span className="block text-[15.5px] text-white/90">{opt.label}</span>
-                      <span className="mt-1 block text-[12.5px] text-white/35">{opt.note}</span>
+                      <span className="block text-[15.5px] text-white/90">
+                        {t(`questions.${QUESTIONS[step].id}.options.${opt.id}.label` as Parameters<typeof t>[0])}
+                      </span>
+                      <span className="mt-1 block text-[12.5px] text-white/35">
+                        {t(`questions.${QUESTIONS[step].id}.options.${opt.id}.note` as Parameters<typeof t>[0])}
+                      </span>
                     </span>
                     <svg
                       className="h-4 w-4 shrink-0 text-white/25 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-1 group-hover:text-[var(--gold)]"
@@ -187,7 +192,7 @@ export default function TravelTest() {
                 className="text-center"
               >
                 <p className="text-[11px] tracking-[0.46em] text-[var(--gold)]/70 uppercase">
-                  Cam kenarın
+                  {t("resultEyebrow")}
                 </p>
 
                 <div className="relative mx-auto mt-8 aspect-[16/10] w-full max-w-md overflow-hidden rounded-[26px]">
@@ -207,7 +212,7 @@ export default function TravelTest() {
                 </div>
 
                 <h1 className="font-display mt-7 text-[clamp(2.6rem,8vw,4.4rem)] leading-none text-white">
-                  {result.name}
+                  {countryName(result.code, locale, result.name)}
                 </h1>
                 <p className="mx-auto mt-4 max-w-sm text-[14px] leading-relaxed text-white/50">
                   {result.description}
@@ -223,13 +228,13 @@ export default function TravelTest() {
                     href={`/?fly=${result.code}`}
                     className="rounded-full bg-white px-7 py-3 text-[12px] font-medium tracking-[0.16em] text-black uppercase transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:scale-[1.04]"
                   >
-                    Hemen uç
+                    {t("flyNow")}
                   </Link>
                   <button
                     onClick={restart}
                     className="rounded-full border border-white/12 px-7 py-3 text-[12px] tracking-[0.16em] text-white/60 uppercase transition-colors duration-500 hover:border-white/30 hover:text-white"
                   >
-                    Baştan çöz
+                    {t("restart")}
                   </button>
                 </motion.div>
               </motion.section>
@@ -244,7 +249,7 @@ export default function TravelTest() {
             transition={{ duration: 1, ease: EASE_SOFT, delay: 0.6 }}
             className="mt-14 text-[11px] tracking-[0.3em] text-white/20 uppercase"
           >
-            {QUESTIONS.length - step} soru kaldı &middot; yanlış cevap yok
+            {t("remaining", { count: QUESTIONS.length - step })}
           </motion.p>
         )}
       </div>

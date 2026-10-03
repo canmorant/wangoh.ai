@@ -1,0 +1,630 @@
+{
+  "BoardingPass": {
+    "badge": "Länderführer",
+    "cityCount": "{count, plural, one {# Stadt} other {# Städte}}",
+    "from": "Von",
+    "to": "Nach",
+    "flight": "Flug",
+    "gate": "Gate",
+    "seat": "Sitz",
+    "boards": "Boarding",
+    "duration": "Dauer",
+    "sequence": "Nr.",
+    "boarded": "AN BORD",
+    "goTo": "Einsteigen: {place}",
+    "details": "Details",
+    "back": "Zurück",
+    "showDetails": "Details anzeigen: {country}",
+    "hideDetails": "Details ausblenden: {country}",
+    "boardLabel": "Flug {flight} boarden – Ziel: {country}",
+    "summary": "Flug {flight} von {from} nach {to}, Gate {gate}, Sitz {seat}",
+    "detail": {
+      "country": "Land",
+      "capital": "Hauptstadt",
+      "bestSeason": "Beste Reisezeit",
+      "budget": "Budget",
+      "highlight": "Nicht verpassen",
+      "cities": "Städte",
+      "cityGuides": "{count, plural, one {# Stadtführer} other {# Stadtführer}} in diesem Land"
+    }
+  },
+  "City": {
+    "metaTitle": "Reiseführer {city} — {country} | Wangoh",
+    "metaDescription": "Wangoh-Reiseführer {city}: {summary}",
+    "heading": "Reiseführer {city}",
+    "heroAlt": "Ansicht von {city}, {country}",
+    "dietaryListName": "Vegane und Halal-Restauranttipps in {city}",
+    "pendingTitle": "Der Reiseführer {city} ist in Arbeit",
+    "pendingBody": "Unseren ausführlichen Reiseführer für diese Stadt haben wir noch nicht veröffentlicht. Statt die Seite mit ungeprüften Informationen zu füllen, warten wir lieber – wie die anderen wird auch der Reiseführer {city} Sehenswürdigkeiten, Unterkünfte Viertel für Viertel, echte Adressen zum Essen, Verkehr und eine Route Tag für Tag enthalten.",
+    "knownSoFar": "Was wir bisher wissen",
+    "publishedGuides": "Veröffentlichte Reiseführer: {country}",
+    "readGuide": "Reiseführer lesen →",
+    "backToCountry": "← Zurück zum Reiseführer {country}"
+  },
+  "CityCards": {
+    "backLabel": "Zurück zu den Ländern",
+    "allRoutes": "Alle Routen",
+    "title": "{country} entdecken",
+    "eyebrow": "Reiseführer {country}",
+    "overviewTitle": "{country} auf einen Blick",
+    "readCountryGuide": "Ausführlichen Länderführer lesen",
+    "fact": {
+      "capital": "Hauptstadt",
+      "budget": "Budget",
+      "bestSeason": "Beste Reisezeit",
+      "fromIstanbul": "Ab Istanbul",
+      "transport": "Anreise",
+      "byRoute": "Je nach Route"
+    },
+    "empty": {
+      "description": "{country} liegt noch auf keiner regulären Wangoh-Route – dieser Flug wurde direkt aus der Karte gezeichnet.",
+      "title": "Du bist abseits der Karte gelandet",
+      "body": "Reiseführer {country}: noch nicht geschrieben. Die Route ist echt – was nach der Landung passiert, liegt bei dir.",
+      "back": "Zurück zu den Abflügen"
+    },
+    "cityGuides": "Stadtführer",
+    "citiesHeading": "Sehenswerte Städte: {country}",
+    "chooseCity": "{count, plural, one {Wähle die Stadt, die zu dir passt – # eigene Route.} other {Wähle aus # eigenen Routen die Stadt, die zu dir passt.}}",
+    "openCityGuide": "Reiseführer {city} öffnen",
+    "readGuide": "Reiseführer lesen",
+    "goToGuide": "Zum Reiseführer"
+  },
+  "ClubReveal": {
+    "dialogLabel": "Zufälliger Fußballverein",
+    "eyebrow": "Zufälliger Verein",
+    "flyTo": "Jetzt fliegen: {place}",
+    "picking": "Verein wird ausgewählt …"
+  },
+  "Common": {
+    "close": "Schließen",
+    "back": "Zurück",
+    "north": "N",
+    "east": "O"
+  },
+  "Content": {
+    "breadcrumb": "Navigationspfad",
+    "home": "Startseite",
+    "imageCredits": "Bildnachweise",
+    "source": "Quelle",
+    "turkishOnly": "Der Inhalt dieser Seite ist derzeit nur auf Türkisch verfügbar.",
+    "turkishOnlyHint": "Die Oberfläche ist in deiner Sprache; die Reiseführertexte erscheinen hier, sobald sie übersetzt sind."
+  },
+  "Corporate": {
+    "nav": "Unternehmensnavigation",
+    "lastUpdated": "Zuletzt aktualisiert: {date}",
+    "about": {
+      "title": "Über uns | Wangoh",
+      "description": "Wangohs Ansatz für Reisejournalismus, redaktionelle Grundsätze, wie unsere Inhalte entstehen und wie du uns erreichst."
+    },
+    "contact": {
+      "title": "Kontakt | Wangoh",
+      "description": "Schreib Wangoh zu Korrekturen, Vorschlägen, Kooperationen und Datenschutzanfragen."
+    },
+    "privacy": {
+      "title": "Datenschutzerklärung und KVKK-Hinweis | Wangoh",
+      "description": "Wie Wangoh personenbezogene Daten verarbeitet: Rechtsgrundlagen, Datenübermittlung, Speicherfristen und deine Rechte nach dem türkischen Datenschutzgesetz (KVKK)."
+    },
+    "cookies": {
+      "title": "Cookie-Richtlinie | Wangoh",
+      "description": "Cookies und localStorage auf Wangoh, mögliche AdSense-Werbetechnologien und wie du deine Einstellungen verwaltest."
+    },
+    "terms": {
+      "title": "Nutzungsbedingungen | Wangoh",
+      "description": "Bedingungen zu Wangohs Reiseinhalten, externen Links, geistigem Eigentum, Werbung und zur Nutzung der Website."
+    }
+  },
+  "Country": {
+    "metaTitle": "Reiseführer {country}: Sehenswerte Städte und Routen",
+    "metaDescription": "Reiseführer {country} — {cities} und mehr. Beste Reisezeit, Flugdauer, Budget und Stadtführer für jede Stadt.",
+    "touristType": "Reisende mit Interesse an Kultur, Kulinarik, Städten und Natur",
+    "destinations": "Reiseziele: {country}",
+    "eyebrow": "Länderführer",
+    "heading": "Reiseführer {country}",
+    "fact": {
+      "gateway": "Einreisepunkt",
+      "capital": "Hauptstadt",
+      "flightTime": "Flugdauer",
+      "domestic": "Je nach Inlandsroute",
+      "fromIstanbul": "{time} ab Istanbul",
+      "bestSeason": "Beste Reisezeit",
+      "budget": "Budget"
+    },
+    "dontMiss": "Nicht verpassen",
+    "essentials": "Gut zu wissen vor der Reise",
+    "citiesHeading": "Sehenswerte Städte: {country}",
+    "allPublished": "{total, plural, one {Für die einzige Stadt ist ein eigener Reiseführer online} other {Für alle # Städte sind eigene Reiseführer online}}",
+    "somePublished": "{written}/{total} Stadtführer online",
+    "badgeReady": "Reiseführer online",
+    "badgePending": "In Arbeit"
+  },
+  "Destinations": {
+    "departure": "Abflug",
+    "titleLine1": "Bordkarten.",
+    "titleLine2": "Eine gehört dir.",
+    "intro": "Jede Route startet in Istanbul. Dreh eine Karte um für die Details – und steig dann ein, wo du willst.",
+    "showMore": "Mehr Länder anzeigen",
+    "footnote": "Nicht jede Route ist gedruckt"
+  },
+  "Dietary": {
+    "status": {
+      "fullyVegan": "Rein vegan",
+      "veganFocused": "Vegan ausgerichtet",
+      "veganOptions": "Vegane Optionen",
+      "certifiedHalal": "Halal-zertifiziert",
+      "restaurantConfirmed": "Laut Restaurant",
+      "halalOptions": "Halal-Optionen",
+      "muslimFriendly": "Muslimfreundlich",
+      "verificationRecommended": "Erneute Prüfung empfohlen"
+    },
+    "veganPick": "Vegan-Tipp",
+    "halalPick": "Halal-Tipp",
+    "whyWePicked": "Warum wir es ausgewählt haben:",
+    "verificationNote": "Prüfhinweis",
+    "source": "Quelle: {name} ↗",
+    "officialSite": "Offizielle Website ↗",
+    "lastChecked": "Zuletzt geprüft: {date}",
+    "eyebrow": "Ernährungsvorlieben",
+    "heading": "Vegane und Halal-Restaurants in {city}",
+    "intro": "In {city} haben wir eine pflanzliche Adresse und eine für muslimische Reisende ausgewählt. Halal-Angaben bedeuten nicht alle dasselbe: Zertifizierung, Eigenangabe des Restaurants und „einige Halal-Optionen“ sind auf jeder Karte getrennt ausgewiesen.",
+    "researchNote": "Recherchehinweis:",
+    "disclaimer": "Speisekarten, Lieferanten und Zertifikate ändern sich. Wenn du streng halal isst, kläre das aktuelle Zertifikat, Alkohol, Saucenzutaten und das Risiko einer gemeinsam genutzten Küche direkt mit dem Restaurant."
+  },
+  "Discovery": {
+    "heading": "Ein Reiseführer für deine nächste Stadt",
+    "intro": "Was ansehen, wo übernachten, wie herumkommen? Wähle deine Stopps, finde Orte zum Essen und plane mit unseren Stadtführern deine Route Tag für Tag – derzeit auf Türkisch verfügbar.",
+    "guideTitle": "Reiseführer {city}",
+    "allGuides": "Alle Länder- und Stadtführer →",
+    "featured": {
+      "newYork": {
+        "name": "New York",
+        "detail": "Sehenswürdigkeiten, die Wahl des Viertels, die U-Bahn und eine Route Tag für Tag."
+      },
+      "madrid": {
+        "name": "Madrid",
+        "detail": "Der Prado, Tapas-Stopps, Unterkünfte und ein 4-Tage-Plan."
+      },
+      "tokyo": {
+        "name": "Tokio",
+        "detail": "Viertel, Verkehr, Essen und ein Reiseplan."
+      },
+      "rome": {
+        "name": "Rom",
+        "detail": "Historische Stätten, Essen und Spaziergänge."
+      },
+      "paris": {
+        "name": "Paris",
+        "detail": "Museen, Viertel und Tipps für den ersten Besuch."
+      },
+      "barcelona": {
+        "name": "Barcelona",
+        "detail": "Gaudí, Viertel, Strand und eine 5-Tage-Route."
+      }
+    }
+  },
+  "FlagGame": {
+    "poolSize": "{count, plural, one {# Flagge} other {# Flaggen}}",
+    "title": "Errate die Flagge",
+    "intro": "Jedes Land der Welt. Drei Hinweise – jeder bringt weniger Punkte als der vorige.",
+    "level": "Level",
+    "levelValue": "Level {level}",
+    "xp": "XP",
+    "bestStreak": "Beste Serie",
+    "learned": "Gelernt",
+    "record": "Rekord {score}",
+    "modes": {
+      "classic": {
+        "name": "Klassisch",
+        "tagline": "Keine Uhr, kein Druck. Lerne in deinem Tempo."
+      },
+      "timeattack": {
+        "name": "Gegen die Zeit",
+        "tagline": "So viele Flaggen wie möglich, bevor die Zeit abläuft."
+      },
+      "endless": {
+        "name": "Endlos",
+        "tagline": "Geht weiter, bis du aufhörst."
+      },
+      "survival": {
+        "name": "Überleben",
+        "tagline": "Ein paar Fehler, und das Spiel ist vorbei."
+      },
+      "daily": {
+        "name": "Täglich",
+        "tagline": "Jeden Tag dieselbe Reihenfolge für alle."
+      }
+    },
+    "howLong": "Wie lange?",
+    "durationSeconds": "{seconds} s",
+    "durationMinutes": "{minutes} Min.",
+    "howManyLives": "Wie viele Leben?",
+    "livesCount": "{count, plural, one {# Leben} other {# Leben}}",
+    "whichRegion": "Welche Region?",
+    "wholeWorld": "Ganze Welt",
+    "start": "Los geht's",
+    "score": "Punkte",
+    "round": "Runde",
+    "streak": "Serie",
+    "lives": "Leben",
+    "endSession": "Runde beenden",
+    "timeLeft": "Verbleibende Zeit",
+    "flagAlt": "Flagge: {country}",
+    "flagToIdentify": "Zu erratende Flagge",
+    "combo": {
+      "nice": "Gut",
+      "onFire": "In Fahrt",
+      "incredible": "Unglaublich",
+      "masterExplorer": "Meister der Entdeckung"
+    },
+    "inARow": "{count} in Folge",
+    "streakCount": "Serie: {count}",
+    "hintCapital": "Hauptstadt",
+    "noCapital": "Keine offizielle Hauptstadt verzeichnet",
+    "hintContinent": "Kontinent",
+    "hintBorders": "Landgrenzen",
+    "andMore": " – und {count} weitere",
+    "noBordersSentence": "Dieses Land hat keine Landgrenzen.",
+    "guessLabel": "Zu welchem Land gehört diese Flagge?",
+    "guessPlaceholder": "Name des Landes eingeben",
+    "submit": "Raten",
+    "allHintsUsed": "Alle Hinweise aufgedeckt",
+    "giveHint": "Hinweis ({used}/{max})",
+    "showAnswer": "Lösung zeigen",
+    "feedback": {
+      "wrongCountry": "Dieses Land gibt es – aber das ist nicht seine Flagge.",
+      "notQuite": "Nicht ganz. Versuch es noch einmal oder deck einen Hinweis auf."
+    },
+    "correct": "Richtig",
+    "answerWas": "Die Lösung war",
+    "scoreBase": "{points} Basis",
+    "scoreSpeed": " · +{points} Tempo",
+    "scoreCombo": " · +{points} Combo",
+    "noBordersFact": "Keine – dieses Land hat keine Landgrenzen.",
+    "nextFlag": "Nächste Flagge",
+    "exploreCountry": "Dieses Land entdecken",
+    "sessionOver": "Runde vorbei",
+    "points": "Punkte",
+    "statCorrect": "Richtig",
+    "statWrong": "Falsch",
+    "accuracy": "Trefferquote",
+    "avgTime": "Ø Zeit",
+    "hintsUsed": "Genutzte Hinweise",
+    "learnedCountries": "Gelernte Länder",
+    "timePlayed": "Spielzeit",
+    "timePlayedValue": "{minutes} Min. {seconds} s",
+    "playAgain": "Noch mal spielen",
+    "changeMode": "Modus wechseln",
+    "reviewMisses": "{count, plural, one {# Fehler ansehen} other {# Fehler ansehen}}",
+    "exploreCountries": "Länder entdecken",
+    "review": "Rückblick",
+    "missedTitle": "{count, plural, one {Die verpasste Flagge} other {Die # verpassten Flaggen}}",
+    "replayMissed": "Diese noch mal spielen",
+    "neighbours": "Nachbarn: {list}",
+    "noBorders": "Keine Landgrenzen",
+    "secondsValue": "{value} s"
+  },
+  "Flight": {
+    "preparing": "Deine Reise wird vorbereitet …",
+    "nextStop": "Nächster Halt: {country} {flag}",
+    "welcome": "Angekommen: {country}!",
+    "origin": "Istanbul"
+  },
+  "Footer": {
+    "tagline": "Ein unabhängiges Reisemagazin, das Städte nicht nur auf der Karte markiert – es erzählt vom Rhythmus einer Reise, von ihren Vierteln und ihren Tischen.",
+    "corporateNav": "Über Wangoh",
+    "policyNav": "Rechtliches und Datenschutz",
+    "policyHeading": "Datenschutz & Bedingungen",
+    "allGuides": "Alle Reiseführer",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "privacy": "Datenschutz",
+    "cookies": "Cookies",
+    "terms": "Nutzungsbedingungen",
+    "copyright": "© {year} Wangoh. Alle Rechte vorbehalten.",
+    "imageSource": "Die Bilder stammen überwiegend von <link>Unsplash</link>."
+  },
+  "Geo": {
+    "continent": {
+      "africa": "Afrika",
+      "americas": "Amerika",
+      "asia": "Asien",
+      "europe": "Europa",
+      "oceania": "Ozeanien",
+      "antarctic": "Antarktis"
+    },
+    "subregion": {
+      "australiaNewZealand": "Australien und Neuseeland",
+      "caribbean": "Karibik",
+      "centralAmerica": "Mittelamerika",
+      "centralAsia": "Zentralasien",
+      "centralEurope": "Mitteleuropa",
+      "easternAfrica": "Ostafrika",
+      "easternAsia": "Ostasien",
+      "easternEurope": "Osteuropa",
+      "melanesia": "Melanesien",
+      "micronesia": "Mikronesien",
+      "middleAfrica": "Zentralafrika",
+      "northAmerica": "Nordamerika",
+      "northernAfrica": "Nordafrika",
+      "northernEurope": "Nordeuropa",
+      "polynesia": "Polynesien",
+      "southAmerica": "Südamerika",
+      "southEasternAsia": "Südostasien",
+      "southeastEurope": "Südosteuropa",
+      "southernAfrica": "Südliches Afrika",
+      "southernAsia": "Südasien",
+      "southernEurope": "Südeuropa",
+      "westernAfrica": "Westafrika",
+      "westernAsia": "Westasien",
+      "westernEurope": "Westeuropa"
+    }
+  },
+  "Guide": {
+    "quickFacts": "Auf einen Blick",
+    "whereToEat": "Wo essen: ausgewählte Adressen",
+    "whereToEatIntro": "Das sind keine Adressen zum Abhaken, sondern die Stopps, die am besten zeigen, wie die Stadt isst. Öffnungszeiten und Preise ändern sich – prüfe sie vor dem Besuch.",
+    "itinerary": "Route Tag für Tag",
+    "morning": "Morgens",
+    "afternoon": "Nachmittags",
+    "evening": "Abends",
+    "beforeYouGo": "Vor der Reise wissen",
+    "practicalFallback": "Praktische Tipps für {city}",
+    "continueRoute": "Route fortsetzen: {country}",
+    "continueRouteIntro": "Diese Stadt trägt auch allein eine Reise; wer Zeit hat, ergänzt sie mit den folgenden Stopps um eine andere Region und eine weitere Stadt.",
+    "readGuide": "Reiseführer lesen →",
+    "faq": "Häufige Fragen",
+    "note": "Hinweis:",
+    "lastUpdated": "Zuletzt aktualisiert:",
+    "sources": "Offizielle Quellen und letzte Prüfung",
+    "sourcesIntro": "Visa-, Verkehrs-, Einreise- und Besuchsregeln ändern sich – prüfe sie vor der Reise noch einmal bei diesen offiziellen Quellen.",
+    "toc": "Inhalt",
+    "tocWhereToEat": "Wo essen",
+    "tocDietary": "Vegane & Halal-Restaurants",
+    "tocContinue": "Route fortsetzen",
+    "tocSources": "Offizielle Quellen",
+    "otherCities": "Weitere Städte: {country}",
+    "countryRoutes": "Routen: {country}",
+    "inProgress": "in Arbeit",
+    "countryGuide": "Reiseführer {country} →"
+  },
+  "Guides": {
+    "metaTitle": "Reiseführer: Land für Land, Stadt für Stadt | Wangoh",
+    "metaDescription": "New York, Madrid, Tokio, Rom und mehr: Stadtführer mit Sehenswürdigkeiten, Unterkünften, Verkehr, Essen und Routen Tag für Tag – derzeit auf Türkisch.",
+    "breadcrumb": "Reiseführer",
+    "title": "Länder- und Stadtführer",
+    "intro": "Wähle dein Reiseland und entdecke in jedem Stadtführer Sehenswürdigkeiten und Verkehrsmittel. Plane deine eigene Route mit Wohnvierteln, Essensstopps und Tagesplänen. Die Reiseführer selbst sind derzeit auf Türkisch verfasst.",
+    "countriesNav": "Zu einem Land springen"
+  },
+  "Hero": {
+    "regionLabel": "Wangoh – Reisen entdecken",
+    "titleLine1": "Es gibt einen Ort,",
+    "titleLine2": "an dem du noch nie",
+    "titleLine3": "warst",
+    "subtitle": "Ein Fensterplatz mit Blick auf die schönsten Städte der Welt. Unvergessliche Routen, fesselnde Zwischenstopps und eine Aussicht ohne Unterbrechung.",
+    "scroll": "Scrollen",
+    "landing": "Landeanflug",
+    "north": "N",
+    "shadeLabel": "Fensterblende – nach unten ziehen zum Schließen, nach oben zum Öffnen"
+  },
+  "Home": {
+    "srTitle": "Reiseführer Stadt für Stadt — Wangoh"
+  },
+  "LanguageSwitcher": {
+    "label": "Sprache wählen"
+  },
+  "Metadata": {
+    "site": {
+      "title": "Wangoh | Städtereiseführer und Reiserouten",
+      "description": "Reiseführer für New York, Madrid, Tokio und Städte auf der ganzen Welt: Sehenswürdigkeiten, Unterkünfte, Verkehr, Essen und Reiserouten Tag für Tag."
+    },
+    "tests": {
+      "title": "Wangoh — Finde deinen Fensterplatz",
+      "description": "Fünf Fragen, eine Route. Ein kurzer Test, der dir sagt, welche Stadt du zuerst sehen solltest."
+    },
+    "flags": {
+      "title": "Wangoh — Errate die Flagge",
+      "description": "Jede Flagge der Welt, eine nach der anderen. Drei Hinweise, jeder bringt weniger Punkte. Wie weit kommst du?"
+    }
+  },
+  "Nav": {
+    "search": "Suche",
+    "searchLabel": "Suche öffnen",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
+    "mobileMenu": "Mobiles Menü",
+    "tests": "Tests",
+    "randomClub": "Zufälliger Fußballverein",
+    "countryWheel": "Länderrad",
+    "guessFlag": "Errate die Flagge"
+  },
+  "NotFound": {
+    "eyebrow": "404",
+    "title": "Diese Route steht auf keiner Karte",
+    "description": "Die gesuchte Seite wurde verschoben – oder hat nie existiert.",
+    "home": "Zurück zur Startseite"
+  },
+  "Offline": {
+    "metaTitle": "Du bist offline — Wangoh",
+    "metaDescription": "Wird angezeigt, wenn keine Verbindung besteht.",
+    "eyebrow": "Keine Verbindung",
+    "title": "Du bist gerade offline",
+    "body": "Reiseführer, die du schon geöffnet hast, kannst du auch ohne Verbindung lesen. Für Seiten, die du noch nicht geöffnet hast, brauchst du Internet.",
+    "home": "Zurück zur Startseite"
+  },
+  "Search": {
+    "dialogLabel": "Städte und Länder suchen",
+    "placeholder": "Stadt oder Land suchen … (z. B. Tokyo, Japan, Paris, New York)",
+    "inputLabel": "Stadt oder Land suchen",
+    "close": "Suche schließen",
+    "filterAll": "Alle",
+    "filterCities": "Städte",
+    "filterCountries": "Länder",
+    "typeCountry": "Land",
+    "typeCity": "Stadt",
+    "countrySubtitle": "{gateway} · {count, plural, one {# Stadtführer} other {# Stadtführer}}",
+    "citySubtitle": "{country} {flag} · Reiseführer",
+    "noResults": "Keine Ergebnisse",
+    "noResultsBody": "Keine Stadt und kein Land passt zu „{query}“.",
+    "examples": "Probier zum Beispiel:",
+    "footerBrand": "Wangoh – Reise- und Entdeckungsführer",
+    "go": "Öffnen",
+    "footerHint": "Schnellsuche"
+  },
+  "SecretRoute": {
+    "dialogLabel": "Geheime Route",
+    "eyebrow": "Eine Route, die in keinem Flugplan steht",
+    "choose": "Diese Route wählen",
+    "notNow": "Nicht jetzt"
+  },
+  "TravelData": {
+    "budget": {
+      "high": "Hoch",
+      "moderate": "Mittel",
+      "budget": "Günstig"
+    },
+    "flight": {
+      "duration": "{hours} Std. {minutes} Min.",
+      "origin": "Startpunkt"
+    },
+    "season": {
+      "byRegion": "Je nach Region",
+      "general": "{months} allgemein",
+      "winterExperience": "Wintererlebnis",
+      "forNorthernLights": "{months} für Polarlichter",
+      "forWinter": "{months} für den Winter"
+    }
+  },
+  "TravelTest": {
+    "questions": {
+      "firstMorning": {
+        "kicker": "Der erste Morgen",
+        "prompt": "Du wachst an einem neuen Ort auf. Was holt dich aus dem Bett?",
+        "options": {
+          "silence": {
+            "label": "Die Stille, bevor die Stadt erwacht",
+            "note": "Leere Straßen, kalte Luft"
+          },
+          "market": {
+            "label": "Ein Markt, auf dem schon Trubel herrscht",
+            "note": "Dampf, Rufe, Frühstück"
+          },
+          "espresso": {
+            "label": "Ein Kaffee im Stehen an der Bar",
+            "note": "Neunzig Sekunden, dann raus"
+          },
+          "run": {
+            "label": "Ein Lauf mit der Skyline neben dir",
+            "note": "Irgendwo ohne Ende"
+          }
+        }
+      },
+      "texture": {
+        "kicker": "Textur",
+        "prompt": "Wähl die Oberfläche, die du unter deiner Hand spüren willst.",
+        "options": {
+          "stone": {
+            "label": "Sonnenwarmer, verwitterter Stein",
+            "note": "Jahrhunderte voller Spuren"
+          },
+          "cedar": {
+            "label": "Unbehandeltes Zedernholz",
+            "note": "Weich, hell, durchdacht"
+          },
+          "steel": {
+            "label": "Gebürsteter Stahl und Glas",
+            "note": "Kühl und präzise"
+          },
+          "teak": {
+            "label": "Nasses Teakholz und Salz",
+            "note": "Irgendwo am Wasser"
+          }
+        }
+      },
+      "dinner": {
+        "kicker": "Abendessen",
+        "prompt": "Wo findet das beste Essen der Reise statt?",
+        "options": {
+          "counter": {
+            "label": "An einer Theke mit acht Plätzen",
+            "note": "Keine Karte, keine Wahl"
+          },
+          "stool": {
+            "label": "Auf einem Plastikhocker am Gehsteig",
+            "note": "Das Beste, was du je gegessen hast"
+          },
+          "longTable": {
+            "label": "An einer langen Tafel, die immer länger wird",
+            "note": "Keiner steht auf"
+          },
+          "reservation": {
+            "label": "In einem Lokal, das du vor Monaten reserviert hast",
+            "note": "Jeden Cent wert"
+          }
+        }
+      },
+      "light": {
+        "kicker": "Licht",
+        "prompt": "Für welches Licht würdest du die ganze Stadt durchqueren?",
+        "options": {
+          "neon": {
+            "label": "Neon auf nassem Asphalt",
+            "note": "Nach Mitternacht"
+          },
+          "limestone": {
+            "label": "Gold auf Kalkstein",
+            "note": "Die letzte Stunde vor der Dämmerung"
+          },
+          "noon": {
+            "label": "Harte Mittagssonne auf dem Wasser",
+            "note": "Zu hell, um hinzusehen"
+          },
+          "sunrise": {
+            "label": "Sonnenaufgang zwischen Wolkenkratzern",
+            "note": "Die ganze Stadt leuchtet"
+          }
+        }
+      },
+      "extraDay": {
+        "kicker": "Ein Tag mehr",
+        "prompt": "Du bekommst einen Tag geschenkt, mit dem du nicht gerechnet hast.",
+        "options": {
+          "train": {
+            "label": "Einen ungeplanten Zug nehmen",
+            "note": "Aussteigen, wo es sich richtig anfühlt"
+          },
+          "return": {
+            "label": "Zurück an den einen Ort, den du geliebt hast",
+            "note": "Diesmal mit Zeit"
+          },
+          "water": {
+            "label": "Das Wasser finden und darin bleiben",
+            "note": "Sonst nichts"
+          },
+          "neighbourhood": {
+            "label": "Noch ein Viertel erkunden",
+            "note": "Laufen, bis die Füße wehtun"
+          }
+        }
+      }
+    },
+    "resultEyebrow": "Dein Fensterplatz",
+    "flyNow": "Jetzt fliegen",
+    "restart": "Von vorn beginnen",
+    "remaining": "{count, plural, one {Noch # Frage} other {Noch # Fragen}} · keine falschen Antworten"
+  },
+  "Wheel": {
+    "label": "Länderrad",
+    "spin": "Drehen",
+    "hint": "Drehen · oder das Rad ziehen",
+    "statusSettled": "Deine Route",
+    "statusSpinning": "Das Rad dreht sich",
+    "statusIdle": "Dreh am Rad und entdecke deine nächste Route",
+    "capital": "Hauptstadt",
+    "subregion": "Teilregion",
+    "landBorder": "Landgrenzen",
+    "neighbours": "{count, plural, one {# Nachbarland} other {# Nachbarländer}}",
+    "noLandBorder": "Keine – Insel oder abgelegen",
+    "gateway": "Einreisepunkt",
+    "takeMe": "Abflug: {country}",
+    "spinToChoose": "Drehen zum Auswählen"
+  }
+}

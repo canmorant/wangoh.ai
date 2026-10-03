@@ -2,6 +2,7 @@
 
 import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 
 const CinematicHero = dynamic(() => import("./CinematicHero"), { ssr: false });
 
@@ -29,12 +30,13 @@ export default function ResponsiveHero() {
 }
 
 function LightweightHero({ reserveDesktopHeight }: { reserveDesktopHeight: boolean }) {
+  const t = useTranslations("Hero");
   return (
     <section
       className={`relative overflow-hidden bg-[#0b0d12] ${
         reserveDesktopHeight ? "h-[100svh] md:h-[310vh]" : "h-[100svh]"
       }`}
-      aria-label="Wangoh seyahat keşfi"
+      aria-label={t("regionLabel")}
     >
       <div className="sticky top-0 h-[100svh] overflow-hidden">
         <div
@@ -55,13 +57,12 @@ function LightweightHero({ reserveDesktopHeight }: { reserveDesktopHeight: boole
 
         <div className="absolute bottom-0 left-0 z-10 max-w-[88vw] px-5 pb-[calc(2rem_+_env(safe-area-inset-bottom))]">
           <p className="font-display text-[clamp(2.75rem,13vw,4.9rem)] leading-[0.9] text-white">
-            <span className="block italic font-light text-white/95">Hiç</span>
-            <span className="block">gitmediğin</span>
-            <span className="block">bir yere var</span>
+            <span className="block italic font-light text-white/95">{t("titleLine1")}</span>
+            <span className="block">{t("titleLine2")}</span>
+            <span className="block">{t("titleLine3")}</span>
           </p>
           <p className="mt-4 max-w-sm text-[13px] leading-relaxed text-white/55">
-            Dünyanın en güzel şehirlerine açılan bir cam kenarı. Unutulmaz rotalar,
-            büyüleyici duraklar ve kesintisiz tek bir manzara.
+            {t("subtitle")}
           </p>
         </div>
       </div>

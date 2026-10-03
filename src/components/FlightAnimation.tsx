@@ -2,6 +2,8 @@
 
 import { useEffect, useState, useRef, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLocale, useTranslations } from "next-intl";
+import { countryName } from "@/lib/countryNames";
 import { Country, ISTANBUL_COORDINATES } from "@/data/destinations";
 import { geoNaturalEarth1, geoPath, geoInterpolate } from "d3-geo";
 import * as topojson from "topojson-client";
@@ -18,6 +20,9 @@ const MAP_HEIGHT = 500;
 
 export default function FlightAnimation({ country, onComplete }: FlightAnimationProps) {
   const motionQuality = useAdaptiveMotionQuality();
+  const t = useTranslations("Flight");
+  const locale = useLocale();
+  const name = countryName(country.code, locale, country.name);
   const [progress, setProgress] = useState(0);
   const [phase, setPhase] = useState<"intro" | "flying" | "arriving">("intro");
   const [worldData, setWorldData] = useState<string[]>([]);
@@ -127,9 +132,9 @@ export default function FlightAnimation({ country, onComplete }: FlightAnimation
   }, [progress, interpolator, projection]);
 
   const messages = [
-    "Yolculuğun hazırlanıyor...",
-    `Sıradaki durak: ${country.name} ${country.flag}`,
-    `${country.name} ülkesine hoş geldin!`,
+    t("preparing"),
+    t("nextStop", { country: name, flag: country.flag }),
+    t("welcome", { country: name }),
   ];
 
   return (
@@ -215,7 +220,7 @@ export default function FlightAnimation({ country, onComplete }: FlightAnimation
               <animate attributeName="r" values="8;14;8" dur="2s" repeatCount="indefinite" />
               <animate attributeName="opacity" values="0.6;0.1;0.6" dur="2s" repeatCount="indefinite" />
             </circle>
-            <text x={istanbulPos[0]} y={istanbulPos[1] - 14} textAnchor="middle" fill="white" fontSize="11" fontFamily="sans-serif" fontWeight="300" opacity="0.9">İstanbul</text>
+            <text x={istanbulPos[0]} y={istanbulPos[1] - 14} textAnchor="middle" fill="white" fontSize="11" fontFamily="sans-serif" fontWeight="300" opacity="0.9">{t("origin")}</text>
 
             {/* Destination marker */}
             <circle cx={destPos[0]} cy={destPos[1]} r="5" fill={progress > 0.9 ? "rgba(200,164,94,0.9)" : "rgba(200,164,94,0.4)"} filter={progress > 0.9 ? "url(#markerGlow)" : undefined} />
@@ -223,7 +228,7 @@ export default function FlightAnimation({ country, onComplete }: FlightAnimation
               <animate attributeName="r" values="8;14;8" dur="2s" repeatCount="indefinite" />
               <animate attributeName="opacity" values="0.4;0.1;0.4" dur="2s" repeatCount="indefinite" />
             </circle>
-            <text x={destPos[0]} y={destPos[1] - 14} textAnchor="middle" fill="white" fontSize="11" fontFamily="sans-serif" fontWeight="300" opacity="0.9">{country.name}</text>
+            <text x={destPos[0]} y={destPos[1] - 14} textAnchor="middle" fill="white" fontSize="11" fontFamily="sans-serif" fontWeight="300" opacity="0.9">{name}</text>
 
             {/* Airplane */}
             {progress < 1 && progress > 0 && (

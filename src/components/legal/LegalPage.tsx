@@ -1,6 +1,9 @@
 import type { ReactNode } from "react";
+import { useFormatter, useLocale, useTranslations } from "next-intl";
+import ContentNotice from "@/components/guide/ContentNotice";
 
-export const POLICY_UPDATED = "19 Ağustos 2026";
+/** Politikaların son güncellenme tarihi (ISO); dile göre biçimlendirilir. */
+const POLICY_UPDATED = "2026-08-19";
 
 export default function LegalPage({
   eyebrow,
@@ -15,9 +18,15 @@ export default function LegalPage({
   children: ReactNode;
   showUpdated?: boolean;
 }) {
+  const locale = useLocale();
+  const t = useTranslations("Corporate");
+  const format = useFormatter();
+  // Metinler yalnızca Türkçe; ekran okuyucular doğru dilde okusun diye
+  // makale Türkçe işaretli, arayüz parçaları kendi dillerinde.
   return (
     <main className="px-4 pb-24 pt-14 sm:px-8 sm:pb-32 sm:pt-20">
-      <article className="mx-auto max-w-[840px]">
+      <article lang="tr" className="mx-auto max-w-[840px]">
+        <ContentNotice />
         <header className="border-b border-white/[0.08] pb-10 sm:pb-12">
           <p className="flex items-center gap-3 text-[10px] tracking-[0.3em] text-[var(--gold)]/75 uppercase">
             <span className="h-px w-8 bg-[var(--gold)]/35" />
@@ -30,8 +39,15 @@ export default function LegalPage({
             {summary}
           </p>
           {showUpdated && (
-            <p className="mt-5 text-[10px] tracking-[0.16em] text-white/28 uppercase">
-              Son güncelleme: {POLICY_UPDATED}
+            <p lang={locale} className="mt-5 text-[10px] tracking-[0.16em] text-white/28 uppercase">
+              {t("lastUpdated", {
+                date: format.dateTime(new Date(`${POLICY_UPDATED}T12:00:00Z`), {
+                  day: "numeric",
+                  month: "long",
+                  year: "numeric",
+                  timeZone: "UTC",
+                }),
+              })}
             </p>
           )}
         </header>

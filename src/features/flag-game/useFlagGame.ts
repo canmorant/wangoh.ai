@@ -55,7 +55,8 @@ export function useFlagGame() {
   const [current, setCurrent] = useState<Country | null>(null);
   const [status, setStatus] = useState<RoundStatus>("guessing");
   const [hints, setHints] = useState(0);
-  const [message, setMessage] = useState<string | null>(null);
+  // Kullanıcıya gösterilecek metin değil, anahtarı: FlagGame.feedback.<key>.
+  const [message, setMessage] = useState<"wrongCountry" | "notQuite" | null>(null);
   const [lastScore, setLastScore] = useState<RoundScore | null>(null);
   const [combo, setCombo] = useState<ComboTier | null>(null);
 
@@ -218,8 +219,8 @@ export function useFlagGame() {
       const other = resolveGuess(g);
       setMessage(
         other && other !== current.iso2
-          ? "Gerçek bir ülke — ama bu bayrak o değil."
-          : "Tam değil. Tekrar dene ya da ipucu aç."
+          ? "wrongCountry"
+          : "notQuite"
       );
 
       if (mode === "survival") {

@@ -15,7 +15,9 @@ import {
 } from "./wheelMath";
 import { EASE_OUT, EASE_SOFT } from "@/lib/motion";
 import { featuredFor, toCountryRoute } from "@/lib/worldAdapter";
-import { continentTr, subregionTr } from "@/lib/geoTr";
+import { continentLabel, subregionLabel } from "@/lib/geo";
+import { useLocale, useTranslations } from "next-intl";
+import { countryName } from "@/lib/countryNames";
 import type { Country as RouteCountry } from "@/data/destinations";
 
 const CONTINENT_COLOR: Record<string, string> = {
@@ -38,6 +40,10 @@ export default function CountryWheel({
   onClose: () => void;
   onFly: (c: RouteCountry) => void;
 }) {
+  const t = useTranslations("Wheel");
+  const tGeo = useTranslations("Geo");
+  const tc = useTranslations("Common");
+  const locale = useLocale();
   useEffect(() => {
     // Dataset integrity, then the segment-by-segment selection check.
     assertCountriesValid(countries);
@@ -236,7 +242,7 @@ export default function CountryWheel({
         <motion.div
           role="dialog"
           aria-modal="true"
-          aria-label="Ülke çarkı"
+          aria-label={t("label")}
           className="fixed inset-0 z-[80] overflow-y-auto overscroll-contain"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -244,7 +250,7 @@ export default function CountryWheel({
           transition={{ duration: 0.45, ease: EASE_SOFT }}
         >
           <button
-            aria-label="Kapat"
+            aria-label={tc("close")}
             onClick={onClose}
             className="fixed inset-0 cursor-default bg-[#05070c]/95 backdrop-blur-2xl"
           />
@@ -286,7 +292,7 @@ export default function CountryWheel({
                   onLostPointerCapture={() => wheel.dragEnd()}
                   role="button"
                   tabIndex={0}
-                  aria-label="Ülke çarkı"
+                  aria-label={t("label")}
                   aria-disabled={wheel.busy}
                   onKeyDown={(e) => {
                     if (e.key === "Enter" || e.key === " ") {
@@ -305,7 +311,7 @@ export default function CountryWheel({
                   className="absolute top-1/2 left-1/2 flex h-[25%] w-[25%] -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-full border border-white/15 bg-[#0d1119] text-white transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:scale-105 active:scale-95 disabled:pointer-events-none disabled:opacity-60"
                 >
                   <span className="text-[clamp(9px,1.5vw,11px)] font-semibold tracking-[0.2em] uppercase">
-                    {wheel.busy ? "…" : "Çevir"}
+                    {wheel.busy ? "…" : t("spin")}
                   </span>
                   <span className="mt-0.5 text-[clamp(7px,1.1vw,9px)] tracking-[0.14em] text-white/40 tabular-nums">
                     {N}
@@ -315,7 +321,7 @@ export default function CountryWheel({
               </div>
 
               <p className="mt-4 text-center text-[10px] tracking-[0.2em] text-white/30 uppercase sm:mt-5 sm:text-[11px] sm:tracking-[0.26em]">
-                Çevir · ya da çarkı sürükle
+                {t("hint")}
               </p>
             </div>
 
@@ -327,10 +333,10 @@ export default function CountryWheel({
               >
                 <p className="text-[10px] tracking-[0.42em] text-white/40 uppercase">
                   {wheel.settled
-                    ? "Rotan"
+                    ? t("statusSettled")
                     : wheel.busy
-                      ? "Çark dönüyor"
-                      : "Bir sonraki rotanı keşfetmek için çarkı çevir"}
+                      ? t("statusSpinning")
+                      : t("statusIdle")}
                 </p>
 
                 {/* Rendered as ONE plain node with a STABLE key. The previous
@@ -360,7 +366,7 @@ export default function CountryWheel({
                     )}
                     <div className="min-w-0 flex-1">
                       <h3 className="font-display break-words text-[1.5rem] leading-[1.05] text-white sm:text-[1.75rem]">
-                        {shown?.name}
+                        {shown ? countryName(shown.iso2, locale, shown.name) : null}
                       </h3>
                       <div className="mt-1 flex flex-wrap items-center gap-2">
                         <span className="font-mono text-[11px] tracking-[0.18em] text-white/40">
@@ -370,7 +376,7 @@ export default function CountryWheel({
                           className="rounded-full px-2 py-0.5 text-[9px] tracking-[0.16em] uppercase"
                           style={{ background: accent + "26", color: accent }}
                         >
-                          {shown ? continentTr(shown.continent) : ""}
+                          {shown ? continentLabel(shown.continent, tGeo) : ""}
                         </span>
                       </div>
                     </div>
@@ -378,13 +384,20 @@ export default function CountryWheel({
                 </motion.div>
 
                 <div className="mt-6 space-y-3 border-t border-white/[0.08] pt-5">
-                  <Row label="Başkent" value={shown?.capital.join(" · ") || "—"} />
-                  <Row label="Alt bölge" value={shown ? subregionTr(shown.subregion) || "—" : "—"} />
+                  <Row label={t("capital")} value={shown?.capital.join(" · ") || "—"} />
                   <Row
-                    label="Kara sınırı"
-                    value={shown?.borders.length ? `${shown.borders.length} komşu` : "Yok — ada ya da izole"}
+                    label={t("subregion")}
+                    value={shown ? subregionLabel(shown.subregion, tGeo) || "—" : "—"}
                   />
-                  {featured && <Row label="Giriş noktası" value={`${featured.gateway} · ${featured.iata}`} />}
+                  <Row
+                    label={t("landBorder")}
+                    value={
+                      shown?.borders.length
+                        ? t("neighbours", { count: shown.borders.length })
+                        : t("noLandBorder")
+                    }
+                  />
+                  {featured && <Row label={t("gateway")} value={`${featured.gateway} · ${featured.iata}`} />}
                 </div>
 
                 <button
@@ -392,7 +405,9 @@ export default function CountryWheel({
                   onClick={() => result && onFly(toCountryRoute(result))}
                   className="mt-7 min-h-12 w-full rounded-full bg-white px-5 py-3 text-[11px] font-semibold leading-relaxed tracking-[0.16em] text-black uppercase transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:scale-[1.03] disabled:pointer-events-none disabled:opacity-25 sm:px-6 sm:py-3.5 sm:text-[11.5px] sm:tracking-[0.2em]"
                 >
-                  {result ? `Beni ${result.name} ülkesine götür` : "Seçmek için çevir"}
+                  {result
+                    ? t("takeMe", { country: countryName(result.iso2, locale, result.name) })
+                    : t("spinToChoose")}
                 </button>
               </motion.div>
             </div>
@@ -402,7 +417,7 @@ export default function CountryWheel({
             onClick={onClose}
             className="fixed top-[max(0.75rem,env(safe-area-inset-top))] right-3 z-30 min-h-11 rounded-full border border-white/12 bg-black/30 px-4 py-2.5 text-[10.5px] tracking-[0.16em] text-white/70 uppercase backdrop-blur-md transition-colors duration-500 hover:border-white/35 hover:text-white sm:top-5 sm:right-5 sm:px-5 sm:text-[11px] sm:tracking-[0.18em]"
           >
-            Kapat
+            {tc("close")}
           </button>
         </motion.div>
       )}

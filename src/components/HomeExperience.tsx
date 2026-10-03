@@ -2,9 +2,12 @@
 
 import { useState, useCallback, useEffect, type ReactNode } from "react";
 import dynamic from "next/dynamic";
+import { useLocale, useTranslations } from "next-intl";
 import { countries, type Country } from "@/data/destinations";
 import { SECRET_DESTINATION } from "@/data/secret";
 import { slugify } from "@/lib/slug";
+import { getPathname } from "@/i18n/navigation";
+import { routing, type AppLocale } from "@/i18n/routing";
 import type { CityCardData } from "@/content/cityCardData";
 import { useScrollShake } from "@/hooks/useScrollShake";
 import FloatingNav from "@/components/FloatingNav";
@@ -40,9 +43,20 @@ type View = "landing" | "flying" | "cities";
  * ana sayfanın ilk yüklemesinde. Oradan import etmek ~1.8 MB'ı açılışa taşırdı.
  */
 const ROUTABLE: Country[] = [...countries, SECRET_DESTINATION];
-const hrefFor = (country: Country) => `/${slugify(country.name)}`;
+
+/**
+ * Dil farkında: tr → /japonya, en → /en/japonya. Slug her dilde aynı ve
+ * Türkçe addan geliyor — ülke adlarının yerelleştirilmiş görünen hâli bunu
+ * değiştirmez (bkz. lib/countryNames).
+ */
+const hrefFor = (country: Country, locale: AppLocale) =>
+  getPathname({ href: `/${slugify(country.name)}`, locale });
+
 const countryAtPath = (pathname: string): Country | null => {
-  const slug = pathname.replace(/^\/+|\/+$/g, "");
+  const parts = pathname.split("/").filter(Boolean);
+  // Varsa dil önekini at: /en/japonya → japonya
+  if (parts.length && (routing.locales as readonly string[]).includes(parts[0])) parts.shift();
+  const slug = parts.join("/");
   return slug ? (ROUTABLE.find((c) => slugify(c.name) === slug) ?? null) : null;
 };
 
@@ -53,6 +67,8 @@ export default function HomeExperience({
   guideLinks: ReactNode;
   cityCardData: CityCardData;
 }) {
+  const t = useTranslations();
+  const locale = useLocale();
   const [view, setView] = useState<View>("landing");
   const [selectedCountry, setSelectedCountry] = useState<Country | null>(null);
   const [secretOpen, setSecretOpen] = useState(false);
@@ -75,9 +91,9 @@ export default function HomeExperience({
     // Uçuş başlarken adres de değişsin; böylece animasyon sırasında geri tuşuna
     // basan da ana sayfaya döner, siteden çıkmaz. Next bu çağrıyı kendi
     // router'ına entegre ediyor (sayfayı yeniden yüklemiyor).
-    const href = hrefFor(country);
+    const href = hrefFor(country, locale);
     if (window.location.pathname !== href) window.history.pushState(null, "", href);
-  }, []);
+  }, [locale]);
 
   const handleFlightComplete = useCallback(() => {
     setView("cities");
@@ -89,8 +105,9 @@ export default function HomeExperience({
     setView("landing");
     // history.back() değil: Portekiz'den sonra Japonya'ya uçulduysa geri gitmek
     // Portekiz'i açardı. "Tüm rotalar" her zaman ana sayfaya dönmeli.
-    if (window.location.pathname !== "/") window.history.pushState(null, "", "/");
-  }, []);
+    const home = getPathname({ href: "/", locale });
+    if (window.location.pathname !== home) window.history.pushState(null, "", home);
+  }, [locale]);
 
   // Tarayıcının geri/ileri tuşları: adres neyse onu göster.
   useEffect(() => {
@@ -129,11 +146,11 @@ export default function HomeExperience({
     if (!code) return;
     const match = countries.find((c) => c.code === code);
     const timer = match ? window.setTimeout(() => flyTo(match), 0) : null;
-    window.history.replaceState({}, "", "/");
+    window.history.replaceState({}, "", getPathname({ href: "/", locale }));
     return () => {
       if (timer !== null) window.clearTimeout(timer);
     };
-  }, [flyTo]);
+  }, [flyTo, locale]);
 
   // The hidden route. Only armed on the landing view — firing it mid-flight
   // would fight the animation that's already running. `charge` rises as the
@@ -149,10 +166,10 @@ export default function HomeExperience({
         onHome={handleBack}
         onSelectCountry={flyTo}
         actions={[
-          { label: "Testler", href: "/tests" },
-          { label: "Rastgele Futbol Kulübü", onClick: openClubReveal },
-          { label: "Ülke Çarkı", onClick: openWheel },
-          { label: "Bayrağı Bil", href: "/flags" },
+          { label: t("Nav.tests"), href: "/tests" },
+          { label: t("Nav.randomClub"), onClick: openClubReveal },
+          { label: t("Nav.countryWheel"), onClick: openWheel },
+          { label: t("Nav.guessFlag"), href: "/flags" },
         ]}
       />
 
@@ -175,7 +192,7 @@ export default function HomeExperience({
 
       {view === "landing" && (
         <>
-          <h1 className="sr-only">Şehir Şehir Gezi Rehberleri — Wangoh</h1>
+          <h1 className="sr-only">{t("Home.srTitle")}</h1>
           <ResponsiveHero />
           {guideLinks}
           <DestinationsSection onSelectCountry={flyTo} />

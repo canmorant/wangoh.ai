@@ -1,16 +1,18 @@
 import type { DestinationDietaryGuide, DietaryRestaurant } from "@/content/dietary";
 import { googleMapsSearchUrl } from "@/content/dietary";
+import { useFormatter, useTranslations } from "next-intl";
 
-const statusLabels: Record<DietaryRestaurant["verification"]["status"], string> = {
-  "fully-vegan": "Tamamen vegan",
-  "vegan-focused": "Vegan odaklı",
-  "vegan-options": "Vegan seçenekli",
-  "certified-halal": "Sertifikalı helal",
-  "restaurant-confirmed": "İşletme beyanlı",
-  "halal-options": "Helal seçenekli",
-  "muslim-friendly": "Müslüman dostu",
-  "verification-recommended": "Yeniden doğrulama önerilir",
-};
+/** Veri kümesindeki doğrulama durumu → mesaj anahtarı (Dietary.status.*). */
+const STATUS_KEYS = {
+  "fully-vegan": "fullyVegan",
+  "vegan-focused": "veganFocused",
+  "vegan-options": "veganOptions",
+  "certified-halal": "certifiedHalal",
+  "restaurant-confirmed": "restaurantConfirmed",
+  "halal-options": "halalOptions",
+  "muslim-friendly": "muslimFriendly",
+  "verification-recommended": "verificationRecommended",
+} as const satisfies Record<DietaryRestaurant["verification"]["status"], string>;
 
 function PickCard({
   pick,
@@ -22,6 +24,8 @@ function PickCard({
   country: string;
 }) {
   const isVegan = pick.category === "vegan";
+  const t = useTranslations("Dietary");
+  const format = useFormatter();
 
   return (
     <article
@@ -42,10 +46,10 @@ function PickCard({
             isVegan ? "text-emerald-300/80" : "text-[var(--gold)]/85"
           }`}
         >
-          {isVegan ? "Vegan Pick" : "Halal Pick"}
+          {isVegan ? t("veganPick") : t("halalPick")}
         </p>
         <span className="rounded-full border border-white/[0.12] px-2.5 py-1 text-[9px] tracking-[0.12em] text-white/55 uppercase">
-          {statusLabels[pick.verification.status]}
+          {t(`status.${STATUS_KEYS[pick.verification.status]}`)}
         </span>
       </div>
 
@@ -55,11 +59,11 @@ function PickCard({
       </p>
       <p className="mt-4 text-[14px] leading-relaxed text-white/65">{pick.description}</p>
       <p className="mt-3 text-[13.5px] leading-relaxed text-white/50">
-        <strong className="font-semibold text-white/75">Neden seçtik:</strong> {pick.why}
+        <strong className="font-semibold text-white/75">{t("whyWePicked")}</strong> {pick.why}
       </p>
 
       <div className="mt-5 rounded-xl border border-white/[0.07] bg-black/10 p-4">
-        <p className="text-[9px] tracking-[0.17em] text-white/35 uppercase">Doğrulama notu</p>
+        <p className="text-[9px] tracking-[0.17em] text-white/35 uppercase">{t("verificationNote")}</p>
         <p className="mt-2 text-[12.5px] leading-relaxed text-white/50">
           {pick.verification.note}
         </p>
@@ -69,7 +73,7 @@ function PickCard({
           rel="noreferrer"
           className="mt-3 inline-block text-[10.5px] leading-snug text-white/55 underline decoration-white/20 underline-offset-4 transition-colors hover:text-white"
         >
-          Kaynak: {pick.verification.sourceName} ↗
+          {t("source", { name: pick.verification.sourceName })}
         </a>
       </div>
 
@@ -89,11 +93,14 @@ function PickCard({
             rel="noreferrer"
             className="rounded-full border border-white/10 px-4 py-2 text-[10px] tracking-[0.15em] text-white/50 uppercase transition-colors hover:text-white"
           >
-            Resmî site ↗
+            {t("officialSite")}
           </a>
         )}
         <time className="ml-auto text-[10px] tracking-[0.08em] text-white/25" dateTime={pick.lastVerified}>
-          Son kontrol: {new Date(pick.lastVerified).toLocaleDateString("tr-TR")}
+          {t("lastChecked", {
+            // Eski toLocaleDateString("tr-TR") varsayılanıyla aynı seçenekler: tr'de 09.08.2026.
+            date: format.dateTime(new Date(pick.lastVerified), { year: "numeric", month: "numeric", day: "numeric" }),
+          })}
         </time>
       </div>
     </article>
@@ -109,18 +116,17 @@ export default function DietaryPicks({
   city: string;
   country: string;
 }) {
+  const t = useTranslations("Dietary");
   return (
     <section id="vegan-helal-restoranlar" className="mb-16 scroll-mt-28">
       <p className="text-[9.5px] tracking-[0.26em] text-[var(--gold)]/70 uppercase">
-        Beslenme tercihleri
+        {t("eyebrow")}
       </p>
       <h2 className="font-display mt-3 text-[clamp(1.6rem,3.2vw,2.2rem)] leading-tight text-white">
-        {city} vegan ve helal restoran önerileri
+        {t("heading", { city })}
       </h2>
       <p className="mt-4 max-w-[68ch] text-[15px] leading-relaxed text-white/55">
-        {city} için bir bitki bazlı ve bir Müslüman gezgin odaklı adres seçtik. Helal
-        etiketleri aynı anlama gelmez: sertifika, işletme beyanı ve yalnızca bazı helal
-        seçenekler kartlarda ayrı ayrı gösterilir.
+        {t("intro", { city })}
       </p>
 
       <div className="mt-7 grid gap-4 md:grid-cols-2">
@@ -134,15 +140,13 @@ export default function DietaryPicks({
 
       {dietary.researchNote && (
         <p className="mt-4 rounded-xl border border-amber-300/15 bg-amber-200/[0.035] p-4 text-[12.5px] leading-relaxed text-amber-100/60">
-          <strong className="font-semibold text-amber-100/80">Araştırma notu:</strong>{" "}
+          <strong className="font-semibold text-amber-100/80">{t("researchNote")}</strong>{" "}
           {dietary.researchNote}
         </p>
       )}
 
       <p className="mt-4 text-[11.5px] leading-relaxed text-white/30">
-        Restoran menüleri, tedarikçiler ve sertifikalar değişebilir. Özellikle sıkı helal
-        hassasiyetinde güncel sertifikayı, alkolü, sos içeriklerini ve ortak mutfak riskini
-        doğrudan işletmeden doğrulayın.
+        {t("disclaimer")}
       </p>
     </section>
   );

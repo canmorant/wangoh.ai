@@ -1,11 +1,15 @@
+"use client";
+
 import { useEffect, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 import { motion, AnimatePresence } from "framer-motion";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { Menu, Search, X } from "lucide-react";
 import Magnetic from "./Magnetic";
 import type { Country } from "@/data/destinations";
 import { EASE_OUT, EASE_SOFT } from "@/lib/motion";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const SearchModal = dynamic(() => import("./SearchModal"), { ssr: false });
 
@@ -27,6 +31,7 @@ export default function FloatingNav({
   onHome?: () => void;
   onSelectCountry?: (country: Country) => void;
 }) {
+  const t = useTranslations("Nav");
   const [visible, setVisible] = useState(true);
   const [solid, setSolid] = useState(false);
   const [hovered, setHovered] = useState<string | null>(null);
@@ -158,17 +163,17 @@ export default function FloatingNav({
                 setSearchOpen(true);
               }}
               className="flex min-h-11 items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3.5 text-[12px] text-white/80 transition-all hover:bg-white/20 hover:text-white md:mr-1 md:min-h-0 md:py-1.5"
-              aria-label="Arama yap"
+              aria-label={t("searchLabel")}
             >
               <Search className="h-3.5 w-3.5 text-white/70" />
-              <span className="font-medium">Ara</span>
+              <span className="font-medium">{t("search")}</span>
             </button>
 
             <button
               type="button"
               onClick={() => setMobileOpen((current) => !current)}
               className="flex h-11 w-11 items-center justify-center rounded-full text-white/75 transition-colors hover:bg-white/10 hover:text-white md:hidden"
-              aria-label={mobileOpen ? "Menüyü kapat" : "Menüyü aç"}
+              aria-label={mobileOpen ? t("closeMenu") : t("openMenu")}
               aria-expanded={mobileOpen}
               aria-controls="mobile-navigation"
             >
@@ -214,6 +219,7 @@ export default function FloatingNav({
                 </div>
               );
             })}
+            <LanguageSwitcher className="ml-1" />
           </div>
         </nav>
       </motion.header>
@@ -224,7 +230,7 @@ export default function FloatingNav({
             id="mobile-navigation"
             role="dialog"
             aria-modal="true"
-            aria-label="Mobil menü"
+            aria-label={t("mobileMenu")}
             className="fixed inset-0 z-[55] md:hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -233,7 +239,7 @@ export default function FloatingNav({
           >
             <button
               type="button"
-              aria-label="Menüyü kapat"
+              aria-label={t("closeMenu")}
               onClick={() => setMobileOpen(false)}
               className="absolute inset-0 bg-[#05070c]/80 backdrop-blur-xl"
             />
@@ -277,6 +283,9 @@ export default function FloatingNav({
                   </button>
                 );
               })}
+              <div className="mt-1 flex items-center justify-between rounded-2xl border-t border-white/[0.05] px-3 pt-1">
+                <LanguageSwitcher />
+              </div>
             </motion.nav>
           </motion.div>
         )}

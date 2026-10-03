@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 import { countries } from "@/data/destinations";
 import { countrySlug, citySlug, guideFor } from "@/content/guides";
 import { absolute } from "@/lib/site";
+import { routing } from "@/i18n/routing";
+import { localizedUrl, translatedAlternates } from "@/i18n/seo";
 
 /**
  * Statik export'ta (Capacitor uygulama derlemesi) bu metadata route'ları
@@ -16,14 +18,29 @@ export const dynamic = "force-static";
  * Yalnızca gerçekten içeriği olan sayfalar haritaya girer. Rehberi henüz
  * yazılmamış şehirler `noindex` olduğu için buraya da alınmıyor — ince içeriği
  * dizine göndermek sitenin tamamının değerlendirmesini düşürür.
+ *
+ * Diller: tamamen çevrilmiş sayfalar (ana sayfa, testler, bayrak oyunu) her
+ * dilde ayrı adresle ve hreflang alternatifleriyle giriyor. İçeriği yalnızca
+ * Türkçe olan sayfaların diğer dil sürümleri noindex (i18n/seo.ts), o yüzden
+ * onlar yalnızca Türkçe adresleriyle listeleniyor.
  */
 export default function sitemap(): MetadataRoute.Sitemap {
+  const translatedPages: MetadataRoute.Sitemap = (
+    [
+      ["/", 1],
+      ["/tests", 0.5],
+      ["/flags", 0.5],
+    ] as const
+  ).flatMap(([path, priority]) =>
+    routing.locales.map((locale) => ({
+      url: localizedUrl(path, locale),
+      priority,
+      alternates: { languages: translatedAlternates(path, locale)?.languages as Record<string, string> },
+    }))
+  );
 
   const staticPages: MetadataRoute.Sitemap = [
-    { url: absolute("/"), priority: 1 },
     { url: absolute("/gezi-rehberleri"), priority: 0.9 },
-    { url: absolute("/tests"), priority: 0.5 },
-    { url: absolute("/flags"), priority: 0.5 },
     { url: absolute("/hakkimizda"), priority: 0.4 },
     { url: absolute("/iletisim"), priority: 0.4 },
     { url: absolute("/gizlilik-politikasi"), priority: 0.2 },
@@ -51,5 +68,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   );
 
-  return [...staticPages, ...countryPages, ...cityPages];
+  return [...translatedPages, ...staticPages, ...countryPages, ...cityPages];
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
 import { countries, Country } from "@/data/destinations";
 import { clubs } from "@/data/clubs";
@@ -25,6 +26,9 @@ export default function ClubReveal({
   onClose: () => void;
   onFly: (c: Country) => void;
 }) {
+  const t = useTranslations("ClubReveal");
+  const tc = useTranslations("Common");
+  const locale = useLocale();
   const [index, setIndex] = useState(0);
   const [settled, setSettled] = useState(false);
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -78,7 +82,7 @@ export default function ClubReveal({
         <motion.div
           role="dialog"
           aria-modal="true"
-          aria-label="Rastgele futbol kulübü"
+          aria-label={t("dialogLabel")}
           className="fixed inset-0 z-[80] flex items-start justify-center overflow-y-auto overscroll-contain px-4 py-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -86,7 +90,7 @@ export default function ClubReveal({
           transition={{ duration: 0.45, ease: EASE_SOFT }}
         >
           <button
-            aria-label="Kapat"
+            aria-label={tc("close")}
             onClick={onClose}
             className="fixed inset-0 cursor-default bg-[#05070c]/90 backdrop-blur-2xl"
           />
@@ -109,7 +113,7 @@ export default function ClubReveal({
             />
 
             <p className="relative text-[10.5px] tracking-[0.46em] text-white/40 uppercase">
-              Rastgele kulüp
+              {t("eyebrow")}
             </p>
 
             <div className="relative mt-7 min-h-[7.5rem]">
@@ -151,13 +155,15 @@ export default function ClubReveal({
                   onClick={() => clubCountry && onFly(clubCountry)}
                   className="min-h-12 rounded-full bg-white px-6 py-3 text-[12px] font-medium tracking-[0.16em] text-black uppercase transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:scale-[1.04] disabled:pointer-events-none disabled:opacity-40"
                 >
-                  {settled && club ? `${turkishDative(club.city)} uç` : "Kulüp seçiliyor…"}
+                  {settled && club
+                    ? t("flyTo", { place: locale === "tr" ? turkishDative(club.city) : club.city })
+                    : t("picking")}
                 </button>
                 <button
                   onClick={onClose}
                   className="min-h-12 rounded-full border border-white/12 px-6 py-3 text-[12px] tracking-[0.16em] text-white/60 uppercase transition-colors duration-500 hover:border-white/30 hover:text-white"
                 >
-                  Kapat
+                  {tc("close")}
                 </button>
               </div>
             </div>
