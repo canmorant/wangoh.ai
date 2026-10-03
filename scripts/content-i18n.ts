@@ -23,13 +23,17 @@
  *
  *   npx tsx scripts/content-i18n.ts prune
  *       Kaynağı artık olmayan (Türkçesi değişmiş/silinmiş) çevirileri temizler.
+ *
+ *   --only=en (ya da en,de)  extract ve merge yalnız bu dillerle çalışır:
+ *       extract bu dillerde eksik olanları çıkarır, merge yalnız bu dilleri
+ *       ister. Diller sırayla tamamlanıp yayına alınırken kullanılır.
  */
 import { readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { collectSources, type SourceGroup, type SourceText } from "../src/content/i18n/sources";
 
-const LOCALES = ["en", "de", "ru", "es", "fr"] as const;
-type Locale = (typeof LOCALES)[number];
+const ALL_LOCALES = ["en", "de", "ru", "es", "fr"] as const;
+type Locale = (typeof ALL_LOCALES)[number];
 type Memory = Record<string, Record<string, string>>;
 
 const TM_DIR = join(__dirname, "..", "src", "content", "i18n", "tm");
@@ -52,16 +56,21 @@ const frenchTypography = (s: string) =>
 
 const numbersIn = (s: string) => (s.match(/\d+/g) ?? []).sort().join(",");
 
-const [command, ...args] = process.argv.slice(2);
+const argv = process.argv.slice(2);
+const only = argv.find((a) => a.startsWith("--only="))?.slice("--only=".length).split(",");
+const LOCALES: readonly Locale[] = only
+  ? ALL_LOCALES.filter((l) => only.includes(l))
+  : ALL_LOCALES;
+const [command, ...args] = argv.filter((a) => !a.startsWith("--only="));
 const sources = collectSources();
 
 if (command === "status") {
-  const tms = Object.fromEntries(LOCALES.map((l) => [l, loadTm(l)])) as Record<Locale, Memory>;
+  const tms = Object.fromEntries(ALL_LOCALES.map((l) => [l, loadTm(l)])) as Record<Locale, Memory>;
   const groups: SourceGroup[] = ["destinations", "hubs", "dietary", "guides"];
   for (const group of groups) {
     const items = [...sources.values()].filter((s) => s.group === group);
     const chars = items.reduce((a, s) => a + s.text.length, 0);
-    const cols = LOCALES.map((l) => {
+    const cols = ALL_LOCALES.map((l) => {
       const done = items.filter((s) => has(tms[l], s.key));
       return `${l} ${done.length}/${items.length}`;
     });
@@ -104,7 +113,7 @@ if (command === "status") {
     const tr: Partial<Record<Locale, string>> = {};
     for (const line of lines) {
       const m = line.match(/^(en|de|ru|es|fr): (.*)$/);
-      if (m) tr[m[1] as Locale] = m[2].trim();
+      if (m && LOCALES.includes(m[1] as Locale)) tr[m[1] as Locale] = m[2].trim();
     }
     const missing = LOCALES.filter((l) => !tr[l]);
     if (missing.length) {
@@ -132,7 +141,7 @@ if (command === "status") {
   console.log(`${merged} metin işlendi`);
   if (warnings.length) console.log(`${warnings.length} uyarı:\n  ` + warnings.slice(0, 40).join("\n  "));
 } else if (command === "prune") {
-  for (const l of LOCALES) {
+  for (const l of ALL_LOCALES) {
     const tm = loadTm(l);
     let removed = 0;
     for (const group of Object.keys(tm)) {
