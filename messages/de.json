@@ -331,7 +331,8 @@
     "cookies": "Cookies",
     "terms": "Nutzungsbedingungen",
     "copyright": "© {year} Wangoh. Alle Rechte vorbehalten.",
-    "imageSource": "Die Bilder stammen überwiegend von <link>Unsplash</link>."
+    "imageSource": "Die Bilder stammen überwiegend von <link>Unsplash</link>.",
+    "cookieSettings": "Cookie-Einstellungen"
   },
   "Geo": {
     "continent": {
@@ -638,5 +639,26 @@
     "gateway": "Einreisepunkt",
     "takeMe": "Abflug: {country}",
     "spinToChoose": "Drehen zum Auswählen"
+  },
+  "Consent": {
+    "eyebrow": "Ihre Privatsphäre",
+    "title": "Ihre Cookie-Einstellungen",
+    "body": "Für den Betrieb der Website nutzen wir stets den notwendigen Speicher. Mit Ihrer Zustimmung messen wir mit Google Analytics, wie die Website genutzt wird, und lassen Google Anzeigen an Ihre Interessen anpassen. Sie können Ihre Wahl jederzeit über den Link „Cookie-Einstellungen“ unten auf der Seite ändern.",
+    "policyLink": "Cookie-Richtlinie",
+    "acceptAll": "Alle akzeptieren",
+    "rejectAll": "Alle ablehnen",
+    "manage": "Einstellungen verwalten",
+    "save": "Auswahl speichern",
+    "dialogTitle": "Cookie-Einstellungen",
+    "dialogIntro": "Wählen Sie, welche Technologien Sie zulassen. Notwendige sind für den Betrieb der Website erforderlich und können nicht deaktiviert werden. Details:",
+    "close": "Schließen",
+    "alwaysOn": "Immer aktiv",
+    "necessaryTitle": "Notwendig",
+    "necessaryBody": "Sichere Bereitstellung der Seiten sowie Speicherung Ihrer Cookie-Wahl, der Abflugstadt der Fluganimation und Ihres Fortschritts im Flaggenspiel auf Ihrem Gerät.",
+    "analyticsTitle": "Statistik",
+    "analyticsBody": "Messung mit Google Analytics, welche Seiten gelesen werden und wie die Website genutzt wird. Mit Ihrer Zustimmung werden Google-Analytics-Cookies (_ga) gesetzt; ohne Zustimmung wird Google Analytics gar nicht geladen.",
+    "adsTitle": "Werbung",
+    "adsBody": "Cookies und Kennungen, mit denen Google AdSense Anzeigen nach Ihren Interessen personalisiert und misst. Wenn Sie ablehnen, sehen Sie möglicherweise nicht personalisierte oder eingeschränkte Anzeigen.",
+    "saved": "Ihre Cookie-Einstellungen wurden gespeichert."
   }
 }

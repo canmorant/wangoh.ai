@@ -331,7 +331,8 @@
     "cookies": "Çerezler",
     "terms": "Kullanım Koşulları",
     "copyright": "© {year} Wangoh. Tüm hakları saklıdır.",
-    "imageSource": "Görseller ağırlıklı olarak <link>Unsplash</link>’ten sağlanır."
+    "imageSource": "Görseller ağırlıklı olarak <link>Unsplash</link>’ten sağlanır.",
+    "cookieSettings": "Çerez tercihleri"
   },
   "Geo": {
     "continent": {
@@ -638,5 +639,26 @@
     "gateway": "Giriş noktası",
     "takeMe": "Beni {country} ülkesine götür",
     "spinToChoose": "Seçmek için çevir"
+  },
+  "Consent": {
+    "eyebrow": "Gizliliğiniz",
+    "title": "Çerez tercihleriniz",
+    "body": "Siteyi çalıştırmak için gerekli depolamayı her zaman kullanırız. İzin verirseniz Google Analytics ile siteyi nasıl kullandığınızı ölçer ve Google reklamlarını ilgi alanlarınıza göre kişiselleştirebiliriz. Tercihinizi sayfanın altındaki “Çerez tercihleri” bağlantısından istediğiniz zaman değiştirebilirsiniz.",
+    "policyLink": "Çerez Politikası",
+    "acceptAll": "Tümünü kabul et",
+    "rejectAll": "Tümünü reddet",
+    "manage": "Tercihleri yönet",
+    "save": "Seçimleri kaydet",
+    "dialogTitle": "Çerez tercihleri",
+    "dialogIntro": "Hangi teknolojilere izin verdiğinizi seçin. Zorunlu olanlar sitenin çalışması için gereklidir ve kapatılamaz. Ayrıntılar için:",
+    "close": "Kapat",
+    "alwaysOn": "Her zaman açık",
+    "necessaryTitle": "Zorunlu",
+    "necessaryBody": "Sayfaların güvenli biçimde sunulması; çerez tercihinizin, uçuş animasyonundaki kalkış şehrinin ve bayrak oyunu ilerlemenizin cihazınızda hatırlanması.",
+    "analyticsTitle": "Analitik",
+    "analyticsBody": "Google Analytics ile hangi sayfaların okunduğunu ve sitenin nasıl kullanıldığını ölçmek. İzin verirseniz Google Analytics çerezleri (_ga) kullanılır; vermezseniz Google Analytics hiç yüklenmez.",
+    "adsTitle": "Reklam",
+    "adsBody": "Google AdSense'in reklamları ilgi alanlarınıza göre kişiselleştirmesi ve ölçmesi için çerezler ve tanımlayıcılar. Reddederseniz kişiselleştirilmemiş veya sınırlı reklamlar görebilirsiniz.",
+    "saved": "Çerez tercihleriniz kaydedildi."
   }
 }

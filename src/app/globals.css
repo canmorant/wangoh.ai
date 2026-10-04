@@ -335,3 +335,18 @@ a,
   from { opacity: 0; transform: scale(0.9); }
   to { opacity: 1; transform: scale(1); }
 }
+
+/* ---------- cookie consent ---------- */
+@keyframes consent-rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes consent-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.consent-enter { animation: consent-rise 0.45s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.consent-fade { animation: consent-fade-in 0.3s ease-out both; }
+@media (prefers-reduced-motion: reduce) {
+  .consent-enter, .consent-fade { animation: none; }
+}

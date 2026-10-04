@@ -331,7 +331,8 @@
     "cookies": "Cookies",
     "terms": "Terms of Use",
     "copyright": "© {year} Wangoh. All rights reserved.",
-    "imageSource": "Images are mostly sourced from <link>Unsplash</link>."
+    "imageSource": "Images are mostly sourced from <link>Unsplash</link>.",
+    "cookieSettings": "Cookie settings"
   },
   "Geo": {
     "continent": {
@@ -638,5 +639,26 @@
     "gateway": "Gateway",
     "takeMe": "Take me to {country}",
     "spinToChoose": "Spin to choose"
+  },
+  "Consent": {
+    "eyebrow": "Your privacy",
+    "title": "Your cookie choices",
+    "body": "We always use the storage needed to run the site. With your permission, we use Google Analytics to measure how the site is used and let Google personalise ads to your interests. You can change your choice at any time via the “Cookie settings” link at the bottom of the page.",
+    "policyLink": "Cookie Policy",
+    "acceptAll": "Accept all",
+    "rejectAll": "Reject all",
+    "manage": "Manage preferences",
+    "save": "Save choices",
+    "dialogTitle": "Cookie settings",
+    "dialogIntro": "Choose which technologies you allow. Necessary ones are required for the site to work and can't be switched off. For details, see the",
+    "close": "Close",
+    "alwaysOn": "Always on",
+    "necessaryTitle": "Necessary",
+    "necessaryBody": "Delivering pages securely, and remembering your cookie choice, the departure city in the flight animation and your flag game progress on your device.",
+    "analyticsTitle": "Analytics",
+    "analyticsBody": "Measuring which pages are read and how the site is used with Google Analytics. If you allow it, Google Analytics cookies (_ga) are used; if you don't, Google Analytics isn't loaded at all.",
+    "adsTitle": "Advertising",
+    "adsBody": "Cookies and identifiers that let Google AdSense personalise and measure ads based on your interests. If you decline, you may see non-personalised or limited ads.",
+    "saved": "Your cookie choices have been saved."
   }
 }

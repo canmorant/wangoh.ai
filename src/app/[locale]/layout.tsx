@@ -14,6 +14,8 @@ import { ADSENSE_CLIENT } from "@/lib/adsense";
 import { routing } from "@/i18n/routing";
 import { OG_LOCALE, translatedAlternates } from "@/i18n/seo";
 import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
+import ConsentManager from "@/components/consent/ConsentManager";
+import { CONSENT_DEFAULT_SCRIPT } from "@/lib/consent";
 
 type Props = { children: ReactNode; params: Promise<{ locale: string }> };
 
@@ -84,21 +86,22 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <html lang={locale} className={`${GeistSans.variable} antialiased`}>
+      <head>
+        {/*
+          Google Consent Mode v2: varsayılan izin durumu HTML ayrıştırılırken,
+          AdSense ve Analytics dahil her etiketten önce çalışmalı. next/script
+          beforeInteractive betiği gövdeye ve Next'in kendi kuyruğuna koyduğu
+          için düz satır içi betik kullanılıyor.
+        */}
+        <script id="consent-default" dangerouslySetInnerHTML={{ __html: CONSENT_DEFAULT_SCRIPT }} />
+      </head>
       <body>
-        <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider messages={messages}>
+          {children}
+          {/* Çerez izin penceresi; Google Analytics'i yalnız izinle yükler. */}
+          <ConsentManager />
+        </NextIntlClientProvider>
         <ServiceWorkerRegister />
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-QJSHGD467K"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-QJSHGD467K');
-          `}
-        </Script>
         {process.env.VERCEL ? (
           <Script src="/_vercel/insights/script.js" strategy="afterInteractive" />
         ) : null}

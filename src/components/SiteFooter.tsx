@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { SITE } from "@/lib/site";
 import LanguageSwitcher from "./LanguageSwitcher";
+import ConsentSettingsButton from "./consent/ConsentSettingsButton";
 
 // Hem sunucu sayfalarında hem istemci bileşeni HomeExperience içinde
 // render ediliyor; bu yüzden async getTranslations değil useTranslations.
@@ -71,6 +72,12 @@ export default function SiteFooter() {
                 </Link>
               </li>
             ))}
+            <li>
+              <ConsentSettingsButton
+                label={t("cookieSettings")}
+                className="text-left text-[13px] text-white/50 transition-colors hover:text-white"
+              />
+            </li>
           </ul>
         </nav>
       </div>

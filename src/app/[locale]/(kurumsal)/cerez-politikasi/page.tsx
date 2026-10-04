@@ -34,9 +34,10 @@ export default async function CookiePolicyPage({ params }: Props) {
       summary="Bu politika, wangoh.com üzerinde kullanılan çerezleri ve çerez benzeri tarayıcı depolama teknolojilerini; amaç, süre ve kontrol seçenekleriyle birlikte açıklar."
     >
       <LegalCallout>
-        Wangoh&rsquo;un anonim ziyaretçi ölçümü çerez kullanmaz. Bayrak oyunu ilerlemesi ve uçuş
-        animasyonunun kalkış şehri yalnızca cihazınızdaki tarayıcı depolamasında tutulur. Google AdSense etkinleştirildiğinde
-        reklam/izin teknolojileri bu metinde açıklanan koşullarla devreye girebilir.
+        Zorunlu olmayan çerezleri yalnızca izninizle kullanırız. Google Analytics, analitik izni
+        vermediğiniz sürece hiç yüklenmez; reklam çerezleri de izninize bağlıdır. Tercihinizi ilk
+        ziyaretinizde sorarız ve sayfanın altındaki &ldquo;Çerez tercihleri&rdquo; bağlantısından
+        istediğiniz zaman değiştirebilirsiniz.
       </LegalCallout>
 
       <LegalSection title="1. Çerez ve benzer teknoloji nedir?">
@@ -60,6 +61,12 @@ export default async function CookiePolicyPage({ params }: Props) {
               </tr>
             </thead>
             <tbody>
+              <tr>
+                <td>wangoh.consent</td>
+                <td>Birinci taraf localStorage / zorunlu</td>
+                <td>Çerez ve izin tercihinizi ve tercih tarihini hatırlamak</td>
+                <td>6 ay; sonra tercih yeniden sorulur</td>
+              </tr>
               <tr>
                 <td>wangoh.flaggame.v2</td>
                 <td>Birinci taraf localStorage / işlevsel</td>
@@ -93,13 +100,45 @@ export default async function CookiePolicyPage({ params }: Props) {
         </p>
       </LegalSection>
 
-      <LegalSection title="3. Anonim ziyaretçi ölçümü">
+      <LegalSection title="3. Ziyaretçi ölçümü">
         <p>
           Vercel Web Analytics; görüntülenen sayfaları, yönlendiren kaynağı, yaklaşık ülkeyi,
           cihazı, işletim sistemini ve tarayıcı türünü toplu istatistikler hâlinde ölçer. Bu
-          özellik üçüncü taraf çerezi kullanmaz, farklı sitelerde izleme yapmaz ve Wangoh&rsquo;a
-          ziyaretçiyi doğrudan tanımlayan bir profil sunmaz.
+          özellik çerez kullanmaz, farklı sitelerde izleme yapmaz ve Wangoh&rsquo;a ziyaretçiyi
+          doğrudan tanımlayan bir profil sunmaz.
         </p>
+        <p>
+          Google Analytics 4 yalnızca &ldquo;Analitik&rdquo; iznini verdiğinizde yüklenir.
+          Görüntülenen sayfaları, site içi etkileşimleri, yaklaşık konumu, cihaz ve tarayıcı
+          bilgisini ölçmek için aşağıdaki birinci taraf çerezleri kullanır. İzni geri aldığınızda
+          Google Analytics yüklenmez ve bu çerezler silinir.
+        </p>
+        <div className="legal-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Ad</th>
+                <th>Teknoloji / tür</th>
+                <th>Amaç</th>
+                <th>Süre</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>_ga</td>
+                <td>Google Analytics çerezi / analitik</td>
+                <td>Ziyaretçileri birbirinden ayırt etmek</td>
+                <td>2 yıl</td>
+              </tr>
+              <tr>
+                <td>_ga_QJSHGD467K</td>
+                <td>Google Analytics çerezi / analitik</td>
+                <td>Oturum durumunu sürdürmek</td>
+                <td>2 yıl</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </LegalSection>
 
       <LegalSection title="4. Barındırma ve güvenlik günlükleri">
@@ -112,27 +151,21 @@ export default async function CookiePolicyPage({ params }: Props) {
         </p>
       </LegalSection>
 
-      <LegalSection title="5. Google AdSense etkinleştirildiğinde">
+      <LegalSection title="5. Google AdSense reklamları">
         <p>
-          Wangoh reklam yayınlamaya başladığında Google ve yetkili reklam teknolojisi
-          sağlayıcıları; reklam sunmak, sıklığı sınırlamak, dolandırıcılığı önlemek, reklam
+          Wangoh sayfalarında Google AdSense reklam betiği bulunur. Google ve yetkili reklam
+          teknolojisi sağlayıcıları; reklam sunmak, sıklığı sınırlamak, dolandırıcılığı önlemek, reklam
           performansını ölçmek ve izin tercihlerinizi uygulamak için çerez veya benzer
           tanımlayıcılar kullanabilir. Kullanılan tanımlayıcıların adı ve ömrü Google tarafından
           zaman içinde değiştirilebilir.
         </p>
         <ul>
           <li>
-            Gerekli bölge ve durumlarda zorunlu olmayan reklam depolaması, izin tercihi
-            alınmadan etkinleştirilmez.
+            Reklam iznini vermediğiniz sürece Google&rsquo;a (Consent Mode ile) reklam depolamasının
+            reddedildiği bildirilir; reklam çerezleri kullanılmadan kişiselleştirilmemiş veya
+            sınırlı reklamlar gösterilebilir.
           </li>
-          <li>
-            Avrupa Ekonomik Alanı, Birleşik Krallık ve İsviçre ziyaretçileri için Google
-            tarafından sertifikalandırılmış bir izin yönetim platformu (CMP) kullanılır.
-          </li>
-          <li>
-            Tercihinize göre kişiselleştirilmiş, kişiselleştirilmemiş veya sınırlı reklamlar
-            gösterilebilir.
-          </li>
+          <li>Reklam iznini verirseniz reklamlar ilgi alanlarınıza göre kişiselleştirilebilir.</li>
         </ul>
         <p>
           Google’ın reklam verilerini nasıl kullandığı hakkında{" "}
@@ -151,14 +184,15 @@ export default async function CookiePolicyPage({ params }: Props) {
         <p>
           Siteyi güvenli biçimde sunmak veya açıkça talep ettiğiniz bir özelliği çalıştırmak
           için kesinlikle gerekli teknolojiler, uygulanabilir mevzuattaki açık rıza dışındaki
-          hukuki şartlara dayanabilir. İşlevsel, analitik veya reklam amaçlı zorunlu olmayan
-          teknolojiler için açık rıza gereken bölgelerde tercih mekanizması sunulur.
+          hukuki şartlara dayanabilir. Analitik ve reklam amaçlı zorunlu olmayan teknolojiler
+          yalnızca açık rızanızla çalışır.
         </p>
         <p>
-          AdSense etkinleştirildiğinde izin penceresindeki “seçenekleri yönet” alanından
-          tercihinizi ayrıntılandırabilir ve daha sonra sitenin “gizlilik/çerez tercihleri”
-          bağlantısı üzerinden değiştirebilirsiniz. İzni geri çekmek, geri çekmeden önceki
-          işlemenin hukuka uygunluğunu etkilemez.
+          Tercihinizi ilk ziyarette açılan izin penceresinden verebilir, &ldquo;Tercihleri
+          yönet&rdquo; ile kategori bazında seçebilir ve sayfanın altındaki &ldquo;Çerez
+          tercihleri&rdquo; bağlantısıyla istediğiniz zaman değiştirebilirsiniz. Tercihiniz
+          cihazınızda 6 ay saklanır, ardından yeniden sorulur. İzni geri çekmek, geri çekmeden
+          önceki işlemenin hukuka uygunluğunu etkilemez.
         </p>
       </LegalSection>
 

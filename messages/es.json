@@ -331,7 +331,8 @@
     "cookies": "Cookies",
     "terms": "Condiciones de uso",
     "copyright": "© {year} Wangoh. Todos los derechos reservados.",
-    "imageSource": "Las imágenes proceden en su mayoría de <link>Unsplash</link>."
+    "imageSource": "Las imágenes proceden en su mayoría de <link>Unsplash</link>.",
+    "cookieSettings": "Configuración de cookies"
   },
   "Geo": {
     "continent": {
@@ -638,5 +639,26 @@
     "gateway": "Puerta de entrada",
     "takeMe": "Llévame a {country}",
     "spinToChoose": "Gira para elegir"
+  },
+  "Consent": {
+    "eyebrow": "Tu privacidad",
+    "title": "Tus preferencias de cookies",
+    "body": "Siempre usamos el almacenamiento necesario para que el sitio funcione. Con tu permiso, medimos con Google Analytics cómo se usa el sitio y dejamos que Google personalice los anuncios según tus intereses. Puedes cambiar tu elección en cualquier momento con el enlace «Configuración de cookies» al pie de la página.",
+    "policyLink": "Política de cookies",
+    "acceptAll": "Aceptar todo",
+    "rejectAll": "Rechazar todo",
+    "manage": "Gestionar preferencias",
+    "save": "Guardar selección",
+    "dialogTitle": "Configuración de cookies",
+    "dialogIntro": "Elige qué tecnologías permites. Las necesarias son imprescindibles para el funcionamiento del sitio y no se pueden desactivar. Más detalles:",
+    "close": "Cerrar",
+    "alwaysOn": "Siempre activas",
+    "necessaryTitle": "Necesarias",
+    "necessaryBody": "Servir las páginas de forma segura y recordar en tu dispositivo tu elección de cookies, la ciudad de salida de la animación de vuelo y tu progreso en el juego de banderas.",
+    "analyticsTitle": "Analítica",
+    "analyticsBody": "Medir con Google Analytics qué páginas se leen y cómo se usa el sitio. Si lo permites, se usan cookies de Google Analytics (_ga); si no, Google Analytics no se carga en absoluto.",
+    "adsTitle": "Publicidad",
+    "adsBody": "Cookies e identificadores que permiten a Google AdSense personalizar y medir los anuncios según tus intereses. Si lo rechazas, puedes ver anuncios no personalizados o limitados.",
+    "saved": "Se han guardado tus preferencias de cookies."
   }
 }

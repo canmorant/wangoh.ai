@@ -331,7 +331,8 @@
     "cookies": "Cookies",
     "terms": "Conditions d’utilisation",
     "copyright": "© {year} Wangoh. Tous droits réservés.",
-    "imageSource": "Les images proviennent principalement d’<link>Unsplash</link>."
+    "imageSource": "Les images proviennent principalement d’<link>Unsplash</link>.",
+    "cookieSettings": "Paramètres des cookies"
   },
   "Geo": {
     "continent": {
@@ -638,5 +639,26 @@
     "gateway": "Point d’entrée",
     "takeMe": "Décoller : {country}",
     "spinToChoose": "Tournez pour choisir"
+  },
+  "Consent": {
+    "eyebrow": "Votre vie privée",
+    "title": "Vos choix en matière de cookies",
+    "body": "Nous utilisons toujours le stockage nécessaire au fonctionnement du site. Avec votre accord, nous mesurons l’utilisation du site avec Google Analytics et laissons Google personnaliser les annonces selon vos centres d’intérêt. Vous pouvez modifier votre choix à tout moment via le lien « Paramètres des cookies » en bas de page.",
+    "policyLink": "Politique relative aux cookies",
+    "acceptAll": "Tout accepter",
+    "rejectAll": "Tout refuser",
+    "manage": "Gérer les préférences",
+    "save": "Enregistrer mes choix",
+    "dialogTitle": "Paramètres des cookies",
+    "dialogIntro": "Choisissez les technologies que vous autorisez. Les cookies nécessaires sont indispensables au fonctionnement du site et ne peuvent pas être désactivés. En savoir plus :",
+    "close": "Fermer",
+    "alwaysOn": "Toujours actifs",
+    "necessaryTitle": "Nécessaires",
+    "necessaryBody": "Diffuser les pages en toute sécurité et mémoriser sur votre appareil votre choix de cookies, la ville de départ de l’animation de vol et votre progression au jeu des drapeaux.",
+    "analyticsTitle": "Mesure d’audience",
+    "analyticsBody": "Mesurer avec Google Analytics quelles pages sont lues et comment le site est utilisé. Si vous l’acceptez, des cookies Google Analytics (_ga) sont utilisés ; sinon, Google Analytics n’est pas chargé du tout.",
+    "adsTitle": "Publicité",
+    "adsBody": "Cookies et identifiants permettant à Google AdSense de personnaliser et de mesurer les annonces selon vos centres d’intérêt. Si vous refusez, vous pourrez voir des annonces non personnalisées ou limitées.",
+    "saved": "Vos choix en matière de cookies ont été enregistrés."
   }
 }

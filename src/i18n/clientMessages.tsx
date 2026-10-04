@@ -16,8 +16,8 @@ import { getMessages } from "next-intl/server";
  * listede olduğunu, tarayıcı da eksikleri MISSING_MESSAGE olarak denetler.
  */
 export const CLIENT_NAMESPACES = {
-  /** Her sayfa: SiteFooter içindeki dil seçici. */
-  global: ["LanguageSwitcher"],
+  /** Her sayfa: SiteFooter içindeki dil seçici ve çerez izin penceresi. */
+  global: ["LanguageSwitcher", "Consent"],
   home: [
     "LanguageSwitcher",
     "Nav",

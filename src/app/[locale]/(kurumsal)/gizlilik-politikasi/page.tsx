@@ -70,6 +70,16 @@ export default async function PrivacyPage({ params }: Props) {
             doğrudan tanımlayan bir kullanıcı profili oluşturmaz.
           </li>
           <li>
+            <strong>Google Analytics verileri (yalnızca izninizle):</strong> Analitik iznini
+            verirseniz Google Analytics; görüntülenen sayfaları, site içi etkileşimleri, yaklaşık
+            konumu, cihaz ve tarayıcı bilgisini çerez tanımlayıcılarıyla birlikte işler. İzin
+            vermezseniz Google Analytics yüklenmez.
+          </li>
+          <li>
+            <strong>İzin kaydı:</strong> Çerez tercihiniz ve tercih tarihi yalnızca tarayıcınızın
+            localStorage alanında tutulur ve Wangoh sunucularına gönderilmez.
+          </li>
+          <li>
             <strong>Cihaz içi oyun verisi:</strong> Bayrak oyunundaki puan, seviye, seri ve
             öğrenilen bayrak bilgileri yalnızca tarayıcınızdaki localStorage alanında tutulur.
             Bu kayıt Wangoh sunucularına gönderilmez.
@@ -83,7 +93,7 @@ export default async function PrivacyPage({ params }: Props) {
             seçiminiz localStorage alanında saklanır.
           </li>
           <li>
-            <strong>Reklam ve izin verileri:</strong> Google AdSense etkinleştirildiğinde,
+            <strong>Reklam ve izin verileri:</strong> Google AdSense aracılığıyla, izin
             tercihinize ve bulunduğunuz bölgedeki kurallara bağlı olarak çerez/benzer
             tanımlayıcılar, izin sinyalleri ve reklam etkileşimleri Google tarafından işlenebilir.
           </li>
@@ -98,7 +108,10 @@ export default async function PrivacyPage({ params }: Props) {
         <ul>
           <li>İletişim taleplerini yanıtlamak ve editoryal düzeltmeleri değerlendirmek,</li>
           <li>Siteyi güvenli, hızlı ve erişilebilir biçimde sunmak; hataları gidermek,</li>
-          <li>Hangi rehberlerin faydalı bulunduğunu toplu istatistiklerle anlamak,</li>
+          <li>
+            Hangi rehberlerin faydalı bulunduğunu toplu istatistiklerle anlamak (Google Analytics
+            için yalnızca izninizle),
+          </li>
           <li>Kötüye kullanım, yetkisiz erişim ve güvenlik olaylarını önlemek,</li>
           <li>Hukuki yükümlülükleri yerine getirmek ve hakları tesis, kullanma veya korumak,</li>
           <li>Açık tercih/izin bulunması hâlinde reklam sunmak ve izin kayıtlarını yönetmek.</li>
@@ -108,8 +121,9 @@ export default async function PrivacyPage({ params }: Props) {
       <LegalSection title="4. Toplama yöntemleri ve hukuki sebepler">
         <p>
           Veriler; e-posta yoluyla doğrudan sizden, siteye gönderilen teknik istekler üzerinden
-          otomatik olarak, cihaz içi depolama aracılığıyla veya AdSense etkin olduğunda Google
-          reklam/izin teknolojileri vasıtasıyla elektronik ortamda toplanabilir.
+          otomatik olarak, cihaz içi depolama aracılığıyla, izin vermeniz hâlinde Google
+          Analytics ile veya Google reklam/izin teknolojileri vasıtasıyla elektronik ortamda
+          toplanabilir.
         </p>
         <p>
           İşleme faaliyetleri, niteliğine göre 6698 sayılı Kişisel Verilerin Korunması
@@ -117,7 +131,10 @@ export default async function PrivacyPage({ params }: Props) {
           <strong>bir hakkın tesisi, kullanılması veya korunması</strong> ve temel haklarınıza
           zarar vermemek kaydıyla <strong>meşru menfaat</strong> şartlarına dayanır. Kanun veya
           ilgili bölge kuralları açık rıza gerektiriyorsa, reklam ve zorunlu olmayan depolama
-          faaliyetleri yalnızca ayrı ve bilgilendirilmiş tercihiniz üzerine yürütülür.
+          faaliyetleri yalnızca ayrı ve bilgilendirilmiş tercihiniz üzerine yürütülür. Google
+          Analytics ve kişiselleştirilmiş reklam için çerez kullanımı{" "}
+          <strong>açık rızanıza</strong> dayanır; rızanızı sayfanın altındaki &ldquo;Çerez
+          tercihleri&rdquo; bağlantısından istediğiniz zaman geri alabilirsiniz.
         </p>
       </LegalSection>
 
@@ -130,9 +147,10 @@ export default async function PrivacyPage({ params }: Props) {
             Kaynak yalnızca gerektiğinde tarayıcıdan çağrılan içerik/CDN sağlayıcıları
             (örneğin Unsplash, Wikimedia veya jsDelivr),
           </li>
+          <li>Analitik izni verdiğinizde Google (Google Analytics),</li>
           <li>
-            AdSense etkinleştirildiğinde ve gerekli izin sağlandığında Google ile ilgili reklam
-            teknolojisi sağlayıcıları,
+            İzin tercihinize bağlı olarak Google (AdSense) ve ilgili reklam teknolojisi
+            sağlayıcıları,
           </li>
           <li>Kanunen yetkili kamu kurumları, yargı mercileri ve hukuk danışmanları.</li>
         </ul>
@@ -151,7 +169,9 @@ export default async function PrivacyPage({ params }: Props) {
           ve işleme amacı kalmadığında veriler silinir, yok edilir veya anonim hâle getirilir.
         </p>
         <p>
-          Bayrak oyunu kaydı, siz tarayıcı verilerini silene kadar cihazınızda kalır. Reklam
+          Bayrak oyunu kaydı, siz tarayıcı verilerini silene kadar cihazınızda kalır. Çerez
+          tercihiniz 6 ay saklanır. Google Analytics çerezleri tarayıcınızda en fazla 2 yıl kalır
+          ve analitik izni geri alındığında silinir. Reklam
           teknolojilerinin saklama süreleri, izin tercihinize ve ilgili sağlayıcının politikasına
           göre değişebilir.
         </p>

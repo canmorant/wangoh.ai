@@ -11,10 +11,10 @@ export default function CookiesEn() {
       summary="This policy explains the cookies and cookie-like browser storage technologies used on wangoh.com, together with their purpose, duration and your control options."
     >
       <LegalCallout>
-        Wangoh&rsquo;s anonymous visitor measurement doesn&rsquo;t use cookies. Flag game progress and
-        the departure city for the flight animation are kept only in your browser&rsquo;s storage on
-        your device. When Google AdSense is enabled, advertising/consent technologies may come into
-        play under the conditions described in this policy.
+        We use non-essential cookies only with your permission. Google Analytics isn&rsquo;t loaded at
+        all unless you allow analytics, and advertising cookies also depend on your consent. We ask
+        for your choice on your first visit, and you can change it at any time via the &ldquo;Cookie
+        settings&rdquo; link at the bottom of the page.
       </LegalCallout>
 
       <LegalSection title="1. What are cookies and similar technologies?">
@@ -38,6 +38,12 @@ export default function CookiesEn() {
               </tr>
             </thead>
             <tbody>
+              <tr>
+                <td>wangoh.consent</td>
+                <td>First-party localStorage / necessary</td>
+                <td>Remembering your cookie and consent choice and when you made it</td>
+                <td>6 months; then you&rsquo;re asked again</td>
+              </tr>
               <tr>
                 <td>wangoh.flaggame.v2</td>
                 <td>First-party localStorage / functional</td>
@@ -72,13 +78,45 @@ export default function CookiesEn() {
         </p>
       </LegalSection>
 
-      <LegalSection title="3. Anonymous visitor measurement">
+      <LegalSection title="3. Visitor measurement">
         <p>
           Vercel Web Analytics measures pages viewed, referring sources, approximate country,
           device, operating system and browser type as aggregate statistics. This feature
-          doesn&rsquo;t use third-party cookies, doesn&rsquo;t track you across websites and doesn&rsquo;t
-          give Wangoh a profile that directly identifies a visitor.
+          doesn&rsquo;t use cookies, doesn&rsquo;t track you across websites and doesn&rsquo;t give Wangoh a
+          profile that directly identifies a visitor.
         </p>
+        <p>
+          Google Analytics 4 is loaded only when you give &ldquo;Analytics&rdquo; consent. It uses the
+          first-party cookies below to measure pages viewed, on-site interactions, approximate
+          location, and device and browser information. If you withdraw consent, Google Analytics
+          isn&rsquo;t loaded and these cookies are deleted.
+        </p>
+        <div className="legal-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Technology / type</th>
+                <th>Purpose</th>
+                <th>Duration</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>_ga</td>
+                <td>Google Analytics cookie / analytics</td>
+                <td>Distinguishing visitors from one another</td>
+                <td>2 years</td>
+              </tr>
+              <tr>
+                <td>_ga_QJSHGD467K</td>
+                <td>Google Analytics cookie / analytics</td>
+                <td>Maintaining session state</td>
+                <td>2 years</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </LegalSection>
 
       <LegalSection title="4. Hosting and security logs">
@@ -90,25 +128,19 @@ export default function CookiesEn() {
         </p>
       </LegalSection>
 
-      <LegalSection title="5. When Google AdSense is enabled">
+      <LegalSection title="5. Google AdSense advertising">
         <p>
-          When Wangoh starts showing ads, Google and authorised ad technology providers may use
+          Wangoh&rsquo;s pages include the Google AdSense ad script. Google and authorised ad technology providers may use
           cookies or similar identifiers to serve ads, limit frequency, prevent fraud, measure ad
           performance and apply your consent choices. Google may change the names and lifetimes of
           the identifiers used over time.
         </p>
         <ul>
           <li>
-            In the regions and situations where it is required, non-essential advertising storage
-            isn&rsquo;t enabled without your consent choice.
+            Unless you give advertising consent, Google is told (via Consent Mode) that ad storage
+            is denied; non-personalised or limited ads may be shown without advertising cookies.
           </li>
-          <li>
-            For visitors from the European Economic Area, the United Kingdom and Switzerland, a
-            consent management platform (CMP) certified by Google is used.
-          </li>
-          <li>
-            Depending on your choice, personalised, non-personalised or limited ads may be shown.
-          </li>
+          <li>If you give advertising consent, ads may be personalised to your interests.</li>
         </ul>
         <p>
           You can learn how Google uses advertising data on its{" "}
@@ -127,15 +159,15 @@ export default function CookiesEn() {
         <p>
           Technologies that are strictly necessary to deliver the site securely or to run a
           feature you have explicitly requested may rely on legal grounds other than explicit
-          consent under applicable law. For non-essential functional, analytics or advertising
-          technologies, a preference mechanism is provided in regions where explicit consent is
-          required.
+          consent under applicable law. Non-essential analytics and advertising technologies run
+          only with your explicit consent.
         </p>
         <p>
-          When AdSense is enabled, you can refine your choice in the &ldquo;manage options&rdquo; area
-          of the consent window and change it later via the site&rsquo;s &ldquo;privacy/cookie
-          preferences&rdquo; link. Withdrawing consent doesn&rsquo;t affect the lawfulness of
-          processing carried out before the withdrawal.
+          You can give your choice in the consent window shown on your first visit, choose by
+          category with &ldquo;Manage preferences&rdquo;, and change it at any time via the
+          &ldquo;Cookie settings&rdquo; link at the bottom of the page. Your choice is stored on your
+          device for 6 months, after which you&rsquo;re asked again. Withdrawing consent doesn&rsquo;t
+          affect the lawfulness of processing carried out before the withdrawal.
         </p>
       </LegalSection>
 

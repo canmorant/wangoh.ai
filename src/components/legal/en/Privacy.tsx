@@ -46,6 +46,16 @@ export default function PrivacyEn() {
             and doesn&rsquo;t create a user profile that directly identifies you in reports.
           </li>
           <li>
+            <strong>Google Analytics data (only with your consent):</strong> if you give analytics
+            consent, Google Analytics processes pages viewed, on-site interactions, approximate
+            location, and device and browser information together with cookie identifiers. If you
+            don&rsquo;t, Google Analytics isn&rsquo;t loaded.
+          </li>
+          <li>
+            <strong>Consent record:</strong> your cookie choice and the date you made it are kept only
+            in your browser&rsquo;s localStorage and aren&rsquo;t sent to Wangoh&rsquo;s servers.
+          </li>
+          <li>
             <strong>On-device game data:</strong> your score, level, streak and learned flags in the
             flag game are kept only in your browser&rsquo;s localStorage. This record isn&rsquo;t sent
             to Wangoh&rsquo;s servers.
@@ -59,9 +69,9 @@ export default function PrivacyEn() {
             yourself, your choice is stored in localStorage.
           </li>
           <li>
-            <strong>Advertising and consent data:</strong> when Google AdSense is enabled, cookies/
-            similar identifiers, consent signals and ad interactions may be processed by Google,
-            depending on your choice and the rules in your region.
+            <strong>Advertising and consent data:</strong> through Google AdSense, cookies/similar
+            identifiers, consent signals and ad interactions may be processed by Google, depending on
+            your consent choice and the rules in your region.
           </li>
         </ul>
         <p>
@@ -74,7 +84,10 @@ export default function PrivacyEn() {
         <ul>
           <li>Responding to contact requests and reviewing editorial corrections,</li>
           <li>Delivering the site securely, quickly and accessibly; fixing errors,</li>
-          <li>Understanding, through aggregate statistics, which guides people find useful,</li>
+          <li>
+            Understanding, through aggregate statistics, which guides people find useful (with
+            Google Analytics, only with your consent),
+          </li>
           <li>Preventing misuse, unauthorised access and security incidents,</li>
           <li>Fulfilling legal obligations and establishing, exercising or protecting rights,</li>
           <li>Serving ads and managing consent records where there is an explicit choice/consent.</li>
@@ -84,8 +97,8 @@ export default function PrivacyEn() {
       <LegalSection title="4. Collection methods and legal grounds">
         <p>
           Data may be collected electronically: directly from you by email, automatically through
-          technical requests sent to the site, via on-device storage or, when AdSense is enabled,
-          through Google&rsquo;s advertising/consent technologies.
+          technical requests sent to the site, via on-device storage, through Google Analytics if
+          you consent, or through Google&rsquo;s advertising/consent technologies.
         </p>
         <p>
           Depending on their nature, processing activities rely on the conditions in Article 5 of
@@ -95,7 +108,9 @@ export default function PrivacyEn() {
           fundamental rights aren&rsquo;t harmed, <strong>legitimate interest</strong>. Where the law
           or the rules of the relevant region require explicit consent, advertising and
           non-essential storage activities are carried out only on the basis of your separate,
-          informed choice.
+          informed choice. The use of cookies for Google Analytics and personalised advertising
+          relies on your <strong>explicit consent</strong>, which you can withdraw at any time via
+          the &ldquo;Cookie settings&rdquo; link at the bottom of the page.
         </p>
       </LegalSection>
 
@@ -108,9 +123,10 @@ export default function PrivacyEn() {
             Content/CDN providers whose resources are requested from the browser only when needed
             (for example Unsplash, Wikimedia or jsDelivr),
           </li>
+          <li>Google (Google Analytics), when you give analytics consent,</li>
           <li>
-            When AdSense is enabled and the necessary consent is given, Google and the relevant ad
-            technology providers,
+            Google (AdSense) and the relevant ad technology providers, depending on your consent
+            choice,
           </li>
           <li>Legally authorised public authorities, judicial bodies and legal advisers.</li>
         </ul>
@@ -129,7 +145,9 @@ export default function PrivacyEn() {
           purpose for processing, the data is deleted, destroyed or anonymised.
         </p>
         <p>
-          The flag game record stays on your device until you clear your browser data. Retention
+          The flag game record stays on your device until you clear your browser data. Your cookie
+          choice is kept for 6 months. Google Analytics cookies stay in your browser for up to 2
+          years and are deleted if you withdraw analytics consent. Retention
           periods for advertising technologies may vary depending on your consent choice and the
           relevant provider&rsquo;s policy.
         </p>
