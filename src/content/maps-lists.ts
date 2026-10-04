@@ -8,8 +8,8 @@ export interface GuideMapsList {
 
 /** Paris rehberinde adı geçen yerlerden ilk ziyaret için seçilen 10 durak. */
 export const parisMapsList: GuideMapsList = {
-  // Gerçek liste oluşturulduğunda "Listeyi paylaş" bağlantısını url'e ekleyin.
-  // Arama veya yol tarifi bağlantısı, paylaşılan/kaydedilebilen liste değildir.
+  // Wangoh Google Maps hesabındaki 10 duraklık listenin görüntüleme bağlantısı.
+  url: "https://maps.app.goo.gl/ey46Ddvyh655PZC47",
   stops: [
     { id: "eiffel", query: "Tour Eiffel, Paris, France" },
     { id: "louvre", query: "Musée du Louvre, Paris, France" },
