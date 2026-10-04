@@ -9,12 +9,13 @@ export type AppLocale = (typeof LOCALES)[number];
 export const DEFAULT_LOCALE: AppLocale = "tr";
 
 /**
- * Yayındaki diller. Varsayılan yalnız Türkçe: bir dil, sitenin bütün içeriği
- * o dile çevrilip kontrol edilmeden canlıya çıkmıyor.
+ * Yayındaki diller. Bir dil, sitenin bütün içeriği o dile çevrilip kontrol
+ * edilmeden canlıya çıkmıyor.
  *
- * Çevirisi biten bir dili önizlemek ya da yayına almak için derleme ortamında
- *   NEXT_PUBLIC_SITE_LOCALES=tr,en
- * verilir. Listede olmayan dillerin adresleri (/en/...) proxy'de geçici
+ * Liste derlemede NEXT_PUBLIC_SITE_LOCALES ile gelir; varsayılanı
+ * next.config.ts belirler (web: tr,en). Çevirisi biten bir dili önizlemek için
+ *   NEXT_PUBLIC_SITE_LOCALES=tr,en,de
+ * verilir. Listede olmayan dillerin adresleri (/de/...) proxy'de geçici
  * (307) olarak Türkçe karşılığına yönleniyor; dil seçici tek dil kaldığında
  * görünmüyor; sitemap ve hreflang yalnız yayındaki dilleri içeriyor.
  */

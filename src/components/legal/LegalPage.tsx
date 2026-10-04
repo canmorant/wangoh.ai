@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { useFormatter, useLocale, useTranslations } from "next-intl";
 import ContentNotice from "@/components/guide/ContentNotice";
+import type { AppLocale } from "@/i18n/routing";
 
 /** Politikaların son güncellenme tarihi (ISO); dile göre biçimlendirilir. */
 const POLICY_UPDATED = "2026-10-04";
@@ -11,22 +12,25 @@ export default function LegalPage({
   summary,
   children,
   showUpdated = true,
+  lang = "tr",
 }: {
   eyebrow: string;
   title: string;
   summary: string;
   children: ReactNode;
   showUpdated?: boolean;
+  /** Metnin yazıldığı dil; arayüz dilinden farklıysa çeviri notu gösterilir. */
+  lang?: AppLocale;
 }) {
   const locale = useLocale();
   const t = useTranslations("Corporate");
   const format = useFormatter();
-  // Metinler yalnızca Türkçe; ekran okuyucular doğru dilde okusun diye
-  // makale Türkçe işaretli, arayüz parçaları kendi dillerinde.
+  // Ekran okuyucular doğru dilde okusun diye makale metnin diliyle,
+  // arayüz parçaları kendi dilleriyle işaretli.
   return (
     <main className="px-4 pb-24 pt-14 sm:px-8 sm:pb-32 sm:pt-20">
-      <article lang="tr" className="mx-auto max-w-[840px]">
-        <ContentNotice />
+      <article lang={lang} className="mx-auto max-w-[840px]">
+        {lang !== locale && <ContentNotice />}
         <header className="border-b border-white/[0.08] pb-10 sm:pb-12">
           <p className="flex items-center gap-3 text-[10px] tracking-[0.3em] text-[var(--gold)]/75 uppercase">
             <span className="h-px w-8 bg-[var(--gold)]/35" />

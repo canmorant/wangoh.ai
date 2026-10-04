@@ -1,10 +1,10 @@
 import type { MetadataRoute } from "next";
 import { countries } from "@/data/destinations";
 import { countrySlug, citySlug, guideFor } from "@/content/guides";
-import { absolute } from "@/lib/site";
 import { routing, type AppLocale } from "@/i18n/routing";
 import { cityPageLocales, countryPageLocales, guideIndexLocales } from "@/content/localized";
 import { localizedUrl, translatedAlternates } from "@/i18n/seo";
+import { legalPageLocales } from "@/components/legal/locales";
 
 /**
  * Statik export'ta (Capacitor uygulama derlemesi) bu metadata route'ları
@@ -49,11 +49,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticPages: MetadataRoute.Sitemap = [
     ...entries("/gezi-rehberleri", guideIndexLocales(), { priority: 0.9 }),
-    { url: absolute("/hakkimizda"), priority: 0.4 },
-    { url: absolute("/iletisim"), priority: 0.4 },
-    { url: absolute("/gizlilik-politikasi"), priority: 0.2 },
-    { url: absolute("/cerez-politikasi"), priority: 0.2 },
-    { url: absolute("/kullanim-kosullari"), priority: 0.2 },
+    ...entries("/hakkimizda", legalPageLocales(), { priority: 0.4 }),
+    ...entries("/iletisim", legalPageLocales(), { priority: 0.4 }),
+    ...entries("/gizlilik-politikasi", legalPageLocales(), { priority: 0.2 }),
+    ...entries("/cerez-politikasi", legalPageLocales(), { priority: 0.2 }),
+    ...entries("/kullanim-kosullari", legalPageLocales(), { priority: 0.2 }),
   ];
 
   const countryPages: MetadataRoute.Sitemap = countries.flatMap((c) =>

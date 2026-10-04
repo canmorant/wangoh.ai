@@ -16,7 +16,16 @@ const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
  */
 const isApp = process.env.BUILD_TARGET === "app";
 
+/**
+ * Yayındaki diller (bkz. src/i18n/routing.ts). Ortamda verilmediyse web
+ * sitesinde içeriği tamamen çevrilip kontrol edilen Türkçe ve İngilizce;
+ * uygulama derlemesi şimdilik yalnız Türkçe. Yeni bir dil yalnız tüm
+ * içeriği çevrilip kontrol edildikten sonra bu listeye eklenir.
+ */
+const siteLocales = process.env.NEXT_PUBLIC_SITE_LOCALES ?? (isApp ? "tr" : "tr,en");
+
 const nextConfig: NextConfig = {
+  env: { NEXT_PUBLIC_SITE_LOCALES: siteLocales },
   experimental: {
     // Kök layout üst seviye dinamik bir segmentte (app/[locale]/layout.tsx).
     // Next 16 dokümanı bu yapı için global-not-found.tsx öneriyor: hiçbir

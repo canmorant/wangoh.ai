@@ -171,7 +171,7 @@
   },
   "Discovery": {
     "heading": "A travel guide for your next city",
-    "intro": "What to see, where to stay, how to get around? Pick your stops, find places to eat and build a day-by-day route with our city guides — currently available in Turkish.",
+    "intro": "What to see, where to stay, how to get around? Pick your stops, find places to eat and build a day-by-day route with our city guides.",
     "guideTitle": "{city} Travel Guide",
     "allGuides": "All country and city guides →",
     "featured": {
@@ -400,10 +400,10 @@
   },
   "Guides": {
     "metaTitle": "Travel Guides: Country by Country, City by City | Wangoh",
-    "metaDescription": "New York, Madrid, Tokyo, Rome and more: city guides with things to see, where to stay, getting around, food and day-by-day itineraries — currently in Turkish.",
+    "metaDescription": "New York, Madrid, Tokyo, Rome and more: city guides with things to see, where to stay, getting around, food and day-by-day itineraries.",
     "breadcrumb": "Travel guides",
     "title": "Country and city travel guides",
-    "intro": "Pick your destination country, then explore things to see and ways to get around in each city guide. Build your own route with neighbourhoods to stay in, food stops and daily plans. The guides themselves are currently written in Turkish.",
+    "intro": "Pick your destination country, then explore things to see and ways to get around in each city guide. Build your own route with neighbourhoods to stay in, food stops and daily plans.",
     "countriesNav": "Jump to a country"
   },
   "Hero": {

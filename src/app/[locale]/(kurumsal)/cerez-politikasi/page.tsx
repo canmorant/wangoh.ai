@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { resolveLocale } from "@/i18n/server";
-import { turkishOnlySeo } from "@/i18n/seo";
+import { contentSeo } from "@/i18n/seo";
+import { legalPageLocales, legalTextLocale } from "@/components/legal/locales";
+import CookiesEn from "@/components/legal/en/Cookies";
 import LegalPage, { LegalCallout, LegalSection } from "@/components/legal/LegalPage";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -12,8 +14,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "Corporate.cookies" });
   const title = t("title");
   const description = t("description");
-  // Metin yalnızca Türkçe: canonical Türkçe sürüm, diğer diller noindex.
-  const seo = turkishOnlySeo("/cerez-politikasi", locale);
+  // Metin Türkçe ve İngilizce; diğer dillerde canonical Türkçe sürüm, noindex.
+  const seo = contentSeo("/cerez-politikasi", locale, legalPageLocales());
   return {
     title,
     description,
@@ -23,7 +25,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function CookiePolicyPage({ params }: Props) {
-  await resolveLocale(params);
+  const locale = await resolveLocale(params);
+  if (legalTextLocale(locale) === "en") return <CookiesEn />;
   return (
     <LegalPage
       eyebrow="Tarayıcı depolaması ve tercihler"

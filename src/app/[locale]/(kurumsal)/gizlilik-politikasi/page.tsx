@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { resolveLocale } from "@/i18n/server";
-import { turkishOnlySeo } from "@/i18n/seo";
+import { contentSeo } from "@/i18n/seo";
+import { legalPageLocales, legalTextLocale } from "@/components/legal/locales";
+import PrivacyEn from "@/components/legal/en/Privacy";
 import LegalPage, { LegalCallout, LegalSection } from "@/components/legal/LegalPage";
 import { SITE } from "@/lib/site";
 
@@ -13,8 +15,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "Corporate.privacy" });
   const title = t("title");
   const description = t("description");
-  // Metin yalnızca Türkçe: canonical Türkçe sürüm, diğer diller noindex.
-  const seo = turkishOnlySeo("/gizlilik-politikasi", locale);
+  // Metin Türkçe ve İngilizce; diğer dillerde canonical Türkçe sürüm, noindex.
+  const seo = contentSeo("/gizlilik-politikasi", locale, legalPageLocales());
   return {
     title,
     description,
@@ -24,7 +26,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function PrivacyPage({ params }: Props) {
-  await resolveLocale(params);
+  const locale = await resolveLocale(params);
+  if (legalTextLocale(locale) === "en") return <PrivacyEn />;
   return (
     <LegalPage
       eyebrow="Kişisel verilerin korunması"
