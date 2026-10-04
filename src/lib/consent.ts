@@ -89,8 +89,16 @@ const signals = ({ analytics, ads }: ConsentChoice) => {
   };
 };
 
+/**
+ * Google'ın resmî devre dışı bırakma bayrağı: true iken sayfada yüklenmiş
+ * olsa bile Google Analytics hiçbir veri göndermez. İzin geri alınınca aynı
+ * sayfa oturumunda da ölçüm hemen durur.
+ */
+const GA_DISABLE_FLAG = `ga-disable-${GA_MEASUREMENT_ID}`;
+
 /** Tercihi Google etiketlerine (Analytics, AdSense) bildirir. */
 export function applyConsent(choice: ConsentChoice) {
+  (window as unknown as Record<string, boolean>)[GA_DISABLE_FLAG] = !choice.analytics;
   const gtag = (window as unknown as { gtag?: Gtag }).gtag;
   if (!gtag) return;
   gtag("consent", "update", signals(choice));
@@ -126,6 +134,7 @@ window.gtag=gtag;
   var ok=c&&c.v===${CONSENT_VERSION}&&typeof c.ts==="number"&&Date.now()-c.ts<=${CONSENT_MAX_AGE_MS};
   var a=ok&&c.analytics===true?"granted":"denied";
   var d=ok&&c.ads===true?"granted":"denied";
+  window[${JSON.stringify(`ga-disable-${GA_MEASUREMENT_ID}`)}]=a!=="granted";
   gtag("consent","default",{
     analytics_storage:a,
     ad_storage:d,

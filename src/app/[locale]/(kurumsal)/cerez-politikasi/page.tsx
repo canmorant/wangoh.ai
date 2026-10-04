@@ -34,8 +34,8 @@ export default async function CookiePolicyPage({ params }: Props) {
       summary="Bu politika, wangoh.com üzerinde kullanılan çerezleri ve çerez benzeri tarayıcı depolama teknolojilerini; amaç, süre ve kontrol seçenekleriyle birlikte açıklar."
     >
       <LegalCallout>
-        Zorunlu olmayan çerezleri yalnızca izninizle kullanırız. Google Analytics, analitik izni
-        vermediğiniz sürece hiç yüklenmez; reklam çerezleri de izninize bağlıdır. Tercihinizi ilk
+        Analitik ve reklam çerezlerini yalnızca izninizle kullanırız. Google Analytics, analitik
+        izni vermediğiniz sürece hiç yüklenmez; reklam çerezleri de izninize bağlıdır. Tercihinizi ilk
         ziyaretinizde sorarız ve sayfanın altındaki &ldquo;Çerez tercihleri&rdquo; bağlantısından
         istediğiniz zaman değiştirebilirsiniz.
       </LegalCallout>
@@ -91,6 +91,15 @@ export default async function CookiePolicyPage({ params }: Props) {
                 </td>
                 <td>Sekme veya tarayıcı kapanana kadar</td>
               </tr>
+              <tr>
+                <td>wangoh-shell-v1, wangoh-pages-v1, wangoh-assets-v1</td>
+                <td>Birinci taraf service worker önbelleği (Cache Storage) / işlevsel</td>
+                <td>
+                  Ziyaret ettiğiniz sayfaları ve görselleri, internet bağlantısı yokken de
+                  açılabilmeleri için cihazınızda saklamak
+                </td>
+                <td>Tarayıcı verisi silinene veya önbellek sürümü yenilenene kadar</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -111,7 +120,8 @@ export default async function CookiePolicyPage({ params }: Props) {
           Google Analytics 4 yalnızca &ldquo;Analitik&rdquo; iznini verdiğinizde yüklenir.
           Görüntülenen sayfaları, site içi etkileşimleri, yaklaşık konumu, cihaz ve tarayıcı
           bilgisini ölçmek için aşağıdaki birinci taraf çerezleri kullanır. İzni geri aldığınızda
-          Google Analytics yüklenmez ve bu çerezler silinir.
+          Google Analytics veri göndermeyi hemen durdurur, bu çerezler silinir ve sonraki
+          ziyaretlerinizde yüklenmez.
         </p>
         <div className="legal-table-wrap">
           <table>
@@ -128,13 +138,13 @@ export default async function CookiePolicyPage({ params }: Props) {
                 <td>_ga</td>
                 <td>Google Analytics çerezi / analitik</td>
                 <td>Ziyaretçileri birbirinden ayırt etmek</td>
-                <td>2 yıl</td>
+                <td>2 yıla kadar</td>
               </tr>
               <tr>
                 <td>_ga_QJSHGD467K</td>
                 <td>Google Analytics çerezi / analitik</td>
                 <td>Oturum durumunu sürdürmek</td>
-                <td>2 yıl</td>
+                <td>2 yıla kadar</td>
               </tr>
             </tbody>
           </table>
@@ -166,6 +176,11 @@ export default async function CookiePolicyPage({ params }: Props) {
             sınırlı reklamlar gösterilebilir.
           </li>
           <li>Reklam iznini verirseniz reklamlar ilgi alanlarınıza göre kişiselleştirilebilir.</li>
+          <li>
+            Avrupa Ekonomik Alanı, Birleşik Krallık ve İsviçre&rsquo;deki ziyaretçilere reklamlar
+            için ayrıca Google&rsquo;ın sertifikalı izin yönetim platformu (Google Gizlilik ve
+            Mesajlaşma) üzerinden bir izin mesajı gösterilir.
+          </li>
         </ul>
         <p>
           Google’ın reklam verilerini nasıl kullandığı hakkında{" "}
@@ -184,8 +199,9 @@ export default async function CookiePolicyPage({ params }: Props) {
         <p>
           Siteyi güvenli biçimde sunmak veya açıkça talep ettiğiniz bir özelliği çalıştırmak
           için kesinlikle gerekli teknolojiler, uygulanabilir mevzuattaki açık rıza dışındaki
-          hukuki şartlara dayanabilir. Analitik ve reklam amaçlı zorunlu olmayan teknolojiler
-          yalnızca açık rızanızla çalışır.
+          hukuki şartlara dayanabilir. Analitik ve reklam amaçlı çerezler yalnızca açık
+          rızanızla kullanılır; reklam izni yoksa reklamlar reklam çerezleri olmadan, sınırlı
+          biçimde sunulur.
         </p>
         <p>
           Tercihinizi ilk ziyarette açılan izin penceresinden verebilir, &ldquo;Tercihleri
@@ -199,9 +215,10 @@ export default async function CookiePolicyPage({ params }: Props) {
       <LegalSection title="7. Tarayıcıdan silme ve engelleme">
         <p>
           Tarayıcı ayarlarından çerezleri ve site verilerini görüntüleyebilir, engelleyebilir
-          veya silebilirsiniz. Bayrak oyunu ilerlemesini kaldırmak için `wangoh.com` site
-          verilerini/localStorage kaydını silebilirsiniz. Tüm depolamayı engellemeniz hâlinde
-          bazı tercih özellikleri beklediğiniz gibi çalışmayabilir.
+          veya silebilirsiniz. wangoh.com site verilerini sildiğinizde bayrak oyunu ilerlemesi,
+          kalkış şehri tercihi, izin kaydı ve çevrimdışı sayfa önbelleği de kaldırılır. Tüm
+          depolamayı engellemeniz hâlinde bazı tercih özellikleri beklediğiniz gibi
+          çalışmayabilir.
         </p>
         <ul>
           <li>
@@ -220,8 +237,8 @@ export default async function CookiePolicyPage({ params }: Props) {
             </a>
           </li>
           <li>
-            <a href="https://adssettings.google.com/" target="_blank" rel="noreferrer">
-              Google reklam kişiselleştirme ayarları
+            <a href="https://myadcenter.google.com/?hl=tr" target="_blank" rel="noreferrer">
+              Google Reklam Merkezim (reklam kişiselleştirme ayarları)
             </a>
           </li>
         </ul>

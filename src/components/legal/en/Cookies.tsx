@@ -11,8 +11,9 @@ export default function CookiesEn() {
       summary="This policy explains the cookies and cookie-like browser storage technologies used on wangoh.com, together with their purpose, duration and your control options."
     >
       <LegalCallout>
-        We use non-essential cookies only with your permission. Google Analytics isn&rsquo;t loaded at
-        all unless you allow analytics, and advertising cookies also depend on your consent. We ask
+        We use analytics and advertising cookies only with your permission. Google Analytics isn&rsquo;t
+        loaded at all unless you allow analytics, and advertising cookies also depend on your
+        consent. We ask
         for your choice on your first visit, and you can change it at any time via the &ldquo;Cookie
         settings&rdquo; link at the bottom of the page.
       </LegalCallout>
@@ -68,6 +69,15 @@ export default function CookiesEn() {
                 </td>
                 <td>Until the tab or browser is closed</td>
               </tr>
+              <tr>
+                <td>wangoh-shell-v1, wangoh-pages-v1, wangoh-assets-v1</td>
+                <td>First-party service worker cache (Cache Storage) / functional</td>
+                <td>
+                  Storing the pages and images you visit on your device so they can also open
+                  without an internet connection
+                </td>
+                <td>Until browser data is cleared or the cache version is renewed</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -89,7 +99,8 @@ export default function CookiesEn() {
           Google Analytics 4 is loaded only when you give &ldquo;Analytics&rdquo; consent. It uses the
           first-party cookies below to measure pages viewed, on-site interactions, approximate
           location, and device and browser information. If you withdraw consent, Google Analytics
-          isn&rsquo;t loaded and these cookies are deleted.
+          stops sending data immediately, these cookies are deleted and it isn&rsquo;t loaded on
+          your later visits.
         </p>
         <div className="legal-table-wrap">
           <table>
@@ -106,13 +117,13 @@ export default function CookiesEn() {
                 <td>_ga</td>
                 <td>Google Analytics cookie / analytics</td>
                 <td>Distinguishing visitors from one another</td>
-                <td>2 years</td>
+                <td>Up to 2 years</td>
               </tr>
               <tr>
                 <td>_ga_QJSHGD467K</td>
                 <td>Google Analytics cookie / analytics</td>
                 <td>Maintaining session state</td>
-                <td>2 years</td>
+                <td>Up to 2 years</td>
               </tr>
             </tbody>
           </table>
@@ -141,6 +152,11 @@ export default function CookiesEn() {
             is denied; non-personalised or limited ads may be shown without advertising cookies.
           </li>
           <li>If you give advertising consent, ads may be personalised to your interests.</li>
+          <li>
+            Visitors in the European Economic Area, the United Kingdom and Switzerland are also
+            shown a consent message for advertising through Google&rsquo;s certified consent
+            management platform (Google Privacy &amp; messaging).
+          </li>
         </ul>
         <p>
           You can learn how Google uses advertising data on its{" "}
@@ -159,8 +175,9 @@ export default function CookiesEn() {
         <p>
           Technologies that are strictly necessary to deliver the site securely or to run a
           feature you have explicitly requested may rely on legal grounds other than explicit
-          consent under applicable law. Non-essential analytics and advertising technologies run
-          only with your explicit consent.
+          consent under applicable law. Analytics and advertising cookies are used only with your
+          explicit consent; without advertising consent, ads are served in a limited way without
+          advertising cookies.
         </p>
         <p>
           You can give your choice in the consent window shown on your first visit, choose by
@@ -174,8 +191,9 @@ export default function CookiesEn() {
       <LegalSection title="7. Deleting and blocking in your browser">
         <p>
           You can view, block or delete cookies and site data in your browser settings. To remove
-          your flag game progress, you can delete the `wangoh.com` site data/localStorage record. If
-          you block all storage, some preference features may not work as expected.
+          your flag game progress, you can delete the wangoh.com site data; this also removes your
+          departure city choice, your consent record and the offline page cache. If you block all
+          storage, some preference features may not work as expected.
         </p>
         <ul>
           <li>
@@ -198,8 +216,8 @@ export default function CookiesEn() {
             </a>
           </li>
           <li>
-            <a href="https://adssettings.google.com/" target="_blank" rel="noreferrer">
-              Google ad personalisation settings
+            <a href="https://myadcenter.google.com/?hl=en" target="_blank" rel="noreferrer">
+              Google My Ad Center (ad personalisation settings)
             </a>
           </li>
         </ul>
