@@ -178,7 +178,7 @@
   },
   "Discovery": {
     "heading": "Una guía de viaje para tu próxima ciudad",
-    "intro": "¿Qué ver, dónde alojarse, cómo moverse? Elige tus paradas, encuentra dónde comer y arma una ruta día a día con nuestras guías de ciudades, disponibles por ahora en turco.",
+    "intro": "¿Qué ver, dónde alojarse, cómo moverse? Elige tus paradas, encuentra dónde comer y arma una ruta día a día con nuestras guías de ciudades.",
     "guideTitle": "Guía de viaje de {city}",
     "allGuides": "Todas las guías de países y ciudades →",
     "featured": {
@@ -413,10 +413,10 @@
   },
   "Guides": {
     "metaTitle": "Guías de viaje: país a país, ciudad a ciudad | Wangoh",
-    "metaDescription": "Nueva York, Madrid, Tokio, Roma y más: guías de ciudades con qué ver, dónde alojarse, cómo moverse, dónde comer e itinerarios día a día, por ahora en turco.",
+    "metaDescription": "Nueva York, Madrid, Tokio, Roma y más: guías de ciudades con qué ver, dónde alojarse, cómo moverse, dónde comer e itinerarios día a día.",
     "breadcrumb": "Guías de viaje",
     "title": "Guías de viaje de países y ciudades",
-    "intro": "Elige el país al que vas y descubre en cada guía de ciudad qué ver y cómo moverte. Crea tu propia ruta con zonas donde alojarte, paradas para comer y planes diarios. Por ahora, las guías están escritas en turco.",
+    "intro": "Elige el país al que vas y descubre en cada guía de ciudad qué ver y cómo moverte. Crea tu propia ruta con zonas donde alojarte, paradas para comer y planes diarios.",
     "countriesNav": "Ir a un país"
   },
   "Hero": {

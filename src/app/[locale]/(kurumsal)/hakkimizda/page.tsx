@@ -5,6 +5,7 @@ import { resolveLocale } from "@/i18n/server";
 import { OG_LOCALE, contentSeo, localizedUrl } from "@/i18n/seo";
 import { legalPageLocales, legalTextLocale } from "@/components/legal/locales";
 import AboutEn from "@/components/legal/en/About";
+import AboutEs from "@/components/legal/es/About";
 import JsonLd from "@/components/guide/JsonLd";
 import LegalPage, { LegalCallout, LegalSection } from "@/components/legal/LegalPage";
 import { SITE, absolute } from "@/lib/site";
@@ -16,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "Corporate.about" });
   const title = t("title");
   const description = t("description");
-  // Metin Türkçe ve İngilizce; diğer dillerde canonical Türkçe sürüm, noindex.
+  // Metin Türkçe, İngilizce ve İspanyolca; diğer dillerde canonical Türkçe sürüm, noindex.
   const seo = contentSeo("/hakkimizda", locale, legalPageLocales());
   const translated = legalTextLocale(locale) === locale;
   return {
@@ -45,7 +46,7 @@ export default async function AboutPage({ params }: Props) {
         data={{
           "@context": "https://schema.org",
           "@type": "AboutPage",
-          name: text === "en" ? "About Wangoh" : "Wangoh Hakkında",
+          name: { tr: "Wangoh Hakkında", en: "About Wangoh", es: "Sobre Wangoh" }[text],
           url: localizedUrl("/hakkimizda", text),
           description,
           isPartOf: { "@type": "WebSite", name: SITE.name, url: SITE.url },
@@ -59,6 +60,8 @@ export default async function AboutPage({ params }: Props) {
       />
       {text === "en" ? (
         <AboutEn />
+      ) : text === "es" ? (
+        <AboutEs />
       ) : (
         <LegalPage
           eyebrow="Bağımsız seyahat yayını"

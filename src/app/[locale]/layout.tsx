@@ -38,7 +38,12 @@ export async function generateMetadata({ params }: Omit<Props, "children">): Pro
     verification: { google: process.env.GOOGLE_SITE_VERIFICATION },
     // Ana ekrana eklenince görünen ad, açıklama ve başlangıç adresi dile göre.
     // Kendi manifest dosyası olmayan diller İngilizcesini kullanır.
-    manifest: locale === "tr" ? "/manifest.webmanifest" : "/manifest.en.webmanifest",
+    manifest:
+      locale === "tr"
+        ? "/manifest.webmanifest"
+        : locale === "es"
+          ? "/manifest.es.webmanifest"
+          : "/manifest.en.webmanifest",
     applicationName: SITE.name,
     appleWebApp: {
       capable: true,

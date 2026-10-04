@@ -5,6 +5,7 @@ import { resolveLocale } from "@/i18n/server";
 import { contentSeo } from "@/i18n/seo";
 import { legalPageLocales, legalTextLocale } from "@/components/legal/locales";
 import PrivacyEn from "@/components/legal/en/Privacy";
+import PrivacyEs from "@/components/legal/es/Privacy";
 import LegalPage, { LegalCallout, LegalSection } from "@/components/legal/LegalPage";
 import { SITE } from "@/lib/site";
 
@@ -15,7 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "Corporate.privacy" });
   const title = t("title");
   const description = t("description");
-  // Metin Türkçe ve İngilizce; diğer dillerde canonical Türkçe sürüm, noindex.
+  // Metin Türkçe, İngilizce ve İspanyolca; diğer dillerde canonical Türkçe sürüm, noindex.
   const seo = contentSeo("/gizlilik-politikasi", locale, legalPageLocales());
   return {
     title,
@@ -27,7 +28,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function PrivacyPage({ params }: Props) {
   const locale = await resolveLocale(params);
-  if (legalTextLocale(locale) === "en") return <PrivacyEn />;
+  const text = legalTextLocale(locale);
+  if (text === "en") return <PrivacyEn />;
+  if (text === "es") return <PrivacyEs />;
   return (
     <LegalPage
       eyebrow="Kişisel verilerin korunması"

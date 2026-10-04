@@ -11,6 +11,7 @@ export const SITE = {
    */
   operator: "Wangoh internet sitesinin sahibi ve işletmecisi",
   operatorEn: "The owner and operator of the Wangoh website",
+  operatorEs: "El propietario y operador del sitio web de Wangoh",
 } as const;
 
 export const absolute = (path: string) =>

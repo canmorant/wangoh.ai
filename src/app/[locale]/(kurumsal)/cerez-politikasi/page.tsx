@@ -5,6 +5,7 @@ import { resolveLocale } from "@/i18n/server";
 import { contentSeo } from "@/i18n/seo";
 import { legalPageLocales, legalTextLocale } from "@/components/legal/locales";
 import CookiesEn from "@/components/legal/en/Cookies";
+import CookiesEs from "@/components/legal/es/Cookies";
 import LegalPage, { LegalCallout, LegalSection } from "@/components/legal/LegalPage";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -14,7 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "Corporate.cookies" });
   const title = t("title");
   const description = t("description");
-  // Metin Türkçe ve İngilizce; diğer dillerde canonical Türkçe sürüm, noindex.
+  // Metin Türkçe, İngilizce ve İspanyolca; diğer dillerde canonical Türkçe sürüm, noindex.
   const seo = contentSeo("/cerez-politikasi", locale, legalPageLocales());
   return {
     title,
@@ -26,7 +27,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function CookiePolicyPage({ params }: Props) {
   const locale = await resolveLocale(params);
-  if (legalTextLocale(locale) === "en") return <CookiesEn />;
+  const text = legalTextLocale(locale);
+  if (text === "en") return <CookiesEn />;
+  if (text === "es") return <CookiesEs />;
   return (
     <LegalPage
       eyebrow="Tarayıcı depolaması ve tercihler"

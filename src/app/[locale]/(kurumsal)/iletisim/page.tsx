@@ -5,6 +5,7 @@ import { resolveLocale } from "@/i18n/server";
 import { OG_LOCALE, contentSeo, localizedUrl } from "@/i18n/seo";
 import { legalPageLocales, legalTextLocale } from "@/components/legal/locales";
 import ContactEn from "@/components/legal/en/Contact";
+import ContactEs from "@/components/legal/es/Contact";
 import JsonLd from "@/components/guide/JsonLd";
 import LegalPage, { LegalCallout, LegalSection } from "@/components/legal/LegalPage";
 import { SITE, absolute } from "@/lib/site";
@@ -16,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "Corporate.contact" });
   const title = t("title");
   const description = t("description");
-  // Metin Türkçe ve İngilizce; diğer dillerde canonical Türkçe sürüm, noindex.
+  // Metin Türkçe, İngilizce ve İspanyolca; diğer dillerde canonical Türkçe sürüm, noindex.
   const seo = contentSeo("/iletisim", locale, legalPageLocales());
   const translated = legalTextLocale(locale) === locale;
   return {
@@ -45,7 +46,7 @@ export default async function ContactPage({ params }: Props) {
         data={{
           "@context": "https://schema.org",
           "@type": "ContactPage",
-          name: text === "en" ? "Contact Wangoh" : "Wangoh İletişim",
+          name: { tr: "Wangoh İletişim", en: "Contact Wangoh", es: "Contacto con Wangoh" }[text],
           url: localizedUrl("/iletisim", text),
           description,
           mainEntity: {
@@ -64,6 +65,8 @@ export default async function ContactPage({ params }: Props) {
       />
       {text === "en" ? (
         <ContactEn />
+      ) : text === "es" ? (
+        <ContactEs />
       ) : (
         <LegalPage
           eyebrow="Bize yazın"

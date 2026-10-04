@@ -5,6 +5,7 @@ import { resolveLocale } from "@/i18n/server";
 import { contentSeo } from "@/i18n/seo";
 import { legalPageLocales, legalTextLocale } from "@/components/legal/locales";
 import TermsEn from "@/components/legal/en/Terms";
+import TermsEs from "@/components/legal/es/Terms";
 import LegalPage, { LegalCallout, LegalSection } from "@/components/legal/LegalPage";
 import { SITE } from "@/lib/site";
 
@@ -15,7 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "Corporate.terms" });
   const title = t("title");
   const description = t("description");
-  // Metin Türkçe ve İngilizce; diğer dillerde canonical Türkçe sürüm, noindex.
+  // Metin Türkçe, İngilizce ve İspanyolca; diğer dillerde canonical Türkçe sürüm, noindex.
   const seo = contentSeo("/kullanim-kosullari", locale, legalPageLocales());
   return {
     title,
@@ -27,7 +28,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function TermsPage({ params }: Props) {
   const locale = await resolveLocale(params);
-  if (legalTextLocale(locale) === "en") return <TermsEn />;
+  const text = legalTextLocale(locale);
+  if (text === "en") return <TermsEn />;
+  if (text === "es") return <TermsEs />;
   return (
     <LegalPage
       eyebrow="Site kullanım esasları"
