@@ -40,13 +40,11 @@ import {
  */
 const PLATE =
   "/images/photo-1568515387631-8b650bbcdb90-c9f1da85.avif";
-/** Telefonda yer tutucu sahnenin (ResponsiveHero) zaten indirdiği aynı kare. */
-const PLATE_MOBILE =
-  "/images/photo-1568515387631-8b650bbcdb90-ff3791ae.avif";
 
 /**
- * Sahnenin ölçüsü, pencereden değil yapışkan sahne kutusundan (100svh) okunur.
- * Telefonda adres çubuğu kaydırırken küçülüp büyüdükçe window.innerHeight
+ * Sahnenin ölçüsü, pencereden değil yapışkan sahne kutusundan (100svh) okunur:
+ * kaydırma çubuğunun genişliği düşülür. Telefonda (geniş dokunmatik ekranlar)
+ * adres çubuğu kaydırırken küçülüp büyüdükçe window.innerHeight
  * değişiyor; kutu ise sabit kalıyor. Pencereden ölçünce SVG viewBox kutuya
  * uymuyor (preserveAspectRatio="none" → çerçeve dikeyde basılıyordu) ve sahne
  * her çubuk hareketinde yeniden kuruluyordu.
@@ -483,7 +481,6 @@ export default function CinematicHero() {
     };
   }, [dims, motionQuality]);
 
-  const plate = dims && dims.w <= 768 ? PLATE_MOBILE : PLATE;
   const outer = dims && ring(dims, dims.bez);
   const mid = dims && ring(dims, dims.bez * 0.62);
   const lip = dims && ring(dims, dims.lip);
@@ -520,7 +517,7 @@ export default function CinematicHero() {
             <div
               className="absolute -inset-[3%]"
               style={{
-                backgroundImage: `url('${plate}')`,
+                backgroundImage: `url('${PLATE}')`,
                 backgroundSize: "cover",
                 backgroundPosition: "center 62%",
               }}
@@ -530,7 +527,7 @@ export default function CinematicHero() {
               ref={cityMidRef}
               className="hero-focus-medium absolute -inset-[8%]"
               style={{
-                backgroundImage: `url('${plate}')`,
+                backgroundImage: `url('${PLATE}')`,
                 backgroundSize: "cover",
                 backgroundPosition: "center 62%",
                 filter: "blur(5px)",
@@ -542,7 +539,7 @@ export default function CinematicHero() {
               ref={cityRef}
               className="hero-focus-far absolute -inset-[10%]"
               style={{
-                backgroundImage: `url('${plate}')`,
+                backgroundImage: `url('${PLATE}')`,
                 backgroundSize: "cover",
                 backgroundPosition: "center 62%",
                 filter: "blur(15px) saturate(0.94)",

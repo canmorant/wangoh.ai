@@ -222,6 +222,53 @@ a,
   }
 }
 
+/* ---------- telefon kahraman sahnesi (WindowHero) ----------
+   Kaydırmada yalnız transform ve opacity değişiyor; bu sınıflar o öğeleri
+   baştan kendi katmanlarına alıyor ki tarayıcı hiçbir karede yeniden çizim
+   yapmasın, sadece ekran kartında birleştirsin. */
+.hero-layer {
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+.hero-fade {
+  will-change: opacity;
+}
+
+/* Cam açıklığı. Çerçeve ve kabin duvarı, açıklığın çevresine dizilen
+   box-shadow halkaları: en içte dudak, sonra orta ve dış çerçeve, kabartma
+   çizgisi, çerçevenin dibindeki gölge basamakları ve en dışta duvar.
+   Ölçüler CinematicHero'daki measure() ile aynı oranlarda. */
+.hero-window {
+  --gw: min(332px, 60vw, 44svh);
+  width: var(--gw);
+  height: calc(var(--gw) / 0.74);
+  border-radius: calc(var(--gw) * 0.42);
+  box-shadow:
+    0 0 0 calc(var(--gw) * 0.022) #ffffff,
+    0 0 0 calc(var(--gw) * 0.052) #e9e9e6,
+    0 0 0 calc(var(--gw) * 0.074) #e0e0dd,
+    0 0 0 calc(var(--gw) * 0.096) #d6d6d3,
+    0 0 0 calc(var(--gw) * 0.128) #cbcbc8,
+    0 0 0 calc(var(--gw) * 0.155) #c2c2bf,
+    0 0 0 calc(var(--gw) * 0.162) #ecebe8,
+    0 0 0 calc(var(--gw) * 0.2) #0e0f13,
+    0 0 0 calc(var(--gw) * 0.26) #131419,
+    0 0 0 calc(var(--gw) * 0.34) #17181d,
+    0 0 0 calc(var(--gw) * 0.46) #1a1b21,
+    0 0 0 100vmax #1d1f25;
+}
+
+/* Akrilik camın kendisi: hafif mavi ton, üst kenarda gölge ve çapraz bir
+   yansıma. Camdan geçerken söner. */
+.hero-glass {
+  border-radius: inherit;
+  background:
+    linear-gradient(162deg, transparent 14%, rgba(255, 255, 255, 0.15) 30%, rgba(255, 255, 255, 0.05) 41%, transparent 54%),
+    linear-gradient(180deg, rgba(10, 15, 24, 0.5) 0%, rgba(10, 15, 24, 0.1) 30%, transparent 100%),
+    rgba(143, 188, 216, 0.07);
+}
+
 /* ---------- boarding pass ---------- */
 
 /* Rounded card with the ticket's own corner rhythm. The side notches at the

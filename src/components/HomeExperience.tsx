@@ -9,10 +9,10 @@ import { slugify } from "@/lib/slug";
 import { getPathname } from "@/i18n/navigation";
 import { routing, type AppLocale } from "@/i18n/routing";
 import type { CityCardData } from "@/content/cityCardData";
-import { useScrollShake } from "@/hooks/useScrollShake";
 import { detectOrigin } from "@/hooks/useFlightOrigin";
 import FloatingNav from "@/components/FloatingNav";
 import SecretRoute from "@/components/SecretRoute";
+import ShakeFeedback from "@/components/ShakeFeedback";
 import SiteFooter from "@/components/SiteFooter";
 import AdSenseScript from "@/components/AdSenseScript";
 
@@ -176,11 +176,8 @@ export default function HomeExperience({
   }, [flyTo, locale, openClubReveal, openWheel]);
 
   // The hidden route. Only armed on the landing view — firing it mid-flight
-  // would fight the animation that's already running. `charge` rises as the
-  // user shakes, so the interface acknowledges the gesture before it fires.
-  const charge = useScrollShake(() => setSecretOpen(true), {
-    enabled: view === "landing" && !secretOpen && !clubOpen && !wheelOpen,
-  });
+  // would fight the animation that's already running.
+  const openSecret = useCallback(() => setSecretOpen(true), []);
 
   return (
     <main className="relative min-h-screen bg-[var(--background)]">
@@ -196,17 +193,11 @@ export default function HomeExperience({
         ]}
       />
 
-      {/* Shake feedback: the frame tightens as the gesture is recognised, so
-          the interaction is discoverable instead of silent until it fires. */}
-      <div
-        aria-hidden
-        className="pointer-events-none fixed inset-0 z-[70] transition-opacity duration-200"
-        style={{
-          opacity: charge,
-          boxShadow: `inset 0 0 ${60 + charge * 140}px ${10 + charge * 40}px rgba(120,190,255,${
-            0.05 + charge * 0.16
-          })`,
-        }}
+      {/* Shake feedback: the edges glow as the gesture is recognised, so the
+          interaction is discoverable instead of silent until it fires. */}
+      <ShakeFeedback
+        enabled={view === "landing" && !secretOpen && !clubOpen && !wheelOpen}
+        onShake={openSecret}
       />
 
       {view === "flying" && selectedCountry && (
