@@ -36,7 +36,9 @@ export async function generateMetadata({ params }: Omit<Props, "children">): Pro
     description: t("description"),
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large" } },
     verification: { google: process.env.GOOGLE_SITE_VERIFICATION },
-    manifest: "/manifest.webmanifest",
+    // Ana ekrana eklenince görünen ad, açıklama ve başlangıç adresi dile göre.
+    // Kendi manifest dosyası olmayan diller İngilizcesini kullanır.
+    manifest: locale === "tr" ? "/manifest.webmanifest" : "/manifest.en.webmanifest",
     applicationName: SITE.name,
     appleWebApp: {
       capable: true,

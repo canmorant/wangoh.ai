@@ -1,10 +1,10 @@
 {
-  "name": "Wangoh — Gezi Rehberleri",
+  "name": "Wangoh — Travel Guides",
   "short_name": "Wangoh",
-  "description": "36 ülke, 329 şehir için özgün Türkçe gezi rehberleri. İndirdiğin rehberler çevrimdışı da açılır.",
-  "lang": "tr",
+  "description": "Original travel guides to 329 cities in 36 countries. Guides you've downloaded open offline too.",
+  "lang": "en",
   "dir": "ltr",
-  "start_url": "/",
+  "start_url": "/en",
   "scope": "/",
   "display": "standalone",
   "background_color": "#0a0e1a",
@@ -38,16 +38,16 @@
   ],
   "shortcuts": [
     {
-      "name": "Ülke çarkı",
-      "short_name": "Çark",
-      "description": "Rastgele bir ülke seç",
-      "url": "/?open=wheel"
+      "name": "Country Wheel",
+      "short_name": "Wheel",
+      "description": "Pick a random country",
+      "url": "/en?open=wheel"
     },
     {
-      "name": "Testler",
-      "short_name": "Testler",
-      "description": "Seyahat testleri ve bayrak oyunu",
-      "url": "/tests"
+      "name": "Quizzes",
+      "short_name": "Quizzes",
+      "description": "Travel quizzes and the flag game",
+      "url": "/en/tests"
     }
   ]
 }
