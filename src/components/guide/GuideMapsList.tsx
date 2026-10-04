@@ -22,6 +22,9 @@ export default function GuideMapsList({ list, city }: { list: MapsList; city: st
       <p className="mt-4 text-[14px] leading-relaxed text-white/65">
         {t("mapsIntro", { count: list.stops.length })}
       </p>
+      {list.note && (
+        <p className="mt-2 text-[13px] leading-relaxed text-white/55">{t(list.note)}</p>
+      )}
 
       <ol className="mt-6 grid gap-2 sm:grid-cols-2">
         {list.stops.map((stop, index) => (
