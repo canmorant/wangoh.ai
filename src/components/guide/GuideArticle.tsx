@@ -8,6 +8,8 @@ import type { Country, City } from "@/data/destinations";
 import { cityHref, countryHref, hasGuide } from "@/content/guides";
 import type { DestinationDietaryGuide } from "@/content/dietary";
 import DietaryPicks from "./DietaryPicks";
+import { mapsListFor } from "@/content/maps-lists";
+import GuideMapsList from "./GuideMapsList";
 
 /**
  * Şehir rehberinin editoryal gövdesi.
@@ -37,6 +39,7 @@ export default function GuideArticle({
   // Bazı rehberlerde mekân kartları restoran değil, öne çıkan gezi durakları.
   const sights = guide.placesKind === "sights";
   const placesHeading = sights ? t("highlights") : t("whereToEat");
+  const mapsList = mapsListFor(guide.countryCode, guide.city);
   // Fiyat sınıfı veride Türkçe anahtar; görünen etiketi dile göre.
   const priceLabel = { Ekonomik: t("priceBudget"), Orta: t("priceMid"), Yüksek: t("priceHigh") };
 
@@ -62,6 +65,7 @@ export default function GuideArticle({
       {guide.sources && guide.sources.length > 0 && (
         <TocItem href="#kaynaklar">{t("tocSources")}</TocItem>
       )}
+      {mapsList && <TocItem href="#google-maps-listesi">{t("mapsToc")}</TocItem>}
     </ul>
   );
 
@@ -322,6 +326,7 @@ export default function GuideArticle({
               </ul>
             </section>
           )}
+          {mapsList && <GuideMapsList list={mapsList} city={place(city.name)} />}
         </article>
 
         {/* ---------------- içindekiler ---------------- */}

@@ -378,6 +378,26 @@
     }
   },
   "Guide": {
+    "mapsEyebrow": "Gezilecek yerler · {count} durak",
+    "mapsHeading": "{city} duraklarını haritana taşı",
+    "mapsIntro": "Bu rehberde geçen yerlerden seçtiğimiz {count} durağı bir araya getirdik. Versailles şehir dışında, tam günlük bir gezi seçeneğidir.",
+    "mapsButton": "{city} listesini Google Maps’te aç",
+    "mapsSaveHelp": "Açılan Google Maps listesinde “Listeyi kaydet” seçeneğine dokunun. Duraklar ayrı bir Wangoh listesi olarak kaydedilir; kişisel “Gitmek istediğim yerler” listenize otomatik eklenmez.",
+    "mapsPending": "Paylaşılan liste hazırlanıyor. Şimdilik yukarıdaki durakları tek tek Google Maps’te açabilirsiniz.",
+    "mapsToc": "Google Maps listesi",
+    "mapsPlaceLink": "{place} — Google Maps’te aç (yeni sekme)",
+    "mapsPlaces": {
+      "eiffel": "Eyfel Kulesi",
+      "louvre": "Louvre Müzesi",
+      "notreDame": "Notre-Dame Katedrali",
+      "sainteChapelle": "Sainte-Chapelle",
+      "orsay": "Musée d’Orsay",
+      "orangerie": "Orangerie Müzesi",
+      "tuileries": "Tuileries Bahçesi",
+      "luxembourg": "Luxembourg Bahçesi",
+      "sacreCoeur": "Sacré-Cœur Bazilikası",
+      "versailles": "Versailles Sarayı"
+    },
     "quickFacts": "Hızlı bilgiler",
     "whereToEat": "Nerede yenir? Seçilmiş adresler",
     "whereToEatIntro": "Aşağıdakiler tek tek gezilecek adresler değil, şehrin yeme kültürünü en iyi anlatan duraklar. Çalışma saatleri ve fiyatlar değişebildiği için yola çıkmadan önce doğrulayın.",

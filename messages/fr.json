@@ -378,6 +378,26 @@
     }
   },
   "Guide": {
+    "mapsEyebrow": "Lieux à visiter · {count} étapes",
+    "mapsHeading": "Retrouvez ces étapes de {city} sur votre carte",
+    "mapsIntro": "Nous avons réuni {count} étapes sélectionnées parmi les lieux cités dans ce guide. Versailles se trouve hors de la ville et se visite sur une journée.",
+    "mapsButton": "Ouvrir la liste de {city} dans Google Maps",
+    "mapsSaveHelp": "Dans Google Maps, choisissez « Enregistrer la liste » ou « Suivre ». Les lieux sont enregistrés dans une liste Wangoh distincte et ne sont pas ajoutés automatiquement à votre liste personnelle « À visiter ».",
+    "mapsPending": "La liste partagée est en préparation. En attendant, vous pouvez ouvrir chaque lieu ci-dessus dans Google Maps.",
+    "mapsToc": "Liste Google Maps",
+    "mapsPlaceLink": "{place} — ouvrir dans Google Maps (nouvel onglet)",
+    "mapsPlaces": {
+      "eiffel": "Tour Eiffel",
+      "louvre": "Musée du Louvre",
+      "notreDame": "Cathédrale Notre-Dame de Paris",
+      "sainteChapelle": "Sainte-Chapelle",
+      "orsay": "Musée d’Orsay",
+      "orangerie": "Musée de l’Orangerie",
+      "tuileries": "Jardin des Tuileries",
+      "luxembourg": "Jardin du Luxembourg",
+      "sacreCoeur": "Basilique du Sacré-Cœur",
+      "versailles": "Château de Versailles"
+    },
     "quickFacts": "L’essentiel",
     "whereToEat": "Où manger : adresses choisies",
     "whereToEatIntro": "Ce ne sont pas des adresses à cocher une à une, mais les étapes qui racontent le mieux la façon dont la ville mange. Horaires et prix changent : vérifiez-les avant d’y aller.",

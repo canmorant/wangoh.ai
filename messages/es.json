@@ -378,6 +378,26 @@
     }
   },
   "Guide": {
+    "mapsEyebrow": "Lugares que visitar · {count} paradas",
+    "mapsHeading": "Lleva estas paradas de {city} a tu mapa",
+    "mapsIntro": "Hemos reunido {count} paradas seleccionadas entre los lugares mencionados en esta guía. Versalles está fuera de la ciudad y es una excursión de día completo.",
+    "mapsButton": "Abrir la lista de {city} en Google Maps",
+    "mapsSaveHelp": "En Google Maps, selecciona « Guardar lista » o « Seguir ». Las paradas se guardan en una lista de Wangoh independiente; no se añaden automáticamente a tu lista personal « Quiero ir ».",
+    "mapsPending": "La lista compartida está en preparación. Por ahora, puedes abrir cada lugar de arriba en Google Maps.",
+    "mapsToc": "Lista de Google Maps",
+    "mapsPlaceLink": "{place} — abrir en Google Maps (pestaña nueva)",
+    "mapsPlaces": {
+      "eiffel": "Torre Eiffel",
+      "louvre": "Museo del Louvre",
+      "notreDame": "Catedral de Notre-Dame",
+      "sainteChapelle": "Sainte-Chapelle",
+      "orsay": "Museo de Orsay",
+      "orangerie": "Museo de la Orangerie",
+      "tuileries": "Jardín de las Tullerías",
+      "luxembourg": "Jardín de Luxemburgo",
+      "sacreCoeur": "Basílica del Sacré-Cœur",
+      "versailles": "Palacio de Versalles"
+    },
     "quickFacts": "Datos rápidos",
     "whereToEat": "Dónde comer: direcciones seleccionadas",
     "whereToEatIntro": "No son sitios para ir tachando, sino las paradas que mejor cuentan cómo come la ciudad. Los horarios y los precios cambian, así que compruébalos antes de ir.",

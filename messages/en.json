@@ -378,6 +378,26 @@
     }
   },
   "Guide": {
+    "mapsEyebrow": "Places to visit · {count} stops",
+    "mapsHeading": "Bring these {city} stops to your map",
+    "mapsIntro": "We have brought together {count} selected stops mentioned in this guide. Versailles is outside the city and is a full-day trip option.",
+    "mapsButton": "Open the {city} list in Google Maps",
+    "mapsSaveHelp": "In Google Maps, choose “Save list” or “Follow”. The stops are saved as a separate Wangoh list; they are not automatically added to your personal “Want to go” list.",
+    "mapsPending": "The shared list is being prepared. For now, you can open each stop above in Google Maps.",
+    "mapsToc": "Google Maps list",
+    "mapsPlaceLink": "{place} — open in Google Maps (new tab)",
+    "mapsPlaces": {
+      "eiffel": "Eiffel Tower",
+      "louvre": "Louvre Museum",
+      "notreDame": "Notre-Dame Cathedral",
+      "sainteChapelle": "Sainte-Chapelle",
+      "orsay": "Musée d’Orsay",
+      "orangerie": "Musée de l’Orangerie",
+      "tuileries": "Tuileries Garden",
+      "luxembourg": "Luxembourg Garden",
+      "sacreCoeur": "Sacré-Cœur Basilica",
+      "versailles": "Palace of Versailles"
+    },
     "quickFacts": "Quick facts",
     "whereToEat": "Where to eat: selected places",
     "whereToEatIntro": "These aren't places to tick off one by one — they're the stops that best capture how the city eats. Opening hours and prices change, so check before you go.",

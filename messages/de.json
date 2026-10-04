@@ -378,6 +378,26 @@
     }
   },
   "Guide": {
+    "mapsEyebrow": "Sehenswürdigkeiten · {count} Stopps",
+    "mapsHeading": "Diese Stopps in {city} auf deiner Karte",
+    "mapsIntro": "Hier findest du {count} ausgewählte Stopps aus diesem Reiseführer. Versailles liegt außerhalb der Stadt und ist ein Tagesausflug.",
+    "mapsButton": "Liste für {city} in Google Maps öffnen",
+    "mapsSaveHelp": "Wähle in Google Maps „Liste speichern“ oder „Folgen“. Die Stopps erscheinen in einer eigenen Wangoh-Liste und werden nicht automatisch deiner persönlichen Liste „Möchte ich hin“ hinzugefügt.",
+    "mapsPending": "Die geteilte Liste wird vorbereitet. Bis dahin kannst du die Stopps oben einzeln in Google Maps öffnen.",
+    "mapsToc": "Google-Maps-Liste",
+    "mapsPlaceLink": "{place} — in Google Maps öffnen (neuer Tab)",
+    "mapsPlaces": {
+      "eiffel": "Eiffelturm",
+      "louvre": "Louvre",
+      "notreDame": "Kathedrale Notre-Dame",
+      "sainteChapelle": "Sainte-Chapelle",
+      "orsay": "Musée d’Orsay",
+      "orangerie": "Musée de l’Orangerie",
+      "tuileries": "Tuileriengarten",
+      "luxembourg": "Jardin du Luxembourg",
+      "sacreCoeur": "Basilika Sacré-Cœur",
+      "versailles": "Schloss Versailles"
+    },
     "quickFacts": "Auf einen Blick",
     "whereToEat": "Wo essen: ausgewählte Adressen",
     "whereToEatIntro": "Das sind keine Adressen zum Abhaken, sondern die Stopps, die am besten zeigen, wie die Stadt isst. Öffnungszeiten und Preise ändern sich – prüfe sie vor dem Besuch.",
