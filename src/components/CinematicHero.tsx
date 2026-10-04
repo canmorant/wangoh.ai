@@ -40,13 +40,23 @@ import {
  */
 const PLATE =
   "/images/photo-1568515387631-8b650bbcdb90-c9f1da85.avif";
+/** Telefonda yer tutucu sahnenin (ResponsiveHero) zaten indirdiği aynı kare. */
+const PLATE_MOBILE =
+  "/images/photo-1568515387631-8b650bbcdb90-ff3791ae.avif";
 
-function measure(): Dims {
+/**
+ * Sahnenin ölçüsü, pencereden değil yapışkan sahne kutusundan (100svh) okunur.
+ * Telefonda adres çubuğu kaydırırken küçülüp büyüdükçe window.innerHeight
+ * değişiyor; kutu ise sabit kalıyor. Pencereden ölçünce SVG viewBox kutuya
+ * uymuyor (preserveAspectRatio="none" → çerçeve dikeyde basılıyordu) ve sahne
+ * her çubuk hareketinde yeniden kuruluyordu.
+ */
+function measure(el?: HTMLElement | null): Dims {
   // Floor the viewport: a hidden iframe, a display:none ancestor, or certain
   // mobile chrome transitions can report 0 here, which would otherwise produce
   // a zero-size viewBox and a scene with no geometry that never recovers.
-  const w = Math.max(320, typeof window !== "undefined" ? window.innerWidth : 390);
-  const h = Math.max(480, typeof window !== "undefined" ? window.innerHeight : 844);
+  const w = Math.max(320, el?.clientWidth || (typeof window !== "undefined" ? window.innerWidth : 390));
+  const h = Math.max(480, el?.clientHeight || (typeof window !== "undefined" ? window.innerHeight : 844));
   // The window reads as a portrait rounded-rect, sized to leave generous air
   // around it on every viewport. Never wider than 62vw, never taller than 62vh.
   const glassW = Math.min(332, w * 0.6, h * 0.44);
@@ -157,7 +167,7 @@ export default function CinematicHero() {
     // rAF meant the window did not exist on the first frame — a visible pop on
     // load, and nothing at all wherever rAF is throttled.
     const remeasure = () => {
-      const next = measure();
+      const next = measure(viewportRef.current);
       // Only re-render when the viewport genuinely changed size; ResizeObserver
       // is chatty and identical dims would loop.
       setDims((prev) => (prev && prev.w === next.w && prev.h === next.h ? prev : next));
@@ -171,7 +181,7 @@ export default function CinematicHero() {
     // reports 0 and then becomes real never fires a window resize event. The
     // observer catches that first real measurement — and needs no rAF to do it.
     const ro = new ResizeObserver(remeasure);
-    if (stageRef.current) ro.observe(stageRef.current);
+    if (viewportRef.current) ro.observe(viewportRef.current);
     window.addEventListener("resize", remeasure);
     return () => {
       ro.disconnect();
@@ -335,7 +345,9 @@ export default function CinematicHero() {
         const el = stageRef.current;
         if (!el) return 0;
         const rect = el.getBoundingClientRect();
-        const travel = rect.height - window.innerHeight;
+        // Yapışkan kutunun sabit kaldığı mesafe: sahne yüksekliği eksi kutu.
+        // innerHeight telefonda adres çubuğuyla oynadığı için kullanılmıyor.
+        const travel = rect.height - (viewportRef.current?.clientHeight || window.innerHeight);
         return travel <= 0 ? 0 : clamp01(-rect.top / travel);
       };
 
@@ -471,6 +483,7 @@ export default function CinematicHero() {
     };
   }, [dims, motionQuality]);
 
+  const plate = dims && dims.w <= 768 ? PLATE_MOBILE : PLATE;
   const outer = dims && ring(dims, dims.bez);
   const mid = dims && ring(dims, dims.bez * 0.62);
   const lip = dims && ring(dims, dims.lip);
@@ -507,7 +520,7 @@ export default function CinematicHero() {
             <div
               className="absolute -inset-[3%]"
               style={{
-                backgroundImage: `url('${PLATE}')`,
+                backgroundImage: `url('${plate}')`,
                 backgroundSize: "cover",
                 backgroundPosition: "center 62%",
               }}
@@ -517,7 +530,7 @@ export default function CinematicHero() {
               ref={cityMidRef}
               className="hero-focus-medium absolute -inset-[8%]"
               style={{
-                backgroundImage: `url('${PLATE}')`,
+                backgroundImage: `url('${plate}')`,
                 backgroundSize: "cover",
                 backgroundPosition: "center 62%",
                 filter: "blur(5px)",
@@ -529,7 +542,7 @@ export default function CinematicHero() {
               ref={cityRef}
               className="hero-focus-far absolute -inset-[10%]"
               style={{
-                backgroundImage: `url('${PLATE}')`,
+                backgroundImage: `url('${plate}')`,
                 backgroundSize: "cover",
                 backgroundPosition: "center 62%",
                 filter: "blur(15px) saturate(0.94)",
