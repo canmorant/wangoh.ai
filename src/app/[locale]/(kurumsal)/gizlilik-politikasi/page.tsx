@@ -145,7 +145,7 @@ export default async function PrivacyPage({ params }: Props) {
           <li>E-posta barındırma ve iletişim hizmeti sağlayıcıları,</li>
           <li>
             Kaynak yalnızca gerektiğinde tarayıcıdan çağrılan içerik/CDN sağlayıcıları
-            (örneğin Unsplash, Wikimedia, jsDelivr veya Amazon CloudFront),
+            (örneğin Unsplash, Wikimedia veya jsDelivr),
           </li>
           <li>Analitik izni verdiğinizde Google (Google Analytics),</li>
           <li>

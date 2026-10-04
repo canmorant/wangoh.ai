@@ -26,7 +26,10 @@
       "highlight": "Kaçırma",
       "cities": "Şehirler",
       "cityGuides": "bu ülkedeki {count} şehir rehberi"
-    }
+    },
+    "yourLocation": "Konumun",
+    "distance": "Mesafe",
+    "distanceValue": "≈ {km} km"
   },
   "City": {
     "metaTitle": "{city} Gezi Rehberi — {country} | Wangoh",
@@ -54,7 +57,10 @@
       "bestSeason": "En iyi dönem",
       "fromIstanbul": "İstanbul'dan",
       "transport": "Ulaşım",
-      "byRoute": "Rotaya göre"
+      "byRoute": "Rotaya göre",
+      "distance": "Kuş uçuşu mesafe",
+      "distanceValue": "≈ {km} km",
+      "flightTime": "Uçuş süresi"
     },
     "empty": {
       "description": "{country} henüz tarifeli bir Wangoh rotasında değil — bu uçuş doğrudan haritadan çizildi.",
@@ -141,9 +147,10 @@
     "departure": "Kalkış",
     "titleLine1": "Biniş kartları.",
     "titleLine2": "Biri senin.",
-    "intro": "Her rota İstanbul’dan kalkıyor. Ayrıntılar için kartı çevir, sonra istediğine bin.",
+    "intro": "Her rota bulunduğun yerden kalkıyor. Ayrıntılar için kartı çevir, sonra istediğine bin.",
     "showMore": "Daha fazla ülke göster",
-    "footnote": "Her rota basılı değil"
+    "footnote": "Her rota basılı değil",
+    "yourLocation": "Konumun"
   },
   "Dietary": {
     "status": {

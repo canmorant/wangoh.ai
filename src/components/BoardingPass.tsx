@@ -17,6 +17,8 @@ import { turkishDative } from "@/lib/turkish";
 import { useFormatter, useLocale, useTranslations } from "next-intl";
 import { countryName, countryShortName } from "@/lib/countryNames";
 import { localizeBestSeason, localizeBudget, localizeFlightTime } from "@/lib/travelData";
+import { useFlightOrigin } from "@/hooks/useFlightOrigin";
+import { originRoute } from "@/lib/originRoute";
 
 /**
  * A destination rendered as a boarding pass.
@@ -51,6 +53,11 @@ export default function BoardingPass({
   // ada bağlı ki bilet her dilde aynı kalsın); görünen varış adı yerel.
   const to = locale === "tr" ? d.to : shortName.toLocaleUpperCase(locale);
   const tx = useContentText();
+  // Kalkış, uçak animasyonuyla aynı kaynaktan: ziyaretçinin konumu ya da
+  // seçtiği şehir. Bilinmiyorsa "Konumun".
+  const { origin } = useFlightOrigin();
+  const from = (origin?.name ? tx(origin.name) : t("yourLocation")).toLocaleUpperCase(locale);
+  const route = originRoute(country, origin);
   // "Portekiz'e Git": yönelme eki Türkçeye özgü, yalnız orada hesaplanıyor.
   const place = locale === "tr" ? turkishDative(shortName) : shortName;
   const bars = barcodeBars(country.code);
@@ -175,7 +182,7 @@ export default function BoardingPass({
           {/* ---------------- route ---------------- */}
           <div className="px-5 pt-5 pb-4">
             <div className="flex items-center justify-between gap-3">
-              <Endpoint code={d.from} label={t("from")} />
+              <Endpoint code={from} label={t("from")} />
 
               {/* route line — the dot travels on hover */}
               <div className="relative mx-1 h-6 flex-1">
@@ -213,10 +220,14 @@ export default function BoardingPass({
           <div className="flex items-center justify-between gap-4 px-5 pt-1 pb-5">
             <div>
               <p className="text-[8.5px] tracking-[0.24em] text-[#14161c]/45 uppercase">
-                {t("duration")}
+                {route.kind === "distance" ? t("distance") : t("duration")}
               </p>
               <p className="text-[13px] font-semibold tabular-nums">
-                {localizeFlightTime(country.flightTime, locale, tData)}
+                {route.kind === "flightTime"
+                  ? localizeFlightTime(route.value, locale, tData)
+                  : route.kind === "distance"
+                    ? t("distanceValue", { km: format.number(route.km) })
+                    : "—"}
               </p>
               <p className="mt-2 text-[8.5px] tracking-[0.24em] text-[#14161c]/45 uppercase">
                 {t("sequence")}
@@ -316,7 +327,7 @@ export default function BoardingPass({
         </div>
 
         <span className="sr-only">
-          {t("summary", { from: d.from, to, flight: d.flight, gate: d.gate, seat: d.seat })}
+          {t("summary", { from, to, flight: d.flight, gate: d.gate, seat: d.seat })}
         </span>
       </motion.div>
     </div>
@@ -335,7 +346,15 @@ function Endpoint({
   return (
     <div className={align === "right" ? "text-right" : ""}>
       <p className="text-[8.5px] tracking-[0.24em] text-[#14161c]/45 uppercase">{label}</p>
-      <p className="font-display text-[1.25rem] sm:text-[1.4rem] leading-none tracking-tight truncate max-w-[130px]">{code}</p>
+      {/* Kalkış şehri uzun olabilir (KAHRAMANMARAŞ): sığması için küçülür. */}
+      <p
+        title={code}
+        className={`font-display leading-none tracking-tight truncate max-w-[140px] ${
+          code.length > 10 ? "text-[1rem] sm:text-[1.08rem]" : "text-[1.25rem] sm:text-[1.4rem]"
+        }`}
+      >
+        {code}
+      </p>
     </div>
   );
 }

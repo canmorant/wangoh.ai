@@ -26,7 +26,10 @@
       "highlight": "À ne pas manquer",
       "cities": "Villes",
       "cityGuides": "{count, plural, one {# guide de ville} other {# guides de villes}} dans ce pays"
-    }
+    },
+    "yourLocation": "Votre position",
+    "distance": "Distance",
+    "distanceValue": "≈ {km} km"
   },
   "City": {
     "metaTitle": "Guide de voyage : {city} — {country} | Wangoh",
@@ -54,7 +57,10 @@
       "bestSeason": "Meilleure période",
       "fromIstanbul": "Depuis Istanbul",
       "transport": "Accès",
-      "byRoute": "Selon l’itinéraire"
+      "byRoute": "Selon l’itinéraire",
+      "distance": "Distance à vol d’oiseau",
+      "distanceValue": "≈ {km} km",
+      "flightTime": "Temps de vol"
     },
     "empty": {
       "description": "Destination {country} : pas encore de ligne régulière Wangoh — ce vol a été tracé directement sur la carte.",
@@ -141,9 +147,10 @@
     "departure": "Départ",
     "titleLine1": "Cartes d’embarquement.",
     "titleLine2": "L’une d’elles est la vôtre.",
-    "intro": "Tous les itinéraires partent d’Istanbul. Retournez une carte pour voir les détails, puis embarquez sur celle de votre choix.",
+    "intro": "Chaque itinéraire part de là où vous êtes. Retournez une carte pour les détails, puis embarquez sur celle de votre choix.",
     "showMore": "Afficher plus de pays",
-    "footnote": "Tous les itinéraires ne sont pas imprimés"
+    "footnote": "Tous les itinéraires ne sont pas imprimés",
+    "yourLocation": "Votre position"
   },
   "Dietary": {
     "status": {

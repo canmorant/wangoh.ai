@@ -3,8 +3,10 @@
 import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
-import { countries, Country, ORIGIN } from "@/data/destinations";
+import { countries, Country } from "@/data/destinations";
+import { useFlightOrigin } from "@/hooks/useFlightOrigin";
 import BoardingPass from "./BoardingPass";
+import { useContentText } from "./ContentText";
 import { EASE_OUT } from "@/lib/motion";
 
 interface Props {
@@ -13,6 +15,10 @@ interface Props {
 
 export default function DestinationsSection({ onSelectCountry }: Props) {
   const t = useTranslations("Destinations");
+  const tx = useContentText();
+  // Kalkış uçak animasyonuyla aynı: ziyaretçinin konumu ya da seçtiği şehir.
+  const { origin } = useFlightOrigin();
+  const departure = origin?.name ? tx(origin.name) : t("yourLocation");
   const ref = useRef<HTMLElement>(null);
   const inView = useInView(ref, { once: true, margin: "200px" });
   const [boardingCode, setBoardingCode] = useState<string | null>(null);
@@ -60,7 +66,7 @@ export default function DestinationsSection({ onSelectCountry }: Props) {
               className="mb-5 flex items-center gap-3 text-[11px] tracking-[0.42em] text-white/40 uppercase"
             >
               <span className="inline-block h-px w-8 bg-white/20" />
-              {t("departure")} &middot; {ORIGIN.iata}
+              {t("departure")} &middot; {departure}
             </motion.p>
 
             <h2 className="font-display text-[clamp(2.5rem,5.6vw,4.4rem)] leading-[1.02] text-white">

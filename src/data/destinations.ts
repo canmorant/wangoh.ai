@@ -27,9 +27,6 @@ export interface Country {
   signature: string;
 }
 
-/** Departure point for every route on the site. */
-export const ORIGIN = { iata: "IST", city: "İstanbul" } as const;
-
 export const ISTANBUL_COORDINATES = { lat: 41.0082, lng: 28.9784 };
 
 export const countries: Country[] = [

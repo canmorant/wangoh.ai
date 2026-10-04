@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useSyncExternalStore } from "react";
 import { ORIGIN_CITIES, originById, originByPlaceName, type OriginCity } from "@/data/origins";
 
 /**
@@ -119,8 +119,7 @@ export function detectOrigin(): Promise<FlightOrigin | null> {
   return detection;
 }
 
-function initialState(): { origin: FlightOrigin | null; status: OriginStatus } {
-  if (typeof window === "undefined") return { origin: null, status: "pending" };
+function initialState(): OriginState {
   const chosen = originById(read("local", CHOICE_KEY));
   if (chosen) return { origin: fromCity(chosen), status: "chosen" };
   const cached = cachedDetection();
@@ -129,18 +128,43 @@ function initialState(): { origin: FlightOrigin | null; status: OriginStatus } {
   return { origin: null, status: "pending" };
 }
 
+/*
+ * Ortak durum: uçuş animasyonu, biniş kartları ve varış kartı aynı kalkışı
+ * gösterir; animasyonda şehir değiştirilince kartlar da hemen güncellenir.
+ * Sunucuda (ve hidrasyonda) "pending": konum yalnız tarayıcıda bilinir, bu
+ * yüzden sunucu HTML'i ile ilk istemci boyaması aynı kalır.
+ */
+interface OriginState {
+  origin: FlightOrigin | null;
+  status: OriginStatus;
+}
+
+const SERVER_STATE: OriginState = { origin: null, status: "pending" };
+let current: OriginState | null = null;
+const listeners = new Set<() => void>();
+
+const snapshot = () => (current ??= initialState());
+
+function update(next: OriginState) {
+  current = next;
+  listeners.forEach((listener) => listener());
+}
+
+function subscribe(listener: () => void) {
+  listeners.add(listener);
+  return () => listeners.delete(listener);
+}
+
 export function useFlightOrigin() {
-  const [state, setState] = useState(initialState);
+  const state = useSyncExternalStore(subscribe, snapshot, () => SERVER_STATE);
 
   useEffect(() => {
     if (state.status !== "pending") return;
-    let alive = true;
     detectOrigin().then((origin) => {
-      if (alive) setState(origin ? { origin, status: "detected" } : { origin: null, status: "unknown" });
+      // Bu arada şehir elle seçildiyse tespit sonucu onu ezmesin.
+      if (snapshot().status !== "pending") return;
+      update(origin ? { origin, status: "detected" } : { origin: null, status: "unknown" });
     });
-    return () => {
-      alive = false;
-    };
   }, [state.status]);
 
   /** Ziyaretçinin seçtiği şehir; bu cihazda sonraki uçuşlar için hatırlanır. */
@@ -148,7 +172,7 @@ export function useFlightOrigin() {
     const city = originById(id);
     if (!city) return;
     write("local", CHOICE_KEY, city.id);
-    setState({ origin: fromCity(city), status: "chosen" });
+    update({ origin: fromCity(city), status: "chosen" });
   }, []);
 
   return { ...state, choose };

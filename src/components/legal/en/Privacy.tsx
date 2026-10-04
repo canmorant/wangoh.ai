@@ -121,7 +121,7 @@ export default function PrivacyEn() {
           <li>Email hosting and communication service providers,</li>
           <li>
             Content/CDN providers whose resources are requested from the browser only when needed
-            (for example Unsplash, Wikimedia, jsDelivr or Amazon CloudFront),
+            (for example Unsplash, Wikimedia or jsDelivr),
           </li>
           <li>Google (Google Analytics), when you give analytics consent,</li>
           <li>

@@ -1,4 +1,4 @@
-import { Country, ORIGIN } from "@/data/destinations";
+import type { Country } from "@/data/destinations";
 
 export interface BoardingDetails {
   flight: string;
@@ -7,7 +7,6 @@ export interface BoardingDetails {
   boards: string;
   date: string;
   sequence: string;
-  from: string;
   to: string;
 }
 
@@ -39,7 +38,6 @@ export function boardingFor(country: Country): BoardingDetails {
     // Static label — a real date would go stale and force a client-only render.
     date: "SEASON OPEN",
     sequence: String((h % 180) + 1).padStart(3, "0"),
-    from: ORIGIN.iata,
     to: (country.shortName || country.name).toUpperCase(),
   };
 }

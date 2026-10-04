@@ -12,6 +12,8 @@ import { useFormatter, useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { countryName } from "@/lib/countryNames";
 import { localizeBestSeason, localizeBudget, localizeFlightTime } from "@/lib/travelData";
+import { useFlightOrigin } from "@/hooks/useFlightOrigin";
+import { originRoute } from "@/lib/originRoute";
 
 interface CityCardsProps {
   country: Country;
@@ -33,6 +35,9 @@ export default function CityCards({ country, data, onBack }: CityCardsProps) {
   const format = useFormatter();
   const locale = useLocale();
   const name = countryName(country.code, locale, country.name);
+  // Uçuş ziyaretçinin konumundan kalktı; varış kartı da aynı kalkışa göre.
+  const { origin } = useFlightOrigin();
+  const route = originRoute(country, origin);
   const tx = useContentText();
   // Hub metni (giriş paragrafı, özel başlık) yalnız o dile tam çevrildiyse
   // gelir (buildCityCardData); yoksa genel başlık kullanılıyor.
@@ -117,11 +122,23 @@ export default function CityCards({ country, data, onBack }: CityCardsProps) {
                   value={localizeBestSeason(country.bestSeason, locale, tData, format)}
                 />
                 <OverviewFact
-                  label={country.code === "TR" ? t("fact.transport") : t("fact.fromIstanbul")}
+                  label={
+                    country.code === "TR"
+                      ? t("fact.transport")
+                      : route.kind === "distance"
+                        ? t("fact.distance")
+                        : route.kind === "flightTime"
+                          ? t("fact.fromIstanbul")
+                          : t("fact.flightTime")
+                  }
                   value={
                     country.code === "TR"
                       ? t("fact.byRoute")
-                      : localizeFlightTime(country.flightTime, locale, tData)
+                      : route.kind === "flightTime"
+                        ? localizeFlightTime(route.value, locale, tData)
+                        : route.kind === "distance"
+                          ? t("fact.distanceValue", { km: format.number(route.km) })
+                          : "—"
                   }
                 />
               </dl>

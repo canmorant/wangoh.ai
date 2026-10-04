@@ -26,7 +26,10 @@
       "highlight": "Don't miss",
       "cities": "Cities",
       "cityGuides": "{count, plural, one {# city guide} other {# city guides}} in this country"
-    }
+    },
+    "yourLocation": "Your location",
+    "distance": "Distance",
+    "distanceValue": "≈ {km} km"
   },
   "City": {
     "metaTitle": "{city} Travel Guide — {country} | Wangoh",
@@ -54,7 +57,10 @@
       "bestSeason": "Best time",
       "fromIstanbul": "From Istanbul",
       "transport": "Getting there",
-      "byRoute": "Depends on route"
+      "byRoute": "Depends on route",
+      "distance": "Straight-line distance",
+      "distanceValue": "≈ {km} km",
+      "flightTime": "Flight time"
     },
     "empty": {
       "description": "{country} isn't on a scheduled Wangoh route yet — this flight was drawn straight from the map.",
@@ -141,9 +147,10 @@
     "departure": "Departing",
     "titleLine1": "Boarding passes.",
     "titleLine2": "One is yours.",
-    "intro": "Every route departs from Istanbul. Flip a pass for the details, then board the one you want.",
+    "intro": "Every route departs from where you are. Flip a pass for the details, then board the one you want.",
     "showMore": "Show more countries",
-    "footnote": "Not every route is printed"
+    "footnote": "Not every route is printed",
+    "yourLocation": "Your location"
   },
   "Dietary": {
     "status": {
