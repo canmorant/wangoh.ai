@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { useFormatter, useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { countryName } from "@/lib/countryNames";
@@ -33,6 +34,36 @@ export default function GuideArticle({
   // Görünen adlar dile göre; `name` alanları anahtar olarak Türkçe kalır.
   const countryLabel = countryName(country.code, locale, country.name);
   const place = (name: string) => placeName(name, locale);
+  // Bazı rehberlerde mekân kartları restoran değil, öne çıkan gezi durakları.
+  const sights = guide.placesKind === "sights";
+  const placesHeading = sights ? t("highlights") : t("whereToEat");
+  // Fiyat sınıfı veride Türkçe anahtar; görünen etiketi dile göre.
+  const priceLabel = { Ekonomik: t("priceBudget"), Orta: t("priceMid"), Yüksek: t("priceHigh") };
+
+  const toc = (
+    <ul className="mt-4 space-y-2.5">
+      {guide.sections.map((s) => (
+        <TocItem key={s.id} href={`#${s.id}`}>
+          {s.heading}
+        </TocItem>
+      ))}
+      {guide.places.length > 0 && (
+        <TocItem href="#nerede-yenir">{sights ? placesHeading : t("tocWhereToEat")}</TocItem>
+      )}
+      <TocItem href="#vegan-helal-restoranlar">{t("tocDietary")}</TocItem>
+      {guide.itinerary.length > 0 && <TocItem href="#gezi-plani">{t("itinerary")}</TocItem>}
+      {guide.practicalTips && guide.practicalTips.length > 0 && (
+        <TocItem href="#bilmeden-gitme">{t("beforeYouGo")}</TocItem>
+      )}
+      {guide.relatedGuides && guide.relatedGuides.length > 0 && (
+        <TocItem href="#rotayi-surdur">{t("tocContinue")}</TocItem>
+      )}
+      {guide.faqs.length > 0 && <TocItem href="#sss">{t("faq")}</TocItem>}
+      {guide.sources && guide.sources.length > 0 && (
+        <TocItem href="#kaynaklar">{t("tocSources")}</TocItem>
+      )}
+    </ul>
+  );
 
   return (
     <div className="mx-auto max-w-[1100px] px-4 pb-24 sm:px-8 sm:pb-32">
@@ -52,6 +83,20 @@ export default function GuideArticle({
       <div className="mt-12 grid gap-10 sm:mt-16 sm:gap-14 lg:grid-cols-[minmax(0,1fr)_260px] lg:items-start">
         {/* ---------------- makale ---------------- */}
         <article className="min-w-0">
+          {/* Mobilde yan sütun makalenin altına düşüyor; içindekiler orada
+              işe yaramaz. Bu yüzden dar ekranda makalenin başında, açılır
+              bir liste olarak duruyor. */}
+          <details className="group mb-10 rounded-2xl border border-white/[0.08] bg-white/[0.025] lg:hidden">
+            <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 text-[10px] tracking-[0.26em] text-white/55 uppercase marker:hidden">
+              {t("toc")}
+              <span aria-hidden className="text-[15px] tracking-normal text-white/35 transition-transform duration-300 group-open:rotate-45">
+                +
+              </span>
+            </summary>
+            <nav aria-label={t("toc")} className="px-5 pb-5">
+              {toc}
+            </nav>
+          </details>
           {/* İçerik Türkiye'den yola çıkan okur için yazıldı: giriş/vize ve hat
               notları Türk pasaportu ve Türkiye hattına göre. Diğer dillerde
               bunu açıkça söylüyoruz; bilgiyi başka pasaportlara uyarlamak
@@ -91,10 +136,10 @@ export default function GuideArticle({
           {guide.places.length > 0 && (
             <section id="nerede-yenir" className="mb-16 scroll-mt-28">
               <h2 className="font-display text-[clamp(1.6rem,3.2vw,2.2rem)] leading-tight text-white">
-                {t("whereToEat")}
+                {placesHeading}
               </h2>
               <p className="mt-4 text-[15px] leading-relaxed text-white/55">
-                {t("whereToEatIntro")}
+                {sights ? t("highlightsIntro") : t("whereToEatIntro")}
               </p>
 
               <div className="mt-7 grid gap-4 sm:grid-cols-2">
@@ -109,7 +154,7 @@ export default function GuideArticle({
                       </h3>
                       {p.price && (
                         <span className="shrink-0 rounded-full border border-[var(--gold)]/25 px-2.5 py-1 text-[9.5px] tracking-[0.16em] text-[var(--gold)]/80 uppercase">
-                          {p.price}
+                          {priceLabel[p.price]}
                         </span>
                       )}
                     </div>
@@ -281,72 +326,19 @@ export default function GuideArticle({
 
         {/* ---------------- içindekiler ---------------- */}
         <aside className="lg:sticky lg:top-28">
-          <nav aria-label={t("toc")} className="rounded-2xl border border-white/[0.08] bg-white/[0.025] p-6">
+          <nav
+            aria-label={t("toc")}
+            className="hidden rounded-2xl border border-white/[0.08] bg-white/[0.025] p-6 lg:block"
+          >
             <p className="text-[9.5px] tracking-[0.26em] text-white/35 uppercase">{t("toc")}</p>
-            <ul className="mt-4 space-y-2.5">
-              {guide.sections.map((s) => (
-                <li key={s.id}>
-                  <a
-                    href={`#${s.id}`}
-                    className="text-[13px] leading-snug text-white/50 transition-colors duration-300 hover:text-white"
-                  >
-                    {s.heading}
-                  </a>
-                </li>
-              ))}
-              <li>
-                {guide.places.length > 0 && (
-                  <a href="#nerede-yenir" className="text-[13px] text-white/50 transition-colors duration-300 hover:text-white">
-                    {t("tocWhereToEat")}
-                  </a>
-                )}
-              </li>
-              <li>
-                <a href="#vegan-helal-restoranlar" className="text-[13px] text-white/50 transition-colors duration-300 hover:text-white">
-                  {t("tocDietary")}
-                </a>
-              </li>
-              <li>
-                {guide.itinerary.length > 0 && (
-                  <a href="#gezi-plani" className="text-[13px] text-white/50 transition-colors duration-300 hover:text-white">
-                    {t("itinerary")}
-                  </a>
-                )}
-              </li>
-              {guide.practicalTips && guide.practicalTips.length > 0 && (
-                <li>
-                  <a href="#bilmeden-gitme" className="text-[13px] text-white/50 transition-colors duration-300 hover:text-white">
-                    {t("beforeYouGo")}
-                  </a>
-                </li>
-              )}
-              {guide.relatedGuides && guide.relatedGuides.length > 0 && (
-                <li>
-                  <a href="#rotayi-surdur" className="text-[13px] text-white/50 transition-colors duration-300 hover:text-white">
-                    {t("tocContinue")}
-                  </a>
-                </li>
-              )}
-              <li>
-                <a href="#sss" className="text-[13px] text-white/50 transition-colors duration-300 hover:text-white">
-                  {t("faq")}
-                </a>
-              </li>
-              {guide.sources && guide.sources.length > 0 && (
-                <li>
-                  <a href="#kaynaklar" className="text-[13px] text-white/50 transition-colors duration-300 hover:text-white">
-                    {t("tocSources")}
-                  </a>
-                </li>
-              )}
-            </ul>
+            {toc}
           </nav>
 
           {/* iç bağlantılar — aynı ülkedeki diğer şehirler */}
           {siblings.length > 0 && (
             <nav
               aria-label={t("otherCities", { country: countryLabel })}
-              className="mt-4 rounded-2xl border border-white/[0.08] bg-white/[0.025] p-6"
+              className="rounded-2xl border border-white/[0.08] bg-white/[0.025] p-6 lg:mt-4"
             >
               <p className="text-[9.5px] tracking-[0.26em] text-white/35 uppercase">
                 {t("countryRoutes", { country: countryLabel })}
@@ -379,6 +371,19 @@ export default function GuideArticle({
         </aside>
       </div>
     </div>
+  );
+}
+
+function TocItem({ href, children }: { href: string; children: ReactNode }) {
+  return (
+    <li>
+      <a
+        href={href}
+        className="text-[13px] leading-snug text-white/50 transition-colors duration-300 hover:text-white"
+      >
+        {children}
+      </a>
+    </li>
   );
 }
 

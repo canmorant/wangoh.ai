@@ -41,6 +41,7 @@ export const STRUCTURAL_KEYS: ReadonlySet<string> = new Set([
   "reviewed",
   "lastVerified",
   "price",
+  "placesKind",
   "category",
   "status",
   "sourceType",

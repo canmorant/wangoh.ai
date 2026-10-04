@@ -89,8 +89,13 @@ export interface CityGuide {
   /** Ana içerik bölümleri. */
   sections: GuideSection[];
 
-  /** Restoran / yeme-içme kartları. */
+  /**
+   * Mekân kartları. Varsayılan ("food") restoran / yeme-içme kartlarıdır;
+   * "sights" ise kartların öne çıkan gezi durakları olduğunu söyler ve sayfa
+   * bölümü "Nerede yenir?" yerine "Öne çıkan duraklar" olarak gösterir.
+   */
   places: PlaceCard[];
+  placesKind?: "food" | "sights";
 
   /** Gün gün gezi planı. */
   itinerary: ItineraryDay[];

@@ -92,8 +92,13 @@ export default function HomeExperience({
     // Uçuş başlarken adres de değişsin; böylece animasyon sırasında geri tuşuna
     // basan da ana sayfaya döner, siteden çıkmaz. Next bu çağrıyı kendi
     // router'ına entegre ediyor (sayfayı yeniden yüklemiyor).
-    const href = hrefFor(country, locale);
-    if (window.location.pathname !== href) window.history.pushState(null, "", href);
+    //
+    // Çarktan gelen, rehberi olmayan ülkelerin (ör. Barbados) sunucuda bir
+    // sayfası yok: adresleri yenilenince ya da paylaşılınca 404 olurdu. Onlar
+    // için adres ana sayfa kalır; geri tuşu yine ana sayfaya döner.
+    const routable = ROUTABLE.includes(country);
+    const href = routable ? hrefFor(country, locale) : getPathname({ href: "/", locale });
+    if (window.location.pathname !== href || !routable) window.history.pushState(null, "", href);
   }, [locale]);
 
   const handleFlightComplete = useCallback(() => {

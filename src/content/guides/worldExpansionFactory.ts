@@ -52,8 +52,6 @@ const transportByCountry: Record<ExpansionCode, { name: string; url: string }> =
   NL: { name: "9292 — Hollanda toplu taşıma planlayıcısı", url: "https://9292.nl/en" },
 };
 
-const priceFor = (index: number): "Yüksek" | "Orta" | "Ekonomik" =>
-  index === 0 ? "Yüksek" : index === 1 ? "Orta" : "Ekonomik";
 
 export function makeWorldExpansionGuides(
   profiles: WorldExpansionProfile[],
@@ -98,12 +96,15 @@ export function makeWorldExpansionGuides(
       seasons: [profile.season, T.world.season(profile.best)],
       budget: [profile.budget, T.world.budget(firstSight[0])],
       avoid: profile.cautions,
+      // Bu kartlar restoran değil, şehrin öne çıkan gezi durakları; fiyat sınıfı
+      // verisi olmadığı için gösterilmiyor.
+      placesKind: "sights",
       places: profile.sights.map(([name, ,], index) => [
         name,
         t(index === 0 ? "Ana gezi hattı" : index === 1 ? "İkinci rota kümesi" : "Çevre rotası"),
         t(index === 0 ? "Şehrin simge deneyimi" : index === 1 ? "Yerel karakter ve kültür" : "Manzara ve ritim değişimi"),
         profile.sights[index][1],
-        priceFor(index),
+        undefined,
         t(
           index === 0
             ? "Bilet, giriş penceresi ve son ulaşımı resmî kanaldan önceden kontrol edin."

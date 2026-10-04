@@ -61,9 +61,10 @@ export default function PrivacyEn() {
             to Wangoh&rsquo;s servers.
           </li>
           <li>
-            <strong>Approximate location (flight animation):</strong> for the departure point of
-            the flight animation on the home page, the approximate city and coordinates that our
-            hosting provider Vercel derives from your IP address are sent to your browser. Wangoh
+            <strong>Approximate location (flight animation and route cards):</strong> for the
+            departure point of the flight animation and route cards on the home page, the
+            approximate city and coordinates that our hosting provider Vercel derives from your IP
+            address are sent to your browser. Wangoh
             doesn&rsquo;t store this information or link it to a user profile; it is kept only for
             that session in your browser&rsquo;s sessionStorage. If you choose the departure city
             yourself, your choice is stored in localStorage.

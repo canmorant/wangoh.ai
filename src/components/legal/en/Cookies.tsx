@@ -55,8 +55,8 @@ export default function CookiesEn() {
                 <td>wangoh.origin</td>
                 <td>First-party localStorage / functional</td>
                 <td>
-                  Remembering the departure city you chose for the flight animation. Created only
-                  when you select the city manually.
+                  Remembering the departure city you chose for the flight animation and route
+                  cards. Created only when you select the city manually.
                 </td>
                 <td>Until browser data is cleared</td>
               </tr>

@@ -108,8 +108,6 @@ const budgetNote: Record<RegionalCode, string> = {
   FI: "Tren veya gece treni, sauna, göl teknesi, kış ekipmanı ve Lapland turunu ayrı hesaplayın; kuzeyde son kilometre transferi günlük bütçeyi belirgin yükseltebilir.",
 };
 
-const priceFor = (index: number): "Yüksek" | "Orta" | "Ekonomik" =>
-  index === 0 ? "Yüksek" : index === 1 ? "Orta" : "Ekonomik";
 
 export function makeRegionalGuides(profiles: RegionalProfile[], ctx: GuideContext = TR_CONTEXT): CityGuide[] {
   const { t, T } = ctx;
@@ -161,12 +159,15 @@ export function makeRegionalGuides(profiles: RegionalProfile[], ctx: GuideContex
         profile.caution,
         t("Çalışma saatini, hava durumunu, grev veya yol/park kapanışını eski blogdan değil ziyaret günü resmî kaynaktan doğrulayın. Aşırı sıkışık rota, bilette yanlış istasyon ve son dönüşü hesaba katmamak en yaygın zaman kayıplarıdır."),
       ],
+      // Bu kartlar restoran değil, şehrin öne çıkan gezi durakları; fiyat sınıfı
+      // verisi olmadığı için gösterilmiyor.
+      placesKind: "sights",
       places: profile.sights.map(([name, detail], index) => [
         name,
         t(index === 0 ? "Ana rota" : index === 1 ? "İkinci gezi kümesi" : "Çevre deneyimi"),
         t(index === 0 ? "Destinasyonun simgesi" : index === 1 ? "Kültür ve yerel karakter" : "Manzara ve tempo değişimi"),
         detail,
-        priceFor(index),
+        undefined,
         t(
           index === 0
             ? "Saatli giriş, kapasite ve son ulaşımı resmî kanaldan önceden kontrol edin."

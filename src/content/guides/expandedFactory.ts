@@ -47,6 +47,8 @@ export interface ExpandedGuideProfile {
   budget: string[];
   avoid: string[];
   places: PlaceInput[];
+  /** Kartlar restoran değil gezi durağıysa "sights" (bkz. CityGuide.placesKind). */
+  placesKind?: "sights";
   itinerary: DayInput[];
   practical: TipInput[];
   faqs: FaqInput[];
@@ -841,6 +843,7 @@ export function buildExpandedGuide(profile: ExpandedGuideProfile, ctx: GuideCont
       },
     ],
     places: toPlaces(profile.places),
+    ...(profile.placesKind && { placesKind: profile.placesKind }),
     itinerary: toItinerary(profile.itinerary),
     practicalHeading: T.expanded.practicalHeading(city),
     practicalTips: toTips(profile.practical),

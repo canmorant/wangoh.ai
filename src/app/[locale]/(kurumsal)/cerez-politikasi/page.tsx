@@ -77,8 +77,8 @@ export default async function CookiePolicyPage({ params }: Props) {
                 <td>wangoh.origin</td>
                 <td>Birinci taraf localStorage / işlevsel</td>
                 <td>
-                  Uçuş animasyonu için kendi seçtiğiniz kalkış şehrini hatırlamak. Yalnızca şehri
-                  elle seçtiğinizde oluşur.
+                  Uçuş animasyonu ve rota kartları için kendi seçtiğiniz kalkış şehrini hatırlamak.
+                  Yalnızca şehri elle seçtiğinizde oluşur.
                 </td>
                 <td>Tarayıcı verisi silinene kadar</td>
               </tr>
