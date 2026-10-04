@@ -5,6 +5,9 @@ import { notFound } from "next/navigation";
  * kendi 404'üne ([locale]/not-found.tsx) düşsün diye. Tek ve iki parçalı
  * yollar zaten [ulke] ve [ulke]/[sehir]'e gidiyor; Next onları bu genel
  * yakalayıcıdan önce eşliyor.
+ *
+ * Dosya adı page.web.tsx: yalnız web derlemesinde. Statik export (uygulama)
+ * parametresi bilinmeyen bir yakalayıcıyı üretemiyor.
  */
 export default function CatchAll() {
   notFound();

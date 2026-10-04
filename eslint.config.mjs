@@ -12,6 +12,10 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Capacitor yerel projeleri: içlerindeki public/ klasörleri out/'un
+    // derlenmiş kopyası, kaynak kod değil.
+    "ios/**",
+    "android/**",
   ]),
 ]);
 
