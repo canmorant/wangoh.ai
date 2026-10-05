@@ -24,6 +24,20 @@
       "env": {
         "NEXT_PUBLIC_SITE_LOCALES": "tr,en"
       }
+    },
+    {
+      "name": "preview-es",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "next",
+        "start",
+        "-p",
+        "3200"
+      ],
+      "port": 3200,
+      "env": {
+        "NEXT_PUBLIC_SITE_LOCALES": "tr,en,es"
+      }
     }
   ]
 }
