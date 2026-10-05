@@ -7,6 +7,8 @@
  * kılıyor; bu yüzden veri kodda tutuluyor ve arayüzde gösteriliyor.
  */
 
+import addedCredits from "./addedImageCredits.json";
+
 export interface ImageCredit {
   /** public/ altındaki yol — aynı zamanda anahtar. */
   file: string;
@@ -21,6 +23,7 @@ export interface ImageCredit {
 }
 
 export const IMAGE_CREDITS: ImageCredit[] = [
+  ...(addedCredits as ImageCredit[]),
   {
     "file": "/images/1-731ade0c.avif",
     "artist": "铁头娃蛤蛤",

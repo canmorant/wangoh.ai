@@ -182,7 +182,9 @@
     "heading": "Vegan and halal restaurants in {city}",
     "intro": "For {city} we picked one plant-based place and one aimed at Muslim travellers. Halal labels don't all mean the same thing: certification, the restaurant's own declaration and \"some halal options\" are shown separately on each card.",
     "researchNote": "Research note:",
-    "disclaimer": "Menus, suppliers and certifications change. If you keep strict halal, confirm the current certificate, alcohol, sauce ingredients and shared-kitchen risk directly with the restaurant."
+    "disclaimer": "Menus, suppliers and certifications change. If you keep strict halal, confirm the current certificate, alcohol, sauce ingredients and shared-kitchen risk directly with the restaurant.",
+    "notesHeading": "Vegan and halal dining tips for {city}",
+    "notesIntro": "Ingredients to check in local dishes and questions to ask before ordering if you follow a vegan or halal diet."
   },
   "Discovery": {
     "heading": "A travel guide for your next city",
@@ -495,7 +497,8 @@
       "title": "Visas, money and phones in {country}",
       "body": "Entry rules, payments, languages, mobile data and budget basics apply to the whole country, so they're kept together on one page.",
       "link": "Practical information for {country}"
-    }
+    },
+    "tocDietaryNotes": "Vegan and halal dining"
   },
   "Guides": {
     "metaTitle": "Travel Guides: Country by Country, City by City | Wangoh",
@@ -774,6 +777,11 @@
       "name": "The Americas",
       "guides": "Travel guides for the Americas",
       "more": "More country guides in the Americas"
+    },
+    "africa": {
+      "name": "Africa",
+      "guides": "Africa travel guides",
+      "more": "More country guides in Africa"
     }
   }
 }

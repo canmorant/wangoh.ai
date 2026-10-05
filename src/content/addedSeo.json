@@ -1,0 +1,238 @@
+{
+  "guides": {
+    "en": {
+      "AE:Dubai": [
+        "Dubai Travel Guide: Things to Do and a 3-Day Itinerary",
+        "Explore Dubai Creek, Al Fahidi, Burj Khalifa and the Marina, with a 3-day itinerary, metro and nol tips, local food and areas to stay in Dubai."
+      ],
+      "AE:Abu Dabi": [
+        "Abu Dhabi Travel Guide: Mosque, Museums and Where to Stay",
+        "Visit Abu Dhabi’s Grand Mosque, Louvre, Qasr Al Watan and Corniche with practical transport tips, areas to stay and a balanced cultural itinerary."
+      ],
+      "EG:Kahire": [
+        "Cairo Travel Guide: Pyramids, Museums and a 3-Day Route",
+        "Explore Cairo and Giza: pyramids, the Grand Egyptian Museum, Khan el-Khalili and Nile neighbourhoods, with transport, stays and a 3-day route."
+      ],
+      "EG:Luksor": [
+        "Luxor Travel Guide: Karnak and Valley of the Kings",
+        "Visit Luxor’s Karnak, Luxor Temple, Valley of the Kings and Hatshepsut with two-bank transport advice, ticket tips and a focused 2-day itinerary."
+      ],
+      "EG:Hurgada": [
+        "Hurghada Travel Guide: Giftun, Beaches and Where to Stay",
+        "Plan Hurghada with Giftun boat trips, marina walks and El Dahar, plus beach hotel choices, snorkelling, transfers, food and a Luxor extension."
+      ],
+      "EG:Şarm el-Şeyh": [
+        "Sharm el-Sheikh Guide: Reefs, Ras Muhammad and Hotels",
+        "Plan Sharm el-Sheikh with Ras Muhammad, Naama Bay and the Old Market, plus reef access, hotel areas, diving, snorkelling and practical transfers."
+      ],
+      "GE:Tiflis": [
+        "Tbilisi Travel Guide: Old Town, Baths and a 3-Day Route",
+        "Explore Tbilisi’s old town, Abanotubani baths, Sololaki and Mtatsminda with transport tips, areas to stay, Georgian food and a 3-day walking route."
+      ],
+      "GE:Batum": [
+        "Batumi Travel Guide: Boulevard, Gardens and Where to Stay",
+        "Explore Batumi’s boulevard, old town and botanical garden with areas to stay, transport tips, Adjarian food, beach advice and a 3-day itinerary."
+      ],
+      "GE:Kazbegi": [
+        "Kazbegi Travel Guide: Stepantsminda, Gergeti and Walks",
+        "Plan Kazbegi from Stepantsminda: Gergeti Church, Sno and Juta, with Tbilisi road transfers, places to stay, mountain walks and seasonal advice."
+      ],
+      "BG:Sofya": [
+        "Sofia Travel Guide: Things to Do and a 2-Day Itinerary",
+        "Explore Sofia’s Alexander Nevsky Cathedral, Serdica and Vitosha with a 2-day itinerary, airport metro advice, local food and areas to stay."
+      ],
+      "BG:Plovdiv": [
+        "Plovdiv Travel Guide: Old Town, Kapana and Roman Sights",
+        "Explore Plovdiv’s Old Town, Ancient Theatre, Kapana and basilica mosaics with Sofia connections, where to stay, local food and a 2-day route."
+      ],
+      "BG:Varna": [
+        "Varna Travel Guide: Sea Garden, Museums and Beaches",
+        "Explore Varna’s Sea Garden, Archaeological Museum, Roman baths and beaches with transport, areas to stay, local food and a 3-day Black Sea route."
+      ],
+      "MT:Valletta": [
+        "Valletta Travel Guide: Things to Do and Harbour Walks",
+        "Explore Valletta’s St John’s Co-Cathedral, Upper Barrakka and Grand Harbour with walks, places to stay, Maltese food, transport and Gozo links."
+      ],
+      "MT:Gozo": [
+        "Gozo Travel Guide: Temples, Coast and Ferry Planning",
+        "Explore Gozo’s Cittadella, Ġgantija temples and Dwejra with Malta ferry options, island transport, areas to stay and a relaxed 3-day itinerary."
+      ],
+      "CY:Girne": [
+        "Kyrenia Travel Guide: Harbour, Castle and Bellapais",
+        "Explore Kyrenia’s old harbour, castle and Bellapais with places to stay, beach choices, transport, local food and a balanced 2-day itinerary."
+      ],
+      "CY:Gazimağusa": [
+        "Famagusta Travel Guide: Walled Town, Othello and Salamis",
+        "Explore Famagusta’s walled town, Othello Castle, Lala Mustafa Pasha Mosque and Salamis with transport, stays, local food and a 2-day itinerary."
+      ],
+      "CY:Baf": [
+        "Paphos Travel Guide: Mosaics, Tombs and Where to Stay",
+        "Explore Paphos mosaics, Tombs of the Kings and the harbour with transport tips, areas to stay, local food, coastal choices and a 3-day route."
+      ],
+      "CY:Larnaka": [
+        "Larnaca Travel Guide: Finikoudes, Salt Lake and Stays",
+        "Explore Larnaca’s Finikoudes, Saint Lazarus, Salt Lake and Hala Sultan Tekke with airport transfers, places to stay, local food and a 2-day route."
+      ],
+      "MA:Marakeş": [
+        "Marrakech Travel Guide: Souks, Gardens and a 3-Day Route",
+        "Plan Marrakech with Jemaa el-Fna, Bahia Palace and Majorelle: a 3-day itinerary, riad areas, airport transfers, Moroccan food and budget advice."
+      ],
+      "MA:Fes": [
+        "Fez Travel Guide: Medina Walks, Tanneries and Where to Stay",
+        "Explore Fez’s Fes el-Bali medina, Bou Inania and Chouara tanneries with a 3-day route, riad areas, transport, local food and walking advice."
+      ],
+      "MA:Şefşavan": [
+        "Chefchaouen Travel Guide: Blue Medina and Mountain Views",
+        "Explore Chefchaouen’s blue medina, Kasbah and Ras el-Maa with a 2-day route, road connections from Fez, places to stay and Akchour planning."
+      ]
+    },
+    "es": {
+      "AE:Dubai": [
+        "Qué ver en Dubái: ruta de 3 días y dónde alojarse",
+        "Qué ver en Dubái: Al Fahidi, Dubai Creek, Burj Khalifa y Marina, con ruta de 3 días, consejos de metro y tarjeta nol, comida local y alojamiento."
+      ],
+      "AE:Abu Dabi": [
+        "Qué ver en Abu Dabi: mezquita, museos y alojamiento",
+        "Qué ver en Abu Dabi: gran mezquita, Louvre, Qasr Al Watan y Corniche, con consejos de transporte, zonas para dormir y una ruta cultural equilibrada."
+      ],
+      "EG:Kahire": [
+        "Qué ver en El Cairo: pirámides, museos y ruta de 3 días",
+        "Qué ver en El Cairo y Guiza: pirámides, Gran Museo Egipcio, Jan el-Jalili y barrios del Nilo, con transporte, alojamiento y una ruta de 3 días."
+      ],
+      "EG:Luksor": [
+        "Qué ver en Luxor: Karnak, tumbas y ruta de 2 días",
+        "Qué ver en Luxor: Karnak, templo de Luxor, Valle de los Reyes y Hatshepsut, con transporte entre orillas, entradas y una ruta práctica de 2 días."
+      ],
+      "EG:Hurgada": [
+        "Qué hacer en Hurghada: Giftun, playas y dónde dormir",
+        "Qué hacer en Hurghada: islas Giftun, marina y El Dahar, con hoteles de playa, excursiones de esnórquel, traslados, comida y conexión con Luxor."
+      ],
+      "EG:Şarm el-Şeyh": [
+        "Sharm el-Sheij: arrecifes, Ras Muhammad y alojamiento",
+        "Organiza Sharm el-Sheij con Ras Muhammad, Naama Bay y el Mercado Viejo: arrecifes, zonas de hotel, buceo, esnórquel y consejos de transporte."
+      ],
+      "GE:Tiflis": [
+        "Qué ver en Tiflis: casco antiguo, baños y ruta de 3 días",
+        "Qué ver en Tiflis: casco antiguo, baños de Abanotubani, Sololaki y Mtatsminda, con transporte, alojamiento, cocina georgiana y ruta de 3 días."
+      ],
+      "GE:Batum": [
+        "Qué ver en Batumi: bulevar, jardín botánico y playa",
+        "Qué ver en Batumi: bulevar, casco antiguo y jardín botánico, con alojamiento, transporte, cocina de Adjaria, consejos de playa y ruta de 3 días."
+      ],
+      "GE:Kazbegi": [
+        "Kazbegi: qué ver en Stepantsminda y ruta a Gergeti",
+        "Organiza Kazbegi desde Stepantsminda: iglesia de Gergeti, Sno y Juta, con acceso desde Tiflis, alojamiento, caminatas y consejos de temporada."
+      ],
+      "BG:Sofya": [
+        "Qué ver en Sofía: ruta de 2 días y dónde alojarse",
+        "Qué ver en Sofía: catedral Alexander Nevsky, Serdica y Vitosha, con ruta de 2 días, metro del aeropuerto, comida local y zonas de alojamiento."
+      ],
+      "BG:Plovdiv": [
+        "Qué ver en Plovdiv: casco antiguo, Kapana y teatro",
+        "Qué ver en Plovdiv: casco antiguo, teatro, Kapana y mosaicos de basílica, con conexiones desde Sofía, alojamiento, comida y una ruta de 2 días."
+      ],
+      "BG:Varna": [
+        "Qué ver en Varna: Sea Garden, museos y playas",
+        "Qué ver en Varna: Sea Garden, Museo Arqueológico, termas romanas y playas, con transporte, alojamiento, comida local y ruta de 3 días por la costa."
+      ],
+      "MT:Valletta": [
+        "Qué ver en La Valeta: ruta de 2 días y dónde dormir",
+        "Qué ver en La Valeta: Concatedral de San Juan, Upper Barrakka y Grand Harbour, con paseos, alojamiento, comida maltesa, transporte y conexión a Gozo."
+      ],
+      "MT:Gozo": [
+        "Qué ver en Gozo: templos, costa y cómo llegar en ferry",
+        "Qué ver en Gozo: Cittadella, templos de Ġgantija y Dwejra, con ferris desde Malta, transporte insular, alojamiento y una ruta tranquila de 3 días."
+      ],
+      "CY:Girne": [
+        "Qué ver en Kyrenia: puerto, castillo y Bellapais",
+        "Qué ver en Kyrenia: puerto antiguo, castillo y Bellapais, con alojamiento, playas, transporte, cocina local y una ruta equilibrada de 2 días."
+      ],
+      "CY:Gazimağusa": [
+        "Qué ver en Famagusta: murallas, Otelo y Salamina",
+        "Qué ver en Famagusta: murallas, castillo de Otelo, mezquita Lala Mustafa Pasha y Salamina, con transporte, alojamiento, comida y ruta de 2 días."
+      ],
+      "CY:Baf": [
+        "Qué ver en Pafos: mosaicos, tumbas y dónde alojarse",
+        "Qué ver en Pafos: mosaicos, Tumbas de los Reyes y puerto, con transporte, zonas para alojarse, comida local, opciones de costa y ruta de 3 días."
+      ],
+      "CY:Larnaka": [
+        "Qué ver en Lárnaca: Finikoudes, lago salado y playas",
+        "Qué ver en Lárnaca: Finikoudes, San Lázaro, lago salado y Hala Sultan Tekke, con traslado del aeropuerto, alojamiento, comida y ruta de 2 días."
+      ],
+      "MA:Marakeş": [
+        "Qué ver en Marrakech: ruta de 3 días, zocos y jardines",
+        "Qué ver en Marrakech: Jemaa el-Fna, Palacio de la Bahía y Majorelle, con ruta de 3 días, riads, traslado del aeropuerto, comida y presupuesto."
+      ],
+      "MA:Fes": [
+        "Qué ver en Fez: medina, curtidurías y ruta de 3 días",
+        "Qué ver en Fez: medina de Fes el-Bali, Bou Inania y curtidurías Chouara, con ruta de 3 días, riads, transporte, comida local y consejos para pasear."
+      ],
+      "MA:Şefşavan": [
+        "Qué ver en Chefchaouen: medina azul y ruta de 2 días",
+        "Qué ver en Chefchaouen: medina azul, Kasbah y Ras el-Maa, con ruta de 2 días, acceso desde Fez, alojamiento, comida y excursión a Akchour."
+      ]
+    }
+  },
+  "hubs": {
+    "en": {
+      "AE": [
+        "UAE Travel Guide: Dubai and Abu Dhabi Itinerary",
+        "Plan a UAE trip through Dubai and Abu Dhabi: sights, where to stay, transport between cities, cooler months and practical itinerary choices."
+      ],
+      "EG": [
+        "Egypt Travel Guide: Cairo, Luxor and the Red Sea",
+        "Plan Egypt with Cairo, Luxor, Hurghada and Sharm el-Sheikh guides: temples, museums, reef trips, places to stay and realistic travel connections."
+      ],
+      "GE": [
+        "Georgia Travel Guide: Tbilisi, Batumi and Kazbegi",
+        "Explore Georgia with Tbilisi, Batumi and Kazbegi guides: old-town walks, Black Sea stays, mountain routes, transport and practical trip planning."
+      ],
+      "BG": [
+        "Bulgaria Travel Guide: Sofia, Plovdiv and Varna",
+        "Plan Bulgaria with Sofia, Plovdiv and Varna guides: historic sights, areas to stay, rail and bus connections, euro payments and itinerary ideas."
+      ],
+      "MT": [
+        "Malta Travel Guide: Valletta and Gozo Itinerary",
+        "Plan Malta with Valletta and Gozo guides: harbour walks, temples, places to stay, buses, ferry connections and a balanced two-island itinerary."
+      ],
+      "CY": [
+        "Cyprus Travel Guide: Kyrenia, Famagusta, Paphos, Larnaca",
+        "Explore Cyprus through Kyrenia, Famagusta, Paphos and Larnaca: harbour walks, archaeology, beaches, places to stay and city-specific travel tips."
+      ],
+      "MA": [
+        "Morocco Travel Guide: Marrakech, Fez and Chefchaouen",
+        "Plan Morocco through Marrakech, Fez and Chefchaouen: medina walks, riad stays, trains, coach connections, local food and realistic travel routes."
+      ]
+    },
+    "es": {
+      "AE": [
+        "Viajar a Emiratos Árabes: Dubái y Abu Dabi",
+        "Organiza tu viaje a Emiratos Árabes: qué ver en Dubái y Abu Dabi, dónde dormir, transporte entre ciudades, mejor época y rutas con tiempo suficiente."
+      ],
+      "EG": [
+        "Viajar a Egipto: El Cairo, Luxor y el mar Rojo",
+        "Prepara tu viaje a Egipto con El Cairo, Luxor, Hurghada y Sharm el-Sheij: templos, museos, arrecifes, alojamiento y conexiones para una ruta realista."
+      ],
+      "GE": [
+        "Viajar a Georgia: Tiflis, Batumi y Kazbegi",
+        "Descubre Georgia con Tiflis, Batumi y Kazbegi: casco antiguo, costa del mar Negro, rutas de montaña, transporte y consejos para organizar el viaje."
+      ],
+      "BG": [
+        "Viajar a Bulgaria: Sofía, Plovdiv y Varna",
+        "Organiza Bulgaria con Sofía, Plovdiv y Varna: lugares que ver, barrios para alojarse, conexiones de tren y autobús, pagos en euros y rutas prácticas."
+      ],
+      "MT": [
+        "Viajar a Malta: La Valeta, Gozo y rutas en ferry",
+        "Prepara Malta con La Valeta y Gozo: paseos por el puerto, templos, dónde alojarse, autobuses, ferris y una ruta equilibrada entre las dos islas."
+      ],
+      "CY": [
+        "Viajar a Chipre: Kyrenia, Famagusta, Pafos y Lárnaca",
+        "Descubre Chipre con Kyrenia, Famagusta, Pafos y Lárnaca: puertos, yacimientos, playas, alojamiento, cocina local y consejos de transporte para cada base."
+      ],
+      "MA": [
+        "Viajar a Marruecos: Marrakech, Fez y Chefchaouen",
+        "Organiza Marruecos con Marrakech, Fez y Chefchaouen: medinas, riads, comida local, conexiones de tren y autobús y rutas que respetan las distancias."
+      ]
+    }
+  }
+}

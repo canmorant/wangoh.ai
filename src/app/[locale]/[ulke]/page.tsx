@@ -244,7 +244,7 @@ export default async function CountryPage({ params }: { params: Promise<Params> 
             </div>
 
             {hub.essentials && hub.essentials.length > 0 && (
-              <div className="mt-12">
+              <div id={practical ? undefined : "pratik-bilgiler"} className="mt-12 scroll-mt-28">
                 <h2 className="font-display text-[clamp(1.55rem,3vw,2.1rem)] text-white">
                   {hub.essentialsHeading ?? t("essentials")}
                 </h2>

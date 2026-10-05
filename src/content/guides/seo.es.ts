@@ -1,3 +1,5 @@
+import addedSeo from "@/content/addedSeo.json";
+
 /**
  * İspanyolca rehberlerin <title> ve meta description'ı.
  *
@@ -13,6 +15,7 @@
  * "…" yok, başlık ve açıklamalar tekil.
  */
 export const ES_GUIDE_SEO: Record<string, readonly [title: string, description: string]> = {
+  ...Object.fromEntries(Object.entries(addedSeo.guides.es).map(([key, [title, description]]) => [key, [title, description] as const])),
   /* ------------------------------ Japonya ------------------------------ */
   "JP:Tokyo": [
     "Qué ver en Tokio: barrios, dónde alojarse y qué comer",

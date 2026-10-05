@@ -117,26 +117,29 @@ export default function DietaryPicks({
   country: string;
 }) {
   const t = useTranslations("Dietary");
+  const hasPicks = dietary.vegan.length > 0 || dietary.halal.length > 0;
   return (
     <section id="vegan-helal-restoranlar" className="mb-16 scroll-mt-28">
       <p className="text-[9.5px] tracking-[0.26em] text-[var(--gold)]/70 uppercase">
         {t("eyebrow")}
       </p>
       <h2 className="font-display mt-3 text-[clamp(1.6rem,3.2vw,2.2rem)] leading-tight text-white">
-        {t("heading", { city })}
+        {t(hasPicks ? "heading" : "notesHeading", { city })}
       </h2>
       <p className="mt-4 max-w-[68ch] text-[15px] leading-relaxed text-white/55">
-        {t("intro", { city })}
+        {t(hasPicks ? "intro" : "notesIntro", { city })}
       </p>
 
-      <div className="mt-7 grid gap-4 md:grid-cols-2">
-        {dietary.vegan.map((pick) => (
-          <PickCard key={`vegan-${pick.name}`} pick={pick} city={city} country={country} />
-        ))}
-        {dietary.halal.map((pick) => (
-          <PickCard key={`halal-${pick.name}`} pick={pick} city={city} country={country} />
-        ))}
-      </div>
+      {hasPicks && (
+        <div className="mt-7 grid gap-4 md:grid-cols-2">
+          {dietary.vegan.map((pick) => (
+            <PickCard key={`vegan-${pick.name}`} pick={pick} city={city} country={country} />
+          ))}
+          {dietary.halal.map((pick) => (
+            <PickCard key={`halal-${pick.name}`} pick={pick} city={city} country={country} />
+          ))}
+        </div>
+      )}
 
       {dietary.researchNote && (
         <p className="mt-4 rounded-xl border border-amber-300/15 bg-amber-200/[0.035] p-4 text-[12.5px] leading-relaxed text-amber-100/60">

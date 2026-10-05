@@ -27,6 +27,11 @@ import { slugify } from "@/lib/slug";
 const EXTRA: Record<string, string[]> = {
   TR: ["Turkey"],
   GB: ["UK", "England"],
+  AE: ["BAE", "UAE", "Emiratos Árabes Unidos"],
+  EG: ["Egipto"],
+  GE: ["Georgia"],
+  CY: ["Chipre"],
+  MA: ["Marruecos"],
 };
 
 const ALL: Country[] = [...countries, SECRET_DESTINATION];

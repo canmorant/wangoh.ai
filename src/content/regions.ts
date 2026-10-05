@@ -10,10 +10,12 @@ import { allCountries } from "@/content/guides";
  * Türkiye ve Rusya iki kıtaya yayılıyor; seyahat rehberciliğindeki yaygın
  * kullanımla Avrupa grubunda. Svalbard Norveç'e bağlı, Avrupa'da.
  */
-export const REGIONS = ["europe", "asia", "americas"] as const;
+export const REGIONS = ["europe", "asia", "americas", "africa"] as const;
 export type Region = (typeof REGIONS)[number];
 
 const REGION_OF: Record<string, Region> = {
+  AE: "asia", GE: "asia", BG: "europe", MT: "europe", CY: "europe",
+  EG: "africa", MA: "africa",
   IT: "europe", FR: "europe", ES: "europe", TR: "europe", GB: "europe", NL: "europe",
   AT: "europe", PT: "europe", DE: "europe", CH: "europe", BE: "europe", HU: "europe",
   CZ: "europe", PL: "europe", RU: "europe", RS: "europe", ME: "europe", BA: "europe",

@@ -182,7 +182,9 @@
     "heading": "Vegane und Halal-Restaurants in {city}",
     "intro": "In {city} haben wir eine pflanzliche Adresse und eine für muslimische Reisende ausgewählt. Halal-Angaben bedeuten nicht alle dasselbe: Zertifizierung, Eigenangabe des Restaurants und „einige Halal-Optionen“ sind auf jeder Karte getrennt ausgewiesen.",
     "researchNote": "Recherchehinweis:",
-    "disclaimer": "Speisekarten, Lieferanten und Zertifikate ändern sich. Wenn du streng halal isst, kläre das aktuelle Zertifikat, Alkohol, Saucenzutaten und das Risiko einer gemeinsam genutzten Küche direkt mit dem Restaurant."
+    "disclaimer": "Speisekarten, Lieferanten und Zertifikate ändern sich. Wenn du streng halal isst, kläre das aktuelle Zertifikat, Alkohol, Saucenzutaten und das Risiko einer gemeinsam genutzten Küche direkt mit dem Restaurant.",
+    "notesHeading": "Vegane und Halal-Ernährung in {city}",
+    "notesIntro": "Zutaten in lokalen Gerichten und Fragen vor der Bestellung für eine vegane oder Halal-Ernährung."
   },
   "Discovery": {
     "heading": "Ein Reiseführer für deine nächste Stadt",
@@ -495,7 +497,8 @@
       "title": "Visum, Geld und Telefon in {country}",
       "body": "Einreiseregeln, Bezahlen, Sprachen, mobiles Internet und Budget gelten für das ganze Land und stehen deshalb auf einer Seite.",
       "link": "Praktische Informationen zu {country}"
-    }
+    },
+    "tocDietaryNotes": "Vegane und Halal-Ernährung"
   },
   "Guides": {
     "metaTitle": "Reiseführer: Land für Land, Stadt für Stadt | Wangoh",
@@ -774,6 +777,11 @@
       "name": "Amerika",
       "guides": "Reiseführer Amerika",
       "more": "Weitere Länderführer für Amerika"
+    },
+    "africa": {
+      "name": "Afrika",
+      "guides": "Reiseführer für Afrika",
+      "more": "Weitere Länderreiseführer für Afrika"
     }
   }
 }

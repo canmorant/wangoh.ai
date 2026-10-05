@@ -1,0 +1,149 @@
+[
+  {
+    "countryCode": "AE",
+    "city": "Dubai",
+    "vegan": [],
+    "halal": [],
+    "researchNote": "Machboos veya harees et içerebilir; luqaimat ve soslarda süt, yumurta veya bal bulunabilir. Vegan tercihte içerik ve ortak pişirmeyi; helal tercihte işletmenin güncel et kaynağı ve alkol politikasını doğrudan sorun. Doğrulanmış restoran kartı için yeterli bağımsız kanıt bulunmadığından isim önerilmiyor."
+  },
+  {
+    "countryCode": "AE",
+    "city": "Abu Dabi",
+    "vegan": [],
+    "halal": [],
+    "researchNote": "Yerel pilav ve harees çoğunlukla etlidir. Vegan öğünde pirinç, sos ve sebzenin et suyuyla hazırlanmadığını sorun. Helal et beklentisinde güncel tedarik ve alkol politikasını işletmeden teyit edin; doğrulanmamış restoran adı eklenmiyor."
+  },
+  {
+    "countryCode": "EG",
+    "city": "Kahire",
+    "vegan": [],
+    "halal": [],
+    "researchNote": "Koşeri, ful ve taameya bitki bazlı hazırlanabilir; sos, yağ, ekleme ve ortak pişirmeyi kontrol edin. Helal tercihte et kaynağını işletmeden teyit edin; yalnız yerel mutfak adı sertifika kanıtı değildir. Yeterli doğrulama olmadan restoran kartı eklenmiyor."
+  },
+  {
+    "countryCode": "EG",
+    "city": "Luksor",
+    "vegan": [],
+    "halal": [],
+    "researchNote": "Tur öğünündeki sebze veya pilav et suyuyla yapılabilir; vegan tercihi rezervasyonda ve masada tekrar belirtin. Helal tercihte et tedarikini sorun. Yeterli güncel doğrulama bulunmadığı için isimli restoran önerisi eklenmiyor."
+  },
+  {
+    "countryCode": "EG",
+    "city": "Hurgada",
+    "vegan": [],
+    "halal": [],
+    "researchNote": "Her şey dahil büfede vegan etiketi yalnız sebze görünümüne dayanmaz; et suyu, tereyağı ve ortak servis ekipmanını sorun. Helal tercihte et kaynağını otelle teyit edin. Güncel kanıt olmadan isimli restoran kartı eklenmiyor."
+  },
+  {
+    "countryCode": "EG",
+    "city": "Şarm el-Şeyh",
+    "vegan": [],
+    "halal": [],
+    "researchNote": "Otelde vegan öğün için et suyu, tereyağı, yoğurt ve ortak pişirmeyi netleştirin. Helal tercihte yalnız büfe etiketini değil tedariki ve mutfak uygulamasını sorun. Yeterli güncel doğrulama olmadan restoran adı önerilmiyor."
+  },
+  {
+    "countryCode": "GE",
+    "city": "Tiflis",
+    "vegan": [],
+    "halal": [],
+    "researchNote": "Pkhali ve badrijani bitki bazlı olabilir; peynir, yumurta ve ceviz içeriklerini sorun. Khinkali dolgusunun mantar olması tek başına vegan mutfak garantisi değildir. Helal et kaynağını ayrıca teyit edin; doğrulanmış restoran kanıtı olmadan isim verilmiyor."
+  },
+  {
+    "countryCode": "GE",
+    "city": "Batum",
+    "vegan": [],
+    "halal": [],
+    "researchNote": "Acar khachapuri’si vegan değildir; peynir, yumurta ve tereyağı içerir. Sebze ve cevizli tabaklarda da sosu sorun. Helal et tercihini işletmeyle doğrudan teyit edin; yeterli güncel kanıt olmadan isimli restoran önerisi verilmiyor."
+  },
+  {
+    "countryCode": "GE",
+    "city": "Kazbegi",
+    "vegan": [],
+    "halal": [],
+    "researchNote": "Misafirhanede vegan yemek için et suyu, peynir ve tereyağını önceden netleştirin. Dağ yolunda seçeneği garanti saymadan uygun paket öğün taşıyın. Helal et kaynağını doğrudan sorun; güncel bağımsız kanıt olmadan restoran adı önerilmiyor."
+  },
+  {
+    "countryCode": "BG",
+    "city": "Sofya",
+    "vegan": [],
+    "halal": [],
+    "researchNote": "Banitsa peynir veya yumurta, tarator yoğurt içerir. Vegan öğünde sos, et suyu ve süt ürünlerini sorun. Helal tercihte et tedarikini işletmeyle doğrulayın; yeterli güncel kanıt olmadan restoran ismi eklenmiyor."
+  },
+  {
+    "countryCode": "BG",
+    "city": "Plovdiv",
+    "vegan": [],
+    "halal": [],
+    "researchNote": "Banitsa ve shopska salatası peynir içerebilir; sebze yemeğinde et suyu ve tereyağını sorun. Helal et tedarikini doğrudan işletmeyle doğrulayın. Güncel bağımsız kanıt olmadığından isimli restoran kartı eklenmiyor."
+  },
+  {
+    "countryCode": "BG",
+    "city": "Varna",
+    "vegan": [],
+    "halal": [],
+    "researchNote": "Shopska salatasında peynir, bazı sebze yemeklerinde tereyağı veya et suyu bulunabilir. Vegan tercihi açıkça belirtin; helal et için tedarik teyidi isteyin. Güncel doğrulama olmadığından isimli restoran önerisi eklenmiyor."
+  },
+  {
+    "countryCode": "MT",
+    "city": "Valletta",
+    "vegan": [],
+    "halal": [],
+    "researchNote": "Pastizzi hamuru hayvansal yağ, dolgusu peynir içerebilir; bezelye dolgusunu vegan garantisi saymayın. Ftira’da sos ve balık ekini sorun. Helal et kaynağını işletmeden doğrulayın; güncel kanıt olmadan restoran adı önerilmiyor."
+  },
+  {
+    "countryCode": "MT",
+    "city": "Gozo",
+    "vegan": [],
+    "halal": [],
+    "researchNote": "Gozitan ftira ve köy yemeklerinde peynir, balık veya hayvansal yağ olabilir. Vegan tercihte dolguyu ve pişirmeyi, helal tercihte et kaynağını önceden teyit edin. Küçük köylerde seçenek garanti değildir; doğrulanmadan restoran ismi eklenmiyor."
+  },
+  {
+    "countryCode": "CY",
+    "city": "Girne",
+    "vegan": [],
+    "halal": [],
+    "researchNote": "Hellim süt ürünü, şeftali kebabı etlidir. Vegan mezede yoğurt, peynir ve ortak pişirmeyi sorun; helal et beklentisinde güncel tedariki teyit edin. Yeterli bağımsız restoran kanıtı bulunmadığından isimli kart eklenmiyor."
+  },
+  {
+    "countryCode": "CY",
+    "city": "Gazimağusa",
+    "vegan": [],
+    "halal": [],
+    "researchNote": "Hellim ve bazı mezeler süt ürünü içerir; sebze yemeklerinde tereyağı veya et suyunu sorun. Helal et kaynağını işletmeden teyit edin. Güncel kanıt olmadan restoran adı önerilmiyor; Salamis günü uygun küçük öğün taşıyın."
+  },
+  {
+    "countryCode": "CY",
+    "city": "Baf",
+    "vegan": [],
+    "halal": [],
+    "researchNote": "Halloumi ve yoğurtlu mezeler vegan değildir. Bitki bazlı tabakta sos, tereyağı ve et suyunu sorun. Helal et tercihini işletmeyle doğrulayın; yeterli güncel bağımsız kanıt olmadığından restoran adı önerilmiyor."
+  },
+  {
+    "countryCode": "CY",
+    "city": "Larnaka",
+    "vegan": [],
+    "halal": [],
+    "researchNote": "Halloumi, yoğurtlu sos ve bazı mezeler vegan değildir. Sebze tabağında et suyu veya tereyağını kontrol edin; helal et tedarikini işletmeyle doğrulayın. Güncel yeterli kanıt olmadığından isimli restoran kartı eklenmiyor."
+  },
+  {
+    "countryCode": "MA",
+    "city": "Marakeş",
+    "vegan": [],
+    "halal": [],
+    "researchNote": "Sebzeli tajine, kuskus ve çorbanın et suyu, tereyağı veya bal içeriğini sorun. Helal beklentisinde ülke geneline güvenmek yerine işletmenin et kaynağını teyit edin. Güncel menü ve doğrulama olmadan restoran ismi önerilmiyor."
+  },
+  {
+    "countryCode": "MA",
+    "city": "Fes",
+    "vegan": [],
+    "halal": [],
+    "researchNote": "Pastilla et ve tereyağı, çorbalar et suyu içerebilir. Vegan için tarifin tamamını, helal için et kaynağını doğrudan sorun. Medinada güncel menü teyidi olmadan belirli restoran adı veya sertifika iddiası verilmez."
+  },
+  {
+    "countryCode": "MA",
+    "city": "Şefşavan",
+    "vegan": [],
+    "halal": [],
+    "researchNote": "Bissaranın yağı ve ekleri değişebilir; tajine sebzeli olsa bile et suyunu sorun. Vegan ve helal gereksinimleri işletmeyle tek tek teyit edilmeli. Güncel doğrulaması olmayan restoran adı veya diyet garantisi eklenmiyor."
+  }
+]

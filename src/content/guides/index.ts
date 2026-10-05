@@ -2,6 +2,7 @@ import { countries, Country, City } from "@/data/destinations";
 import { SECRET_DESTINATION } from "@/data/secret";
 import { slugify } from "@/lib/slug";
 import { CityGuide } from "./types";
+import addedGuides from "./addedDestinations.json";
 import { translateDeep } from "@/content/i18n/core";
 import { TR_CONTEXT, type GuideContext } from "./context";
 import { hiroshima } from "./hiroshima";
@@ -164,6 +165,7 @@ export function buildGuides(ctx: GuideContext): CityGuide[] {
     ...swedenGuides(ctx),
     ...denmarkGuides(ctx),
     ...finlandGuides(ctx),
+    ...(addedGuides as CityGuide[]).map(own),
   ];
 }
 

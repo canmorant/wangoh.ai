@@ -1,0 +1,353 @@
+{
+  "AE": {
+    "seoTitle": "BAE Gezi Rehberi: Dubai ve Abu Dabi Rota Planı",
+    "seoDescription": "BAE gezi rehberi: Dubai ve Abu Dabi’de gezilecek yerler, nerede kalınır, şehirler arası ulaşım, mevsim seçimi ve dengeli tatil rotası.",
+    "planningHeading": "Dubai ve Abu Dabi rotası nasıl kurulur?",
+    "essentialsHeading": "BAE seyahati için temel bilgiler",
+    "citiesHeading": "BAE’de gezilecek şehirler",
+    "cityGridIntro": "Dubai için eski şehir, Downtown ve sahil günlerini; Abu Dabi için Saadiyat müzeleri, büyük cami ve Corniche’yi ayrı planlayın. İki şehir aynı metro ağının durakları değildir.",
+    "intro": [
+      "İlk yolculukta Dubai’ye dört, Abu Dabi’ye iki veya üç gece ayırmak iyi bir başlangıçtır. Büyük cazibe merkezlerinin birbirinden uzak olması nedeniyle aynı güne her şeyi koymak transfer masrafını ve yorgunluğu artırır.",
+      "Downtown manzaralı bir otel, eski Dubai’yi veya plajı kapınızın önüne getirmez. Konaklamayı fotoğrafına göre değil metro erişimine, yapmak istediğiniz etkinliklere ve toplam ulaşım maliyetine göre seçin."
+    ],
+    "essentials": [
+      {
+        "title": "Giriş koşulları",
+        "body": "Vize ve pasaport koşulları uyruğa ve belgeye göre değişir. Uçuş almadan önce BAE’nin resmî göçmenlik kaynakları ve havayolunuzla gerekli belgeleri teyit edin."
+      },
+      {
+        "title": "AED ve toplam fiyat",
+        "body": "Para birimi BAE dirhemidir. Otel, tur ve restoranlarda vergi ile ek ücretleri son toplam üzerinden karşılaştırın; Dubai nol kartını Abu Dabi’de geçerli varsaymayın."
+      },
+      {
+        "title": "Mevsim ve kıyafet",
+        "body": "Kasım–mart açık hava için daha elverişlidir. Yaz programını klimalı mekânlar ve kısa akşam yürüyüşleri etrafında kurun; ibadet yerlerinin kıyafet koşullarını ziyaret öncesinde okuyun."
+      },
+      {
+        "title": "Şehirler arası geçiş",
+        "body": "Dubai–Abu Dabi geçişi için otobüs, taksi veya araç seçeneğini kapıdan kapıya hesaplayın. Havalimanı, terminal ve otel son bağlantıları çoğu planın görünmeyen zaman kalemidir."
+      }
+    ],
+    "routeIdeas": [
+      {
+        "title": "İlk BAE yolculuğu",
+        "duration": "6–8 gün",
+        "cities": [
+          "Dubai",
+          "Abu Dabi"
+        ],
+        "description": "Dubai’de eski şehir, Downtown ve sahil için dört gece; Abu Dabi’de Saadiyat ve Corniche için iki veya üç gece. Transfer gününe tek ana ziyaret bırakın."
+      },
+      {
+        "title": "Müze ve mimari molası",
+        "duration": "3–4 gün",
+        "cities": [
+          "Abu Dabi"
+        ],
+        "description": "Saadiyat müzelerini, Şeyh Zayed Camii’ni ve Qasr Al Watan’ı ayrı zaman bloklarında görün. Tema parkı gününü kültür gününe sıkıştırmayın."
+      }
+    ]
+  },
+  "EG": {
+    "seoTitle": "Mısır Gezi Rehberi: Kahire, Luksor ve Kızıldeniz",
+    "seoDescription": "Mısır gezi rehberi: Kahire, Luksor, Hurgada ve Şarm el-Şeyh için gezilecek yerler, ulaşım, konaklama, mevsim seçimi ve tarih-deniz rotaları.",
+    "planningHeading": "Mısır’da tarih ve deniz rotası nasıl kurulur?",
+    "essentialsHeading": "Mısır seyahati için temel bilgiler",
+    "citiesHeading": "Mısır’da gezilecek şehirler ve kıyılar",
+    "cityGridIntro": "Kahire ve Luksor yoğun kültür günleri; Hurgada ve Şarm el-Şeyh ise farklı kıyılarda deniz üsleridir. Hurgada Luksor’la karadan eşleşir; Şarm el-Şeyh’i kısa Nil programına uçuş bağlantısıyla düşünün.",
+    "intro": [
+      "Piramitler ve müze için Kahire’ye üç veya dört gün, iki Nil yakasındaki anıtlar için Luksor’a iki veya üç gün ayırın. Kızıldeniz’e devam edecekseniz bir kıyı seçmek kısa seyahati rahatlatır.",
+      "Hurgada’dan Luksor’a günübirlik tur mümkün olsa da yolda geçen uzun saatleri hesaba katın. Tarih ana amacınızsa Luksor’da gecelemek sabah serinliğini kullanmanızı ve anıtları acele etmeden görmenizi sağlar."
+    ],
+    "essentials": [
+      {
+        "title": "Vizeyi rotanızla birlikte kontrol edin",
+        "body": "Vize koşullarını pasaportunuza göre resmî Egypt e-Visa portalından veya temsilcilikten kontrol edin. Yalnız Şarm el-Şeyh ziyareti için geçerli olabilen bir izin, Kahire ve Luksor planınıza otomatik olarak uymaz."
+      },
+      {
+        "title": "EGP, küçük banknot ve bahşiş",
+        "body": "Para birimi Mısır lirasıdır. Küçük hizmetlerde nakit faydalıdır; tur, rehber, transfer ve bahşişin pakete dahil olup olmadığını baştan netleştirin. Dövize çevrilmiş tur fiyatını yerel harcama bütçesi sanmayın."
+      },
+      {
+        "title": "Bilet kapsamı ve sıcaklık",
+        "body": "Bir arkeolojik alanın genel bileti tüm mezar veya piramit içlerini kapsamayabilir. Resmî bilet kapsamını kontrol edin; açık alanları sabaha, kapalı müzeleri sıcak saatlere yerleştirin."
+      },
+      {
+        "title": "Resif ve tur seçimi",
+        "body": "Dalış ve tekne için yetkili işletme seçin, ekipman ve iptal şartlarını sorun. Mercana basmayın veya deniz canlılarını beslemeyin; kıyı otelinin resif erişimini ve yüzme koşullarını ayrıca inceleyin."
+      }
+    ],
+    "routeIdeas": [
+      {
+        "title": "Nil mirası ve Hurgada",
+        "duration": "10–12 gün",
+        "cities": [
+          "Kahire",
+          "Luksor",
+          "Hurgada"
+        ],
+        "description": "Kahire’de dört, Luksor’da üç, Hurgada’da üç veya dört gece. Şehirler arası geçiş günlerine müze ya da tekne rezervasyonu yüklemeyin."
+      },
+      {
+        "title": "Kahire ve Sina kıyısı",
+        "duration": "8–10 gün",
+        "cities": [
+          "Kahire",
+          "Şarm el-Şeyh"
+        ],
+        "description": "Kahire’nin anıtlarından sonra uçuşla Şarm el-Şeyh’e geçin. Resif gezisi, dinlenme ve hava koşulları için kıyıda dört veya beş gece bırakın."
+      }
+    ]
+  },
+  "GE": {
+    "seoTitle": "Gürcistan Gezi Rehberi: Tiflis, Batum ve Kazbegi",
+    "seoDescription": "Gürcistan gezi rehberi: Tiflis, Batum ve Kazbegi için gezilecek yerler, konaklama, ulaşım, mevsim planı ve şehir-deniz-dağ rotaları.",
+    "planningHeading": "Gürcistan’da şehir, deniz ve dağ rotası",
+    "essentialsHeading": "Gürcistan seyahati için temel bilgiler",
+    "citiesHeading": "Gürcistan’da gezilecek şehirler ve dağ üsleri",
+    "cityGridIntro": "Tiflis kültür ve ulaşım düğümü, Batum sahil şehri, Kazbegi ise Stepantsminda merkezli dağ rotasıdır. Batum ile Kazbegi’yi haritada yakın sanmayın; Tiflis’e dönüş ya da ayrı uzun geçiş gerekir.",
+    "intro": [
+      "Tiflis’e üç veya dört gece ayırıp Kazbegi’yi iki gecelik bir dağ ayağı olarak ekleyin. Bir gecelik kaçamakta bulutlu hava bütün manzara beklentisini bozabilir; yedek zaman burada lüks değil rota kalitesidir.",
+      "Batum’u aynı programın kısa uzantısı yerine en az üç gecelik Karadeniz ayağı olarak düşünün. Dağlarda yürüyüş, şehirlerde mahalle gezisi ve kıyıda dinlenme için mevsimi birlikte değerlendirin."
+    ],
+    "essentials": [
+      {
+        "title": "2026 turist sigortası",
+        "body": "2026’dan itibaren turistler için sağlık ve kaza sigortası zorunluluğu var. Resmî duyuru en az 30.000 GEL teminat ve Gürcüce veya İngilizce belge istiyor; poliçe tüm kalışı kapsamalı. Güncel koşulları resmî temsilcilikten kontrol edin."
+      },
+      {
+        "title": "Giriş belgesi kişiye bağlıdır",
+        "body": "Pasaport, kimlik ve vize uygunluğunu kendi uyruğunuz için resmî kanaldan doğrulayın. Türkçe okuyor olmak Türk vatandaşlığına sahip olmak anlamına gelmez; belge ve kalış süresi ayrı kontrol edilmelidir."
+      },
+      {
+        "title": "GEL ve ulaşım bütçesi",
+        "body": "Para birimi Gürcü larisidir. Küçük işletmeler ve dağ transferleri için nakit taşıyın; özel araçta güzergâh, bekleme ve dönüşü fiyatla birlikte yazılı netleştirin."
+      },
+      {
+        "title": "Dağ yolu ve hava",
+        "body": "Kazbegi’ye giden yol hava, kar ve trafik nedeniyle değişebilir. Güncel yol durumunu Georgia Roads Department duyurularından kontrol edin; dağ dönüşünü uluslararası uçuşla aynı dar zaman aralığına koymayın."
+      }
+    ],
+    "routeIdeas": [
+      {
+        "title": "Tiflis ve Kazbegi",
+        "duration": "6–7 gün",
+        "cities": [
+          "Tiflis",
+          "Kazbegi"
+        ],
+        "description": "Tiflis’te dört gece, Stepantsminda’da iki gece. Dağ yolculuğundan sonra son geceyi yeniden Tiflis’te geçirin."
+      },
+      {
+        "title": "Şehir ve Karadeniz",
+        "duration": "7–9 gün",
+        "cities": [
+          "Tiflis",
+          "Batum"
+        ],
+        "description": "Tiflis’ten Batum’a tren bağlantısını seçip sahil ve botanik bahçesine ayrı günler ayırın. Batum kalkışlı dönüş uçuşu varsa geri yolu azaltabilir."
+      }
+    ]
+  },
+  "BG": {
+    "seoTitle": "Bulgaristan Gezi Rehberi: Sofya, Plovdiv ve Varna",
+    "seoDescription": "Bulgaristan gezi rehberi: Sofya, Plovdiv ve Varna’da gezilecek yerler, otel bölgeleri, tren ve otobüs bağlantıları, avro ve rota önerileri.",
+    "planningHeading": "Bulgaristan rotası nasıl kurulur?",
+    "essentialsHeading": "Bulgaristan seyahati için temel bilgiler",
+    "citiesHeading": "Bulgaristan’da gezilecek şehirler",
+    "cityGridIntro": "Sofya ve Plovdiv kısa bir kültür rotasında eşleşir. Varna ülkenin doğusunda ayrı bir Karadeniz ayağıdır; hafta sonu programına sıkıştırmak yerine kıyıda en az üç gece bırakın.",
+    "intro": [
+      "Sofya’ya iki veya üç, Plovdiv’e iki gün ayırıp ana anıtları yürüyerek keşfedebilirsiniz. Sofya’da Vitoşa doğası, Plovdiv’de müze evleri için ek gün bırakmak yalnız fotoğraf çekip geçilen bir turu daha anlamlı hale getirir.",
+      "Varna’ya devam ederken tren veya otobüsün gerçek süresini kontrol edin; harita üzerindeki mesafe hızlı bağlantı garantisi değildir. Yazın sahil oteli, kışın şehir içi müze ve restoran erişimi daha değerli olur."
+    ],
+    "essentials": [
+      {
+        "title": "2026’da para birimi avro",
+        "body": "Bulgaristan 1 Ocak 2026’da avroya geçti. Eski leva fiyatlı rehberleri güncel fiyat sanmayın; banka kartı yanında küçük nakit yedeği taşıyın."
+      },
+      {
+        "title": "Giriş ve vize",
+        "body": "Bulgaristan seyahati için Schengen koşullarını uyruğunuza ve belgenize göre kontrol edin. Vize başvurusu, kalış süresi ve yeniden giriş hakkını yalnız resmî temsilcilik kaynaklarından doğrulayın."
+      },
+      {
+        "title": "Tren ve otobüs ayrı seçeneklerdir",
+        "body": "BDZ trenleri için istasyon, süre ve aktarmayı kontrol edin. Otobüste kalkış terminali şehirden uzak olabilir; bilet fiyatını otel-terminal ulaşımıyla birlikte hesaplayın."
+      },
+      {
+        "title": "Şehirden doğaya geçiş",
+        "body": "Vitoşa yürüyüşü ve Karadeniz plajı şehir kıyafetiyle aynı hazırlığı istemez. Güncel hava, patika veya plaj bayraklarını kontrol edin; dağ gününe toplu taşıma dönüş saatini ekleyin."
+      }
+    ],
+    "routeIdeas": [
+      {
+        "title": "Sofya ve Plovdiv kültür rotası",
+        "duration": "4–6 gün",
+        "cities": [
+          "Sofya",
+          "Plovdiv"
+        ],
+        "description": "Sofya’da anıtlar ve bir müze günü, Plovdiv’de eski şehir ve Kapana. İki şehir arasında bir transfer öğleden sonrası bırakın."
+      },
+      {
+        "title": "Kültürden Karadeniz’e",
+        "duration": "8–10 gün",
+        "cities": [
+          "Sofya",
+          "Plovdiv",
+          "Varna"
+        ],
+        "description": "Sofya ve Plovdiv’den sonra uzun doğu transferini ayrı gün sayın. Varna’da arkeoloji, Sea Garden ve kıyıya üç gün ayırın."
+      }
+    ]
+  },
+  "MT": {
+    "seoTitle": "Malta Gezi Rehberi: Valletta ve Gozo Rota Planı",
+    "seoDescription": "Malta gezi rehberi: Valletta ve Gozo’da gezilecek yerler, konaklama bölgeleri, feribot ve otobüs bağlantıları, ada gezisi ve mevsim önerileri.",
+    "planningHeading": "Malta ve Gozo rotası nasıl kurulur?",
+    "essentialsHeading": "Malta seyahati için temel bilgiler",
+    "citiesHeading": "Malta’da şehir ve ada rehberleri",
+    "cityGridIntro": "Valletta küçük ama müze ve liman bağlantılarıyla dolu bir başkenttir. Gozo ise tek bir şehir değil; Victoria, köyler, tapınaklar ve kıyılar arasında ulaşım gerektiren ayrı bir adadır.",
+    "intro": [
+      "Valletta ve çevresi için üç gece, Gozo için iki veya üç gece dengeli başlangıçtır. Gozo’yu bir günlük çok duraklı tura sıkıştırmak feribot ve otobüs saatlerini gezinin ana konusu haline getirebilir.",
+      "Valletta’dan Gozo’ya yaya hızlı feribot ile Ċirkewwa–Mġarr araç feribotu farklı ürünlerdir. Araba, bagaj ve çıkış limanınıza uygun bağlantıyı seçin; ada dönüşünü uçuş günü dar bir aralığa koymayın."
+    ],
+    "essentials": [
+      {
+        "title": "Schengen ve seyahat belgeleri",
+        "body": "Malta için Schengen giriş koşullarını kendi pasaportunuz ve ikamet durumunuza göre kontrol edin. Gozo’ya geçmek ayrı ülkeye giriş değildir; uçuş için gerekli belgeyi ada feribotuyla karıştırmayın."
+      },
+      {
+        "title": "Avro ve kartlı ödeme",
+        "body": "Malta’da avro kullanılır. Küçük köy işletmeleri için nakit yedeği bırakın; otel vergisi, tekne gezisi ve ulaşımı oda fiyatından ayrı bütçeleyin."
+      },
+      {
+        "title": "Otobüs ve feribot",
+        "body": "Malta Public Transport ve feribot işletmecilerinin güncel seferlerini kontrol edin. Yol kısa görünse de trafik ve aktarma beklemesi süreyi artırabilir; Gozo’da birçok otobüs Victoria üzerinden bağlanır."
+      },
+      {
+        "title": "Soldan trafik ve deniz koşulları",
+        "body": "Trafik soldan akar; araç kiralamadan önce dar yollar, park ve sigortayı değerlendirin. Kaya kıyısında dalga ve geri çıkış koşulunu kontrol edin; feribot ve tekne seferi hava nedeniyle değişebilir."
+      }
+    ],
+    "routeIdeas": [
+      {
+        "title": "Valletta ve Gozo ilk gezisi",
+        "duration": "5–7 gün",
+        "cities": [
+          "Valletta",
+          "Gozo"
+        ],
+        "description": "Valletta’ya üç gece, Gozo’ya iki veya üç gece. Üç Şehirler için yarım gün, Gozo’da Victoria ve Dwejra için ayrı günler ayırın."
+      },
+      {
+        "title": "Gozo’da yavaş ada gezisi",
+        "duration": "3–4 gün",
+        "cities": [
+          "Gozo"
+        ],
+        "description": "Victoria çevresini üs seçip tapınak, köy ve kıyı günlerini ayırın. Her gün adanın tamamını dolaşmak yerine yakın durak kümeleri kurun."
+      }
+    ]
+  },
+  "CY": {
+    "seoTitle": "Kıbrıs Gezi Rehberi: Girne, Gazimağusa, Baf ve Larnaka",
+    "seoDescription": "Kıbrıs gezi rehberi: Girne, Gazimağusa, Baf ve Larnaka’da gezilecek yerler, konaklama, sahiller, yerel mutfak ve şehre göre ulaşım önerileri.",
+    "planningHeading": "Kıbrıs’ta şehir ve sahil rotası nasıl kurulur?",
+    "essentialsHeading": "Kıbrıs gezisi için temel bilgiler",
+    "citiesHeading": "Kıbrıs’ta gezilecek şehirler ve sahiller",
+    "cityGridIntro": "Girne liman ve Bellapais; Gazimağusa sur içi ve Salamis; Baf mozaik ve kıyı; Larnaka ise Finikoudes ve Tuz Gölü odaklıdır. Yakın görünen durakları bir güne doldurmak yerine bir veya iki üs seçin.",
+    "intro": [
+      "Her şehir için iki veya üç gün bırakmak sahil ve kültür günlerini dengelemeyi kolaylaştırır. Arkeolojik alanlar geniş ve gölgesiz olabilir; açık hava ziyaretini sabaha, kıyı yürüyüşünü akşamüstüne yerleştirin.",
+      "Dört şehri tek konaklama noktasından dolaşmak çok sayıda transfer yaratır. Havalimanı seçimi, kiralık aracın kullanım kapsamı ve güncel bağlantıları otel rezervasyonundan önce birlikte değerlendirin."
+    ],
+    "essentials": [
+      {
+        "title": "Havalimanını otelle birlikte seçin",
+        "body": "Girne ve Gazimağusa için Ercan, Baf için Pafos, Larnaka için Larnaka havalimanı bağlantılarını karşılaştırın. Giriş belgesi, transfer ve araç kullanım koşullarını seçtiğiniz güzergâh için resmî kaynaklardan doğrulayın."
+      },
+      {
+        "title": "Ödeme biçimini şehre göre kontrol edin",
+        "body": "Girne ve Gazimağusa’da fiyatlar çoğunlukla Türk lirası, Baf ve Larnaka’da avro üzerinden görülür. İşletmenin kullandığı para birimini ve kartla ödeme koşulunu rezervasyon sırasında netleştirin."
+      },
+      {
+        "title": "Soldan trafik ve araç kapsamı",
+        "body": "Trafik soldan akar. Kiralık araçta gideceğiniz tüm noktaların kullanım ve sigorta kapsamına dahil olduğunu yazılı kontrol edin; haritada çizilen rota tek başına izin veya sigorta kanıtı değildir."
+      },
+      {
+        "title": "Sahil ve mevsim",
+        "body": "İlkbahar ve sonbahar yürüyüş için daha rahattır. Deniz girişinde plaj bayraklarına uyun; Larnaka Tuz Gölü’nde kuş gözlemi mevsime bağlıdır ve yazın su veya flamingo garanti değildir."
+      }
+    ],
+    "routeIdeas": [
+      {
+        "title": "Liman, manastır ve antik kent",
+        "duration": "5–6 gün",
+        "cities": [
+          "Girne",
+          "Gazimağusa"
+        ],
+        "description": "Girne’de liman ve Bellapais için üç gece, Gazimağusa’da sur içi ve Salamis için iki gece. Transferin kapsamını rezervasyon öncesinde doğrulayın."
+      },
+      {
+        "title": "Mozaik ve sahil rotası",
+        "duration": "5–7 gün",
+        "cities": [
+          "Baf",
+          "Larnaka"
+        ],
+        "description": "Baf’ta arkeolojiye üç gün, Larnaka’da eski merkez ve sahile iki veya üç gün. İki şehir arasında doğrudan seferi ve otel son bağlantısını kontrol edin."
+      }
+    ]
+  },
+  "MA": {
+    "seoTitle": "Fas Gezi Rehberi: Marakeş, Fes ve Şefşavan",
+    "seoDescription": "Fas gezi rehberi: Marakeş, Fes ve Şefşavan’da gezilecek yerler, riad seçimi, tren ve otobüs bağlantıları, medina yürüyüşleri ve rota planı.",
+    "planningHeading": "Fas şehir rotası nasıl kurulur?",
+    "essentialsHeading": "Fas seyahati için temel bilgiler",
+    "citiesHeading": "Fas’ta gezilecek şehirler ve medinalar",
+    "cityGridIntro": "Marakeş güneyde, Fes ve Şefşavan daha kuzeydedir. Üçünü kısa hafta sonu rotasına sıkıştırmayın; Şefşavan’ın tren istasyonu olmadığı için son bağlantı otobüs veya transferdir.",
+    "intro": [
+      "Marakeş ve Fes’e üçer gün, Şefşavan’a iki gün ayırıp geçişleri ayrı zaman bloklarıyla planlayın. Dar medina sokaklarını yürüyerek keşfetmek, sırf daha çok şehir görmek için günleri otobüste geçirmekten daha doyurucudur.",
+      "Riad seçerken dekorasyon kadar araçla bırakılma noktası, bavulla yürünecek mesafe ve gece yön bulma önemlidir. İlk akşam için konaklamadan kolay tarif ve gerekirse karşılama isteyin."
+    ],
+    "essentials": [
+      {
+        "title": "Giriş belgesi ve kalış süresi",
+        "body": "Vize uygunluğu ve pasaport koşullarını kendi uyruğunuz için Fas’ın resmî konsolosluk kaynaklarından kontrol edin. Turistik kalış süresini başka bir pasaporta ait deneyimle belirlemeyin."
+      },
+      {
+        "title": "MAD, pazarlık ve toplam bedel",
+        "body": "Para birimi Fas dirhemidir. Pazarda fiyatı ve para birimini baştan konuşun; rehber, taksi veya tabakhane terası için hizmetin ücretsiz olduğunu varsaymayın."
+      },
+      {
+        "title": "ONCF ve CTM bağlantıları",
+        "body": "Tren için ONCF, şehirler arası otobüs için CTM’nin güncel tarifesini kontrol edin. Şefşavan’a trenle doğrudan gidilmez; aktarma ve bagaj süresini dahil edin."
+      },
+      {
+        "title": "Fotoğraf ve ziyaret görgüsü",
+        "body": "İnsanları fotoğraflamadan izin isteyin. İbadet yerlerinin ziyaret kapsamı farklıdır; açık kapıyı turist giriş izni sanmayın. Geleneksel mahallede sakin davranış ve uygun kıyafet geziyi kolaylaştırır."
+      }
+    ],
+    "routeIdeas": [
+      {
+        "title": "Üç medina, farklı ritimler",
+        "duration": "10–12 gün",
+        "cities": [
+          "Marakeş",
+          "Fes",
+          "Şefşavan"
+        ],
+        "description": "Marakeş ve Fes’te üçer gece, Şefşavan’da iki gece; uzun geçişler için iki esnek gün. Dönüş havalimanını kuzey ayağına göre seçin."
+      },
+      {
+        "title": "Fes ve Rif etekleri",
+        "duration": "5–7 gün",
+        "cities": [
+          "Fes",
+          "Şefşavan"
+        ],
+        "description": "Fes’in zanaat ve medrese sokaklarından Şefşavan’ın küçük medinasına geçin. Marakeş’i eklemek yerine iki yerde de sakin zaman bırakın."
+      }
+    ]
+  }
+}

@@ -55,7 +55,7 @@ export default function GuideArticle({
       {guide.places.length > 0 && (
         <TocItem href="#nerede-yenir">{sights ? placesHeading : t("tocWhereToEat")}</TocItem>
       )}
-      <TocItem href="#vegan-helal-restoranlar">{t("tocDietary")}</TocItem>
+      <TocItem href="#vegan-helal-restoranlar">{t(dietary.vegan.length || dietary.halal.length ? "tocDietary" : "tocDietaryNotes")}</TocItem>
       {guide.itinerary.length > 0 && <TocItem href="#gezi-plani">{t("itinerary")}</TocItem>}
       {guide.practicalTips && guide.practicalTips.length > 0 && (
         <TocItem href="#bilmeden-gitme">{t("beforeYouGo")}</TocItem>

@@ -1,0 +1,255 @@
+[
+  {
+    "name": "Birleşik Arap Emirlikleri",
+    "shortName": "BAE",
+    "code": "AE",
+    "flag": "🇦🇪",
+    "description": "Dubai’nin eski limanı ve modern silueti, Abu Dabi’nin müzeleri ve sahilleriyle birleşen sıcak bir Körfez rotası.",
+    "image": "/images/added-dubai.avif",
+    "coordinates": {
+      "lat": 25.2048,
+      "lng": 55.2708
+    },
+    "iata": "DXB",
+    "gateway": "Dubai",
+    "capital": "Abu Dabi",
+    "flightTime": "4sa 30dk",
+    "accent": "#c89652",
+    "bestSeason": "Kasım–Mart",
+    "budget": "Yüksek",
+    "signature": "Dubai Creek’te abra yolculuğundan Saadiyat’ta kubbe altındaki ışığa uzanmak",
+    "cities": [
+      {
+        "name": "Dubai",
+        "description": "Dubai Creek, Al Fahidi, Downtown ve Marina arasında eski limanla modern şehri birlikte keşfedin.",
+        "image": "/images/added-dubai.avif"
+      },
+      {
+        "name": "Abu Dabi",
+        "description": "Şeyh Zayed Camii, Saadiyat müzeleri, Qasr Al Watan ve Corniche ile kültür ve kıyı başkenti.",
+        "image": "/images/added-abu-dabi.avif"
+      }
+    ]
+  },
+  {
+    "name": "Mısır",
+    "code": "EG",
+    "flag": "🇪🇬",
+    "description": "Kahire’nin yaşayan mahalleleri, Luksor’un Nil mirası ve Kızıldeniz’in iki farklı kıyısıyla tarih ve deniz rotası.",
+    "image": "/images/added-kahire.avif",
+    "coordinates": {
+      "lat": 30.0444,
+      "lng": 31.2357
+    },
+    "iata": "CAI",
+    "gateway": "Kahire",
+    "capital": "Kahire",
+    "flightTime": "2sa 20dk",
+    "accent": "#c8a15b",
+    "bestSeason": "Ekim–Nisan",
+    "budget": "Orta",
+    "signature": "Karnak’ın sütunları arasından Nil kıyısındaki akşam ışığına çıkmak",
+    "cities": [
+      {
+        "name": "Kahire",
+        "description": "Giza Piramitleri, tarihî merkez, müzeler ve Nil mahalleleriyle büyük bir şehir ve arkeoloji gezisi.",
+        "image": "/images/added-kahire.avif"
+      },
+      {
+        "name": "Luksor",
+        "description": "Karnak, Luksor Tapınağı, Krallar Vadisi ve Hatşepsut arasında Nil’in iki yakasında anıt rotası.",
+        "image": "/images/added-luksor.avif"
+      },
+      {
+        "name": "Hurgada",
+        "description": "Giftun tekne gezileri, marina, El Dahar ve Kızıldeniz’de doğru otel kıyısını seçme rehberi.",
+        "image": "/images/added-hurgada.avif"
+      },
+      {
+        "name": "Şarm el-Şeyh",
+        "description": "Ras Muhammad, Naama Bay, Eski Çarşı ve resif erişimine göre konaklama seçilen Sina kıyısı.",
+        "image": "/images/added-sarm-el-seyh.avif"
+      }
+    ]
+  },
+  {
+    "name": "Gürcistan",
+    "code": "GE",
+    "flag": "🇬🇪",
+    "description": "Tiflis’in balkonlu sokakları, Batum’un Karadeniz kıyısı ve Kazbegi’nin dağ vadileri arasında değişen bir Kafkas rotası.",
+    "image": "/images/added-tiflis.avif",
+    "coordinates": {
+      "lat": 41.7151,
+      "lng": 44.8271
+    },
+    "iata": "TBS",
+    "gateway": "Tiflis",
+    "capital": "Tiflis",
+    "flightTime": "2sa 15dk",
+    "accent": "#b8555b",
+    "bestSeason": "Mayıs–Haziran · Eylül–Ekim",
+    "budget": "Ekonomik",
+    "signature": "Stepantsminda’da bulutlar aralandığında Gergeti’nin arkasında dağı görmek",
+    "cities": [
+      {
+        "name": "Tiflis",
+        "description": "Abanotubani hamamları, eski şehir, Sololaki ve Mtatsminda arasında mahalle odaklı başkent gezisi.",
+        "image": "/images/added-tiflis.avif"
+      },
+      {
+        "name": "Batum",
+        "description": "Batum Bulvarı, eski şehir, botanik bahçesi ve Acar mutfağıyla Karadeniz kıyı gezisi.",
+        "image": "/images/added-batum.avif"
+      },
+      {
+        "name": "Kazbegi",
+        "description": "Stepantsminda merkezli Gergeti, dağ manzarası ve hava payı bırakan Kafkas yürüyüş rotası.",
+        "image": "/images/added-kazbegi.avif"
+      }
+    ]
+  },
+  {
+    "name": "Bulgaristan",
+    "code": "BG",
+    "flag": "🇧🇬",
+    "description": "Sofya’nın anıtları, Plovdiv’in antik tiyatrosu ve Varna’nın Karadeniz sahiliyle üç farklı şehir deneyimi.",
+    "image": "/images/added-sofya.avif",
+    "coordinates": {
+      "lat": 42.6977,
+      "lng": 23.3219
+    },
+    "iata": "SOF",
+    "gateway": "Sofya",
+    "capital": "Sofya",
+    "flightTime": "1sa 20dk",
+    "accent": "#77a381",
+    "bestSeason": "Mayıs–Haziran · Eylül–Ekim",
+    "budget": "Ekonomik",
+    "signature": "Plovdiv’in taş sokaklarından Kapana’da sakin bir akşam masasına inmek",
+    "cities": [
+      {
+        "name": "Sofya",
+        "description": "Alexander Nevsky, Serdica, müzeler ve Vitoşa eteklerinde yürünebilir başkent rotası.",
+        "image": "/images/added-sofya.avif"
+      },
+      {
+        "name": "Plovdiv",
+        "description": "Antik Tiyatro, müze evleri, Kapana ve Roma mozaikleri arasında yürüyüşle kültür gezisi.",
+        "image": "/images/added-plovdiv.avif"
+      },
+      {
+        "name": "Varna",
+        "description": "Arkeoloji müzesi, Roma hamamları, Sea Garden ve plajla birleşen Karadeniz şehri.",
+        "image": "/images/added-varna.avif"
+      }
+    ]
+  },
+  {
+    "name": "Malta",
+    "code": "MT",
+    "flag": "🇲🇹",
+    "description": "Valletta’nın liman surları ve müzelerinden Gozo’nun tapınaklarına, küçük köylerine ve kayalık kıyılarına uzanan ada gezisi.",
+    "image": "/images/added-valletta.avif",
+    "coordinates": {
+      "lat": 35.8992,
+      "lng": 14.5141
+    },
+    "iata": "MLA",
+    "gateway": "Valletta",
+    "capital": "Valletta",
+    "flightTime": "2sa 30dk",
+    "accent": "#d7b885",
+    "bestSeason": "Nisan–Haziran · Eylül–Ekim",
+    "budget": "Orta",
+    "signature": "Upper Barrakka’dan Büyük Liman’ı izleyip Gozo’da köy meydanında günü bitirmek",
+    "cities": [
+      {
+        "name": "Valletta",
+        "description": "St. John, Upper Barrakka, sur sokakları ve Üç Şehirler bağlantısıyla Malta’nın küçük başkenti.",
+        "image": "/images/added-valletta.avif"
+      },
+      {
+        "name": "Gozo",
+        "description": "Victoria Cittadella, Ġgantija, Dwejra ve köyler arasında feribotla ulaşılan ayrı Malta adası.",
+        "image": "/images/added-gozo.avif"
+      }
+    ]
+  },
+  {
+    "name": "Kıbrıs",
+    "code": "CY",
+    "flag": "🇨🇾",
+    "description": "Girne limanı, Gazimağusa’nın taş sokakları, Baf mozaikleri ve Larnaka’nın sahiliyle Akdeniz adasında dört ayrı gezi üssü.",
+    "image": "/images/added-girne.avif",
+    "coordinates": {
+      "lat": 35.1856,
+      "lng": 33.3823
+    },
+    "iata": "ECN",
+    "gateway": "Lefkoşa",
+    "capital": "Lefkoşa",
+    "flightTime": "1sa 35dk",
+    "accent": "#d9ad70",
+    "bestSeason": "Nisan–Haziran · Eylül–Ekim",
+    "budget": "Orta",
+    "signature": "Tarihî bir limandan taş avlulara, gün batımında sakin bir sahile yürümek",
+    "cities": [
+      {
+        "name": "Girne",
+        "description": "Eski liman, Girne Kalesi ve Bellapais arasında kısa yürüyüşler ve manzaralı köy molaları.",
+        "image": "/images/added-girne.avif"
+      },
+      {
+        "name": "Gazimağusa",
+        "description": "Sur içi sokakları, Othello Kalesi ve Salamis arkeolojisiyle doğu kıyısında iki farklı tarih günü.",
+        "image": "/images/added-gazimagusa.avif"
+      },
+      {
+        "name": "Baf",
+        "description": "Kato Pafos mozaikleri, Kral Mezarları ve liman kıyısıyla arkeoloji odaklı Akdeniz gezisi.",
+        "image": "/images/added-baf.avif"
+      },
+      {
+        "name": "Larnaka",
+        "description": "Finikoudes, Aziz Lazarus, Hala Sultan Tekkesi ve mevsimsel Tuz Gölü ile yürüyüş ve kıyı üssü.",
+        "image": "/images/added-larnaka.avif"
+      }
+    ]
+  },
+  {
+    "name": "Fas",
+    "code": "MA",
+    "flag": "🇲🇦",
+    "description": "Marakeş’in avluları, Fes’in zanaat sokakları ve Şefşavan’ın Rif eteklerindeki mavi medinasıyla çok katmanlı şehir gezisi.",
+    "image": "/images/added-marakes.avif",
+    "coordinates": {
+      "lat": 31.6295,
+      "lng": -7.9811
+    },
+    "iata": "RAK",
+    "gateway": "Marakeş",
+    "capital": "Rabat",
+    "flightTime": "5sa 15dk",
+    "accent": "#c87658",
+    "bestSeason": "Mart–Mayıs · Eylül–Kasım",
+    "budget": "Orta",
+    "signature": "Fes’te bir zanaat sokağından sakin riad avlusuna dönmek",
+    "cities": [
+      {
+        "name": "Marakeş",
+        "description": "Jemaa el-Fna, medina çarşıları, Bahia Sarayı ve Majorelle için üç günlük şehir planı.",
+        "image": "/images/added-marakes.avif"
+      },
+      {
+        "name": "Fes",
+        "description": "Fes el-Bali, Bou Inania, tabakhaneler ve dar sokaklarda yavaş bir medina yürüyüşü.",
+        "image": "/images/added-fes.avif"
+      },
+      {
+        "name": "Şefşavan",
+        "description": "Mavi medina, Outa el-Hammam, Kasbah ve Rif manzaraları için iki gecelik yavaş rota.",
+        "image": "/images/added-sefsavan.avif"
+      }
+    ]
+  }
+]

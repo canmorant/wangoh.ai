@@ -1,3 +1,5 @@
+import addedSeo from "@/content/addedSeo.json";
+
 /**
  * İngilizce ülke sayfalarının <title>'ı: ülke düzeyindeki aramaya göre
  * ("Japan travel guide", "best places to visit in Japan", "Japan itinerary")
@@ -5,6 +7,7 @@
  * Açıklamalar çeviri belleğinden gelir.
  */
 export const EN_HUB_TITLES: Record<string, string> = {
+  ...Object.fromEntries(Object.entries(addedSeo.hubs.en).map(([code, [title]]) => [code, title])),
   JP: "Japan Travel Guide: Best Places to Visit & Itinerary Ideas",
   US: "USA Travel Guide: Best Cities to Visit & Practical Tips",
   IT: "Italy Travel Guide: Best Places to Visit & Route Ideas",

@@ -1,3 +1,5 @@
+import addedDestinations from "./addedDestinations.json";
+
 export interface City {
   name: string;
   description: string;
@@ -769,4 +771,5 @@ export const countries: Country[] = [
       { name: "Åland Adaları", description: "Mariehamn denizcilik mirası, bisiklet yolları ve İsveççe konuşulan özerk takımada.", image: "/images/mariehamn-harbor-1-256f53e9.avif" },
     ],
   },
+  ...(addedDestinations as Country[]),
 ];

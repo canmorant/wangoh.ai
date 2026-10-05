@@ -6,6 +6,7 @@ import type {
   VerificationSourceType,
 } from "./types";
 import { REGIONAL_DIETARY_GUIDES } from "./regionalCatalog";
+import addedDietary from "./addedDestinations.json";
 
 const LAST_VERIFIED = "2026-08-12";
 
@@ -202,6 +203,7 @@ const h = (
 const current = (pick: PickInput): PickInput => ({ ...pick, lastVerified: "2026-08-25" });
 
 export const DIETARY_GUIDES: DestinationDietaryGuide[] = [
+  ...(addedDietary as DestinationDietaryGuide[]),
   // Japonya — vegan kapsamı HappyCow; helal statüleri JNTO ve yerel resmî rehberlerle çapraz kontrol edildi.
   guide("JP", "Tokyo",
     v("Saido", "Yaratıcı Japon mutfağı", "Jiyugaoka", "Mevsimsel Japon tabaklarını tamamen bitki bazlı yorumlayan sakin bir restoran.", "Sushi ve kaiseki hissini hayvansal ürün kullanmadan yaşamak isteyenler için Tokyo'nun en güçlü özel-ama-rahat seçimlerinden."),

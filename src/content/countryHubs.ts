@@ -1,3 +1,5 @@
+import addedHubs from "./addedCountryHubs.json";
+
 export interface CountryHubContent {
   seoTitle: string;
   seoDescription: string;
@@ -17,6 +19,7 @@ export interface CountryHubContent {
 }
 
 const HUBS: Record<string, CountryHubContent> = {
+  ...(addedHubs as Record<string, CountryHubContent>),
   JP: {
     seoTitle: "Japonya Gezi Rehberi: 8 Şehir ve Rota Planı",
     seoDescription:

@@ -182,7 +182,9 @@
     "heading": "Restaurantes veganos y halal en {city}",
     "intro": "En {city} elegimos un sitio de cocina vegetal y otro pensado para viajeros musulmanes. Las etiquetas halal no significan todas lo mismo: la certificación, la declaración del propio restaurante y «algunas opciones halal» se indican por separado en cada tarjeta.",
     "researchNote": "Nota de investigación:",
-    "disclaimer": "Las cartas, los proveedores y las certificaciones cambian. Si sigues un halal estricto, confirma directamente con el restaurante el certificado vigente, el alcohol, los ingredientes de las salsas y el riesgo de cocina compartida."
+    "disclaimer": "Las cartas, los proveedores y las certificaciones cambian. Si sigues un halal estricto, confirma directamente con el restaurante el certificado vigente, el alcohol, los ingredientes de las salsas y el riesgo de cocina compartida.",
+    "notesHeading": "Consejos de alimentación vegana y halal en {city}",
+    "notesIntro": "Ingredientes que conviene revisar en los platos locales y preguntas antes de pedir si sigues una dieta vegana o halal."
   },
   "Discovery": {
     "heading": "Una guía de viaje para tu próxima ciudad",
@@ -495,7 +497,8 @@
       "title": "Visados, dinero y teléfono en {country}",
       "body": "Las normas de entrada, los pagos, los idiomas, los datos móviles y el presupuesto valen para todo el país, así que están reunidos en una sola página.",
       "link": "Información práctica de {country}"
-    }
+    },
+    "tocDietaryNotes": "Alimentación vegana y halal"
   },
   "Guides": {
     "metaTitle": "Guías de viaje: país a país, ciudad a ciudad | Wangoh",
@@ -774,6 +777,11 @@
       "name": "América",
       "guides": "Guías de viaje de América",
       "more": "Más guías de países de América"
+    },
+    "africa": {
+      "name": "África",
+      "guides": "Guías de viaje por África",
+      "more": "Más guías de países en África"
     }
   }
 }

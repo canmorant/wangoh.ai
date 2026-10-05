@@ -182,7 +182,9 @@
     "heading": "{city} vegan ve helal restoran önerileri",
     "intro": "{city} için bir bitki bazlı ve bir Müslüman gezgin odaklı adres seçtik. Helal etiketleri aynı anlama gelmez: sertifika, işletme beyanı ve yalnızca bazı helal seçenekler kartlarda ayrı ayrı gösterilir.",
     "researchNote": "Araştırma notu:",
-    "disclaimer": "Restoran menüleri, tedarikçiler ve sertifikalar değişebilir. Özellikle sıkı helal hassasiyetinde güncel sertifikayı, alkolü, sos içeriklerini ve ortak mutfak riskini doğrudan işletmeden doğrulayın."
+    "disclaimer": "Restoran menüleri, tedarikçiler ve sertifikalar değişebilir. Özellikle sıkı helal hassasiyetinde güncel sertifikayı, alkolü, sos içeriklerini ve ortak mutfak riskini doğrudan işletmeden doğrulayın.",
+    "notesHeading": "{city} vegan ve helal beslenme ipuçları",
+    "notesIntro": "Vegan veya helal beslenme için yerel yemeklerde dikkat edilecek içerikler ve sipariş öncesi sorulacak sorular."
   },
   "Discovery": {
     "heading": "Bir sonraki şehrin gezi rehberi",
@@ -495,7 +497,8 @@
       "title": "{country} için vize, para ve telefon",
       "body": "Giriş kuralları, ödeme, dil, mobil internet ve bütçe bilgileri ülkenin tamamı için geçerli; tek sayfada toplandı.",
       "link": "{country} pratik bilgileri"
-    }
+    },
+    "tocDietaryNotes": "Vegan ve helal beslenme"
   },
   "Guides": {
     "metaTitle": "Gezi Rehberleri: Ülke Ülke, Şehir Şehir Seyahat | Wangoh",
@@ -774,6 +777,11 @@
       "name": "Amerika kıtası",
       "guides": "Amerika kıtası gezi rehberleri",
       "more": "Amerika kıtasındaki diğer ülke rehberleri"
+    },
+    "africa": {
+      "name": "Afrika",
+      "guides": "Afrika gezi rehberleri",
+      "more": "Afrika’daki diğer ülke rehberleri"
     }
   }
 }

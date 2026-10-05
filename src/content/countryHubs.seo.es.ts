@@ -1,3 +1,5 @@
+import addedSeo from "@/content/addedSeo.json";
+
 /**
  * İspanyolca ülke sayfalarının <title> ve meta description'ı.
  *
@@ -7,6 +9,7 @@
  * Kurallar scripts/seo-copy.test.ts'te: başlık ≤ 60, açıklama 120–160.
  */
 export const ES_HUB_SEO: Record<string, readonly [title: string, description: string]> = {
+  ...Object.fromEntries(Object.entries(addedSeo.hubs.es).map(([key, [title, description]]) => [key, [title, description] as const])),
   JP: [
     "Qué ver en Japón: ciudades, rutas y consejos para viajar",
     "Tokio, Kioto, Osaka, Hiroshima, Nara y más: guías completas de ocho destinos de Japón, con transporte, ideas de ruta y consejos para tu primer viaje.",
