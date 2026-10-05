@@ -22,7 +22,7 @@ const isApp = process.env.BUILD_TARGET === "app";
  * uygulama derlemesi şimdilik yalnız Türkçe. Yeni bir dil yalnız tüm
  * içeriği çevrilip kontrol edildikten sonra bu listeye eklenir.
  */
-const siteLocales = process.env.NEXT_PUBLIC_SITE_LOCALES ?? (isApp ? "tr" : "tr,en");
+const siteLocales = process.env.NEXT_PUBLIC_SITE_LOCALES ?? (isApp ? "tr" : "tr,en,es");
 
 const nextConfig: NextConfig = {
   env: { NEXT_PUBLIC_SITE_LOCALES: siteLocales },
