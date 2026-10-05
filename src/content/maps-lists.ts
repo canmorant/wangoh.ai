@@ -1,3 +1,15 @@
+/**
+ * Rehberlerin "Google Maps listesi" bölümü.
+ *
+ * Yeni şehir eklemek (ayrıntılı adımlar: docs/google-maps-listeleri.md):
+ *   1. Rehberde adı geçen 10 durağı seç.
+ *   2. Durak adlarını 6 dilin messages/*.json → Guide.mapsPlaces altına ekle
+ *      (id'ler tr.json'dan tiplenir; eksik id derlemeyi durdurur).
+ *   3. Wangoh Google hesabında listeyi kur, "bağlantıya sahip olanlar
+ *      görüntüleyebilir" olarak paylaş, maps.app.goo.gl bağlantısını al.
+ *   4. Aşağıdaki MAPS_LISTS'e "ÜLKE:Şehir" anahtarıyla ekle (Türkçe şehir adı,
+ *      rehberdeki `city` alanıyla birebir).
+ */
 type MapsStopId = keyof typeof import("../../messages/tr.json")["Guide"]["mapsPlaces"];
 
 export interface GuideMapsList {
@@ -26,10 +38,14 @@ export const parisMapsList: GuideMapsList = {
   ],
 };
 
-/** Her şehir rehberinde adı geçen yerlerden seçilen 10 durak. */
-const franceMapsLists: Record<string, GuideMapsList> = {
-  Paris: parisMapsList,
-  Nice: {
+/**
+ * Şehir rehberlerinin listeleri. Anahtar: "ÜLKE:Şehir" (Türkçe şehir adı).
+ * Her listede o rehberde adı geçen yerlerden seçilen 10 durak var.
+ */
+const MAPS_LISTS: Record<string, GuideMapsList> = {
+  /* ------------------------------ Fransa ------------------------------ */
+  "FR:Paris": parisMapsList,
+  "FR:Nice": {
     url: "https://maps.app.goo.gl/aJeYi4Dc1Qn4XMVaA",
     note: "mapsNiceNote",
     stops: [
@@ -45,7 +61,7 @@ const franceMapsLists: Record<string, GuideMapsList> = {
       { id: "villaEphrussi", query: "Villa Ephrussi de Rothschild, Saint-Jean-Cap-Ferrat, France" },
     ],
   },
-  Lyon: {
+  "FR:Lyon": {
     url: "https://maps.app.goo.gl/GaNQup4G8cLANKKN6",
     stops: [
       { id: "fourviere", query: "Basilique Notre-Dame de Fourvière, Lyon, France" },
@@ -60,7 +76,7 @@ const franceMapsLists: Record<string, GuideMapsList> = {
       { id: "confluences", query: "Musée des Confluences, Lyon, France" },
     ],
   },
-  Marsilya: {
+  "FR:Marsilya": {
     url: "https://maps.app.goo.gl/xHH6tXuoFQifdcwU8",
     note: "mapsMarseilleNote",
     stops: [
@@ -76,7 +92,7 @@ const franceMapsLists: Record<string, GuideMapsList> = {
       { id: "sugiton", query: "Calanque de Sugiton, France" },
     ],
   },
-  Bordo: {
+  "FR:Bordo": {
     url: "https://maps.app.goo.gl/V3868SHXZBgEJhqo9",
     stops: [
       { id: "bourse", query: "Place de la Bourse, Bordeaux, France" },
@@ -91,7 +107,7 @@ const franceMapsLists: Record<string, GuideMapsList> = {
       { id: "darwin", query: "Darwin Eco-système, Bordeaux, France" },
     ],
   },
-  Strazburg: {
+  "FR:Strazburg": {
     url: "https://maps.app.goo.gl/SWg9FjH9viWsip65A",
     stops: [
       { id: "strasbourgCathedral", query: "Cathédrale Notre-Dame de Strasbourg, France" },
@@ -109,5 +125,5 @@ const franceMapsLists: Record<string, GuideMapsList> = {
 };
 
 export function mapsListFor(countryCode: string, city: string): GuideMapsList | null {
-  return countryCode === "FR" ? franceMapsLists[city] ?? null : null;
+  return MAPS_LISTS[`${countryCode}:${city}`] ?? null;
 }
