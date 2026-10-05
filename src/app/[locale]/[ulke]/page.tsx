@@ -5,7 +5,10 @@ import { getFormatter, getTranslations } from "next-intl/server";
 import { Link, permanentRedirect } from "@/i18n/navigation";
 import { resolveLocale } from "@/i18n/server";
 import { contentSeo, localizedUrl, OG_LOCALE, ogAlternateLocales } from "@/i18n/seo";
-import { countryPageLocales, localizedCountry, localizedHub, placeName } from "@/content/localized";
+import { contentTranslator, countryPageLocales, localizedCountry, localizedHub, placeName } from "@/content/localized";
+import { countryPracticalInfo } from "@/content/guides/expandedFactory";
+import { regionalBudgetNote } from "@/content/guides/regionalFactory";
+import { GUIDE_TEMPLATES } from "@/content/guides/templates";
 import {
   findCountryBySlug,
   countrySlug,
@@ -122,6 +125,14 @@ export default async function CountryPage({ params }: { params: Promise<Params> 
       ?.countries.filter((c) => c.code !== country.code && c.cities.some((city) => guideFor(c.code, city.name))) ?? [];
   // Rehberi yazılmış (dizine açık) şehirler; yazılmamışlar noindex.
   const writtenCities = country.cities.filter((city) => guideFor(country.code, city.name));
+  // Ülke düzeyindeki pratik bilgiler: şablonu compact olan dillerde şehir
+  // sayfalarında tekrarlanmıyor, burada bir kez veriliyor (şehirler buraya
+  // #pratik-bilgiler ile bağlanır).
+  const practicalT = contentTranslator(locale).t;
+  const practical = GUIDE_TEMPLATES[locale].expanded.compact
+    ? countryPracticalInfo(country.code, practicalT)
+    : null;
+  const budgetNote = practical ? regionalBudgetNote(country.code, practicalT) : null;
 
   const crumbs = [
     { name: tContent("home"), href: "/" },
@@ -276,6 +287,34 @@ export default async function CountryPage({ params }: { params: Promise<Params> 
                       );
                     })}
                   </p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {practical && (
+          <section id="pratik-bilgiler" aria-labelledby="pratik-bilgiler-baslik" className="mt-16 scroll-mt-28">
+            <h2 id="pratik-bilgiler-baslik" className="font-display text-[clamp(1.7rem,3.4vw,2.4rem)] text-white">
+              {t("practical.heading", { country: countryLabel })}
+            </h2>
+            <div className="mt-8 grid gap-x-10 gap-y-9 lg:grid-cols-2">
+              {(
+                [
+                  ["entry", [practical.entry]],
+                  ["payments", [practical.payments]],
+                  ["language", [practical.language]],
+                  ["connectivity", [practical.connectivity]],
+                  ["budget", budgetNote ? [budgetNote, practical.budget] : [practical.budget]],
+                ] as const
+              ).map(([key, paragraphs]) => (
+                <div key={key}>
+                  <h3 className="text-[1.05rem] font-semibold text-white/90">{t(`practical.${key}`)}</h3>
+                  {paragraphs.map((paragraph) => (
+                    <p key={paragraph} className="mt-3 max-w-[68ch] text-[14.5px] leading-[1.75] text-white/60">
+                      {paragraph}
+                    </p>
+                  ))}
                 </div>
               ))}
             </div>

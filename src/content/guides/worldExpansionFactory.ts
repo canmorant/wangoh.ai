@@ -1,7 +1,12 @@
 import { buildExpandedGuide, type ExpandedGuideProfile } from "./expandedFactory";
 import type { CityGuide } from "./types";
 import { translateDeep } from "@/content/i18n/core";
+import { countries } from "@/data/destinations";
 import { TR_CONTEXT, type GuideContext } from "./context";
+
+/** İlgili rehber kartında o şehrin kendi kısa tanıtımı (destinasyon verisinden). */
+const cardDescription = (countryCode: string, city: string) =>
+  countries.find((c) => c.code === countryCode)?.cities.find((c) => c.name === city)?.description;
 
 /** Profil çevrilirken dokunulmayan anahtar alanlar. */
 const PROFILE_KEYS: ReadonlySet<string> = new Set(["city", "countryCode"]);
@@ -73,6 +78,8 @@ export function makeWorldExpansionGuides(
     const city = t(source.city);
     const [firstSight, secondSight, thirdSight] = profile.sights;
     const code = profile.countryCode;
+    // Kalıp cümleler bu dilde üretilmiyor (bkz. şablon compact).
+    const compact = !!T.expanded.compact;
     /** "**Jordaan:** …" → "Jordaan" */
     const areaName = (area: string) => area.replace(/^\*\*([^*]+)\*\*.*/, "$1");
 
@@ -91,10 +98,10 @@ export function makeWorldExpansionGuides(
       neighborhoods: profile.areas,
       cuisine: profile.tastes,
       stay: [profile.stay],
-      nightlifeShopping: [profile.evenings, T.world.shopping(city)],
+      nightlifeShopping: compact ? [profile.evenings] : [profile.evenings, T.world.shopping(city)],
       dayTrips: profile.dayTrips,
-      seasons: [profile.season, T.world.season(profile.best)],
-      budget: [profile.budget, T.world.budget(firstSight[0])],
+      seasons: compact ? [profile.season] : [profile.season, T.world.season(profile.best)],
+      budget: compact ? [profile.budget] : [profile.budget, T.world.budget(firstSight[0])],
       avoid: profile.cautions,
       // Bu kartlar restoran değil, şehrin öne çıkan gezi durakları; fiyat sınıfı
       // verisi olmadığı için gösterilmiyor.
@@ -105,11 +112,13 @@ export function makeWorldExpansionGuides(
         t(index === 0 ? "Şehrin simge deneyimi" : index === 1 ? "Yerel karakter ve kültür" : "Manzara ve ritim değişimi"),
         profile.sights[index][1],
         undefined,
-        t(
-          index === 0
-            ? "Bilet, giriş penceresi ve son ulaşımı resmî kanaldan önceden kontrol edin."
-            : "Yoğun saatten kaçınmak için sabahı veya günün son ziyaret aralığını seçin."
-        ),
+        compact
+          ? undefined
+          : t(
+              index === 0
+                ? "Bilet, giriş penceresi ve son ulaşımı resmî kanaldan önceden kontrol edin."
+                : "Yoğun saatten kaçınmak için sabahı veya günün son ziyaret aralığını seçin."
+            ),
       ]),
       itinerary: [
         [
@@ -131,12 +140,14 @@ export function makeWorldExpansionGuides(
           t("Dönüşten önce ertesi gün bağlantısını, bagaj süresini ve çevrimdışı biletleri hazırlayın; program sıkıştıysa alışverişi bu saate bırakmayın."),
         ],
       ],
-      practical: [
-        [t("Rezervasyon sırası"), T.shared.bookingOrder(firstSight[0])],
-        [t("Çevrimdışı hazırlık"), t("Otel adresini yerel dilde, biletlerin ekran görüntüsünü, acil numaraları ve çevrimdışı haritayı telefona indirin.")],
-        [t("Günlük tempo"), T.shared.dailyPace(city)],
-        [t("Son kontrol"), t("Çalışma saati, hava, grev, deniz veya park erişimini ziyaret günü resmî kaynaktan yeniden doğrulayın.")],
-      ],
+      practical: compact
+        ? []
+        : [
+            [t("Rezervasyon sırası"), T.shared.bookingOrder(firstSight[0])],
+            [t("Çevrimdışı hazırlık"), t("Otel adresini yerel dilde, biletlerin ekran görüntüsünü, acil numaraları ve çevrimdışı haritayı telefona indirin.")],
+            [t("Günlük tempo"), T.shared.dailyPace(city)],
+            [t("Son kontrol"), t("Çalışma saati, hava, grev, deniz veya park erişimini ziyaret günü resmî kaynaktan yeniden doğrulayın.")],
+          ],
       faqs: [
         [T.shared.faqDays(city), T.world.faqDaysAnswer(profile.days)],
         [T.shared.faqStay(city), profile.stay],
@@ -144,7 +155,10 @@ export function makeWorldExpansionGuides(
         [T.world.faqCarQuestion(city), T.world.faqCarAnswer(profile.local)],
         [T.shared.faqCombine(city), T.world.faqCombineAnswer(related.map((item) => t(item.city)).join(", "))],
       ],
-      related: related.map((item) => [item.city, T.shared.relatedAnchor(t(item.city)), T.shared.relatedDescription(city)]),
+      related: related.map((item) => {
+        const own = compact ? cardDescription(item.countryCode, item.city) : undefined;
+        return [item.city, T.shared.relatedAnchor(t(item.city)), own ? t(own) : T.shared.relatedDescription(city)];
+      }),
       sourceName: t(sourceByCountry[code].name),
       sourceUrl: sourceByCountry[code].url,
       transportSource: { name: t(transportByCountry[code].name), url: transportByCountry[code].url },

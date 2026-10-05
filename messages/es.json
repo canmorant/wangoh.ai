@@ -141,7 +141,15 @@
     "allPublished": "{total, plural, one {Ya hay una guía original para su única ciudad} other {Ya hay guías originales para las # ciudades}}",
     "somePublished": "{written}/{total} guías de ciudades publicadas",
     "badgeReady": "Guía publicada",
-    "badgePending": "En preparación"
+    "badgePending": "En preparación",
+    "practical": {
+      "heading": "Información práctica de {country}",
+      "entry": "Requisitos de entrada",
+      "payments": "Dinero y pagos",
+      "language": "Idiomas",
+      "connectivity": "Teléfono, internet y aplicaciones",
+      "budget": "Presupuesto"
+    }
   },
   "Destinations": {
     "departure": "Salida",
@@ -482,7 +490,12 @@
     "countryGuide": "Guía de {country} →",
     "mapsParisNote": "Versalles está fuera de la ciudad y es una excursión de día completo.",
     "mapsNiceNote": "La Villa Ephrussi está fuera de Niza, en Saint-Jean-Cap-Ferrat.",
-    "mapsMarseilleNote": "El castillo de If es una excursión a una isla. Consulta la guía para las condiciones de reserva y acceso estacionales de Sugiton."
+    "mapsMarseilleNote": "El castillo de If es una excursión a una isla. Consulta la guía para las condiciones de reserva y acceso estacionales de Sugiton.",
+    "countryInfo": {
+      "title": "Visados, dinero y teléfono en {country}",
+      "body": "Las normas de entrada, los pagos, los idiomas, los datos móviles y el presupuesto valen para todo el país, así que están reunidos en una sola página.",
+      "link": "Información práctica de {country}"
+    }
   },
   "Guides": {
     "metaTitle": "Guías de viaje: país a país, ciudad a ciudad | Wangoh",

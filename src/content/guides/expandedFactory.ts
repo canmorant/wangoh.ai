@@ -657,6 +657,23 @@ function localizeExpandedProfile(profile: ExpandedGuideProfile, { locale, t }: G
   };
 }
 
+/**
+ * Ülke düzeyindeki pratik bilgiler — ülke sayfasının "pratik bilgiler"
+ * bölümü için (şablonu compact olan dillerde şehir sayfalarında tekrar
+ * edilmiyor). Rehberi bu fabrikadan gelmeyen ülkelerde null.
+ */
+export function countryPracticalInfo(code: string, t: (text: string) => string) {
+  const research = (countryResearch as Partial<Record<string, (typeof countryResearch)[keyof typeof countryResearch]>>)[code];
+  if (!research) return null;
+  return {
+    entry: t(research.entry),
+    payments: t(research.payments),
+    language: t(research.language),
+    connectivity: t(research.connectivity),
+    budget: t(research.budgetFrame),
+  };
+}
+
 /** Elle yazılmış profillerden rehber üretir (her profil kendi kapsamında). */
 export function makeExpandedGuides(
   profiles: ExpandedGuideProfile[],
@@ -676,6 +693,8 @@ export function makeExpandedGuides(
 export function buildExpandedGuide(profile: ExpandedGuideProfile, ctx: GuideContext = TR_CONTEXT): CityGuide {
   const { t, T } = ctx;
   const H = T.expanded.sectionHeadings;
+  // Ülke düzeyindeki paragraflar bu dilde ülke sayfasında (bkz. şablon).
+  const compact = !!T.expanded.compact;
   const shared = countryResearch[profile.countryCode];
   const city = t(profile.city);
   const seoTitle = T.expanded.seoTitle(city, profile.searchFocus);
@@ -784,7 +803,7 @@ export function buildExpandedGuide(profile: ExpandedGuideProfile, ctx: GuideCont
       {
         heading: T.expanded.sightsHeading(city),
         id: "gezilecek-yerler",
-        body: [T.expanded.sightsIntro(city)],
+        body: compact ? [] : [T.expanded.sightsIntro(city)],
         subsections: profile.highlights.map(([heading, text]) => ({ heading, body: [text] })),
       },
       {
@@ -801,7 +820,7 @@ export function buildExpandedGuide(profile: ExpandedGuideProfile, ctx: GuideCont
       {
         heading: H?.transport(city) ?? t("Havalimanı, tren ve şehir içi ulaşım"),
         id: "ulasim",
-        body: [profile.arrival, profile.gettingAround, t(shared.payments)],
+        body: compact ? [profile.arrival, profile.gettingAround] : [profile.arrival, profile.gettingAround, t(shared.payments)],
       },
       {
         heading: H?.nightlife(city) ?? t("Kahve, gece hayatı, alışveriş ve yerel ritim"),
@@ -830,17 +849,21 @@ export function buildExpandedGuide(profile: ExpandedGuideProfile, ctx: GuideCont
       {
         heading: H?.budget(city) ?? t("Bütçe nasıl yönetilir?"),
         id: "butce",
-        body: [...profile.budget, t(shared.budgetFrame)],
+        body: compact ? profile.budget : [...profile.budget, t(shared.budgetFrame)],
       },
-      {
-        heading: H?.apps(city) ?? t("Telefon, internet ve gerçekten işe yarayan uygulamalar"),
-        id: "telefon-uygulamalar",
-        body: [t(shared.connectivity)],
-      },
+      ...(compact
+        ? []
+        : [
+            {
+              heading: H?.apps(city) ?? t("Telefon, internet ve gerçekten işe yarayan uygulamalar"),
+              id: "telefon-uygulamalar",
+              body: [t(shared.connectivity)],
+            },
+          ]),
       {
         heading: H?.safety(city) ?? t("Güvenlik, giriş kuralları ve sık yapılan hatalar"),
         id: "guvenlik-kurallar-hatalar",
-        body: [t(shared.entry), t(shared.language), ...profile.avoid],
+        body: compact ? profile.avoid : [t(shared.entry), t(shared.language), ...profile.avoid],
       },
     ],
     places: toPlaces(profile.places),
@@ -862,6 +885,7 @@ export function buildExpandedGuide(profile: ExpandedGuideProfile, ctx: GuideCont
     volatileNote: t(
       "Müze ve işletme saatleri, etkinlik takvimi, ulaşım tarifeleri ve giriş ücretleri dönemsel olarak değişir. Rezervasyon gerektiren yerleri yalnız resmî kanaldan, ziyaret gününe yakın yeniden kontrol edin."
     ),
+    ...(compact && { countryInfoOnHub: true }),
     reviewed: ["GR", "HR", "SI", "NO", "SE", "DK", "FI"].includes(profile.countryCode)
       ? "2026-08-26"
       : ["ID", "CN", "NL", "CH", "BE", "HU", "CZ", "PL", "RU", "RS", "ME", "BA", "AL"].includes(profile.countryCode)

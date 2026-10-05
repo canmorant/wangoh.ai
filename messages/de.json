@@ -141,7 +141,15 @@
     "allPublished": "{total, plural, one {Für die einzige Stadt ist ein eigener Reiseführer online} other {Für alle # Städte sind eigene Reiseführer online}}",
     "somePublished": "{written}/{total} Stadtführer online",
     "badgeReady": "Reiseführer online",
-    "badgePending": "In Arbeit"
+    "badgePending": "In Arbeit",
+    "practical": {
+      "heading": "Praktische Informationen zu {country}",
+      "entry": "Einreisebestimmungen",
+      "payments": "Geld und Bezahlen",
+      "language": "Sprachen",
+      "connectivity": "Telefon, Internet und Apps",
+      "budget": "Budget"
+    }
   },
   "Destinations": {
     "departure": "Abflug",
@@ -482,7 +490,12 @@
     "countryGuide": "Reiseführer {country} →",
     "mapsParisNote": "Versailles liegt außerhalb der Stadt und ist ein Tagesausflug.",
     "mapsNiceNote": "Die Villa Ephrussi liegt außerhalb von Nizza in Saint-Jean-Cap-Ferrat.",
-    "mapsMarseilleNote": "Château d’If ist ein Inselausflug. Beachte die saisonalen Reservierungs- und Zugangsregeln für Sugiton im Reiseführer."
+    "mapsMarseilleNote": "Château d’If ist ein Inselausflug. Beachte die saisonalen Reservierungs- und Zugangsregeln für Sugiton im Reiseführer.",
+    "countryInfo": {
+      "title": "Visum, Geld und Telefon in {country}",
+      "body": "Einreiseregeln, Bezahlen, Sprachen, mobiles Internet und Budget gelten für das ganze Land und stehen deshalb auf einer Seite.",
+      "link": "Praktische Informationen zu {country}"
+    }
   },
   "Guides": {
     "metaTitle": "Reiseführer: Land für Land, Stadt für Stadt | Wangoh",

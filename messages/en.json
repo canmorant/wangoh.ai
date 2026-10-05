@@ -141,7 +141,15 @@
     "allPublished": "{total, plural, one {An original guide is live for the one city} other {Original guides are live for all # cities}}",
     "somePublished": "{written}/{total} city guides live",
     "badgeReady": "Guide live",
-    "badgePending": "In the works"
+    "badgePending": "In the works",
+    "practical": {
+      "heading": "Practical information for {country}",
+      "entry": "Entry requirements",
+      "payments": "Money and payments",
+      "language": "Languages",
+      "connectivity": "Phones, internet and apps",
+      "budget": "Budget"
+    }
   },
   "Destinations": {
     "departure": "Departing",
@@ -482,7 +490,12 @@
     "audienceNote": "Entry, visa and phone-plan notes in this guide are written for travellers setting out from Turkey with a Turkish passport. Check the current rules for your own passport and mobile plan with official sources.",
     "mapsParisNote": "Versailles is outside the city and is a full-day trip option.",
     "mapsNiceNote": "Villa Ephrussi is outside Nice, in Saint-Jean-Cap-Ferrat.",
-    "mapsMarseilleNote": "Château d’If is an island trip. Check the guide for seasonal booking and access requirements for Sugiton."
+    "mapsMarseilleNote": "Château d’If is an island trip. Check the guide for seasonal booking and access requirements for Sugiton.",
+    "countryInfo": {
+      "title": "Visas, money and phones in {country}",
+      "body": "Entry rules, payments, languages, mobile data and budget basics apply to the whole country, so they're kept together on one page.",
+      "link": "Practical information for {country}"
+    }
   },
   "Guides": {
     "metaTitle": "Travel Guides: Country by Country, City by City | Wangoh",

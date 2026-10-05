@@ -32,6 +32,14 @@ export interface GuideTemplates {
      * Türk pasaportuna özel kaynak bağlantıları ("audience: tr") gösterilmez.
      */
     internationalAudience?: boolean;
+    /**
+     * true: ülke düzeyindeki bilgiler (giriş, para, dil, telefon, bütçe
+     * çerçevesi) şehir sayfalarında tekrar edilmez, ülke sayfasındaki "pratik
+     * bilgiler" bölümünde bir kez verilir; şehir sayfası oraya bağlanır.
+     * Şehre özgü bilgi taşımayan kalıp cümleler (genel ipuçları, alışveriş
+     * notu, ilgili rehber açıklaması) da bu dilde üretilmez.
+     */
+    compact?: boolean;
     sectionHeadings?: {
       neighborhoods(city: string): string;
       stay(city: string): string;

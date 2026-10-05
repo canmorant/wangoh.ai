@@ -31,6 +31,7 @@ export const en: GuideTemplates = {
     footballHeading: () => "Football and match day",
     practicalHeading: (city) => `${city} travel tips: what to know before you go`,
     internationalAudience: true,
+    compact: true,
     sectionHeadings: {
       neighborhoods: () => "Area by area: where to go",
       stay: (city) => `Where to stay in ${inName(city)}`,
@@ -40,7 +41,7 @@ export const en: GuideTemplates = {
       when: (city) => `Best time to visit ${inName(city)}`,
       budget: () => "How to budget for your trip",
       apps: () => "SIM cards, internet and useful apps",
-      safety: () => "Safety, entry rules and common mistakes",
+      safety: () => "Safety and common mistakes",
     },
   },
   shared: {

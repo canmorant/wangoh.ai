@@ -118,4 +118,10 @@ export interface CityGuide {
 
   /** Son gözden geçirme tarihi (ISO). */
   reviewed: string;
+
+  /**
+   * Ülke düzeyindeki pratik bilgiler (giriş, para, dil, telefon, bütçe) bu
+   * dilde ülke sayfasında; sayfa oraya bağlantı gösterir.
+   */
+  countryInfoOnHub?: boolean;
 }

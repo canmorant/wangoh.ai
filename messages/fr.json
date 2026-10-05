@@ -141,7 +141,15 @@
     "allPublished": "{total, plural, one {Un guide original est en ligne pour son unique ville} other {Des guides originaux sont en ligne pour les # villes}}",
     "somePublished": "{written}/{total} guides de villes en ligne",
     "badgeReady": "Guide en ligne",
-    "badgePending": "En préparation"
+    "badgePending": "En préparation",
+    "practical": {
+      "heading": "Infos pratiques : {country}",
+      "entry": "Conditions d’entrée",
+      "payments": "Argent et paiements",
+      "language": "Langues",
+      "connectivity": "Téléphone, internet et applis",
+      "budget": "Budget"
+    }
   },
   "Destinations": {
     "departure": "Départ",
@@ -482,7 +490,12 @@
     "countryGuide": "Guide {country} →",
     "mapsParisNote": "Versailles se trouve hors de la ville et se visite sur une journée.",
     "mapsNiceNote": "La Villa Ephrussi se trouve hors de Nice, à Saint-Jean-Cap-Ferrat.",
-    "mapsMarseilleNote": "Le château d’If est une excursion sur une île. Consultez le guide pour les conditions saisonnières de réservation et d’accès à Sugiton."
+    "mapsMarseilleNote": "Le château d’If est une excursion sur une île. Consultez le guide pour les conditions saisonnières de réservation et d’accès à Sugiton.",
+    "countryInfo": {
+      "title": "Visas, argent et téléphone : {country}",
+      "body": "Les règles d’entrée, les paiements, les langues, les données mobiles et le budget valent pour tout le pays ; ils sont réunis sur une seule page.",
+      "link": "Infos pratiques : {country}"
+    }
   },
   "Guides": {
     "metaTitle": "Guides de voyage : pays par pays, ville par ville | Wangoh",

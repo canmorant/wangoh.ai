@@ -141,7 +141,15 @@
     "allPublished": "{total} şehrin tamamı için özgün rehber yayında",
     "somePublished": "{written}/{total} şehir rehberi yayında",
     "badgeReady": "Rehber yayında",
-    "badgePending": "Hazırlanıyor"
+    "badgePending": "Hazırlanıyor",
+    "practical": {
+      "heading": "{country} için pratik bilgiler",
+      "entry": "Giriş koşulları",
+      "payments": "Para ve ödeme",
+      "language": "Dil",
+      "connectivity": "Telefon, internet ve uygulamalar",
+      "budget": "Bütçe"
+    }
   },
   "Destinations": {
     "departure": "Kalkış",
@@ -482,7 +490,12 @@
     "audienceNote": "Giriş, vize ve telefon hattı notları Türkiye'den yola çıkan okur için yazılmıştır.",
     "mapsParisNote": "Versailles şehir dışında, tam günlük bir gezi seçeneğidir.",
     "mapsNiceNote": "Villa Ephrussi, Saint-Jean-Cap-Ferrat’ta şehir dışında bir gezi seçeneğidir.",
-    "mapsMarseilleNote": "Château d’If bir ada gezisidir. Sugiton için mevsimsel rezervasyon ve erişim koşullarını rehberden kontrol edin."
+    "mapsMarseilleNote": "Château d’If bir ada gezisidir. Sugiton için mevsimsel rezervasyon ve erişim koşullarını rehberden kontrol edin.",
+    "countryInfo": {
+      "title": "{country} için vize, para ve telefon",
+      "body": "Giriş kuralları, ödeme, dil, mobil internet ve bütçe bilgileri ülkenin tamamı için geçerli; tek sayfada toplandı.",
+      "link": "{country} pratik bilgileri"
+    }
   },
   "Guides": {
     "metaTitle": "Gezi Rehberleri: Ülke Ülke, Şehir Şehir Seyahat | Wangoh",

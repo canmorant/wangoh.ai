@@ -68,7 +68,7 @@ export function collectSources(): Map<string, SourceText> {
   // dile özgü iki seçenek: sectionHeadings (bölüm başlıklarını bellekten
   // istemez) ve internationalAudience (Türkiye'ye özel kaynakları atlar).
   // Kayıt, en geniş metin kümesini görsün diye ikisi de kapalı.
-  const expanded = { ...anyTemplates.expanded, sectionHeadings: undefined, internationalAudience: undefined };
+  const expanded = { ...anyTemplates.expanded, sectionHeadings: undefined, internationalAudience: undefined, compact: undefined };
   const ctx = createGuideContext("en", new Map(), { ...anyTemplates, expanded });
   buildGuides(ctx);
   for (const [scope, texts] of ctx.missing) for (const text of texts) add(text, "guides", scope);

@@ -1,6 +1,7 @@
 import { buildExpandedGuide, type ExpandedGuideProfile } from "./expandedFactory";
 import type { CityGuide } from "./types";
 import { translateDeep } from "@/content/i18n/core";
+import { countries } from "@/data/destinations";
 import { TR_CONTEXT, type GuideContext } from "./context";
 
 /** Profil çevrilirken dokunulmayan anahtar alanlar. */
@@ -109,6 +110,14 @@ const budgetNote: Record<RegionalCode, string> = {
 };
 
 
+/** Ülke düzeyindeki bütçe notu — ülke sayfasının pratik bilgiler bölümü için. */
+export const regionalBudgetNote = (code: string, t: (text: string) => string): string | null =>
+  code in budgetNote ? t(budgetNote[code as RegionalCode]) : null;
+
+/** İlgili rehber kartında o şehrin kendi kısa tanıtımı (destinasyon verisinden). */
+const cardDescription = (countryCode: string, city: string) =>
+  countries.find((c) => c.code === countryCode)?.cities.find((c) => c.name === city)?.description;
+
 export function makeRegionalGuides(profiles: RegionalProfile[], ctx: GuideContext = TR_CONTEXT): CityGuide[] {
   const { t, T } = ctx;
   const grouped = new Map<RegionalCode, RegionalProfile[]>();
@@ -126,6 +135,8 @@ export function makeRegionalGuides(profiles: RegionalProfile[], ctx: GuideContex
     const city = t(source.city);
     const [first, second, third] = profile.sights;
     const code = profile.countryCode;
+    // Ülke düzeyi bilgiler ülke sayfasında, kalıp cümleler yok (bkz. şablon).
+    const compact = !!T.expanded.compact;
 
     const expanded: ExpandedGuideProfile = {
       city: profile.city,
@@ -150,15 +161,19 @@ export function makeRegionalGuides(profiles: RegionalProfile[], ctx: GuideContex
         T.regional.souvenirs(profile.foods[0][0]),
       ],
       dayTrips: profile.dayTrips.map(([name, detail]) => T.shared.bold(name, detail)),
-      seasons: [
-        T.regional.season(profile.best),
-        t("Ulusal tatil, okul tatili, festival, maç ve hafta sonu yoğunluğu ulaşım ile çalışma saatlerini değiştirebilir. Ana biletleri önceden alın; her açık hava gününe kapalı mekân ya da yavaş mahalle alternatifi ekleyin."),
-      ],
-      budget: [t(budgetNote[code]), T.regional.budget(first[0])],
-      avoid: [
-        profile.caution,
-        t("Çalışma saatini, hava durumunu, grev veya yol/park kapanışını eski blogdan değil ziyaret günü resmî kaynaktan doğrulayın. Aşırı sıkışık rota, bilette yanlış istasyon ve son dönüşü hesaba katmamak en yaygın zaman kayıplarıdır."),
-      ],
+      seasons: compact
+        ? [T.regional.season(profile.best)]
+        : [
+            T.regional.season(profile.best),
+            t("Ulusal tatil, okul tatili, festival, maç ve hafta sonu yoğunluğu ulaşım ile çalışma saatlerini değiştirebilir. Ana biletleri önceden alın; her açık hava gününe kapalı mekân ya da yavaş mahalle alternatifi ekleyin."),
+          ],
+      budget: compact ? [T.regional.budget(first[0])] : [t(budgetNote[code]), T.regional.budget(first[0])],
+      avoid: compact
+        ? [profile.caution]
+        : [
+            profile.caution,
+            t("Çalışma saatini, hava durumunu, grev veya yol/park kapanışını eski blogdan değil ziyaret günü resmî kaynaktan doğrulayın. Aşırı sıkışık rota, bilette yanlış istasyon ve son dönüşü hesaba katmamak en yaygın zaman kayıplarıdır."),
+          ],
       // Bu kartlar restoran değil, şehrin öne çıkan gezi durakları; fiyat sınıfı
       // verisi olmadığı için gösterilmiyor.
       placesKind: "sights",
@@ -168,11 +183,13 @@ export function makeRegionalGuides(profiles: RegionalProfile[], ctx: GuideContex
         t(index === 0 ? "Destinasyonun simgesi" : index === 1 ? "Kültür ve yerel karakter" : "Manzara ve tempo değişimi"),
         detail,
         undefined,
-        t(
-          index === 0
-            ? "Saatli giriş, kapasite ve son ulaşımı resmî kanaldan önceden kontrol edin."
-            : "Kalabalığı azaltmak için sabahı veya günün son ziyaret aralığını seçin."
-        ),
+        compact
+          ? undefined
+          : t(
+              index === 0
+                ? "Saatli giriş, kapasite ve son ulaşımı resmî kanaldan önceden kontrol edin."
+                : "Kalabalığı azaltmak için sabahı veya günün son ziyaret aralığını seçin."
+            ),
       ]),
       itinerary: [
         [
@@ -194,12 +211,14 @@ export function makeRegionalGuides(profiles: RegionalProfile[], ctx: GuideContex
           t("Dönüşten önce ertesi gün bağlantısını, bagaj süresini ve çevrimdışı biletleri hazırlayın."),
         ],
       ],
-      practical: [
-        [t("Rezervasyon sırası"), T.shared.bookingOrder(first[0])],
-        [t("Çevrimdışı hazırlık"), t("Otel adresini yerel dilde, bilet ekranlarını, acil numaraları ve çevrimdışı haritayı telefona indirin.")],
-        [t("Günlük tempo"), T.shared.dailyPace(city)],
-        [t("Son kontrol"), t("Çalışma saati, hava, grev, deniz, yangın veya park erişimini ziyaret günü resmî kaynaktan yeniden doğrulayın.")],
-      ],
+      practical: compact
+        ? []
+        : [
+            [t("Rezervasyon sırası"), T.shared.bookingOrder(first[0])],
+            [t("Çevrimdışı hazırlık"), t("Otel adresini yerel dilde, bilet ekranlarını, acil numaraları ve çevrimdışı haritayı telefona indirin.")],
+            [t("Günlük tempo"), T.shared.dailyPace(city)],
+            [t("Son kontrol"), t("Çalışma saati, hava, grev, deniz, yangın veya park erişimini ziyaret günü resmî kaynaktan yeniden doğrulayın.")],
+          ],
       faqs: [
         [T.shared.faqDays(city), T.regional.faqDaysAnswer(profile.days)],
         [T.shared.faqStay(city), T.regional.faqStayAnswer(profile.areas[0][0], profile.areas[1][0])],
@@ -207,7 +226,10 @@ export function makeRegionalGuides(profiles: RegionalProfile[], ctx: GuideContex
         [T.regional.faqCarQuestion(city), T.regional.faqCarAnswer(profile.local)],
         [T.shared.faqCombine(city), T.regional.faqCombineAnswer(related.map((item) => t(item.city)).join(", "))],
       ],
-      related: related.map((item) => [item.city, T.shared.relatedAnchor(t(item.city)), T.shared.relatedDescription(city)]),
+      related: related.map((item) => {
+        const own = compact ? cardDescription(item.countryCode, item.city) : undefined;
+        return [item.city, T.shared.relatedAnchor(t(item.city)), own ? t(own) : T.shared.relatedDescription(city)];
+      }),
       sourceName: t(officialSource[code].name),
       sourceUrl: officialSource[code].url,
       transportSource: { name: t(transportSource[code].name), url: transportSource[code].url },

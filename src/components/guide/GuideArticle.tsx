@@ -10,6 +10,8 @@ import type { DestinationDietaryGuide } from "@/content/dietary";
 import DietaryPicks from "./DietaryPicks";
 import { mapsListFor } from "@/content/maps-lists";
 import GuideMapsList from "./GuideMapsList";
+import { GUIDE_TEMPLATES } from "@/content/guides/templates";
+import type { AppLocale } from "@/i18n/routing";
 
 /**
  * Şehir rehberinin editoryal gövdesi.
@@ -104,8 +106,10 @@ export default function GuideArticle({
           {/* İçerik Türkiye'den yola çıkan okur için yazıldı: giriş/vize ve hat
               notları Türk pasaportu ve Türkiye hattına göre. Diğer dillerde
               bunu açıkça söylüyoruz; bilgiyi başka pasaportlara uyarlamak
-              doğrulanmamış bilgi üretmek olurdu. */}
-          {locale !== "tr" && (
+              doğrulanmamış bilgi üretmek olurdu. Giriş metinleri uyruktan
+              bağımsız yeniden yazılmış dillerde (şablon internationalAudience)
+              not gereksiz. */}
+          {locale !== "tr" && !GUIDE_TEMPLATES[locale as AppLocale].expanded.internationalAudience && (
             <p className="mb-10 rounded-xl border border-white/[0.08] bg-white/[0.025] px-5 py-4 text-[13px] leading-relaxed text-white/55">
               {t("audienceNote")}
             </p>
@@ -135,6 +139,21 @@ export default function GuideArticle({
               ))}
             </section>
           ))}
+
+          {/* Ülke düzeyindeki pratik bilgiler bu dilde ülke sayfasında; her
+              şehirde aynı paragrafları tekrarlamak yerine oraya bağlanıyoruz. */}
+          {guide.countryInfoOnHub && (
+            <aside className="mb-16 rounded-2xl border border-[var(--gold)]/15 bg-[var(--gold)]/[0.035] p-6 sm:p-7">
+              <p className="text-[1rem] font-semibold text-white/90">{t("countryInfo.title", { country: countryLabel })}</p>
+              <p className="mt-2 max-w-[62ch] text-[14px] leading-relaxed text-white/55">{t("countryInfo.body")}</p>
+              <Link
+                href={`${countryHref(country)}#pratik-bilgiler`}
+                className="mt-4 inline-block text-[11px] tracking-[0.18em] text-[var(--gold)]/85 uppercase transition-colors duration-300 hover:text-[var(--gold)]"
+              >
+                {t("countryInfo.link", { country: countryLabel })} →
+              </Link>
+            </aside>
+          )}
 
           {/* ---------------- yeme-içme kartları ---------------- */}
           {guide.places.length > 0 && (
