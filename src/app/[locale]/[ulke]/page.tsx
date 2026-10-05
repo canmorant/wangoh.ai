@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { getFormatter, getTranslations } from "next-intl/server";
 import { Link, permanentRedirect } from "@/i18n/navigation";
 import { resolveLocale } from "@/i18n/server";
-import { contentSeo, localizedUrl, OG_LOCALE } from "@/i18n/seo";
+import { contentSeo, localizedUrl, OG_LOCALE, ogAlternateLocales } from "@/i18n/seo";
 import { countryPageLocales, localizedCountry, localizedHub, placeName } from "@/content/localized";
 import {
   findCountryBySlug,
@@ -14,6 +14,7 @@ import {
   allCountries,
 } from "@/content/guides";
 import { SITE, absolute } from "@/lib/site";
+import { ogImage } from "@/lib/ogImage";
 import Breadcrumbs from "@/components/guide/Breadcrumbs";
 import ImageCredits from "@/components/ImageCredits";
 import JsonLd from "@/components/guide/JsonLd";
@@ -24,6 +25,7 @@ import AdSenseScript from "@/components/AdSenseScript";
 import ContentNotice from "@/components/guide/ContentNotice";
 import { countryName } from "@/lib/countryNames";
 import { localizeBestSeason, localizeBudget, localizeFlightTime } from "@/lib/travelData";
+import { countriesByRegion, regionOf } from "@/content/regions";
 
 type Params = { locale: string; ulke: string };
 
@@ -58,6 +60,7 @@ export async function generateMetadata({
         .join(", "),
     });
   const seo = contentSeo(`/${ulke}`, locale, available);
+  const share = ogImage(country.image, countryLabel);
 
   return {
     title,
@@ -66,17 +69,18 @@ export async function generateMetadata({
     openGraph: {
       type: "website",
       locale: complete ? OG_LOCALE[locale] : SITE.locale,
+      alternateLocale: complete ? ogAlternateLocales(locale, available) : undefined,
       siteName: SITE.name,
       title,
       description,
       url: complete ? localizedUrl(`/${ulke}`, locale) : absolute(`/${ulke}`),
-      images: country.image ? [{ url: country.image, alt: countryLabel }] : undefined,
+      images: share ? [share] : undefined,
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: country.image ? [country.image] : undefined,
+      images: share ? [share.url] : undefined,
     },
     robots: seo.robots ?? { index: true, follow: true },
   };
@@ -106,10 +110,24 @@ export default async function CountryPage({ params }: { params: Promise<Params> 
   const tContent = await getTranslations("Content");
   const tGuide = await getTranslations("Guide");
   const tData = await getTranslations("TravelData");
+  const tGuides = await getTranslations("Guides");
+  const tRegions = await getTranslations("Regions");
   const format = await getFormatter();
   const countryLabel = countryName(country.code, locale, country.name);
+  const region = regionOf(country);
+  // Aynı bölgedeki diğer ülke hub'ları: ülke → bölge → komşu ülke bağlantısı.
+  const neighbours =
+    countriesByRegion()
+      .find((r) => r.region === region)
+      ?.countries.filter((c) => c.code !== country.code && c.cities.some((city) => guideFor(c.code, city.name))) ?? [];
+  // Rehberi yazılmış (dizine açık) şehirler; yazılmamışlar noindex.
+  const writtenCities = country.cities.filter((city) => guideFor(country.code, city.name));
 
-  const crumbs = [{ name: tContent("home"), href: "/" }, { name: countryLabel }];
+  const crumbs = [
+    { name: tContent("home"), href: "/" },
+    { name: tGuides("breadcrumb"), href: "/gezi-rehberleri" },
+    { name: countryLabel },
+  ];
 
   return (
     <main className="relative min-h-screen bg-[#080b14] pt-24 sm:pt-28">
@@ -134,7 +152,7 @@ export default async function CountryPage({ params }: { params: Promise<Params> 
           name: countryLabel,
           description: hub?.seoDescription ?? local.description,
           url: pageUrl,
-          image: country.image,
+          image: country.image ? new URL(country.image, SITE.url).href : undefined,
           touristType: t("touristType"),
         }}
       />
@@ -143,8 +161,8 @@ export default async function CountryPage({ params }: { params: Promise<Params> 
           "@context": "https://schema.org",
           "@type": "ItemList",
           name: t("destinations", { country: countryLabel }),
-          numberOfItems: country.cities.length,
-          itemListElement: country.cities.map((city, index) => ({
+          numberOfItems: writtenCities.length,
+          itemListElement: writtenCities.map((city, index) => ({
             "@type": "ListItem",
             position: index + 1,
             name: place(city.name),
@@ -320,6 +338,27 @@ export default async function CountryPage({ params }: { params: Promise<Params> 
             })}
           </div>
         </section>
+
+        {neighbours.length > 0 && (
+          <nav aria-labelledby="bolge-rehberleri" className="-mt-16 pb-24">
+            <h2 id="bolge-rehberleri" className="font-display text-[clamp(1.4rem,2.6vw,1.8rem)] text-white">
+              {tRegions(`${region}.more`)}
+            </h2>
+            <ul className="mt-6 flex flex-wrap gap-2.5">
+              {neighbours.map((c) => (
+                <li key={c.code}>
+                  <Link
+                    href={`/${countrySlug(c)}`}
+                    className="inline-flex items-center gap-2 rounded-full border border-white/[0.12] px-4 py-2 text-[13px] text-white/70 transition-colors duration-300 hover:border-white/35 hover:text-white"
+                  >
+                    <span aria-hidden>{c.flag}</span>
+                    {t("heading", { country: countryName(c.code, locale, c.name) })}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )}
 
         {/* Wikimedia görsellerinin çoğu CC BY / CC BY-SA — atıf zorunlu. */}
         <ImageCredits

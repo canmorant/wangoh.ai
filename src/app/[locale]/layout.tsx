@@ -12,7 +12,9 @@ import "../globals.css";
 import { SITE } from "@/lib/site";
 import { ADSENSE_CLIENT } from "@/lib/adsense";
 import { routing } from "@/i18n/routing";
-import { OG_LOCALE, translatedAlternates } from "@/i18n/seo";
+import { OG_LOCALE, ogAlternateLocales, translatedAlternates } from "@/i18n/seo";
+import { ogImage } from "@/lib/ogImage";
+import { HERO_PLATE } from "@/lib/heroPlate";
 import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
 import ConsentManager from "@/components/consent/ConsentManager";
 import { CONSENT_DEFAULT_SCRIPT } from "@/lib/consent";
@@ -62,7 +64,19 @@ export async function generateMetadata({ params }: Omit<Props, "children">): Pro
     // Kendi canonical'ını vermeyen sayfalar (ana sayfa) bunu miras alıyor;
     // Türkçede eskisi gibi "/", diğer dillerde "/en" vb.
     alternates: translatedAlternates("/", locale),
-    openGraph: { locale: OG_LOCALE[locale], siteName: SITE.name },
+    // Kendi görselini vermeyen sayfaların (ana sayfa, testler, bayrak oyunu,
+    // kurumsal sayfalar) paylaşım görseli: ana sayfanın pencere manzarası.
+    // og:title/description burada verilmiyor: Next onları her sayfanın kendi
+    // title/description'ından türetiyor; burada verilse alt sayfalar ana
+    // sayfanın başlığını miras alırdı.
+    openGraph: {
+      type: "website",
+      locale: OG_LOCALE[locale],
+      alternateLocale: ogAlternateLocales(locale),
+      siteName: SITE.name,
+      images: [ogImage(HERO_PLATE, SITE.name)!],
+    },
+    twitter: { card: "summary_large_image", images: [ogImage(HERO_PLATE, SITE.name)!.url] },
     other: ADSENSE_CLIENT ? { "google-adsense-account": ADSENSE_CLIENT } : undefined,
   };
 }

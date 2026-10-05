@@ -3,14 +3,26 @@ import { absolute } from "@/lib/site";
 import { getPathname } from "./navigation";
 import { routing, type AppLocale } from "./routing";
 
-/** Bir yolun verilen dildeki mutlak adresi. tr öneksiz, diğerleri /en/... */
+/**
+ * Bir iç yolun verilen dildeki mutlak adresi: tr öneksiz, diğerleri /en/...;
+ * adresleri kendi dilinde olan dillerde yol da çevrilir
+ * ("/fransa/paris" → https://wangoh.com/en/france/paris).
+ */
 export const localizedUrl = (path: string, locale: AppLocale) =>
   absolute(getPathname({ href: path, locale }));
 
 /**
- * Arayüzü ve içeriği tamamen çevrilmiş sayfalar (ana sayfa, testler,
- * bayrak oyunu): her dilin kendi canonical'ı var ve hreflang altı dili
- * birden gösteriyor. x-default Türkçe.
+ * x-default: dili listedeki hiçbir sürümle eşleşmeyen ziyaretçinin (Almanca,
+ * Arapça, Japonca…) göreceği sürüm. Uluslararası okur için İngilizce; sayfa
+ * İngilizcede yoksa Türkçe. Türkçe ve İngilizce okur kendi hreflang'iyle
+ * eşleştiği için bu seçim onları etkilemez.
+ */
+const xDefaultLocale = (locales: readonly AppLocale[]): AppLocale =>
+  locales.includes("en") ? "en" : routing.defaultLocale;
+
+/**
+ * Arayüzü ve içeriği tamamen çevrilmiş sayfalar: her dilin kendi canonical'ı
+ * var ve hreflang verilen dillerin hepsini (karşılıklı) gösteriyor.
  */
 export function translatedAlternates(
   path: string,
@@ -21,10 +33,14 @@ export function translatedAlternates(
     canonical: localizedUrl(path, locale),
     languages: {
       ...Object.fromEntries(locales.map((l) => [l, localizedUrl(path, l)])),
-      "x-default": localizedUrl(path, routing.defaultLocale),
+      "x-default": localizedUrl(path, xDefaultLocale(locales)),
     },
   };
 }
+
+/** og:locale:alternate — sayfanın diğer dil sürümleri (OpenGraph biçiminde). */
+export const ogAlternateLocales = (locale: AppLocale, locales: readonly AppLocale[] = routing.locales) =>
+  locales.filter((l) => l !== locale).map((l) => OG_LOCALE[l]);
 
 /**
  * İçerik sayfaları (rehber, ülke, kurumsal): `available` o sayfanın içeriği

@@ -6,7 +6,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { Link, permanentRedirect } from "@/i18n/navigation";
 import { resolveLocale } from "@/i18n/server";
-import { contentSeo, localizedUrl, OG_LOCALE } from "@/i18n/seo";
+import { contentSeo, localizedUrl, OG_LOCALE, ogAlternateLocales } from "@/i18n/seo";
 import type { AppLocale } from "@/i18n/routing";
 import {
   cityPageLocales,
@@ -25,6 +25,7 @@ import {
   countrySlug,
 } from "@/content/guides";
 import { SITE, absolute } from "@/lib/site";
+import { ogImage } from "@/lib/ogImage";
 import GuideArticle from "@/components/guide/GuideArticle";
 import Breadcrumbs from "@/components/guide/Breadcrumbs";
 import JsonLd from "@/components/guide/JsonLd";
@@ -100,6 +101,7 @@ export async function generateMetadata({
     t("metaDescription", { city: cityLabel, summary: guide?.seoDescription ?? localCity.description });
   const seo = contentSeo(path, locale, available);
   const url = complete ? localizedUrl(path, locale) : absolute(path);
+  const share = ogImage(city.image, t("heroAlt", { city: cityLabel, country: countryLabel }));
 
   return {
     title,
@@ -108,17 +110,18 @@ export async function generateMetadata({
     openGraph: {
       type: "article",
       locale: complete ? OG_LOCALE[locale] : SITE.locale,
+      alternateLocale: complete ? ogAlternateLocales(locale, available) : undefined,
       siteName: SITE.name,
       title,
       description,
       url,
-      images: city.image ? [{ url: city.image, alt: `${cityLabel}, ${countryLabel}` }] : undefined,
+      images: share ? [share] : undefined,
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: city.image ? [city.image] : undefined,
+      images: share ? [share.url] : undefined,
     },
     robots: guide
       ? (seo.robots ?? { index: true, follow: true })
@@ -141,10 +144,14 @@ export default async function CityGuidePage({ params }: { params: Promise<Params
 
   const t = await getTranslations("City");
   const tContent = await getTranslations("Content");
+  const tGuides = await getTranslations("Guides");
   const pageUrl = complete ? localizedUrl(path, locale) : absolute(path);
 
+  // Ana sayfa › Rehberler › Ülke › Şehir: her şehir hem ülke hub'ına hem
+  // rehber dizinine bağlanıyor; arama motoru hiyerarşiyi buradan da okuyor.
   const breadcrumbs = [
     { name: tContent("home"), href: "/" },
+    { name: tGuides("breadcrumb"), href: "/gezi-rehberleri" },
     { name: countryLabel, href: countryHref(country) },
     { name: cityLabel },
   ];
@@ -175,11 +182,13 @@ export default async function CityGuidePage({ params }: { params: Promise<Params
               headline: guide.h1,
               description: guide.seoDescription,
               inLanguage: complete ? (locale === "tr" ? "tr-TR" : locale) : "tr-TR",
-              image: city.image ? new URL(city.image, SITE.url).href : undefined,
+              image: city.image
+                ? [ogImage(city.image, cityLabel)!.url, new URL(city.image, SITE.url).href]
+                : undefined,
               dateModified: guide.reviewed,
               mainEntityOfPage: { "@type": "WebPage", "@id": pageUrl },
-              publisher: { "@type": "Organization", name: SITE.name },
-              author: { "@type": "Organization", name: SITE.name, url: absolute("/hakkimizda") },
+              publisher: { "@type": "Organization", name: SITE.name, url: localizedUrl("/", locale) },
+              author: { "@type": "Organization", name: SITE.name, url: localizedUrl("/hakkimizda", locale) },
               about: { "@type": "Place", name: `${cityLabel}, ${countryLabel}` },
             }}
           />
@@ -231,7 +240,8 @@ export default async function CityGuidePage({ params }: { params: Promise<Params
                   pick.category === "vegan"
                     ? "https://schema.org/VeganDiet"
                     : "https://schema.org/HalalDiet",
-                sameAs: googleMapsSearchUrl(pick.name, cityLabel, countryLabel),
+                // Harita araması mekânın kimliği değil (sameAs değil), haritası.
+                hasMap: googleMapsSearchUrl(pick.name, cityLabel, countryLabel),
               },
             })),
           }}

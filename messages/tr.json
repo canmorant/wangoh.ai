@@ -745,5 +745,22 @@
     "adsTitle": "Reklam",
     "adsBody": "Google AdSense'in reklamları ilgi alanlarınıza göre kişiselleştirmesi ve ölçmesi için çerezler ve tanımlayıcılar. Reddederseniz kişiselleştirilmemiş veya sınırlı reklamlar görebilirsiniz.",
     "saved": "Çerez tercihleriniz kaydedildi."
+  },
+  "Regions": {
+    "europe": {
+      "name": "Avrupa",
+      "guides": "Avrupa gezi rehberleri",
+      "more": "Avrupa'daki diğer ülke rehberleri"
+    },
+    "asia": {
+      "name": "Asya",
+      "guides": "Asya gezi rehberleri",
+      "more": "Asya'daki diğer ülke rehberleri"
+    },
+    "americas": {
+      "name": "Amerika kıtası",
+      "guides": "Amerika kıtası gezi rehberleri",
+      "more": "Amerika kıtasındaki diğer ülke rehberleri"
+    }
   }
 }

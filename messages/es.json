@@ -745,5 +745,22 @@
     "adsTitle": "Publicidad",
     "adsBody": "Cookies e identificadores que permiten a Google AdSense personalizar y medir los anuncios según tus intereses. Si lo rechazas, puedes ver anuncios no personalizados o limitados.",
     "saved": "Se han guardado tus preferencias de cookies."
+  },
+  "Regions": {
+    "europe": {
+      "name": "Europa",
+      "guides": "Guías de viaje de Europa",
+      "more": "Más guías de países de Europa"
+    },
+    "asia": {
+      "name": "Asia",
+      "guides": "Guías de viaje de Asia",
+      "more": "Más guías de países de Asia"
+    },
+    "americas": {
+      "name": "América",
+      "guides": "Guías de viaje de América",
+      "more": "Más guías de países de América"
+    }
   }
 }
