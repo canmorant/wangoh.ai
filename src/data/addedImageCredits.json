@@ -117,24 +117,6 @@
     "lqip": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAACwBACdASoYABEAPyV8t1SuJyUjMBgIAcAkiUAY3oGHVmOYqPa/nd9Dlb+PDeAAAODOHjvqGP/RWaT88sAwAFpdubsjmyBdd6agwjEMfawFprzqHhbje+sJeeHFw9KxkO6dWaLTkAAAAA=="
   },
   {
-    "file": "/images/added-gazimagusa.avif",
-    "artist": "Elifir",
-    "licenseName": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Varosha_utsikt.jpg",
-    "attributionRequired": true,
-    "lqip": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAADwAwCdASoYABAAPyV8tFGuJ6UisAgBwCSJQBOgBFYYl+ROmpZC9BpgAP5SKdBSnRQVx+14yG86sno2aSBbzGFxHO3i5jRXMzLxdcFk5sS0B9DrtvFJ2/6vgluOfYHCtTfeBjNnnxXGSgBUMsNwqrPPwAA="
-  },
-  {
-    "file": "/images/added-baf.avif",
-    "artist": "Dmitry Panov",
-    "licenseName": "CC BY 3.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Paphos_Marine,_Cyprus_-_panoramio.jpg",
-    "attributionRequired": true,
-    "lqip": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAADwAwCdASoYABAAPyV8tVIuJ6UisAgBwCSJYwCsAB6MfwNYQqz6/rEAAN2QwEdST+cL91NCoRY6YQCRQ9BqtVcyIxhsj7cxj2+vGzEQQ7DCVdeGeDFsVN8G6sbyVS8tyzQyoB14OB4zJJgA"
-  },
-  {
     "file": "/images/added-marakes.avif",
     "artist": "Acp",
     "licenseName": "CC BY-SA 3.0",
@@ -169,23 +151,5 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Varna_Cathedral_02.jpg",
     "attributionRequired": true,
     "lqip": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAABwBACdASoYABIAPyV4uFUuJqUjMBgIAcAkiWIAAC51Lb3k8MKkEDDCQZkMAAD+7oC2svG9T01fOmimIj3gowaUGwV0wa5h8Gxu6FQ6Csrdmn3v0vyDWJddGNWuHro52w065xdmQAAAAA=="
-  },
-  {
-    "file": "/images/added-girne.avif",
-    "artist": "Michal Klajban",
-    "licenseName": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Harbour,_Kyrenia,_Northern_Cyprus.jpg",
-    "attributionRequired": true,
-    "lqip": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAACQAwCdASoYAAcAPyV6tVGuJ6UisAgBwCSJZwAASj1jLYtxPRrAAPsCkOoOJsqR6uJrP/CisP7Ne3UeDGqgZSVaOB1YY9ZyNFM6PWmMyoV3rK9snel+n4UJuBCONAAA"
-  },
-  {
-    "file": "/images/added-larnaka.avif",
-    "artist": "Cypriot Chauvinist",
-    "licenseName": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Finikoudes_Beach,_Larnaca.jpg",
-    "attributionRequired": true,
-    "lqip": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAACwAwCdASoYAAwAPyV8t1KuJ6WisAgBwCSJZQDE2CK1+5pM0NXxwAD8i8RgHBENu+0X8eRA88MX01kLrC3M5sD3cQttsOZvwxtUCRMnlnTiQh4A"
   }
 ]

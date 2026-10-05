@@ -57,22 +57,6 @@
         "Gozo Travel Guide: Temples, Coast and Ferry Planning",
         "Explore Gozo’s Cittadella, Ġgantija temples and Dwejra with Malta ferry options, island transport, areas to stay and a relaxed 3-day itinerary."
       ],
-      "CY:Girne": [
-        "Kyrenia Travel Guide: Harbour, Castle and Bellapais",
-        "Explore Kyrenia’s old harbour, castle and Bellapais with places to stay, beach choices, transport, local food and a balanced 2-day itinerary."
-      ],
-      "CY:Gazimağusa": [
-        "Famagusta Travel Guide: Walled Town, Othello and Salamis",
-        "Explore Famagusta’s walled town, Othello Castle, Lala Mustafa Pasha Mosque and Salamis with transport, stays, local food and a 2-day itinerary."
-      ],
-      "CY:Baf": [
-        "Paphos Travel Guide: Mosaics, Tombs and Where to Stay",
-        "Explore Paphos mosaics, Tombs of the Kings and the harbour with transport tips, areas to stay, local food, coastal choices and a 3-day route."
-      ],
-      "CY:Larnaka": [
-        "Larnaca Travel Guide: Finikoudes, Salt Lake and Stays",
-        "Explore Larnaca’s Finikoudes, Saint Lazarus, Salt Lake and Hala Sultan Tekke with airport transfers, places to stay, local food and a 2-day route."
-      ],
       "MA:Marakeş": [
         "Marrakech Travel Guide: Souks, Gardens and a 3-Day Route",
         "Plan Marrakech with Jemaa el-Fna, Bahia Palace and Majorelle: a 3-day itinerary, riad areas, airport transfers, Moroccan food and budget advice."
@@ -143,22 +127,6 @@
         "Qué ver en Gozo: templos, costa y cómo llegar en ferry",
         "Qué ver en Gozo: Cittadella, templos de Ġgantija y Dwejra, con ferris desde Malta, transporte insular, alojamiento y una ruta tranquila de 3 días."
       ],
-      "CY:Girne": [
-        "Qué ver en Kyrenia: puerto, castillo y Bellapais",
-        "Qué ver en Kyrenia: puerto antiguo, castillo y Bellapais, con alojamiento, playas, transporte, cocina local y una ruta equilibrada de 2 días."
-      ],
-      "CY:Gazimağusa": [
-        "Qué ver en Famagusta: murallas, Otelo y Salamina",
-        "Qué ver en Famagusta: murallas, castillo de Otelo, mezquita Lala Mustafa Pasha y Salamina, con transporte, alojamiento, comida y ruta de 2 días."
-      ],
-      "CY:Baf": [
-        "Qué ver en Pafos: mosaicos, tumbas y dónde alojarse",
-        "Qué ver en Pafos: mosaicos, Tumbas de los Reyes y puerto, con transporte, zonas para alojarse, comida local, opciones de costa y ruta de 3 días."
-      ],
-      "CY:Larnaka": [
-        "Qué ver en Lárnaca: Finikoudes, lago salado y playas",
-        "Qué ver en Lárnaca: Finikoudes, San Lázaro, lago salado y Hala Sultan Tekke, con traslado del aeropuerto, alojamiento, comida y ruta de 2 días."
-      ],
       "MA:Marakeş": [
         "Qué ver en Marrakech: ruta de 3 días, zocos y jardines",
         "Qué ver en Marrakech: Jemaa el-Fna, Palacio de la Bahía y Majorelle, con ruta de 3 días, riads, traslado del aeropuerto, comida y presupuesto."
@@ -195,10 +163,6 @@
         "Malta Travel Guide: Valletta and Gozo Itinerary",
         "Plan Malta with Valletta and Gozo guides: harbour walks, temples, places to stay, buses, ferry connections and a balanced two-island itinerary."
       ],
-      "CY": [
-        "Cyprus Travel Guide: Kyrenia, Famagusta, Paphos, Larnaca",
-        "Explore Cyprus through Kyrenia, Famagusta, Paphos and Larnaca: harbour walks, archaeology, beaches, places to stay and city-specific travel tips."
-      ],
       "MA": [
         "Morocco Travel Guide: Marrakech, Fez and Chefchaouen",
         "Plan Morocco through Marrakech, Fez and Chefchaouen: medina walks, riad stays, trains, coach connections, local food and realistic travel routes."
@@ -224,10 +188,6 @@
       "MT": [
         "Viajar a Malta: La Valeta, Gozo y rutas en ferry",
         "Prepara Malta con La Valeta y Gozo: paseos por el puerto, templos, dónde alojarse, autobuses, ferris y una ruta equilibrada entre las dos islas."
-      ],
-      "CY": [
-        "Viajar a Chipre: Kyrenia, Famagusta, Pafos y Lárnaca",
-        "Descubre Chipre con Kyrenia, Famagusta, Pafos y Lárnaca: puertos, yacimientos, playas, alojamiento, cocina local y consejos de transporte para cada base."
       ],
       "MA": [
         "Viajar a Marruecos: Marrakech, Fez y Chefchaouen",

@@ -37,10 +37,12 @@ function t(row) {
   }
   return row[0];
 }
-const allCities=[...ae,...eg,...ge,...bg,...mt,...cy,...ma];
+// Kıbrıs (cy.mjs) yayında değil: bayrak, kuzey/güney adlandırması ve giriş-geçiş dili için editoryal karar bekliyor.
+const HELD=new Set(['CY']);
+const allCities=[...ae,...eg,...ge,...bg,...mt,...cy,...ma].filter(c=>!HELD.has(c.code));
 const seo={guides:{en:{},es:{}},hubs:{en:{},es:{}}};
 const hubs={};
-const destinations=countries.map(c=>{
+const destinations=countries.filter(c=>!HELD.has(c.code)).map(c=>{
   for(const l of ['en','es']) seo.hubs[l][c.code]=[c.title[l==='en'?1:2],c.meta[l==='en'?1:2]];
   hubs[c.code]={
     seoTitle:t(c.title),seoDescription:t(c.meta),

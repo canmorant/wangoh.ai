@@ -176,47 +176,6 @@
     ]
   },
   {
-    "name": "Kıbrıs",
-    "code": "CY",
-    "flag": "🇨🇾",
-    "description": "Girne limanı, Gazimağusa’nın taş sokakları, Baf mozaikleri ve Larnaka’nın sahiliyle Akdeniz adasında dört ayrı gezi üssü.",
-    "image": "/images/added-girne.avif",
-    "coordinates": {
-      "lat": 35.1856,
-      "lng": 33.3823
-    },
-    "iata": "ECN",
-    "gateway": "Lefkoşa",
-    "capital": "Lefkoşa",
-    "flightTime": "1sa 35dk",
-    "accent": "#d9ad70",
-    "bestSeason": "Nisan–Haziran · Eylül–Ekim",
-    "budget": "Orta",
-    "signature": "Tarihî bir limandan taş avlulara, gün batımında sakin bir sahile yürümek",
-    "cities": [
-      {
-        "name": "Girne",
-        "description": "Eski liman, Girne Kalesi ve Bellapais arasında kısa yürüyüşler ve manzaralı köy molaları.",
-        "image": "/images/added-girne.avif"
-      },
-      {
-        "name": "Gazimağusa",
-        "description": "Sur içi sokakları, Othello Kalesi ve Salamis arkeolojisiyle doğu kıyısında iki farklı tarih günü.",
-        "image": "/images/added-gazimagusa.avif"
-      },
-      {
-        "name": "Baf",
-        "description": "Kato Pafos mozaikleri, Kral Mezarları ve liman kıyısıyla arkeoloji odaklı Akdeniz gezisi.",
-        "image": "/images/added-baf.avif"
-      },
-      {
-        "name": "Larnaka",
-        "description": "Finikoudes, Aziz Lazarus, Hala Sultan Tekkesi ve mevsimsel Tuz Gölü ile yürüyüş ve kıyı üssü.",
-        "image": "/images/added-larnaka.avif"
-      }
-    ]
-  },
-  {
     "name": "Fas",
     "code": "MA",
     "flag": "🇲🇦",

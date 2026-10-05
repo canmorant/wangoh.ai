@@ -30,7 +30,6 @@ const EXTRA: Record<string, string[]> = {
   AE: ["BAE", "UAE", "Emiratos Árabes Unidos"],
   EG: ["Egipto"],
   GE: ["Georgia"],
-  CY: ["Chipre"],
   MA: ["Marruecos"],
 };
 

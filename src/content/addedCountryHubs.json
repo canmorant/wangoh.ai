@@ -249,56 +249,6 @@
       }
     ]
   },
-  "CY": {
-    "seoTitle": "Kıbrıs Gezi Rehberi: Girne, Gazimağusa, Baf ve Larnaka",
-    "seoDescription": "Kıbrıs gezi rehberi: Girne, Gazimağusa, Baf ve Larnaka’da gezilecek yerler, konaklama, sahiller, yerel mutfak ve şehre göre ulaşım önerileri.",
-    "planningHeading": "Kıbrıs’ta şehir ve sahil rotası nasıl kurulur?",
-    "essentialsHeading": "Kıbrıs gezisi için temel bilgiler",
-    "citiesHeading": "Kıbrıs’ta gezilecek şehirler ve sahiller",
-    "cityGridIntro": "Girne liman ve Bellapais; Gazimağusa sur içi ve Salamis; Baf mozaik ve kıyı; Larnaka ise Finikoudes ve Tuz Gölü odaklıdır. Yakın görünen durakları bir güne doldurmak yerine bir veya iki üs seçin.",
-    "intro": [
-      "Her şehir için iki veya üç gün bırakmak sahil ve kültür günlerini dengelemeyi kolaylaştırır. Arkeolojik alanlar geniş ve gölgesiz olabilir; açık hava ziyaretini sabaha, kıyı yürüyüşünü akşamüstüne yerleştirin.",
-      "Dört şehri tek konaklama noktasından dolaşmak çok sayıda transfer yaratır. Havalimanı seçimi, kiralık aracın kullanım kapsamı ve güncel bağlantıları otel rezervasyonundan önce birlikte değerlendirin."
-    ],
-    "essentials": [
-      {
-        "title": "Havalimanını otelle birlikte seçin",
-        "body": "Girne ve Gazimağusa için Ercan, Baf için Pafos, Larnaka için Larnaka havalimanı bağlantılarını karşılaştırın. Giriş belgesi, transfer ve araç kullanım koşullarını seçtiğiniz güzergâh için resmî kaynaklardan doğrulayın."
-      },
-      {
-        "title": "Ödeme biçimini şehre göre kontrol edin",
-        "body": "Girne ve Gazimağusa’da fiyatlar çoğunlukla Türk lirası, Baf ve Larnaka’da avro üzerinden görülür. İşletmenin kullandığı para birimini ve kartla ödeme koşulunu rezervasyon sırasında netleştirin."
-      },
-      {
-        "title": "Soldan trafik ve araç kapsamı",
-        "body": "Trafik soldan akar. Kiralık araçta gideceğiniz tüm noktaların kullanım ve sigorta kapsamına dahil olduğunu yazılı kontrol edin; haritada çizilen rota tek başına izin veya sigorta kanıtı değildir."
-      },
-      {
-        "title": "Sahil ve mevsim",
-        "body": "İlkbahar ve sonbahar yürüyüş için daha rahattır. Deniz girişinde plaj bayraklarına uyun; Larnaka Tuz Gölü’nde kuş gözlemi mevsime bağlıdır ve yazın su veya flamingo garanti değildir."
-      }
-    ],
-    "routeIdeas": [
-      {
-        "title": "Liman, manastır ve antik kent",
-        "duration": "5–6 gün",
-        "cities": [
-          "Girne",
-          "Gazimağusa"
-        ],
-        "description": "Girne’de liman ve Bellapais için üç gece, Gazimağusa’da sur içi ve Salamis için iki gece. Transferin kapsamını rezervasyon öncesinde doğrulayın."
-      },
-      {
-        "title": "Mozaik ve sahil rotası",
-        "duration": "5–7 gün",
-        "cities": [
-          "Baf",
-          "Larnaka"
-        ],
-        "description": "Baf’ta arkeolojiye üç gün, Larnaka’da eski merkez ve sahile iki veya üç gün. İki şehir arasında doğrudan seferi ve otel son bağlantısını kontrol edin."
-      }
-    ]
-  },
   "MA": {
     "seoTitle": "Fas Gezi Rehberi: Marakeş, Fes ve Şefşavan",
     "seoDescription": "Fas gezi rehberi: Marakeş, Fes ve Şefşavan’da gezilecek yerler, riad seçimi, tren ve otobüs bağlantıları, medina yürüyüşleri ve rota planı.",

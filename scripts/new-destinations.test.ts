@@ -12,7 +12,7 @@ import {textKey} from '../src/content/i18n/core';
 import {regionOf} from '../src/content/regions';
 import {creditFor} from '../src/data/imageCredits';
 import {slugify} from '../src/lib/slug';
-const expected:Record<string,string[]>={AE:['Dubai','Abu Dabi'],EG:['Kahire','Luksor','Hurgada','Şarm el-Şeyh'],GE:['Tiflis','Batum','Kazbegi'],BG:['Sofya','Plovdiv','Varna'],MT:['Valletta','Gozo'],CY:['Girne','Gazimağusa','Baf','Larnaka'],MA:['Marakeş','Fes','Şefşavan']};
+const expected:Record<string,string[]>={AE:['Dubai','Abu Dabi'],EG:['Kahire','Luksor','Hurgada','Şarm el-Şeyh'],GE:['Tiflis','Batum','Kazbegi'],BG:['Sofya','Plovdiv','Varna'],MT:['Valletta','Gozo'],MA:['Marakeş','Fes','Şefşavan']};
 let pages=0;
 const titles=new Set<string>();
 const wordCounts:Record<string,number[]>={tr:[],en:[],es:[]};
@@ -52,6 +52,6 @@ for(const [code,names] of Object.entries(expected)){
   }
  }
 }
-assert.equal(pages,84);
-console.log(`7 countries, 21 destinations, ${pages} complete TR/EN/ES pages; cards, regions, dietary notes and image credits checked.`);
+assert.equal(pages,69);
+console.log(`6 countries, 17 destinations, ${pages} complete TR/EN/ES pages; cards, regions, dietary notes and image credits checked.`);
 for(const [locale,counts] of Object.entries(wordCounts))console.log(`${locale}: article bodies ${Math.min(...counts)}–${Math.max(...counts)} words (excluding itineraries, tips and cards).`);

@@ -14,7 +14,7 @@ export const REGIONS = ["europe", "asia", "americas", "africa"] as const;
 export type Region = (typeof REGIONS)[number];
 
 const REGION_OF: Record<string, Region> = {
-  AE: "asia", GE: "asia", BG: "europe", MT: "europe", CY: "europe",
+  AE: "asia", GE: "asia", BG: "europe", MT: "europe",
   EG: "africa", MA: "africa",
   IT: "europe", FR: "europe", ES: "europe", TR: "europe", GB: "europe", NL: "europe",
   AT: "europe", PT: "europe", DE: "europe", CH: "europe", BE: "europe", HU: "europe",
