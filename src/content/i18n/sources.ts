@@ -1,5 +1,4 @@
-import { countries, type Country } from "@/data/destinations";
-import { SECRET_DESTINATION } from "@/data/secret";
+import { ALL_DESTINATIONS, destinationTexts } from "./destinations";
 import { ORIGIN_CITIES } from "@/data/origins";
 import { countryHubFor } from "@/content/countryHubs";
 import { DIETARY_GUIDES } from "@/content/dietary/catalog";
@@ -31,18 +30,7 @@ export interface SourceText {
   scopes: Set<string>;
 }
 
-/** Ana sayfa ve ülke görünümlerinin gösterdiği destinasyon metinleri. */
-export function destinationTexts(country: Country): string[] {
-  return [
-    country.description,
-    country.signature,
-    country.capital,
-    country.gateway,
-    ...country.cities.flatMap((city) => [city.name, city.description]),
-  ];
-}
-
-export const ALL_DESTINATIONS: Country[] = [...countries, SECRET_DESTINATION];
+export { ALL_DESTINATIONS, destinationTexts } from "./destinations";
 
 export function collectSources(): Map<string, SourceText> {
   const out = new Map<string, SourceText>();

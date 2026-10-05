@@ -1,9 +1,9 @@
 import { routing, type AppLocale } from "@/i18n/routing";
-import { ORIGIN_CITIES } from "@/data/origins";
 import type { Country } from "@/data/destinations";
-import { textKey, Translator, translateDeep } from "@/content/i18n/core";
+import { Translator, translateDeep } from "@/content/i18n/core";
 import { translationMemory } from "@/content/i18n/memory";
-import { ALL_DESTINATIONS, destinationTexts } from "@/content/i18n/sources";
+import { ALL_DESTINATIONS } from "@/content/i18n/destinations";
+export { destinationDictionary } from "@/content/i18n/destinations";
 import { DIETARY_KEYS, HUB_KEYS } from "@/content/i18n/keys";
 import { buildGuides, guideFor } from "@/content/guides";
 import { createGuideContext } from "@/content/guides/context";
@@ -101,26 +101,6 @@ export function localizedCountry(country: Country, locale: AppLocale): Localized
 
 /** Şehir/yer adının görünen hâli ("Lizbon" → "Lisbon"). */
 export const placeName = (name: string, locale: AppLocale) => contentTranslator(locale).t(name);
-
-/**
- * İstemci bileşenlerine (ana sayfa, testler) inen destinasyon sözlüğü:
- * Türkçe metnin karması → çevirisi. Yalnız o dilin metinleri gider.
- */
-export function destinationDictionary(locale: AppLocale): Record<string, string> {
-  const memory = translationMemory(locale);
-  if (!memory) return {};
-  const dict: Record<string, string> = {};
-  const texts = [
-    ...ALL_DESTINATIONS.flatMap(destinationTexts),
-    ...ORIGIN_CITIES.map((city) => city.name),
-  ];
-  for (const text of texts) {
-    const key = textKey(text);
-    const hit = memory.get(key);
-    if (hit !== undefined) dict[key] = hit;
-  }
-  return dict;
-}
 
 /* ------------------- bir sayfanın tam çevrildiği diller ------------------- */
 

@@ -9,10 +9,11 @@ import FloatingNav from "./FloatingNav";
  * olduğu için buradan ana sayfaya ?open=... ile gidiyor; HomeExperience
  * açılışta ilgili katmanı açıyor.
  */
-export default function SiteNav() {
+export default function SiteNav({ searchDictionaryUrl }: { searchDictionaryUrl?: string }) {
   const t = useTranslations("Nav");
   return (
     <FloatingNav
+      searchDictionaryUrl={searchDictionaryUrl}
       actions={[
         { label: t("tests"), href: "/tests" },
         { label: t("randomClub"), href: "/?open=club" },

@@ -13,6 +13,7 @@ import { SECRET_DESTINATION } from "@/data/secret";
 import { useContentText } from "@/components/ContentText";
 import { slugify } from "@/lib/slug";
 import { EASE_OUT } from "@/lib/motion";
+import SearchDictionaryProvider from "./SearchDictionaryProvider";
 
 // Arama yalnızca küçük destinasyon kataloğuna ihtiyaç duyar. Rehber kaydını
 // buraya bağlamak, 89 uzun makalenin tamamını ana sayfanın JavaScript paketine
@@ -130,9 +131,18 @@ interface SearchModalProps {
   open: boolean;
   onClose: () => void;
   onSelectCountry?: (country: Country) => void;
+  dictionaryUrl?: string;
 }
 
-export default function SearchModal({ open, onClose, onSelectCountry }: SearchModalProps) {
+export default function SearchModal(props: SearchModalProps) {
+  return props.dictionaryUrl ? (
+    <SearchDictionaryProvider key={props.dictionaryUrl} url={props.dictionaryUrl}>
+      <SearchModalContent {...props} />
+    </SearchDictionaryProvider>
+  ) : <SearchModalContent {...props} />;
+}
+
+function SearchModalContent({ open, onClose, onSelectCountry }: SearchModalProps) {
   const [query, setQuery] = useState("");
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [activeFilter, setActiveFilter] = useState<"all" | "country" | "city">("all");

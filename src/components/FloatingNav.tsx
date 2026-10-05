@@ -27,10 +27,12 @@ export default function FloatingNav({
   actions,
   onHome,
   onSelectCountry,
+  searchDictionaryUrl,
 }: {
   actions: NavAction[];
   onHome?: () => void;
   onSelectCountry?: (country: Country) => void;
+  searchDictionaryUrl?: string;
 }) {
   const t = useTranslations("Nav");
   const [visible, setVisible] = useState(true);
@@ -297,6 +299,7 @@ export default function FloatingNav({
       {/* Global Search Modal */}
       {searchRequested && (
         <SearchModal
+          dictionaryUrl={searchDictionaryUrl}
           open={searchOpen}
           onClose={() => setSearchOpen(false)}
           onSelectCountry={onSelectCountry}
