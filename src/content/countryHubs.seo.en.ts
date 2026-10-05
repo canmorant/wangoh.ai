@@ -1,0 +1,45 @@
+/**
+ * İngilizce ülke sayfalarının <title>'ı: ülke düzeyindeki aramaya göre
+ * ("Japan travel guide", "best places to visit in Japan", "Japan itinerary")
+ * ayrıca yazıldı; en çok 60 karakter (scripts/seo-copy.test.ts denetler).
+ * Açıklamalar çeviri belleğinden gelir.
+ */
+export const EN_HUB_TITLES: Record<string, string> = {
+  JP: "Japan Travel Guide: Best Places to Visit & Itinerary Ideas",
+  US: "USA Travel Guide: Best Cities to Visit & Practical Tips",
+  IT: "Italy Travel Guide: Best Places to Visit & Route Ideas",
+  FR: "France Travel Guide: Best Cities to Visit & Train Routes",
+  TH: "Thailand Travel Guide: Bangkok, Islands & Itinerary Ideas",
+  KR: "South Korea Travel Guide: Best Places to Visit & Routes",
+  ES: "Spain Travel Guide: 16 Cities, Islands & Route Ideas",
+  TR: "Turkey Travel Guide: Best Places to Visit & Route Ideas",
+  GB: "UK Travel Guide: Best Places to Visit, Cities & Nature",
+  ID: "Indonesia Travel Guide: Bali, Java & Island Routes",
+  CN: "China Travel Guide: Visas, Trains & 16 City Guides",
+  NL: "Netherlands Travel Guide: Cities, Trains & Cycling",
+  AT: "Austria Travel Guide: Vienna, Salzburg & Alpine Routes",
+  PT: "Portugal Travel Guide: Lisbon, Porto, Islands & Routes",
+  DE: "Germany Travel Guide: Best Cities to Visit & Train Routes",
+  MX: "Mexico Travel Guide: Best Places to Visit & Maya Routes",
+  BR: "Brazil Travel Guide: Rio, the Amazon & Nature Routes",
+  AR: "Argentina Travel Guide: Buenos Aires, Patagonia & Routes",
+  CA: "Canada Travel Guide: Cities, the Rockies & Route Ideas",
+  CH: "Switzerland Travel Guide: Cities, Trains & Alpine Routes",
+  BE: "Belgium Travel Guide: Brussels, Bruges & City Routes",
+  HU: "Hungary Travel Guide: Budapest, Baths & Lake Balaton",
+  CZ: "Czech Republic Travel Guide: Prague & Best Places to Visit",
+  PL: "Poland Travel Guide: Kraków, Warsaw, Tatras & Baltic",
+  RU: "Russia Travel Guide: Visas, Cities & Long-Distance Routes",
+  RS: "Serbia Travel Guide: Belgrade, the Danube & Mountains",
+  ME: "Montenegro Travel Guide: Kotor, the Coast & Durmitor",
+  BA: "Bosnia and Herzegovina Travel Guide: Sarajevo & Mostar",
+  AL: "Albania Travel Guide: Riviera, Alps & Historic Towns",
+  GR: "Greece Travel Guide: Athens, Islands & Ancient Sites",
+  HR: "Croatia Travel Guide: Dubrovnik, Islands & National Parks",
+  SI: "Slovenia Travel Guide: Ljubljana, Bled & Alpine Routes",
+  NO: "Norway Travel Guide: Fjords, Northern Lights & Routes",
+  SE: "Sweden Travel Guide: Stockholm, Archipelagos & Lapland",
+  DK: "Denmark Travel Guide: Copenhagen, Islands & Viking Sites",
+  FI: "Finland Travel Guide: Helsinki, Lakes & Lapland",
+  SJ: "Svalbard Travel Guide: Longyearbyen & Arctic Planning",
+};

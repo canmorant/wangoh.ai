@@ -21,6 +21,28 @@ export interface GuideTemplates {
     foodHeading(city: string): string;
     footballHeading(city: string): string;
     practicalHeading(city: string): string;
+    /**
+     * İsteğe bağlı: sabit bölüm başlıklarının o dilin arama alışkanlığına
+     * göre kurulmuş hâlleri ("Where to stay in Lisbon", "Best time to visit
+     * Lisbon"). Verilmeyen dilde başlık, Türkçe başlığın çeviri belleğindeki
+     * karşılığıdır.
+     */
+    /**
+     * true: rehberin giriş/vize metinleri bu dilde uyruktan bağımsız yazıldı;
+     * Türk pasaportuna özel kaynak bağlantıları ("audience: tr") gösterilmez.
+     */
+    internationalAudience?: boolean;
+    sectionHeadings?: {
+      neighborhoods(city: string): string;
+      stay(city: string): string;
+      transport(city: string): string;
+      nightlife(city: string): string;
+      dayTrips(city: string): string;
+      when(city: string): string;
+      budget(city: string): string;
+      apps(city: string): string;
+      safety(city: string): string;
+    };
   };
   /** regionalFactory ve worldExpansionFactory'nin ortak kalıpları. */
   shared: {

@@ -2,22 +2,46 @@ import type { GuideTemplates } from "./types";
 
 /*
  * Kural (tüm Türkçe dışı paketler): yer adları (şehir, bölge, semt, gezi
- * noktası) edat/çekim gerektiren konuma girmez. "the Lake District",
- * "the Algarve", "the Azores" gibi artikel isteyen bölge adları da olduğu için
- * yer adı başlık biçiminde, iki nokta ile ya da ad öbeği olarak kullanılır.
+ * noktası) edat/çekim gerektiren konuma girmez; ad başlık biçiminde, iki
+ * nokta ile ya da ad öbeği olarak kullanılır.
+ *
+ * İstisna: rehberin kendi şehri/bölgesi. İngilizce aramalar "things to do in
+ * Lisbon", "where to stay in the Algarve" kalıbında yapıldığı için başlık ve
+ * SSS'ler bu kalıpla kuruluyor; artikel isteyen bölge adları ("the Lake
+ * District", "the Azores") aşağıdaki listeyle doğru yazılıyor.
  */
+const WITH_ARTICLE = new Set([
+  "Scottish Highlands", "Cotswolds", "Lake District", "Gili Islands", "Algarve", "Azores",
+  "Black Forest", "Wachau Valley", "Ardennes", "Iron Gates", "Finnish Lakeland",
+  "Åland Islands", "Soča Valley",
+]);
+/** Cümle içinde: "the Lake District", "Lisbon". */
+const inName = (city: string) => (WITH_ARTICLE.has(city) ? `the ${city}` : city);
+
 export const en: GuideTemplates = {
   expanded: {
     seoTitle: (city, focus) => `${city} Travel Guide: ${focus}`,
     metaLead: (city, lede) => `${city} travel guide: ${lede}`,
     h1: (city) => `${city} Travel Guide`,
-    characterHeading: (city) => `${city} at a glance: planning the right route`,
-    sightsHeading: (city) => `${city}: things to see`,
+    characterHeading: (city) => `How to plan a trip to ${inName(city)}`,
+    sightsHeading: (city) => `Things to do in ${inName(city)}`,
     sightsIntro: () =>
       "Grouping the list by what is close together on the map stops you retracing your steps and spending the day's best light on transfers. Fix the big ticketed stops first, then slot squares, parks, markets and waterfront walks in between.",
-    foodHeading: (city) => `${city} food and drink guide`,
-    footballHeading: (city) => `${city}: football and match day`,
-    practicalHeading: (city) => `${city}: what to know before you go`,
+    foodHeading: (city) => `What to eat in ${inName(city)}`,
+    footballHeading: () => "Football and match day",
+    practicalHeading: (city) => `${city} travel tips: what to know before you go`,
+    internationalAudience: true,
+    sectionHeadings: {
+      neighborhoods: () => "Area by area: where to go",
+      stay: (city) => `Where to stay in ${inName(city)}`,
+      transport: (city) => `Getting to and around ${inName(city)}`,
+      nightlife: () => "Cafés, nightlife and shopping",
+      dayTrips: (city) => `Day trips from ${inName(city)}`,
+      when: (city) => `Best time to visit ${inName(city)}`,
+      budget: () => "How to budget for your trip",
+      apps: () => "SIM cards, internet and useful apps",
+      safety: () => "Safety, entry rules and common mistakes",
+    },
   },
   shared: {
     bold: (name, detail) => `**${name}:** ${detail}`,
@@ -25,10 +49,10 @@ export const en: GuideTemplates = {
       `Lock in ${sight}, intercity connections and accommodation first; fix flexible neighbourhood meals later.`,
     dailyPace: () =>
       "Don't put three far-apart areas into one day. One main experience, one neighbourhood and one long meal make for a more sustainable rhythm here.",
-    faqDays: (city) => `${city}: how many days do you need?`,
-    faqStay: (city) => `${city}: where should you stay?`,
-    faqWhen: (city) => `${city}: when is the best time to go?`,
-    faqCombine: (city) => `${city}: what does it combine well with?`,
+    faqDays: (city) => `How many days do you need in ${inName(city)}?`,
+    faqStay: (city) => `Where should you stay in ${inName(city)}?`,
+    faqWhen: (city) => `When is the best time to visit ${inName(city)}?`,
+    faqCombine: (city) => `What can you combine with ${inName(city)} on the same trip?`,
     relatedAnchor: (city) => `${city} travel guide`,
     relatedDescription: () => "Adds a different city rhythm and a new layer to the route.",
     day1Morning: (sight) =>
@@ -63,7 +87,7 @@ export const en: GuideTemplates = {
       `${area1} is practical for a first visit; ${area2} is a more local alternative. Weigh the morning and late-night connections together with the room price.`,
     faqWhenAnswer: (best) =>
       `The most balanced period is generally ${best}; still, check the latest weather, festivals and capacity with official sources.`,
-    faqCarQuestion: (city) => `${city}: do you need a car?`,
+    faqCarQuestion: (city) => `Do you need a car in ${inName(city)}?`,
     faqCarAnswer: (local) =>
       `Getting around: ${local}. Before renting, weigh up parking, licence, insurance, fuel and getting back at night together.`,
     faqCombineAnswer: (cities) =>
@@ -85,7 +109,7 @@ export const en: GuideTemplates = {
     faqDaysAnswer: (days) =>
       `A stay of ${days} makes for a balanced first visit. Rather than ticking off the main sights, leave room for neighbourhoods, food and possible weather or transport delays and the city opens up in a more meaningful way.`,
     faqWhenAnswer: (best, season) => `The most balanced period is generally ${best}. ${season}`,
-    faqCarQuestion: (city) => `${city}: should you rent a car?`,
+    faqCarQuestion: (city) => `Should you rent a car in ${inName(city)}?`,
     faqCarAnswer: (local) =>
       `Getting around: ${local}. Before deciding on a car, weigh up parking, licence, insurance and getting back at night together.`,
     faqCombineAnswer: (cities) =>

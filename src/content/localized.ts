@@ -9,6 +9,8 @@ import { buildGuides, guideFor } from "@/content/guides";
 import { createGuideContext } from "@/content/guides/context";
 import { GUIDE_TEMPLATES } from "@/content/guides/templates";
 import type { CityGuide } from "@/content/guides/types";
+import { EN_GUIDE_SEO } from "@/content/guides/seo.en";
+import { EN_HUB_TITLES } from "@/content/countryHubs.seo.en";
 import { countryHubFor, type CountryHubContent } from "@/content/countryHubs";
 import { dietaryGuideFor, type DestinationDietaryGuide } from "@/content/dietary";
 
@@ -34,11 +36,21 @@ export const contentTranslator = (locale: AppLocale) => new Translator(translati
 
 const guideCache = new Map<AppLocale, { byKey: Map<string, CityGuide>; missing: Map<string, Set<string>> }>();
 
+/**
+ * Arama niyetine göre o dilde ayrıca yazılmış <title> ve meta description
+ * (Türkçe başlığın çevirisi yerine). Şimdilik İngilizce; bkz. guides/seo.en.ts.
+ */
+const GUIDE_SEO: Partial<Record<AppLocale, Record<string, readonly [string, string]>>> = { en: EN_GUIDE_SEO };
+
 function guidesIn(locale: AppLocale) {
   let cached = guideCache.get(locale);
   if (!cached) {
     const ctx = createGuideContext(locale, translationMemory(locale), GUIDE_TEMPLATES[locale]);
-    const list = buildGuides(ctx);
+    const seo = GUIDE_SEO[locale];
+    const list = buildGuides(ctx).map((guide) => {
+      const own = seo?.[`${guide.countryCode}:${guide.city}`];
+      return own ? { ...guide, seoTitle: own[0], seoDescription: own[1] } : guide;
+    });
     cached = { byKey: new Map(list.map((g) => [`${g.countryCode}:${g.city}`, g])), missing: ctx.missing };
     guideCache.set(locale, cached);
   }
@@ -77,7 +89,9 @@ export function localizedHub(countryCode: string, locale: AppLocale): Localized<
   if (locale === "tr") return { value: hub, complete: true };
   const tr = contentTranslator(locale);
   const value = translateDeep(hub, tr.t, HUB_KEYS);
-  return { value, complete: tr.misses.size === 0 };
+  // İngilizcede başlık arama niyetine göre ayrıca yazıldı (countryHubs.seo.en.ts).
+  const title = locale === "en" ? EN_HUB_TITLES[countryCode] : undefined;
+  return { value: title ? { ...value, seoTitle: title } : value, complete: tr.misses.size === 0 };
 }
 
 /**

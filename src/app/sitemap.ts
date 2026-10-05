@@ -5,6 +5,7 @@ import { routing, type AppLocale } from "@/i18n/routing";
 import { cityPageLocales, countryPageLocales, guideIndexLocales } from "@/content/localized";
 import { localizedUrl, translatedAlternates } from "@/i18n/seo";
 import { legalPageLocales } from "@/components/legal/locales";
+import { SITE } from "@/lib/site";
 
 /**
  * Statik export'ta (Capacitor uygulama derlemesi) bu metadata route'ları
@@ -56,9 +57,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...entries("/kullanim-kosullari", legalPageLocales(), { priority: 0.2 }),
   ];
 
-  const countryPages: MetadataRoute.Sitemap = countries.flatMap((c) =>
-    entries(`/${countrySlug(c)}`, countryPageLocales(c), { priority: 0.8 })
-  );
+  // Görseller (Google Görseller için image sitemap): sayfanın kendi fotoğrafı.
+  const image = (src: string | undefined) => (src ? { images: [new URL(src, SITE.url).href] } : {});
+
+  const countryPages: MetadataRoute.Sitemap = countries.flatMap((c) => {
+    // Ülke sayfası, içindeki en son gözden geçirilen rehberle birlikte güncellenir.
+    const reviewed = c.cities
+      .map((city) => guideFor(c.code, city.name)?.reviewed)
+      .filter((d): d is string => !!d)
+      .sort()
+      .at(-1);
+    return entries(`/${countrySlug(c)}`, countryPageLocales(c), {
+      priority: 0.8,
+      ...(reviewed ? { lastModified: new Date(reviewed) } : {}),
+      ...image(c.image),
+    });
+  });
 
   const cityPages: MetadataRoute.Sitemap = countries.flatMap((c) =>
     c.cities.flatMap((city) => {
@@ -67,6 +81,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         ? entries(`/${countrySlug(c)}/${citySlug(city)}`, cityPageLocales(c, city.name), {
             lastModified: new Date(guide.reviewed),
             priority: 0.9,
+            ...image(city.image),
           })
         : [];
     })

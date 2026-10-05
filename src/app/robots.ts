@@ -12,7 +12,8 @@ export const dynamic = "force-static";
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: { userAgent: "*", allow: "/" },
+    // /api: istemcinin JSON uçları (konum, arama sözlüğü); sayfa değiller.
+    rules: { userAgent: "*", allow: "/", disallow: "/api/" },
     sitemap: absolute("/sitemap.xml"),
     host: SITE.url,
   };

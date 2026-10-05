@@ -187,20 +187,23 @@ export default async function CountryPage({ params }: { params: Promise<Params> 
         </p>
 
         {/* hızlı bilgiler — hepsi mevcut, doğrulanmış veriden */}
+        {/* Uçuş süresi İstanbul kalkışlı; yalnız Türkçe okur için anlamlı. */}
         <section
           aria-label={tGuide("quickFacts")}
-          className="mt-12 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.06] sm:grid-cols-3 lg:grid-cols-5"
+          className={`mt-12 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.06] ${locale === "tr" ? "sm:grid-cols-3 lg:grid-cols-5" : "lg:grid-cols-4"}`}
         >
           <Fact label={t("fact.gateway")} value={`${local.gateway} · ${country.iata}`} />
           <Fact label={t("fact.capital")} value={local.capital} />
-          <Fact
-            label={t("fact.flightTime")}
-            value={
-              country.code === "TR"
-                ? t("fact.domestic")
-                : t("fact.fromIstanbul", { time: localizeFlightTime(country.flightTime, locale, tData) })
-            }
-          />
+          {locale === "tr" && (
+            <Fact
+              label={t("fact.flightTime")}
+              value={
+                country.code === "TR"
+                  ? t("fact.domestic")
+                  : t("fact.fromIstanbul", { time: localizeFlightTime(country.flightTime, locale, tData) })
+              }
+            />
+          )}
           <Fact
             label={t("fact.bestSeason")}
             value={localizeBestSeason(country.bestSeason, locale, tData, format)}

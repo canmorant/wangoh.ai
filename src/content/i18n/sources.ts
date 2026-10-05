@@ -64,9 +64,12 @@ export function collectSources(): Map<string, SourceText> {
   }
 
   // Rehberler: boş bellekli bir bağlam her eksiği kendi rehberine yazar.
-  // Kalıplar dilden bağımsız olarak aynı kaynak metinleri ister; hangi dilin
-  // kalıbının kullanıldığı burada önemsiz.
-  const ctx = createGuideContext("en", new Map(), anyTemplates);
+  // Kalıplar dilden bağımsız olarak aynı kaynak metinleri ister; istisnalar
+  // dile özgü iki seçenek: sectionHeadings (bölüm başlıklarını bellekten
+  // istemez) ve internationalAudience (Türkiye'ye özel kaynakları atlar).
+  // Kayıt, en geniş metin kümesini görsün diye ikisi de kapalı.
+  const expanded = { ...anyTemplates.expanded, sectionHeadings: undefined, internationalAudience: undefined };
+  const ctx = createGuideContext("en", new Map(), { ...anyTemplates, expanded });
   buildGuides(ctx);
   for (const [scope, texts] of ctx.missing) for (const text of texts) add(text, "guides", scope);
 

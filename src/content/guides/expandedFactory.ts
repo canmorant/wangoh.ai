@@ -74,7 +74,7 @@ const countryResearch = {
       "Ekonomik planda merkez dışı yatak/oda, menú del día, toplu taşıma ve günde tek ücretli ziyaret; orta bütçede merkezî çift kişilik oda, bir iyi restoran ve iki ücretli ziyaret; rahat planda ise merkezî üst segment otel, taksi ve tadım menüsü öne çıkar. Konaklama fuar, maç ve yaz haftalarında günlük harcamanın tamamından daha hızlı değişebildiği için sabit avro rakamını rezervasyon tarihindeki gerçek fiyatla yenileyin.",
     sources: [
       { name: "Spain.info — resmî destinasyonlar", url: "https://www.spain.info/en/destinations/" },
-      { name: "İspanya İstanbul Başkonsolosluğu — Schengen vizesi", url: "https://www.exteriores.gob.es/Consulados/estambul/es/ServiciosConsulares/Paginas/index.aspx?scca=Visados&scco=Turqu%C3%ADa&scd=141&scs=Visado+de+estancia+%28visado+Schengen%29" },
+      { name: "İspanya İstanbul Başkonsolosluğu — Schengen vizesi", url: "https://www.exteriores.gob.es/Consulados/estambul/es/ServiciosConsulares/Paginas/index.aspx?scca=Visados&scco=Turqu%C3%ADa&scd=141&scs=Visado+de+estancia+%28visado+Schengen%29", audience: "tr" },
       { name: "Avrupa Komisyonu — EES ve ETIAS", url: "https://home-affairs.ec.europa.eu/news/main-differences-between-ees-and-etias-what-travellers-need-know-2026-04-28_en" },
       { name: "Renfe — tren yolculuğu", url: "https://www.renfe.com/es/en" },
     ],
@@ -154,7 +154,7 @@ const countryResearch = {
       "Ekonomik planda metro, hızlı trenin uygun sınıfı, yerel lokanta ve merkez dışı otel; orta bütçede merkezî konaklama, seçilmiş hızlı tren/uçuş ve birkaç biletli gösteri; rahat planda özel transfer, yüksek hızlı trenin üst sınıfı ve uluslararası otel öne çıkar. Ulusal tatil ile festival haftaları ulaşım ve oda fiyatlarını sert biçimde yükseltir; tek günlük rakamdan çok şehirler arası bilet, giriş ve konaklamayı ayrı bütçeleyin.",
     sources: [
       { name: "Çin Ulusal Göç İdaresi — 240 saat transit politikası", url: "https://www.nia.gov.cn/n741440/n741577/c1731205/content.html" },
-      { name: "Çin Vize Başvuru Merkezi — İstanbul", url: "https://bio.visaforchina.cn/IST3_EN" },
+      { name: "Çin Vize Başvuru Merkezi — İstanbul", url: "https://bio.visaforchina.cn/IST3_EN", audience: "tr" },
       { name: "China Railway 12306 — resmî bilet", url: "https://www.12306.cn/en/index.html" },
       { name: "Çin Kültür ve Turizm Bakanlığı", url: "https://www.mct.gov.cn/" },
     ],
@@ -174,7 +174,7 @@ const countryResearch = {
       "Ekonomik planda hostel/merkez dışı oda, süpermarket–pazar öğünü, OVpay ve ücretsiz yürüyüş; orta bütçede merkezî oda, müze kartı hesabı ve bir iyi restoran; rahat planda kanal manzaralı otel, taksi ve özel tur öne çıkar. Amsterdam konaklaması ile bahar lale haftaları ülke ortalamasını yanıltır; Utrecht, Haarlem, Leiden veya Rotterdam'ı üs yapmak hem bütçeyi hem günü dengeleyebilir.",
     sources: [
       { name: "Holland.com — resmî Hollanda turizm portalı", url: "https://www.holland.com/global/tourism.htm" },
-      { name: "NetherlandsWorldwide — Türkiye'den Schengen vizesi", url: "https://www.netherlandsworldwide.nl/visa-the-netherlands/schengen-visa/apply-turkiye" },
+      { name: "NetherlandsWorldwide — Türkiye'den Schengen vizesi", url: "https://www.netherlandsworldwide.nl/visa-the-netherlands/schengen-visa/apply-turkiye", audience: "tr" },
       { name: "NS — banka kartıyla OVpay", url: "https://www.ns.nl/en/travel-information/check-in-check-out/debit-card" },
       { name: "9292 — ülke çapında yolculuk planlama", url: "https://9292.nl/en" },
     ],
@@ -194,7 +194,7 @@ const countryResearch = {
       "Ekonomik planda tren ön alımı, pansiyon, market–fırın öğünü ve ücretsiz yürüyüş; orta bütçede merkezî oda, müze ve bir dağ hattı; rahat planda iyi konumlu otel, teleferik, spa ve restoran öne çıkar. Kayak, festival ve Noel pazarı haftalarında oda ile tren fiyatını ayrı ayrı güncelleyin.",
     sources: [
       { name: "Austria.info — resmî destinasyon rehberi", url: "https://www.austria.info/en/" },
-      { name: "AB Türkiye Delegasyonu — Schengen vizesi", url: "https://www.eeas.europa.eu/delegations/t%C3%BCrkiye/visa_en" },
+      { name: "AB Türkiye Delegasyonu — Schengen vizesi", url: "https://www.eeas.europa.eu/delegations/t%C3%BCrkiye/visa_en", audience: "tr" },
       { name: "Avrupa Komisyonu — EES ve ETIAS", url: "https://home-affairs.ec.europa.eu/news/main-differences-between-ees-and-etias-what-travellers-need-know-2026-04-28_en" },
       { name: "ÖBB — Avusturya tren bağlantıları", url: "https://www.oebb.at/en/reiseplanung-services/oebb-zugverbindungen/zugverbindungen-oesterreich" },
     ],
@@ -214,7 +214,7 @@ const countryResearch = {
       "Ekonomik planda hostel/pansiyon, tasca, tren ön alımı ve ücretsiz miradouro; orta bütçede merkezî oda, bir iyi deniz ürünü yemeği ve seçilmiş müze; rahat planda butik otel, özel transfer ve tekne turu öne çıkar. Lizbon, Algarve ve ada uçuşlarında yüksek sezon fiyatı ülke ortalamasını aşar.",
     sources: [
       { name: "Visit Portugal — resmî turizm portalı", url: "https://www.visitportugal.com/en" },
-      { name: "AB Türkiye Delegasyonu — Schengen vizesi", url: "https://www.eeas.europa.eu/delegations/t%C3%BCrkiye/visa_en" },
+      { name: "AB Türkiye Delegasyonu — Schengen vizesi", url: "https://www.eeas.europa.eu/delegations/t%C3%BCrkiye/visa_en", audience: "tr" },
       { name: "CP — Portekiz demiryolları", url: "https://www.cp.pt/passageiros/en" },
       { name: "Visit Portugal — trenle Portekiz", url: "https://www.visitportugal.com/en/content/portugal-train" },
     ],
@@ -234,7 +234,7 @@ const countryResearch = {
       "Ekonomik planda hostel, fırın/market öğünü, bölgesel ulaşım ve ücretsiz müze zamanı; orta bütçede merkezî oda, bir ICE bağlantısı ve ücretli koleksiyon; rahat planda iyi otel, esnek tren bileti ve uzun akşam yemeği öne çıkar. Fuar, Oktoberfest, maç ve Noel pazarı tarihleri konaklamayı sert yükseltir.",
     sources: [
       { name: "Germany Travel — resmî turizm portalı", url: "https://www.germany.travel/en/home.html" },
-      { name: "AB Türkiye Delegasyonu — Schengen vizesi", url: "https://www.eeas.europa.eu/delegations/t%C3%BCrkiye/visa_en" },
+      { name: "AB Türkiye Delegasyonu — Schengen vizesi", url: "https://www.eeas.europa.eu/delegations/t%C3%BCrkiye/visa_en", audience: "tr" },
       { name: "Deutsche Bahn — resmî tren planlama", url: "https://int.bahn.de/en" },
       { name: "Germany Travel — Almanya'da tren yolculuğu", url: "https://www.germany.travel/en/inspiring-germany/rail-travel.html" },
     ],
@@ -254,7 +254,7 @@ const countryResearch = {
       "Ekonomik planda otobüs, merkez dışı oda, mercado ve yerel lokanta; orta bütçede butik otel, seçilmiş iç hat ve küçük grup turu; rahat planda kıyı tesisi, özel transfer ve rehberli arkeoloji günü öne çıkar. Riviera Maya, Los Cabos ve festival dönemleri ülke ortalamasından belirgin pahalıdır.",
     sources: [
       { name: "Visit Mexico — resmî destinasyon portalı", url: "https://visitmexico.com/en/" },
-      { name: "Meksika İstanbul Başkonsolosluğu — Türk vatandaşları için elektronik vize", url: "https://consulmex.sre.gob.mx/estambul/index.php/consular-services" },
+      { name: "Meksika İstanbul Başkonsolosluğu — Türk vatandaşları için elektronik vize", url: "https://consulmex.sre.gob.mx/estambul/index.php/consular-services", audience: "tr" },
       { name: "Tren Maya — resmî yolcu bilgileri", url: "https://trenmaya.gob.mx/" },
       { name: "ADO — resmî otobüs bileti", url: "https://international.ado.com.mx/?locale=en" },
     ],
@@ -332,7 +332,7 @@ const countryResearch = {
       "Ekonomik planda hostel, market öğünü, belediye çeşmesi ve ön alımlı ulaşım; orta bütçede merkezî oda, birkaç müze ve tek bir dağ hattı; rahat planda iyi otel, panoramik tren, teleferik ve uzun akşam yemeği öne çıkar. Swiss Travel Pass her rotada otomatik en ucuz seçenek değildir; Half Fare Card ve tek bilet toplamıyla karşılaştırın.",
     sources: [
       { name: "Switzerland Tourism — resmî destinasyon portalı", url: "https://www.myswitzerland.com/en/" },
-      { name: "AB Türkiye Delegasyonu — Schengen vizesi", url: "https://www.eeas.europa.eu/delegations/t%C3%BCrkiye/visa_en" },
+      { name: "AB Türkiye Delegasyonu — Schengen vizesi", url: "https://www.eeas.europa.eu/delegations/t%C3%BCrkiye/visa_en", audience: "tr" },
       { name: "SBB — resmî yolculuk planlama", url: "https://www.sbb.ch/en" },
       { name: "MeteoSwiss — resmî hava ve uyarılar", url: "https://www.meteoswiss.admin.ch/" },
     ],
@@ -353,7 +353,7 @@ const countryResearch = {
     sources: [
       { name: "Visit Flanders — resmî Flandre rehberi", url: "https://www.visitflanders.com/en" },
       { name: "Visit Wallonia — resmî Valonya rehberi", url: "https://visitwallonia.com/en-gb" },
-      { name: "AB Türkiye Delegasyonu — Schengen vizesi", url: "https://www.eeas.europa.eu/delegations/t%C3%BCrkiye/visa_en" },
+      { name: "AB Türkiye Delegasyonu — Schengen vizesi", url: "https://www.eeas.europa.eu/delegations/t%C3%BCrkiye/visa_en", audience: "tr" },
       { name: "SNCB/NMBS — resmî tren planlama", url: "https://www.belgiantrain.be/en" },
     ],
   },
@@ -372,7 +372,7 @@ const countryResearch = {
       "Ekonomik planda pansiyon/hostel, günlük menü, toplu taşıma ve ücretsiz yürüyüş; orta bütçede merkezî oda, termal banyo, tren ve seçilmiş şarap deneyimi; rahat planda butik otel, taksi/özel transfer ve uzun akşam yemeği öne çıkar. Formula 1, Sziget, yılbaşı ve Balaton yazı fiyatları ülke ortalamasını aşar.",
     sources: [
       { name: "Visit Hungary — resmî destinasyon portalı", url: "https://visithungary.com/" },
-      { name: "AB Türkiye Delegasyonu — Schengen vizesi", url: "https://www.eeas.europa.eu/delegations/t%C3%BCrkiye/visa_en" },
+      { name: "AB Türkiye Delegasyonu — Schengen vizesi", url: "https://www.eeas.europa.eu/delegations/t%C3%BCrkiye/visa_en", audience: "tr" },
       { name: "MÁV — resmî tren ve otobüs bilgisi", url: "https://www.mavcsoport.hu/en" },
       { name: "BKK — Budapeşte toplu taşıması", url: "https://bkk.hu/en/" },
     ],
@@ -392,7 +392,7 @@ const countryResearch = {
       "Ekonomik planda pansiyon/hostel, günlük menü, bölgesel tren ve ücretsiz merkez yürüyüşü; orta bütçede merkezî oda, iki müze ve bir kale/spa deneyimi; rahat planda butik otel, iyi restoran ve özel transfer öne çıkar. Prag hafta sonu ile Karlovy Vary etkinlik takviminde konaklama ülke ortalamasını aşabilir.",
     sources: [
       { name: "Visit Czechia — resmî destinasyon portalı", url: "https://www.visitczechia.com/en-us" },
-      { name: "Çekya Ankara Büyükelçiliği — vize bilgisi", url: "https://mzv.gov.cz/ankara/en/visa_and_consular_information/visas/index.html" },
+      { name: "Çekya Ankara Büyükelçiliği — vize bilgisi", url: "https://mzv.gov.cz/ankara/en/visa_and_consular_information/visas/index.html", audience: "tr" },
       { name: "České dráhy — resmî tren planlama", url: "https://www.cd.cz/en/" },
       { name: "CzechTourism — erişim ve rota planı", url: "https://www.visitczechia.com/en-us" },
     ],
@@ -412,7 +412,7 @@ const countryResearch = {
       "Ekonomik planda hostel/pansiyon, süt barı, belediye ulaşımı ve seçilmiş müze; orta bütçede merkezî oda, hızlı tren ve iki ücretli ziyaret; rahat planda butik otel, iyi restoran ve rehberli hafıza/doğa turu öne çıkar. Kraków, Gdańsk yazı, yılbaşı ve Zakopane kayak haftaları fiyatları hızlı yükseltir.",
     sources: [
       { name: "Poland Travel — resmî destinasyon portalı", url: "https://www.poland.travel/en/" },
-      { name: "Polonya'nın Türkiye temsilciliği — vize bilgisi", url: "https://www.gov.pl/web/turcja/wizy-informacje-ogolne" },
+      { name: "Polonya'nın Türkiye temsilciliği — vize bilgisi", url: "https://www.gov.pl/web/turcja/wizy-informacje-ogolne", audience: "tr" },
       { name: "PKP Intercity — resmî tren planlama", url: "https://www.intercity.pl/en/" },
       { name: "Tatra Milli Parkı — resmî patika ve bilet", url: "https://tpn.gov.pl/" },
     ],
@@ -432,7 +432,7 @@ const countryResearch = {
       "Ekonomik planda merkez dışı oda, metro, market/lokanta ve seçilmiş müze; orta bütçede merkezî otel, uzun mesafe tren/uçuş ve birkaç biletli saray; rahat planda iyi otel, rehber ve özel doğa transferi öne çıkar. Kur, uluslararası ödeme erişimi, yaptırımlar ve ulaşım arzı hızlı değişebildiği için sabit ruble hesabını rezervasyon günündeki yasal ödeme olanağıyla birlikte yenileyin.",
     sources: [
       { name: "Rusya Dışişleri — birleşik elektronik vize", url: "https://evisa.kdmid.ru/Home/Instruction" },
-      { name: "T.C. Dışişleri — Rusya seyahat duyurusu", url: "https://www.mfa.gov.tr/rusya-federasyonu_na-seyahat-edecek-vatandaslarimizin-dikkatine_.tr.mfa" },
+      { name: "T.C. Dışişleri — Rusya seyahat duyurusu", url: "https://www.mfa.gov.tr/rusya-federasyonu_na-seyahat-edecek-vatandaslarimizin-dikkatine_.tr.mfa", audience: "tr" },
       { name: "Russian Railways — resmî tren bilgisi", url: "https://eng.rzd.ru/" },
       { name: "Birleşik Krallık FCDO — güncel Rusya seyahat uyarısı", url: "https://www.gov.uk/foreign-travel-advice/russia" },
       { name: "Rusya Hükümeti — Turizm ve Konukseverlik projesi", url: "https://government.ru/rugovclassifier/920/" },
@@ -447,7 +447,7 @@ const countryResearch = {
     connectivity: "Srbija Voz tren bilgisi için, şehirlerde resmî ulaşım işletmesi ve otobüs terminali kaynakları için kullanılır. Belgrad–Novi Sad hızlı hattı güçlü olsa da bütün ülke demiryoluyla aynı kolaylıkta bağlanmaz. Dağ ve milli parkta son otobüs, telefon kapsaması, yol/tekne kapanışı ile çevrimdışı haritayı önceden kaydedin.",
     budgetFrame: "Ekonomik planda pansiyon/hostel, pekara, günlük menü ve toplu taşıma; orta bütçede merkezî oda, müze, tren/otobüs ve bir doğa turu; rahat planda butik otel, iyi restoran ve özel transfer öne çıkar. EXIT, yılbaşı, büyük maç ve kayak haftalarında oda fiyatı ülke ortalamasını aşar.",
     sources: [
-      { name: "Sırbistan Dışişleri — Türkiye vize rejimi", url: "https://www.mfa.gov.rs/en/citizens/travel-serbia/visa-regime/turska" },
+      { name: "Sırbistan Dışişleri — Türkiye vize rejimi", url: "https://www.mfa.gov.rs/en/citizens/travel-serbia/visa-regime/turska", audience: "tr" },
       { name: "Serbia Travel — resmî destinasyon portalı", url: "https://www.serbia.travel/en/" },
       { name: "Srbija Voz — resmî tren bilgisi", url: "https://srbijavoz.rs/en/" },
     ],
@@ -461,8 +461,8 @@ const countryResearch = {
     connectivity: "Kıyıda otobüs ana omurgadır; yaz trafiği harita süresini katlayabilir. ŽPCG Podgorica–Bar ve kuzey trenlerinde temel kaynaktır. Kotor–Lepetane feribotu, milli park yolları, kanjon/rafting ve teleferik için işletme duyurusunu aynı gün kontrol edin; son otobüsü çevrimdışı kaydedin.",
     budgetFrame: "Ekonomik planda merkez dışı pansiyon, otobüs, fırın ve ücretsiz koy yürüyüşü; orta bütçede eski şehir yakını oda, tekne ve milli park; rahat planda koy manzaralı otel, iyi restoran ve özel kuzey transferi öne çıkar. Temmuz–Ağustos'ta Kotor/Budva konaklaması Balkan iç bölgesinden belirgin pahalıdır.",
     sources: [
-      { name: "Karadağ Hükümeti — 1 Kasım 2026 vize değişikliği", url: "https://www.gov.me/en/article/montenegro-fully-aligns-its-visa-policy-with-the-european-union-citizens-of-numerous-countries-can-now-apply-for-a-montenegrin-visa" },
-      { name: "Karadağ Hükümeti — Türkler için 30 günlük muafiyet", url: "https://www.gov.me/en/article/montenegro-continues-to-align-its-visa-policy-with-the-eu" },
+      { name: "Karadağ Hükümeti — 1 Kasım 2026 vize değişikliği", url: "https://www.gov.me/en/article/montenegro-fully-aligns-its-visa-policy-with-the-european-union-citizens-of-numerous-countries-can-now-apply-for-a-montenegrin-visa", audience: "tr" },
+      { name: "Karadağ Hükümeti — Türkler için 30 günlük muafiyet", url: "https://www.gov.me/en/article/montenegro-continues-to-align-its-visa-policy-with-the-eu", audience: "tr" },
       { name: "Montenegro Travel — resmî destinasyon portalı", url: "https://www.montenegro.travel/en" },
       { name: "ŽPCG — resmî tren bilgisi", url: "https://zpcg.me/en" },
     ],
@@ -476,7 +476,7 @@ const countryResearch = {
     connectivity: "Ülkenin ulaşımı idari yapılara göre parçalıdır. ŽFBH Sarajevo–Mostar–Čapljina hattında, ŽRS kuzeyde çalışır; otobüs çoğu rota için daha yaygındır fakat tek ulusal canlı sistem yoktur. Terminali, kalkış peronunu, sınır geçişini ve son bağlantıyı doğrudan işletmeden doğrulayın.",
     budgetFrame: "Ekonomik planda pansiyon, börek/čevapi, yürüyüş ve şehirler arası otobüs; orta bütçede merkezî oda, müze ve bir şelale/doğa günü; rahat planda butik otel, rehber ve özel transfer öne çıkar. Mostar yazı, Saraybosna Film Festivali ve rafting haftalarında fiyat hızla değişir.",
     sources: [
-      { name: "T.C. Dışişleri — Türk vatandaşlarının vize uygulamaları", url: "https://www.mfa.gov.tr/turk-vatandaslarinin-tabi-oldugu-vize-uygulamalari.tr.mfa" },
+      { name: "T.C. Dışişleri — Türk vatandaşlarının vize uygulamaları", url: "https://www.mfa.gov.tr/turk-vatandaslarinin-tabi-oldugu-vize-uygulamalari.tr.mfa", audience: "tr" },
       { name: "Bosna-Hersek Dışişleri — yabancılar ve vize mevzuatı", url: "https://mvp.gov.ba/konzularne_informacije/vize/default.aspx?id=8685&langTag=en-US" },
       { name: "ŽFBH — tren bilgisi", url: "https://www.zfbh.ba/en/" },
     ],
@@ -490,7 +490,7 @@ const countryResearch = {
     connectivity: "Şehirler arası omurga otobüs ve furgondur; çevrimiçi saatler eksik veya gayriresmî olabilir. Kalkış terminalini ve ücreti konaklama/işletmeden bir gün önce doğrulayın. Theth, Valbona ve Riviera'da yol, feribot, parkur, nakit ve kapsama planı yapın; çevrimdışı harita taşıyın.",
     budgetFrame: "Ekonomik planda aile pansiyonu, furgon, byrek ve plaj; orta bütçede merkezî oda, araç/otobüs ve arkeoloji bileti; rahat planda butik taş ev, iyi restoran ve özel dağ/kıyı transferi öne çıkar. Temmuz–Ağustos'ta Ksamil–Sarandë–Himarë fiyatı ülke ortalamasını aşar.",
     sources: [
-      { name: "T.C. Dışişleri — Arnavutluk seyahat duyurusu", url: "https://www.mfa.gov.tr/arnavutluk-seyahat-edecek-turk-vatandaslarinin-dikkatine.tr.mfa" },
+      { name: "T.C. Dışişleri — Arnavutluk seyahat duyurusu", url: "https://www.mfa.gov.tr/arnavutluk-seyahat-edecek-turk-vatandaslarinin-dikkatine.tr.mfa", audience: "tr" },
       { name: "Tiran Büyükelçiliği — sınır ve giriş bilgisi", url: "https://tiran-be.mfa.gov.tr/Mission/ShowInfoNote/395001" },
       { name: "Arnavutluk Ulusal Turizm Ajansı", url: "https://akt.gov.al/en/" },
     ],
@@ -518,7 +518,7 @@ const countryResearch = {
     connectivity: "Zagreb merkezli ana kara treninde HŽPP kullanılır; Dalmaçya kıyısı ve adalarda otobüs ile feribot daha önemlidir. Ada seferi, araç yeri ve son bağlantı yazın dolabilir; HŽPP, liman işletmesi ve feribot şirketinin resmî duyurusunu aynı gün kontrol edin.",
     budgetFrame: "Ekonomik planda pansiyon, fırın, otobüs ve ücretsiz kıyı; orta bütçede eski şehir dışı oda, feribot, müze ve park bileti; rahat planda sur içi/butik konaklama, tekne ve özel transfer öne çıkar. Dubrovnik, Hvar ve Split yazı ülke ortalamasından belirgin pahalıdır.",
     sources: [
-      { name: "Hırvatistan Dışişleri — Türkiye vize şartları", url: "https://mvep.gov.hr/services-for-citizens/consular-informations/visas-22807/visa-requirements-overview-22879/22879?country=140" },
+      { name: "Hırvatistan Dışişleri — Türkiye vize şartları", url: "https://mvep.gov.hr/services-for-citizens/consular-informations/visas-22807/visa-requirements-overview-22879/22879?country=140", audience: "tr" },
       { name: "Croatia Full of Life — resmî turizm portalı", url: "https://croatia.hr/en-gb" },
       { name: "HŽPP — resmî tren bilgisi", url: "https://www.hzpp.hr/en" },
     ],
@@ -532,7 +532,7 @@ const countryResearch = {
     connectivity: "Slovenske železnice Ljubljana–Maribor, Bled çevresi ve bazı kıyı bağlantılarında yararlıdır; Bohinj, Soča ve dağ köylerinde otobüs/shuttle gerekir. Park rezervasyonu, yol çalışması, son otobüs, teleferik ve dağ havasını aynı gün kontrol edin; çevrimdışı harita taşıyın.",
     budgetFrame: "Ekonomik planda pansiyon/hostel, tren-otobüs, market/gostilna ve yürüyüş; orta bütçede merkezî oda, mağara, göl teknesi ve shuttle; rahat planda göl/dağ oteli, iyi restoran ve özel transfer öne çıkar. Bled yazı, kayak haftası ve hafta sonu spa fiyatı ortalamayı yükseltir.",
     sources: [
-      { name: "Slovenya Ankara Büyükelçiliği — vize bilgisi", url: "https://www.gov.si/en/representations/embassy-ankara/visa-information/" },
+      { name: "Slovenya Ankara Büyükelçiliği — vize bilgisi", url: "https://www.gov.si/en/representations/embassy-ankara/visa-information/", audience: "tr" },
       { name: "I feel Slovenia — resmî turizm portalı", url: "https://www.slovenia.info/en" },
       { name: "Slovenske železnice — resmî tren bilgisi", url: "https://potniski.sz.si/en/" },
     ],
@@ -546,7 +546,7 @@ const countryResearch = {
     connectivity: "Entur ülke genelindeki tren, otobüs, feribot ve bazı yerel bağlantıları birlikte aramak için ana planlayıcıdır; işletmeci bileti ve koltuk rezervasyonu ayrıca gerekebilir. Fiyort feribotu, dağ yolu, kış konvoyu ve kuzey uçuşu hava nedeniyle değişebilir; her uzak gün için çevrimdışı bilet ve yedek rota tutun.",
     budgetFrame: "Ekonomik planda hostel/hytte, market öğünü ve toplu taşıma; orta bütçede merkez dışı oda, tren ve birkaç fiyort deneyimi; rahat planda manzaralı otel, iç hat ve rehberli doğa turu öne çıkar. Oslo ile Lofoten veya Tromsø'yu aynı günlük maliyet sanmayın; araç, köprü/feribot ve tek yön bırakma ücretini ayrıca yazın.",
     sources: [
-      { name: "Norveç Göçmenlik Müdürlüğü — Türkiye için ziyaretçi vizesi", url: "https://udi.no/en/want-to-apply/visit-and-holiday/visitors-visa-to-norway/?c=tur" },
+      { name: "Norveç Göçmenlik Müdürlüğü — Türkiye için ziyaretçi vizesi", url: "https://udi.no/en/want-to-apply/visit-and-holiday/visitors-visa-to-norway/?c=tur", audience: "tr" },
       { name: "Visit Norway — resmî gezi planlama portalı", url: "https://www.visitnorway.com/plan-your-trip/getting-around/" },
       { name: "Entur — resmî toplu taşıma planlayıcısı", url: "https://entur.no/" },
     ],
@@ -574,7 +574,7 @@ const countryResearch = {
     connectivity: "DSB ana şehirler arası ve banliyö hatlarında temel kaynaktır; Rejseplanen farklı işletmecileri birlikte gösterebilir. Kopenhag metrosu, S-tren, bölgesel tren, otobüs ve liman otobüsü aynı yolculukta birleşebilir; doğru zon ve check-in kuralını kontrol edin. Bornholm feribotu ve ada otobüsü ayrı kapasite planı ister.",
     budgetFrame: "Ekonomik planda hostel, fırın/market ve şehir kartı karşılaştırması; orta bütçede merkez dışı oda, tren ve birkaç müze; rahat planda merkez oteli, tasarım restoranı ve ada/şato günü öne çıkar. Kopenhag fiyatını Ribe veya Aalborg'a taşımayın; bisiklet, köprü/feribot, müze ve kahvaltıyı görünen oda fiyatına ekleyin.",
     sources: [
-      { name: "Danimarka Dışişleri — Türkiye vatandaşları için vize bilgisi", url: "https://um.dk/tyrkiet/rejse-og-ophold/rejse-til-danmark/visum-og-opholdstilladelse-til-danmark/" },
+      { name: "Danimarka Dışişleri — Türkiye vatandaşları için vize bilgisi", url: "https://um.dk/tyrkiet/rejse-og-ophold/rejse-til-danmark/visum-og-opholdstilladelse-til-danmark/", audience: "tr" },
       { name: "VisitDenmark — resmî destinasyon portalı", url: "https://www.visitdenmark.com/" },
       { name: "DSB — resmî tren ve sefer bilgisi", url: "https://www.dsb.dk/en/" },
     ],
@@ -588,7 +588,7 @@ const countryResearch = {
     connectivity: "VR güney şehirleri ile kuzey arasındaki tren ve gece treni omurgasını işletir; şehirlerde yerel uygulamalar, takımadalarda feribot ve kuzeyde otobüs/transfer gerekir. Rovaniemi ve Kemijärvi gece treninde yatak, araç taşıma ve istasyon seçimini ayrı kontrol edin. Kışta kar, ren geyiği trafiği ve kısa gün ışığı nedeniyle aktarmalara geniş pay bırakın.",
     budgetFrame: "Ekonomik planda hostel, market, tren ve halka açık sauna; orta bütçede merkezî oda, gece treni ve göl/ada günü; rahat planda cam kabin, özel transfer ve rehberli kış aktivitesi öne çıkar. Helsinki ile Lapland fiyatını eşitlemeyin; termal kıyafet, bagaj, sauna, milli park transferi ve tur iptal koşulunu ayrı hesaplayın.",
     sources: [
-      { name: "Finlandiya'nın Türkiye temsilciliği — vize gerekliliği", url: "https://finlandabroad.fi/web/tur/find-out-if-you-need-a-visa" },
+      { name: "Finlandiya'nın Türkiye temsilciliği — vize gerekliliği", url: "https://finlandabroad.fi/web/tur/find-out-if-you-need-a-visa", audience: "tr" },
       { name: "Visit Finland — resmî destinasyon portalı", url: "https://www.visitfinland.com/en/" },
       { name: "VR — resmî tren ve gece treni bilgisi", url: "https://www.vr.fi/en" },
     ],
@@ -675,6 +675,7 @@ export function makeExpandedGuides(
  */
 export function buildExpandedGuide(profile: ExpandedGuideProfile, ctx: GuideContext = TR_CONTEXT): CityGuide {
   const { t, T } = ctx;
+  const H = T.expanded.sectionHeadings;
   const shared = countryResearch[profile.countryCode];
   const city = t(profile.city);
   const seoTitle = T.expanded.seoTitle(city, profile.searchFocus);
@@ -787,10 +788,10 @@ export function buildExpandedGuide(profile: ExpandedGuideProfile, ctx: GuideCont
         subsections: profile.highlights.map(([heading, text]) => ({ heading, body: [text] })),
       },
       {
-        heading: t("Semt semt gezi ve konaklama kararı"),
+        heading: H?.neighborhoods(city) ?? t("Semt semt gezi ve konaklama kararı"),
         id: "semtler-konaklama",
         body: profile.neighborhoods,
-        subsections: [{ heading: t("Nerede kalınır?"), body: profile.stay }],
+        subsections: [{ heading: H?.stay(city) ?? t("Nerede kalınır?"), body: profile.stay }],
       },
       {
         heading: T.expanded.foodHeading(city),
@@ -798,12 +799,12 @@ export function buildExpandedGuide(profile: ExpandedGuideProfile, ctx: GuideCont
         body: profile.cuisine,
       },
       {
-        heading: t("Havalimanı, tren ve şehir içi ulaşım"),
+        heading: H?.transport(city) ?? t("Havalimanı, tren ve şehir içi ulaşım"),
         id: "ulasim",
         body: [profile.arrival, profile.gettingAround, t(shared.payments)],
       },
       {
-        heading: t("Kahve, gece hayatı, alışveriş ve yerel ritim"),
+        heading: H?.nightlife(city) ?? t("Kahve, gece hayatı, alışveriş ve yerel ritim"),
         id: "gece-kahve-alisveris",
         body: profile.nightlifeShopping,
       },
@@ -817,27 +818,27 @@ export function buildExpandedGuide(profile: ExpandedGuideProfile, ctx: GuideCont
           ]
         : []),
       {
-        heading: t("Günübirlik geziler ve rotayı büyütmek"),
+        heading: H?.dayTrips(city) ?? t("Günübirlik geziler ve rotayı büyütmek"),
         id: "gunubirlik-geziler",
         body: profile.dayTrips,
       },
       {
-        heading: t("Ne zaman gidilir? Mevsim ve kalabalık hesabı"),
+        heading: H?.when(city) ?? t("Ne zaman gidilir? Mevsim ve kalabalık hesabı"),
         id: "ne-zaman-gidilir",
         body: profile.seasons,
       },
       {
-        heading: t("Bütçe nasıl yönetilir?"),
+        heading: H?.budget(city) ?? t("Bütçe nasıl yönetilir?"),
         id: "butce",
         body: [...profile.budget, t(shared.budgetFrame)],
       },
       {
-        heading: t("Telefon, internet ve gerçekten işe yarayan uygulamalar"),
+        heading: H?.apps(city) ?? t("Telefon, internet ve gerçekten işe yarayan uygulamalar"),
         id: "telefon-uygulamalar",
         body: [t(shared.connectivity)],
       },
       {
-        heading: t("Güvenlik, giriş kuralları ve sık yapılan hatalar"),
+        heading: H?.safety(city) ?? t("Güvenlik, giriş kuralları ve sık yapılan hatalar"),
         id: "guvenlik-kurallar-hatalar",
         body: [t(shared.entry), t(shared.language), ...profile.avoid],
       },
@@ -852,7 +853,11 @@ export function buildExpandedGuide(profile: ExpandedGuideProfile, ctx: GuideCont
     sources: [
       { name: profile.sourceName, url: profile.sourceUrl },
       ...(profile.transportSource ? [profile.transportSource] : []),
-      ...shared.sources.map((source) => ({ name: t(source.name), url: source.url })),
+      // Türk pasaportuna/Türkiye'den başvuruya özel kaynaklar, giriş metni
+      // uyruktan bağımsız yazılmış dillerde gösterilmiyor (bkz. şablon).
+      ...shared.sources
+        .filter((source) => !(T.expanded.internationalAudience && "audience" in source))
+        .map((source) => ({ name: t(source.name), url: source.url })),
     ],
     volatileNote: t(
       "Müze ve işletme saatleri, etkinlik takvimi, ulaşım tarifeleri ve giriş ücretleri dönemsel olarak değişir. Rezervasyon gerektiren yerleri yalnız resmî kanaldan, ziyaret gününe yakın yeniden kontrol edin."

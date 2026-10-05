@@ -86,10 +86,10 @@ export default async function GuidesPage({ params }: Props) {
       <nav aria-label={t("countriesNav")} className="my-10 flex flex-wrap gap-3">
         {regions.flatMap((r) => r.countries).map(country => <a key={country.code} href={`#${country.code}`} className="rounded-full border border-white/20 px-4 py-2 text-sm text-white/80 hover:border-white/60">{label(country.code, country.name)}</a>)}
       </nav>
-      {regions.map(({ region, countries }) => <section key={region} aria-labelledby={`bolge-${region}`} className="mt-14 first-of-type:mt-0">
+      {regions.map(({ region, countries }) => <section key={region} aria-labelledby={`bolge-${region}`} className="mt-14 scroll-mt-28 first-of-type:mt-0">
         <h2 id={`bolge-${region}`} className="font-display border-b border-white/[0.08] pb-4 text-3xl text-white">{tRegions(`${region}.guides`)}</h2>
         <div className="mt-8 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
-          {countries.map(country => <section key={country.code} id={country.code} className="scroll-mt-8">
+          {countries.map(country => <section key={country.code} id={country.code} className="scroll-mt-28">
             <h3 className="font-display text-2xl text-[var(--gold)]"><Link prefetch={false} href={countryHref(country)}>{tCountry("heading", { country: label(country.code, country.name) })}</Link></h3>
             <ul className="mt-4 space-y-2">
               {country.cities.filter(city => hasGuide(country.code, city.name)).map(city => <li key={city.name}>
