@@ -10,7 +10,8 @@
  *   - JSON-LD sözdizimi geçerli.
  * Ayrıca: sayfalardaki her iç bağlantı yönlendirmesiz 200 döner (kırık
  * bağlantı ve yönlendirme zinciri yok), rehber dizini her şehir rehberine
- * JavaScript olmadan bağlanır, robots.txt sitemap'i gösterir, olmayan adres 404.
+ * JavaScript olmadan bağlanır, öksüz sayfa yok, robots.txt sitemap'i gösterir,
+ * olmayan adres 404.
  */
 import assert from "node:assert/strict";
 
@@ -120,6 +121,11 @@ for (const page of pages) {
 
 for (const [map, kind] of [[titles, "title"], [descriptions, "description"]]) {
   for (const [key, paths] of map) if (paths.length > 1) fail(`Yinelenen ${kind} (${paths.length}): ${key.slice(0, 90)} — ${paths.slice(0, 3).join(", ")}`);
+}
+
+// Öksüz sayfa yok: sitemap'teki her adrese en az bir sayfadan bağlantı var.
+for (const page of pages) {
+  if (page.path !== "/" && !internalLinks.has(page.path)) fail(`Öksüz sayfa (iç bağlantı yok): ${page.path}`);
 }
 
 // İç bağlantılar: kırık ya da yönlendiren bağlantı yok.

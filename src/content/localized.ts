@@ -11,6 +11,8 @@ import { GUIDE_TEMPLATES } from "@/content/guides/templates";
 import type { CityGuide } from "@/content/guides/types";
 import { EN_GUIDE_SEO } from "@/content/guides/seo.en";
 import { EN_HUB_TITLES } from "@/content/countryHubs.seo.en";
+import { ES_GUIDE_SEO } from "@/content/guides/seo.es";
+import { ES_HUB_SEO } from "@/content/countryHubs.seo.es";
 import { countryHubFor, type CountryHubContent } from "@/content/countryHubs";
 import { dietaryGuideFor, type DestinationDietaryGuide } from "@/content/dietary";
 
@@ -38,9 +40,12 @@ const guideCache = new Map<AppLocale, { byKey: Map<string, CityGuide>; missing: 
 
 /**
  * Arama niyetine göre o dilde ayrıca yazılmış <title> ve meta description
- * (Türkçe başlığın çevirisi yerine). Şimdilik İngilizce; bkz. guides/seo.en.ts.
+ * (Türkçe başlığın çevirisi yerine); bkz. guides/seo.en.ts, guides/seo.es.ts.
  */
-const GUIDE_SEO: Partial<Record<AppLocale, Record<string, readonly [string, string]>>> = { en: EN_GUIDE_SEO };
+const GUIDE_SEO: Partial<Record<AppLocale, Record<string, readonly [string, string]>>> = {
+  en: EN_GUIDE_SEO,
+  es: ES_GUIDE_SEO,
+};
 
 function guidesIn(locale: AppLocale) {
   let cached = guideCache.get(locale);
@@ -89,9 +94,15 @@ export function localizedHub(countryCode: string, locale: AppLocale): Localized<
   if (locale === "tr") return { value: hub, complete: true };
   const tr = contentTranslator(locale);
   const value = translateDeep(hub, tr.t, HUB_KEYS);
-  // İngilizcede başlık arama niyetine göre ayrıca yazıldı (countryHubs.seo.en.ts).
-  const title = locale === "en" ? EN_HUB_TITLES[countryCode] : undefined;
-  return { value: title ? { ...value, seoTitle: title } : value, complete: tr.misses.size === 0 };
+  // Başlık (ve İspanyolcada açıklama) o dilin arama niyetine göre ayrıca
+  // yazıldı: countryHubs.seo.en.ts, countryHubs.seo.es.ts.
+  const own =
+    locale === "en"
+      ? { seoTitle: EN_HUB_TITLES[countryCode] }
+      : locale === "es" && ES_HUB_SEO[countryCode]
+        ? { seoTitle: ES_HUB_SEO[countryCode][0], seoDescription: ES_HUB_SEO[countryCode][1] }
+        : null;
+  return { value: own?.seoTitle ? { ...value, ...own } : value, complete: tr.misses.size === 0 };
 }
 
 /**

@@ -1,19 +1,72 @@
 import type { GuideTemplates } from "./types";
 
 /* Kural için en.ts başlığına bakın: yer adları artikel/edat gerektiren
- * konuma girmez ("la Costa Amalfitana", "el Algarve" sorunları olmasın). */
+ * konuma girmez ("la Costa Amalfitana", "el Algarve" sorunları olmasın).
+ *
+ * İstisna: rehberin kendi şehri/bölgesi. İspanyolca aramalar "qué ver en
+ * Lisboa", "dónde alojarse en el Algarve", "excursiones desde Oporto"
+ * kalıbında yapıldığı için başlıklar ve SSS bu kalıpla kuruluyor. Artikel
+ * isteyen adlar aşağıdaki listede; "de el" → "del", "a el" → "al" kuralı ve
+ * cins isimlerin cümle içinde küçük harfi ("el lago Toba") burada çözülüyor. */
+const WITH_ARTICLE: Record<string, readonly [article: "el" | "la" | "los" | "las", inline: string]> = {
+  "Tierras Altas de Escocia": ["las", "Tierras Altas de Escocia"],
+  Cotswolds: ["los", "Cotswolds"],
+  "Distrito de los Lagos": ["el", "Distrito de los Lagos"],
+  "Islas Gili": ["las", "islas Gili"],
+  "Monte Bromo": ["el", "monte Bromo"],
+  "Lago Toba": ["el", "lago Toba"],
+  "Valle de Wachau": ["el", "valle de Wachau"],
+  Algarve: ["el", "Algarve"],
+  Azores: ["las", "Azores"],
+  "Selva Negra": ["la", "Selva Negra"],
+  "Cataratas del Niágara": ["las", "cataratas del Niágara"],
+  Yukón: ["el", "Yukón"],
+  Ardenas: ["las", "Ardenas"],
+  "Lago Balaton": ["el", "lago Balaton"],
+  "Suiza Bohemia": ["la", "Suiza Bohemia"],
+  "Lago Baikal": ["el", "lago Baikal"],
+  "Parque Nacional de Tara": ["el", "Parque Nacional de Tara"],
+  "Puertas de Hierro": ["las", "Puertas de Hierro"],
+  "Parque Nacional del Una": ["el", "Parque Nacional del Una"],
+  "Lagos de Plitvice": ["los", "lagos de Plitvice"],
+  "Lago Bled": ["el", "lago Bled"],
+  "Valle del Soča": ["el", "valle del Soča"],
+  "Fiordo de Geiranger": ["el", "fiordo de Geiranger"],
+  "Región de los Lagos de Finlandia": ["la", "región de los lagos de Finlandia"],
+  "Islas Åland": ["las", "islas Åland"],
+};
+/** Ad öbeği: "el Algarve", "Lisboa". */
+const np = (city: string) => (WITH_ARTICLE[city] ? `${WITH_ARTICLE[city][0]} ${WITH_ARTICLE[city][1]}` : city);
+/** "de" + ad: "del Algarve", "de las Azores", "de Lisboa". */
+const de = (city: string) => (WITH_ARTICLE[city]?.[0] === "el" ? `del ${WITH_ARTICLE[city][1]}` : `de ${np(city)}`);
+/** "a" + ad: "al Algarve", "a las Azores", "a Lisboa". */
+const a = (city: string) => (WITH_ARTICLE[city]?.[0] === "el" ? `al ${WITH_ARTICLE[city][1]}` : `a ${np(city)}`);
+
 export const es: GuideTemplates = {
   expanded: {
     seoTitle: (city, focus) => `${city}: guía de viaje — ${focus}`,
     metaLead: (city, lede) => `${city}, guía de viaje: ${lede}`,
-    h1: (city) => `${city}: guía de viaje`,
-    characterHeading: (city) => `${city} de un vistazo: cómo plantear bien la ruta`,
-    sightsHeading: (city) => `${city}: qué ver`,
+    h1: (city) => `Guía de viaje ${de(city)}`,
+    characterHeading: (city) => `Cómo organizar un viaje ${a(city)}`,
+    sightsHeading: (city) => `Qué ver en ${np(city)}`,
     sightsIntro: () =>
       "Agrupar la lista según lo que queda cerca en el mapa evita repetir caminos y gastar la mejor luz del día en traslados. Fija primero las grandes paradas con entrada y reparte entre ellas plazas, parques, mercados y paseos junto al agua.",
-    foodHeading: (city) => `${city}: guía de comida y bebida`,
-    footballHeading: (city) => `${city}: fútbol y día de partido`,
-    practicalHeading: (city) => `${city}: lo que debes saber antes de ir`,
+    foodHeading: (city) => `Qué comer en ${np(city)}`,
+    footballHeading: () => "Fútbol y día de partido",
+    practicalHeading: (city) => `Consejos para viajar ${a(city)}`,
+    internationalAudience: true,
+    compact: true,
+    sectionHeadings: {
+      neighborhoods: () => "Barrios y zonas: qué encontrarás en cada una",
+      stay: (city) => `Dónde alojarse en ${np(city)}`,
+      transport: (city) => `Cómo llegar y moverse por ${np(city)}`,
+      nightlife: () => "Cafés, vida nocturna y compras",
+      dayTrips: (city) => `Excursiones desde ${np(city)}`,
+      when: (city) => `Mejor época para viajar ${a(city)}`,
+      budget: () => "Cómo calcular el presupuesto del viaje",
+      apps: () => "SIM, internet y aplicaciones útiles",
+      safety: () => "Seguridad y errores frecuentes",
+    },
   },
   shared: {
     bold: (name, detail) => `**${name}:** ${detail}`,
@@ -21,11 +74,11 @@ export const es: GuideTemplates = {
       `Reserva primero: ${sight}, las conexiones entre ciudades y el alojamiento; deja para después las comidas flexibles en los barrios.`,
     dailyPace: () =>
       "No metas tres zonas alejadas en el mismo día. Una experiencia principal, un barrio y una comida larga dan aquí un ritmo más llevadero.",
-    faqDays: (city) => `${city}: ¿cuántos días hacen falta?`,
-    faqStay: (city) => `${city}: ¿dónde alojarse?`,
-    faqWhen: (city) => `${city}: ¿cuándo ir?`,
-    faqCombine: (city) => `${city}: ¿con qué combinarlo?`,
-    relatedAnchor: (city) => `${city}: guía de viaje`,
+    faqDays: (city) => `¿Cuántos días hacen falta para ver ${np(city)}?`,
+    faqStay: (city) => `¿Dónde alojarse en ${np(city)}?`,
+    faqWhen: (city) => `¿Cuál es la mejor época para viajar ${a(city)}?`,
+    faqCombine: (city) => `¿Qué destinos combinan bien con ${np(city)}?`,
+    relatedAnchor: (city) => `Guía de viaje ${de(city)}`,
     relatedDescription: () => "Suma a la ruta un ritmo urbano distinto y una nueva capa de viaje.",
     day1Morning: (sight) =>
       `${sight}: empieza temprano y resuelve cualquier duda de acceso o transporte al principio del día.`,
@@ -59,7 +112,7 @@ export const es: GuideTemplates = {
       `${area1} es práctico para una primera visita; ${area2} es una alternativa más local. Valora las conexiones de la mañana y de la noche junto con el precio de la habitación.`,
     faqWhenAnswer: (best) =>
       `El periodo más equilibrado suele ser ${best}; aun así, consulta en fuentes oficiales el tiempo, los festivales y el aforo más recientes.`,
-    faqCarQuestion: (city) => `${city}: ¿hace falta coche?`,
+    faqCarQuestion: (city) => `¿Hace falta coche en ${np(city)}?`,
     faqCarAnswer: (local) =>
       `Cómo moverse: ${local}. Antes de alquilar, valora juntos el aparcamiento, el carné, el seguro, el combustible y la vuelta de noche.`,
     faqCombineAnswer: (cities) =>
@@ -81,7 +134,7 @@ export const es: GuideTemplates = {
     faqDaysAnswer: (days) =>
       `Con ${days} tienes una primera visita equilibrada. En lugar de ir tachando los puntos principales, deja margen para barrios, comida y posibles retrasos por el tiempo o el transporte, y el lugar se abrirá de verdad.`,
     faqWhenAnswer: (best, season) => `El periodo más equilibrado suele ser ${best}. ${season}`,
-    faqCarQuestion: (city) => `${city}: ¿conviene alquilar coche?`,
+    faqCarQuestion: (city) => `¿Conviene alquilar coche en ${np(city)}?`,
     faqCarAnswer: (local) =>
       `Cómo moverse: ${local}. Antes de decidir sobre el coche, valora juntos el aparcamiento, el carné, el seguro y la vuelta de noche.`,
     faqCombineAnswer: (cities) =>
