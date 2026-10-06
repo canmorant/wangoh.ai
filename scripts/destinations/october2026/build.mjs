@@ -11,6 +11,7 @@ import { cities as mt } from './mt.mjs';
 import { cities as cy } from './cy.mjs';
 import { cities as ma } from './ma.mjs';
 import { dietaryData } from './dietaryData.mjs';
+import { editorial, countryEditorial, editorialSources } from './editorial.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '../../..');
 const read = p => JSON.parse(readFileSync(resolve(root, p), 'utf8'));
@@ -46,7 +47,7 @@ const destinations=countries.map(c=>{
   hubs[c.code]={
     seoTitle:t(c.title),seoDescription:t(c.meta),
     planningHeading:t(c.planning),essentialsHeading:t(c.essentialsHeading),citiesHeading:t(c.citiesHeading),
-    cityGridIntro:t(c.grid),intro:c.intro.map(t),
+    cityGridIntro:t(c.grid),intro:(countryEditorial[c.code] ?? c.intro).map(t),
     essentials:c.essentials.map(([title,body])=>({title:t(title),body:t(body)})),
     routeIdeas:c.routes.map(r=>({title:t(r.title),duration:t(r.duration),cities:r.cities,description:t(r.description)})),
   };
@@ -60,19 +61,23 @@ const destinations=countries.map(c=>{
 const headings=(names,suffix)=>t(names.map((n,i)=>suffix[i](n)));
 const guides=allCities.map(c=>{
   const names=c.name;
+  const revision=editorial[names[0]];
+  if(!revision) throw Error(`Missing editorial revision: ${c.code}:${names[0]}`);
   for(const l of ['en','es']) seo.guides[l][`${c.code}:${names[0]}`]=[c.title[l==='en'?1:2],c.meta[l==='en'?1:2]];
   return {
-    city:names[0],countryCode:c.code,seoTitle:t(c.title),seoDescription:t(c.meta),h1:t(c.h1??c.title),lede:t(c.lede),
+    city:names[0],countryCode:c.code,seoTitle:t(c.title),seoDescription:t(c.meta),h1:t(c.h1??c.title),lede:t(revision.lede),
     quickFacts:[
       {label:t(['Önerilen süre','Suggested stay','Estancia recomendada']),value:t(c.days)},
       {label:t(['En uygun dönem','Best time to visit','Mejor época']),value:t(c.time)},
       {label:t(['Ulaşım yaklaşımı','Getting around','Cómo moverse']),value:t(c.transport)},
     ],
     sections:[
+      {id:'gezi-planlama',heading:t(revision.planning.heading),body:revision.planning.body.map(t)},
       {id:'ulasim',heading:headings(names,[n=>`${n} ulaşım rehberi`,n=>`Getting to and around ${n}`,n=>`Cómo llegar a ${n} y moverse`]),body:[t(c.arrival),t(c.movement)]},
       {id:'gezilecek-yerler',heading:headings(names,[n=>`${n} gezilecek yerler`,n=>`Things to do in ${n}`,n=>`Qué ver en ${n}`]),body:[t(c.overview)],subsections:c.sights.map(s=>({heading:t(s.name),body:[t(s.body)]}))},
-      {id:'konaklama',heading:headings(names,[n=>`${n} nerede kalınır?`,n=>`Where to stay in ${n}`,n=>`Dónde alojarse en ${n}`]),body:[t(c.stay),...(c.neighbourhood?[t(c.neighbourhood)]:[])]},
-      {id:'yeme-icme',heading:headings(names,[n=>`${n} ne yenir?`,n=>`What to eat in ${n}`,n=>`Qué comer en ${n}`]),body:[t(c.food)]},
+      {id:'mahalle-yasami',heading:t(revision.local.heading),body:revision.local.body.map(t)},
+      {id:'konaklama',heading:headings(names,[n=>`${n} nerede kalınır?`,n=>`Where to stay in ${n}`,n=>`Dónde alojarse en ${n}`]),body:[t(c.stay),t(revision.stay),...(c.neighbourhood?[t(c.neighbourhood)]:[])]},
+      {id:'yeme-icme',heading:headings(names,[n=>`${n} ne yenir?`,n=>`What to eat in ${n}`,n=>`Qué comer en ${n}`]),body:[t(c.food),t(revision.food)]},
       {id:'mevsim-butce',heading:headings(names,[n=>`${n} için mevsim ve bütçe planı`,n=>`${n}: weather and budget planning`,n=>`${n}: cuándo ir y presupuesto`]),body:[t(c.season),t(c.budget)]},
       {id:'yakin-rotalar',heading:headings(names,[n=>`${n} çevresinde rota önerileri`,n=>`Trips beyond ${n}`,n=>`Excursiones desde ${n}`]),body:[t(c.beyond)]},
     ],
@@ -82,9 +87,9 @@ const guides=allCities.map(c=>{
     practicalTips:c.tips.map(([title,body])=>({title:t(title),body:t(body)})),
     faqs:c.faqs.map(([q,a])=>({q:t(q),a:t(a)})),
     relatedGuides:allCities.filter(x=>x.code===c.code&&x!==c).map(x=>({city:x.name[0],anchor:t(x.title),description:t(x.card)})),
-    sources:c.sources.map(([name,url])=>({name:t(name),url})),
+    sources:[...c.sources,...(editorialSources[names[0]]??[])].map(([name,url])=>({name:t(name),url})),
     volatileNote:t(['Bilet ücretleri, seferler ve ziyaret saatleri değişebilir. Rezervasyon öncesinde aşağıdaki resmî kaynaklardan güncel bilgiyi kontrol edin.','Admission prices, services and opening hours can change. Check the official sources below before booking.','Los precios, los servicios y los horarios pueden cambiar. Consulta las fuentes oficiales indicadas antes de reservar.']),
-    reviewed:'2026-10-05',countryInfoOnHub:true,
+    reviewed:'2026-10-06',countryInfoOnHub:true,
   };
 });
 const mapPick=(pick,category)=>({

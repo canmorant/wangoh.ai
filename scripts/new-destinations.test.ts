@@ -37,13 +37,16 @@ for(const [code,names] of Object.entries(expected)){
    assert.deepEqual(cityPageLocales(country,city.name),['tr','en','es']);
    assert.equal(guide.placesKind,'sights');assert(guide.places?.length===3);
    const food=guide.sections.find(s=>s.id==='yeme-icme');assert(food);assert(!food.subsections?.length,'Sightseeing cards must not appear as restaurants');
-   assert(guide.sections.length===6&&guide.itinerary&&guide.itinerary.length>=2&&guide.faqs.length===3);
+   assert(guide.sections.length===8&&guide.itinerary&&guide.itinerary.length>=2&&guide.faqs.length===3);
+   assert(guide.sections.some(s=>s.id==='gezi-planlama'&&s.body.length>=3));
+   assert(guide.sections.some(s=>s.id==='mahalle-yasami'&&s.body.length>=2));
+   assert.equal(new Set(guide.sections.map(s=>s.id)).size,guide.sections.length,'Section anchors must be unique');
    assert(guide.sources?.length&&guide.sources.every(s=>s.url.startsWith('https://')));
    assert(guide.countryInfoOnHub);assert(localizedDietary(code,city.name,locale)?.complete);
    assert(guide.seoTitle.length<=60&&guide.seoDescription.length>=120&&guide.seoDescription.length<=160);
    assert(!titles.has(`${locale}:${guide.seoTitle}`));titles.add(`${locale}:${guide.seoTitle}`);
    const article=[guide.lede,...guide.sections.flatMap(s=>[...s.body,...(s.subsections?.flatMap(ss=>ss.body)??[])]),...guide.faqs.map(f=>f.a)].join(' ');
-   const words=article.trim().split(/\s+/).length;wordCounts[locale].push(words);assert(words>=400,`${code}:${city.name}/${locale}: ${words} words`);
+   const words=article.trim().split(/\s+/).length;wordCounts[locale].push(words);assert(words>=700,`${code}:${city.name}/${locale}: ${words} words`);
    if(code==='CY')assert(!/işgal|occupation|ocupaci[oó]n|recognition|tanınma|reconocimiento|siyasi|politic|pol[ií]tic|KKTC|TRNC/i.test(article),'Cyprus copy must stay within travel topics');
    assert(!cards.missingGuides.includes(`${code}:${city.name}`));
    assert(existsSync(`public${city.image}`));const credit=creditFor(city.image);assert(credit?.sourceUrl&&credit.licenseName&&credit.lqip);assert(!/FAL/.test(credit.licenseName));

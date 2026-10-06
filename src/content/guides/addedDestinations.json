@@ -5,7 +5,7 @@
     "seoTitle": "Dubai Gezi Rehberi: Gezilecek Yerler ve 3 Günlük Rota",
     "seoDescription": "Dubai gezi rehberi: Al Fahidi, Dubai Creek, Burj Khalifa ve Marina; metro, nol kartı, nerede kalınır, yerel yemekler ve 3 günlük rota planı.",
     "h1": "Dubai Gezi Rehberi: Gezilecek Yerler ve 3 Günlük Rota",
-    "lede": "Dubai’yi yalnız gökdelen ve alışveriş merkeziyle tanımayın. Creek çevresinin liman hafızası, Al Fahidi’nin dar sokakları ve sahil mahalleleri, Downtown’ın büyük ölçeğiyle birlikte gezildiğinde şehrin farklı ritimleri ortaya çıkar.",
+    "lede": "Dubai’de bir sabah abra ile Creek’i geçip baharat çarşısına karışabilir, aynı akşam gökdelenlerin ışıkları altında yürüyebilirsiniz. Şehrin güzel tarafı bu iki dünyayı birlikte görmekte; birkaç doğru mahalle seçimiyle tatil, alışveriş merkezleri arasında geçen bir koşturmacadan çok daha fazlasına dönüşüyor.",
     "quickFacts": [
       {
         "label": "Önerilen süre",
@@ -21,6 +21,15 @@
       }
     ],
     "sections": [
+      {
+        "id": "gezi-planlama",
+        "heading": "Dubai’yi ilk kez gezeceklere: üç farklı şehir, tek tatil",
+        "body": [
+          "İlk ziyaret için eski Dubai, Downtown ve Marina’yı ayrı günlere ayırmak rahat bir başlangıç. Creek gününde Al Fahidi’nin dar sokaklarından suya inin, abra geçişinin ardından Deira çarşılarında dolaşın. Downtown gününde Burj Khalifa rezervasyonunu merkeze alın. Sahil gününü ise mümkün olduğunca boş bırakın; denize girmekle uzun bir kıyı yürüyüşü aynı tempoyu istemiyor.",
+          "“Dubai pahalı mı?” sorusunun cevabı seçtiğiniz güne göre değişiyor. Manzaralı restoran, özel plaj ve ücretli terasları peş peşe eklemek bütçeyi büyütür. Buna karşılık eski mahallelerde yürümek, farklı mutfaklardan sade bir öğün seçmek ve ulaşımda metroyu kullanmak daha dengeli bir gezi kurmanıza yardımcı olur. Her akşamın gösterişli bir rezervasyon olması gerekmiyor.",
+          "Çöl turu istiyorsanız onu şehir gezisine küçük bir ek gibi düşünmeyin. Otelden alınış, araçta geçen süre ve dönüş saati gününüzün büyük bölümünü belirler. Kumul sürüşü ile sakin bir çöl akşamı farklı deneyimlerdir; satın alacağınız programın gerçekten size uygun olduğuna bakın. Dört gününüz varsa bir sahil veya müze bloğunu buna ayırmak, programı üst üste yığmaktan daha keyifli olur."
+        ]
+      },
       {
         "id": "ulasim",
         "heading": "Dubai ulaşım rehberi",
@@ -57,17 +66,27 @@
         ]
       },
       {
+        "id": "mahalle-yasami",
+        "heading": "Creek kıyısında ve sahilde acele etmeyen bir Dubai",
+        "body": [
+          "Al Fahidi’nin ardından Al Seef kıyısına uzanmak eski şehir gününe iyi bir mola ekliyor. Al Seef’in daha düzenlenmiş görünümünü Al Fahidi’nin tarihî sokaklarıyla karıştırmadan ikisinin keyfini ayrı çıkarın. Çarşı alışverişi ilginizi çekmese bile suyun iki yakasını görmek şehrin neden burada büyüdüğünü daha anlaşılır kılıyor.",
+          "Marina ve JBR akşamını uzun bir yapılacaklar listesi yerine yürüyüş ve yemekle bırakabilirsiniz. Gündüz sıcaklığında yorulan bir gezinin ardından kıyıda oturmak da tatilin parçası. Çocukla veya daha sakin bir tempoyla geziyorsanız günün tek ücretli etkinliğini seçip kalan zamanı bu açık alanlara bırakmak Dubai’yi çok daha rahat yaşatır."
+        ]
+      },
+      {
         "id": "konaklama",
         "heading": "Dubai nerede kalınır?",
         "body": [
-          "Deira veya Bur Dubai, Creek ve daha hesaplı şehir konaklaması için; Downtown, kule ve alışveriş odağı için; Marina–JBR, plaj için uygundur. Metroya gerçek yürüme mesafesi, gece ses düzeyi ve günlük transfer maliyeti oda manzarasından daha kullanışlı seçim ölçüleridir."
+          "Deira veya Bur Dubai, Creek ve daha hesaplı şehir konaklaması için; Downtown, kule ve alışveriş odağı için; Marina–JBR, plaj için uygundur. Metroya gerçek yürüme mesafesi, gece ses düzeyi ve günlük transfer maliyeti oda manzarasından daha kullanışlı seçim ölçüleridir.",
+          "Kısa bir şehir kaçamağında sırf fotoğrafı güzel diye uzak bir resort seçmek her sabah yeniden yola çıkmak demek olabilir. Plaj tatili istiyorsanız bu mesafe kabul edilebilir; tarihî mahalleleri ve şehir merkezini gezecekseniz metroya yakın bir üs daha rahat. Otelin adı kadar, akşam yemekten sonra yürüyerek dönebileceğiniz çevresi de önemli."
         ]
       },
       {
         "id": "yeme-icme",
         "heading": "Dubai ne yenir?",
         "body": [
-          "Machboos, harees ve luqaimat Emirlik mutfağını tanımak için iyi başlangıçlardır. Deira ve Bur Dubai’de Güney Asya ve Levant mutfakları da güçlüdür. Brunch veya manzaralı akşam paketinde içecek kapsamını, servis ve vergiyi karşılaştırın; şehirdeki bütün restoranları aynı mutfak sanmayın."
+          "Machboos, harees ve luqaimat Emirlik mutfağını tanımak için iyi başlangıçlardır. Deira ve Bur Dubai’de Güney Asya ve Levant mutfakları da güçlüdür. Brunch veya manzaralı akşam paketinde içecek kapsamını, servis ve vergiyi karşılaştırın; şehirdeki bütün restoranları aynı mutfak sanmayın.",
+          "Creek gününde öğünü küçük bir lokantaya, Downtown gününde ise aynı bölgedeki bir masaya ayırmak yolculuğu kolaylaştırıyor. Emirlik yemeklerini denemek istiyorsanız menüde yalnız “Arabic food” yazmasına değil, aradığınız yemeğin adına bakın. Şehrin Hint, Pakistan ve Levant mutfakları da geziye renk katıyor; her öğünü uluslararası otel büfesine bırakmayın."
         ]
       },
       {
@@ -174,10 +193,14 @@
       {
         "name": "Burj Khalifa — ziyaret ve bilet",
         "url": "https://www.burjkhalifa.ae/"
+      },
+      {
+        "name": "Visit Dubai — Al Seef kıyısı",
+        "url": "https://www.visitdubai.com/en/explore-dubai/dubai-neighbourhoods/al-seef"
       }
     ],
     "volatileNote": "Bilet ücretleri, seferler ve ziyaret saatleri değişebilir. Rezervasyon öncesinde aşağıdaki resmî kaynaklardan güncel bilgiyi kontrol edin.",
-    "reviewed": "2026-10-05",
+    "reviewed": "2026-10-06",
     "countryInfoOnHub": true
   },
   {
@@ -186,7 +209,7 @@
     "seoTitle": "Abu Dabi Gezi Rehberi: Gezilecek Yerler ve Müze Rotası",
     "seoDescription": "Abu Dabi gezi rehberi: Şeyh Zayed Camii, Louvre Abu Dhabi, Qasr Al Watan ve Corniche için gezilecek yerler, ulaşım, otel bölgeleri ve rota.",
     "h1": "Abu Dabi Gezi Rehberi: Gezilecek Yerler ve Müze Rotası",
-    "lede": "Abu Dabi’de en iyi gezi, uzak simgeleri hızlıca işaretlemek yerine müze, mimari ve kıyı günlerini ayıran plandır. Saadiyat’ın kültür yapıları, büyük cami ve Corniche farklı bölgelerde zaman ister.",
+    "lede": "Abu Dabi’nin tadı biraz yavaşlayınca çıkıyor: Louvre’un kubbesinin altında ışığı izlemek, caminin avlusunda durup etrafa bakmak, sonra Corniche’de deniz havası almak. Dubai’den günübirlik kaçamak mümkün olsa da burada iki gece kalmak, şehri yalnız büyük yapılarıyla değil günlük ritmiyle de tanımaya alan açıyor.",
     "quickFacts": [
       {
         "label": "Önerilen süre",
@@ -202,6 +225,15 @@
       }
     ],
     "sections": [
+      {
+        "id": "gezi-planlama",
+        "heading": "Abu Dabi planı: müze, cami ve denize ayrı zaman",
+        "body": [
+          "İki tam gününüz varsa birini Louvre ve Saadiyat çevresine, diğerini büyük cami ile merkezdeki bir yürüyüşe ayırabilirsiniz. Qasr Al Watan’ı da görmek istiyorsanız aynı güne üçüncü büyük ziyaret diye eklemek yerine hangi yapıya daha fazla zaman istediğinize karar verin. Şehrin geniş yolları haritada kolay görünse de ziyaretler arasında sürekli araçla yer değiştirmek yoruyor.",
+          "Louvre’da yalnız kubbenin fotoğrafını çekip dönmek yazık olur. Sergi salonlarına vakit ayırıp sonra dışarıdaki ışık ve deniz ilişkisini izlemek müzeyi daha anlamlı kılıyor. Sanatla aranız çok yakın olmasa bile birkaç salonu dikkatle gezmek, bütün koleksiyonu hızlıca dolaşmaktan daha keyifli bir başlangıç. Müze sonrasına yakınlarda rahat bir öğün bırakın.",
+          "Yas Adası’nı programa ekleyecekseniz tema parkı gününü ayrı tutun. Sabah müze, öğlen cami, akşam park şeklinde bir gün çocuklar için de yetişkinler için de fazla parçalı kalıyor. Tatilin amacı kültür ve dinlenmeyse bir parkı elemek kayıp değil; otelden çıkıp bir sahil yürüyüşüne zaman bulmak bazen daha iyi bir tercih."
+        ]
+      },
       {
         "id": "ulasim",
         "heading": "Abu Dabi ulaşım rehberi",
@@ -238,10 +270,19 @@
         ]
       },
       {
+        "id": "mahalle-yasami",
+        "heading": "Corniche ve Qasr Al Hosn ile şehre biraz yaklaşın",
+        "body": [
+          "Corniche’yi bir uçtan diğerine bitirilecek rota gibi düşünmeyin. Otelinize veya günün son durağına yakın bir bölüm seçip yürüyüşü deniz molasıyla birleştirmek yeterli. Akşam ışığında kıyıda durmak, büyük yapılardan oluşan programın arasına şehrin gündelik hayatını katıyor. Özellikle sıcak günlerde kısa ve keyifli bir yürüyüş uzun bir mesafe hedefinden daha iyi.",
+          "Şehrin daha eski katmanını merak ediyorsanız Qasr Al Hosn, gökdelen ve ada otellerinden farklı bir hikâye sunuyor. Bu ziyaretle Corniche çevresini aynı merkez günü içinde değerlendirebilirsiniz. Abu Dabi’yi Dubai’nin daha küçük bir kopyası gibi gezmek yerine denize, müzelere ve bu tarihî duraklara verdiği alan üzerinden okumak daha güzel bir yol."
+        ]
+      },
+      {
         "id": "konaklama",
         "heading": "Abu Dabi nerede kalınır?",
         "body": [
           "Corniche çevresi şehir oteli ve kıyı yürüyüşü, Saadiyat plaj ve müzeler, Yas ise tema parkı odağı için uygundur. Her otelde gerçek plaj erişimi, transfer maliyeti ve akşam yemeği seçeneklerini kontrol edin; bir ada oteli bütün şehre yakın değildir.",
+          "Dubai’den iki gecelik ek yapıyorsanız konaklamayı günübirlik yapmak istediğiniz yerlere göre seçin. Saadiyat’ta bir plaj oteli dinlenme için güzel olabilir; müze ve şehir yürüyüşü ağırlıklı kısa ziyarette merkez daha dengeli kalabilir. İki şehirde de her gece otel değiştirmek yerine birer üs kurmak valiz ve transfer yükünü azaltır.",
           "Corniche çevresindeki bir otel kent yürüyüşünü, Saadiyat konaklaması ise plaj ve Louvre gününü öne çıkarır. İkisini aynı şey sanmadan hangi deneyime daha çok zaman ayıracağınızı seçin; cami ve Yas ziyaretlerinde ayrıca araç bağlantısı gerekir."
         ]
       },
@@ -249,7 +290,8 @@
         "id": "yeme-icme",
         "heading": "Abu Dabi ne yenir?",
         "body": [
-          "Machboos, harees ve deniz ürünleri yerel mutfağa giriş sağlar; şehirde Levant, Hint ve uluslararası seçenekler de geniştir. Otel restoranında paket kapsamını ve toplam fiyatı kontrol edin. Müze gününde uzak bir yemek rezervasyonu eklemek yerine aynı bölgedeki öğünü seçin."
+          "Machboos, harees ve deniz ürünleri yerel mutfağa giriş sağlar; şehirde Levant, Hint ve uluslararası seçenekler de geniştir. Otel restoranında paket kapsamını ve toplam fiyatı kontrol edin. Müze gününde uzak bir yemek rezervasyonu eklemek yerine aynı bölgedeki öğünü seçin.",
+          "Otel kahvaltısı doyurucuysa öğle yemeğini daha hafif tutup akşama yerel bir yemek ayırabilirsiniz. Machboos gibi pirinçli bir ana yemeği paylaşmak, yanına küçük tabaklar eklemek mutfağı tanımayı kolaylaştırır. Menüde yalnız manzarayı değil yemek çeşitliliğini de arayın; şehirde tek bir “doğru” yemek bölgesine gitmek için uzun transfer yapmak şart değil."
         ]
       },
       {
@@ -354,10 +396,14 @@
       {
         "name": "Qasr Al Watan — resmî ziyaret",
         "url": "https://visitabudhabi.ae/en/things-to-do/culture/landmarks-and-architecture/qasr-al-watan"
+      },
+      {
+        "name": "Experience Abu Dhabi — Qasr Al Hosn ve kültür durakları",
+        "url": "https://visitabudhabi.ae/en/plan-your-trip/article-hub/summer-friendly-places-to-visit-in-abu-dhabi"
       }
     ],
     "volatileNote": "Bilet ücretleri, seferler ve ziyaret saatleri değişebilir. Rezervasyon öncesinde aşağıdaki resmî kaynaklardan güncel bilgiyi kontrol edin.",
-    "reviewed": "2026-10-05",
+    "reviewed": "2026-10-06",
     "countryInfoOnHub": true
   },
   {
@@ -366,7 +412,7 @@
     "seoTitle": "Kahire Gezi Rehberi: Piramitler, Müzeler ve 3 Günlük Rota",
     "seoDescription": "Kahire gezi rehberi: Giza Piramitleri, Büyük Mısır Müzesi, Han el-Halili ve Nil mahalleleri; ulaşım, nerede kalınır ve 3 günlük rota planı.",
     "h1": "Kahire Gezi Rehberi: Piramitler, Müzeler ve 3 Günlük Rota",
-    "lede": "Kahire yalnız piramitlere gidilen bir aktarma noktası değildir. Giza’nın arkeoloji günü, tarihî merkezin yürüyüşleri ve Nil kıyısındaki çağdaş mahalleler için ayrı zaman ayırmak hem yoğunluğu yönetir hem şehri daha iyi tanıtır.",
+    "lede": "Kahire ilk anda biraz yorabilir: trafik, sesler, kalabalık ve bir köşeden diğerine değişen sokaklar… Sonra bir çay molasında şehirle aranız düzelir. Piramitlere zaman ayırın ama dönüş biletini hemen sonrasına koymayın; Nil kıyısı, eski çarşılar ve gündelik yemekler de bu yolculuğun güzel tarafı.",
     "quickFacts": [
       {
         "label": "Önerilen süre",
@@ -382,6 +428,15 @@
       }
     ],
     "sections": [
+      {
+        "id": "gezi-planlama",
+        "heading": "Kahire’ye ilk gelişte: piramit gününü şehir gününden ayırın",
+        "body": [
+          "Üç tam günlük bir gezide Giza, tarihî merkez ve Nil çevresi iyi bir omurga oluşturur. Piramitlerle Büyük Mısır Müzesi’ni aynı güne koyabilirsiniz; ancak ikisini de ayrıntılı gezmek istiyorsanız iki ayrı zaman bloğu daha rahat. Uçuş sonrası ilk sabaha çok erken bir bilet koymak yerine şehre alışacak hafif bir başlangıç bırakın.",
+          "Giza’da piramidin içini görmekle dışarıdan alanı gezmek farklı deneyimler. İçeride dar ve eğimli geçitler olabilir; yalnız “gitmişken girelim” diye karar vermek zorunda değilsiniz. Müze gününde ise koleksiyonun tamamını bitirme hedefi koymadan ilgilendiğiniz birkaç bölüme odaklanın. Şehirde kazanacağınız boş zaman, fazladan bir salondan daha değerli olabilir.",
+          "Kahire’de en büyük planlama hatası aynı güne birbirinden uzak üç bölge eklemek. Otelden Giza’ya geçişi, sonra merkeze dönüşü yalnız haritadaki kilometrelerle hesaplamayın. Geziyi sabah bir ana ziyaret, öğleden sonra yakın çevre, akşam da otelinize makul mesafede yemek şeklinde kurmak hem yorgunluğu hem de sürekli pazarlık ve transfer ihtiyacını azaltır."
+        ]
+      },
       {
         "id": "ulasim",
         "heading": "Kahire ulaşım rehberi",
@@ -418,17 +473,27 @@
         ]
       },
       {
+        "id": "mahalle-yasami",
+        "heading": "Han el-Halili’den Nil kıyısına: Kahire’ye zaman tanıyın",
+        "body": [
+          "Han el-Halili çevresini yalnız hediyelik eşya alınacak bir durak saymayın. Çarşı gezisini El Muizz çevresindeki sokaklarla birleştirip araya oturarak verilen bir mola ekleyin. Dükkânlara bakmak alışveriş yapmak zorunda olduğunuz anlamına gelmiyor. Fotoğraf için bir kişinin veya iş yerinin karşısında durduğunuzda izin istemek, aceleyle çekip geçmekten daha hoş bir karşılaşma yaratır.",
+          "Zamalek veya Downtown’a ayıracağınız bir öğleden sonra şehrin bugünkü yüzünü gösterir. Her cadde uzun yürüyüş için aynı rahatlıkta değil; kısa bir mahalle rotası seçip bir kafede dinlenmek yeterli. Nil teknesi düşünüyorsanız bunu ulaşım çözümünden çok ayrı bir keyif molası sayın. Suda geçirilen sakin bir saat, yoğun bir anıt gününün ardından iyi geliyor."
+        ]
+      },
+      {
         "id": "konaklama",
         "heading": "Kahire nerede kalınır?",
         "body": [
-          "Downtown merkez yürüyüşleri ve metro, Zamalek Nil adasında daha sakin bir üs, Giza ise piramit ve müze önceliği için uygundur. “Piramit manzaralı” odanın gerçek pencere yönünü, çevre yürünebilirliğini ve şehir merkezine günlük transferini kontrol edin."
+          "Downtown merkez yürüyüşleri ve metro, Zamalek Nil adasında daha sakin bir üs, Giza ise piramit ve müze önceliği için uygundur. “Piramit manzaralı” odanın gerçek pencere yönünü, çevre yürünebilirliğini ve şehir merkezine günlük transferini kontrol edin.",
+          "İlk gelişte birkaç geceyi tek otelde geçirmek genellikle daha rahat. Bir gece Giza, bir gece Downtown şeklinde bölmek farklı manzaralar sunsa da valiz ve check-in işleri gezi zamanını azaltır. Piramitler tatilin ana sebebiyse Giza; şehir yürüyüşleri ve farklı mahalleler ağır basıyorsa merkez veya Zamalek daha anlaşılır bir başlangıç."
         ]
       },
       {
         "id": "yeme-icme",
         "heading": "Kahire ne yenir?",
         "body": [
-          "Koşeri, ful medames ve taameya gündelik mutfağa iyi girişlerdir; molokhiya ve ızgaralarda tarif ile et suyunu sorun. Yoğun ziyarette gün boyu ağır öğünler yerine sabah anıt, öğlen kapalı mekân ve akşam yemek ritmi daha rahattır."
+          "Koşeri, ful medames ve taameya gündelik mutfağa iyi girişlerdir; molokhiya ve ızgaralarda tarif ile et suyunu sorun. Yoğun ziyarette gün boyu ağır öğünler yerine sabah anıt, öğlen kapalı mekân ve akşam yemek ritmi daha rahattır.",
+          "Koşeri, pirinç, makarna ve bakliyatın birleştiği doyurucu bir tabak; küçük porsiyonla başlayıp sosları ayrı denemek iyi fikir. Taameya ve ful ise daha sade bir öğüne alan açıyor. Şehrin mutfağını tanımak için her akşam pahalı bir masa gerekmiyor: gezi bölgenizde düzgün bir öğün ve ardından çay molası, günün en güzel anlarından biri olabilir."
         ]
       },
       {
@@ -540,7 +605,7 @@
       },
       {
         "name": "Büyük Mısır Müzesi — ziyaret planı",
-        "url": "https://gem.eg/en/visit/plan-your-visit/"
+        "url": "https://visit-gem.com/"
       },
       {
         "name": "UNESCO — Tarihî Kahire",
@@ -552,7 +617,7 @@
       }
     ],
     "volatileNote": "Bilet ücretleri, seferler ve ziyaret saatleri değişebilir. Rezervasyon öncesinde aşağıdaki resmî kaynaklardan güncel bilgiyi kontrol edin.",
-    "reviewed": "2026-10-05",
+    "reviewed": "2026-10-06",
     "countryInfoOnHub": true
   },
   {
@@ -561,7 +626,7 @@
     "seoTitle": "Luksor Gezi Rehberi: Karnak ve Krallar Vadisi Rotası",
     "seoDescription": "Luksor gezi rehberi: Karnak, Luksor Tapınağı, Krallar Vadisi ve Hatşepsut; Nil’in iki yakası için ulaşım, bilet ipuçları ve 2 günlük rota.",
     "h1": "Luksor Gezi Rehberi: Karnak ve Krallar Vadisi Rotası",
-    "lede": "Luksor’da Nil yalnız manzara değil rota sınırıdır. Doğu yakasındaki tapınaklarla batıdaki mezar ve teraslı tapınakları ayrı günlere ayırın; sıcaklık ve bilet kapsamı geziyi anıt sayısından daha fazla belirler.",
+    "lede": "Luksor’da sabah tapınak sütunlarının arasında dolaşıp akşam Nil kıyısında dinlenmek, aynı gün içinde iki ayrı dünyaya geçmek gibi. Burada mesele mümkün olduğunca çok mezar görmek değil; birkaçını gerçekten anlayarak gezmek ve sıcağın arasında nefes alacak zaman bulmak.",
     "quickFacts": [
       {
         "label": "Önerilen süre",
@@ -577,6 +642,15 @@
       }
     ],
     "sections": [
+      {
+        "id": "gezi-planlama",
+        "heading": "Luksor’da kaç gün? İki yaka, iki ayrı gezi günü",
+        "body": [
+          "İki tam gün doğu ve batı yakasını tanımak için iyi başlangıç; üçüncü gün daha sakin bir geziye alan açar. Doğuda Karnak ve Luksor Tapınağı, batıda Krallar Vadisi ve Hatşepsut Tapınağı temel çerçeve olabilir. Nehrin iki tarafını sürekli değiştirmek yerine aynı yakadaki durakları bir araya toplamak gününüzü daha anlaşılır ve rahat yapar.",
+          "Krallar Vadisi’nde farklı mezarlar için farklı giriş kapsamları bulunabilir. Biletinizi aldıktan sonra her açık mezarı yetiştirme baskısına girmek yerine seçtiklerinize zaman verin. Duvar resimleri ve yazıtları bir rehberin bağlamıyla okumak, adlarını bilmeden hızlıca girip çıkmaktan daha akılda kalıcı. Fotoğraf peşinde gezerken açıklama panolarını kaçırmayın.",
+          "Sıcak günlerde arkeolojik geziyi erkene almak ve öğlen otele dönmek tembellik değil, iyi planlama. Akşam yeniden dışarı çıkıp kıyıda yürüyebilir veya merkeze yakın bir yemek yiyebilirsiniz. Balon turu düşünüyorsanız çok erken başlangıcı hesaba katın; o sabahın üzerine uzun bir batı yaka programı eklemek herkes için rahat bir seçim olmayabilir."
+        ]
+      },
       {
         "id": "ulasim",
         "heading": "Luksor ulaşım rehberi",
@@ -613,17 +687,27 @@
         ]
       },
       {
+        "id": "mahalle-yasami",
+        "heading": "Tapınak aralarında Nil molası",
+        "body": [
+          "Karnak’ın ölçeğini hissetmek için ana eksende durup sütunlara bakacak zaman bırakın. Daha küçük ayrıntıları görmek isteyenler bir köşeye odaklanabilir; bütün kompleksi tek seferde ezberlemek gerekmiyor. Luksor Tapınağı merkezle daha yakın ilişki kurduğu için çevresindeki şehir hayatıyla birlikte düşünüldüğünde farklı bir his veriyor. İki tapınağı aynı deneyimin tekrarı saymayın.",
+          "Nil kıyısında geçirilen boş zaman Luksor’un yalnız müze gibi hissedilmesini önler. Bir tekne gezisi seçerseniz kalkış yeri, süre ve dönüşü baştan konuşup onu ayrı bir etkinlik olarak planlayın. Sadece oturup nehre bakmak da yeterli olabilir. Özellikle uzun bir mezar sabahından sonra akşamı yeni bir turla doldurmak zorunda değilsiniz."
+        ]
+      },
+      {
         "id": "konaklama",
         "heading": "Luksor nerede kalınır?",
         "body": [
-          "Doğu yaka merkez otel, restoran ve tapınak erişimi için; batı yaka daha sakin konaklama ve erken mezar ziyareti için uygundur. Sessizlik isteyenler odanın nehre bakması kadar cadde sesini, feribot ve gece dönüşünü de kontrol etmeli."
+          "Doğu yaka merkez otel, restoran ve tapınak erişimi için; batı yaka daha sakin konaklama ve erken mezar ziyareti için uygundur. Sessizlik isteyenler odanın nehre bakması kadar cadde sesini, feribot ve gece dönüşünü de kontrol etmeli.",
+          "Tek başınıza veya araçsız geziyorsanız doğu yakada yürüyerek akşam yemeğine çıkabilmek değerli. Batı yakada sakin bir misafirhane ise daha yavaş bir tatil isteyenlere uyabilir. Kararı yalnız havuz fotoğrafıyla vermeyin; erken gezi sabahında nasıl çıkacağınız ve akşam nehre nasıl döneceğiniz günlük konforu daha fazla etkiliyor."
         ]
       },
       {
         "id": "yeme-icme",
         "heading": "Luksor ne yenir?",
         "body": [
-          "Ful, taameya, sebze yemekleri ve ızgaralar Nil gezisinde kolay seçeneklerdir. Turun öğle yemeği dahilse restoranı, içeceği ve özel beslenme uyarlamasını sorun. Erken ziyaret öncesi kahvaltı veya paket öğün için otelle bir gün önce anlaşın."
+          "Ful, taameya, sebze yemekleri ve ızgaralar Nil gezisinde kolay seçeneklerdir. Turun öğle yemeği dahilse restoranı, içeceği ve özel beslenme uyarlamasını sorun. Erken ziyaret öncesi kahvaltı veya paket öğün için otelle bir gün önce anlaşın.",
+          "Yemek planını geziye uydurun: çok erken çıkan bir batı yaka sabahında kahvaltı, su ve küçük bir öğün işi kolaylaştırır. Akşam çorba, sebze ve ızgarayla daha rahat bir sofra kurabilirsiniz. Sırf tur programında olduğu için uzun bir öğle yemeğine bağlanmak yerine, günün ne kadarını gölgede dinlenerek geçirmek istediğinizi düşünün."
         ]
       },
       {
@@ -737,7 +821,7 @@
       }
     ],
     "volatileNote": "Bilet ücretleri, seferler ve ziyaret saatleri değişebilir. Rezervasyon öncesinde aşağıdaki resmî kaynaklardan güncel bilgiyi kontrol edin.",
-    "reviewed": "2026-10-05",
+    "reviewed": "2026-10-06",
     "countryInfoOnHub": true
   },
   {
@@ -746,7 +830,7 @@
     "seoTitle": "Hurgada Gezi Rehberi: Giftun, Plajlar ve Nerede Kalınır",
     "seoDescription": "Hurgada gezi rehberi: Giftun Adaları, marina ve El Dahar; plaj oteli seçimi, tekne ve şnorkel turları, ulaşım, yemek ve Luksor bağlantısı.",
     "h1": "Hurgada Gezi Rehberi: Giftun, Plajlar ve Nerede Kalınır",
-    "lede": "Hurgada’da tatilin karakterini şehir adı değil otelinizin kıyısı belirler. Merkez yürüyüşü, sığ plaj, resif erişimi ve tekne çıkışı aynı yerde bulunmayabilir; rezervasyonu deniz beklentinize göre seçin.",
+    "lede": "Hurgada’da iyi bir tatil bazen çok az planla başlıyor: denize rahat girebildiğiniz bir kıyı, uzun bir kahvaltı ve bir gün tekneyle açılmak. Otel seçimi burada görülecek yerler listesinden daha belirleyici; doğru plajı bulduğunuzda şehir gezisi ile dinlenmenin dengesini kurmak kolaylaşıyor.",
     "quickFacts": [
       {
         "label": "Önerilen süre",
@@ -762,6 +846,15 @@
       }
     ],
     "sections": [
+      {
+        "id": "gezi-planlama",
+        "heading": "Hurgada tatili: oteli seçmeden önce nasıl bir deniz istediğinize karar verin",
+        "body": [
+          "İlk kararınız merkezde kalıp dışarı çıkmak mı, sahil otelinde dinlenmek mi olmalı. Marina ve yemek seçeneklerine yakın bir üs şehir akşamlarını kolaylaştırır. Daha uzaktaki resortta ise otelin plajı, odası ve günlük düzeni tatilin büyük bölümüne dönüşür. İki seçenek de güzel olabilir; birinden diğerinin deneyimini beklememek önemli.",
+          "Dört günlük bir tatilde bir tekne günü, bir kısa şehir gezisi ve bol serbest zaman dengeli bir başlangıç. Her sabah yeni bir tur eklemek deniz için geldiğiniz yerde dinlenme ihtimalini azaltıyor. Tekne gününü mümkünse uçuşun hemen öncesine sıkıştırmayın; programın hava nedeniyle değişmesi durumunda başka bir güne kaydıracak alanınız olsun.",
+          "Giftun adı geçen turların hepsi aynı durakları sunmayabilir. Plaj molası, şnorkel durağı ve teknede geçen süreyi ayrı ayrı okuyun. Yüzmeyi yeni öğrenen veya çocukla gezen biri için sakin bir kıyı molası daha uygun olabilir; deniz yaşamını görmek isteyen biri için suya gerçekten ayrılan zaman daha önemli. Turun adı yerine günün nasıl geçeceğine bakın."
+        ]
+      },
       {
         "id": "ulasim",
         "heading": "Hurgada ulaşım rehberi",
@@ -798,17 +891,27 @@
         ]
       },
       {
+        "id": "mahalle-yasami",
+        "heading": "Marina ve El Dahar: plajın dışında kısa bir Hurgada",
+        "body": [
+          "Marina akşamını bir yemek ve kısa yürüyüşle bırakmak yeterli; bunu tam günlük bir tarihî şehir turu gibi planlamayın. El Dahar’da ise sahil otelinden farklı gündelik bir çevre görürsünüz. Her ikisine de aynı uzun geziyi yüklemek yerine ne aradığınızı seçin: deniz kenarında rahat bir akşam mı, çarşı ve sokak hayatına kısa bir bakış mı?",
+          "Luksor’u Hurgada’dan görmek isteyenler karayolunda geçen zamanı ciddiye almalı. Uzun bir günübirlik tur, tapınakları görmek için işe yarayabilir ama sakin bir plaj tatilinin küçük molası değildir. Tarih yolculuğunuzun ana sebeplerinden biriyse Luksor’da gecelemek daha doyurucu olabilir. Aynı tatilde hem iyi dinlenmek hem bütün Mısır’ı görmek zorunda değilsiniz."
+        ]
+      },
+      {
         "id": "konaklama",
         "heading": "Hurgada nerede kalınır?",
         "body": [
-          "Sakkala merkez ve marina, El Dahar yerel şehir dokusu, kıyı resortları plaj önceliği içindir. Otelin “özel plaj” ifadesi kumdan kolay giriş veya resif garantisi değildir. Güncel plaj fotoğrafı, iskele, sığlık, rüzgâr ve çocuklar için giriş koşulunu kontrol edin."
+          "Sakkala merkez ve marina, El Dahar yerel şehir dokusu, kıyı resortları plaj önceliği içindir. Otelin “özel plaj” ifadesi kumdan kolay giriş veya resif garantisi değildir. Güncel plaj fotoğrafı, iskele, sığlık, rüzgâr ve çocuklar için giriş koşulunu kontrol edin.",
+          "Rezervasyonda merkeze kaç kilometre olduğu kadar, plajın gerçekten nasıl göründüğüyle ilgilenin. Çocukla gireceğiniz sığ bir kıyı ile uzun bir iskeleden ulaşılan derin su aynı seçim değil. Tatil boyunca otelde kalacaksanız oda yükseltmesinden önce plaj ve yemek düzenini araştırmak daha büyük fark yaratabilir."
         ]
       },
       {
         "id": "yeme-icme",
         "heading": "Hurgada ne yenir?",
         "body": [
-          "Deniz ürünleri kıyı gezisinde öne çıkar; ful, taameya ve koşeri daha gündelik alternatiflerdir. Her şey dahil otelde restoran saatlerini, alakart rezervasyonunu ve özel beslenme koşulunu okuyun. Taze balık siparişinde kilo ile porsiyon fiyatını karıştırmayın."
+          "Deniz ürünleri kıyı gezisinde öne çıkar; ful, taameya ve koşeri daha gündelik alternatiflerdir. Her şey dahil otelde restoran saatlerini, alakart rezervasyonunu ve özel beslenme koşulunu okuyun. Taze balık siparişinde kilo ile porsiyon fiyatını karıştırmayın.",
+          "Her şey dahil kalıyorsanız bir akşam otelin dışına çıkmak tatilin ritmini değiştirebilir. Deniz ürünleri dışında ful veya koşeri gibi gündelik yemeklere de yer verin. Marina manzarasıyla yemek yemenin keyfi ayrı, sade bir şehir öğününün keyfi ayrı; bütçeniz ve o günkü enerjiniz hangisine uygunsa onu seçin."
         ]
       },
       {
@@ -928,7 +1031,7 @@
       }
     ],
     "volatileNote": "Bilet ücretleri, seferler ve ziyaret saatleri değişebilir. Rezervasyon öncesinde aşağıdaki resmî kaynaklardan güncel bilgiyi kontrol edin.",
-    "reviewed": "2026-10-05",
+    "reviewed": "2026-10-06",
     "countryInfoOnHub": true
   },
   {
@@ -937,7 +1040,7 @@
     "seoTitle": "Şarm el-Şeyh Gezi Rehberi: Resifler ve Otel Bölgeleri",
     "seoDescription": "Şarm el-Şeyh gezi rehberi: Ras Muhammad, Naama Bay ve Eski Çarşı; resif erişimi, otel bölgesi seçimi, dalış, şnorkel ve ulaşım önerileri.",
     "h1": "Şarm el-Şeyh Gezi Rehberi: Resifler ve Otel Bölgeleri",
-    "lede": "Şarm el-Şeyh geniş bir kıyı destinasyonudur: Naama Bay’in yürüyüşü, Sharks Bay’in otelleri ve Nabq’ın kıyısı aynı deneyimi sunmaz. Tatili otel yıldızından önce denize nasıl gireceğiniz ve hangi bölgede kalacağınız üzerinden kurun.",
+    "lede": "Şarm el-Şeyh’e denizin rengini görmek için geliyorsanız işin en önemli kısmı doğru koyu seçmek. Sabah suya girip öğleden sonra dinlenmek, akşam kısa bir sahil yürüyüşüne çıkmak burada gayet güzel bir gün. Resifleri keşfetmek isteyenlerle sakin bir aile plajı arayanların aynı oteli seçmesi gerekmiyor.",
     "quickFacts": [
       {
         "label": "Önerilen süre",
@@ -953,6 +1056,15 @@
       }
     ],
     "sections": [
+      {
+        "id": "gezi-planlama",
+        "heading": "Şarm el-Şeyh planı: önce koy, sonra otel",
+        "body": [
+          "Naama Bay’de kıyı ve akşam yürüyüşünü aynı çevrede tutmak daha kolay. Sharks Bay veya Nabq tarafında bir resort seçtiğinizde tatilin merkezi büyük ölçüde otelinize kayabilir. Bu, kötü bir tercih değil; yalnız her akşam şehir içine yürüyerek çıkmayı beklememek gerekiyor. Rezervasyonu şehir adına değil kalacağınız koyun günlük düzenine göre düşünün.",
+          "Ras Muhammad gezisinde tekne programı ile karadan yapılan ziyaret aynı gün hissini vermez. Biri suya giriş ve teknede zaman, diğeri kara durakları etrafında şekillenir. Sadece en fazla durağı vaat eden paketi seçmek yerine ne kadar yüzmek, ne kadar kıyıda kalmak istediğinizi düşünün. Çocukla veya yüzmeye daha az güvenerek geziyorsanız programın buna uygun olmasına özellikle bakın.",
+          "Kısa bir tatilde her güne deniz turu, çöl turu ve gece etkinliği koymak dinlenme zamanını silebilir. Bir ana deniz gezisi seçip kalan günleri koyunuzda geçirmek çoğu ilk ziyaret için daha rahat bir başlangıç. Daha uzun bir doğa veya dağ gezisi eklemek istiyorsanız onu ayrı gün olarak planlayın; resorttan erken çıkış ve geç dönüş aynı günün enerjisini değiştirir."
+        ]
+      },
       {
         "id": "ulasim",
         "heading": "Şarm el-Şeyh ulaşım rehberi",
@@ -989,17 +1101,27 @@
         ]
       },
       {
+        "id": "mahalle-yasami",
+        "heading": "Naama akşamı ve Eski Çarşı molası",
+        "body": [
+          "Naama Bay’in akşam hareketi için bütün geceyi dolduran bir program gerekmiyor. Kıyıda yürüyüp bir masaya oturmak, gün boyu denizde geçen zamanın ardından yeterli olabilir. Eski Çarşı’yı da yalnız alışveriş turu gibi görmeden sokaklarına ve yemek seçeneklerine vakit verin. Farklı koylarda kalıyorsanız bu iki akşamı ayrı düşünmek gereksiz gidip gelmeyi azaltır.",
+          "Deniz gününün keyfi yalnız gördüğünüz balık sayısıyla ölçülmüyor. Suya girmediğiniz zamanlarda kıyının gölgesini, kitap molasını ve yavaş bir öğünü de plana katın. Şarm’da daha az etkinlik seçmek daha eksik bir tatil anlamına gelmez. Özellikle bir şehir gezisinin ardından buraya geliyorsanız boş bırakılan bir gün seyahatin en iyi kısmına dönüşebilir."
+        ]
+      },
+      {
         "id": "konaklama",
         "heading": "Şarm el-Şeyh nerede kalınır?",
         "body": [
-          "Naama yürüyüş ve akşam hareketi, Sharks Bay resif odaklı oteller, Nabq daha geniş resort alanları sunar. Bunlar genel yönlendirmedir: gerçek otel plajında iskele, derin su, rüzgâr, yüzme alanı ve çocuk erişimini ayrı kontrol edin."
+          "Naama yürüyüş ve akşam hareketi, Sharks Bay resif odaklı oteller, Nabq daha geniş resort alanları sunar. Bunlar genel yönlendirmedir: gerçek otel plajında iskele, derin su, rüzgâr, yüzme alanı ve çocuk erişimini ayrı kontrol edin.",
+          "Otel fotoğraflarında turkuaz su görmek, kıyıdan rahatça yüzülebildiğini göstermiyor. Gerçek plaj girişini ve gün içinde nerede gölge bulacağınızı anlamaya çalışın. Çocukla tatilde bunlar oda büyüklüğünden daha önemli olabilir; şnorkel odaklı geziyorsanız suya ulaşma biçimi ve otelden çıkmadan geçireceğiniz günlerin rahatlığı öne çıkar."
         ]
       },
       {
         "id": "yeme-icme",
         "heading": "Şarm el-Şeyh ne yenir?",
         "body": [
-          "Balık ve ızgara yanında ful, taameya ve sebze tabakları bulunur. Resort büfesini tek seçenek saymayın, fakat uzak koydan akşam yemeği için transfer bedelini ekleyin. Balıkta kilo fiyatı, hazırlama ve yan tabakları siparişten önce sorun."
+          "Balık ve ızgara yanında ful, taameya ve sebze tabakları bulunur. Resort büfesini tek seçenek saymayın, fakat uzak koydan akşam yemeği için transfer bedelini ekleyin. Balıkta kilo fiyatı, hazırlama ve yan tabakları siparişten önce sorun.",
+          "Oteldeki büfeden bir akşam çıkmak isterseniz Naama veya Eski Çarşı çevresini geziyle birleştirebilirsiniz. Balık yanında basit bir salata ve küçük tabaklarla hafif bir öğün kurmak sıcak günlerde daha rahat. Uzak bir resortta kalıyorsanız yemek için gidiş dönüşü de düşünün; bazen yakında sakin bir akşam, sırf adı duyulmuş bir masaya gitmekten daha iyi."
         ]
       },
       {
@@ -1119,7 +1241,7 @@
       }
     ],
     "volatileNote": "Bilet ücretleri, seferler ve ziyaret saatleri değişebilir. Rezervasyon öncesinde aşağıdaki resmî kaynaklardan güncel bilgiyi kontrol edin.",
-    "reviewed": "2026-10-05",
+    "reviewed": "2026-10-06",
     "countryInfoOnHub": true
   },
   {
@@ -1128,7 +1250,7 @@
     "seoTitle": "Tiflis Gezi Rehberi: Eski Şehir, Hamamlar ve 3 Günlük Rota",
     "seoDescription": "Tiflis gezi rehberi: Abanotubani, eski şehir, Sololaki ve Mtatsminda; ulaşım, nerede kalınır, Gürcü yemekleri ve 3 günlük yürüyüş rotası.",
     "h1": "Tiflis Gezi Rehberi: Eski Şehir, Hamamlar ve 3 Günlük Rota",
-    "lede": "Tiflis’in karakteri balkonlu yokuşlarda, hamam kubbeleri çevresinde ve küçük avlularda ortaya çıkar. Eski şehri gördükten sonra Sololaki ve modern merkez için zaman bırakın; manzaraya çıkışı da yürüme planının parçası sayın.",
+    "lede": "Tiflis’te en güzel an bazen büyük bir manzaradan çok, balkonlu bir sokakta verilen kahve molası oluyor. Hamam kubbeleri, yokuşlu mahalleler ve uzun sofralar birbirine karışıyor; şehre iki üç gün tanıyınca ilk bakıştaki güzel cephelerin arkasında yaşayan bir yer buluyorsunuz.",
     "quickFacts": [
       {
         "label": "Önerilen süre",
@@ -1144,6 +1266,15 @@
       }
     ],
     "sections": [
+      {
+        "id": "gezi-planlama",
+        "heading": "Tiflis’i üç güne yaymak: eski şehir, mahalleler ve manzara",
+        "body": [
+          "İlk günü Abanotubani ve eski şehrin sokaklarına ayırın; nehir çevresini de bu yürüyüşe katabilirsiniz. İkinci gün Sololaki’den merkez caddelerine uzanıp bir müze veya kafe molası bırakın. Üçüncü gün manzara, hamam ya da şehir dışı kısa bir gezi arasında seçim yapın. Her günü aynı yokuşlara dönerek geçirmek yerine rotaları bölmek daha rahat.",
+          "Tiflis’e yalnız Kazbegi veya Batum yolunda bir aktarma gecesi ayırmak şehrin iyi taraflarını aceleye getiriyor. Eski şehir fotoğrafları bir öğleden sonra çekilir ama mahalleler, hamam ve yemekler daha fazla zaman ister. Yolculuğunuz kısa olsa bile bir tam günü burada tutup şehir dışı duraklardan birini azaltmak daha dengeli olabilir.",
+          "Yürüyüşleri haritadaki düz çizgiye göre değil yokuşlara göre kurun. Sabah eski şehirde, öğleden sonra daha düz merkez çevresinde dolaşmak iyi bir denge. Yağmurda taş sokaklar ve merdivenler programı yavaşlatabilir; o güne hamam veya kapalı bir ziyaret bırakın. Manzara durağını havanın açık olduğu bir zamanla eşleştirmek bütün günü zorla aynı rotada tutmaktan daha iyi."
+        ]
+      },
       {
         "id": "ulasim",
         "heading": "Tiflis ulaşım rehberi",
@@ -1180,10 +1311,19 @@
         ]
       },
       {
+        "id": "mahalle-yasami",
+        "heading": "Sololaki sokakları ve hamam molası",
+        "body": [
+          "Sololaki’de cephelere bakarken avluların çoğunun hâlâ ev olduğunu hatırlayın. Açık bir kapı her zaman ziyaret daveti değil; içeride yaşayanları rahatsız etmeden sokaktan bakmak da güzel. Tiflis’in samimiyeti biraz bu gündelik ayrıntılarda: bir fırın, küçük bir kafe, akşam hareketlenen bir sokak. Rotaya her zaman yeni bir anıt eklemek gerekmiyor.",
+          "Abanotubani’de hamamı gezi arasında kısa bir fotoğraf durağı yerine gerçek bir mola gibi planlayın. Özel oda ile ortak alan deneyimi farklı; süre, havlu ve kese gibi ekleri seçerken kendi rahatlığınıza bakın. Çıkışa sıkışık bir yemek rezervasyonu koymamak iyi fikir. Şehrin yokuşlarını gezdikten sonra yavaş bir akşam için alan kalır."
+        ]
+      },
+      {
         "id": "konaklama",
         "heading": "Tiflis nerede kalınır?",
         "body": [
           "Özgürlük Meydanı–Sololaki merkez erişimi, Vera kafe ve mahalle ritmi, Abanotubani atmosfer için iyi başlangıçlardır. Yokuşlu sokakta bavul, gece gürültüsü ve gerçek taksi bırakma noktasını sorun. Metro yakınlığı daha uzun kalışta faydalıdır.",
+          "Atmosfer arıyorsanız Sololaki veya eski şehir, daha rahat günlük erişim istiyorsanız metroya yakın merkez iyi başlangıç. Fotoğraflardaki ahşap balkon romantik görünse de bavulla birkaç kat çıkmak herkes için aynı keyif değil. Birkaç gecelik konaklamada sokak ve merdiven düzenini anlamak, sırf en güzel oda fotoğrafına göre seçim yapmaktan daha kullanışlı.",
           "Abanotubani çevresi hamam ve eski sokak yürüyüşüne, Rustaveli çevresi müze ve ana cadde gezisine daha uygundur. Odanın dik yokuşta olup olmadığını ve gece dönüşünü kontrol edin; kısa görünen mesafeyi bavulla aynı kolaylıkta yürüyemeyebilirsiniz."
         ]
       },
@@ -1191,7 +1331,8 @@
         "id": "yeme-icme",
         "heading": "Tiflis ne yenir?",
         "body": [
-          "Khinkali, khachapuri, badrijani ve pkhali Gürcü mutfağını farklı yönleriyle açar. Hamur işi her zaman hafif öğün değildir; sebze ve cevizli tabaklarla paylaşım kurun. Khinkali’de iç dolgu, khachapuri’de peynir ve yumurta, alerjide ceviz özellikle sorulmalıdır."
+          "Khinkali, khachapuri, badrijani ve pkhali Gürcü mutfağını farklı yönleriyle açar. Hamur işi her zaman hafif öğün değildir; sebze ve cevizli tabaklarla paylaşım kurun. Khinkali’de iç dolgu, khachapuri’de peynir ve yumurta, alerjide ceviz özellikle sorulmalıdır.",
+          "Gürcü sofrasında birkaç yemeği paylaşmak tek büyük tabaktan daha keyifli. Khinkali’nin içindeki suyu dökmeden küçük bir ısırıkla başlamak, yanında cevizli sebze tabakları denemek iyi giriş. Khachapuri’yi de her öğünün yan ürünü saymayın; çoğu zaman başlı başına doyurucu bir seçim. Uzun bir akşam yemeği, Tiflis gezisinin anıtlar kadar hatırlanan kısmı olabilir."
         ]
       },
       {
@@ -1303,10 +1444,14 @@
       {
         "name": "TTC — Tiflis toplu taşıma",
         "url": "https://ttc.com.ge/en"
+      },
+      {
+        "name": "Georgia Travel — Gürcü yemekleri",
+        "url": "https://georgia.travel/top-eleven-georgian-food"
       }
     ],
     "volatileNote": "Bilet ücretleri, seferler ve ziyaret saatleri değişebilir. Rezervasyon öncesinde aşağıdaki resmî kaynaklardan güncel bilgiyi kontrol edin.",
-    "reviewed": "2026-10-05",
+    "reviewed": "2026-10-06",
     "countryInfoOnHub": true
   },
   {
@@ -1315,7 +1460,7 @@
     "seoTitle": "Batum Gezi Rehberi: Bulvar, Botanik Bahçesi ve Sahil",
     "seoDescription": "Batum gezi rehberi: sahil bulvarı, eski şehir ve botanik bahçesi; nerede kalınır, ulaşım, Acar yemekleri, plaj koşulları ve 3 günlük rota.",
     "h1": "Batum Gezi Rehberi: Bulvar, Botanik Bahçesi ve Sahil",
-    "lede": "Batum’da sahil yalnız plaj değildir: uzun bulvar, eski sokaklar, parklar ve Karadeniz’e bakan bahçe farklı gün ritimleri sunar. Yağışı ve çakıllı deniz girişini hesaba katarak yürüyüş ile dinlenmeyi birlikte planlayın.",
+    "lede": "Batum’da güne bulvarda yürüyerek başlayıp eski sokaklarda kahveye oturmak, sonra deniz kenarına dönmek çok doğal geliyor. Karadeniz’in havası planı biraz değiştirebilir; bu yüzden burayı yalnız plaj tatili değil, yeşili ve şehir hayatı olan rahat bir kıyı kaçamağı gibi düşünmek güzel.",
     "quickFacts": [
       {
         "label": "Önerilen süre",
@@ -1331,6 +1476,15 @@
       }
     ],
     "sections": [
+      {
+        "id": "gezi-planlama",
+        "heading": "Batum’da şehir ve deniz günlerini dengelemek",
+        "body": [
+          "İki veya üç tam gün için bir bulvar ve eski merkez günü, bir botanik bahçe günü, bir de serbest kıyı günü rahat bir çerçeve. Bahçeyi merkez yürüyüşünün sonuna küçük bir ek gibi koymayın; orada mesafe ve eğim ayrı zaman ister. Hava güzel olduğunda açık alanları öne alıp yağmurlu saatlere yemek veya kapalı bir ziyaret bırakmak daha esnek bir tatil kurar.",
+          "Deniz için geliyorsanız çakıllı kıyının kumlu bir plajdan farklı olduğunu baştan kabul edin. Rahat deniz ayakkabısı ve yüzme sonrası oturacak bir yer küçük ama değerli ayrıntılar. Şehir gezisi önceliğinizse plaj saatlerini mecburi bir tam gün yerine yürüyüşün arasında düşünün. Batum’un güzel tarafı iki tür tatili aynı üs üzerinden birleştirebilmek.",
+          "Tiflis’ten geliş gününü tam gezi günü saymayın. Yolculuktan sonra bulvarda kısa bir yürüyüş ve yemek çoğu zaman yeterli. Bir sonraki sabaha bahçeyi veya daha uzun yürüyüşü bırakırsanız tatil koşturarak başlamaz. Batum’a sırf mavi gökyüzü garantisi için gelmek yerine Karadeniz’in değişken havasına alan açmak beklentiyi daha doğru kurar."
+        ]
+      },
       {
         "id": "ulasim",
         "heading": "Batum ulaşım rehberi",
@@ -1367,17 +1521,27 @@
         ]
       },
       {
+        "id": "mahalle-yasami",
+        "heading": "Eski sokaklar, meydanlar ve bulvarda boş zaman",
+        "body": [
+          "Eski Batum’u Avrupa Meydanı ve çevresindeki sokaklar üzerinden sakin bir yürüyüşle tanıyabilirsiniz. Cephelere baktıktan sonra bir kahveye oturmak şehrin gündelik ritmini gösterir. Bulvarın tamamını bitirmeye çalışmak yerine bir bölümünü sabah, başka bir bölümünü akşam gezmek daha keyifli. Aynı kıyı farklı saatlerde başka bir yüz gösteriyor.",
+          "Botanik bahçede önceliğiniz bir “en iyi fotoğraf” noktası değil, yürüyüşün kendisi olabilir. Giriş ve çıkışınızı, dinlenme molalarını ve merkeze dönüşü aynı plan içinde düşünün. Bahçe gününe yeni bir uzun gezi eklemek yerine akşam eski merkezde sade bir yemek bırakmak, yeşil ve denizle geçirilen günü daha güzel tamamlar."
+        ]
+      },
+      {
         "id": "konaklama",
         "heading": "Batum nerede kalınır?",
         "body": [
-          "Eski merkez yürüyüş ve restoran, bulvar çevresi kıyı erişimi, Yeni Bulvar modern oteller için uygundur. Yeni yapıdaki ucuz dairede tamamlanmış çevre, asansör, klima ve plaja gerçek yürüyüşü kontrol edin. Kıyı manzarası şehir merkezine yakınlık garantisi değildir."
+          "Eski merkez yürüyüş ve restoran, bulvar çevresi kıyı erişimi, Yeni Bulvar modern oteller için uygundur. Yeni yapıdaki ucuz dairede tamamlanmış çevre, asansör, klima ve plaja gerçek yürüyüşü kontrol edin. Kıyı manzarası şehir merkezine yakınlık garantisi değildir.",
+          "İlk ziyarette eski merkeze ve bulvara yürüyebileceğiniz bir üs, uzaktaki manzaralı daireden daha kullanışlı olabilir. Uzun konaklamada mutfaklı bir daire rahatlık sağlar; kısa kaçamakta resepsiyon, bagaj bırakma ve kolay varış daha değerli olabilir. Otelin denize yakınlığı kadar yağmurlu bir akşamda çevresinde ne yapacağınızı da düşünün."
         ]
       },
       {
         "id": "yeme-icme",
         "heading": "Batum ne yenir?",
         "body": [
-          "Acar khachapuri’si peynir, yumurta ve tereyağıyla doyurucu bir ana öğündür. Deniz ürünleri, sebze-ceviz tabakları ve Gürcü hamur işleriyle çeşitlendirin. Çok aç olmadığınızda paylaşmak, tek kişiye büyük porsiyon almaktan daha rahat olabilir."
+          "Acar khachapuri’si peynir, yumurta ve tereyağıyla doyurucu bir ana öğündür. Deniz ürünleri, sebze-ceviz tabakları ve Gürcü hamur işleriyle çeşitlendirin. Çok aç olmadığınızda paylaşmak, tek kişiye büyük porsiyon almaktan daha rahat olabilir.",
+          "Acar khachapuri’sini küçük bir ara öğün sanarak sipariş etmeyin; peynir, yumurta ve tereyağıyla güçlü bir öğün. Yanına hafif bir sebze tabağı eklemek veya paylaşmak güzel denge kurar. Deniz kenarında geçen günün ardından Gürcü sofrasına oturmak Batum’un keyifli taraflarından biri; her akşam farklı ve uzak bir restoran aramak gerekmiyor."
         ]
       },
       {
@@ -1492,7 +1656,7 @@
       }
     ],
     "volatileNote": "Bilet ücretleri, seferler ve ziyaret saatleri değişebilir. Rezervasyon öncesinde aşağıdaki resmî kaynaklardan güncel bilgiyi kontrol edin.",
-    "reviewed": "2026-10-05",
+    "reviewed": "2026-10-06",
     "countryInfoOnHub": true
   },
   {
@@ -1501,7 +1665,7 @@
     "seoTitle": "Kazbegi Gezi Rehberi: Stepantsminda ve Gergeti Rotası",
     "seoDescription": "Kazbegi gezi rehberi: Stepantsminda, Gergeti Kilisesi, Sno ve Juta için dağ rotası, Tiflis ulaşımı, nerede kalınır ve mevsim ipuçları.",
     "h1": "Kazbegi Gezi Rehberi: Stepantsminda ve Gergeti Rotası",
-    "lede": "Kazbegi bir büyük şehir gezisi değil, Stepantsminda’da üs kurulan dağ ayağıdır. Gergeti manzarası, vadi yürüyüşü ve hava nedeniyle değişen ulaşım için iki gece bırakmak, tek gün turunun acele ritmini azaltır.",
+    "lede": "Kazbegi’de sabah perdeyi açıp dağa bakmak bile güne güzel bir başlangıç. Stepantsminda’da iki gece kalınca Gergeti’ye acele etmeden çıkmak, vadide yürümek ve bulutlar manzarayı kapattığında beklemek için zaman oluyor. Buraya yapılacaklar listesinden çok, biraz boş zamanla gelmek iyi geliyor.",
     "quickFacts": [
       {
         "label": "Önerilen süre",
@@ -1517,6 +1681,15 @@
       }
     ],
     "sections": [
+      {
+        "id": "gezi-planlama",
+        "heading": "Kazbegi’de iki gece: manzaraya ve havaya alan bırakın",
+        "body": [
+          "Tiflis’ten geliş günü manzara molaları ve yolculuk zaten günün bir bölümünü doldurur. O akşama yalnız yerleşme ve kısa bir yürüyüş bırakabilirsiniz. Ertesi gün Gergeti’yi ana ziyaret yapıp üçüncü günkü çıkışınızı hafif tutmak rahat bir çerçeve. Juta veya daha uzun vadi yürüyüşü istiyorsanız ek gün, programı üst üste yığmaktan daha iyi.",
+          "Gergeti’ye yürüyerek çıkmak ile araçla gidip çevrede dolaşmak aynı etkinlik değil. Yürüyüş seçiyorsanız gidiş dönüşü, eğimi ve hava değişimini günün merkezine alın. Araçla çıkmak yorulmadan çevreyi görmeye alan açabilir; yürümeyi seçmemek daha eksik bir ziyaret anlamına gelmiyor. Kendinize uygun tempoyu seçmek burada fotoğrafı yetiştirmekten daha önemli.",
+          "Dağda her açık sabah bütün günün açık kalacağı anlamına gelmez. Gergeti, Sno ve Juta’yı sırf haritada yakın göründükleri için aynı güne sıkıştırmayın. Bir ana yürüyüş ve kısa bir yan durak yeterli olabilir. Rota koşulları uygun değilse köyde kalıp sıcak bir yemek yemek de planın parçası; hava nedeniyle vazgeçilen bir yürüyüş başarısız gezi sayılmaz."
+        ]
+      },
       {
         "id": "ulasim",
         "heading": "Kazbegi ulaşım rehberi",
@@ -1553,17 +1726,27 @@
         ]
       },
       {
+        "id": "mahalle-yasami",
+        "heading": "Stepantsminda’da dağların arasına bir mola",
+        "body": [
+          "Stepantsminda’yı büyük şehir gibi sokak sokak bitirmek gerekmiyor. Bir manzara molası, yerel bir öğün ve konakladığınız yerde sakin bir akşam günün güzel parçaları olabilir. Gergeti tarafına bakarken bulutların açılmasını beklemek de deneyimin kendisi. Programda bu boşluk olmayınca dağ yolculuğu bazen yalnız araç penceresinden görülen bir manzaraya dönüşüyor.",
+          "Sno çevresinde kısa bir geziyle vadi hissini yakalayabilirsiniz; Juta’yı ise yürüyüşün kendisine vakit ayırmak istediğinizde düşünün. Her iki yerde de köy yaşamını ve özel alanları gözetin. Doğa gününü şehirdeki durak sayısıyla ölçmeyin: daha az yere gidip bir vadide uzun kalmak bu bölgeyi tanımanın gayet güzel bir yolu."
+        ]
+      },
+      {
         "id": "konaklama",
         "heading": "Kazbegi nerede kalınır?",
         "body": [
-          "Stepantsminda merkezi restoran ve transfer erişimi; Gergeti tarafı manzara ve yokuşlu konaklama sunar. Odanın dağa bakması kadar ısıtma, araçla erişim ve iptal esnekliğini sorun. Çok uzak bir manzara oteli her yürüyüşe daha yakın değildir."
+          "Stepantsminda merkezi restoran ve transfer erişimi; Gergeti tarafı manzara ve yokuşlu konaklama sunar. Odanın dağa bakması kadar ısıtma, araçla erişim ve iptal esnekliğini sorun. Çok uzak bir manzara oteli her yürüyüşe daha yakın değildir.",
+          "Manzaralı bir oda güzel, fakat iki gece kalırken merkeze ve yemek seçeneklerine erişim de önemli. Araçsız gezide çok uzak bir konaklama her küçük iş için transfer gerektirebilir. Isıtma ve ortak alanlar da serin veya yağmurlu bir günde oda fotoğrafından daha fazla fark yaratır. Kazbegi’de rahat bir üs tatilin kendisini iyileştirir."
         ]
       },
       {
         "id": "yeme-icme",
         "heading": "Kazbegi ne yenir?",
         "body": [
-          "Khinkali, çorba ve sıcak Gürcü yemekleri dağ gününden sonra iyi çalışır. Uzun yürüyüşte restoran bulacağınızı varsaymadan paket öğün ve su hazırlayın. Misafirhane yemeğinde saat, porsiyon ve özel beslenme ihtiyacını bir gün önce konuşun."
+          "Khinkali, çorba ve sıcak Gürcü yemekleri dağ gününden sonra iyi çalışır. Uzun yürüyüşte restoran bulacağınızı varsaymadan paket öğün ve su hazırlayın. Misafirhane yemeğinde saat, porsiyon ve özel beslenme ihtiyacını bir gün önce konuşun.",
+          "Misafirhanede akşam yemeği sunuluyorsa bunu önceden konuşmak güzel bir seçenek. Gün boyu dışarıda gezdikten sonra çorba ve sıcak bir Gürcü yemeğine dönmek yolculuğu sadeleştirir. Uzun yürüyüş için “yolda bir şey buluruz” yerine sabah öğün hazırlayın; köy restoranında oturacağınız akşamı da aceleye getirmeyin."
         ]
       },
       {
@@ -1674,7 +1857,7 @@
       }
     ],
     "volatileNote": "Bilet ücretleri, seferler ve ziyaret saatleri değişebilir. Rezervasyon öncesinde aşağıdaki resmî kaynaklardan güncel bilgiyi kontrol edin.",
-    "reviewed": "2026-10-05",
+    "reviewed": "2026-10-06",
     "countryInfoOnHub": true
   },
   {
@@ -1683,7 +1866,7 @@
     "seoTitle": "Sofya Gezi Rehberi: Gezilecek Yerler ve 2 Günlük Rota",
     "seoDescription": "Sofya gezi rehberi: Alexander Nevsky, Serdica ve Vitoşa için gezilecek yerler, metro ve havalimanı ulaşımı, yemek, otel bölgeleri ve rota.",
     "h1": "Sofya Gezi Rehberi: Gezilecek Yerler ve 2 Günlük Rota",
-    "lede": "Sofya’da büyük katedral, Roma katmanı ve gündelik merkez hayatı kısa yürüyüşlerle birleşir. Şehri yalnız aktarma gecesi saymadan müzelere zaman bırakın; Vitoşa’yı ise hazırlık isteyen ayrı doğa ayağı olarak düşünün.",
+    "lede": "Sofya ilk anda büyük bir gösteri sunmuyor; biraz yürüyünce Roma kalıntıları, bir katedral ve kahve içilen sakin sokaklar yan yana geliyor. Şehre iki gün ayırmak bu sade tarafını sevmeye yetebilir. Dağ manzarası da güzel, ama Vitoşa’yı merkezin arasında sıkıştırılacak kısa bir park molası sanmayın.",
     "quickFacts": [
       {
         "label": "Önerilen süre",
@@ -1699,6 +1882,15 @@
       }
     ],
     "sections": [
+      {
+        "id": "gezi-planlama",
+        "heading": "Sofya’da iki gün: merkez yürüyüşü ve bir derinleşme günü",
+        "body": [
+          "İlk gün Serdica çevresinden başlayıp merkezdeki tarih katmanlarını kısa yürüyüşlerle birleştirin. Alexander Nevsky ziyaretini aynı şehir gününe alıp araya uzun bir öğle molası bırakabilirsiniz. İkinci gün için bir müze, Boyana çevresi veya Vitoşa arasında seçim yapmak daha dengeli. Şehre yalnız “başkentte birkaç saat” diye bakınca bu farklı deneyimler aynı acele yürüyüşe sıkışıyor.",
+          "Vitoşa’ya gidecekseniz şehirde açık olan havayı dağda da aynı sanmayın. Ulaşım, dönüş ve yürüyüş uzunluğu için ayrı plan gerekiyor. Doğa günü istemiyorsanız kendinizi zorlamak yerine merkezde daha fazla zaman geçirin. Sofya’nın değerini bütün çevre duraklarını görmekten çok, sevdiğiniz iki üç deneyimi rahatça birleştirerek anlayabilirsiniz.",
+          "Plovdiv’e geçecekseniz ulaşım gününü merkezin en yoğun müze günüyle birleştirmeyin. Sabah bavul bırakma, istasyona gidiş ve yeni otele varış da zaman alır. Sofya’da iki geceyle yalnız bir tam gün kalacağını hesaba katın; sakin bir şehir yürüyüşü ve güzel bir akşam yemeği, acele bir dağ gezisinden daha iyi tamamlanabilir."
+        ]
+      },
       {
         "id": "ulasim",
         "heading": "Sofya ulaşım rehberi",
@@ -1735,10 +1927,19 @@
         ]
       },
       {
+        "id": "mahalle-yasami",
+        "heading": "Serdica’dan Vitosha Boulevard’a gündelik Sofya",
+        "body": [
+          "Serdica çevresinde yerin altındaki antik izlerle bugünkü ulaşımın yan yana olması şehir gezisini ilginç kılıyor. Kalıntılara kısa bir bakışın ardından sokak seviyesine çıkıp çevreyi yürüyerek tamamlayabilirsiniz. Bütün günü yalnız katedral fotoğrafına ayırmak yerine bu küçük katmanları görmek Sofya’yı daha kendine özgü bir yer hâline getiriyor.",
+          "Vitosha Boulevard’da bir masaya oturup insanları izlemek merkez yürüyüşüne hoş bir mola ekler. Ana caddenin hareketinden sonra yan sokaklara geçerek daha sakin bir akşam bulabilirsiniz. Müze ve ibadet yeri ziyaretlerinde sessizliğe, sokakta ise kendi temponuza alan bırakın. Şehir kısa mesafelerde dolaşmaya uygun olsa da bir dinlenme molası her zaman iyi gelir."
+        ]
+      },
+      {
         "id": "konaklama",
         "heading": "Sofya nerede kalınır?",
         "body": [
           "Serdica–merkez ulaşım, Vitosha Boulevard çevresi yemek ve yürüyüş, daha sakin yan sokaklar gece konforu için uygundur. Ana caddedeki odada gürültüyü, araçta otoparkı ve havaalanı bağlantısını kontrol edin.",
+          "Kısa ziyarette Serdica’ya veya merkezi metro duraklarına yakınlık işleri kolaylaştırır. Yaya caddesinin üstünde kalmak yemek için rahat, gece sessizliği için her odada aynı avantajı sunmayabilir. Bir sokak gerideki sakin otel, daha gösterişli fakat gürültülü bir konumdan daha iyi uyku sağlayabilir. Dağ geziniz olsa da ilk üs seçimini şehirde geçireceğiniz saatlere göre yapın.",
           "İlk ziyarette Serdika çevresini üs almak merkez duraklarını yürüyerek bağlamayı kolaylaştırır. Vitosha Bulvarı çevresinde restoran ve akşam hareketi vardır; sessiz oda isteyenler cephenin hangi sokağa baktığını sormalı. Merkez dışı otelde metroya gerçek yürüyüş mesafesini karşılaştırın."
         ]
       },
@@ -1746,7 +1947,8 @@
         "id": "yeme-icme",
         "heading": "Sofya ne yenir?",
         "body": [
-          "Banitsa kahvaltı, shopska salatası, tarator ve kavarma ise farklı öğün seçenekleridir. Peynirli salata ve yoğurtlu çorba vegan değildir; tarifte et ve süt ürününü sorun. Menü fiyatını avro ve servis dahil son tutar üzerinden okuyun."
+          "Banitsa kahvaltı, shopska salatası, tarator ve kavarma ise farklı öğün seçenekleridir. Peynirli salata ve yoğurtlu çorba vegan değildir; tarifte et ve süt ürününü sorun. Menü fiyatını avro ve servis dahil son tutar üzerinden okuyun.",
+          "Sabah banitsa ve kahveyle başlamak, öğlen daha hafif bir salata, akşam sıcak bir yemek seçmek geziyle kolay birleşiyor. Shopska’nın peyniri ve taratorun yoğurdu bu tabakların karakteri; özel beslenme ihtiyacınız varsa yalnız sebze görünümüne güvenmeyin. Bulgar mutfağını keşfetmek için tek uzun ziyafet yerine birkaç öğüne farklı tatlar yayabilirsiniz."
         ]
       },
       {
@@ -1852,10 +2054,14 @@
       {
         "name": "Avrupa Komisyonu — Bulgaristan ve avro",
         "url": "https://economy-finance.ec.europa.eu/euro/eu-countries-and-euro/bulgaria-and-euro_en"
+      },
+      {
+        "name": "Visit Sofia — şehir yürüyüşleri ve Vitoşa",
+        "url": "https://www.visitsofia.bg/en/routes-sofia/9?view=route"
       }
     ],
     "volatileNote": "Bilet ücretleri, seferler ve ziyaret saatleri değişebilir. Rezervasyon öncesinde aşağıdaki resmî kaynaklardan güncel bilgiyi kontrol edin.",
-    "reviewed": "2026-10-05",
+    "reviewed": "2026-10-06",
     "countryInfoOnHub": true
   },
   {
@@ -1864,7 +2070,7 @@
     "seoTitle": "Plovdiv Gezi Rehberi: Eski Şehir, Kapana ve Antik Tiyatro",
     "seoDescription": "Plovdiv gezi rehberi: Antik Tiyatro, eski şehir, Kapana ve bazilika mozaikleri; nerede kalınır, Sofya bağlantısı, yemek ve 2 günlük rota.",
     "h1": "Plovdiv Gezi Rehberi: Eski Şehir, Kapana ve Antik Tiyatro",
-    "lede": "Plovdiv antik anıtların yaşayan mahalleyle yan yana kaldığı bir şehir. Taşlı eski şehir yokuşlarını Kapana’nın kafe ve atölyeleriyle dengeleyin; müze evleri ile mozaiklere de fotoğraf duraklarından daha uzun zaman bırakın.",
+    "lede": "Plovdiv’de eski şehir yokuşlarından inip Kapana’da bir kahveye oturduğunuzda günün temposu kendiliğinden yavaşlıyor. Antik tiyatro, renkli evler ve yaşayan bir mahalle birbirine yakın; yine de burayı acele bir fotoğraf turuna çevirmeden iki gün ayırmak çok daha güzel.",
     "quickFacts": [
       {
         "label": "Önerilen süre",
@@ -1880,6 +2086,15 @@
       }
     ],
     "sections": [
+      {
+        "id": "gezi-planlama",
+        "heading": "Plovdiv’de iki gün: eski şehir ve yaşayan mahalleler",
+        "body": [
+          "İlk sabah eski şehir ve Antik Tiyatro çevresine çıkıp öğleden sonra Kapana’ya inmek rahat bir başlangıç. Ertesi gün mozaiklere veya müze evlerine daha uzun bir ziyaret ayırabilirsiniz. Taşlı yokuşlar haritadaki kısa mesafeyi uzatır; özellikle yazın bütün eski şehri öğle saatine bırakmayın. Bir büyük ziyaret ve uzun bir mahalle molası gün için yeterli olabilir.",
+          "Sofya’dan günübirlik gelmek mümkündür, ama geliş ve dönüş saatleri gezinin karakterini değiştirir. Bir gece kalırsanız kalabalık dağıldıktan sonra Kapana’da yemek yiyip ertesi sabah daha sakin sokaklara çıkabilirsiniz. İki gece ise müze ve ev ziyaretlerine alan açar. Burada kazanılan zaman yalnız yeni bir durak değil, şehrin akşamını da görmektir.",
+          "Antik Tiyatro ile Kapana’yı aynı tür durak gibi düşünmeyin. Birinde mimariyi ve tarihi anlamaya, diğerinde sokaklarda dolaşıp atölye ve kafelere bakmaya zaman ayırırsınız. Programda yalnız antik yapılar varsa şehir biraz donuk kalabilir; yalnız kafeler varsa tarih tarafını kaçırırsınız. Plovdiv’in keyfi ikisini kısa yürüyüşlerle bağlamakta."
+        ]
+      },
       {
         "id": "ulasim",
         "heading": "Plovdiv ulaşım rehberi",
@@ -1916,10 +2131,19 @@
         ]
       },
       {
+        "id": "mahalle-yasami",
+        "heading": "Kapana’da mola, eski evlerde biraz merak",
+        "body": [
+          "Kapana’yı “yemek yenip çıkılacak bölge” diye hızla geçmeyin. Küçük sokaklarda dolaşıp beğendiğiniz bir dükkâna bakmak ve ardından oturmak daha doğal bir gezi kurar. Akşam hareketli olabilir; sessiz bir mola istiyorsanız ana masaların bir sokak gerisini deneyin. Her mekânı tek tek işaretlemek yerine mahallede biraz boş zaman bırakın.",
+          "Eski şehirde bir müze evine girmek cephelerin arkasındaki hayatı anlamaya yardımcı olur. Her eve aynı süreyi ayırmak yerine ilginizi çeken bir iki tanesini seçin. İçeriden çıktıktan sonra manzaralı bir mola, taşlı sokaklarda sürekli yürümekten daha iyi denge kurar. Plovdiv’i sevdiren ayrıntılar çoğu zaman bu kısa durakların arasında ortaya çıkıyor."
+        ]
+      },
+      {
         "id": "konaklama",
         "heading": "Plovdiv nerede kalınır?",
         "body": [
           "Kapana ve ana yaya caddesi erişim ve yemek; eski şehir atmosfer için uygundur. Eski evde klima, merdiven, araç girişi ve bavul yolunu kontrol edin. Kapana’nın hareketli sokaklarında gece sesi oda seçiminde önemlidir.",
+          "Eski şehirde bir evde kalmak atmosferli, Kapana’ya yakın bir otel ise akşam dönüşü daha kolay olabilir. Bavulla gelişte yokuşları ve araç bırakma noktasını düşünün. Bir gecelik ziyarette otelin konumu gezi süresini doğrudan etkiler; sakin bir yan sokak hem merkeze erişimi hem de uykuyu dengeleyebilir.",
           "Eski şehir konaklaması tarihî sokaklara yakınlık sağlar ama taş zemin ve eğim bagajı zorlaştırabilir. Kapana’da kafe ve akşam hayatı daha belirgindir; odanın ses koşulunu sorun. Araçla geliyorsanız otel kapısına ulaşım ile park yerinin konumunu ayrı doğrulayın."
         ]
       },
@@ -1927,7 +2151,8 @@
         "id": "yeme-icme",
         "heading": "Plovdiv ne yenir?",
         "body": [
-          "Banitsa, shopska salatası, ızgara ve sebze yemekleriyle gündelik menü kurabilirsiniz. Kapana’da kafe fiyatıyla tam akşam yemeği bütçesi aynı değildir. Yerel şarap tadımında porsiyon ve ulaşımı planlayın; araç kullanacak günü alkol programıyla birleştirmeyin."
+          "Banitsa, shopska salatası, ızgara ve sebze yemekleriyle gündelik menü kurabilirsiniz. Kapana’da kafe fiyatıyla tam akşam yemeği bütçesi aynı değildir. Yerel şarap tadımında porsiyon ve ulaşımı planlayın; araç kullanacak günü alkol programıyla birleştirmeyin.",
+          "Kapana akşamında uzun bir masa, gündüz ise banitsa veya sade bir öğün güzel denge kuruyor. Yerel şarapla ilgileniyorsanız bunu araç kullanmayacağınız akşama bırakabilirsiniz. Yalnız en fotojenik terasa bakmak yerine menüde gerçekten ne yemek istediğinizi seçin. İki günlük gezide birkaç farklı Bulgar yemeği denemek için yeterli öğün var."
         ]
       },
       {
@@ -2036,7 +2261,7 @@
       }
     ],
     "volatileNote": "Bilet ücretleri, seferler ve ziyaret saatleri değişebilir. Rezervasyon öncesinde aşağıdaki resmî kaynaklardan güncel bilgiyi kontrol edin.",
-    "reviewed": "2026-10-05",
+    "reviewed": "2026-10-06",
     "countryInfoOnHub": true
   },
   {
@@ -2045,7 +2270,7 @@
     "seoTitle": "Varna Gezi Rehberi: Sea Garden, Müzeler ve Plajlar",
     "seoDescription": "Varna gezi rehberi: Sea Garden, Arkeoloji Müzesi, Roma hamamları ve plajlar; nerede kalınır, ulaşım, yemek ve 3 günlük Karadeniz rotası.",
     "h1": "Varna Gezi Rehberi: Sea Garden, Müzeler ve Plajlar",
-    "lede": "Varna’yı yalnız yazlık plaj olarak planlamayın. Arkeoloji koleksiyonu, Roma hamamları ve uzun Sea Garden yürüyüşü şehir gezisini güçlendirir; kıyı tatili için ise merkezle uzak resortları ayırmak gerekir.",
+    "lede": "Varna’da sabah müzeye girip öğleden sonra Sea Garden’ın gölgesinden denize inebilirsiniz. Bu şehir plajla tarih arasında seçim yapmayı gerektirmiyor; birkaç günlük konaklamada ikisine de alan var. Yalnız merkezdeki bir şehir tatiliyle uzaktaki resortta geçirilen haftayı aynı gezi sanmayın.",
     "quickFacts": [
       {
         "label": "Önerilen süre",
@@ -2061,6 +2286,15 @@
       }
     ],
     "sections": [
+      {
+        "id": "gezi-planlama",
+        "heading": "Varna’da şehir tatili mi, kıyı tatili mi?",
+        "body": [
+          "İlk ziyaret için merkezde iki veya üç gün, müze ve denizi dengeleyen bir başlangıç. Arkeoloji Müzesi’ni bir sabaha, Roma Hamamları ve merkez yürüyüşünü başka bir bloğa alabilirsiniz. Sea Garden günün kalanına rahat bir geçiş sağlar. Sabah iki kapalı ziyaret ve öğleden sonra uzun plaj programı yerine bir ana ziyaretle başlayan daha boş günler kurun.",
+          "Golden Sands gibi kıyı bölgelerini seçiyorsanız Varna merkezine günlük geçişi planın içine katın. Resortta kalmanın keyfi başka; her gün müzeye ve şehir yemeğine dönmek ise ayrı ulaşım gerektiriyor. Deniz ve otel ağırlıklı bir hafta için resort, kısa kültür gezisi için merkez daha anlaşılır olabilir. İyi tercih, en çok nerede zaman geçirmek istediğinize bağlı.",
+          "Yazın müze ile denizi aynı gezide birleştirmek güzel; diğer mevsimlerde ise kıyı yürüyüşünü yüzme beklentisinden ayrı düşünün. Varna’yı yalnız hava yeterince sıcaksa değerli bir yer saymayın. Arkeoloji, merkez sokakları ve deniz kenarında sakin bir mola, plaj günü olmadan da iki günlük geziyi doldurabilir."
+        ]
+      },
       {
         "id": "ulasim",
         "heading": "Varna ulaşım rehberi",
@@ -2097,10 +2331,19 @@
         ]
       },
       {
+        "id": "mahalle-yasami",
+        "heading": "Sea Garden’da yürüyüşü biraz yavaşlatın",
+        "body": [
+          "Sea Garden’ı merkezle deniz arasında yalnız geçilecek bir park saymayın. Gölge, oturacak yer ve kısa yollarla geziye nefes aldırıyor. Sabah müzeden çıkıp parka uzanmak veya akşam yemek öncesi bir bölümünde yürümek yeterli. Parkın tamamını bitirmek zorunda kalmadan sevdiğiniz bir köşede durabilirsiniz.",
+          "Arkeoloji koleksiyonunda birkaç nesneye gerçekten vakit ayırmak uzun bir hızlı turdan daha öğretici olabilir. Roma Hamamları ise kentin tarihini açık alanda görmenin başka bir yolu. İki ziyareti araya bir mahalle öğünü koyarak ayırırsanız Varna yalnız eski eserlerden oluşan bir liste gibi kalmaz; bugünkü şehir de geziye katılır."
+        ]
+      },
+      {
         "id": "konaklama",
         "heading": "Varna nerede kalınır?",
         "body": [
           "İlk şehir gezisinde merkez–Sea Garden çevresi müze, yemek ve sahili dengeler. Golden Sands gibi resortlar ayrı plaj tatili sunar; her gün merkeze dönüş maliyetini ekleyin. Denize yakın oda ile sessiz oda aynı tercih olmayabilir.",
+          "İki gecelik ilk ziyarette merkez ve Sea Garden çevresinde kalmak, her gün yeniden ulaşım planı kurma ihtiyacını azaltır. Tatilinizin çoğu plajda geçecekse resort seçimi mantıklı olabilir. Konumu oda manzarasından önce düşünün: sabah müzeye yürümekle uzaktan araç beklemek kısa bir gezinin akışını belirgin biçimde değiştiriyor.",
           "Varna merkezindeki otel müze, Roma hamamları ve şehir hayatını birleştirir; dış kıyı tatil yerleri daha çok plaj konaklamasına yöneliktir. Rezervasyonda yalnız “Varna” adına bakmayın: merkezden gerçek mesafeyi, otobüs bağlantısını ve akşam dönüşünü adres üzerinden karşılaştırın."
         ]
       },
@@ -2108,7 +2351,8 @@
         "id": "yeme-icme",
         "heading": "Varna ne yenir?",
         "body": [
-          "Karadeniz balığı ve midye, shopska salatası ve Bulgar ev yemekleriyle birleşir. Deniz ürününde porsiyon, hazırlama ve yan tabak fiyatını sorun. Park veya sahil manzarası için ödediğiniz farkı toplam hesap üzerinden karşılaştırın."
+          "Karadeniz balığı ve midye, shopska salatası ve Bulgar ev yemekleriyle birleşir. Deniz ürününde porsiyon, hazırlama ve yan tabak fiyatını sorun. Park veya sahil manzarası için ödediğiniz farkı toplam hesap üzerinden karşılaştırın.",
+          "Kıyıda balık veya midye yemeğini geziye eklemek güzel; her öğünü deniz ürününe çevirmek şart değil. Bir gün Bulgar ev yemekleri, başka bir gün hafif bir salata ve ızgara seçebilirsiniz. Deniz manzaralı masa özellikle akşam keyifli olabilir, ama kısa öğle molasında merkeze yakın sade bir yer gününüzü daha rahat bırakır."
         ]
       },
       {
@@ -2220,10 +2464,18 @@
       {
         "name": "Varna Belediyesi — çevre gezileri",
         "url": "https://visit.varna.bg/en/sights_near_varna.html"
+      },
+      {
+        "name": "Visit Varna — Sea Garden",
+        "url": "https://visit.varna.bg/en/sea_garden.html"
+      },
+      {
+        "name": "Visit Varna — kültür gezileri",
+        "url": "https://visit.varna.bg/en/kulturen-turizam.html"
       }
     ],
     "volatileNote": "Bilet ücretleri, seferler ve ziyaret saatleri değişebilir. Rezervasyon öncesinde aşağıdaki resmî kaynaklardan güncel bilgiyi kontrol edin.",
-    "reviewed": "2026-10-05",
+    "reviewed": "2026-10-06",
     "countryInfoOnHub": true
   },
   {
@@ -2232,7 +2484,7 @@
     "seoTitle": "Valletta Gezi Rehberi: Gezilecek Yerler ve 2 Günlük Rota",
     "seoDescription": "Valletta gezi rehberi: St. John, Upper Barrakka ve Büyük Liman; yürüyüş rotası, nerede kalınır, ulaşım, Malta yemekleri ve Gozo bağlantısı.",
     "h1": "Valletta Gezi Rehberi: Gezilecek Yerler ve 2 Günlük Rota",
-    "lede": "Valletta’nın küçük yüzölçümü kısa bir ziyaret anlamına gelmez. Surlar arasındaki sokaklarda katedral, müze ve liman manzaraları yoğunlaşır; merdivenleri ve deniz bağlantılarını hesaba katıp iki sakin gün planlayın.",
+    "lede": "Valletta’da bir sokağın sonu denize, başka bir köşesi geniş bir liman manzarasına açılıyor. Küçük şehirde büyük bir koşturmaya gerek yok: katedral, birkaç tarihî sokak ve uzun bir öğle molası güzel bir gün kuruyor. Akşam ziyaretçiler azaldığında surların içindeki hayatı görmek için burada biraz daha kalın.",
     "quickFacts": [
       {
         "label": "Önerilen süre",
@@ -2248,6 +2500,15 @@
       }
     ],
     "sections": [
+      {
+        "id": "gezi-planlama",
+        "heading": "Valletta’da iki gün: sur içi ve limanın karşı yakası",
+        "body": [
+          "İlk günü surların içindeki sokaklar, St. John Eş Katedrali ve Upper Barrakka çevresine ayırın. İkinci gün limanın karşı yakasındaki Üç Şehirler’e geçmek, aynı şehri yeniden dolaşmaktan farklı bir deneyim verir. Kısa mesafeler ziyaretlerin kısa sürdüğü anlamına gelmiyor; katedralin içi ve bir müze için kendi zamanlarını bırakın.",
+          "Malta’da başka bir yerde kalıyorsanız Valletta’ya geliş ve dönüşü günün ortasına defalarca koymayın. Tek bir uzun şehir bloğu, öğlen kısa otele dönüşten daha rahat olabilir. Yaz sıcağında sokak yürüyüşlerini sabah veya akşama, kapalı ziyaretleri günün daha sıcak bölümüne almak iyi denge. Denize bakan manzara noktasıyla yüzülebilen plajı da birbirine karıştırmayın.",
+          "Gozo’yu ekleyecekseniz Valletta’dan yarım gün kaçamağı gibi düşünmek yerine ulaşım biçimini ve adada geçireceğiniz zamanı birlikte planlayın. Malta ana adasındaki her durak aynı günün içine sığmaz. Dört günlük tatilde Valletta, bir başka bölge ve Gozo arasında öncelik seçmek; bütün adaları hızlıca görmekten daha keyifli olabilir."
+        ]
+      },
       {
         "id": "ulasim",
         "heading": "Valletta ulaşım rehberi",
@@ -2284,17 +2545,27 @@
         ]
       },
       {
+        "id": "mahalle-yasami",
+        "heading": "Liman manzaraları ve akşam sokakları",
+        "body": [
+          "Upper Barrakka’da yalnız fotoğraf çekip ayrılmak yerine oturup limanı izleyin. Aynı manzara gemiler, ışık ve günün temposuyla değişiyor. Sokaklara döndüğünüzde ana yürüyüş hattından bir iki yan sokağa sapmak yeterli; küçük şehri yeni duraklarla doldurmak zorunda değilsiniz. Merdivenli yolları gezerken dönüş rotanızın da iniş çıkışlarını düşünün.",
+          "Üç Şehirler gezisi limanın çevresindeki mahalleleri daha yakından hissettirir. Bir kıyı yürüyüşü ve bir öğün seçip gerisini sokaklarda dolaşmaya bırakabilirsiniz. Feribot kullanacaksanız son dönüşü programınıza katın; kötü havada farklı bir bağlantı gerekebilir. Akşamı sürekli saate bakarak geçirmek yerine dönüş için küçük bir pay bırakın."
+        ]
+      },
+      {
         "id": "konaklama",
         "heading": "Valletta nerede kalınır?",
         "body": [
-          "Valletta’da kalmak sabah ve akşam sokaklarını rahat görmenizi sağlar; Sliema daha fazla otel seçeneği ve karşı kıyı bağlantısı sunar. Odanın merdiven, asansör ve gece sesini kontrol edin. Feribota yakınlık kötü havada her bağlantının garanti olduğu anlamına gelmez."
+          "Valletta’da kalmak sabah ve akşam sokaklarını rahat görmenizi sağlar; Sliema daha fazla otel seçeneği ve karşı kıyı bağlantısı sunar. Odanın merdiven, asansör ve gece sesini kontrol edin. Feribota yakınlık kötü havada her bağlantının garanti olduğu anlamına gelmez.",
+          "Valletta’da kalırsanız sabah erken ve akşam geç saatlerde sur içini yaşama şansınız olur. Sliema’da kalmak daha geniş otel seçimi sağlayabilir, ama her günkü geçişi düşünün. Tarihî binada merdiven ve oda ışığı, liman fotoğrafından daha belirleyici olabilir; birkaç gecelik gezi için günlük rahatlığı öne alın."
         ]
       },
       {
         "id": "yeme-icme",
         "heading": "Valletta ne yenir?",
         "body": [
-          "Pastizzi, ftira ve yerel deniz ürünleri Malta’ya giriş sağlar. Pastizzi dolgusunda ricotta veya bezelye olabilir; tarif ve hamur yağı işletmeye göre değişir. Tam akşam yemeği için fenkata gibi etli gelenekleri vegan seçenekle karıştırmayın."
+          "Pastizzi, ftira ve yerel deniz ürünleri Malta’ya giriş sağlar. Pastizzi dolgusunda ricotta veya bezelye olabilir; tarif ve hamur yağı işletmeye göre değişir. Tam akşam yemeği için fenkata gibi etli gelenekleri vegan seçenekle karıştırmayın.",
+          "Pastizzi’yi gezi arasında kısa bir mola, ftira’yı ise daha doyurucu bir öğün gibi düşünebilirsiniz. Akşamı uzun bir masaya ayırmak isterseniz mevsimlik menü ve balık seçeneklerine bakın. Malta mutfağını tanımak için tek bir “ulusal yemek” aramak yerine birkaç farklı öğüne yerel tatları dağıtmak daha doğal."
         ]
       },
       {
@@ -2402,7 +2673,7 @@
       }
     ],
     "volatileNote": "Bilet ücretleri, seferler ve ziyaret saatleri değişebilir. Rezervasyon öncesinde aşağıdaki resmî kaynaklardan güncel bilgiyi kontrol edin.",
-    "reviewed": "2026-10-05",
+    "reviewed": "2026-10-06",
     "countryInfoOnHub": true
   },
   {
@@ -2411,7 +2682,7 @@
     "seoTitle": "Gozo Gezi Rehberi: Gezilecek Yerler ve Feribot Planı",
     "seoDescription": "Gozo gezi rehberi: Victoria Cittadella, Ġgantija ve Dwejra; Malta’dan feribot, ada içi ulaşım, nerede kalınır ve 3 günlük sakin ada rotası.",
     "h1": "Gozo Gezi Rehberi: Gezilecek Yerler ve Feribot Planı",
-    "lede": "Gozo tek bir şehir değil, köyler ve kıyılar arasında gezilen bir adadır. Victoria’nın kalesi, Ġgantija’nın tapınakları ve Dwejra’nın kayalık denizi için ayrı zaman blokları kurun; feribot gününü tam gezi günü sanmayın.",
+    "lede": "Gozo’da güzel bir gün bazen kaleden başlayıp bir köy meydanında öğle molasına, oradan kayalık bir kıyıya uzanıyor. Malta’dan daha yavaş bir ada gezisi arıyorsanız burada iki gece kalmak iyi geliyor. Her koya yetişmek yerine birkaç yeri uzun uzun görmek, adanın sakin tarafını daha iyi hissettiriyor.",
     "quickFacts": [
       {
         "label": "Önerilen süre",
@@ -2427,6 +2698,15 @@
       }
     ],
     "sections": [
+      {
+        "id": "gezi-planlama",
+        "heading": "Gozo’da günübirlik gezi ile iki gecelik tatilin farkı",
+        "body": [
+          "Günübirlik geliyorsanız Victoria ile bir ana kıyı veya tarih durağı seçmek gerçekçi bir başlangıç. Cittadella, Ġgantija, Dwejra ve iki farklı plajı aynı güne eklemek adayı araç camından görmeye çevirebilir. İki gece kaldığınızda bunları ayrı günlere bölüp öğün ve köy yürüyüşlerine de alan açarsınız. Adada geçirilen sakin akşam, gündüz turundan farklı bir deneyim.",
+          "Victoria ulaşım için kullanışlı bir üs; kıyıda konaklamak ise günün sonunda deniz kenarında kalmayı kolaylaştırır. Araç kiralamadan geziyorsanız farklı koylar arasında peş peşe geçiş koymadan dönüş bağlantınızı da düşünün. Otobüsle bir yere ulaşabilmek, sonraki durağa hızlı geçileceği anlamına gelmez. Az duraklı bir gün burada sıkıcı değil, daha rahat olabilir.",
+          "Ġgantija’yı ada gezisinin tarih bölümü, Dwejra’yı ise kıyı ve doğa bölümü gibi düşünün. İkisi de “bir fotoğraf çekip devam” durağı olmak zorunda değil. Rüzgârlı gün kıyı planını değiştirebilir; iç kesimdeki bir köy yürüyüşü veya tarih ziyareti yedek olsun. Son gün feribota yetişme telaşı yaşamamak için uzaktaki kıyıyı çıkış sabahına bırakmayın."
+        ]
+      },
       {
         "id": "ulasim",
         "heading": "Gozo ulaşım rehberi",
@@ -2463,17 +2743,27 @@
         ]
       },
       {
+        "id": "mahalle-yasami",
+        "heading": "Victoria’dan köylere, manzara kadar gündelik hayat",
+        "body": [
+          "Cittadella’ya çıkıp manzarayı gördükten sonra Victoria’nın sokaklarına dönmek adayı tek bir yüksek noktadan okumaktan daha güzel. Bir fırına veya meydana uğrayıp öğle molası bırakın. Daha küçük bir köyde yürürken buranın insanların günlük hayatını sürdürdüğü yer olduğunu unutmayın; sakinliği korumak gezinin keyfini de artırır.",
+          "Dwejra’da eski Azure Window fotoğraflarını bugünkü manzara sanmayın; kemer artık yerinde değil. Yine de kayalık kıyı başlı başına görülmeye değer bir durak. Deniz koşulları uygun değilse tekne veya yüzme yerine karadan izlemekle yetinebilirsiniz. Gozo gezisinin iyi olması bütün açık hava etkinliklerinin yapılmasına bağlı değil."
+        ]
+      },
+      {
         "id": "konaklama",
         "heading": "Gozo nerede kalınır?",
         "body": [
-          "Victoria araçsız ulaşım ve restoran, Xagħra köy atmosferi, Marsalforn ve Xlendi kıyı için iyi seçeneklerdir. Kırsal çiftlik evinde yemek, alışveriş ve gece dönüşünü planlayın; havuzlu ev adanın tüm duraklarına yakın değildir."
+          "Victoria araçsız ulaşım ve restoran, Xagħra köy atmosferi, Marsalforn ve Xlendi kıyı için iyi seçeneklerdir. Kırsal çiftlik evinde yemek, alışveriş ve gece dönüşünü planlayın; havuzlu ev adanın tüm duraklarına yakın değildir.",
+          "Victoria’da kalmak özellikle araçsız ilk gezide kolaylık sağlar. Marsalforn veya Xlendi’de akşam denize yakın olmak daha cazip gelebilir. Kırsal ev ise dinlenme için güzel, ama market ve restoran erişimini ayrı düşünün. İki gecelik geziyi üç ayrı konaklamaya bölmek yerine bir üs seçip adayı oradan gezmek daha rahat."
         ]
       },
       {
         "id": "yeme-icme",
         "heading": "Gozo ne yenir?",
         "body": [
-          "Gozitan ftira, yerel peynirler ve deniz ürünleri adanın yemek omurgasıdır. Ftira’nın dolgusunda peynir, balık veya et olabilir. Köy restoranının mevsimsel çalışma günlerini kontrol edin; geç akşam öğünü için her küçük köyde aynı seçenek yoğunluğunu beklemeyin."
+          "Gozitan ftira, yerel peynirler ve deniz ürünleri adanın yemek omurgasıdır. Ftira’nın dolgusunda peynir, balık veya et olabilir. Köy restoranının mevsimsel çalışma günlerini kontrol edin; geç akşam öğünü için her küçük köyde aynı seçenek yoğunluğunu beklemeyin.",
+          "Gozo’da bir fırın öğünüyle köy restoranında uzun bir yemeği farklı günlere ayırabilirsiniz. Ftira’nın dolgusu ve yerel peynirler adanın tadını tanımaya yardımcı olur. Kırsal konaklamada bütün öğünleri spontane bırakmak yerine kahvaltı ve akşam yemeği düzenini baştan düşünün. Sakin bir sofra, adayı yavaş gezmenin doğal devamı."
         ]
       },
       {
@@ -2580,10 +2870,14 @@
       {
         "name": "UNESCO — Malta megalitik tapınakları",
         "url": "https://whc.unesco.org/en/list/132/"
+      },
+      {
+        "name": "Visit Gozo — Dwejra",
+        "url": "https://visitgozo.com/places/dwejra/"
       }
     ],
     "volatileNote": "Bilet ücretleri, seferler ve ziyaret saatleri değişebilir. Rezervasyon öncesinde aşağıdaki resmî kaynaklardan güncel bilgiyi kontrol edin.",
-    "reviewed": "2026-10-05",
+    "reviewed": "2026-10-06",
     "countryInfoOnHub": true
   },
   {
@@ -2592,7 +2886,7 @@
     "seoTitle": "Girne Gezi Rehberi: Liman, Kale ve Bellapais Rotası",
     "seoDescription": "Girne gezi rehberi: eski liman, Girne Kalesi ve Bellapais; nerede kalınır, sahil seçimi, ulaşım, yerel yemekler ve 2 günlük gezi rotası.",
     "h1": "Girne Gezi Rehberi: Liman, Kale ve Bellapais Rotası",
-    "lede": "Girne’de eski liman ve kale yürüyüşünü Bellapais’in yamaç köyüyle birleştirin. Merkezde akşam yaşamı ile uzaktaki sahil otelleri farklı tatiller sunar; konaklamayı görmek istediğiniz yerlere göre seçin.",
+    "lede": "Girne’de gün eski limanın etrafında kolayca akıyor: sabah kaleye uğrayıp öğleden sonra deniz kenarında oturabilir, başka bir gün Bellapais’e çıkabilirsiniz. Güzel bir kısa tatil için her saat yeni bir yer gerekmiyor; merkezdeki yürüyüşü kıyı ve köy molalarıyla dengelemek yeterli.",
     "quickFacts": [
       {
         "label": "Önerilen süre",
@@ -2608,6 +2902,15 @@
       }
     ],
     "sections": [
+      {
+        "id": "gezi-planlama",
+        "heading": "Girne’de ilk gezi: liman, kale ve Bellapais",
+        "body": [
+          "İki tam gününüz varsa ilkini liman ve kaleye, ikincisini Bellapais ile bir kıyı molasına ayırabilirsiniz. Kale gezisini sadece dışarıdan fotoğrafa çevirmeyin; içerideki bölümlere ve manzaraya zaman bırakın. Merkez kompakt görünse de sıcaklık ve merdivenler tempoyu etkiler. Öğle arasında oturup dinlenmek geziye yeni bir durak kadar değer katıyor.",
+          "Girne’yi plaj tatiline ekliyorsanız merkezdeki bu iki günle otelde geçen günleri ayrı düşünün. Uzak bir kıyı tesisinden her akşam limana gelmek kısa mesafe gibi görünse de günlük ulaşım yaratır. Şehir ve restoran önceliğinde merkez, dinlenme önceliğinde kıyı daha uygun olabilir. Tatilin güzel olması ikisini her gün tekrarlamaya bağlı değil.",
+          "Bellapais’i merkezin içindeki bir sokak gibi değil ayrı bir köy ziyareti gibi planlayın. Manastırdan sonra kısa bir yürüyüş ve oturarak verilen mola köyün havasını daha iyi hissettirir. Dönüşü baştan düşünmek akşamı rahat bırakır. Gazimağusa veya başka bir şehir de görmek istiyorsanız yeni bir gün ayırın; ada gezisini tek günde tamamlamak zorunda değilsiniz."
+        ]
+      },
       {
         "id": "ulasim",
         "heading": "Girne ulaşım rehberi",
@@ -2644,17 +2947,27 @@
         ]
       },
       {
+        "id": "mahalle-yasami",
+        "heading": "Eski limanda ve köyde sakin bir akşam",
+        "body": [
+          "Limanın çevresini günün farklı saatlerinde görmek aynı yürüyüşün tekrarından daha fazlası. Sabah kale tarafı için çıktığınız rota, akşam yemek öncesi başka bir ışık ve hareket kazanır. Her masanın aynı fiyat veya aynı yemek deneyimi sunduğunu varsaymadan hoşunuza giden bir yerde durun. Manzaranın keyfini çıkarmak için mutlaka uzun bir yemek paketi almak gerekmiyor.",
+          "Bellapais’te manastırın taş dokusuna baktıktan sonra çevrede biraz yürüyün. Köyün gündelik hayatını küçük ayrıntılar gösterir; burası yalnız fotoğraf için kurulmuş bir sahne değil. Dar sokaklarda ve evlerin yanında sakin davranmak, özel alanları gözetmek gezinin doğal parçası. Bir kahve molasına ayrılan zaman, hızlı bir gidiş dönüşten daha akılda kalıcı olabilir."
+        ]
+      },
+      {
         "id": "konaklama",
         "heading": "Girne nerede kalınır?",
         "body": [
-          "Merkez liman ve restoran erişimi, Bellapais çevresi manzara ve sakinlik, uzak kıyı otelleri deniz önceliği için uygundur. Plaj otelinde gerçek yüzme girişi, merkeze araç süresi ve gece dönüşünü inceleyin."
+          "Merkez liman ve restoran erişimi, Bellapais çevresi manzara ve sakinlik, uzak kıyı otelleri deniz önceliği için uygundur. Plaj otelinde gerçek yüzme girişi, merkeze araç süresi ve gece dönüşünü inceleyin.",
+          "İlk kez gelip iki gece kalacaksanız merkezde yürüyerek dışarı çıkabilmek büyük rahatlık. Bellapais çevresinde manzara ve sakinlik cazip, fakat yemek ve merkeze geçiş için ayrıca plan gerekir. Plaj otelinde ise “Girne’de” ifadesi limana yürüme mesafesi demek olmayabilir. Adresin gerçek konumu oda fotoğrafından daha çok şey anlatır."
         ]
       },
       {
         "id": "yeme-icme",
         "heading": "Girne ne yenir?",
         "body": [
-          "Hellim, şeftali kebabı, zeytinli ürünler ve mezeler yerel sofra için başlangıçtır. Şeftali kebabı meyve yemeği değildir; et içerir. Balık siparişinde kilo ve porsiyon fiyatını ayırın, vegan tercihte peynir ve yoğurtlu sosları sorun."
+          "Hellim, şeftali kebabı, zeytinli ürünler ve mezeler yerel sofra için başlangıçtır. Şeftali kebabı meyve yemeği değildir; et içerir. Balık siparişinde kilo ve porsiyon fiyatını ayırın, vegan tercihte peynir ve yoğurtlu sosları sorun.",
+          "Hellim ve mezelerle başlayan bir sofra, balık veya ızgarayla devam edebilir; hepsini aynı öğünde denemek gerekmiyor. Şeftali kebabının adına aldanmayın, etli bir yemek. Liman gününde manzaralı bir masa, köy gününde daha sakin bir öğün seçmek geziyi çeşitlendiriyor. Yerel tatları birkaç öğüne yaymak kısa tatilde de mümkün."
         ]
       },
       {
@@ -2764,7 +3077,7 @@
       }
     ],
     "volatileNote": "Bilet ücretleri, seferler ve ziyaret saatleri değişebilir. Rezervasyon öncesinde aşağıdaki resmî kaynaklardan güncel bilgiyi kontrol edin.",
-    "reviewed": "2026-10-05",
+    "reviewed": "2026-10-06",
     "countryInfoOnHub": true
   },
   {
@@ -2773,7 +3086,7 @@
     "seoTitle": "Gazimağusa Gezi Rehberi: Sur İçi ve Salamis Rotası",
     "seoDescription": "Gazimağusa gezi rehberi: sur içi, Othello Kalesi, Lala Mustafa Paşa Camii ve Salamis; ulaşım, konaklama, yemek ve 2 günlük gezi rotası.",
     "h1": "Gazimağusa Gezi Rehberi: Sur İçi ve Salamis Rotası",
-    "lede": "Gazimağusa’da sur içinin taş sokakları ve Salamis’in açık arkeolojik alanı aynı gün ritmine sahip değildir. Birini mahalle yürüyüşü, diğerini geniş ve gölgesiz anıt gezisi olarak ayırmak iki günlük programı daha rahat yapar.",
+    "lede": "Gazimağusa’da surların içindeki taş sokakları ağır ağır gezip bir gölge molası verdiğinizde şehrin havası daha iyi geliyor. Salamis’i de görmek istiyorsanız ona ayrı bir sabah bırakın. İki günlük gezide kent yürüyüşüyle açık arkeolojik alanı dengelemek, bütün tarihi bir öğle sıcağına sığdırmaktan çok daha keyifli.",
     "quickFacts": [
       {
         "label": "Önerilen süre",
@@ -2789,6 +3102,15 @@
       }
     ],
     "sections": [
+      {
+        "id": "gezi-planlama",
+        "heading": "Gazimağusa’da sur içi ve Salamis’i ayrı düşünün",
+        "body": [
+          "İlk gün sur içindeki ana yapıları kısa yürüyüşlerle bağlayıp Othello Kalesi çevresine zaman ayırabilirsiniz. İkinci sabah Salamis için yola çıkmak, hem sıcaklığı hem ziyaretlerin farklı ölçeğini daha iyi yönetir. Şehirde bir sokak köşesinden diğerine geçersiniz; Salamis’te ise açık alanda daha uzun yürüyüşler gerekir. İkisine aynı ayakkabı ve aynı su hazırlığı bile yetmeyebilir.",
+          "Sur içini her yapıya girilecek bir yarışa çevirmeden gezerken meydan ve yan sokaklara da bakın. Bazı tarihî yapılar bugün farklı kullanımda olabilir; ziyaret düzenini yerinde takip edin. Özellikle ibadet yerinde fotoğraf ve dolaşma isteğini sessizlikle dengelemek gerekir. Şehirdeki gündelik hayat, eski taşlar kadar gezinin parçası.",
+          "Girne’den günübirlik geliyorsanız dönüş yolunu ve Salamis’e ayrı geçişi aynı günün içine katın. Sadece merkezde dolaşacağınız bir gezi daha hafif; iki ana alanı ayrıntılı görmek ise konaklamalı planı hak ediyor. Deniz tatiliyle birleştiriyorsanız kıyıdaki otelin konumunu ayrıca düşünün. Gazimağusa adı tek bir yürüme bölgesi anlamına gelmiyor."
+        ]
+      },
       {
         "id": "ulasim",
         "heading": "Gazimağusa ulaşım rehberi",
@@ -2825,10 +3147,19 @@
         ]
       },
       {
+        "id": "mahalle-yasami",
+        "heading": "Taş sokaklarda mola, Salamis’te geniş bir yürüyüş",
+        "body": [
+          "Sur içinde güzel bir öğle molası gezinin ritmini değiştirir. Bir masaya oturup çevreyi izlemek, bütün tarihi yapıların adını yetiştirmekten daha canlı bir şehir hissi verir. Dar sokaklarda gezerken ana rotadan kısa bir sapma yeterli; her köşeyi bitirme hedefi koymayın. Sakin bir yürüyüşten sonra ana yapılara dönmek daha iyi odaklanmayı sağlar.",
+          "Salamis’te tiyatro ve sütunlu alanların arasında dolaşırken aradaki açık mesafeyi de deneyimin parçası sayın. Şapka, su ve duracak gölgeyi düşünerek ilerleyin. Fotoğraf için ayrılan birkaç dakika bütün alanı anlatmaz; daha az bölümü yavaş görmek daha iyi olabilir. Ziyaret sonrasına uzun bir başka açık alan gezisi yerine serin bir mola bırakın."
+        ]
+      },
+      {
         "id": "konaklama",
         "heading": "Gazimağusa nerede kalınır?",
         "body": [
           "Sur içi atmosfer ve yürüyüş, yeni merkez gündelik hizmetler, sahil tesisleri deniz odağı içindir. Tarihî evde otopark, merdiven ve gece sesi; resortta merkeze transfer ve gerçek plaj erişimini kontrol edin.",
+          "Tarih önceliğinde sur içine yakın kalmak, plaj önceliğinde kıyıyı seçmek daha anlaşılır. İki günlük gezide oteli bir geceliğine değiştirmek çoğu zaman gereksiz iş çıkarır. Tek bir üs kurup Salamis’e oradan gitmek daha rahat. Tarihî konaklamada oda kadar kapıya araçla erişim ve bavul yolu da günlük deneyimi belirliyor.",
           "Sur içinde kalacaksanız araç bırakma noktasıyla odanın arasındaki taş yürüyüşü öğrenin. Sahil oteli arkeoloji duraklarına otomatik yakın olmayabilir; Salamis günü için ayrıca ulaşım planlayın. İlk ziyarette şehir yürüyüşü ve plaj gününü ayırmak otel seçimini kolaylaştırır."
         ]
       },
@@ -2836,7 +3167,8 @@
         "id": "yeme-icme",
         "heading": "Gazimağusa ne yenir?",
         "body": [
-          "Hellim, mezeler, ızgaralar ve yerel fırın ürünleriyle yemek planını sade tutabilirsiniz. Salamis sabahında su ve küçük öğün taşıyın; içeride tam restoran bulacağınızı varsaymayın. Et ve peynir içeriğini özel beslenmede baştan sorun."
+          "Hellim, mezeler, ızgaralar ve yerel fırın ürünleriyle yemek planını sade tutabilirsiniz. Salamis sabahında su ve küçük öğün taşıyın; içeride tam restoran bulacağınızı varsaymayın. Et ve peynir içeriğini özel beslenmede baştan sorun.",
+          "Sur içi gününde mezeler veya yerel fırın ürünleriyle sade bir öğün, Salamis gününde ise önceden hazırlanan su ve küçük atıştırmalıklar işi kolaylaştırır. Akşama daha uzun bir masa ayırabilirsiniz. Yemeği programın araya sıkışmış görevi gibi değil, taşlı sokaklardan sonra dinlendiğiniz bir bölüm gibi düşünmek tatili güzelleştiriyor."
         ]
       },
       {
@@ -2950,7 +3282,7 @@
       }
     ],
     "volatileNote": "Bilet ücretleri, seferler ve ziyaret saatleri değişebilir. Rezervasyon öncesinde aşağıdaki resmî kaynaklardan güncel bilgiyi kontrol edin.",
-    "reviewed": "2026-10-05",
+    "reviewed": "2026-10-06",
     "countryInfoOnHub": true
   },
   {
@@ -2959,7 +3291,7 @@
     "seoTitle": "Baf Gezi Rehberi: Mozaikler, Kral Mezarları ve Sahil",
     "seoDescription": "Baf gezi rehberi: Kato Pafos mozaikleri, Kral Mezarları ve liman; ulaşım, konaklama bölgeleri, yemek, sahil seçimi ve 3 günlük gezi rotası.",
     "h1": "Baf Gezi Rehberi: Mozaikler, Kral Mezarları ve Sahil",
-    "lede": "Baf’ta liman ve arkeoloji aynı tatili paylaşır ama aynı kısa yürüyüşe sığmaz. Mozaiklerin anlatımına, mezar alanının açıklığına ve kıyının farklı yüzme koşullarına zaman bırakın; oteli yalnız deniz manzarasıyla seçmeyin.",
+    "lede": "Baf’ta sabah mozaiklerin başında hikâyeleri okumak, akşam limanda yürümek aynı tatilin iki güzel yüzü. Burada denizle arkeolojiyi yarıştırmak gerekmiyor. Birkaç gün ayırıp büyük alanları ayrı sabahlara yaydığınızda kıyıda dinlenmek için de gerçekten zaman kalıyor.",
     "quickFacts": [
       {
         "label": "Önerilen süre",
@@ -2975,6 +3307,15 @@
       }
     ],
     "sections": [
+      {
+        "id": "gezi-planlama",
+        "heading": "Baf’ta üç gün: mozaikler, mezarlar ve kıyı",
+        "body": [
+          "İlk sabah Kato Pafos Arkeoloji Parkı’na, ikinci sabah Kral Mezarları’na zaman ayırıp öğleden sonraları daha hafif bırakabilirsiniz. Üçüncü gün kıyı veya şehir çevresinde size uygun bir rota seçin. İki büyük arkeolojik alanı sıcak bir öğlene arka arkaya eklemek ziyaretin sonunu yoruyor. Parkın içindeki mesafeyi liman yürüyüşünün kısa bir uzantısı gibi düşünmeyin.",
+          "Mozaiklerde birkaç sahneyi dikkatle incelemek bütün panoları hızlıca dolaşmaktan daha akılda kalıcı. Alanın açıklama düzeninden yararlanıp hoşunuza giden hikâyelere odaklanın. Kral Mezarları’nda krallar değil, üst düzey görevliler ve soylular gömülü; adını mezarların görkeminden alıyor. Kısa bir hazırlık ziyareti daha anlamlı kılıyor.",
+          "Plaj önceliğiniz varsa otel çevresindeki gerçek yüzme alanını araştırın. Liman manzarası, kayalık kıyı ve kolay deniz girişi farklı şeyler. Coral Bay gibi ayrı kıyı duraklarını günübirlik planınıza koyarken ulaşımı da ekleyin. Şehir ve plajı her sabah birbirine bağlamaya çalışmak yerine bazı günleri tek bölgede geçirmek daha rahat."
+        ]
+      },
       {
         "id": "ulasim",
         "heading": "Baf ulaşım rehberi",
@@ -3011,10 +3352,19 @@
         ]
       },
       {
+        "id": "mahalle-yasami",
+        "heading": "Liman akşamı ve üst merkezde farklı bir Baf",
+        "body": [
+          "Liman ve kale çevresini sabah ziyaretinden sonra akşam yeniden görmek güzel bir tekrar olabilir. Arkeoloji gününün sonunda yeni bir ücretli etkinlik yerine kısa yürüyüş ve yemek yeterli. Kıyıda oturup günün yavaşlamasını izlemek tatilin hakkını vermenin başka bir yolu. Her güzel akşamı bir turla doldurmak gerekmiyor.",
+          "Kato Pafos’tan üst merkeze ayıracağınız bir zaman, şehrin yalnız tatil kıyısından oluşmadığını gösterir. İki çevreyi kısa bir gezi içinde aynı anda bitirmeye çalışmayın; birinde deniz ve arkeoloji, diğerinde daha gündelik sokaklar öne çıkar. Beğendiğiniz bir kafeye oturup çevreyi izlemek için de programda yer olsun."
+        ]
+      },
+      {
         "id": "konaklama",
         "heading": "Baf nerede kalınır?",
         "body": [
           "Kato Pafos liman ve ziyaret erişimi, üst merkez gündelik şehir yaşamı, Coral Bay gibi kıyılar plaj odağı sunar. Sahil otelinin arkeolojiye ve restorana gerçek erişimini kontrol edin; kayalık deniz görünümü kolay yüzme garantisi değildir.",
+          "İlk kültür gezisinde Kato Pafos çevresinde kalmak liman ve park erişimini kolaylaştırır. Daha çok deniz istiyorsanız kıyı otelini yüzme koşullarına göre seçin. Otel adıyla merkeze yakınlık varsaymayın; gerçek yürüyüş yolu ve akşam çevresi daha önemli. Bir üs kurup arkeoloji günlerini oradan yapmak kısa tatili sadeleştirir.",
           "Kato Pafos çevresi liman ve arkeolojiye yürüyüş için, daha dış kıyı konaklamaları ise plaj ağırlıklı günler için uygundur. İlanda “Baf” yazması her noktaya yürünebildiği anlamına gelmez. Otel adresini mozaik parkı, mezarlar ve seçtiğiniz plajla ayrı ayrı karşılaştırın."
         ]
       },
@@ -3022,7 +3372,8 @@
         "id": "yeme-icme",
         "heading": "Baf ne yenir?",
         "body": [
-          "Meze, halloumi, deniz ürünleri ve yerel fırın ürünleriyle çeşitlendirin. Meze çok tabaklı bir öğün olabilir; kişi başı fiyat ve içeriği sorun. Peynir, yoğurtlu sos ve et suyunu vegan tercihte ayrıca kontrol edin."
+          "Meze, halloumi, deniz ürünleri ve yerel fırın ürünleriyle çeşitlendirin. Meze çok tabaklı bir öğün olabilir; kişi başı fiyat ve içeriği sorun. Peynir, yoğurtlu sos ve et suyunu vegan tercihte ayrıca kontrol edin.",
+          "Meze siparişini küçük bir başlangıç tabağı sanmayın; pek çok yerde uzun ve çok tabaklı bir öğüne dönüşebilir. Bunu gezinin sonuna ayırıp gündüz daha hafif yemek rahat olur. Peynir, zeytin, sebze ve deniz ürünlerini farklı öğünlerde denemek de mutfağı tanıtır. Masada acele etmemek kıyı tatiline iyi yakışıyor."
         ]
       },
       {
@@ -3139,10 +3490,14 @@
       {
         "name": "Visit Cyprus — resmî seyahat rehberi",
         "url": "https://www.visitcyprus.com/"
+      },
+      {
+        "name": "Visit Cyprus — Kral Mezarları",
+        "url": "https://www.visitcyprus.com/discover-cyprus/culture/sites-and-monuments/tombs-of-the-kings/"
       }
     ],
     "volatileNote": "Bilet ücretleri, seferler ve ziyaret saatleri değişebilir. Rezervasyon öncesinde aşağıdaki resmî kaynaklardan güncel bilgiyi kontrol edin.",
-    "reviewed": "2026-10-05",
+    "reviewed": "2026-10-06",
     "countryInfoOnHub": true
   },
   {
@@ -3151,7 +3506,7 @@
     "seoTitle": "Larnaka Gezi Rehberi: Finikoudes ve Tuz Gölü Rotası",
     "seoDescription": "Larnaka gezi rehberi: Finikoudes, Aziz Lazarus, Tuz Gölü ve Hala Sultan Tekkesi; ulaşım, otel bölgeleri, yerel yemekler ve 2 günlük rota.",
     "h1": "Larnaka Gezi Rehberi: Finikoudes ve Tuz Gölü Rotası",
-    "lede": "Larnaka kolay bir kıyı üssü gibi görünür ama eski merkez, sahil ve Tuz Gölü farklı zaman ister. Finikoudes yürüyüşünü tarihî sokaklarla, göl gezisini ise mevsim ve hava koşuluyla eşleştirin.",
+    "lede": "Larnaka’da bir sabah eski sokaklara dalıp öğleden sonra sahile dönmek kolay. Finikoudes’in palmiyeleri, küçük bir kahve molası ve deniz kenarında geçen akşam sakin bir şehir tatili kuruyor. Tuz Gölü’nü de görmek istiyorsanız mevsimin size ne göstereceğine açık olun; her ziyaret aynı manzarayı sunmuyor.",
     "quickFacts": [
       {
         "label": "Önerilen süre",
@@ -3167,6 +3522,15 @@
       }
     ],
     "sections": [
+      {
+        "id": "gezi-planlama",
+        "heading": "Larnaka’da iki gün: eski merkez ve göl çevresi",
+        "body": [
+          "İlk günü Finikoudes, Aziz Lazarus Kilisesi ve çevredeki sokaklara ayırabilirsiniz. İkinci gün Tuz Gölü ve Hala Sultan Tekkesi için ayrı bir zaman bırakın. Gölü merkez yürüyüşünün sonuna kısa bir ek gibi görmek, açık alandaki mesafeyi küçümsetebilir. Şehre iki gün tanımak her iki çevreyi de acele etmeden görmenizi sağlar.",
+          "Flamingo görmek istiyorsanız mevsimi dikkate alın, ama kesin bir gözlem vaadiyle gün kurmayın. Gölün su seviyesi ve kuşların varlığı değişebilir. Bir doğa molası olarak gidip o günün manzarasını kabul etmek daha doğru beklenti. Kuşlara yaklaşmak yerine uzaktan izlemek hem çevreyi hem gezinin sakinliğini korur.",
+          "Kısa aktarma veya uçuş öncesi bir gece için geliyorsanız bütün durakları yetiştirmeye çalışmayın. Merkez ve sahil tek başına keyifli bir gün kurabilir. Göle veya başka kıyıya geçerken dönüş ve bagaj işini programa katın. Havalimanına yakın bir şehir olması, her otelden uçağa aynı sürede ulaşılacağı anlamına gelmiyor."
+        ]
+      },
       {
         "id": "ulasim",
         "heading": "Larnaka ulaşım rehberi",
@@ -3203,10 +3567,19 @@
         ]
       },
       {
+        "id": "mahalle-yasami",
+        "heading": "Finikoudes’ten eski sokaklara, acele etmeden",
+        "body": [
+          "Finikoudes’te kıyı yürüyüşünün ardından bir iki sokak içeriye geçmek şehrin farklı yüzünü gösterir. Kilise çevresinde kısa bir dolaşma ve yerel bir öğün güzel devam olur. Ana sahil masasından biraz uzaklaşmak daha sakin bir köşe bulmanıza yardımcı olabilir. Küçük şehir gezilerinin keyfi çoğu zaman bu basit geçişlerde.",
+          "Mackenzie tarafını akşam yemeği veya deniz molası için ayrı düşünebilirsiniz. Merkezden her yere kesintisiz yürünecekmiş gibi bir plan kurmadan mesafeyi ve dönüşü gözden geçirin. Tuz Gölü gününde ibadet yeri ziyaretini sakinlikle, doğa bölümünü ise açık hava hazırlığıyla birleştirin. Aynı gün içinde farklı yerlerde farklı tempo gerektiğini kabul etmek geziyi rahatlatır."
+        ]
+      },
+      {
         "id": "konaklama",
         "heading": "Larnaka nerede kalınır?",
         "body": [
           "Finikoudes ilk gezi için yürüyüş ve hizmet erişimi, eski merkez atmosfer, Mackenzie ise plaj ve akşam hareketi sunar. Uçak sesi, gece eğlencesi ve sahile gerçek erişimi oda rezervasyonundan önce kontrol edin.",
+          "İlk ziyaret için Finikoudes çevresi geziyi kolaylaştırır; Mackenzie tarafında plaj ve akşam hareketi farklı bir deneyim. Sessiz oda istiyorsanız caddeye, eğlence alanına ve uçak sesine dikkat edin. Kısa konaklamada resepsiyon ve bagaj hizmeti, büyük ama zor ulaşılan bir daireden daha değerli olabilir.",
           "Kısa bir şehir gezisinde merkezde iki gece kalmak günün farklı saatlerinde aynı sokaklara dönmenizi sağlar. Plaj ağırlıklı uzun konaklamada oda tipi ve sahil hizmetleri önem kazanır. Otel seçimini fotoğrafa değil yürüyüş, gece sesi ve planladığınız gezilerin toplamına göre yapın."
         ]
       },
@@ -3214,7 +3587,8 @@
         "id": "yeme-icme",
         "heading": "Larnaka ne yenir?",
         "body": [
-          "Meze, halloumi, balık ve yerel fırın ürünlerini farklı öğünlere bölün. Meze kişi başı ve çok tabaklı olabilir; kaç kişi için servis edildiğini sorun. Vegan öğünde peynir, yoğurtlu sos ve balık ekini ayrıca belirtin."
+          "Meze, halloumi, balık ve yerel fırın ürünlerini farklı öğünlere bölün. Meze kişi başı ve çok tabaklı olabilir; kaç kişi için servis edildiğini sorun. Vegan öğünde peynir, yoğurtlu sos ve balık ekini ayrıca belirtin.",
+          "Sahil öğününde balık ve küçük tabaklar, eski merkez gününde ise fırın molası iyi eşleşir. Uzun bir meze sofrasını uçuşa yetişeceğiniz öğlene koymak yerine sakin bir akşama bırakın. Halloumi ve yoğurtlu soslar gibi tanıdık tatların her tabağı aynı beslenmeye uygun kılmadığını unutmayın. Menüde merak ettiğiniz bir iki tatla başlamak yeterli."
         ]
       },
       {
@@ -3328,7 +3702,7 @@
       }
     ],
     "volatileNote": "Bilet ücretleri, seferler ve ziyaret saatleri değişebilir. Rezervasyon öncesinde aşağıdaki resmî kaynaklardan güncel bilgiyi kontrol edin.",
-    "reviewed": "2026-10-05",
+    "reviewed": "2026-10-06",
     "countryInfoOnHub": true
   },
   {
@@ -3337,7 +3711,7 @@
     "seoTitle": "Marakeş Gezi Rehberi: Gezilecek Yerler ve 3 Günlük Rota",
     "seoDescription": "Marakeş gezi rehberi: Jemaa el-Fna, Bahia ve Majorelle; 3 günlük rota, riad seçimi, havalimanı ulaşımı, yerel yemekler ve gezi bütçesi.",
     "h1": "Marakeş Gezi Rehberi: Gezilecek Yerler ve 3 Günlük Rota",
-    "lede": "Marakeş’i yalnız meydan ve bir çöl turu olarak düşünmeyin. Medina sokakları, saray avluları ve bahçeler farklı tempolar ister. Üç günü eski şehir, saraylar ve Majorelle çevresi arasında bölmek, sıcakta gereksiz gidip gelmeyi azaltır.",
+    "lede": "Marakeş’te bir çarşı sokağından sakin bir avluya geçtiğinizde şehrin iki yüzünü aynı anda hissediyorsunuz. Meydanın hareketi güzel, bahçede durmak da… Üç gününüzü bu farklı tempolara yayarsanız gezi yalnız pazarlık ve fotoğraf peşinde geçen yorucu bir güne dönüşmüyor.",
     "quickFacts": [
       {
         "label": "Önerilen süre",
@@ -3353,6 +3727,15 @@
       }
     ],
     "sections": [
+      {
+        "id": "gezi-planlama",
+        "heading": "Marakeş’te üç gün: medina, saraylar ve bahçeler",
+        "body": [
+          "İlk günü medina sokakları ve Jemaa el-Fna çevresinde daha esnek bırakın. İkinci gün Bahia Sarayı gibi bir ana ziyaretin ardından yakın çevrede yemek ve yürüyüş iyi gider. Majorelle’yi ayrı bir gün bloğuna alarak şehrin başka bir ritmini görürsünüz. Bu üç çevreyi tek güne koymak mesafeden çok kalabalık ve dikkat yorgunluğu yaratıyor.",
+          "Medinada ilk varışı gündüz yapmak ve riadın bagaj yönlendirmesini önceden almak işleri kolaylaştırabilir. Son sokaklara araç girmeyebilir; haritadaki kısa son bölüm valizle farklı hissedilir. İlk akşam kendinizi bütün çarşıyı çözmeye zorlamayın. Yakın çevrede yemek yiyip dönüş yolunu tanımak, ertesi sabah daha rahat keşfetmenizi sağlar.",
+          "Çöl turu ekleyecekseniz programın nereye gittiğini açıkça okuyun. Marakeş yakınındaki bir çöl manzarasıyla uzak kumulların yer aldığı çok günlük yolculuk aynı şey değil. Kısa şehir tatilinde bütün günleri karayoluna ayırmak yerine ne görmek istediğinizi seçin. Sadece üç gününüz varsa Marakeş’i sakin gezmek, fazladan bir uzun transferden daha doyurucu olabilir."
+        ]
+      },
       {
         "id": "ulasim",
         "heading": "Marakeş ulaşım rehberi",
@@ -3389,17 +3772,27 @@
         ]
       },
       {
+        "id": "mahalle-yasami",
+        "heading": "Meydanda akşam, avlularda gündüz molası",
+        "body": [
+          "Jemaa el-Fna’yı farklı saatlerde görmek meydanın değişen havasını anlamayı kolaylaştırır. Kalabalığın içinde sürekli dolaşmak yerine bir noktada durup çevreyi izleyebilirsiniz. Fotoğraf, gösteri veya hizmet karşılığında ücret beklentisi olabileceğini baştan düşünün. Kimseyle acele karar vermek zorunda değilsiniz; meydanın tadını çıkarırken kendi rahatlığınızı koruyun.",
+          "Majorelle ve saray avluları çarşı gününün ardından başka bir nefes sunuyor. Bahçeyi yalnız mavi duvarın fotoğrafı, sarayı yalnız girişteki kalabalık olarak hatırlamamak için içeriye gerçek zaman ayırın. Aynı gün yeniden en yoğun çarşı rotasına dönmek yerine daha sakin bir öğünle devam edebilirsiniz. Şehrin güzel tarafı hareket ve mola arasında geçiş yapabilmek."
+        ]
+      },
+      {
         "id": "konaklama",
         "heading": "Marakeş nerede kalınır?",
         "body": [
-          "Medinadaki riad avlu ve yürüyüş atmosferi, Gueliz araç erişimi ve daha geniş sokaklar sunar. Riad seçerken basamak, klima, gece sesi ve bagaj taşıma yolunu sorun. Merkeze kuş uçuşu yakınlık yerine meydandan gerçek yürüyüşü ve ilk varış desteğini karşılaştırın."
+          "Medinadaki riad avlu ve yürüyüş atmosferi, Gueliz araç erişimi ve daha geniş sokaklar sunar. Riad seçerken basamak, klima, gece sesi ve bagaj taşıma yolunu sorun. Merkeze kuş uçuşu yakınlık yerine meydandan gerçek yürüyüşü ve ilk varış desteğini karşılaştırın.",
+          "Medinada riad seçmek şehrin içinde uyanmayı sağlar; Gueliz’de konaklamak araç ve daha düz günlük erişim için rahat olabilir. İlk ziyaretinizde çok içeri saklanmış bir adres yerine varışı anlaşılır bir yer seçmek stresi azaltır. Avlu fotoğrafı kadar odanın ışığı, klima ve akşam dönüş yolu da birkaç gecelik deneyimi belirler."
         ]
       },
       {
         "id": "yeme-icme",
         "heading": "Marakeş ne yenir?",
         "body": [
-          "Tajine, kuskus ve harira sık karşılaşılan seçeneklerdir; et, bakliyat ve sebze içeriği tarife göre değişir. Harirayı otomatik vegan saymayın. Nane çayının şekerini siparişte belirtin; meydan tezgâhında fiyatı ve porsiyonu oturmadan öğrenin."
+          "Tajine, kuskus ve harira sık karşılaşılan seçeneklerdir; et, bakliyat ve sebze içeriği tarife göre değişir. Harirayı otomatik vegan saymayın. Nane çayının şekerini siparişte belirtin; meydan tezgâhında fiyatı ve porsiyonu oturmadan öğrenin.",
+          "Tajine’yi farklı içeriklerle birkaç kez denemek, kuskusu ve çorbayı ayrı öğünlere bırakmak mutfağı daha iyi tanıtır. Meydanda yemek isterseniz önce ne sipariş ettiğinizi ve toplamı anlayın. Riad kahvaltısının ardından öğleni hafif tutup akşama sakin bir sofra bırakabilirsiniz. Nane çayı molası da bazen yemek kadar güzel bir gezi hatırası."
         ]
       },
       {
@@ -3514,7 +3907,7 @@
       }
     ],
     "volatileNote": "Bilet ücretleri, seferler ve ziyaret saatleri değişebilir. Rezervasyon öncesinde aşağıdaki resmî kaynaklardan güncel bilgiyi kontrol edin.",
-    "reviewed": "2026-10-05",
+    "reviewed": "2026-10-06",
     "countryInfoOnHub": true
   },
   {
@@ -3523,7 +3916,7 @@
     "seoTitle": "Fes Gezi Rehberi: Medina, Gezilecek Yerler ve 3 Gün",
     "seoDescription": "Fes gezi rehberi: Fes el-Bali, Bou Inania ve Chouara; 3 günlük rota, riad seçimi, ulaşım, yerel yemekler ve medinada yürüyüş ipuçları.",
     "h1": "Fes Gezi Rehberi: Medina, Gezilecek Yerler ve 3 Gün",
-    "lede": "Fes’te haritadaki kısa çizgi, medinada kolay bir yürüyüş anlamına gelmeyebilir. Fes el-Bali’nin sokakları, medrese avluları ve üretim alanlarını mahalle mahalle gezmek gerekir. Üç gün, yalnız tabakhane fotoğrafı yerine şehirdeki zanaat ve gündelik hayatı tanımaya zaman bırakır.",
+    "lede": "Fes’te gezerken bazen haritayı bırakıp bir kapının, bir atölyenin veya fırından gelen kokunun peşine düşmek istiyorsunuz. Medinanın karmaşası ilk anda zorlayabilir; doğru başlangıç noktası ve birkaç sakin günle aynı sokaklar merak uyandıran bir yolculuğa dönüşüyor. Tabakhane fotoğrafından çok daha fazlası var.",
     "quickFacts": [
       {
         "label": "Önerilen süre",
@@ -3539,6 +3932,15 @@
       }
     ],
     "sections": [
+      {
+        "id": "gezi-planlama",
+        "heading": "Fes’te üç gün: önce yönünüzü bulun, sonra derinleşin",
+        "body": [
+          "İlk gün Bab Boujloud çevresinden başlayıp dönüş yolunu öğrenerek medinaya girin. İkinci gün bir medrese ve zanaat çevresine, üçüncü gün ilgilendiğiniz başka bir mahalle veya daha sakin ziyarete alan açabilirsiniz. Her günü aynı uzun rotayla doldurmak yerine bir ana bölge seçmek hem yön bulmayı hem dikkatle bakmayı kolaylaştırır.",
+          "İlk ziyarette bir rehberle gezi yapmak şehrin katmanlarını anlamaya yardımcı olabilir. Bunu yalnız kaybolmama çözümü değil, mekânların neden önemli olduğunu duyacağınız bir zaman olarak düşünün. Programın alışveriş duraklarını ve ne kadar yürüneceğini önceden konuşun. Kendi başınıza gezeceğiniz saatlerde de otelinize döneceğiniz kapıyı ve yolu kaydedin.",
+          "Fes’i Marakeş’in daha küçük bir tekrarı sanmayın. Burada medinanın sokak örgüsü ve zanaat yaşamı gezinin daha büyük bölümünü belirler. İki şehri de görüyorsanız aynı “çarşı–saray–fotoğraf” listesini kopyalamak yerine Fes’te üretim alanlarına ve mahalle yürüyüşüne zaman verin. Şefşavan’a devam edecekseniz ulaşım gününü ayrı saymak programı daha gerçekçi kurar."
+        ]
+      },
       {
         "id": "ulasim",
         "heading": "Fes ulaşım rehberi",
@@ -3575,17 +3977,27 @@
         ]
       },
       {
+        "id": "mahalle-yasami",
+        "heading": "Atölyeler ve avlular: tabakhane fotoğrafının ötesi",
+        "body": [
+          "Chouara çevresinde bir terastan bakmak üretim alanını görmenin yollarından biri. Teras erişimini alışveriş zorunluluğuyla karıştırmadan koşulları anlayın. Tabakhaneler çalışan insanların bulunduğu yerler; yalnız fotoğraf dekoru gibi yaklaşmamak önemli. Deri işi ilginizi çekmiyorsa burada çok uzun kalmak yerine medreselere veya başka zanaat sokaklarına zaman ayırabilirsiniz.",
+          "Bou Inania gibi bir ziyaret sokakların yoğunluğundan sonra ayrıntılara bakma fırsatı verir. Ahşap, taş ve bezeme işini yavaş incelemek kısa bir giriş fotoğrafından daha doyurucu olabilir. Sonrasında yakın bir öğün ve sade bir dönüş rotası bırakın. Fes’te her güzel günü yeni bir mahalleyle uzatmak yerine gördüklerinizi sindirecek zaman da gerekli."
+        ]
+      },
+      {
         "id": "konaklama",
         "heading": "Fes nerede kalınır?",
         "body": [
-          "Medina içindeki riad yürüyüş atmosferi sunar ama giriş kapısı, basamak ve bagaj yolunu kontrol etmek gerekir. Bab Boujloud yakınlığı ilk ziyaret için yön bulmayı kolaylaştırabilir. Yeni şehir otelinde araç erişimi daha rahattır; medinaya günlük gidiş maliyetini ekleyin."
+          "Medina içindeki riad yürüyüş atmosferi sunar ama giriş kapısı, basamak ve bagaj yolunu kontrol etmek gerekir. Bab Boujloud yakınlığı ilk ziyaret için yön bulmayı kolaylaştırabilir. Yeni şehir otelinde araç erişimi daha rahattır; medinaya günlük gidiş maliyetini ekleyin.",
+          "Medinadaki riadın hangi kapıya yakın olduğunu bilmek sadece varış için değil bütün günler için önemli. İlk gezide kolay tarif edilen bir adres, daha içeri saklanmış çok gösterişli bir odadan daha rahat olabilir. Yeni şehirde kalırsanız araç erişimi kolaylaşır ama medinaya gidip gelirsiniz. Seçimi tatilde ne kadar yürümek ve yön bulmak istediğinize göre yapın."
         ]
       },
       {
         "id": "yeme-icme",
         "heading": "Fes ne yenir?",
         "body": [
-          "Pastilla, tajine ve bakliyat çorbalarıyla şehrin mutfağını tanıyın. Pastilla tatlı baharat taşısa da etli olabilir; tarifi sormadan tatlı veya vejetaryen sanmayın. Küçük lokantada günün yemeğini, porsiyonu ve çay şekerini siparişte netleştirin."
+          "Pastilla, tajine ve bakliyat çorbalarıyla şehrin mutfağını tanıyın. Pastilla tatlı baharat taşısa da etli olabilir; tarifi sormadan tatlı veya vejetaryen sanmayın. Küçük lokantada günün yemeğini, porsiyonu ve çay şekerini siparişte netleştirin.",
+          "Pastilla’yı ilk kez deneyecekseniz tatlı baharatların yanında hangi dolgunun kullanıldığını sorun; görünüşü yanıltabilir. Tajine ve bakliyat yemekleriyle öğünleri çeşitlendirin. Riadınız akşam yemeği sunuyorsa yoğun bir medina gününden sonra orada kalmak güzel olabilir. Her akşam yeniden sokak rotası kurmadan sakin bir masaya dönmek de tatilin keyfi."
         ]
       },
       {
@@ -3700,7 +4112,7 @@
       }
     ],
     "volatileNote": "Bilet ücretleri, seferler ve ziyaret saatleri değişebilir. Rezervasyon öncesinde aşağıdaki resmî kaynaklardan güncel bilgiyi kontrol edin.",
-    "reviewed": "2026-10-05",
+    "reviewed": "2026-10-06",
     "countryInfoOnHub": true
   },
   {
@@ -3709,7 +4121,7 @@
     "seoTitle": "Şefşavan Gezi Rehberi: Mavi Sokaklar ve 2 Günlük Rota",
     "seoDescription": "Şefşavan gezi rehberi: mavi medina, Kasbah ve Ras el-Maa; 2 günlük rota, Fes’ten ulaşım, nerede kalınır, yerel yemekler ve Akchour planı.",
     "h1": "Şefşavan Gezi Rehberi: Mavi Sokaklar ve 2 Günlük Rota",
-    "lede": "Şefşavan’ın mavi sokakları hâlâ insanların yaşadığı bir medinadır. Fotoğraf duraklarını meydan, küçük dükkânlar ve Rif manzarasıyla dengeleyin. İki gece, karayolu varışının ardından şehri sakin saatlerde görmeye; doğa yürüyüşü isteyenlere ek gün bırakmaya yarar.",
+    "lede": "Şefşavan’da sabah erken mavi sokaklara çıkıp sonra bir meydanda kahvaltıya oturmak şehrin en güzel başlangıçlarından biri. Fotoğraflar için gelmiş olabilirsiniz, ama burada iki gece kalınca duvarların renginden başka şeyler de hatırlıyorsunuz: küçük dükkânlar, yokuşlar, sakin molalar ve Rif manzarası.",
     "quickFacts": [
       {
         "label": "Önerilen süre",
@@ -3725,6 +4137,15 @@
       }
     ],
     "sections": [
+      {
+        "id": "gezi-planlama",
+        "heading": "Şefşavan’da iki gece: yolculuğa ve sakin saatlere pay bırakın",
+        "body": [
+          "Karayolu varışının ardından ilk akşamı yerleşme, meydan ve kısa bir yemekle bırakabilirsiniz. Ertesi sabah medina sokaklarına daha sakin saatlerde çıkıp günün kalanını esnek tutun. Çıkış günü yeni bir uzun rota yerine son kahve ve kısa yürüyüş iyi tamamlar. İki gece demek iki tam gezi günü değil; ulaşımı hesaba katınca bu süre daha anlaşılır olur.",
+          "Burada bütün mavi sokakları bitirme hedefi yerine birkaç farklı çevrede dolaşmak yeterli. Outa el-Hammam çevresinden başlayan yürüyüşü medinaya yayıp araya bir mola koyun. Ras el-Maa tarafı başka bir kısa blok olabilir. Yokuşlar ve basamaklar gezinin bir parçası; rahat ayakkabı, haritadaki durak sayısından daha fazla fark yaratıyor.",
+          "Akchour veya daha uzun bir doğa gezisi istiyorsanız onu şehir yürüyüşünün sonuna eklemeyin. Ulaşım, yürüyüş ve dönüş için ayrı gün daha uygun. Şefşavan’a yalnız bir gece ayırıp aynı zamanda doğaya çıkmak iki deneyimi de aceleye getirebilir. Mavi sokakları sakin görmek önceliğinizse ek geziyi elemek gayet makul bir seçim."
+        ]
+      },
       {
         "id": "ulasim",
         "heading": "Şefşavan ulaşım rehberi",
@@ -3761,17 +4182,27 @@
         ]
       },
       {
+        "id": "mahalle-yasami",
+        "heading": "Fotoğrafın ötesinde yaşayan bir medina",
+        "body": [
+          "Mavi kapıların bir kısmı insanların evi; bir fotoğraf noktası gibi görünmesi içeri girilebileceği anlamına gelmiyor. Kapı, merdiven veya insan fotoğrafında izin istemek iyi karşılaşmalar yaratır. Sabah sakin sokaklardan sonra meydanda oturup günün hareketini görmek şehri daha canlı tanıtır. Fotoğraf için gelmek, bütün günü kamerayla geçirmek zorunda olduğunuz anlamına gelmez.",
+          "Kasbah ve meydan çevresi, sokak yürüyüşüne kısa bir odak ekler. Ras el-Maa tarafında ise su ve yamaç çevresini aynı günün başka bir parçası gibi görebilirsiniz. Manzara için daha yüksek bir yürüyüş düşünüyorsanız dönüşteki ışığı ve yokuşu hesaba katın. Güzel bir günü son ana kadar uzatmak yerine merkeze sakin dönüş bırakmak daha rahat."
+        ]
+      },
+      {
         "id": "konaklama",
         "heading": "Şefşavan nerede kalınır?",
         "body": [
-          "Medina içi konaklama sakin sabah sokaklarına yakınlık, dış kenar ise araç ve bagaj erişimi sunabilir. Merdiven sayısı, otopark noktası ve gece oda sıcaklığını sorun. Manzaralı terasın odanızdan merdivensiz erişim garantisi olmadığını unutmayın."
+          "Medina içi konaklama sakin sabah sokaklarına yakınlık, dış kenar ise araç ve bagaj erişimi sunabilir. Merdiven sayısı, otopark noktası ve gece oda sıcaklığını sorun. Manzaralı terasın odanızdan merdivensiz erişim garantisi olmadığını unutmayın.",
+          "Medina içinde kalmak sabah sokaklarına erken çıkmayı sağlar, dış kenarda kalmak bagaj ve araç erişimini kolaylaştırabilir. Çok yukarıdaki manzaralı bir oda her gün yokuş demek; bunu fotoğraftan anlayamayabilirsiniz. İki gecelik tatilde kolay ulaşım, oda sıcaklığı ve sakin uyku bir teras fotoğrafından daha fazla fark yaratabilir."
         ]
       },
       {
         "id": "yeme-icme",
         "heading": "Şefşavan ne yenir?",
         "body": [
-          "Bakliyat çorbası bissara, tajine ve yerel peynirlerle mutfağı keşfedin. Çorbanın yağını ve eklerini, peynirin içeriğini sorun. Küçük işletmelerde günün menüsü değişebilir; doğa günü için su ve taşıyabileceğiniz öğünü önceden hazırlayın."
+          "Bakliyat çorbası bissara, tajine ve yerel peynirlerle mutfağı keşfedin. Çorbanın yağını ve eklerini, peynirin içeriğini sorun. Küçük işletmelerde günün menüsü değişebilir; doğa günü için su ve taşıyabileceğiniz öğünü önceden hazırlayın.",
+          "Bissara gibi bakliyat ağırlıklı bir çorba, sade ekmek ve küçük tabaklarla güzel bir öğle molası kurabilir. Tajine’yi akşama bırakıp uzun yürüyüş arasında daha hafif yemek de mümkün. Meydanda oturmak manzara ve hareket sunar; yan sokakta sakin bir masa başka bir keyif. İki gece boyunca birkaç farklı öğün denemek şehrin tadını artırıyor."
         ]
       },
       {
@@ -3876,7 +4307,7 @@
       }
     ],
     "volatileNote": "Bilet ücretleri, seferler ve ziyaret saatleri değişebilir. Rezervasyon öncesinde aşağıdaki resmî kaynaklardan güncel bilgiyi kontrol edin.",
-    "reviewed": "2026-10-05",
+    "reviewed": "2026-10-06",
     "countryInfoOnHub": true
   }
 ]
