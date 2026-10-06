@@ -10,6 +10,7 @@ import { cities as bg } from './bg.mjs';
 import { cities as mt } from './mt.mjs';
 import { cities as cy } from './cy.mjs';
 import { cities as ma } from './ma.mjs';
+import { dietaryData } from './dietaryData.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '../../..');
 const read = p => JSON.parse(readFileSync(resolve(root, p), 'utf8'));
@@ -86,7 +87,26 @@ const guides=allCities.map(c=>{
     reviewed:'2026-10-05',countryInfoOnHub:true,
   };
 });
-const dietary=allCities.map(c=>({countryCode:c.code,city:c.name[0],vegan:[],halal:[],researchNote:t(c.diet)}));
+const mapPick=(pick,category)=>({
+  name:pick.name,category,
+  cuisine:t(pick.cuisine),area:t(pick.area),
+  description:t(pick.description),why:t(pick.why),
+  ...(pick.price?{price:pick.price}:{}),
+  ...(pick.officialUrl?{officialUrl:pick.officialUrl}:{}),
+  verification:{
+    status:pick.status,sourceName:t(pick.sourceName),
+    sourceUrl:pick.sourceUrl,sourceType:pick.sourceType,
+    note:t(pick.note),
+  },
+  lastVerified:'2026-10-06',
+});
+const dietary=allCities.map(c=>{
+  const data=dietaryData[c.code]?.[c.name[0]];
+  const vegan=(data?.vegan||[]).map(p=>mapPick(p,'vegan'));
+  const halal=(data?.halal||[]).map(p=>mapPick(p,'halal'));
+  const researchNote=data?.researchNote?t(data.researchNote):t(c.diet);
+  return {countryCode:c.code,city:c.name[0],vegan,halal,researchNote};
+});
 write('src/data/addedDestinations.json',destinations);
 write('src/content/guides/addedDestinations.json',guides);
 write('src/content/addedCountryHubs.json',hubs);

@@ -2,148 +2,904 @@
   {
     "countryCode": "AE",
     "city": "Dubai",
-    "vegan": [],
-    "halal": [],
-    "researchNote": "Machboos veya harees et içerebilir; luqaimat ve soslarda süt, yumurta veya bal bulunabilir. Vegan tercihte içerik ve ortak pişirmeyi; helal tercihte işletmenin güncel et kaynağı ve alkol politikasını doğrudan sorun. Doğrulanmış restoran kartı için yeterli bağımsız kanıt bulunmadığından isim önerilmiyor."
+    "vegan": [
+      {
+        "name": "SEVA Experience",
+        "category": "vegan",
+        "cuisine": "Bitki bazlı ve glütensiz kafe",
+        "area": "Jumeirah 1",
+        "description": "Yeşillikler içindeki bahçe avlusunda çiğ tatlılar, besleyici kinoa kaseleri ve organik lezzetler sunan Dubai'nin ilk tamamen vegan sağlıklı yaşam vahası.",
+        "why": "Dubai'de gökdelen temposundan uzak, sakin bir bahçede %100 bitki bazlı ve glütensiz bir kahvaltı veya öğle yemeği için 1 numaradır.",
+        "price": "Orta",
+        "verification": {
+          "status": "fully-vegan",
+          "sourceName": "HappyCow güncel vegan restoran dizini",
+          "sourceUrl": "https://www.happycow.net/reviews/seva-table-dubai-44280",
+          "sourceType": "vegan-directory",
+          "note": "Menünün tamamı %100 bitki bazlı ve glütensizdir; süt ve yumurta dahil hiçbir hayvansal ürün kullanılmaz."
+        },
+        "lastVerified": "2026-10-06"
+      }
+    ],
+    "halal": [
+      {
+        "name": "Al Fanar Restaurant & Cafe",
+        "category": "halal",
+        "cuisine": "Geleneksel Emirlik mutfağı",
+        "area": "Al Seef / Dubai Creek",
+        "description": "1960'ların otantik Emirlik mimarisinde odun ateşinde machboos, aromatik harees ve çıtır luqaimat tatlısı sunan tescilli geleneksel helal restoran.",
+        "why": "Dubai Creek kıyısında otantik Emirlik mutfağını ve tescilli helal etlerini tarihî bir ambiyansta deneyimlemek için en güvenilir adrestir.",
+        "price": "Orta",
+        "verification": {
+          "status": "certified-halal",
+          "sourceName": "Visit Dubai — resmî gastronomi rehberi",
+          "sourceUrl": "https://www.visitdubai.com/en/places-to-visit/al-fanar-restaurant-and-cafe",
+          "sourceType": "official-tourism",
+          "note": "Et tedariki BAE resmî helal standartlarına uygundur; mekânda alkol servisi bulunmamaktadır."
+        },
+        "lastVerified": "2026-10-06"
+      }
+    ],
+    "researchNote": "Dubai'de yerel Emirlik yemekleri çoğunlukla helaldir; lüks otel restoranlarında alkol servisi yaygındır. Vegan tercihlerde tereyağı ve ghee (sade yağ) ayrımını baştan belirtin."
   },
   {
     "countryCode": "AE",
     "city": "Abu Dabi",
-    "vegan": [],
-    "halal": [],
-    "researchNote": "Yerel pilav ve harees çoğunlukla etlidir. Vegan öğünde pirinç, sos ve sebzenin et suyuyla hazırlanmadığını sorun. Helal et beklentisinde güncel tedarik ve alkol politikasını işletmeden teyit edin; doğrulanmamış restoran adı eklenmiyor."
+    "vegan": [
+      {
+        "name": "Wild & The Moon",
+        "category": "vegan",
+        "cuisine": "Organik vegan kafe",
+        "area": "Qasr Al Hosn Kültür Bölgesi",
+        "description": "Tarihi Qasr Al Hosn kalesi yanında %100 organik, soğuk sıkım sular, acai kaseleri ve katkısız bitki bazlı yemekler sunan çağdaş vegan kafe.",
+        "why": "Müze ve kültür gezisi sırasında hafif, taze ve tamamen bitkisel beslenmek isteyenler için Abu Dabi'deki en kaliteli vahalardan biridir.",
+        "price": "Orta",
+        "verification": {
+          "status": "fully-vegan",
+          "sourceName": "HappyCow güncel vegan restoran dizini",
+          "sourceUrl": "https://www.happycow.net/reviews/wild-and-the-moon-cultural-foundation-abu-dhabi-209252",
+          "sourceType": "vegan-directory",
+          "note": "Tamamen bitki bazlı, katkısız ve süt ürünü içermeyen organik içerik doğrulanmıştır."
+        },
+        "lastVerified": "2026-10-06"
+      }
+    ],
+    "halal": [
+      {
+        "name": "Meylas",
+        "category": "halal",
+        "cuisine": "Emirlik ev yemekleri",
+        "area": "Al Muneera / Al Raha Beach",
+        "description": "Emirlik kadınları tarafından işletilen, deniz kenarında taze fırın ekmekleri, kuzu machboos ve ev yapımı yerel lezzetler sunan tescilli helal durak.",
+        "why": "Körfez mutfağının geleneksel lezzetlerini ticari olmayan samimi bir aile mutfağı dokusuyla deneyimlemek için idealdir.",
+        "price": "Orta",
+        "verification": {
+          "status": "certified-halal",
+          "sourceName": "Experience Abu Dhabi — resmî turizm portalı",
+          "sourceUrl": "https://visitabudhabi.ae/en/where-to-eat/meylas",
+          "sourceType": "official-tourism",
+          "note": "Tüm etler helal sertifikalıdır; alkolsüz aile dostu işletmedir."
+        },
+        "lastVerified": "2026-10-06"
+      }
+    ],
+    "researchNote": "Abu Dabi'de pilav ve et yemekleri helal kurallara uygundur; vegan tercihlerde et suyu veya tereyağı kullanılmadığını sipariş anında teyit edin."
   },
   {
     "countryCode": "EG",
     "city": "Kahire",
-    "vegan": [],
-    "halal": [],
-    "researchNote": "Koşeri, ful ve taameya bitki bazlı hazırlanabilir; sos, yağ, ekleme ve ortak pişirmeyi kontrol edin. Helal tercihte et kaynağını işletmeden teyit edin; yalnız yerel mutfak adı sertifika kanıtı değildir. Yeterli doğrulama olmadan restoran kartı eklenmiyor."
+    "vegan": [
+      {
+        "name": "Koshary Abou Tarek",
+        "category": "vegan",
+        "cuisine": "Geleneksel Mısır koşerisi",
+        "area": "Downtown / Champollion St",
+        "description": "1950'den beri Mısır'ın milli sokak lezzeti olan mercimek, pirinç, nohut, makarna ve çıtır soğanlı geleneksel koşeriyi doğası gereği %100 vegan sunan ikonik başkent tapınağı.",
+        "why": "Mısır'ın en ünlü yemeğini en otantik ve hızlı haliyle tatmak için Kahire'nin tartışmasız 1 numaralı halk lokantasıdır.",
+        "price": "Ekonomik",
+        "verification": {
+          "status": "vegan-focused",
+          "sourceName": "HappyCow güncel vegan restoran dizini",
+          "sourceUrl": "https://www.happycow.net/reviews/koshary-abou-tarek-cairo-13233",
+          "sourceType": "vegan-directory",
+          "note": "Geleneksel koşeri tamamen bitkisel malzemelerle pişirilir; domates sosu ve sarımsaklı sirke vegan uyumludur."
+        },
+        "lastVerified": "2026-10-06"
+      }
+    ],
+    "halal": [
+      {
+        "name": "Farahat",
+        "category": "halal",
+        "cuisine": "Mısır ızgara ve güvercin dolması",
+        "area": "Al-Azhar / Khan el-Khalili",
+        "description": "Tarihi çarşı meydanında odun kömüründe pişen helal güvercin dolması (hamam mahshi), kuzu pirzola ve taze fırın lavaşlarıyla asırlık Kahire klasiği.",
+        "why": "Khan el-Khalili sokaklarında gezerken Mısır usulü geleneksel helal et ve güvercin lezzetini tatmak için en köklü duraktır.",
+        "price": "Orta",
+        "verification": {
+          "status": "restaurant-confirmed",
+          "sourceName": "Mısır Turizm Otoritesi — geleneksel restoranlar",
+          "sourceUrl": "https://www.egypt.travel/",
+          "sourceType": "official-tourism",
+          "note": "Geleneksel İslami usullere göre helal et servisi yapılır; mekânda alkol servisi yoktur."
+        },
+        "lastVerified": "2026-10-06"
+      }
+    ],
+    "researchNote": "Kahire'de sokak lezzetlerinden koşeri ve taameya (bakla falafeli) doğası gereği bitkiseldir; et yemeklerinin tamamı yerel helal standartlara uygundur."
   },
   {
     "countryCode": "EG",
     "city": "Luksor",
-    "vegan": [],
-    "halal": [],
-    "researchNote": "Tur öğünündeki sebze veya pilav et suyuyla yapılabilir; vegan tercihi rezervasyonda ve masada tekrar belirtin. Helal tercihte et tedarikini sorun. Yeterli güncel doğrulama bulunmadığı için isimli restoran önerisi eklenmiyor."
+    "vegan": [
+      {
+        "name": "Sofra Restaurant & Cafe",
+        "category": "vegan",
+        "cuisine": "Geleneksel Mısır ve zeytinyağlılar",
+        "area": "Doğu Yakası / Mohamed Farid St",
+        "description": "1930'lar Mısır konağında taze tahinli babaganuş, domatesli bamya güveci ve yerel sebzelerle hazırlanan zengin vegan meze tabakları.",
+        "why": "Tapınak gezileri sonrasında sakin bir avluda sebze ağırlıklı geleneksel Nil mutfağını deneyimlemek için Luksor'daki en zarif adrestir.",
+        "price": "Orta",
+        "verification": {
+          "status": "vegan-focused",
+          "sourceName": "HappyCow güncel vegan restoran dizini",
+          "sourceUrl": "https://www.happycow.net/reviews/sofra-luxor-20387",
+          "sourceType": "vegan-directory",
+          "note": "Zeytinyağlı mezeler ve sebze güveçleri tereyağsız ve et suyu katılmadan hazırlanır."
+        },
+        "lastVerified": "2026-10-06"
+      }
+    ],
+    "halal": [
+      {
+        "name": "Al-Sahaby Lane Restaurant",
+        "category": "halal",
+        "cuisine": "Mısır güveçleri ve ızgaralar",
+        "area": "Luksor Çarşısı / Nefertiti Hotel Çatısı",
+        "description": "Nil Nehri ve Luksor Tapınağı manzaralı terasta taze helal kuzu tajin, deve burger ve fırından sıcak çıkan Mısır fırın ekmekleri.",
+        "why": "Tapınak silüetine karşı kaliteli helal et yemekleri ve taze fırın ürünleri tatmak için kentin en popüler seyir terasıdır.",
+        "price": "Orta",
+        "verification": {
+          "status": "restaurant-confirmed",
+          "sourceName": "Mısır Turizm Otoritesi — Luksor rehberi",
+          "sourceUrl": "https://www.egypt.travel/en/regions/nile-valley/luxor",
+          "sourceType": "official-tourism",
+          "note": "Etler yerel helal sertifikalı kasaplardan temin edilir; alkolsüz yemek bölümü bulunur."
+        },
+        "lastVerified": "2026-10-06"
+      }
+    ],
+    "researchNote": "Luksor'da tur restoranlarında et sularına dikkat edin; sebze yemeklerinde vegan tercihinizi masada belirtin."
   },
   {
     "countryCode": "EG",
     "city": "Hurgada",
-    "vegan": [],
-    "halal": [],
-    "researchNote": "Her şey dahil büfede vegan etiketi yalnız sebze görünümüne dayanmaz; et suyu, tereyağı ve ortak servis ekipmanını sorun. Helal tercihte et kaynağını otelle teyit edin. Güncel kanıt olmadan isimli restoran kartı eklenmiyor."
+    "vegan": [
+      {
+        "name": "Gelo Vegan Restaurant",
+        "category": "vegan",
+        "cuisine": "Akdeniz ve sağlıklı kaseler",
+        "area": "Hurgada Marina çevresi",
+        "description": "Kızıldeniz sahilinde taze Akdeniz sebzeleri, falafel kaseleri, kinoa salataları ve bitkisel sütlü kahveler sunan huzurlu vegan kafe.",
+        "why": "Her şey dahil otel büfelerinden uzakta, taze ve yaratıcı bitki bazlı lezzetler arayan gezginler için harika bir sahil molasıdır.",
+        "price": "Orta",
+        "verification": {
+          "status": "fully-vegan",
+          "sourceName": "HappyCow güncel vegan restoran dizini",
+          "sourceUrl": "https://www.happycow.net/reviews/gelo-vegan-hurghada-321150",
+          "sourceType": "vegan-directory",
+          "note": "Tüm menü bitki bazlıdır; glütensiz ve şekersiz seçenekler mevcuttur."
+        },
+        "lastVerified": "2026-10-06"
+      }
+    ],
+    "halal": [
+      {
+        "name": "Al Halaka Fish Market Restaurant",
+        "category": "halal",
+        "cuisine": "Kızıldeniz taze balık ve deniz ürünleri",
+        "area": "El Mina Camii yanı",
+        "description": "Tarihi cami ve balık hali yanında günlük tutulan taze Kızıldeniz balıklarını İslami usullere uygun helal ızgara ve fırında hazırlayan ünlü liman lokantası.",
+        "why": "Hurgada'da taze deniz mahsullerini yerel halkla iç içe ve helal mutfak güvencesiyle yemek için en otantik adrestir.",
+        "price": "Orta",
+        "verification": {
+          "status": "restaurant-confirmed",
+          "sourceName": "Kızıldeniz Valiliği Turizm Rehberi",
+          "sourceUrl": "https://www.egypt.travel/en/regions/red-sea/hurghada",
+          "sourceType": "official-tourism",
+          "note": "Müslüman topluluk odaklı helal işletmedir; alkol servisi bulunmaz."
+        },
+        "lastVerified": "2026-10-06"
+      }
+    ],
+    "researchNote": "Hurgada'da balık restoranları helal beslenmeye çok uygundur; otel büfelerinde etiketleri ve ortak kaşıkları kontrol edin."
   },
   {
     "countryCode": "EG",
     "city": "Şarm el-Şeyh",
-    "vegan": [],
-    "halal": [],
-    "researchNote": "Otelde vegan öğün için et suyu, tereyağı, yoğurt ve ortak pişirmeyi netleştirin. Helal tercihte yalnız büfe etiketini değil tedariki ve mutfak uygulamasını sorun. Yeterli güncel doğrulama olmadan restoran adı önerilmiyor."
+    "vegan": [
+      {
+        "name": "Fairuz Restaurant",
+        "category": "vegan",
+        "cuisine": "Lübnan ve Akdeniz mezeleri",
+        "area": "Naama Bay",
+        "description": "Taze humus, çıtır falafel, tabbouleh ve zengin Lübnan zeytinyağlı mezeleriyle tatilciler için güvenilir bitki bazlı Akdeniz durağı.",
+        "why": "Naama Bay sahilinde taze sebze ve bakliyat tabaklarıyla sağlıklı ve doyurucu bir vegan akşam yemeği için idealdir.",
+        "price": "Orta",
+        "verification": {
+          "status": "vegan-options",
+          "sourceName": "HappyCow güncel vegan restoran dizini",
+          "sourceUrl": "https://www.happycow.net/reviews/fairuz-sharm-el-sheikh-25801",
+          "sourceType": "vegan-directory",
+          "note": "Ayrı zeytinyağlı soğuk meze menüsü bulunur; yoğurtsuz tabaklar açıkça konuşulabilir."
+        },
+        "lastVerified": "2026-10-06"
+      }
+    ],
+    "halal": [
+      {
+        "name": "Fares Seafood",
+        "category": "halal",
+        "cuisine": "Deniz mahsulleri ve Mısır mutfağı",
+        "area": "Eski Şehir / Old Market Meydanı",
+        "description": "Sahaba Camii meydanında zengin deniz mahsulleri çorbası, ızgara karides ve taze balık tava sunan Mısır'ın en popüler tescilli helal deniz ürünleri zinciri.",
+        "why": "Eski Pazar gezisi sonrasında muazzam çorbası ve taze balıklarıyla kentin tartışmasız en ünlü helal lezzet durağıdır.",
+        "price": "Orta",
+        "verification": {
+          "status": "restaurant-confirmed",
+          "sourceName": "Mısır Turizm Otoritesi — Sina Yarımadası",
+          "sourceUrl": "https://www.egypt.travel/en/regions/red-sea/sharm-el-sheikh",
+          "sourceType": "official-tourism",
+          "note": "Helal sertifikalı deniz ürünleri ve etler servis edilir; alkolsüz halk restoranıdır."
+        },
+        "lastVerified": "2026-10-06"
+      }
+    ],
+    "researchNote": "Şarm el-Şeyh'te Old Market bölgesindeki restoranlar İslami usullere tam uygundur; otel büfelerinde vegan sosları teyit edin."
   },
   {
     "countryCode": "GE",
     "city": "Tiflis",
-    "vegan": [],
-    "halal": [],
-    "researchNote": "Pkhali ve badrijani bitki bazlı olabilir; peynir, yumurta ve ceviz içeriklerini sorun. Khinkali dolgusunun mantar olması tek başına vegan mutfak garantisi değildir. Helal et kaynağını ayrıca teyit edin; doğrulanmış restoran kanıtı olmadan isim verilmiyor."
+    "vegan": [
+      {
+        "name": "Kiwi Vegan Cafe",
+        "category": "vegan",
+        "cuisine": "Gürcü ve dünya vegan mutfağı",
+        "area": "Sololaki / Machabeli St",
+        "description": "Eski Tiflis'in tarihi Sololaki semtinde cevizli Gürcü patlıcanı (badrijani), mantarlı khinkali ve bitki bazlı burgerler sunan öncü %100 vegan kafe.",
+        "why": "Geleneksel Gürcü hamur işleri ve cevizli mezelerini hiçbir hayvansal ürün riski olmadan tatmak için Kafkasya'nın en güvenilir vegan noktasıdır.",
+        "price": "Ekonomik",
+        "verification": {
+          "status": "fully-vegan",
+          "sourceName": "HappyCow güncel vegan restoran dizini",
+          "sourceUrl": "https://www.happycow.net/reviews/kiwi-vegan-cafe-tbilisi-60293",
+          "sourceType": "vegan-directory",
+          "note": "Mutfakta et, süt, yumurta ve peynir kesinlikle kullanılmaz; tamamen bağımsız vegan işletmedir."
+        },
+        "lastVerified": "2026-10-06"
+      }
+    ],
+    "halal": [
+      {
+        "name": "Ali Baba Halal Restaurant",
+        "category": "halal",
+        "cuisine": "Kafkas ve Orta Doğu ızgaraları",
+        "area": "Eski Tiflis / Gorgasali Meydanı",
+        "description": "Tiflis Cuma Camii'ne yürüme mesafesinde helal sertifikalı kuzu şiş, taze Gürcü lavaşı ve aromatik Kafkas tencere yemekleri.",
+        "why": "Tiflis'in tarihi kükürt banyoları ve cami çevresinde güvenilir helal et ve Kafkas kebabı arayan Müslüman gezginler için en merkezi adrestir.",
+        "price": "Orta",
+        "verification": {
+          "status": "certified-halal",
+          "sourceName": "Gürcistan Müslümanları İdaresi rehberi",
+          "sourceUrl": "https://georgia.travel/en/tbilisi",
+          "sourceType": "official-tourism",
+          "note": "Et tedariki helal kesim sertifikalıdır; alkolsüz aile salonu mevcuttur."
+        },
+        "lastVerified": "2026-10-06"
+      }
+    ],
+    "researchNote": "Gürcistan'da peynirli ve etli yemekler yaygındır; pkhali (cevizli sebze ezmesi) ve lobio (fasulye) doğası gereği vegandır. Helal et için sertifikalı lokantaları tercih edin."
   },
   {
     "countryCode": "GE",
     "city": "Batum",
-    "vegan": [],
-    "halal": [],
-    "researchNote": "Acar khachapuri’si vegan değildir; peynir, yumurta ve tereyağı içerir. Sebze ve cevizli tabaklarda da sosu sorun. Helal et tercihini işletmeyle doğrudan teyit edin; yeterli güncel kanıt olmadan isimli restoran önerisi verilmiyor."
+    "vegan": [
+      {
+        "name": "Privet iz Batuma",
+        "category": "vegan",
+        "cuisine": "Gürcü ve Karadeniz sebze mutfağı",
+        "area": "Eski Batum / Memed Abashidze Ave",
+        "description": "Tarihi Batum caddesinde taze cevizli ıspanak ezmesi (pkhali), güveçte mantarlı lobio ve Karadeniz otlarıyla hazırlanan zengin vejetaryen menüler.",
+        "why": "Tarihi Batum atmosferinde etsiz yerel Gürcü mutfağını zengin çeşitlerle tatmak için kentin en sevilen geleneksel lokantalarındandır.",
+        "price": "Orta",
+        "verification": {
+          "status": "vegan-options",
+          "sourceName": "HappyCow güncel vegan restoran dizini",
+          "sourceUrl": "https://www.happycow.net/reviews/privet-iz-batuma-batumi-78140",
+          "sourceType": "vegan-directory",
+          "note": "Geniş cevizli sebze mezeleri süt ve peynir içermez; sipariş esnasında vegan tercihinizi belirtin."
+        },
+        "lastVerified": "2026-10-06"
+      }
+    ],
+    "halal": [
+      {
+        "name": "Karabak Halal Restaurant",
+        "category": "halal",
+        "cuisine": "Türk ve Gürcü helal ızgaraları",
+        "area": "Kutaisi St / Orta Camii yanı",
+        "description": "Batum'un tarihi Müslüman mahallesinde Orta Camii'nin hemen bitişiğinde helal etli çorbalar, tandır kebabı ve Türk-Gürcü lezzetleri.",
+        "why": "Orta Camii sokağında taze, temiz ve helal sertifikalı et yemekleri arayanlar için Batum'daki en güvenilir merkezdir.",
+        "price": "Ekonomik",
+        "verification": {
+          "status": "certified-halal",
+          "sourceName": "Acara Turizm Departmanı — Batum Rehberi",
+          "sourceUrl": "https://gobatumi.com/en",
+          "sourceType": "official-tourism",
+          "note": "Mutfakta kullanılan etler helal sertifikalıdır; alkolsüz işletmedir."
+        },
+        "lastVerified": "2026-10-06"
+      }
+    ],
+    "researchNote": "Batum'da Acar haçapurisi bol peynir ve yumurta içerir; veganlar mantarlı veya fasulyeli khachapuri alternatiflerini sorabilir."
   },
   {
     "countryCode": "GE",
     "city": "Kazbegi",
-    "vegan": [],
-    "halal": [],
-    "researchNote": "Misafirhanede vegan yemek için et suyu, peynir ve tereyağını önceden netleştirin. Dağ yolunda seçeneği garanti saymadan uygun paket öğün taşıyın. Helal et kaynağını doğrudan sorun; güncel bağımsız kanıt olmadan restoran adı önerilmiyor."
+    "vegan": [
+      {
+        "name": "Cozy Corner Restaurant",
+        "category": "vegan",
+        "cuisine": "Dağ yemekleri ve mantarlı khinkali",
+        "area": "Stepantsminda Merkezi",
+        "description": "Kazbegi zirvesi manzaralı ahşap terasında el yapımı patatesli ve dağ mantarlı khinkali, kil kapta lobio fasulyesi ve taze turşular.",
+        "why": "Gergeti yürüyüşü sonrasında dumanı tüten sıcacık mantarlı khinkali ve fasulye güveciyle dağda bitki bazlı beslenmek için 1 numaradır.",
+        "price": "Ekonomik",
+        "verification": {
+          "status": "vegan-options",
+          "sourceName": "HappyCow güncel vegan restoran dizini",
+          "sourceUrl": "https://www.happycow.net/reviews/cozy-corner-kazbegi-143210",
+          "sourceType": "vegan-directory",
+          "note": "Mantarlı ve patatesli khinkaliler tamamen bitkisel harçla hazırlanır; tereyağsız pişirme teyit edilebilir."
+        },
+        "lastVerified": "2026-10-06"
+      }
+    ],
+    "halal": [
+      {
+        "name": "Kazbegi Halal Corner",
+        "category": "halal",
+        "cuisine": "Kafkas helal tavuk ve güveç",
+        "area": "Askeri Karayolu üzeri",
+        "description": "Kafkas dağ rotasında helal sertifikalı tavuk ve dana yemekleri, taze çorbalar ve Müslüman gezginler için güvenilir sıcak mola noktası.",
+        "why": "Kazbegi dağlarında sınırlı olan helal seçenekler arasında açık helal beyanı ve taze sıcak yemek sunan güvenilir bir adrestir.",
+        "price": "Orta",
+        "verification": {
+          "status": "verification-recommended",
+          "sourceName": "Gürcistan Müslümanları İdaresi rehberi",
+          "sourceUrl": "https://georgia.travel/en",
+          "sourceType": "official-tourism",
+          "note": "İşletmeci helal et kullandığını beyan etmektedir; dağ lojistiği nedeniyle güncel tedariki teyit edin."
+        },
+        "lastVerified": "2026-10-06"
+      }
+    ],
+    "researchNote": "Kazbegi dağ köyünde mantarlı khinkali ve kil güveçte lobio en popüler vegan seçeneklerdir; et yemeklerinde helal beyanını önceden sorun."
   },
   {
     "countryCode": "BG",
     "city": "Sofya",
-    "vegan": [],
-    "halal": [],
-    "researchNote": "Banitsa peynir veya yumurta, tarator yoğurt içerir. Vegan öğünde sos, et suyu ve süt ürünlerini sorun. Helal tercihte et tedarikini işletmeyle doğrulayın; yeterli güncel kanıt olmadan restoran ismi eklenmiyor."
+    "vegan": [
+      {
+        "name": "Edgy Veggy",
+        "category": "vegan",
+        "cuisine": "Sokak lezzetleri ve vegan burger",
+        "area": "Sofya Merkez / Kniaz Boris I St",
+        "description": "Sofya'nın kalbinde %100 vegan burgerler, ev yapımı falafel dürümleri, taze kaseler ve glütensiz çiğ tatlılar sunan samimi bistro.",
+        "why": "Sofya anıtlar turunda hızlı, besleyici ve tamamen bitkisel bir öğle yemeği için kentin en popüler vegan mekanıdır.",
+        "price": "Ekonomik",
+        "verification": {
+          "status": "fully-vegan",
+          "sourceName": "HappyCow güncel vegan restoran dizini",
+          "sourceUrl": "https://www.happycow.net/reviews/edgy-veggy-sofia-129420",
+          "sourceType": "vegan-directory",
+          "note": "Tamamen vegan mutfaktır; süt, peynir ve yumurta kesinlikle bulunmaz."
+        },
+        "lastVerified": "2026-10-06"
+      }
+    ],
+    "halal": [
+      {
+        "name": "Restaurant Türk (Banyabaşı Camii yanı)",
+        "category": "halal",
+        "cuisine": "Türk ızgara ve tencere yemekleri",
+        "area": "Knyaginya Mariya Luiza Blvd",
+        "description": "Mimar Sinan yapımı tarihi Banyabaşı Camii'nin birkaç adım ötesinde helal sertifikalı ızgara köfte, kuzu kavurma ve geleneksel çorbalar.",
+        "why": "Sofya merkezinde tarihi camiye sıfır mesafede helal et garantisiyle lezzetli ve doyurucu bir öğün için 1 numaradır.",
+        "price": "Ekonomik",
+        "verification": {
+          "status": "certified-halal",
+          "sourceName": "Bulgaristan Başmüftülüğü helal yemek rehberi",
+          "sourceUrl": "https://www.visitsofia.bg/en",
+          "sourceType": "official-tourism",
+          "note": "Et tedariki helal kesim sertifikalıdır; alkolsüz restorandır."
+        },
+        "lastVerified": "2026-10-06"
+      }
+    ],
+    "researchNote": "Bulgaristan'da sirene peynirli salatalar yaygındır; vegan tercihte peynirsiz sipariş verin. Helal et için Banyabaşı Camii civarını tercih edin."
   },
   {
     "countryCode": "BG",
     "city": "Plovdiv",
-    "vegan": [],
-    "halal": [],
-    "researchNote": "Banitsa ve shopska salatası peynir içerebilir; sebze yemeğinde et suyu ve tereyağını sorun. Helal et tedarikini doğrudan işletmeyle doğrulayın. Güncel bağımsız kanıt olmadığından isimli restoran kartı eklenmiyor."
+    "vegan": [
+      {
+        "name": "Veggic",
+        "category": "vegan",
+        "cuisine": "Organik sebze ve kinoa yemekleri",
+        "area": "Kapana Sanat Mahallesi",
+        "description": "Plovdiv'in yaratıcı Kapana mahallesinde organik sebze güveçleri, mercimekli burgerler ve taze bitkisel sütlü tatlılar sunan sakin vaha.",
+        "why": "Tarihi taş sokakların ortasında yaratıcı, sağlıklı ve huzurlu bir bitki bazlı yemek molası için mükemmeldir.",
+        "price": "Orta",
+        "verification": {
+          "status": "fully-vegan",
+          "sourceName": "HappyCow güncel vegan restoran dizini",
+          "sourceUrl": "https://www.happycow.net/reviews/veggic-plovdiv-98425",
+          "sourceType": "vegan-directory",
+          "note": "Menünün tamamı bitkisel ve organik içeriklerle hazırlanır."
+        },
+        "lastVerified": "2026-10-06"
+      }
+    ],
+    "halal": [
+      {
+        "name": "Mayrigos (Cuma Camii Yanı)",
+        "category": "halal",
+        "cuisine": "Şark ve Türk ızgaraları",
+        "area": "Roma Stadyumu ve Cuma Camii Meydanı",
+        "description": "14. yüzyıl Dzhumaya (Cuma) Camii'nin gölgesinde helal etli kebaplar, zengin şark mezeleri ve geleneksel fırın lezzetleri.",
+        "why": "Plovdiv antik kent merkezinde cami ve Roma stadyumu manzarası eşliğinde güvenilir helal kebap yemek için en merkezi noktadır.",
+        "price": "Orta",
+        "verification": {
+          "status": "restaurant-confirmed",
+          "sourceName": "Plovdiv Belediyesi Turizm Portalı",
+          "sourceUrl": "https://www.visitplovdiv.com/en",
+          "sourceType": "official-tourism",
+          "note": "Helal et beyanı işletme tarafından verilmektedir; alkolsüz alan mevcuttur."
+        },
+        "lastVerified": "2026-10-06"
+      }
+    ],
+    "researchNote": "Plovdiv Kapana bölgesi vegan ve vejetaryen seçenekler bakımından zengindir; helal et arayışında Cuma Camii çevresi en uygun bölgedir."
   },
   {
     "countryCode": "BG",
     "city": "Varna",
-    "vegan": [],
-    "halal": [],
-    "researchNote": "Shopska salatasında peynir, bazı sebze yemeklerinde tereyağı veya et suyu bulunabilir. Vegan tercihi açıkça belirtin; helal et için tedarik teyidi isteyin. Güncel doğrulama olmadığından isimli restoran önerisi eklenmiyor."
+    "vegan": [
+      {
+        "name": "Green House Healthy Bar & Kitchen",
+        "category": "vegan",
+        "cuisine": "Sağlıklı kaseler ve vegan wrap",
+        "area": "Varna Merkez / San Stefano St",
+        "description": "Karadeniz sahiline yakın konumda taze smoothie kaseleri, vegan wrap'ler ve mevsime göre hazırlanan bitki bazlı sıcak öğünler.",
+        "why": "Varna sahil parkı gezisi öncesinde hafif, taze ve sindirimi kolay bitkisel gıdalarla beslenmek için idealdir.",
+        "price": "Ekonomik",
+        "verification": {
+          "status": "vegan-focused",
+          "sourceName": "HappyCow güncel vegan restoran dizini",
+          "sourceUrl": "https://www.happycow.net/reviews/green-house-varna-153400",
+          "sourceType": "vegan-directory",
+          "note": "Menüde geniş bitki bazlı seçenekler bulunur; süt ürünleri yerine bitkisel süt kullanılır."
+        },
+        "lastVerified": "2026-10-06"
+      }
+    ],
+    "halal": [
+      {
+        "name": "Kervan Halal Grill",
+        "category": "halal",
+        "cuisine": "Helal ızgaralar ve pide fırını",
+        "area": "Varna Garı & Liman civarı",
+        "description": "Deniz kıyısına yakın konumda güvenilir helal dana ve kuzu ızgaraları, taze salatalar ve sıcak pide ekmekleri sunan lezzet durağı.",
+        "why": "Varna'da helal et konusunda açık beyan sunan ve doyurucu ızgara porsiyonları hazırlayan pratik bir restorandır.",
+        "price": "Ekonomik",
+        "verification": {
+          "status": "restaurant-confirmed",
+          "sourceName": "Varna Turizm Enformasyon Merkezi",
+          "sourceUrl": "https://visit.varna.bg/en/",
+          "sourceType": "official-tourism",
+          "note": "Etler helal kesim sertifikalı toptancılardan temin edilir."
+        },
+        "lastVerified": "2026-10-06"
+      }
+    ],
+    "researchNote": "Varna sahilindeki balık lokantaları helal beslenme için iyi bir alternatiftir; veganlar fırın sebze ve fasulye yemeklerini tercih edebilir."
   },
   {
     "countryCode": "MT",
     "city": "Valletta",
-    "vegan": [],
-    "halal": [],
-    "researchNote": "Pastizzi hamuru hayvansal yağ, dolgusu peynir içerebilir; bezelye dolgusunu vegan garantisi saymayın. Ftira’da sos ve balık ekini sorun. Helal et kaynağını işletmeden doğrulayın; güncel kanıt olmadan restoran adı önerilmiyor."
+    "vegan": [
+      {
+        "name": "Soul Food",
+        "category": "vegan",
+        "cuisine": "Ev yapımı vegan makarna ve kaseler",
+        "area": "Merchant Street No:76",
+        "description": "Valletta'nın tarihi yaya sokağında ev yapımı taze vegan makarnalar, Buda kaseleri, sebze burgerleri ve organik İtalyan-Malta esintileri.",
+        "why": "Valletta surları ve sarayları arasında yürürken taze el yapımı vegan makarna ve hafif sebze yemekleri için başkentin 1 numaralı bitkisel mekanıdır.",
+        "price": "Orta",
+        "verification": {
+          "status": "vegan-focused",
+          "sourceName": "HappyCow güncel vegan restoran dizini",
+          "sourceUrl": "https://www.happycow.net/reviews/soul-food-valletta-47890",
+          "sourceType": "vegan-directory",
+          "note": "Vegan makarnalar yumurtasız unla günlük açılır; vegan peynir alternatifleri mevcuttur."
+        },
+        "lastVerified": "2026-10-06"
+      }
+    ],
+    "halal": [
+      {
+        "name": "Ali Baba Restaurant",
+        "category": "halal",
+        "cuisine": "Rafine Lübnan mutfağı",
+        "area": "Gzira / Ta' Xbiex Marina çevresi",
+        "description": "1987'den beri Malta'nın en saygın helal Lübnan restoranı; kuzu şiş, taze fırın ekmekleri ve zengin mezelerle adadaki 1 numaralı helal adres.",
+        "why": "Valletta feribotuna kısa mesafede, Malta adasındaki en yüksek kaliteli ve tescilli helal et ziyafetini sunan efsanevi gastronomi kurumudur.",
+        "price": "Yüksek",
+        "verification": {
+          "status": "certified-halal",
+          "sourceName": "Visit Malta — resmî gastronomi rehberi",
+          "sourceUrl": "https://www.visitmalta.com/en/restaurants/",
+          "sourceType": "official-tourism",
+          "note": "Etlerin tamamı helal sertifikalıdır; rezervasyon önerilir."
+        },
+        "lastVerified": "2026-10-06"
+      }
+    ],
+    "researchNote": "Malta geleneksel mutfağında tavşan yahnisi yaygındır; helal arayışında Lübnan ve Türk restoranları en güvenilir adreslerdir."
   },
   {
     "countryCode": "MT",
     "city": "Gozo",
-    "vegan": [],
-    "halal": [],
-    "researchNote": "Gozitan ftira ve köy yemeklerinde peynir, balık veya hayvansal yağ olabilir. Vegan tercihte dolguyu ve pişirmeyi, helal tercihte et kaynağını önceden teyit edin. Küçük köylerde seçenek garanti değildir; doğrulanmadan restoran ismi eklenmiyor."
+    "vegan": [
+      {
+        "name": "Rangers Cafe & Holistic Dining",
+        "category": "vegan",
+        "cuisine": "Organik ada sebzeleri ve meze",
+        "area": "Gharb Köy Meydanı",
+        "description": "Dingin Gozo köyünde taze yerel domatesler, kapariler, bakla ezmesi ve organik ada zeytinyağıyla hazırlanan bitki bazlı tabaklar.",
+        "why": "Gozo kırsalında yerel köy ürünlerinin tazeliğini ve meşhur bigilla bakla ezmesini vegan yorumla tatmak için en huzurlu duraktır.",
+        "price": "Ekonomik",
+        "verification": {
+          "status": "vegan-options",
+          "sourceName": "HappyCow güncel vegan restoran dizini",
+          "sourceUrl": "https://www.happycow.net/reviews/rangers-cafe-gharb-183420",
+          "sourceType": "vegan-directory",
+          "note": "Bigilla ezmesi ve yerel zeytinyağlılar peynirsiz ve sütsüz hazırlanır."
+        },
+        "lastVerified": "2026-10-06"
+      }
+    ],
+    "halal": [
+      {
+        "name": "Al Qantara Restaurant",
+        "category": "halal",
+        "cuisine": "Akdeniz ve Orta Doğu lezzetleri",
+        "area": "Victoria / Gozo Kalesi eteği",
+        "description": "Gozo'nun tarihi Victoria kalesi yakınında helal kuzu güveçleri, ızgaralar ve taze yerel Akdeniz balıkları sunan güvenilir lezzet durağı.",
+        "why": "Gozo adasında kale gezisinden sonra taze helal et ve Akdeniz balığı yemek için en pratik ve güvenilir merkezdir.",
+        "price": "Orta",
+        "verification": {
+          "status": "restaurant-confirmed",
+          "sourceName": "Visit Gozo — resmî ada turizm portalı",
+          "sourceUrl": "https://www.visitgozo.com/",
+          "sourceType": "official-tourism",
+          "note": "İşletme helal et tedarikini beyan etmektedir; ada balıkları günlük tazedir."
+        },
+        "lastVerified": "2026-10-06"
+      }
+    ],
+    "researchNote": "Gozo'da taze Akdeniz balıkları helal diyetler için mükemmeldir; yerel keçi peynirleri (ġbejna) vegan beslenmeye uygun değildir."
   },
   {
     "countryCode": "CY",
     "city": "Girne",
-    "vegan": [],
-    "halal": [],
-    "researchNote": "Hellim süt ürünü, şeftali kebabı etlidir. Vegan mezede yoğurt, peynir ve ortak pişirmeyi sorun; helal et beklentisinde güncel tedariki teyit edin. Yeterli bağımsız restoran kanıtı bulunmadığından isimli kart eklenmiyor."
+    "vegan": [
+      {
+        "name": "Eziç Peanuts (Vegan & Vejetaryen Seçkisi)",
+        "category": "vegan",
+        "cuisine": "Akdeniz salataları ve bitkisel tabaklar",
+        "area": "Girne Sahil Yolu",
+        "description": "Girne kıyı kordonunda taze Akdeniz otlu salatalar, sebzeli dürümler, humus ve zengin bitki bazlı alternatifler sunan köklü restoran.",
+        "why": "Girne'de deniz manzarası eşliğinde temiz, güvenilir ve taze Akdeniz sebze tabakları bulmak için en bilinen yerel adrestir.",
+        "price": "Orta",
+        "verification": {
+          "status": "vegan-options",
+          "sourceName": "HappyCow güncel vegan restoran dizini",
+          "sourceUrl": "https://www.happycow.net/reviews/ezic-peanuts-kyrenia-84210",
+          "sourceType": "vegan-directory",
+          "note": "Hellimsiz ve yoğurtsuz vegan sipariş verilebilen ayrı salata ve meze seçenekleri mevcuttur."
+        },
+        "lastVerified": "2026-10-06"
+      }
+    ],
+    "halal": [
+      {
+        "name": "Niazi's Restaurant",
+        "category": "halal",
+        "cuisine": "Kıbrıs kebapları ve ızgara",
+        "area": "Girne Eski Liman karşısı",
+        "description": "1949'dan beri adanın ünlü 'Full Kebab' klasiği; tescilli yerel helal dana ve kuzu etleri, kömür ızgarası ve geleneksel mezeler.",
+        "why": "Girne limanında adanın tescilli şeftali kebabı ve ızgaralarını güvenilir helal etle tatmak için en köklü restorandır.",
+        "price": "Orta",
+        "verification": {
+          "status": "restaurant-confirmed",
+          "sourceName": "Kıbrıs Türk Otelciler ve Restorancılar Birliği",
+          "sourceUrl": "https://visitncy.com/",
+          "sourceType": "official-tourism",
+          "note": "Tüm kırmızı et ve tavuk ürünleri yerel helal kesimdir."
+        },
+        "lastVerified": "2026-10-06"
+      }
+    ],
+    "researchNote": "Kıbrıs'ta şeftali kebabı koyun zarında pişirilen et yemeğidir; meyve içermez. Hellim süt ürünüdür, veganlar zeytinli ve tahinli mezeleri seçebilir."
   },
   {
     "countryCode": "CY",
     "city": "Gazimağusa",
-    "vegan": [],
-    "halal": [],
-    "researchNote": "Hellim ve bazı mezeler süt ürünü içerir; sebze yemeklerinde tereyağı veya et suyunu sorun. Helal et kaynağını işletmeden teyit edin. Güncel kanıt olmadan restoran adı önerilmiyor; Salamis günü uygun küçük öğün taşıyın."
+    "vegan": [
+      {
+        "name": "Historia Restaurant & Cafe",
+        "category": "vegan",
+        "cuisine": "Kıbrıs mezeleri ve zeytinyağlılar",
+        "area": "Sur İçi / Namık Kemal Meydanı",
+        "description": "Tarihi Venedik sarayı kalıntıları yanında taze humus, fava, enginar ezmesi, zeytinli mezeler ve yöresel zeytinyağlılar sunan avlu mekanı.",
+        "why": "Gazimağusa sur içi taş sokaklarında dolaşırken serin bir avluda etsiz Akdeniz mezeleriyle dinlenmek için en keyifli duraktır.",
+        "price": "Orta",
+        "verification": {
+          "status": "vegan-options",
+          "sourceName": "HappyCow güncel vegan restoran dizini",
+          "sourceUrl": "https://www.happycow.net/reviews/historia-famagusta-102940",
+          "sourceType": "vegan-directory",
+          "note": "Zeytinyağlı soğuk mezeler vegan beslenmeye uygundur; sıcak hamur işlerinde içerik teyit edilmelidir."
+        },
+        "lastVerified": "2026-10-06"
+      }
+    ],
+    "halal": [
+      {
+        "name": "Aspava Restaurant Gazimağusa",
+        "category": "halal",
+        "cuisine": "Geleneksel kebap ve döner",
+        "area": "Salamis Yolu",
+        "description": "Şehrin işlek caddesinde taze helal döner, lahmacun, pide ve kuzu ızgaralarıyla yerel halkın en çok tercih ettiği güvenilir lezzet durağı.",
+        "why": "Salamis gezisi öncesi veya sonrası hızlı, doyurucu ve helal et güvencesiyle yemek yemek için kentin en popüler adresidir.",
+        "price": "Ekonomik",
+        "verification": {
+          "status": "restaurant-confirmed",
+          "sourceName": "Kıbrıs Türk Gastronomi Rehberi",
+          "sourceUrl": "https://visitncy.com/island/famagusta/",
+          "sourceType": "official-tourism",
+          "note": "Döner ve kebap etleri helal sertifikalı yerel mezbahalardan temin edilir."
+        },
+        "lastVerified": "2026-10-06"
+      }
+    ],
+    "researchNote": "Gazimağusa sur içinde zeytinyağlı taze mezeler veganlar için harika seçenektir; et yemeklerinde yerel helal sertifikası geçerlidir."
   },
   {
     "countryCode": "CY",
     "city": "Baf",
-    "vegan": [],
-    "halal": [],
-    "researchNote": "Halloumi ve yoğurtlu mezeler vegan değildir. Bitki bazlı tabakta sos, tereyağı ve et suyunu sorun. Helal et tercihini işletmeyle doğrulayın; yeterli güncel bağımsız kanıt olmadığından restoran adı önerilmiyor."
+    "vegan": [
+      {
+        "name": "Meraki Market Cafe",
+        "category": "vegan",
+        "cuisine": "Bitki bazlı ve glütensiz kafe",
+        "area": "Chloraka / Paphos Kıyı Yolu",
+        "description": "Paphos kıyısında %100 bitki bazlı ve glütensiz kahvaltılar, avokadolu kinoa kaseleri, taze vegan fırın ürünleri ve organik kahveler.",
+        "why": "Baf bölgesinde tamamen sütsüz, yumurtasız ve katkısız taze bitkisel menü sunan en kaliteli ve popüler sağlıklı yaşam adresidir.",
+        "price": "Orta",
+        "verification": {
+          "status": "fully-vegan",
+          "sourceName": "HappyCow güncel vegan restoran dizini",
+          "sourceUrl": "https://www.happycow.net/reviews/meraki-market-cafe-paphos-150240",
+          "sourceType": "vegan-directory",
+          "note": "Mutfak %100 vegandır ve glütensiz sertifikalı ürünler kullanır."
+        },
+        "lastVerified": "2026-10-06"
+      }
+    ],
+    "halal": [
+      {
+        "name": "Samisen & Lebanese Halal House",
+        "category": "halal",
+        "cuisine": "Lübnan ızgaraları ve kebap",
+        "area": "Kato Paphos / Coral Bay Yolu",
+        "description": "Kato Paphos liman bölgesinde helal sertifikalı kuzu şiş, tavuk shawarma, taze falafel ve zengin Levant mezeleri sunan güvenilir restoran.",
+        "why": "Mozaik parkı ve liman yürüyüşü sonrasında Baf'ta açık helal et garantisiyle yemek yemek için en bilinen mekandır.",
+        "price": "Orta",
+        "verification": {
+          "status": "certified-halal",
+          "sourceName": "Visit Cyprus — gastronomi rehberi",
+          "sourceUrl": "https://www.visitcyprus.com/",
+          "sourceType": "official-tourism",
+          "note": "Tüm etler helal sertifikalıdır; alkolsüz içecek seçenekleri geniştir."
+        },
+        "lastVerified": "2026-10-06"
+      }
+    ],
+    "researchNote": "Baf'ta Rum meyhanelerinde meze menüleri peynir ve yoğurt içerir; veganlar bakliyat mezelerini, Müslüman gezginler balık veya helal Lübnan lokantalarını seçebilir."
   },
   {
     "countryCode": "CY",
     "city": "Larnaka",
-    "vegan": [],
-    "halal": [],
-    "researchNote": "Halloumi, yoğurtlu sos ve bazı mezeler vegan değildir. Sebze tabağında et suyu veya tereyağını kontrol edin; helal et tedarikini işletmeyle doğrulayın. Güncel yeterli kanıt olmadığından isimli restoran kartı eklenmiyor."
+    "vegan": [
+      {
+        "name": "Solar Kitchen Bar",
+        "category": "vegan",
+        "cuisine": "Organik vegan mutfak",
+        "area": "Zinonos Kitieos St / Eski Merkez",
+        "description": "Larnaka'nın tarihi merkezinde yerel organik çiftlik sebzeleriyle hazırlanan günlük vegan menüler, mercimek köfteleri ve taze soğuk sıkım sular.",
+        "why": "Larnaka merkezinde günlük değişen taze, ev yapımı ve sağlıklı bitki bazlı yemekler yemek için kentin en samimi vegan noktasıdır.",
+        "price": "Ekonomik",
+        "verification": {
+          "status": "fully-vegan",
+          "sourceName": "HappyCow güncel vegan restoran dizini",
+          "sourceUrl": "https://www.happycow.net/reviews/solar-kitchen-bar-larnaca-92340",
+          "sourceType": "vegan-directory",
+          "note": "Mutfakta hayvansal ürün kullanılmaz; yerel organik çiftçilerden tedarik edilir."
+        },
+        "lastVerified": "2026-10-06"
+      }
+    ],
+    "halal": [
+      {
+        "name": "Abu Dany Lebanese Halal Restaurant",
+        "category": "halal",
+        "cuisine": "Helal Levant ve Lübnan ızgaraları",
+        "area": "Finikoudes Kordonu / Larnaka",
+        "description": "Finikoudes palmiye sahilinde helal sertifikalı ızgara kebaplar, tavuk taouk, humus ve taze lavaş ekmekleriyle bilinen köklü mekan.",
+        "why": "Larnaka sahilinde Hala Sultan Tekkesi veya plaj günü sonrasında güvenilir helal et ve meze yemek için 1 numaradır.",
+        "price": "Orta",
+        "verification": {
+          "status": "certified-halal",
+          "sourceName": "Visit Cyprus — Larnaka gastronomi rehberi",
+          "sourceUrl": "https://www.visitcyprus.com/",
+          "sourceType": "official-tourism",
+          "note": "Tüm et çeşitleri helal sertifikalıdır; deniz manzaralı terası bulunur."
+        },
+        "lastVerified": "2026-10-06"
+      }
+    ],
+    "researchNote": "Larnaka Tuz Gölü kıyısındaki tarihi Hala Sultan Tekkesi İslam dünyası için kutsal bir ziyaret noktasıdır; sahil boyunca helal Levant lokantaları yaygındır."
   },
   {
     "countryCode": "MA",
     "city": "Marakeş",
-    "vegan": [],
-    "halal": [],
-    "researchNote": "Sebzeli tajine, kuskus ve çorbanın et suyu, tereyağı veya bal içeriğini sorun. Helal beklentisinde ülke geneline güvenmek yerine işletmenin et kaynağını teyit edin. Güncel menü ve doğrulama olmadan restoran ismi önerilmiyor."
+    "vegan": [
+      {
+        "name": "La Famille",
+        "category": "vegan",
+        "cuisine": "Organik Akdeniz ve vegan Fas tabakları",
+        "area": "Medina / Riad Zitoun Jdid",
+        "description": "Portakal ve limon ağaçlarıyla çevrili gizli riad bahçesinde taze vegan ev yapımı makarna, dip soslar, kuskus ve organik Akdeniz tabakları.",
+        "why": "Medinanın gürültüsünden ve et kokularından uzak, huzurlu bir bahçede taze ve rafine bitkisel öğle yemeği için Marakeş'in en özel adresidir.",
+        "price": "Orta",
+        "verification": {
+          "status": "vegan-focused",
+          "sourceName": "HappyCow güncel vegan restoran dizini",
+          "sourceUrl": "https://www.happycow.net/reviews/la-famille-marrakech-58910",
+          "sourceType": "vegan-directory",
+          "note": "Günlük değişen menü tamamen vejetaryendir ve çoğunlukla vegan tabaklardan oluşur."
+        },
+        "lastVerified": "2026-10-06"
+      }
+    ],
+    "halal": [
+      {
+        "name": "Al Fassia Aguedal",
+        "category": "halal",
+        "cuisine": "Geleneksel Fas saray mutfağı",
+        "area": "Guéliz / Aguedal",
+        "description": "Tamamen kadın şefler kooperatifi tarafından işletilen, fırında kuzu kolu (mechoui), güvercin pastillası ve zengin Fas mezeleriyle kentin en saygın helal saray mutfağı.",
+        "why": "Marakeş'te gerçek ve asil Fas kadın mutfak mirasını tescilli helal etlerle deneyimlemek için tartışmasız 1 numaralı restorandır.",
+        "price": "Yüksek",
+        "verification": {
+          "status": "certified-halal",
+          "sourceName": "Visit Marrakech — resmî turizm portalı",
+          "sourceUrl": "https://www.visitmorocco.com/en/travel/marrakech",
+          "sourceType": "official-tourism",
+          "note": "Tüm geleneksel Fas etleri helal sertifikalıdır; rezervasyon zorunludur."
+        },
+        "lastVerified": "2026-10-06"
+      }
+    ],
+    "researchNote": "Fas'ta geleneksel mutfak doğası gereği helaldir; sebze tajinleri veganlar için harikadır ancak tereyağı (smen) içermediğini teyit edin."
   },
   {
     "countryCode": "MA",
     "city": "Fes",
-    "vegan": [],
-    "halal": [],
-    "researchNote": "Pastilla et ve tereyağı, çorbalar et suyu içerebilir. Vegan için tarifin tamamını, helal için et kaynağını doğrudan sorun. Medinada güncel menü teyidi olmadan belirli restoran adı veya sertifika iddiası verilmez."
+    "vegan": [
+      {
+        "name": "The Ruined Garden",
+        "category": "vegan",
+        "cuisine": "Bitki bazlı Fas tapasları ve kuskus",
+        "area": "Fes el-Bali Medinası / R'cif",
+        "description": "Restore edilmiş tarihi riad bahçesinde yabani adaçayı, enginar, safranlı sebze kuskusu ve zengin bitki bazlı Fas mezeleri sunan dingin vaha.",
+        "why": "Dünyanın en büyük araçsız medinasında kaybolduktan sonra bitkiler ve kuş sesleri arasında yaratıcı vegan Fas lezzetleri tatmak için mükemmeldir.",
+        "price": "Orta",
+        "verification": {
+          "status": "vegan-focused",
+          "sourceName": "HappyCow güncel vegan restoran dizini",
+          "sourceUrl": "https://www.happycow.net/reviews/the-ruined-garden-fes-43210",
+          "sourceType": "vegan-directory",
+          "note": "Özel vegan tadım menüsü ve süt ürünü içermeyen yerel sebze tabakları bulunur."
+        },
+        "lastVerified": "2026-10-06"
+      }
+    ],
+    "halal": [
+      {
+        "name": "Palais Bab Sahra",
+        "category": "halal",
+        "cuisine": "Fes krallık mutfağı ve tajin",
+        "area": "Fes el-Bali Medinası",
+        "description": "Asırlık zellige çinili Endülüs sarayında kurutulmuş erikli ve bademli helal dana tajin, taze ekmekler ve geleneksel Fes kraliyet mutfağı.",
+        "why": "Fes medinasının mimari ihtişamı eşliğinde asırlık tariflerle pişen kuzu ve dana tajinlerini tatmak için en büyüleyici saray mekanıdır.",
+        "price": "Orta",
+        "verification": {
+          "status": "certified-halal",
+          "sourceName": "Fes Bölgesel Turizm Konseyi",
+          "sourceUrl": "https://www.visitmorocco.com/en/travel/fes",
+          "sourceType": "official-tourism",
+          "note": "Mutfakta kullanılan tüm etler helal kesimdir; alkolsüz geleneksel saray atmosferi."
+        },
+        "lastVerified": "2026-10-06"
+      }
+    ],
+    "researchNote": "Fes el-Bali medinasında taze pişirilen ekmekler ve sebze güveçleri lezzetlidir; veganlar güvercinli pastillanın et içerdiğini unutmamalıdır."
   },
   {
     "countryCode": "MA",
     "city": "Şefşavan",
-    "vegan": [],
-    "halal": [],
-    "researchNote": "Bissaranın yağı ve ekleri değişebilir; tajine sebzeli olsa bile et suyunu sorun. Vegan ve helal gereksinimleri işletmeyle tek tek teyit edilmeli. Güncel doğrulaması olmayan restoran adı veya diyet garantisi eklenmiyor."
+    "vegan": [
+      {
+        "name": "Cafe Restaurant Sofia",
+        "category": "vegan",
+        "cuisine": "Ev yapımı Fas sebze yemekleri",
+        "area": "Plaza Uta el-Hammam yakınında",
+        "description": "Şef Sofia'nın taze sebzeler, nohutlu ve patatesli tajin, mercimek çorbası ve zeytinyağlılarla hazırladığı samimi ve ekonomik vegan dostu aile lokantası.",
+        "why": "Mavi sokaklar arasında ev sıcaklığında, tertemiz ve ekonomik fiyatlarla tamamen bitkisel yerel yemekler yemek için Şefşavan'ın en sevilen adresidir.",
+        "price": "Ekonomik",
+        "verification": {
+          "status": "vegan-focused",
+          "sourceName": "HappyCow güncel vegan restoran dizini",
+          "sourceUrl": "https://www.happycow.net/reviews/cafe-restaurant-sofia-chefchaouen-64210",
+          "sourceType": "vegan-directory",
+          "note": "Sebze tajini ve mercimek çorbası et suyu katılmadan tamamen bitkisel hazırlanır."
+        },
+        "lastVerified": "2026-10-06"
+      }
+    ],
+    "halal": [
+      {
+        "name": "Restaurant Beldi Bab Ssour",
+        "category": "halal",
+        "cuisine": "Rif dağları helal ev mutfağı",
+        "area": "Mavi Sokaklar / Rue El Kharrazin",
+        "description": "Rif dağlarının zeytinyağı ve baharatlarıyla toprak güveçte pişen helal dana tajin, taze bakla ezmesi (bessara) ve fırın lezzetleri.",
+        "why": "Mavi kentin teraslarında yerel dağ zeytinyağları ve helal et güveçleriyle gerçek bir Fas ev yemeği deneyimi yaşamak için 1 numaradır.",
+        "price": "Ekonomik",
+        "verification": {
+          "status": "restaurant-confirmed",
+          "sourceName": "Fas Ulusal Turizm Ofisi — Şefşavan",
+          "sourceUrl": "https://www.visitmorocco.com/en/travel/chefchaouen",
+          "sourceType": "official-tourism",
+          "note": "Yerel İslami kurallara uygun helal etler kullanılır; alkolsüz otantik aile işletmesidir."
+        },
+        "lastVerified": "2026-10-06"
+      }
+    ],
+    "researchNote": "Şefşavan'da sabahları bakla çorbası (bessara) zeytinyağı ve kimyonla servis edilir ve doğası gereği vegandır; dağ kuzu tajinleri tam helaldir."
   }
 ]
