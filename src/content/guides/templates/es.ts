@@ -77,6 +77,7 @@ export const es: GuideTemplates = {
     faqDays: (city) => `¿Cuántos días hacen falta para ver ${np(city)}?`,
     faqStay: (city) => `¿Dónde alojarse en ${np(city)}?`,
     faqWhen: (city) => `¿Cuál es la mejor época para viajar ${a(city)}?`,
+    faqHowToGet: (city) => `¿Cómo llegar ${a(city)}?`,
     faqCombine: (city) => `¿Qué destinos combinan bien con ${np(city)}?`,
     relatedAnchor: (city) => `Guía de viaje ${de(city)}`,
     relatedDescription: () => "Suma a la ruta un ritmo urbano distinto y una nueva capa de viaje.",

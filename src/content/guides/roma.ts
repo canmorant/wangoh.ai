@@ -31,7 +31,7 @@ export const roma: CityGuide = {
       ],
     },
     {
-      heading: "Fiumicino ve Ciampino'dan Roma merkezine ulaşım",
+      heading: "Roma'ya nasıl gidilir? Fiumicino ve Ciampino'dan merkeze ulaşım",
       id: "havalimani-ulasimi",
       body: [
         "Fiumicino (FCO) ana uluslararası kapıdır. **Leonardo Express** aktarmasız Roma Termini'ye gider; biletiniz Termini çevresiyse en basit seçenektir. **FL1 bölgesel treni Termini'ye gitmez**: Trastevere, Ostiense ve Tiburtina gibi istasyonlara uğrar. Oteliniz Trastevere, Testaccio veya metro B hattı yakınındaysa FL1 daha mantıklı olabilir. Hangi terminalden geldiğinizi ve güncel peronu Aeroporti di Roma ile Trenitalia'dan kontrol edin.",
@@ -51,7 +51,7 @@ export const roma: CityGuide = {
       ],
     },
     {
-      heading: "Kolezyum, Forum ve Palatino: doğru biletle antik Roma",
+      heading: "Roma'da gezilecek yerler: Kolezyum, Forum ve Palatino için doğru bilet",
       id: "antik-roma",
       body: [
         "Kolezyum için zamanlı rezervasyon zorunludur. Parco archeologico del Colosseo'nun resmî satış kanalı **ticketing.colosseo.it** üzerinden normal biletler çoğunlukla ziyaretten 30 gün önce açılır; biletler isimlidir ve girişte kimlik istenebilir. Benzer isimli reklam sitelerinin yüksek fiyatlı paketini resmî bilet sanmayın.",

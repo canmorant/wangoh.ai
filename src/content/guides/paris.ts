@@ -31,7 +31,7 @@ export const paris: CityGuide = {
       ],
     },
     {
-      heading: "Charles de Gaulle, Orly ve Beauvais'den Paris merkezine ulaşım",
+      heading: "Paris'e nasıl gidilir? Charles de Gaulle, Orly ve Beauvais'den merkeze ulaşım",
       id: "havalimani-ulasimi",
       body: [
         "Charles de Gaulle (CDG) için **RER B**, Gare du Nord, Châtelet–Les Halles ve Saint-Michel yönünde doğrudan raylı bağlantıdır. Terminalinizden istasyona yürüyüş ve ücretsiz CDGVAL gerekebilir; biletiniz havalimanı tarifesini kapsamalıdır. Bakım veya grev gününde güzergâh değişebileceğinden Île-de-France Mobilités ile Paris Aéroport duyurusunu kalkış sabahı kontrol edin. Takside yalnız resmî sırayı kullanın ve sabit tarifenin Paris'in hangi yakası için geçerli olduğunu sorun.",
@@ -49,7 +49,7 @@ export const paris: CityGuide = {
       ],
     },
     {
-      heading: "Louvre, Notre-Dame ve büyük müzeler için doğru bilet stratejisi",
+      heading: "Paris'te gezilecek yerler: Louvre, Notre-Dame ve büyük müzeler için doğru bilet stratejisi",
       id: "muzeler-biletler",
       body: [
         "Louvre biletini **ticket.louvre.fr** alanından veya müzenin yönlendirdiği resmî kanaldan alın. Müze salı günleri kapalıdır; 1 Temmuz–31 Ağustos 2026 döneminde tüm ziyaretçiler için zamanlı rezervasyon zorunludur. Giriş piramidinin tek seçenek olmadığını biletiniz ve güncel müze planından kontrol edin. Bir katta iki koleksiyon seçin; Mona Lisa kuyruğunu bütün ziyaret sanmayın ve çıkış sonrası yeniden giriş hakkını varsaymayın.",

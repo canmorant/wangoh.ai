@@ -25,6 +25,7 @@ const cases: [string, string, string, string][] = [
   ["Çek Cumhuriyeti", "Çek Cumhuriyeti'nde", "Çek Cumhuriyeti'ne", "Çek Cumhuriyeti'ni"],
   ["Lake District", "Lake District'te", "Lake District'e", "Lake District'i"],
   ["Tromsø", "Tromsø'de", "Tromsø'ye", "Tromsø'yü"],
+  ["Mexico City", "Mexico City'de", "Mexico City'ye", "Mexico City'yi"],
 ];
 for (const [name, l, d, a] of cases) {
   assert.equal(loc(name), l, `bulunma: ${name}`);

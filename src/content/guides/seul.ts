@@ -30,7 +30,7 @@ export const seul: CityGuide = {
       ],
     },
     {
-      heading: "Incheon Havalimanı'ndan Seul'e ulaşım: AREX, otobüs ve taksi",
+      heading: "Seul'e nasıl gidilir? Incheon Havalimanı'ndan AREX, otobüs ve taksi",
       id: "havalimani-ulasimi",
       body: [
         "AREX'in **Express Train** seferi terminal ile Seoul Station arasında sınırlı duraklıdır; **All Stop Train** ise Hongdae gibi ara duraklara uğrar ve normal ulaşım kartıyla kullanılabilir. Oteliniz Hongdae'deyse hızlı görünen express tren Seoul Station'da geri aktarma gerektirebilir. Terminal numaranızı ve son tren saatini resmî AREX sayfasından kontrol edin.",
@@ -48,7 +48,7 @@ export const seul: CityGuide = {
       ],
     },
     {
-      heading: "Saraylar, Bukchon ve tarihî Seul için doğru sıra",
+      heading: "Seul'de gezilecek yerler: saraylar, Bukchon ve tarihî Seul için doğru sıra",
       id: "saraylar-bukchon",
       body: [
         "Gyeongbokgung'u açılışa yakın gezin; ana avlu, Geunjeongjeon ve arka bahçe için en az iki saat ayırın. Saray salı günleri kapalıdır; resmî tatil istisnasını ve muhafız değişim programını aynı gün kontrol edin. Hanbokla ücretsiz giriş kuralı varsa uygun kıyafet ve etkinlik koşullarını resmî sayfadan doğrulayın.",

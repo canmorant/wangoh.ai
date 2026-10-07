@@ -61,6 +61,8 @@ export interface GuideTemplates {
     faqDays(city: string): string;
     faqStay(city: string): string;
     faqWhen(city: string): string;
+    /** İsteğe bağlı: ulaşım metni gerçek cümleyse SSS'ye "X'e nasıl gidilir?" eklenir. */
+    faqHowToGet?(city: string): string;
     faqCombine(city: string): string;
     relatedAnchor(city: string): string;
     relatedDescription(city: string): string;

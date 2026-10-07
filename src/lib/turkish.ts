@@ -35,6 +35,8 @@ const OVERRIDES: Record<string, { front?: boolean; hard?: boolean; vowelFinal?: 
   "Los Angeles": { front: false, hard: true },
   Manchester: { front: false },
   Edinburgh: { front: false, hard: false },
+  "Mexico City": { vowelFinal: true }, // [siti]: Mexico City'ye
+  "Québec City": { vowelFinal: true },
 };
 
 function nameInfo(name: string): NameInfo {

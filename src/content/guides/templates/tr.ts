@@ -11,9 +11,22 @@ export const tr: GuideTemplates = {
     sightsHeading: (city) => `${turkishLocative(city)} gezilecek yerler`,
     sightsIntro: (city) =>
       `Listeyi haritadaki yakınlığa göre kümelendirmek, ${turkishLocative(city)} aynı yolu tekrar yürümeyi ve günün iyi ışığını transferde harcamayı önler. Biletli büyük durakları sabitleyin; meydan, park, pazar ve kıyı yürüyüşlerini aralara yerleştirin.`,
-    foodHeading: (city) => `${city} yeme içme rehberi`,
+    foodHeading: (city) => `${turkishLocative(city)} ne yenir? Yeme içme rehberi`,
     footballHeading: (city) => `${turkishLocative(city)} futbol ve maç günü`,
     practicalHeading: (city) => `${turkishLocative(city)} bilmeden gitmemeniz gerekenler`,
+    // Türkçe aramalar "X'e nasıl gidilir", "X'de nerede kalınır", "X'e ne zaman gidilir"
+    // kalıbında; İngilizce ve İspanyolca şablonlar da böyle kurulu.
+    sectionHeadings: {
+      neighborhoods: () => "Semt semt gezi ve konaklama kararı",
+      stay: (city) => `${turkishLocative(city)} nerede kalınır?`,
+      transport: (city) => `${turkishDativeCase(city)} nasıl gidilir? Havalimanı, tren ve şehir içi ulaşım`,
+      nightlife: () => "Kahve, gece hayatı, alışveriş ve yerel ritim",
+      dayTrips: (city) => `${city} çevresinde günübirlik geziler ve rotayı büyütmek`,
+      when: (city) => `${turkishDativeCase(city)} ne zaman gidilir? Mevsim ve kalabalık hesabı`,
+      budget: (city) => `${turkishLocative(city)} bütçe nasıl yönetilir?`,
+      apps: () => "Telefon, internet ve gerçekten işe yarayan uygulamalar",
+      safety: () => "Güvenlik, giriş kuralları ve sık yapılan hatalar",
+    },
   },
   shared: {
     bold: (name, detail) => `**${name}:** ${detail}`,
@@ -21,9 +34,10 @@ export const tr: GuideTemplates = {
       `${sight}, şehirler arası bağlantı ve konaklamayı önce; esnek mahalle öğünlerini sonra sabitleyin.`,
     dailyPace: (city) =>
       `Aynı güne üç uzak bölge koymayın. ${turkishLocative(city)} bir ana deneyim, bir mahalle ve uzun bir öğün daha sürdürülebilir bir ritim verir.`,
-    faqDays: (city) => `${city} için kaç gün gerekir?`,
+    faqDays: (city) => `${city} kaç günde gezilir?`,
     faqStay: (city) => `${turkishLocative(city)} nerede kalınır?`,
     faqWhen: (city) => `${turkishDativeCase(city)} ne zaman gidilir?`,
+    faqHowToGet: (city) => `${turkishDativeCase(city)} nasıl gidilir?`,
     faqCombine: (city) => `${city} hangi rota ile birleştirilir?`,
     relatedAnchor: (city) => `${city} gezi rehberi`,
     relatedDescription: (city) => `${city} sonrasında farklı bir şehir ritmi ve yeni bir rota katmanı ekler.`,

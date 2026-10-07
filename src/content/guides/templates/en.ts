@@ -53,6 +53,7 @@ export const en: GuideTemplates = {
     faqDays: (city) => `How many days do you need in ${inName(city)}?`,
     faqStay: (city) => `Where should you stay in ${inName(city)}?`,
     faqWhen: (city) => `When is the best time to visit ${inName(city)}?`,
+    faqHowToGet: (city) => `How do you get to ${inName(city)}?`,
     faqCombine: (city) => `What can you combine with ${inName(city)} on the same trip?`,
     relatedAnchor: (city) => `${city} travel guide`,
     relatedDescription: () => "Adds a different city rhythm and a new layer to the route.",

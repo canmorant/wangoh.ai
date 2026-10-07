@@ -37,7 +37,7 @@ for(const [code,names] of Object.entries(expected)){
    assert.deepEqual(cityPageLocales(country,city.name),['tr','en','es']);
    assert.equal(guide.placesKind,'sights');assert(guide.places?.length===3);
    const food=guide.sections.find(s=>s.id==='yeme-icme');assert(food);assert(!food.subsections?.length,'Sightseeing cards must not appear as restaurants');
-   assert(guide.sections.length===8&&guide.itinerary&&guide.itinerary.length>=2&&guide.faqs.length===3);
+   assert(guide.sections.length===8&&guide.itinerary&&guide.itinerary.length>=2&&[3,4].includes(guide.faqs.length));
    assert(guide.sections.some(s=>s.id==='gezi-planlama'&&s.body.length>=3));
    assert(guide.sections.some(s=>s.id==='mahalle-yasami'&&s.body.length>=2));
    assert.equal(new Set(guide.sections.map(s=>s.id)).size,guide.sections.length,'Section anchors must be unique');

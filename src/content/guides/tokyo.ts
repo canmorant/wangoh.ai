@@ -97,7 +97,7 @@ export const tokyo: CityGuide = {
       ],
     },
     {
-      heading: "Havalimanından şehre ulaşım",
+      heading: "Tokyo'ya nasıl gidilir? Havalimanından şehre ulaşım",
       id: "havalimani-ulasim",
       body: [
         "**Haneda (HND)** şehre çok daha yakındır; monoray ya da Keikyu hattıyla merkeze yarım saat civarında ulaşırsınız. Uçuş seçenekleriniz arasında Haneda varsa, birkaç saat daha uygun fiyatlı olsa bile Narita'yı tercih etmeden önce bu farkı hesaba katın.",

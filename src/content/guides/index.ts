@@ -89,12 +89,45 @@ export const allCountries: Country[] = [...countries, SECRET_DESTINATION];
  * çevrilir; fabrika rehberleri (ülke dosyaları) kendi kalıplarıyla o dilde
  * yeniden üretilir. Türkçe bağlamda her şey özgün hâlindedir.
  */
+const TRANSPORT_SECTIONS = new Set(["ulasim", "havalimani-ulasimi", "havalimani-ulasim"]);
+const ASKS_HOW_TO_GET = /nasıl gidilir|how (do you|to) get to|cómo llegar/i;
+
+/**
+ * "Nasıl gidilir" SSS'si yalnız ulaşım bölümünün ilk paragrafının gerçekten
+ * "şehre nasıl varılır" cevabı olduğu, tek tek gözden geçirilmiş başkentlerde.
+ * Başka şehirlere eklemeden önce her birinin ilk paragrafı kontrol edilmeli
+ * (ör. Jeju'da ilk paragraf adaya değil Udo feribotuna ait).
+ */
+const HOW_TO_GET_FAQ_GUIDES = new Set([
+  "TR:Ankara", "DE:Berlin", "AR:Buenos Aires", "AL:Tiran", "AT:Viyana", "BE:Brüksel", "GB:Londra",
+  "BA:Saraybosna", "BG:Sofya", "CZ:Prag", "CN:Pekin", "DK:Kopenhag", "ID:Jakarta", "FI:Helsinki",
+  "FR:Paris", "KR:Seul", "GE:Tiflis", "HR:Zagreb", "NL:Amsterdam", "ES:Madrid", "SE:Stockholm",
+  "CH:Bern", "IT:Roma", "JP:Tokyo", "HU:Budapeşte", "MT:Valletta", "MX:Mexico City", "EG:Kahire",
+  "NO:Oslo", "PL:Varşova", "PT:Lizbon", "RU:Moskova", "RS:Belgrad", "ME:Podgorica", "SI:Ljubljana",
+  "GR:Atina", "AE:Abu Dabi", "TH:Bangkok",
+]);
+
+/**
+ * "X'e nasıl gidilir?" SSS'si: en çok aranan sorulardan biri. Cevap, sayfadaki
+ * ulaşım bölümünün ilk paragrafıdır (yeni bilgi eklenmez, aynı metin soru-cevap
+ * olarak da sunulur). "BER · FEX/S-Bahn" gibi etiketler gerçek cevap sayılmaz;
+ * yalnız tam cümleli ulaşım metni olan rehberlere eklenir.
+ */
+function withHowToGetFaq(guide: CityGuide, ctx: GuideContext): CityGuide {
+  if (!HOW_TO_GET_FAQ_GUIDES.has(`${guide.countryCode}:${guide.city}`)) return guide;
+  const question = ctx.T.shared.faqHowToGet?.(ctx.t(guide.city));
+  if (!question || guide.faqs.some((faq) => ASKS_HOW_TO_GET.test(faq.q))) return guide;
+  const answer = guide.sections.find((s) => TRANSPORT_SECTIONS.has(s.id))?.body[0]?.replace(/\*\*/g, "").trim();
+  if (!answer || answer.length < 80 || !/[.!?]$/.test(answer)) return guide;
+  return { ...guide, faqs: [...guide.faqs, { q: question, a: answer }] };
+}
+
 export function buildGuides(ctx: GuideContext): CityGuide[] {
   const own = (guide: CityGuide) => {
     ctx.scope(`${guide.countryCode}:${guide.city}`);
     return ctx.locale === "tr" ? guide : translateDeep(guide, ctx.t);
   };
-  return [
+  const guides = [
     own(tokyo),
     own(kyoto),
     own(osaka),
@@ -167,6 +200,7 @@ export function buildGuides(ctx: GuideContext): CityGuide[] {
     ...finlandGuides(ctx),
     ...(addedGuides as CityGuide[]).map(own),
   ];
+  return guides.map((guide) => withHowToGetFaq(guide, ctx));
 }
 
 export const GUIDES: CityGuide[] = buildGuides(TR_CONTEXT);
