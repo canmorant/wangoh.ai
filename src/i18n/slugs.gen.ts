@@ -318,6 +318,7 @@ export const LOCALIZED_SLUGS: Partial<Record<SlugLocale, SlugTable>> = {
       "fas/marakes": "marrakech",
       "fas/fes": "fez",
       "fas/sefsavan": "chefchaouen",
+      "vietnam/ho-chi-minh-city": "ciudad-ho-chi-minh",
     },
   },
 };

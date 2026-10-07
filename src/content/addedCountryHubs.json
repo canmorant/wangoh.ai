@@ -349,5 +349,61 @@
         "description": "Fes’in zanaat ve medrese sokaklarından Şefşavan’ın küçük medinasına geçin. Marakeş’i eklemek yerine iki yerde de sakin zaman bırakın."
       }
     ]
+  },
+  "VN": {
+    "seoTitle": "Vietnam Gezi Rehberi: 6 Şehir, Yemekler ve Rota Planı",
+    "seoDescription": "Vietnam gezi rehberi: Hanoi, Hue, Da Nang, Hoi An, Ho Chi Minh City ve Can Tho; mevsime göre rota, yerel yemekler ve kapsamlı şehir yazıları.",
+    "planningHeading": "Vietnam rotası: daha az valiz, daha çok şehir zamanı",
+    "essentialsHeading": "Gitmeden önce: giriş, ödeme ve günlük bağlantılar",
+    "citiesHeading": "Vietnam’da gezilecek 6 şehir",
+    "cityGridIntro": "Hanoi’de göl ve mahalle, Hue’de tarih ve sofra, Da Nang’da şehir ve deniz, Hoi An’da eski liman sokakları, Ho Chi Minh City’de güneyin gündeliği, Can Tho’da delta gecesi. Rehberleri sevdiğiniz gezi biçimine göre bir araya getirin.",
+    "intro": [
+      "Vietnam’da bir yolculuğu bazen ilk yediğiniz çorba, bazen yağmurdan kaçıp oturduğunuz masa açıyor. Bir yanda Hanoi’nin göl çevresinde kısa yürüyüşler, diğer yanda Hue’de küçük tabaklarla uzayan öğle yemekleri var. Da Nang’da kıyıyla şehir aynı güne sığıyor; Hoi An’da sabah eski sokaklara, akşam nehre dönüyorsunuz. Güneyde Ho Chi Minh City’nin temposunu Can Tho’da bir gece kalarak yavaşlatmak mümkün. Bu rehberin altı durağı aynı Vietnam fotoğrafının tekrarları değil.",
+      "Bu ülkeyi ilk kez gezerken her güzel fotoğrafın bulunduğu yere gitmek zorunda değilsiniz. Haritada kuzeyden güneye tek çizgi görünen rota; havalimanı, otel, tren ve valiz işleriyle gerçek hayatta bölümlere ayrılıyor. Bir şehre ayırdığınız üçüncü sabah bazen yeni bir uçuş gününden daha değerli. Bu yüzden önce neyi sevdiğinizi seçin: sokakta zaman geçirmek, tarih okumak, denize girmek veya uzun sofralar. Sonra şehir sayısını buna göre belirleyin.",
+      "Hanoi ile Ho Chi Minh City’yi iki büyük giriş kapısı; Hue, Da Nang ve Hoi An’ı birlikte düşünülebilen ama ayrı geceleme ihtiyaçları olan orta bölüm; Can Tho’yu ise delta için bağımsız bir devam olarak okuyun. Kısa tatilde üçünü birden bağlamak yerine bir veya iki bölge seçmek daha rahat olabilir. Kuzeyde güneşli bir gün, orta kıyıda aynı hava demek değil; bütün ülke için tek bir “en iyi ay” aramak planı gereğinden fazla basitleştirir."
+    ],
+    "essentials": [
+      {
+        "title": "Pasaport ve giriş koşulları",
+        "body": "Giriş koşulları pasaport, kalış süresi ve kullanılan sınır noktasına göre değerlendirilir. E-vize gerekip gerekmediğini Vietnam’ın resmî portalından kontrol edin; onaydaki tarih, isim ve giriş koşullarını biletle birlikte okuyun. Sosyal medyadaki başka bir yolcunun deneyimini kendi pasaportunuz için karar yerine kullanmayın."
+      },
+      {
+        "title": "Dong, kart ve küçük ödemeler",
+        "body": "Para birimi Vietnam dongu (VND). Büyük otel veya ulaşım ödemeleriyle küçük tezgâh alışverişinin ödeme düzeni aynı olmayabilir. Küçük kupür hazırlayın; çok sıfırlı fiyatlarda tutarı ve para birimini birlikte kontrol edin. ATM işleminde ücret ve dönüşüm seçimini okuyup günlük bütçeyi tek seferde harcamayın."
+      },
+      {
+        "title": "Telefon ve buluşma noktası",
+        "body": "SIM veya eSIM almadan cihaz uyumluluğu, veri kapsamı ve etkinleştirmeyi kontrol edin. Tekne, araç ve otel girişlerinin harita pinlerini çevrimdışı da saklayın. Bir meydanın adını bilmek her turda aynı iskeleye geleceğiniz anlamına gelmez; buluşma noktasını ekran görüntüsü ve açık adresle birlikte tutmak işe yarar."
+      },
+      {
+        "title": "Bölgesel hava ve Tet dönemi",
+        "body": "Kuzey, orta kıyı ve güney için hava beklentisini ayrı kurun. Yağış veya fırtına döneminde değiştirilebilir rezervasyon ve yedek kapalı mekân planı değerli. Tet çevresinde ulaşım talebi ve işletme düzeni değişebilir; gerçek seyahat tarihiniz için seferleri ve açık olma durumunu önceden kontrol edin."
+      }
+    ],
+    "routeIdeas": [
+      {
+        "title": "Orta Vietnam’a yerleşen ilk gezi",
+        "duration": "9–11 gün",
+        "cities": [
+          "Hue",
+          "Da Nang",
+          "Hoi An"
+        ],
+        "description": "Hue’ye üç gün, Da Nang’a üç gün, Hoi An’a üç gün ayırıp araya transfer payı koyun. Daha kısa tatilde Da Nang veya Hoi An’dan birini ana üs seçebilirsiniz; saray, şehir, bahçe ve kıyı günlerini ayrı tutun."
+      },
+      {
+        "title": "Kuzeyden deltaya, acele etmeden",
+        "duration": "18–21 gün",
+        "cities": [
+          "Hanoi",
+          "Hue",
+          "Da Nang",
+          "Hoi An",
+          "Ho Chi Minh City",
+          "Can Tho"
+        ],
+        "description": "Altı şehri üç büyük bölge gibi düşünün. Hanoi’de üç, orta bölümde sekiz veya dokuz, Ho Chi Minh City’de üç, Can Tho’da iki gün; kalan zamanı uçuş ve kara geçişlerine bırakın. Daha az gününüz varsa bir bölgeyi çıkarın, her şehirdeki dinlenmeyi değil."
+      }
+    ]
   }
 }

@@ -251,5 +251,56 @@
         "image": "/images/added-sefsavan.avif"
       }
     ]
+  },
+  {
+    "name": "Vietnam",
+    "code": "VN",
+    "flag": "🇻🇳",
+    "description": "Göl kıyısında sabah, küçük tabaklarla uzun öğle ve Mekong’da yavaşlayan akşam; Vietnam’ı günlük hayatın içinden keşfedin.",
+    "image": "/images/vietnam-hanoi.avif",
+    "coordinates": {
+      "lat": 21.0285,
+      "lng": 105.8542
+    },
+    "iata": "HAN",
+    "gateway": "Hanoi",
+    "capital": "Hanoi",
+    "flightTime": "9sa 30dk+",
+    "accent": "#bc6354",
+    "budget": "Ekonomik",
+    "bestSeason": "Bölgeye göre",
+    "signature": "Bir kahve molasında yolculuğun hızını değiştirmek",
+    "cities": [
+      {
+        "name": "Hanoi",
+        "description": "Hoan Kiem çevresinde sabah yürüyüşleri, dar sokaklar, avlular ve uzun kahve molalarıyla kuzeyin başkenti.",
+        "image": "/images/vietnam-hanoi.avif"
+      },
+      {
+        "name": "Hue",
+        "description": "Saray avluları, Parfüm Nehri ve küçük tabaklardan kurulan sofralarıyla daha yavaş bir Vietnam günü.",
+        "image": "/images/vietnam-hue.avif"
+      },
+      {
+        "name": "Da Nang",
+        "description": "Bir sabah plaj, öğlen Cham sanatı, akşam nehir kıyısı: orta Vietnam’da şehirle denizin buluşması.",
+        "image": "/images/vietnam-da-nang.avif"
+      },
+      {
+        "name": "Hoi An",
+        "description": "Fenerli akşamların öncesinde sessiz sabah sokakları, bahçeler, terzi provaları ve kıyıda uzun molalar.",
+        "image": "/images/vietnam-hoi-an.avif"
+      },
+      {
+        "name": "Ho Chi Minh City",
+        "description": "Saygon’un büyük caddelerinden küçük geçitlerine; müzeler, Cholon ve apartman kafeleriyle güneyin şehir hayatı.",
+        "image": "/images/vietnam-ho-chi-minh-city.avif"
+      },
+      {
+        "name": "Can Tho",
+        "description": "Cai Rang’ın erken saatlerinden Ninh Kieu akşamlarına; pazarın ötesinde Mekong’da kalmaya değer iki gün.",
+        "image": "/images/vietnam-can-tho.avif"
+      }
+    ]
   }
 ]

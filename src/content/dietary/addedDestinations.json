@@ -901,5 +901,47 @@
       }
     ],
     "researchNote": "Şefşavan'da sabahları bakla çorbası (bessara) zeytinyağı ve kimyonla servis edilir ve doğası gereği vegandır; dağ kuzu tajinleri tam helaldir."
+  },
+  {
+    "countryCode": "VN",
+    "city": "Hanoi",
+    "vegan": [],
+    "halal": [],
+    "researchNote": "Hanoi’de sebzeli görünen çorbanın et suyu, sosun balık ürünü içerebileceğini sorun. Yumurta kahvesi ve yoğunlaştırılmış süt vegan değildir. Chay ifadesini başlangıç kabul edip yumurta, süt ve sosları ayrı netleştirin. Helal uygunluğu için işletmenin güncel doğrulamasını isteyin."
+  },
+  {
+    "countryCode": "VN",
+    "city": "Hue",
+    "vegan": [],
+    "halal": [],
+    "researchNote": "Hue’nin küçük tabaklarında karides, et suyu ve fermente soslar bulunabilir. Sunumdan içerik çıkarmak yerine her tabağı ayrı sorun. Vegan tercihte yumurta ve sütü de belirtin; helal et veya hazırlama koşulu için güncel işletme doğrulaması alın."
+  },
+  {
+    "countryCode": "VN",
+    "city": "Da Nang",
+    "vegan": [],
+    "halal": [],
+    "researchNote": "Da Nang’da mi Quang veya banh xeo adı tek başına içerik garantisi değildir; et, karides, yumurta ve sosu sorun. Sebze eşlikçileri ana yemeği vegan yapmaz. Helal uygunluk için kullanılan et ve hazırlama sürecini işletmenin güncel belgesiyle doğrulayın."
+  },
+  {
+    "countryCode": "VN",
+    "city": "Hoi An",
+    "vegan": [],
+    "halal": [],
+    "researchNote": "Hoi An’da cao lau ve beyaz gül mantısını et veya deniz ürünü açısından sorun; yalnız hamur ve yeşillik görünmesi yeterli değildir. Chay seçeneklerinde sos, yumurta ve sütü netleştirin. Helal uygunluk için güncel belge ve hazırlama koşullarını ayrıca doğrulayın."
+  },
+  {
+    "countryCode": "VN",
+    "city": "Ho Chi Minh City",
+    "vegan": [],
+    "halal": [],
+    "researchNote": "Ho Chi Minh City’de banh mi için ezme, et, yumurta ve sosu; çorbada kullanılan suyu ayrı sorun. Chay menülerinde yumurta ve süt bulunup bulunmadığını belirtin. Helal uygunluğu yalnız yemek adından çıkarmayın; işletmenin güncel doğrulamasına bakın."
+  },
+  {
+    "countryCode": "VN",
+    "city": "Can Tho",
+    "vegan": [],
+    "halal": [],
+    "researchNote": "Can Tho’da hu tieu ve tekne kahvaltısının et suyu, et, deniz ürünü ve sos içeriğini önceden sorun. Vegan veya helal ihtiyacınızı tur rezervasyonunda belirtip hangi yemeğin sağlanacağını yazılı netleştirin; her teknenin aynı menüyü sunacağını varsaymayın."
   }
 ]

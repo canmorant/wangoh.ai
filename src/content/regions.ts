@@ -21,7 +21,7 @@ const REGION_OF: Record<string, Region> = {
   CZ: "europe", PL: "europe", RU: "europe", RS: "europe", ME: "europe", BA: "europe",
   AL: "europe", GR: "europe", HR: "europe", SI: "europe", NO: "europe", SE: "europe",
   DK: "europe", FI: "europe", SJ: "europe",
-  JP: "asia", TH: "asia", KR: "asia", ID: "asia", CN: "asia",
+  JP: "asia", TH: "asia", KR: "asia", ID: "asia", CN: "asia", VN: "asia",
   US: "americas", MX: "americas", BR: "americas", AR: "americas", CA: "americas",
 };
 

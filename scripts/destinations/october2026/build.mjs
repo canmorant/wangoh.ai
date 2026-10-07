@@ -112,10 +112,18 @@ const dietary=allCities.map(c=>{
   const researchNote=data?.researchNote?t(data.researchNote):t(c.diet);
   return {countryCode:c.code,city:c.name[0],vegan,halal,researchNote};
 });
-write('src/data/addedDestinations.json',destinations);
-write('src/content/guides/addedDestinations.json',guides);
-write('src/content/addedCountryHubs.json',hubs);
-write('src/content/dietary/addedDestinations.json',dietary);
+// Regenerating these seven countries must retain later editorial imports (e.g. VN).
+const ownCodes=new Set(countries.map(country=>country.code));
+const retainOther=(path,field)=>read(path).filter(entry=>!ownCodes.has(entry[field]));
+write('src/data/addedDestinations.json',[...destinations,...retainOther('src/data/addedDestinations.json','code')]);
+write('src/content/guides/addedDestinations.json',[...guides,...retainOther('src/content/guides/addedDestinations.json','countryCode')]);
+write('src/content/addedCountryHubs.json',{...read('src/content/addedCountryHubs.json'),...hubs});
+write('src/content/dietary/addedDestinations.json',[...dietary,...retainOther('src/content/dietary/addedDestinations.json','countryCode')]);
+const otherSeo=read('src/content/addedSeo.json');
+for(const locale of ['en','es']){
+  seo.guides[locale]={...Object.fromEntries(Object.entries(otherSeo.guides[locale]).filter(([key])=>!ownCodes.has(key.split(':')[0]))),...seo.guides[locale]};
+  seo.hubs[locale]={...Object.fromEntries(Object.entries(otherSeo.hubs[locale]).filter(([code])=>!ownCodes.has(code))),...seo.hubs[locale]};
+}
 write('src/content/addedSeo.json',seo);
 for(const l of ['en','es']){ memories[l].october2026=additions[l];write(`src/content/i18n/tm/${l}.json`,memories[l]); }
 console.log(`${destinations.length} countries, ${guides.length} guides, ${Object.keys(additions.en).length} native translation pairs.`);

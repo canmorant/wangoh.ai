@@ -84,6 +84,30 @@
       "MA:Şefşavan": [
         "Chefchaouen Travel Guide: Blue Medina and Mountain Views",
         "Explore Chefchaouen’s blue medina, Kasbah and Ras el-Maa with a 2-day route, road connections from Fez, places to stay and Akchour planning."
+      ],
+      "VN:Hanoi": [
+        "Hanoi Travel Guide: Old Quarter, Food and a 3-Day Itinerary",
+        "Explore Hanoi through Hoan Kiem, the Old Quarter and Truc Bach: where to stay, local dishes, coffee breaks and a thoughtful three-day itinerary."
+      ],
+      "VN:Hue": [
+        "Hue Travel Guide: Citadel, Royal Tombs and Local Food",
+        "Plan Hue around the Imperial Citadel, Minh Mang, Tu Duc and Thien Mu: local dishes, riverside neighbourhoods and a relaxed three-day itinerary."
+      ],
+      "VN:Da Nang": [
+        "Da Nang Travel Guide: My Khe, Cham Museum and City Life",
+        "Plan Da Nang with My Khe Beach, Cham sculpture and Marble Mountains: riverside or beach stays, mi quang and a balanced three-day coastal visit."
+      ],
+      "VN:Hoi An": [
+        "Hoi An Travel Guide: Old Town, Beaches and Where to Stay",
+        "Explore Hoi An beyond lanterns: Old Town mornings, An Bang Beach, Tra Que, cao lau, tailoring and a balanced three-day plan with places to stay."
+      ],
+      "VN:Ho Chi Minh City": [
+        "Ho Chi Minh City: Neighbourhoods, Food and a 3-Day Guide",
+        "Explore Ho Chi Minh City through central museums, Cholon and apartment cafes: local food, where to stay and an unhurried three-day city route."
+      ],
+      "VN:Can Tho": [
+        "Can Tho Travel Guide: Cai Rang, River Life and 2 Days",
+        "Plan Can Tho with an early Cai Rang boat trip, Ninh Kieu and Binh Thuy: where to stay, local meals and two unhurried days in the Mekong Delta."
       ]
     },
     "es": {
@@ -170,6 +194,30 @@
       "MA:Şefşavan": [
         "Qué ver en Chefchaouen: medina azul y ruta de 2 días",
         "Qué ver en Chefchaouen: medina azul, Kasbah y Ras el-Maa, con ruta de 2 días, acceso desde Fez, alojamiento, comida y excursión a Akchour."
+      ],
+      "VN:Hanoi": [
+        "Hanói: qué ver, dónde comer y ruta de 3 días",
+        "Descubre Hanói entre Hoan Kiem, el casco antiguo y Truc Bach: qué ver, dónde alojarte, platos locales, pausas con café y una ruta de tres días."
+      ],
+      "VN:Hue": [
+        "Hue: ciudadela, tumbas imperiales y ruta de 3 días",
+        "Organiza Hue entre la ciudadela, Minh Mang, Tu Duc y Thien Mu: platos locales, zonas donde dormir y una ruta de tres días sin visitas apresuradas."
+      ],
+      "VN:Da Nang": [
+        "Da Nang: qué ver, playa My Khe y dónde alojarse",
+        "Organiza Da Nang con My Khe, el Museo Cham y las Montañas de Mármol: alojamiento junto al río o la playa, mi quang y una ruta costera de tres días."
+      ],
+      "VN:Hoi An": [
+        "Hoi An: casco antiguo, playas y dónde alojarse",
+        "Descubre Hoi An más allá de los farolillos: casco antiguo, An Bang, Tra Que, cao lau, talleres de costura y una ruta equilibrada de tres días."
+      ],
+      "VN:Ho Chi Minh City": [
+        "Ciudad Ho Chi Minh: qué ver y ruta de 3 días",
+        "Descubre Ciudad Ho Chi Minh entre museos, Cholon y cafeterías en edificios antiguos: qué ver, dónde alojarte, platos locales y ruta de tres días."
+      ],
+      "VN:Can Tho": [
+        "Can Tho: mercado Cai Rang y ruta de 2 días por el Mekong",
+        "Organiza Can Tho con barco temprano a Cai Rang, Ninh Kieu y Binh Thuy: alojamiento, comidas locales y dos días tranquilos en el delta del Mekong."
       ]
     }
   },
@@ -202,6 +250,10 @@
       "MA": [
         "Morocco Travel Guide: Marrakech, Fez and Chefchaouen",
         "Plan Morocco through Marrakech, Fez and Chefchaouen: medina walks, riad stays, trains, coach connections, local food and realistic travel routes."
+      ],
+      "VN": [
+        "Vietnam Travel Guide: Six Cities, Food and Route Planning",
+        "Plan Vietnam through Hanoi, Hue, Da Nang, Hoi An, Ho Chi Minh City and Can Tho: regional weather, local food and detailed city travel guides."
       ]
     },
     "es": {
@@ -232,6 +284,10 @@
       "MA": [
         "Viajar a Marruecos: Marrakech, Fez y Chefchaouen",
         "Organiza Marruecos con Marrakech, Fez y Chefchaouen: medinas, riads, comida local, conexiones de tren y autobús y rutas que respetan las distancias."
+      ],
+      "VN": [
+        "Vietnam: 6 ciudades, gastronomía y rutas de viaje",
+        "Viaja por Vietnam con guías de Hanói, Hue, Da Nang, Hoi An, Ciudad Ho Chi Minh y Can Tho: rutas, clima regional, platos locales y dónde alojarte."
       ]
     }
   }
