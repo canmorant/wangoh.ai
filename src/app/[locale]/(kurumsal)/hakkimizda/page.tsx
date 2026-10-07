@@ -9,6 +9,8 @@ import AboutEs from "@/components/legal/es/About";
 import JsonLd from "@/components/guide/JsonLd";
 import LegalPage, { LegalCallout, LegalSection } from "@/components/legal/LegalPage";
 import { SITE, absolute } from "@/lib/site";
+import { ogImage } from "@/lib/ogImage";
+import { HERO_PLATE } from "@/lib/heroPlate";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -32,6 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title,
       description,
       url: translated ? localizedUrl("/hakkimizda", locale) : absolute("/hakkimizda"),
+      images: [ogImage(HERO_PLATE, SITE.name)!],
     },
   };
 }
