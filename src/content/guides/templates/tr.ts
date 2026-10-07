@@ -1,28 +1,29 @@
+import { turkishAccusative, turkishDativeCase, turkishLocative } from "@/lib/turkish";
 import type { GuideTemplates } from "./types";
 
-/** Fabrikaların özgün Türkçe kalıpları — birebir, değiştirmeyin (bkz. types.ts). */
+/** Fabrikaların Türkçe kalıpları. Şehir adına gelen ekler (-da/-de/-ta/-te, -a/-e, -ı/-i) src/lib/turkish.ts ile ünlü uyumuna göre getirilir; diğer metin birebir korunur. */
 export const tr: GuideTemplates = {
   expanded: {
     seoTitle: (city, focus) => `${city} Gezi Rehberi: ${focus}`,
     metaLead: (city, lede) => `${city} gezi rehberi: ${lede}`,
     h1: (city) => `${city} Gezi Rehberi`,
     characterHeading: (city) => `${city} nasıl bir yer? Rotayı doğru kurmak`,
-    sightsHeading: (city) => `${city}'ta gezilecek yerler`,
+    sightsHeading: (city) => `${turkishLocative(city)} gezilecek yerler`,
     sightsIntro: (city) =>
-      `Listeyi haritadaki yakınlığa göre kümelendirmek, ${city}'ta aynı yolu tekrar yürümeyi ve günün iyi ışığını transferde harcamayı önler. Biletli büyük durakları sabitleyin; meydan, park, pazar ve kıyı yürüyüşlerini aralara yerleştirin.`,
+      `Listeyi haritadaki yakınlığa göre kümelendirmek, ${turkishLocative(city)} aynı yolu tekrar yürümeyi ve günün iyi ışığını transferde harcamayı önler. Biletli büyük durakları sabitleyin; meydan, park, pazar ve kıyı yürüyüşlerini aralara yerleştirin.`,
     foodHeading: (city) => `${city} yeme içme rehberi`,
-    footballHeading: (city) => `${city}'ta futbol ve maç günü`,
-    practicalHeading: (city) => `${city}'ta bilmeden gitmemeniz gerekenler`,
+    footballHeading: (city) => `${turkishLocative(city)} futbol ve maç günü`,
+    practicalHeading: (city) => `${turkishLocative(city)} bilmeden gitmemeniz gerekenler`,
   },
   shared: {
     bold: (name, detail) => `**${name}:** ${detail}`,
     bookingOrder: (sight) =>
       `${sight}, şehirler arası bağlantı ve konaklamayı önce; esnek mahalle öğünlerini sonra sabitleyin.`,
     dailyPace: (city) =>
-      `Aynı güne üç uzak bölge koymayın. ${city}'ta bir ana deneyim, bir mahalle ve uzun bir öğün daha sürdürülebilir bir ritim verir.`,
+      `Aynı güne üç uzak bölge koymayın. ${turkishLocative(city)} bir ana deneyim, bir mahalle ve uzun bir öğün daha sürdürülebilir bir ritim verir.`,
     faqDays: (city) => `${city} için kaç gün gerekir?`,
-    faqStay: (city) => `${city}'ta nerede kalınır?`,
-    faqWhen: (city) => `${city}'a ne zaman gidilir?`,
+    faqStay: (city) => `${turkishLocative(city)} nerede kalınır?`,
+    faqWhen: (city) => `${turkishDativeCase(city)} ne zaman gidilir?`,
     faqCombine: (city) => `${city} hangi rota ile birleştirilir?`,
     relatedAnchor: (city) => `${city} gezi rehberi`,
     relatedDescription: (city) => `${city} sonrasında farklı bir şehir ritmi ve yeni bir rota katmanı ekler.`,
@@ -33,7 +34,7 @@ export const tr: GuideTemplates = {
   },
   regional: {
     character: (city, area1, area2, s1, s2, s3) =>
-      `${city}'ı iyi okumak için ${area1} ile ${area2} arasında yalnız simgeleri değil, gündelik hayatı da izleyin. ${s1}, ${s2} ve ${s3} aynı güne sıkıştırılmak zorunda değildir; bir ana deneyim, bir mahalle ve uzun bir öğün daha güçlü bir ritim verir.`,
+      `${turkishAccusative(city)} iyi okumak için ${area1} ile ${area2} arasında yalnız simgeleri değil, gündelik hayatı da izleyin. ${s1}, ${s2} ve ${s3} aynı güne sıkıştırılmak zorunda değildir; bir ana deneyim, bir mahalle ve uzun bir öğün daha güçlü bir ritim verir.`,
     stay: (area1, area2) =>
       `İlk ziyarette ${area1} çevresi ana gezi hattına yakınlık sağlar; daha yerel akşam ve çoğu zaman daha sakin konaklama için ${area2} iyi bir alternatiftir. Yalnız haritadaki kilometreye değil, sabah çıkışına ve son toplu taşıma saatine bakın.`,
     evening: (area2, sight) =>
@@ -58,7 +59,7 @@ export const tr: GuideTemplates = {
       `${area1} ilk ziyaret için pratik; ${area2} daha yerel bir alternatiftir. Sabah ve gece bağlantısını oda fiyatıyla birlikte değerlendirin.`,
     faqWhenAnswer: (best) =>
       `${best} genel olarak en dengeli dönemdir; yine de son hava, festival ve kapasite durumunu resmî kaynaktan kontrol edin.`,
-    faqCarQuestion: (city) => `${city}'ta araç gerekir mi?`,
+    faqCarQuestion: (city) => `${turkishLocative(city)} araç gerekir mi?`,
     faqCarAnswer: (local) =>
       `${local} Kiralamadan önce otopark, ehliyet, sigorta, yakıt ve gece dönüşünü birlikte değerlendirin.`,
     faqCombineAnswer: (cities) =>
@@ -66,7 +67,7 @@ export const tr: GuideTemplates = {
   },
   world: {
     shopping: (city) =>
-      `${city}'ta alışverişi tek bir turistik çarşıya sıkıştırmayın. Yerel üretim, tasarım veya gıda hediyesi alırken etiket, sabit fiyat ve bagaj kuralını kontrol edin; koruma altındaki doğal ürünleri ve belgesiz antikaları satın almayın.`,
+      `${turkishLocative(city)} alışverişi tek bir turistik çarşıya sıkıştırmayın. Yerel üretim, tasarım veya gıda hediyesi alırken etiket, sabit fiyat ve bagaj kuralını kontrol edin; koruma altındaki doğal ürünleri ve belgesiz antikaları satın almayın.`,
     season: (best) =>
       `Takvimde ${best} öne çıksa da okul tatili, ulusal bayram, festival ve hafta sonu yoğunluğu deneyimi değiştirebilir. Hava ortalamasını son dakika tahmini sanmayın; açık hava gününe kapalı mekân veya yavaş mahalle yürüyüşü alternatifi ekleyin.`,
     budget: (sight) =>
@@ -81,7 +82,7 @@ export const tr: GuideTemplates = {
     faqDaysAnswer: (days) =>
       `${days} dengeli bir ilk ziyaret sağlar. Ana gezi noktalarını işaretlemek yerine mahalle, yemek ve olası hava/ulaşım gecikmesi için boşluk bırakırsanız şehir daha anlamlı açılır.`,
     faqWhenAnswer: (best, season) => `${best} genel olarak en dengeli dönemdir. ${season}`,
-    faqCarQuestion: (city) => `${city}'ta araç kiralamak gerekir mi?`,
+    faqCarQuestion: (city) => `${turkishLocative(city)} araç kiralamak gerekir mi?`,
     faqCarAnswer: (local) =>
       `${local} Araç kararı vermeden otopark, ehliyet, sigorta ve gece dönüşünü birlikte değerlendirin.`,
     faqCombineAnswer: (cities) =>

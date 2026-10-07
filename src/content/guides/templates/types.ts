@@ -7,8 +7,9 @@
  * dizimi ve çekim ekleri farklı.
  *
  * Tüm argümanlar zaten hedef dilde gelir (yerelleştirilmiş şehir adı,
- * çevrilmiş semt adı…). tr paketi fabrikaların eski Türkçe kalıplarının
- * birebir aynısıdır; Türkçe çıktı değişmez.
+ * çevrilmiş semt adı…). tr paketi fabrikaların Türkçe kalıplarıdır; şehir
+ * adına gelen çekim ekleri src/lib/turkish.ts ile ünlü uyumuna göre getirilir,
+ * kalıpların geri kalanı eskisiyle aynıdır.
  */
 export interface GuideTemplates {
   expanded: {
