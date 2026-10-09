@@ -1,8 +1,8 @@
 import { createElement, useMemo, type ComponentProps } from "react";
 import { useLocale } from "next-intl";
 import { createNavigation } from "next-intl/navigation";
-import { routing, type AppLocale } from "./routing";
-import { internalPath, localizePath } from "./paths";
+import { IS_APP_BUILD, routing, type AppLocale } from "./routing";
+import { appFilePath, internalPath, localizePath, stripFileIndex } from "./paths";
 
 /**
  * Dil farkında navigasyon. next/link ve next/navigation yerine bunlar
@@ -28,10 +28,26 @@ function localizeHref<H extends Href>(href: H, locale: AppLocale): H {
   return href;
 }
 
+/**
+ * Tıklanan bağlantılar ve router.push/replace için. Uygulama paketinde adres
+ * paketteki dosyanın yolu olur ("/mesafe" → "/tr/mesafe/index.html", bkz.
+ * appFilePath); web'de aynen kalır. getPathname/redirect'e uygulanmıyor: onlar
+ * canonical ve hreflang gibi gerçek adresleri üretiyor.
+ */
+function linkHref<H extends Href>(href: H, locale: AppLocale): H {
+  const localized = localizeHref(href, locale);
+  if (!IS_APP_BUILD) return localized;
+  if (typeof localized === "string") return appFilePath(localized) as H;
+  if (localized && typeof localized === "object" && typeof localized.pathname === "string") {
+    return { ...localized, pathname: appFilePath(localized.pathname) } as H;
+  }
+  return localized;
+}
+
 export function Link({ href, locale, ...rest }: ComponentProps<typeof nav.Link>) {
   const current = useLocale() as AppLocale;
   return createElement(nav.Link, {
-    href: localizeHref(href, (locale ?? current) as AppLocale),
+    href: linkHref(href, (locale ?? current) as AppLocale),
     locale,
     ...rest,
   });
@@ -49,7 +65,8 @@ export const permanentRedirect: typeof nav.permanentRedirect = (args, ...rest) =
 export function usePathname(): string {
   const pathname = nav.usePathname();
   const locale = useLocale() as AppLocale;
-  return internalPath(pathname, locale);
+  // Uygulamada sayfa "/tr/mesafe/index.html" adresinden açılır; iç yol "/mesafe".
+  return internalPath(IS_APP_BUILD ? stripFileIndex(pathname) : pathname, locale);
 }
 
 export function useRouter(): ReturnType<typeof nav.useRouter> {
@@ -59,9 +76,9 @@ export function useRouter(): ReturnType<typeof nav.useRouter> {
     const target = (options?: { locale?: string }) => (options?.locale ?? locale) as AppLocale;
     return {
       ...router,
-      push: (href, options) => router.push(localizeHref(href, target(options)), options),
-      replace: (href, options) => router.replace(localizeHref(href, target(options)), options),
-      prefetch: (href, options) => router.prefetch(localizeHref(href, target(options)), options),
+      push: (href, options) => router.push(linkHref(href, target(options)), options),
+      replace: (href, options) => router.replace(linkHref(href, target(options)), options),
+      prefetch: (href, options) => router.prefetch(linkHref(href, target(options)), options),
     };
   }, [router, locale]);
 }

@@ -9,8 +9,9 @@
     "lint": "eslint",
     "test:guides": "node scripts/validate-guides.mjs",
     "test:performance": "node scripts/validate-performance.mjs",
-    "build:app": "BUILD_TARGET=app next build && node scripts/prune-export.mjs",
-    "test:seo": "node scripts/validate-seo.mjs"
+    "build:app": "BUILD_TARGET=app next build && node scripts/prune-export.mjs && node scripts/app-shell.mjs",
+    "test:seo": "node scripts/validate-seo.mjs",
+    "test:app": "node scripts/validate-app-export.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.5.1",

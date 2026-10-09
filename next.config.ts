@@ -25,7 +25,13 @@ const isApp = process.env.BUILD_TARGET === "app";
 const siteLocales = process.env.NEXT_PUBLIC_SITE_LOCALES ?? (isApp ? "tr" : "tr,en,es");
 
 const nextConfig: NextConfig = {
-  env: { NEXT_PUBLIC_SITE_LOCALES: siteLocales },
+  env: {
+    NEXT_PUBLIC_SITE_LOCALES: siteLocales,
+    // İstemci kodu da hedefi bilmeli (BUILD_TARGET yalnız sunucuda okunur):
+    // uygulamada dil öneki her zaman var ve bağlantılar dosya yoludur
+    // (bkz. i18n/routing.ts ve i18n/navigation.ts). Web'de değer "web".
+    NEXT_PUBLIC_BUILD_TARGET: isApp ? "app" : "web",
+  },
   experimental: {
     // Kök layout üst seviye dinamik bir segmentte (app/[locale]/layout.tsx).
     // Next 16 dokümanı bu yapı için global-not-found.tsx öneriyor: hiçbir

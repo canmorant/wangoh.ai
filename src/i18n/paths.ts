@@ -106,3 +106,31 @@ export function internalPath(path: string, locale: AppLocale): string {
   if (segs[2]) segs[2] = m.cityBack.get(`${segs[1]}/${segs[2]}`) ?? segs[2];
   return segs.join("/") + tail;
 }
+
+/**
+ * Uygulama paketi (Capacitor, statik export): bağlantı, paketteki DOSYANIN
+ * yolu olmalı. Capacitor'un yerel sunucusu uzantısız her yola kök index.html
+ * döndürüyor (dizin → index.html eşlemesi yok), uzantılı yolu ise dosya olarak
+ * okuyor. Bu yüzden "/mesafe" yerine "/mesafe/index.html" yazılır.
+ * Bkz. scripts/app-shell.mjs.
+ *
+ *   "/mesafe"          → "/mesafe/index.html"
+ *   "/"                → "/index.html"
+ *   "/mesafe?x=1#y"    → "/mesafe/index.html?x=1#y"
+ *   "/a/b.json", "#çapa", "https://…", "mailto:…" → aynen
+ *
+ * Dil önekini next-intl ekliyor; bu fonksiyon önek eklemez.
+ */
+export function appFilePath(path: string): string {
+  if (!path.startsWith("/") || path.startsWith("//")) return path;
+  const [pathname, tail] = split(path);
+  const bare = pathname.replace(/\/+$/, "");
+  // Son parçada uzantı varsa (index.html, dosya.json) zaten bir dosya yolu.
+  if (/\.[^/]+$/.test(bare)) return path;
+  return `${bare}/index.html${tail}`;
+}
+
+/** appFilePath'in tersi; yalnız yol (usePathname çıktısı için). */
+export function stripFileIndex(pathname: string): string {
+  return pathname.replace(/\/index\.html$/, "") || "/";
+}
