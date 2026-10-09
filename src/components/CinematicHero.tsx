@@ -18,6 +18,20 @@ import {
   worldScale,
 } from "@/lib/camera";
 
+/**
+ * `gsap.quickSetter(el, "scale")` SVG öğelerinde "scaleX,scaleY" adlı bir özniteliği
+ * ayarlamaya çalışıp InvalidCharacterError ile ana sayfayı çökertiyordu (masaüstü, üretim
+ * derlemesi). Kısayol yerine iki ayrı ayarlayıcı kullanıyoruz.
+ */
+function quickScale(target: Element | null) {
+  const setX = gsap.quickSetter(target, "scaleX");
+  const setY = gsap.quickSetter(target, "scaleY");
+  return (value: number) => {
+    setX(value);
+    setY(value);
+  };
+}
+
 /* ------------------------------------------------------------------ *
  *  Motion model
  *
@@ -227,7 +241,7 @@ export default function CinematicHero() {
       };
       const setCabinOp = gsap.quickSetter(cabinRef.current, "opacity");
       const setShadeOp = gsap.quickSetter(shadeGroupRef.current, "opacity");
-      const setWorld = gsap.quickSetter(worldRef.current, "scale");
+      const setWorld = quickScale(worldRef.current);
       // Focus stack: the blurriest layer sits on top, so fading it out reveals
       // the sharper one beneath. Two opacities give a continuous pull-to-focus.
       const setCityFarOp = gsap.quickSetter(cityRef.current, "opacity");
@@ -239,16 +253,16 @@ export default function CinematicHero() {
         motionQuality === "lite"
           ? [
               {
-                set: gsap.quickSetter(cloudFarRef.current, "scale"),
+                set: quickScale(cloudFarRef.current),
                 op: gsap.quickSetter(cloudFarRef.current, "opacity"),
                 rush: 1.4,
                 out: 0.62,
               },
             ]
           : [
-              { set: gsap.quickSetter(cloudFarRef.current, "scale"), op: gsap.quickSetter(cloudFarRef.current, "opacity"), rush: 1.4, out: 0.62 },
-              { set: gsap.quickSetter(cloudMidRef.current, "scale"), op: gsap.quickSetter(cloudMidRef.current, "opacity"), rush: 2.3, out: 0.5 },
-              { set: gsap.quickSetter(cloudNearRef.current, "scale"), op: gsap.quickSetter(cloudNearRef.current, "opacity"), rush: 3.6, out: 0.38 },
+              { set: quickScale(cloudFarRef.current), op: gsap.quickSetter(cloudFarRef.current, "opacity"), rush: 1.4, out: 0.62 },
+              { set: quickScale(cloudMidRef.current), op: gsap.quickSetter(cloudMidRef.current, "opacity"), rush: 2.3, out: 0.5 },
+              { set: quickScale(cloudNearRef.current), op: gsap.quickSetter(cloudNearRef.current, "opacity"), rush: 3.6, out: 0.38 },
             ];
 
       const setIntroOp = gsap.quickSetter(introRef.current, "opacity");
