@@ -8,10 +8,16 @@ import type { CapacitorConfig } from "@capacitor/cli";
  * gezginler rehberi tam da roaming yokken açar.
  *
  * Derleme sırası:
- *   npm run build:app     → out/ (statik export, RSC yükleri budanmış)
+ *   npm run build:app     → out/ (statik export, RSC yükleri budanmış, kök
+ *                           index.html kabuğu; bağlantılar /tr/.../index.html)
+ *   npm run test:app      → pakette kırık bağlantı var mı (bkz. scripts/validate-app-export.mjs)
  *   npx cap sync          → out/ içeriğini ios/ ve android/ projelerine kopyalar
  *   npx cap open ios      → Xcode'da aç, derle, cihaza yükle
  *   npx cap open android  → Android Studio'da aç
+ *
+ * Neden bağlantılar dosya yolu: Capacitor'un yerel sunucusu (iOS Router.swift,
+ * Android WebViewLocalServer) uzantısız HER yola kök index.html döndürür;
+ * dizin → index.html eşlemesi yapmaz. Ayrıntı: scripts/app-shell.mjs.
  */
 const config: CapacitorConfig = {
   appId: "com.wangoh.app",

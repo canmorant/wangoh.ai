@@ -27,16 +27,26 @@ export const UNPUBLISHED_LOCALES: readonly AppLocale[] = LOCALES.filter(
   (l) => !PUBLISHED_LOCALES.includes(l)
 );
 
+/**
+ * Capacitor uygulama paketi mi (BUILD_TARGET=app, statik export)? next.config.ts
+ * değeri NEXT_PUBLIC_BUILD_TARGET olarak istemciye de geçiriyor.
+ */
+export const IS_APP_BUILD = process.env.NEXT_PUBLIC_BUILD_TARGET === "app";
+
 export const routing = defineRouting({
   locales: PUBLISHED_LOCALES,
   defaultLocale: DEFAULT_LOCALE,
 
   /**
-   * Türkçe öneksiz kalıyor: /japonya/tokyo. Google'da indeksli 384 adresin
-   * hiçbiri değişmiyor; diğer diller /en/japonya/tokyo gibi önek alıyor.
-   * /tr/japonya/tokyo da çalışıyor ve öneksiz adrese yönleniyor.
+   * Web: Türkçe öneksiz kalıyor: /japonya/tokyo. Google'da indeksli 384
+   * adresin hiçbiri değişmiyor; diğer diller /en/japonya/tokyo gibi önek
+   * alıyor. /tr/japonya/tokyo da çalışıyor ve öneksiz adrese yönleniyor.
+   *
+   * Uygulama: her zaman önekli (/tr/japonya/tokyo). Statik export sayfaları
+   * out/tr/... altına yazıyor ve onları öneksiz adrese çevirecek bir proxy
+   * yok; öneksiz üretilen bağlantılar pakette olmayan yollara giderdi.
    */
-  localePrefix: "as-needed",
+  localePrefix: IS_APP_BUILD ? "always" : "as-needed",
 
   /**
    * Tarayıcı diline göre otomatik yönlendirme KAPALI. Türkiye'de pek çok

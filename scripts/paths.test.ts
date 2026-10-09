@@ -7,7 +7,7 @@
  */
 import { execFileSync } from "node:child_process";
 import { allCountries, countrySlug, citySlug } from "../src/content/guides";
-import { internalPath, localizePath } from "../src/i18n/paths";
+import { appFilePath, internalPath, localizePath, stripFileIndex } from "../src/i18n/paths";
 import { SLUG_LOCALES } from "../src/i18n/slugs.gen";
 import { LOCALES } from "../src/i18n/routing";
 
@@ -67,6 +67,36 @@ for (const locale of LOCALES) {
   const bad = localized.filter((p) => !/^(\/[a-z0-9]+(-[a-z0-9]+)*)+$/.test(p));
   ok(`${locale}: slug biçimi (küçük harf, tire)`, bad.length === 0, bad.slice(0, 5).join(", "));
 }
+
+// 6b) Uygulama paketi: bağlantı = dosya yolu (Capacitor uzantısız yolu kök index.html'e düşürür).
+const fileCases: Array<[string, string]> = [
+  ["/", "/index.html"],
+  ["/mesafe", "/mesafe/index.html"],
+  ["/mesafe/", "/mesafe/index.html"],
+  ["/japonya/tokyo", "/japonya/tokyo/index.html"],
+  ["/mesafe?x=1#y", "/mesafe/index.html?x=1#y"],
+  ["/?fly=JP", "/index.html?fly=JP"],
+  ["/gezi-rehberleri#japonya", "/gezi-rehberleri/index.html#japonya"],
+  ["/mesafe/index.html", "/mesafe/index.html"],
+  ["/img/a.png", "/img/a.png"],
+  ["#cerez", "#cerez"],
+  ["https://wangoh.com/x", "https://wangoh.com/x"],
+  ["mailto:info@wangoh.com", "mailto:info@wangoh.com"],
+  ["//cdn.example.com/x", "//cdn.example.com/x"],
+];
+for (const [input, want] of fileCases) {
+  ok(`appFilePath(${JSON.stringify(input)})`, appFilePath(input) === want, `${appFilePath(input)} ≠ ${want}`);
+}
+ok(
+  "appFilePath: her iç yol .../index.html olur ve stripFileIndex geri verir",
+  internal.every((p) => appFilePath(p).endsWith("/index.html") && stripFileIndex(appFilePath(p)) === p),
+);
+ok(
+  "iç yollarda nokta yok (Capacitor son parçadaki noktayı dosya sayar)",
+  internal.every((p) => !p.includes(".")),
+  internal.filter((p) => p.includes(".")).slice(0, 5).join(", "),
+);
+ok("stripFileIndex: kök", stripFileIndex("/index.html") === "/" && stripFileIndex("/tr/index.html") === "/tr");
 
 // 7) Harita güncel: her yerin slug'ı ya listede ya da Türkçesiyle aynı.
 try {
