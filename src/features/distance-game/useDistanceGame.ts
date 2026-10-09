@@ -17,7 +17,12 @@ export interface Persisted {
 const EMPTY: Persisted = { best: 0, played: 0 };
 const STORAGE_KEY = "wangoh.distancegame.v1";
 
-export function useDistanceGame() {
+/**
+ * `guided`: sitenin rehberi olan şehirlerin anahtarları ("ISO2:veri adı"); soru
+ * seçiminde A kademesinin bir kuralı (bkz. cities.ts isTierA). Kümenin kimliği
+ * değişmedikçe aynı kalmalı (DistanceGame useMemo ile verir).
+ */
+export function useDistanceGame(guided?: ReadonlySet<string>) {
   const [state, dispatch] = useReducer(reducer, INITIAL_STATE);
 
   /* -------------------------- kalıcılık -------------------------- */
@@ -67,8 +72,8 @@ export function useDistanceGame() {
   const start = useCallback(() => {
     saving.current = false;
     setNewBest(false);
-    dispatch({ type: "start", rounds: pickRounds() });
-  }, []);
+    dispatch({ type: "start", rounds: pickRounds({ guided }) });
+  }, [guided]);
 
   const setPosition = useCallback((position: number) => dispatch({ type: "position", position }), []);
   const nudge = useCallback((direction: 1 | -1) => dispatch({ type: "nudge", direction }), []);

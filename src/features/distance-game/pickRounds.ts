@@ -1,4 +1,4 @@
-import { CITIES, isEligible, isRecognized, type City } from "./cities";
+import { CITIES, isTierA, isTierB, type City } from "./cities";
 import { haversineKm } from "./haversine";
 import { ROUNDS_PER_GAME } from "./scoring";
 
@@ -6,10 +6,12 @@ import { ROUNDS_PER_GAME } from "./scoring";
  *  Soru seçimi
  *
  *  Kurallar (hepsi bir oyun için; varsayılan 10 tur):
- *   - Turların %90'ında iki şehir de "tanınan" (başkent ya da ≥ 500 bin).
- *     Kalan %10'da (10 turda 1) başkentler / orta boy şehirler de çıkabilir;
- *     o turda en az bir şehir tanınanlar dışından gelir. Nüfusu 100 bin
- *     altındaki yer yalnız başkentse çıkabilir (bkz. cities.ts isEligible).
+ *   - Turların %90'ında iki şehir de A kademesinden (bkz. cities.ts isTierA:
+ *     sitenin rehberi olan şehirler, ≥ 1 milyonluk başkentler, ≥ 2 milyonluk
+ *     şehirler). Kalan %10'da (10 turda 1) "gevşek" tur: bir şehir B kademesinden
+ *     (başkent ya da ≥ 500 bin; A'da olmayan), öteki yine A'dan. Böylece bir
+ *     soruda en çok bir ucu görece az bilinir. Nüfusu 100 bin altındaki yer yalnız
+ *     başkentse çıkar (cities.ts isEligible); rehberi olsa da.
  *   - Aynı ülkeden iki şehir sorusu en fazla %10 (10 turda en çok 1; yarı
  *     olasılıkla hiç yok).
  *   - Mesafe kovaları dengeli: kısa (<1000 km), orta (1000–5000), uzun (>5000).
@@ -30,7 +32,7 @@ export interface Round {
   /** Gerçek mesafe, km (tam sayıya yuvarlanmış; ekran ve puan bunu kullanır). */
   km: number;
   bucket: Bucket;
-  /** Gevşek tur mu (tanınan olmayan şehir de çıkabilir)? */
+  /** Gevşek tur mu (bir şehir A kademesi dışından, B'den gelir)? */
   relaxed: boolean;
   sameCountry: boolean;
 }
@@ -40,6 +42,11 @@ export interface PickOptions {
   seed?: number;
   rounds?: number;
   cities?: readonly City[];
+  /**
+   * Sitenin rehberi olan şehirlerin anahtarları ("ISO2:veri adı"; serverData.guideLinks'in
+   * anahtarları). A kademesinin birinci kuralı; verilmezse yalnız nüfus kuralları geçerli.
+   */
+  guided?: ReadonlySet<string>;
 }
 
 /** Soru mesafelerinin alt sınırı: kaydırıcının (10 km) hemen üstünde, tahmin edilebilir. */
@@ -121,13 +128,12 @@ function bucketPlan(rounds: number, rng: () => number): Bucket[] {
 }
 
 export function pickRounds(options: PickOptions = {}): Round[] {
-  const { seed, rounds = ROUNDS_PER_GAME, cities = CITIES } = options;
+  const { seed, rounds = ROUNDS_PER_GAME, cities = CITIES, guided } = options;
   const rng = makeRng(seed);
 
-  const recognized = cities.filter(isRecognized);
-  const eligible = cities.filter(isEligible);
-  // Gevşek turun "tanınan olmayan" ucu: orta boy şehir ya da küçük başkent.
-  const outsiders = eligible.filter((c) => !isRecognized(c));
+  const famous = cities.filter((c) => isTierA(c, guided));
+  // Gevşek turun A dışı ucu: B kademesinden, A'da olmayan (küçük başkent, 500 bin – 2 milyon arası şehir).
+  const outsiders = cities.filter((c) => isTierB(c) && !isTierA(c, guided));
 
   const buckets = bucketPlan(rounds, rng);
   const relaxedCount = Math.round(rounds * RELAXED_SHARE);
@@ -155,8 +161,9 @@ export function pickRounds(options: PickOptions = {}): Round[] {
 
   for (let i = 0; i < buckets.length; i++) {
     const spec: Spec = { bucket: buckets[i], relaxed: relaxedSlots.has(i), sameCountry: sameCountrySlots.has(i) };
-    const pool = (spec.relaxed ? eligible : recognized).filter((c) => !used.has(c.id));
-    const firstPool = (spec.relaxed ? outsiders : recognized).filter((c) => !used.has(c.id));
+    // Eş her zaman A'dan; gevşek turda ilk şehir B'den (A dışı).
+    const pool = famous.filter((c) => !used.has(c.id));
+    const firstPool = (spec.relaxed ? outsiders : famous).filter((c) => !used.has(c.id));
 
     let round: Round | null = null;
     // 1) Tüm kurallar; 2) kova/ülke kuralı gevşetilmiş (havuz bu kadar daralırsa; pratikte hiç gerekmez).

@@ -14,13 +14,16 @@ import {
 import {
   kmFromPosition, positionFromKm, roundKm, stepPosition, SLIDER_STEPS, START_POSITION,
 } from "../src/features/distance-game/slider";
-import { CITIES, isRecognized, isEligible, type City } from "../src/features/distance-game/cities";
+import {
+  CITIES, cityKey, isEligible, isTierA, isTierB, type City,
+  FAMOUS_CAPITAL_POP_K, FAMOUS_POP_K, KNOWN_POP_K, RELAXED_POP_K,
+} from "../src/features/distance-game/cities";
 import {
   pickRounds, makeRng, bucketOf, MIN_QUESTION_KM, SHORT_MAX_KM, MID_MAX_KM,
 } from "../src/features/distance-game/pickRounds";
 import { reducer, INITIAL_STATE, type State } from "../src/features/distance-game/gameReducer";
 import { TR_CITY_NAMES, cityDisplayName } from "../src/data/worldCityNames";
-import { guideLinks, countryNamesFor } from "../src/features/distance-game/serverData";
+import { guideLinks, guideNames, countryNamesFor } from "../src/features/distance-game/serverData";
 import { allCountries, citySlug, countrySlug, guideFor } from "../src/content/guides";
 import { localizePath, internalPath } from "../src/i18n/paths";
 import { LOCALES } from "../src/i18n/routing";
@@ -244,19 +247,99 @@ const independent = worldCountries.filter((c) => c.independent === true).map((c)
     cityDisplayName("Munich", "DE", "tr") === "Münih" && capitals.length === 194);
   ok("tabloda olmayan şehir veri adıyla kalır", cityDisplayName("Paris", "FR", "tr") === "Paris");
   ok("en ve es'te veri adı kullanılır", cityDisplayName("London", "GB", "en") === "London" && cityDisplayName("London", "GB", "es") === "London");
+  ok("tr: sitedeki ad (rehberi olan şehir) tablodan ve veri adından önce gelir",
+    cityDisplayName("Ho Chi Minh City", "VN", "tr", "Ho Chi Minh Şehri") === "Ho Chi Minh Şehri" &&
+    cityDisplayName("Munich", "DE", "tr", "Münchenx") === "Münchenx" &&
+    cityDisplayName("Ho Chi Minh City", "VN", "tr") === "Ho Chi Minh City");
+  ok("en ve es'te sitedeki Türkçe ad kullanılmaz (mevcut kural: veri adı)",
+    cityDisplayName("Ho Chi Minh City", "VN", "en", "Ho Chi Minh Şehri") === "Ho Chi Minh City" &&
+    cityDisplayName("Munich", "DE", "es", "Münih") === "Munich");
   ok("emin olunmayan adlar tabloda yok (Kyiv, Kraków, Mexico City)",
     !("UA:Kyiv" in TR_CITY_NAMES) && !("PL:Kraków" in TR_CITY_NAMES) && !("MX:Mexico City" in TR_CITY_NAMES));
+}
+
+/* ------------------------ A / B kademeleri ------------------------ */
+// Sitenin rehberi olan şehirler (oyundaki "Bu şehrin rehberini oku" eşleşmesi): A'nın birinci kuralı.
+const GUIDED = new Set(Object.keys(guideLinks()));
+const TIER_A = CITIES.filter((c) => isTierA(c, GUIDED));
+const TIER_B = CITIES.filter(isTierB);
+{
+  const mk = (over: Partial<City>): City => ({ id: -1, name: "X", iso2: "ZZ", lat: 0, lng: 0, popK: 0, capital: false, ...over });
+  ok("eşikler: A başkent ≥ 1.000, A nüfus ≥ 2.000, B ≥ 500, uygunluk ≥ 100 (bin)",
+    FAMOUS_CAPITAL_POP_K === 1000 && FAMOUS_POP_K === 2000 && KNOWN_POP_K === 500 && RELAXED_POP_K === 100);
+  ok("A: nüfusu ≥ 2.000 bin (başkent olmasa da), 1.999 değil", isTierA(mk({ popK: 2000 })) && !isTierA(mk({ popK: 1999 })));
+  ok("A: başkent ve nüfusu ≥ 1.000 bin; 999 değil", isTierA(mk({ capital: true, popK: 1000 })) && !isTierA(mk({ capital: true, popK: 999 })));
+  const graz = new Set(["AT:Graz"]);
+  ok("A: rehberi olan şehir (nüfusu küçük olsa da ≥ 100 bin); rehbersizse değil",
+    isTierA(mk({ name: "Graz", iso2: "AT", popK: 222 }), graz) && !isTierA(mk({ name: "Graz", iso2: "AT", popK: 222 })));
+  ok("A: rehberi olsa da nüfusu < 100 bin ve başkent değilse çıkmaz (isEligible kuralı aynen)",
+    !isTierA(mk({ name: "Graz", iso2: "AT", popK: 99 }), graz) && isTierA(mk({ name: "Graz", iso2: "AT", popK: 100 }), graz));
+  ok("A: rehberi olan küçük başkent A (Valletta)", isTierA(mk({ name: "Valletta", iso2: "MT", capital: true, popK: 7 }), new Set(["MT:Valletta"])));
+  ok("rehber anahtarı ülke kodu + veri adı (başka ülkedeki aynı ad etkilenmez)",
+    !isTierA(mk({ name: "Graz", iso2: "XX", popK: 222 }), graz) && cityKey({ iso2: "AT", name: "Graz" }) === "AT:Graz");
+  ok("B (eski kural): başkent ya da nüfusu ≥ 500 bin", isTierB(mk({ capital: true, popK: 5 })) && isTierB(mk({ popK: 500 })) && !isTierB(mk({ popK: 499 })));
+  ok("isEligible: başkent ya da ≥ 100 bin", isEligible(mk({ capital: true, popK: 1 })) && isEligible(mk({ popK: 100 })) && !isEligible(mk({ popK: 99 })));
+  ok("rehberi olmayan şehirler hâlâ nüfus kurallarıyla A olur (rehber listesi boşken de)", isTierA(mk({ popK: 2500 })) && !isTierA(mk({ popK: 1200 })));
+
+  // Gerçek oyunda sinir bozan şehirler A değil (Nelspruit, Gweru, Ta'izz, Ta'if, Pietermaritzburg, Santiago de los Caballeros, Porto-Novo).
+  const find = (iso2: string, name: string) => CITIES.find((c) => c.iso2 === iso2 && c.name === name);
+  const annoying = [["ZA", "Nelspruit"], ["ZW", "Gweru"], ["YE", "Ta‘izz"], ["SA", "Ta’if"], ["ZA", "Pietermaritzburg"], ["DO", "Santiago de los Caballeros"], ["BJ", "Porto-Novo"]].map(([i, n]) => find(i, n));
+  ok("şikâyet edilen 7 şehir veride var ve hiçbiri A değil", annoying.every((c) => c !== undefined && !isTierA(c, GUIDED)), annoying.map((c) => c?.name).join(", "));
+  ok("A büyük şehirler: Tokyo, Mumbai, Roma (rehber), Dubai (rehber), Kinshasa (başkent ≥ 1M)",
+    ["JP:Tokyo", "IN:Mumbai", "IT:Rome", "AE:Dubai", "CD:Kinshasa"].every((k) => TIER_A.some((c) => cityKey(c) === k)));
+
+  const countriesA = new Set(TIER_A.map((c) => c.iso2));
+  const countriesAll = new Set(CITIES.map((c) => c.iso2));
+  ok("A ⊂ uygun şehirler (nüfusu < 100 bin olan yalnız başkentse A)", TIER_A.every(isEligible));
+  ok("rehberi olan her uygun şehir A'da", CITIES.filter((c) => GUIDED.has(cityKey(c)) && isEligible(c)).every((c) => TIER_A.includes(c)));
+  ok("B'de olmayan A şehirleri yalnız rehberli 100–500 bin arası şehirler",
+    TIER_A.filter((c) => !isTierB(c)).every((c) => GUIDED.has(cityKey(c)) && c.popK >= 100));
+  ok("A kademesi geniş: ≥ 300 şehir ve ≥ 100 ülke", TIER_A.length >= 300 && countriesA.size >= 100, `${TIER_A.length} şehir, ${countriesA.size}/${countriesAll.size} ülke`);
+  ok("A'nın tek ülkeyi doldurması yok: hiçbir ülkenin A şehir payı %15'i geçmez", Math.max(...[...countriesA].map((k) => TIER_A.filter((c) => c.iso2 === k).length)) / TIER_A.length <= 0.15);
+
+  // Kovalar için yeterli A×A çifti var mı? (farklı ülke çiftleri ve aynı ülke kısa çiftleri)
+  const pairs = { short: 0, mid: 0, long: 0 };
+  const samePairs = { short: 0, mid: 0, long: 0 };
+  const partnerless = { short: 0, mid: 0, long: 0 };
+  const sameCountryShort = new Set<string>();
+  for (const a of TIER_A) {
+    const own = { short: 0, mid: 0, long: 0 };
+    for (const b of TIER_A) {
+      if (a.id === b.id) continue;
+      const km = Math.round(haversineKm(a.lat, a.lng, b.lat, b.lng));
+      if (km < MIN_QUESTION_KM) continue;
+      const k = bucketOf(km);
+      if (a.iso2 === b.iso2) {
+        if (a.id < b.id) samePairs[k]++;
+        if (k === "short") sameCountryShort.add(a.iso2);
+      } else {
+        if (a.id < b.id) pairs[k]++;
+        own[k]++;
+      }
+    }
+    for (const k of ["short", "mid", "long"] as const) if (own[k] === 0) partnerless[k]++;
+  }
+  ok("A×A farklı ülke çiftleri: kısa, orta, uzun kovaların her birinde ≥ 1.500 çift",
+    Object.values(pairs).every((n) => n >= 1500), JSON.stringify(pairs));
+  ok("A×A aynı ülke kısa çiftleri var (≥ 30 ülkede)", samePairs.short >= 300 && sameCountryShort.size >= 30, `${samePairs.short} çift, ${sameCountryShort.size} ülke`);
+  ok("orta ve uzun kovada eşi olmayan A şehri yok; kısa kovada olanlar azınlıkta (< %20)",
+    partnerless.mid === 0 && partnerless.long === 0 && partnerless.short < TIER_A.length * 0.2, JSON.stringify(partnerless));
+  console.log(`  (bilgi) A: ${TIER_A.length} şehir / ${countriesA.size} ülke (B: ${TIER_B.length}); A×A farklı ülke çifti ${JSON.stringify(pairs)}, aynı ülke ${JSON.stringify(samePairs)}`);
 }
 
 /* ------------------------------ soru seçici ------------------------------ */
 {
   const GAMES = 3000;
   const seeds = Array.from({ length: GAMES }, (_, i) => i + 1);
+  const pick = (seed?: number, rounds?: number) => pickRounds({ seed, rounds, guided: GUIDED });
+  const bothA = (r: { a: City; b: City }) => isTierA(r.a, GUIDED) && isTierA(r.b, GUIDED);
+  const outsiderOk = (c: City) => isTierA(c, GUIDED) || isTierB(c);
 
-  const a = pickRounds({ seed: 12345 });
-  const b = pickRounds({ seed: 12345 });
+  const a = pick(12345);
+  const b = pick(12345);
   ok("aynı seed → aynı sorular", JSON.stringify(a) === JSON.stringify(b));
-  ok("farklı seed → farklı sorular", JSON.stringify(pickRounds({ seed: 1 })) !== JSON.stringify(pickRounds({ seed: 2 })));
+  ok("farklı seed → farklı sorular", JSON.stringify(pick(1)) !== JSON.stringify(pick(2)));
+  ok("rehber listesi verilmezse de çalışır (yalnız nüfus kuralları)", pickRounds({ seed: 3 }).length === 10);
   ok("makeRng deterministik ve [0,1)", (() => {
     const r1 = makeRng(9);
     const r2 = makeRng(9);
@@ -270,7 +353,7 @@ const independent = worldCountries.filter((c) => c.independent === true).map((c)
   ok("10 tur", a.length === 10 && ROUNDS_PER_GAME === 10);
 
   let repeat = 0;
-  let nonRecognizedRounds = 0;
+  let nonARounds = 0;
   let allRounds = 0;
   let badRelaxed = 0;
   let tooSmall = 0;
@@ -282,13 +365,15 @@ const independent = worldCountries.filter((c) => c.independent === true).map((c)
   let sameName = 0;
   let badKm = 0;
   let tooMany = 0;
-  let notRecognizedGames = 0;
-  const cityUse = new Map<string, number>();
+  let looseGames = 0;
+  let bothObscure = 0;
+  const countryUse = new Map<string, number>();
+  const cityUse = new Map<number, number>();
   const bucketTotals = { short: 0, mid: 0, long: 0 };
   const seenCountries = new Set<string>();
 
   for (const seed of seeds) {
-    const rounds = pickRounds({ seed });
+    const rounds = pick(seed);
     const ids = rounds.flatMap((r) => [r.a.id, r.b.id]);
     if (new Set(ids).size !== ids.length) repeat++;
     const counts = { short: 0, mid: 0, long: 0 };
@@ -296,16 +381,19 @@ const independent = worldCountries.filter((c) => c.independent === true).map((c)
     let loose = 0;
     for (const r of rounds) {
       allRounds++;
-      const recognizedBoth = isRecognized(r.a) && isRecognized(r.b);
-      if (!recognizedBoth) {
-        nonRecognizedRounds++;
+      if (!bothA(r)) {
+        nonARounds++;
         loose++;
-        if (!r.relaxed) badRelaxed++;
+        // A dışı tur: 'gevşek', iki şehir B, en çok bir ucu A dışı.
+        if (!r.relaxed || !outsiderOk(r.a) || !outsiderOk(r.b)) badRelaxed++;
+        if (!isTierA(r.a, GUIDED) && !isTierA(r.b, GUIDED)) bothObscure++;
+      } else if (r.relaxed) {
+        badRelaxed++; // gevşek tur A–A olamaz
       }
-      if (r.relaxed && !(isEligible(r.a) && isEligible(r.b))) badRelaxed++;
       for (const c of [r.a, r.b]) {
         if (c.popK < 100 && !c.capital) tooSmall++;
-        cityUse.set(c.iso2, (cityUse.get(c.iso2) ?? 0) + 1);
+        countryUse.set(c.iso2, (countryUse.get(c.iso2) ?? 0) + 1);
+        cityUse.set(c.id, (cityUse.get(c.id) ?? 0) + 1);
         seenCountries.add(c.iso2);
       }
       if (r.a.iso2 === r.b.iso2) same++;
@@ -320,13 +408,14 @@ const independent = worldCountries.filter((c) => c.independent === true).map((c)
     }
     sameTotal += same;
     maxSame = Math.max(maxSame, same);
-    if (loose > 1) notRecognizedGames++;
+    if (loose > 1) looseGames++;
     if (Object.values(counts).some((n) => n < 3 || n > 4)) badBucketCount++;
   }
   ok(`${GAMES} oyunda aynı şehir bir oturumda iki kez çıkmadı`, repeat === 0, `${repeat} oyunda tekrar`);
-  ok("soruların ≥ %90'ında iki şehir de tanınan", 1 - nonRecognizedRounds / allRounds >= 0.9, `${(100 * (1 - nonRecognizedRounds / allRounds)).toFixed(2)}%`);
-  ok("her oyunda en çok 1 tur tanınan dışı (10 turda %90)", notRecognizedGames === 0, `${notRecognizedGames} oyun`);
-  ok("tanınan olmayan tur her zaman 'gevşek' ve şehirler uygun (başkent ya da ≥ 100 bin)", badRelaxed === 0, `${badRelaxed} hatalı`);
+  ok("soruların ≥ %90'ında iki şehir de A kademesinden", nonARounds * 10 <= allRounds, `${(100 * (1 - nonARounds / allRounds)).toFixed(2)}% (${nonARounds}/${allRounds} A dışı)`);
+  ok("her oyunda en çok 1 tur A dışı (10 turda %90)", looseGames === 0, `${looseGames} oyun`);
+  ok("A dışı tur her zaman 'gevşek', iki şehir de B ya da A; gevşek tur hiç A–A değil", badRelaxed === 0, `${badRelaxed} hatalı`);
+  ok("bir soruda iki şehir birden A dışı değil (en çok bir ucu görece az bilinir)", bothObscure === 0, `${bothObscure} soru`);
   ok("nüfusu < 100 bin olan yer yalnız başkentse çıkar", tooSmall === 0, `${tooSmall} ihlal`);
   ok("her oyunda aynı ülkeden en çok 1 soru", maxSame <= 1, `en çok ${maxSame}`);
   ok("aynı ülke soruları ≤ %10 (toplu)", sameTotal / allRounds <= 0.1, `${(100 * sameTotal / allRounds).toFixed(2)}%`);
@@ -341,24 +430,34 @@ const independent = worldCountries.filter((c) => c.independent === true).map((c)
   ok("soru ekranındaki iki şehrin adı aynı değil", sameName === 0);
   ok("km = yuvarlanmış haversine", badKm === 0);
 
-  const total = [...cityUse.values()].reduce((x, y) => x + y, 0);
-  const topShare = Math.max(...cityUse.values()) / total;
-  ok("çeşitlilik: hiçbir ülke şehir yuvalarının %6'sından fazlasını almıyor", topShare < 0.06, `en yüksek ${(100 * topShare).toFixed(1)}%`);
+  const slots = allRounds * 2;
+  const topCountry = Math.max(...countryUse.values()) / slots;
+  ok("çeşitlilik: hiçbir ülke şehir yuvalarının %6'sından fazlasını almıyor", topCountry < 0.06, `en yüksek ${(100 * topCountry).toFixed(1)}%`);
   ok("çeşitlilik: 3000 oyunda ≥ 185 farklı ülke göründü", seenCountries.size >= 185, `${seenCountries.size} ülke`);
+  ok("A kademesindeki her ülke göründü", [...new Set(TIER_A.map((c) => c.iso2))].every((k) => seenCountries.has(k)));
+  ok("A kademesindeki her şehir 3000 oyunda en az bir kez çıktı", TIER_A.every((c) => cityUse.has(c.id)), TIER_A.filter((c) => !cityUse.has(c.id)).map((c) => c.name).join(", "));
+  const topCities = [...cityUse].sort((x, y) => y[1] - x[1]).slice(0, 5);
+  const topCityShare = topCities[0][1] / slots;
+  ok("çeşitlilik: hiçbir şehir toplam yuvaların %1'inden fazlasını almıyor", topCityShare <= 0.01,
+    topCities.map(([id, n]) => `${CITIES[id].name} ${(100 * n / slots).toFixed(2)}%`).join(", "));
+  ok("A şehirlerinin en çok geçeni en az geçenin 60 katını aşmıyor (ağırlık dengesi)", (() => {
+    const counts = TIER_A.map((c) => cityUse.get(c.id) ?? 0);
+    return Math.max(...counts) / Math.max(1, Math.min(...counts)) <= 60;
+  })(), `${Math.max(...TIER_A.map((c) => cityUse.get(c.id) ?? 0))} / ${Math.min(...TIER_A.map((c) => cityUse.get(c.id) ?? 0))}`);
 
   // Math.random yolu (seed yok).
   let randomOk = true;
   for (let i = 0; i < 300; i++) {
-    const rounds = pickRounds();
+    const rounds = pickRounds({ guided: GUIDED });
     const ids = rounds.flatMap((r) => [r.a.id, r.b.id]);
     if (rounds.length !== 10 || new Set(ids).size !== 20) randomOk = false;
-    const loose = rounds.filter((r) => !(isRecognized(r.a) && isRecognized(r.b))).length;
+    const loose = rounds.filter((r) => !bothA(r)).length;
     if (loose > 1) randomOk = false;
   }
   ok("seed verilmezse (Math.random) de kurallar geçerli (300 oyun)", randomOk);
 
   // Başka tur sayıları patlamaz.
-  ok("3, 7, 12, 20 turluk oyunlar kurulabilir", [3, 7, 12, 20].every((n) => pickRounds({ seed: 5, rounds: n }).length === n));
+  ok("3, 7, 12, 20 turluk oyunlar kurulabilir", [3, 7, 12, 20].every((n) => pick(5, n).length === n));
 
   // Küçük havuzda (yalnız bir ülkenin şehirleri) sessizce yanlış sonuç vermez, hata fırlatır.
   let threw = false;
@@ -430,9 +529,19 @@ const independent = worldCountries.filter((c) => c.independent === true).map((c)
     const back = entries.filter(([, href]) => internalPath(localizePath(href, locale), locale) !== href);
     ok(`${locale}: bağlantılar yerelleştirilip geri çevrilebiliyor`, back.length === 0, back.slice(0, 3).map(([k]) => k).join(", "));
   }
-  const gameCities = CITIES.filter(isRecognized).length;
-  const linkedRecognized = CITIES.filter((c) => isRecognized(c) && `${c.iso2}:${c.name}` in links).length;
-  console.log(`  (bilgi) tanınan ${gameCities} şehirden ${linkedRecognized} tanesinin rehberi var; toplam ${entries.length}/${CITIES.length}`);
+  const linkedA = TIER_A.filter((c) => cityKey(c) in links).length;
+  console.log(`  (bilgi) A kademesindeki ${TIER_A.length} şehirden ${linkedA} tanesinin rehberi var; toplam ${entries.length}/${CITIES.length}`);
+  ok("A kademesinin rehber kuralı bu eşleşmeden gelir: guideNames ve guideLinks aynı anahtarlar",
+    JSON.stringify(Object.keys(guideNames()).sort()) === JSON.stringify(Object.keys(links).sort()));
+  const siteNames = guideNames();
+  const badName = Object.entries(siteNames).filter(([k, name]) => !byCode.get(k.slice(0, 2))!.cities.some((c) => c.name === name));
+  ok("guideNames: her ad rehberdeki gerçek şehir adı", badName.length === 0, badName.slice(0, 3).map(([k]) => k).join(", "));
+  ok("guideNames örnekleri: Münih, Roma, Tokyo", siteNames["DE:Munich"] === "Münih" && siteNames["IT:Rome"] === "Roma" && siteNames["JP:Tokyo"] === "Tokyo");
+  ok("rehberi olmayan şehir için site adı yok (Kinshasa)", !("CD:Kinshasa" in siteNames));
+  const shownDiffers = TIER_A.filter((c) => cityKey(c) in siteNames && cityDisplayName(c.name, c.iso2, "tr", siteNames[cityKey(c)]) !== siteNames[cityKey(c)]);
+  ok("Türkçe arayüzde rehberi olan her A şehri sitedeki adla görünür", shownDiffers.length === 0);
+  const enShown = TIER_A.filter((c) => cityKey(c) in siteNames && (["en", "es"] as const).some((l) => cityDisplayName(c.name, c.iso2, l, siteNames[cityKey(c)]) !== c.name));
+  ok("en ve es'te rehberi olan şehirler veri adıyla görünür", enShown.length === 0);
 
   for (const locale of LOCALES) {
     const names = countryNamesFor(locale);

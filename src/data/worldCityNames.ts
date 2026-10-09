@@ -12,7 +12,9 @@
  * Vagadugu, Yamusukro, Nuakşot, Naypyidaw, Kiev/Kyiv, Krakov/Kraków,
  * Meksiko/Mexico City, Cakarta/Jakarta, Tiencin, Kum, Hemedan, Kirmanşah.
  * Rehberi olan şehirlerde (örn. Xi'an, St. Petersburg, Québec City) adın
- * sitedeki rehberle aynı yazılması için rehberdeki ad esas alındı.
+ * sitedeki rehberle aynı yazılması için rehberdeki ad esas alındı. Ekranda ise
+ * rehberi olan şehrin adı doğrudan sitedeki addan gelir (cityDisplayName siteName,
+ * serverData.guideNames); bu tablo rehberi olmayan şehirlerin adıdır.
  *
  * Anahtar: "ISO2:veri adı". Değer: Türkçe ad.
  * scripts/distance.test.ts her anahtarın veride var olduğunu denetler.
@@ -148,7 +150,9 @@ export const TR_CITY_NAMES: Readonly<Record<string, string>> = {
 /**
  * Şehrin dile göre görünen adı. Yalnız Türkçede ad tablosu var; en ve es'te
  * (ve henüz yayında olmayan dillerde) veri adı olduğu gibi kullanılır.
+ * `siteName`: şehrin rehberi varsa sitedeki Türkçe adı (serverData.guideNames);
+ * Türkçede tablodan da önce gelir, çünkü oyun ile rehber aynı yazımı göstermeli.
  */
-export function cityDisplayName(name: string, iso2: string, locale: string): string {
-  return locale === "tr" ? (TR_CITY_NAMES[`${iso2}:${name}`] ?? name) : name;
+export function cityDisplayName(name: string, iso2: string, locale: string, siteName?: string): string {
+  return locale === "tr" ? (siteName ?? TR_CITY_NAMES[`${iso2}:${name}`] ?? name) : name;
 }

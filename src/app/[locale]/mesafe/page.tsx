@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import DistanceGame from "@/features/distance-game/DistanceGame";
-import { countryNamesFor, guideLinks } from "@/features/distance-game/serverData";
+import { countryNamesFor, guideLinks, guideNames } from "@/features/distance-game/serverData";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import { resolveLocale } from "@/i18n/server";
@@ -23,8 +23,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 /**
  * "Kaç kilometre?" oyunu. Şehir verisi yalnız bu sayfanın istemci paketinde
- * (DistanceGame içe aktarır); sunucu yalnız ülke adlarını ve rehber bağlantı
- * haritasını prop olarak verir. Adres: tr /mesafe, en /distance, es /distancia
+ * (DistanceGame içe aktarır); sunucu yalnız ülke adlarını, rehber bağlantı
+ * haritasını ve rehberi olan şehirlerin sitedeki adlarını prop olarak verir. Adres: tr /mesafe, en /distance, es /distancia
  * (bkz. i18n/paths.ts).
  */
 export default async function DistancePage({ params }: Props) {
@@ -33,7 +33,7 @@ export default async function DistancePage({ params }: Props) {
     <>
       <SiteHeader locale={locale} />
       <ClientMessages namespaces={CLIENT_NAMESPACES.distance}>
-        <DistanceGame countryNames={countryNamesFor(locale)} guideLinks={guideLinks()} />
+        <DistanceGame countryNames={countryNamesFor(locale)} guideLinks={guideLinks()} guideNames={guideNames()} />
       </ClientMessages>
       <SiteFooter />
     </>

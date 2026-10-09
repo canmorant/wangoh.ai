@@ -3,6 +3,7 @@
 import {
   useCallback,
   useEffect,
+  useMemo,
   useRef,
   type CSSProperties,
   type KeyboardEvent,
@@ -15,7 +16,7 @@ import { useFormatter, useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { EASE_OUT } from "@/lib/motion";
 import { cityDisplayName } from "@/data/worldCityNames";
-import type { City } from "./cities";
+import { cityKey, type City } from "./cities";
 import { ROUNDS_PER_GAME, verdictFor } from "./scoring";
 import { SLIDER_STEPS, SLIDER_TICKS, positionFromKm } from "./slider";
 import { useDistanceGame, type RoundResult } from "./useDistanceGame";
@@ -27,11 +28,15 @@ import { useDistanceGame, type RoundResult } from "./useDistanceGame";
  *
  * Sunucudan gelen iki küçük harita (page.tsx):
  *   countryNames  ISO2 → o dildeki ülke adı
- *   guideLinks    "ISO2:veri adı" → şehir rehberinin iç yolu (rehberi olanlar)
+ *   guideLinks    "ISO2:veri adı" → şehir rehberinin iç yolu (rehberi olanlar;
+ *                 anahtarları soru seçiminde A kademesinin bir kuralı)
+ *   guideNames    "ISO2:veri adı" → sitedeki Türkçe şehir adı (Türkçe arayüzde
+ *                 ekranda bu görünür)
  */
 type Props = {
   countryNames: Record<string, string>;
   guideLinks: Record<string, string>;
+  guideNames: Record<string, string>;
 };
 
 type G = ReturnType<typeof useDistanceGame>;
@@ -50,8 +55,9 @@ const screenIn = {
 const primaryButton =
   "rounded-full bg-white px-9 py-3.5 text-[12px] font-semibold tracking-[0.2em] text-black uppercase transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:scale-[1.03] focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-white";
 
-export default function DistanceGame({ countryNames, guideLinks }: Props) {
-  const g = useDistanceGame();
+export default function DistanceGame({ countryNames, guideLinks, guideNames }: Props) {
+  const guided = useMemo(() => new Set(Object.keys(guideLinks)), [guideLinks]);
+  const g = useDistanceGame(guided);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" });
@@ -81,9 +87,9 @@ export default function DistanceGame({ countryNames, guideLinks }: Props) {
       <div className="relative mx-auto flex min-h-[100svh] max-w-xl flex-col px-4 pt-20 pb-8 sm:px-8 sm:pt-24">
         {g.screen === "intro" && <Intro key="intro" g={g} />}
         {g.screen === "playing" && g.round && (
-          <Playing key="playing" g={g} countryNames={countryNames} guideLinks={guideLinks} />
+          <Playing key="playing" g={g} countryNames={countryNames} guideLinks={guideLinks} guideNames={guideNames} />
         )}
-        {g.screen === "results" && <Results key="results" g={g} countryNames={countryNames} />}
+        {g.screen === "results" && <Results key="results" g={g} countryNames={countryNames} guideNames={guideNames} />}
         <Credit />
       </div>
     </main>
@@ -92,10 +98,10 @@ export default function DistanceGame({ countryNames, guideLinks }: Props) {
 
 /* ----------------------------- adlar ----------------------------- */
 
-function useNames(countryNames: Record<string, string>) {
+function useNames(countryNames: Record<string, string>, guideNames: Record<string, string>) {
   const locale = useLocale();
   return {
-    city: (c: City) => cityDisplayName(c.name, c.iso2, locale),
+    city: (c: City) => cityDisplayName(c.name, c.iso2, locale, guideNames[cityKey(c)]),
     country: (c: City) => countryNames[c.iso2] ?? c.iso2,
   };
 }
@@ -138,10 +144,10 @@ function Intro({ g }: { g: G }) {
 }
 
 /* ============================= PLAYING ============================= */
-function Playing({ g, countryNames, guideLinks }: { g: G } & Props) {
+function Playing({ g, countryNames, guideLinks, guideNames }: { g: G } & Props) {
   const t = useTranslations("DistanceGame");
   const format = useFormatter();
-  const names = useNames(countryNames);
+  const names = useNames(countryNames, guideNames);
   const round = g.round!;
   const revealed = g.phase === "revealed";
   const result = g.lastResult;
@@ -276,7 +282,7 @@ function CityCard({
   showGuide: boolean;
 }) {
   const t = useTranslations("DistanceGame");
-  const guide = guideLinks[`${city.iso2}:${city.name}`];
+  const guide = guideLinks[cityKey(city)];
   return (
     <div className="flex min-w-0 flex-1 flex-col rounded-2xl border border-white/[0.08] bg-white/[0.03] px-4 py-4">
       <h2 className="font-display text-[clamp(1.6rem,8vw,2.3rem)] leading-[1.05] text-white [overflow-wrap:anywhere]">
@@ -445,10 +451,10 @@ function ProgressStrip({ g }: { g: G }) {
 }
 
 /* ============================= RESULTS ============================= */
-function Results({ g, countryNames }: { g: G; countryNames: Record<string, string> }) {
+function Results({ g, countryNames, guideNames }: { g: G } & Pick<Props, "countryNames" | "guideNames">) {
   const t = useTranslations("DistanceGame");
   const format = useFormatter();
-  const names = useNames(countryNames);
+  const names = useNames(countryNames, guideNames);
   return (
     <motion.section {...screenIn} className="flex flex-1 flex-col py-4">
       <p className="text-[11px] tracking-[0.42em] text-white/40 uppercase">{t("gameOver")}</p>
