@@ -112,6 +112,9 @@ export function Results({ g, countryNames, guideNames }: { g: G } & Pick<Names, 
         <button type="button" onClick={g.home} className={secondaryButton}>
           {t("backToModes")}
         </button>
+        <Link href="/haritada-bul" prefetch={false} className={secondaryButton}>
+          {t("otherGame")}
+        </Link>
         <Link href="/gezi-rehberleri" prefetch={false} className={secondaryButton}>
           {t("exploreGuides")}
         </Link>

@@ -368,6 +368,7 @@
     "recapDetail": "Actual {actual} km · guess {guess} km",
     "playAgain": "Play again",
     "exploreGuides": "Browse the travel guides",
+    "otherGame": "Try Find it on the map",
     "dataCredit": "City data: <geo>GeoNames</geo> (<cc>CC BY 4.0</cc>)",
     "modeDaily": "Daily Tour",
     "modeFree": "Free play",

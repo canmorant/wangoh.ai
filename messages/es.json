@@ -368,6 +368,7 @@
     "recapDetail": "Real {actual} km · estimación {guess} km",
     "playAgain": "Jugar de nuevo",
     "exploreGuides": "Ver las guías de viaje",
+    "otherGame": "Prueba Encuéntralo en el mapa",
     "dataCredit": "Datos de ciudades: <geo>GeoNames</geo> (<cc>CC BY 4.0</cc>)",
     "modeDaily": "Tour del día",
     "modeFree": "Libre",

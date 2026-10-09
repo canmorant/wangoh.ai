@@ -368,6 +368,7 @@
     "recapDetail": "Реально {actual} км · ответ {guess} км",
     "playAgain": "Играть снова",
     "exploreGuides": "Смотреть путеводители",
+    "otherGame": "Попробуйте «Найди на карте»",
     "dataCredit": "Данные о городах: <geo>GeoNames</geo> (<cc>CC BY 4.0</cc>)",
     "modeDaily": "Тур дня",
     "modeFree": "Свободная игра",

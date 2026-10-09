@@ -218,13 +218,15 @@ interface Scene {
   locked: boolean;
   /** Etkileşim sırasında ayrıntı azaltılır. */
   moving: boolean;
+  /** Cihaz yavaş: hareket sırasında ağ ve sınırlar da çizilmez. */
+  lite: boolean;
   tl: Timeline;
 }
 
 function drawScene(ctx: CanvasRenderingContext2D, s: Scene) {
   const { w, h, view } = s;
   const projection = makeProjection(view, w, h);
-  if (s.moving) projection.precision(1.2);
+  if (s.moving) projection.precision(3);
   const path = geoPath(projection, ctx);
   const R = radiusOf(view, w, h);
   const cx = w / 2;
@@ -253,12 +255,14 @@ function drawScene(ctx: CanvasRenderingContext2D, s: Scene) {
   ctx.fillStyle = sea;
   ctx.fill();
 
-  // Enlem/boylam ağı.
-  ctx.beginPath();
-  path(graticuleFor(view.zoom));
-  ctx.lineWidth = 0.6;
-  ctx.strokeStyle = "rgba(255,255,255,0.07)";
-  ctx.stroke();
+  // Enlem/boylam ağı: hareket sırasında seyrek (yakında 5°'lik ağ pahalı), yavaş cihazda hiç.
+  if (!(s.moving && s.lite)) {
+    ctx.beginPath();
+    path(graticuleFor(s.moving ? Math.min(view.zoom, 2) : view.zoom));
+    ctx.lineWidth = 0.6;
+    ctx.strokeStyle = "rgba(255,255,255,0.07)";
+    ctx.stroke();
+  }
 
   // Kara ve sınırlar.
   ctx.beginPath();
@@ -269,11 +273,13 @@ function drawScene(ctx: CanvasRenderingContext2D, s: Scene) {
   ctx.strokeStyle = "rgba(200,164,94,0.5)";
   ctx.lineJoin = "round";
   ctx.stroke();
-  ctx.beginPath();
-  path(borders);
-  ctx.lineWidth = view.zoom > 3 ? 1 : 0.65;
-  ctx.strokeStyle = "rgba(255,255,255,0.2)";
-  ctx.stroke();
+  if (!(s.moving && s.lite)) {
+    ctx.beginPath();
+    path(borders);
+    ctx.lineWidth = view.zoom > 3 ? 1 : 0.65;
+    ctx.strokeStyle = "rgba(255,255,255,0.2)";
+    ctx.stroke();
+  }
 
   // İpucu halkası.
   if (s.hint) {
@@ -429,6 +435,8 @@ export default function Globe({
   const gesture = useRef<Gesture | null>(null);
   const times = useRef({ pin: -1, reveal: -1, arcDelay: 0, hint: -1 });
   const interacting = useRef(false);
+  /** Hareketli karelerin çizim süresinin üstel ortalaması (ms) ve yavaş cihaz bayrağı (açılınca kapanmaz). */
+  const drawCost = useRef({ ema: 0, lite: false });
   const latest = useRef({ pin, reveal, hint, reduced, onPlace, onInteract, onZoom });
   const lastZoom = useRef(1);
 
@@ -528,6 +536,8 @@ export default function Globe({
 
       const { w, h, dpr } = size.current;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      const moving = interacting.current || !!fly.current || !!inertia.current;
+      const t0 = performance.now();
       drawScene(ctx, {
         w,
         h,
@@ -536,9 +546,19 @@ export default function Globe({
         reveal: cur.reveal,
         hint: cur.hint,
         locked: !!cur.reveal,
-        moving: interacting.current || !!fly.current || !!inertia.current,
+        moving,
+        lite: drawCost.current.lite,
         tl: { pin: pinT, arc, pulse, hint: hintT },
       });
+      if (moving) {
+        // Yavaş cihaz koruması: hareketli karelerin çizimi ortalama 20 ms'yi aşarsa (50 kare/sn'nin altı)
+        // hareket sırasında ağ ve sınırlar çizilmez; durunca hepsi geri gelir. Bayrak oturum boyunca kalır
+        // (açılıp kapanma titremesi olmasın).
+        const c = drawCost.current;
+        const cost = performance.now() - t0;
+        c.ema = c.ema ? c.ema * 0.85 + cost * 0.15 : cost;
+        if (c.ema > 20) c.lite = true;
+      }
       if (active) raf.current = requestAnimationFrame((n) => frameRef.current(n));
     };
     request();
@@ -553,7 +573,8 @@ export default function Globe({
       const rect = wrap.getBoundingClientRect();
       const w = Math.max(120, Math.round(rect.width));
       const h = Math.max(120, Math.round(rect.height));
-      const dpr = Math.min(2.5, window.devicePixelRatio || 1);
+      // 2'de sınırlı: 3× ekranda piksel sayısı %125 artar, ince çizgilerde fark görünmez.
+      const dpr = Math.min(2, window.devicePixelRatio || 1);
       size.current = { w, h, dpr };
       canvas.width = Math.round(w * dpr);
       canvas.height = Math.round(h * dpr);
