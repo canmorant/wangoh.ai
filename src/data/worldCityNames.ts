@@ -10,7 +10,9 @@
  * görünür (Türkçesi veri adıyla aynıysa zaten yazmaya gerek yok: Paris, Berlin).
  * Emin olunamayan ya da kaynaklara göre değişen adlar bilerek dışarıda:
  * Vagadugu, Yamusukro, Nuakşot, Naypyidaw, Kiev/Kyiv, Krakov/Kraków,
- * Meksiko/Mexico City, Cakarta/Jakarta, Tiencin, Kum, Hemedan, Kirmanşah.
+ * Meksiko/Mexico City, Cakarta/Jakarta, Tiencin, Kum, Hemedan, Kirmanşah,
+ * Urumçi/Ürümçi, Peşaver, Rangun/Yangon, Tebük/Tabuk, Filibe/Plovdiv,
+ * Temeşvar, Yaş, Vroclav, Dıraç, Nis/Nice, Hudeyde, Taiz.
  * Rehberi olan şehirlerde (örn. Xi'an, St. Petersburg, Québec City) adın
  * sitedeki rehberle aynı yazılması için rehberdeki ad esas alındı. Ekranda ise
  * rehberi olan şehrin adı doğrudan sitedeki addan gelir (cityDisplayName siteName,
@@ -26,6 +28,7 @@ export const TR_CITY_NAMES: Readonly<Record<string, string>> = {
   "AL:Tirana": "Tiran",
   "AM:Yerevan": "Erivan",
   "AT:Vienna": "Viyana",
+  "AU:Canberra": "Kanberra",
   "AZ:Baku": "Bakü",
   "BA:Sarajevo": "Saraybosna",
   "BD:Dhaka": "Dakka",
@@ -83,6 +86,7 @@ export const TR_CITY_NAMES: Readonly<Record<string, string>> = {
   "YE:Sanaa": "Sana",
 
   /* ---- diğer tanınmış şehirler ---- */
+  "AF:Mazar-e Sharif": "Mezar-ı Şerif",
   "AM:Gyumri": "Gümrü",
   "AU:Sydney": "Sidney",
   "AZ:Ganja": "Gence",
@@ -100,6 +104,7 @@ export const TR_CITY_NAMES: Readonly<Record<string, string>> = {
   "DK:Århus": "Aarhus",
   "EG:Alexandria": "İskenderiye",
   "EG:Luxor": "Luksor",
+  "EG:Suez": "Süveyş",
   "ES:Donostia / San Sebastián": "San Sebastián",
   "ES:Palma": "Palma de Mallorca",
   "FR:Bordeaux": "Bordo",
@@ -111,8 +116,11 @@ export const TR_CITY_NAMES: Readonly<Record<string, string>> = {
   "IN:Kolkata": "Kalküta",
   "IQ:As Sulaymaniyah": "Süleymaniye",
   "IQ:Basrah": "Basra",
+  "IQ:Karbala": "Kerbela",
   "IQ:Kirkuk": "Kerkük",
   "IQ:Mosul": "Musul",
+  "IQ:Najaf": "Necef",
+  "IQ:Nasiriyah": "Nasıriye",
   "IR:Isfahan": "İsfahan",
   "IR:Mashhad": "Meşhed",
   "IR:Shiraz": "Şiraz",
@@ -124,6 +132,7 @@ export const TR_CITY_NAMES: Readonly<Record<string, string>> = {
   "IT:Turin": "Torino",
   "LB:Tripoli": "Trablus",
   "LY:Benghazi": "Bingazi",
+  "KZ:Shymkent": "Çimkent",
   "MA:Casablanca": "Kazablanka",
   "MA:Fès": "Fes",
   "MA:Marrakesh": "Marakeş",
@@ -131,18 +140,21 @@ export const TR_CITY_NAMES: Readonly<Record<string, string>> = {
   "PK:Karachi": "Karaçi",
   "PK:Lahore": "Lahor",
   "RS:Niš": "Niş",
+  "RO:Constanţa": "Köstence",
   "RU:Nizhniy Novgorod": "Nijni Novgorod",
   "RU:Saint Petersburg": "St. Petersburg",
   "RU:Sochi": "Soçi",
   "SA:Jeddah": "Cidde",
   "SA:Mecca": "Mekke",
   "SA:Medina": "Medine",
+  "SA:Ta’if": "Taif",
   "SY:Aleppo": "Halep",
   "SY:Homs": "Humus",
   "SY:Latakia": "Lazkiye",
   "TR:Istanbul": "İstanbul",
   "UA:Kharkiv": "Harkov",
   "US:New York City": "New York",
+  "UZ:Andijon": "Andican",
   "UZ:Bukhara": "Buhara",
   "UZ:Samarkand": "Semerkant",
 };

@@ -2,9 +2,9 @@ import { countries } from "@/data/countries";
 import { allCountries, citySlug, countrySlug, guideFor } from "@/content/guides";
 import { placeName } from "@/content/localized";
 import { countryName } from "@/lib/countryNames";
-import { TR_CITY_NAMES } from "@/data/worldCityNames";
 import type { AppLocale } from "@/i18n/routing";
 import { CITIES, cityKey } from "./cities";
+import { GUIDE_ALIASES, guideMatchesName } from "./guideMatch";
 
 /**
  * Oyun sayfasının SUNUCU tarafı verisi (derleme anında üretilir, istemciye
@@ -19,33 +19,38 @@ export type GuideNames = Record<string, string>;
 
 interface GuideMatch {
   href: string;
-  name: string;
+  /** Rehberdeki ad; yalnız ekranda gösterilecekse (linkOnly eşleşmelerde yok). */
+  name?: string;
 }
 
 let cachedMatches: Record<string, GuideMatch> | undefined;
 
 /**
- * Oyundaki şehirlerden sitenin rehberi olanları eşler. Eşleşme: AYNI ülke
- * kodu ve şehir adı, rehberdeki (Türkçe) adla şu üç yoldan biriyle aynı:
- *   1. veri adının Türkçe tablodaki karşılığı (Münih, Marakeş…),
- *   2. veri adının kendisi (Tokyo, Nice…),
- *   3. rehber adının İngilizce çevirisi (Roma → Rome).
- * Rehberi yazılmamış şehirler (guideFor boş) bağlanmaz. Bağlantı da ad da
- * (guideLinks, guideNames) tek bu eşleşmeden türer; ayrı bir eşleştirme yok.
+ * Oyundaki şehirlerden sitenin rehberi olanları eşler. Eşleşme kuralı tek
+ * yerde (guideMatch.ts): AYNI ülke kodu ve ad (Türkçe tablo, veri adı ya da
+ * rehber adının İngilizcesi), artık bir de açık ALIAS tablosu (Recife → "Recife
+ * ve Olinda"). Rehberi yazılmamış şehirler (guideFor boş) bağlanmaz. Bağlantı da
+ * ad da (guideLinks, guideNames) tek bu eşleşmeden türer; ayrı bir eşleştirme yok.
  */
 function guideMatches(): Record<string, GuideMatch> {
   if (cachedMatches) return cachedMatches;
   const matches: Record<string, GuideMatch> = {};
+  const enNames = new Map<string, string>();
+  const english = (name: string) => {
+    let en = enNames.get(name);
+    if (en === undefined) enNames.set(name, (en = placeName(name, "en")));
+    return en;
+  };
   for (const city of CITIES) {
     const country = allCountries.find((c) => c.code === city.iso2);
     if (!country) continue;
     const key = cityKey(city);
-    const turkish = TR_CITY_NAMES[key];
-    const match = country.cities.find(
-      (c) => c.name === turkish || c.name === city.name || placeName(c.name, "en") === city.name
+    const alias = GUIDE_ALIASES[key];
+    const match = country.cities.find((c) =>
+      alias ? c.name === alias.guide : guideMatchesName(country.code, city.name, c.name, english(c.name))
     );
     if (match && guideFor(country.code, match.name)) {
-      matches[key] = { href: `/${countrySlug(country)}/${citySlug(match)}`, name: match.name };
+      matches[key] = { href: `/${countrySlug(country)}/${citySlug(match)}`, name: alias?.linkOnly ? undefined : match.name };
     }
   }
   cachedMatches = matches;
@@ -65,7 +70,9 @@ export function guideLinks(): GuideLinks {
  * görünür (oyun ile rehber aynı yazımı kullansın); en ve es'te veri adı kalır.
  */
 export function guideNames(): GuideNames {
-  return Object.fromEntries(Object.entries(guideMatches()).map(([key, m]) => [key, m.name]));
+  return Object.fromEntries(
+    Object.entries(guideMatches()).flatMap(([key, m]) => (m.name === undefined ? [] : [[key, m.name]]))
+  );
 }
 
 /** Oyundaki her ülke kodunun o dildeki adı (repodaki ülke adı çevirileri). */

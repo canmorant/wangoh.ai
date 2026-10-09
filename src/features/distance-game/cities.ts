@@ -27,13 +27,16 @@ export const CITIES: readonly City[] = (rawCities as unknown as Row[]).map(
 export const cityKey = (c: Pick<City, "iso2" | "name">) => `${c.iso2}:${c.name}`;
 
 /**
- * Soruya girebilen en küçük şehir: başkent (nüfusu ne olursa olsun) ya da
- * nüfusu en az 100.000. Nüfusu 100.000'in altındaki başkent olmayan yer
- * (veri, ülke başına 5 şehre tamamlansın diye bunlardan da taşır) hiçbir
- * soruda çıkmaz; rehberi olsa da.
+ * Soruya girebilen en küçük şehir: başkent (nüfusu ne olursa olsun), nüfusu en
+ * az 100.000 ya da sitenin REHBERİ OLAN şehri (nüfusu ne olursa olsun: Hvar,
+ * Zermatt, Larnaka...). Bunların dışındaki yerler (veri, ülke başına 5 şehre
+ * tamamlansın diye küçük şehirlerden de taşır) hiçbir soruda çıkmaz.
  */
 export const RELAXED_POP_K = 100;
-export const isEligible = (c: City) => c.capital || c.popK >= RELAXED_POP_K;
+export const isGuided = (c: Pick<City, "iso2" | "name">, guided?: ReadonlySet<string>) =>
+  guided?.has(cityKey(c)) ?? false;
+export const isEligible = (c: City, guided?: ReadonlySet<string>) =>
+  c.capital || c.popK >= RELAXED_POP_K || isGuided(c, guided);
 
 /**
  * B kademesi ("bilinen"): başkent ya da nüfusu en az 500.000. Soruların yalnız
@@ -47,14 +50,29 @@ export const isTierB = (c: City) => c.capital || c.popK >= KNOWN_POP_K;
  * Nüfus, ünlülük için kötü bir ölçüt (Nelspruit, Ta'izz, Porto-Novo...); o yüzden
  * önce sitenin kendi rehberi olan şehirler (gezgin bunları bilir), sonra büyük
  * başkentler ve çok büyük şehirler:
- *   1. sitenin rehberi olan şehir (`guided`: serverData.guideLinks anahtarları), VEYA
+ *   1. sitenin rehberi olan şehir (`guided`: serverData.guideLinks anahtarları),
+ *      nüfusu ne olursa olsun: rehberli şehir = HER ZAMAN A, VEYA
  *   2. başkent ve nüfusu en az 1.000.000, VEYA
  *   3. nüfusu en az 2.000.000.
- * Hepsi için önce isEligible geçerli (nüfusu < 100 bin olan yalnız başkentse çıkar).
+ * 2. ve 3. kural için önce isEligible geçerli.
  */
 export const FAMOUS_CAPITAL_POP_K = 1000;
 export const FAMOUS_POP_K = 2000;
 export function isTierA(c: City, guided?: ReadonlySet<string>): boolean {
+  if (isGuided(c, guided)) return true;
   if (!isEligible(c)) return false;
-  return (guided?.has(cityKey(c)) ?? false) || (c.capital && c.popK >= FAMOUS_CAPITAL_POP_K) || c.popK >= FAMOUS_POP_K;
+  return (c.capital && c.popK >= FAMOUS_CAPITAL_POP_K) || c.popK >= FAMOUS_POP_K;
+}
+
+/**
+ * "Güçlü" A şehri: ortalama gezginin adını duyduğu yer. Yalnız nüfusu en az
+ * 2.000.000 olan şehirler ve nüfusu en az 100.000 olan REHBERLİ şehirler.
+ * A'nın geri kalanı "zayıf"tır: nüfusu 1–2 milyon olan rehbersiz başkentler
+ * (Bamako, Konakri, Vagadugu...) ve küçük rehberli yerler (Hvar, Giethoorn...).
+ * Soru seçici her soruda en az bir ucun güçlü olmasını ister; böylece iki
+ * zayıf uç yan yana gelmez (Bamako–Konakri).
+ */
+export const STRONG_GUIDED_MIN_POP_K = 100;
+export function isStrong(c: City, guided?: ReadonlySet<string>): boolean {
+  return c.popK >= FAMOUS_POP_K || (isGuided(c, guided) && c.popK >= STRONG_GUIDED_MIN_POP_K);
 }
