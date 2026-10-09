@@ -19,6 +19,7 @@ export default function SiteNav({ searchDictionaryUrl }: { searchDictionaryUrl?:
         { label: t("randomClub"), href: "/?open=club" },
         { label: t("countryWheel"), href: "/?open=wheel" },
         { label: t("guessFlag"), href: "/flags" },
+        { label: t("distance"), href: "/mesafe" },
       ]}
     />
   );

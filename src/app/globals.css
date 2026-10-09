@@ -354,3 +354,69 @@ a,
 @media (prefers-reduced-motion: reduce) {
   .consent-enter, .consent-fade { animation: none; }
 }
+
+/* ---------- "Kaç kilometre?" oyununun kaydırıcısı ----------
+   --fill: dolu kısmın bitişi (başparmağın merkezine hizalı, DistanceGame
+   hesaplıyor). Başparmak 28px: dokunmatik hedef için 44px yüksekliğinde
+   bir giriş alanının içinde. */
+.km-range {
+  --fill: 50%;
+  --accent: #c8a45e;
+  -webkit-appearance: none;
+  appearance: none;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 44px;
+  margin: 0;
+  background: transparent;
+  cursor: pointer;
+  touch-action: pan-y;
+}
+.km-range:focus {
+  outline: none;
+}
+.km-range::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(to right, var(--accent) 0, var(--accent) var(--fill), rgba(255, 255, 255, 0.12) var(--fill), rgba(255, 255, 255, 0.12) 100%);
+}
+.km-range::-moz-range-track {
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+}
+.km-range::-moz-range-progress {
+  height: 6px;
+  border-radius: 999px;
+  background: var(--accent);
+}
+.km-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  box-sizing: border-box;
+  width: 28px;
+  height: 28px;
+  margin-top: -11px;
+  border: 3px solid var(--accent);
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.55);
+}
+.km-range::-moz-range-thumb {
+  box-sizing: border-box;
+  width: 28px;
+  height: 28px;
+  border: 3px solid var(--accent);
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.55);
+}
+.km-range:focus-visible::-webkit-slider-thumb {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+.km-range:focus-visible::-moz-range-thumb {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}

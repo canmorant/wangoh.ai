@@ -190,6 +190,7 @@ export default function HomeExperience({
           { label: t("Nav.randomClub"), onClick: openClubReveal },
           { label: t("Nav.countryWheel"), onClick: openWheel },
           { label: t("Nav.guessFlag"), href: "/flags" },
+          { label: t("Nav.distance"), href: "/mesafe" },
         ]}
       />
 
