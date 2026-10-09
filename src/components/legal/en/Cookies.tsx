@@ -52,6 +52,15 @@ export default function CookiesEn() {
                 <td>Until browser data is cleared</td>
               </tr>
               <tr>
+                <td>wangoh.distancegame.v2</td>
+                <td>First-party localStorage / functional</td>
+                <td>
+                  Remembering your best result, games played, average, Daily Tour results, daily streak
+                  and sound-effects choice in the &ldquo;How many kilometres?&rdquo; game
+                </td>
+                <td>Until browser data is cleared</td>
+              </tr>
+              <tr>
                 <td>wangoh.origin</td>
                 <td>First-party localStorage / functional</td>
                 <td>

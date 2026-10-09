@@ -54,3 +54,21 @@ export function verdictFor(score: number): Verdict {
   if (score >= 250) return "fair";
   return "far";
 }
+
+/* ---------------------------- paylaşım emojileri ---------------------------- */
+
+/** Tur puanına göre kare: 🟩 ≥ 800, 🟨 400–799, 🟧 100–399, 🟥 < 100. */
+export const SHARE_TIERS = [
+  { min: 800, emoji: "🟩" },
+  { min: 400, emoji: "🟨" },
+  { min: 100, emoji: "🟧" },
+  { min: 0, emoji: "🟥" },
+] as const;
+
+export function emojiFor(score: number): string {
+  for (const tier of SHARE_TIERS) if (score >= tier.min) return tier.emoji;
+  return SHARE_TIERS[SHARE_TIERS.length - 1].emoji;
+}
+
+/** 10 turun emoji şeridi (paylaşım metni). */
+export const emojiStrip = (scores: readonly number[]): string => scores.map(emojiFor).join("");

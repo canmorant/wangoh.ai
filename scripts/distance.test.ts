@@ -3,28 +3,40 @@
  * soru seçici, durum makinesi ve rehber bağlantıları.
  * Run:  npx tsx scripts/distance.test.ts
  */
-import { readFileSync } from "node:fs";
+import { readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import worldCountries from "world-countries";
 import { haversineKm, EARTH_RADIUS_KM } from "../src/features/distance-game/haversine";
 import {
-  scoreFromError, scoreGuess, errorRatio, verdictFor,
+  scoreFromError, scoreGuess, errorRatio, verdictFor, emojiFor, emojiStrip,
   MAX_ROUND_SCORE, FULL_SCORE_ERROR, MIN_GUESS_KM, MAX_GUESS_KM, ROUNDS_PER_GAME,
 } from "../src/features/distance-game/scoring";
 import {
   kmFromPosition, positionFromKm, roundKm, stepPosition, SLIDER_STEPS, START_POSITION,
 } from "../src/features/distance-game/slider";
 import {
-  CITIES, cityKey, isEligible, isTierA, isTierB, type City,
+  CITIES, cityKey, isEligible, isStrong, isTierA, isTierB, type City,
   FAMOUS_CAPITAL_POP_K, FAMOUS_POP_K, KNOWN_POP_K, RELAXED_POP_K,
 } from "../src/features/distance-game/cities";
 import {
   pickRounds, makeRng, bucketOf, MIN_QUESTION_KM, SHORT_MAX_KM, MID_MAX_KM,
+  MAX_PER_COUNTRY, MAX_WEAK_PER_GAME, MIN_SEPARATION_KM,
 } from "../src/features/distance-game/pickRounds";
 import { reducer, INITIAL_STATE, type State } from "../src/features/distance-game/gameReducer";
 import { TR_CITY_NAMES, cityDisplayName } from "../src/data/worldCityNames";
 import { guideLinks, guideNames, countryNamesFor } from "../src/features/distance-game/serverData";
+import { GUIDE_ALIASES } from "../src/features/distance-game/guideMatch";
 import { allCountries, citySlug, countrySlug, guideFor } from "../src/content/guides";
+import {
+  dateKeyOf, dailySeed, daysBetween, addDays, isDateKey, localDateFromKey, parseStats, recordGame, currentStreak, averageScore,
+  EMPTY_STATS, DAILY_KEEP_DAYS, type Stats,
+} from "../src/features/distance-game/daily";
+import { shareText, shareUrl } from "../src/features/distance-game/share";
+import { detentIndex, DETENTS_KM } from "../src/features/distance-game/feedback";
+import {
+  cameraEnds, guessCircle, kmToDegrees, placeLabels, pointAlong, estimateLabelWidth, midpoint, MIN_VIEW_KM, type LngLat,
+} from "../src/features/distance-game/mapGeometry";
+import { makeCamera, prepare, prepareIdle, MAP_WIDTH, MAP_HEIGHT } from "../src/features/distance-game/worldMap";
 import { localizePath, internalPath } from "../src/i18n/paths";
 import { LOCALES } from "../src/i18n/routing";
 
@@ -218,6 +230,28 @@ const independent = worldCountries.filter((c) => c.independent === true).map((c)
   const gorakhpur = CITIES.filter((c) => c.name === "Gorakhpur");
   ok("Gorakhpur tek ve Uttar Pradesh'te", gorakhpur.length === 1 && near(gorakhpur[0].lat, 26.77, 0.1) && near(gorakhpur[0].lng, 83.37, 0.1));
 
+  // Büyük şehirler yakın komşu yüzünden kaybolmaz (üretici kuralı: >= 1 milyonda yarıçap 25 km).
+  const has = (iso2: string, name: string) => CITIES.some((c) => c.iso2 === iso2 && c.name === name);
+  ok("Incheon (2,6 milyon, Seul'e 27 km) veride", has("KR", "Incheon"));
+  ok("Yokohama, Kobe (Tokyo ve Osaka'ya 29 km) ve Faridabad veride", has("JP", "Yokohama") && has("JP", "Kobe") && has("IN", "Faridabad"));
+  const million = CITIES.filter((c) => c.popK >= 1000);
+  let tooNear = "";
+  for (let i = 0; i < million.length && !tooNear; i++) {
+    for (let j = i + 1; j < million.length; j++) {
+      const a = million[i];
+      const b = million[j];
+      if (a.iso2 === b.iso2 && haversineKm(a.lat, a.lng, b.lat, b.lng) < 25 && !a.capital && !b.capital) {
+        tooNear = `${a.name}–${b.name}`;
+        break;
+      }
+    }
+  }
+  ok("aynı ülkede iki >= 1 milyonluk şehir (başkent hariç) 25 km'den yakın değil (ilçe tekrarı yok)", tooNear === "", tooNear);
+  ok("Delhi: başkent satırı Yeni Delhi, nüfusu metropolün (>= 10 milyon), A kademesine girer",
+    (() => { const d = CITIES.find((c) => c.iso2 === "IN" && c.name === "New Delhi"); return !!d && d.capital && d.popK >= 10000; })());
+  ok("bozuk ad kalıntıları temizlendi (Nara-shi, Fukui-shi, Hamāh, Ḩ harfleri)",
+    !CITIES.some((c) => /-shi$|-si$/.test(c.name) || /[HhZz]\u0327/.test(c.name.normalize("NFD"))));
+
   // Bilinen şehirlerin konumu makul (veri kayması için kaba bir nöbetçi).
   const at = (iso2: string, name: string) => CITIES.find((c) => c.iso2 === iso2 && c.name === name)!;
   const rome = at("IT", "Rome");
@@ -254,8 +288,14 @@ const independent = worldCountries.filter((c) => c.independent === true).map((c)
   ok("en ve es'te sitedeki Türkçe ad kullanılmaz (mevcut kural: veri adı)",
     cityDisplayName("Ho Chi Minh City", "VN", "en", "Ho Chi Minh Şehri") === "Ho Chi Minh City" &&
     cityDisplayName("Munich", "DE", "es", "Münih") === "Munich");
-  ok("emin olunmayan adlar tabloda yok (Kyiv, Kraków, Mexico City)",
-    !("UA:Kyiv" in TR_CITY_NAMES) && !("PL:Kraków" in TR_CITY_NAMES) && !("MX:Mexico City" in TR_CITY_NAMES));
+  ok("emin olunmayan adlar tabloda yok (Kyiv, Kraków, Mexico City, Jakarta, Ürümqi, Peshawar)",
+    !("UA:Kyiv" in TR_CITY_NAMES) && !("PL:Kraków" in TR_CITY_NAMES) && !("MX:Mexico City" in TR_CITY_NAMES) &&
+    !("ID:Jakarta" in TR_CITY_NAMES) && !("CN:Ürümqi" in TR_CITY_NAMES) && !("PK:Peshawar" in TR_CITY_NAMES));
+  ok("standart Türkçe adlar: Kinşasa, Konakri, Kanberra, Çimkent, Köstence, Süveyş, Necef, Kerbela",
+    cityDisplayName("Kinshasa", "CD", "tr") === "Kinşasa" && cityDisplayName("Conakry", "GN", "tr") === "Konakri" &&
+    cityDisplayName("Canberra", "AU", "tr") === "Kanberra" && cityDisplayName("Shymkent", "KZ", "tr") === "Çimkent" &&
+    cityDisplayName("Constanţa", "RO", "tr") === "Köstence" && cityDisplayName("Suez", "EG", "tr") === "Süveyş" &&
+    cityDisplayName("Najaf", "IQ", "tr") === "Necef" && cityDisplayName("Karbala", "IQ", "tr") === "Kerbela");
 }
 
 /* ------------------------ A / B kademeleri ------------------------ */
@@ -272,12 +312,20 @@ const TIER_B = CITIES.filter(isTierB);
   const graz = new Set(["AT:Graz"]);
   ok("A: rehberi olan şehir (nüfusu küçük olsa da ≥ 100 bin); rehbersizse değil",
     isTierA(mk({ name: "Graz", iso2: "AT", popK: 222 }), graz) && !isTierA(mk({ name: "Graz", iso2: "AT", popK: 222 })));
-  ok("A: rehberi olsa da nüfusu < 100 bin ve başkent değilse çıkmaz (isEligible kuralı aynen)",
-    !isTierA(mk({ name: "Graz", iso2: "AT", popK: 99 }), graz) && isTierA(mk({ name: "Graz", iso2: "AT", popK: 100 }), graz));
+  ok("A: rehberli şehir nüfusu ne olursa olsun A (Hvar 4 bin, Giethoorn 2 bin, nüfusu 0 bile); tek açık kural",
+    isTierA(mk({ name: "Hvar", iso2: "HR", popK: 4 }), new Set(["HR:Hvar"])) &&
+    isTierA(mk({ name: "Giethoorn", iso2: "NL", popK: 2 }), new Set(["NL:Giethoorn"])) &&
+    isTierA(mk({ name: "Graz", iso2: "AT", popK: 0 }), graz) && !isTierA(mk({ name: "Hvar", iso2: "HR", popK: 4 })));
+  ok("uygunluk: rehberli şehir nüfusu küçük olsa da uygun; rehbersiz < 100 bin değil",
+    isEligible(mk({ name: "Hvar", iso2: "HR", popK: 4 }), new Set(["HR:Hvar"])) && !isEligible(mk({ name: "Hvar", iso2: "HR", popK: 4 })));
+  ok("güçlü/zayıf: >= 2 milyon güçlü; rehberli ve >= 100 bin güçlü; rehberli küçük yer ve rehbersiz 1–2 milyonluk başkent zayıf",
+    isStrong(mk({ popK: 2000 })) && !isStrong(mk({ popK: 1999, capital: true })) &&
+    isStrong(mk({ name: "Graz", iso2: "AT", popK: 100 }), graz) && !isStrong(mk({ name: "Graz", iso2: "AT", popK: 99 }), graz) &&
+    !isStrong(mk({ name: "Bamako", iso2: "ML", popK: 1297, capital: true })));
   ok("A: rehberi olan küçük başkent A (Valletta)", isTierA(mk({ name: "Valletta", iso2: "MT", capital: true, popK: 7 }), new Set(["MT:Valletta"])));
   ok("rehber anahtarı ülke kodu + veri adı (başka ülkedeki aynı ad etkilenmez)",
     !isTierA(mk({ name: "Graz", iso2: "XX", popK: 222 }), graz) && cityKey({ iso2: "AT", name: "Graz" }) === "AT:Graz");
-  ok("B (eski kural): başkent ya da nüfusu ≥ 500 bin", isTierB(mk({ capital: true, popK: 5 })) && isTierB(mk({ popK: 500 })) && !isTierB(mk({ popK: 499 })));
+  ok("B kademesi: başkent ya da nüfusu ≥ 500 bin", isTierB(mk({ capital: true, popK: 5 })) && isTierB(mk({ popK: 500 })) && !isTierB(mk({ popK: 499 })));
   ok("isEligible: başkent ya da ≥ 100 bin", isEligible(mk({ capital: true, popK: 1 })) && isEligible(mk({ popK: 100 })) && !isEligible(mk({ popK: 99 })));
   ok("rehberi olmayan şehirler hâlâ nüfus kurallarıyla A olur (rehber listesi boşken de)", isTierA(mk({ popK: 2500 })) && !isTierA(mk({ popK: 1200 })));
 
@@ -290,11 +338,13 @@ const TIER_B = CITIES.filter(isTierB);
 
   const countriesA = new Set(TIER_A.map((c) => c.iso2));
   const countriesAll = new Set(CITIES.map((c) => c.iso2));
-  ok("A ⊂ uygun şehirler (nüfusu < 100 bin olan yalnız başkentse A)", TIER_A.every(isEligible));
-  ok("rehberi olan her uygun şehir A'da", CITIES.filter((c) => GUIDED.has(cityKey(c)) && isEligible(c)).every((c) => TIER_A.includes(c)));
-  ok("B'de olmayan A şehirleri yalnız rehberli 100–500 bin arası şehirler",
-    TIER_A.filter((c) => !isTierB(c)).every((c) => GUIDED.has(cityKey(c)) && c.popK >= 100));
-  ok("A kademesi geniş: ≥ 300 şehir ve ≥ 100 ülke", TIER_A.length >= 300 && countriesA.size >= 100, `${TIER_A.length} şehir, ${countriesA.size}/${countriesAll.size} ülke`);
+  ok("A ⊂ uygun şehirler (nüfusu < 100 bin olan yalnız başkent ya da rehberliyse A)", TIER_A.every((c) => isEligible(c, GUIDED)));
+  ok("REHBERLİ ŞEHİR = HER ZAMAN A: rehberi olan her şehir (nüfusu ne olursa olsun) A'da", CITIES.filter((c) => GUIDED.has(cityKey(c))).every((c) => TIER_A.includes(c)));
+  ok("B'de olmayan A şehirleri yalnız rehberli şehirler", TIER_A.filter((c) => !isTierB(c)).every((c) => GUIDED.has(cityKey(c))));
+  const dropped = ["CY:Larnaca", "CY:Paphos", "CY:Famagusta", "AL:Shkodër", "HR:Zadar", "ME:Herceg Novi", "ME:Budva", "SI:Maribor"];
+  ok("daha önce hiç çıkmayan rehberli şehirler veride, rehberli ve A'da: Larnaka, Baf, Gazimağusa, Shkodër, Zadar, Herceg Novi, Budva, Maribor",
+    dropped.every((k) => CITIES.some((c) => cityKey(c) === k && GUIDED.has(k) && TIER_A.includes(c))), dropped.filter((k) => !GUIDED.has(k)).join(", "));
+  ok("A kademesi geniş: ≥ 400 şehir ve ≥ 100 ülke", TIER_A.length >= 400 && countriesA.size >= 100, `${TIER_A.length} şehir, ${countriesA.size}/${countriesAll.size} ülke`);
   ok("A'nın tek ülkeyi doldurması yok: hiçbir ülkenin A şehir payı %15'i geçmez", Math.max(...[...countriesA].map((k) => TIER_A.filter((c) => c.iso2 === k).length)) / TIER_A.length <= 0.15);
 
   // Kovalar için yeterli A×A çifti var mı? (farklı ülke çiftleri ve aynı ülke kısa çiftleri)
@@ -367,6 +417,14 @@ const TIER_B = CITIES.filter(isTierB);
   let tooMany = 0;
   let looseGames = 0;
   let bothObscure = 0;
+  let weakGames = 0;
+  let weakWeak = 0;
+  let overCountry = 0;
+  let tooClose = 0;
+  let weakSlots = 0;
+  let singletonSlots = 0;
+  const A_PER_COUNTRY = new Map<string, number>();
+  for (const c of TIER_A) A_PER_COUNTRY.set(c.iso2, (A_PER_COUNTRY.get(c.iso2) ?? 0) + 1);
   const countryUse = new Map<string, number>();
   const cityUse = new Map<number, number>();
   const bucketTotals = { short: 0, mid: 0, long: 0 };
@@ -391,7 +449,7 @@ const TIER_B = CITIES.filter(isTierB);
         badRelaxed++; // gevşek tur A–A olamaz
       }
       for (const c of [r.a, r.b]) {
-        if (c.popK < 100 && !c.capital) tooSmall++;
+        if (c.popK < 100 && !c.capital && !GUIDED.has(cityKey(c))) tooSmall++;
         countryUse.set(c.iso2, (countryUse.get(c.iso2) ?? 0) + 1);
         cityUse.set(c.id, (cityUse.get(c.id) ?? 0) + 1);
         seenCountries.add(c.iso2);
@@ -406,6 +464,26 @@ const TIER_B = CITIES.filter(isTierB);
       counts[r.bucket]++;
       bucketTotals[r.bucket]++;
     }
+    // Yeni kalite kuralları: zayıf sınırı, ülke sınırı, aynı oyunda yakın şehir yok, her soruda güçlü uç.
+    const weak = rounds.flatMap((r) => [r.a, r.b]).filter((c) => isTierA(c, GUIDED) && !isStrong(c, GUIDED));
+    weakSlots += weak.length;
+    if (weak.length > MAX_WEAK_PER_GAME) weakGames++;
+    for (const r of rounds) if (!isStrong(r.a, GUIDED) && !isStrong(r.b, GUIDED)) weakWeak++;
+    const perCountry = new Map<string, number>();
+    for (const c of rounds.flatMap((r) => [r.a, r.b])) {
+      perCountry.set(c.iso2, (perCountry.get(c.iso2) ?? 0) + 1);
+      if (A_PER_COUNTRY.get(c.iso2) === 1) singletonSlots++;
+    }
+    if ([...perCountry.values()].some((n) => n > MAX_PER_COUNTRY)) overCountry++;
+    for (let x = 0; x < rounds.length; x++) {
+      for (let y = x + 1; y < rounds.length; y++) {
+        for (const p of [rounds[x].a, rounds[x].b]) {
+          for (const q of [rounds[y].a, rounds[y].b]) {
+            if (haversineKm(p.lat, p.lng, q.lat, q.lng) < MIN_SEPARATION_KM) tooClose++;
+          }
+        }
+      }
+    }
     sameTotal += same;
     maxSame = Math.max(maxSame, same);
     if (loose > 1) looseGames++;
@@ -416,11 +494,18 @@ const TIER_B = CITIES.filter(isTierB);
   ok("her oyunda en çok 1 tur A dışı (10 turda %90)", looseGames === 0, `${looseGames} oyun`);
   ok("A dışı tur her zaman 'gevşek', iki şehir de B ya da A; gevşek tur hiç A–A değil", badRelaxed === 0, `${badRelaxed} hatalı`);
   ok("bir soruda iki şehir birden A dışı değil (en çok bir ucu görece az bilinir)", bothObscure === 0, `${bothObscure} soru`);
-  ok("nüfusu < 100 bin olan yer yalnız başkentse çıkar", tooSmall === 0, `${tooSmall} ihlal`);
+  ok("nüfusu < 100 bin olan yer yalnız başkent ya da rehberliyse çıkar", tooSmall === 0, `${tooSmall} ihlal`);
   ok("her oyunda aynı ülkeden en çok 1 soru", maxSame <= 1, `en çok ${maxSame}`);
   ok("aynı ülke soruları ≤ %10 (toplu)", sameTotal / allRounds <= 0.1, `${(100 * sameTotal / allRounds).toFixed(2)}%`);
   ok("aynı ülke soruları gerçekten de çıkıyor (> %1)", sameTotal / allRounds > 0.01, `${(100 * sameTotal / allRounds).toFixed(2)}%`);
   ok("her oyunda kovalar dengeli (3 / 3 / 4)", badBucketCount === 0, `${badBucketCount} oyun`);
+  ok("her soruda en az bir uç güçlü: zayıf–zayıf soru hiç yok (Bamako–Konakri gibi)", weakWeak === 0, `${weakWeak} soru`);
+  ok(`bir oyunda en çok ${MAX_WEAK_PER_GAME} zayıf A şehri`, weakGames === 0, `${weakGames} oyun`);
+  ok(`bir oyunda aynı ülkeden en çok ${MAX_PER_COUNTRY} şehir`, overCountry === 0, `${overCountry} oyun`);
+  ok(`bir oyunda farklı sorulardaki iki şehir ${MIN_SEPARATION_KM} km'den yakın değil (Tokyo–Yokohama aynı oyunda iki soruda çıkmaz)`, tooClose === 0, `${tooClose} çift`);
+  ok("zayıf uçlar yuvaların %6'sından azı (önceki seçicide ~%19)", weakSlots / (allRounds * 2) < 0.06, `${(100 * weakSlots / (allRounds * 2)).toFixed(1)}%`);
+  ok("A kademesinde tek şehri olan ülkeler yuvaların %15'inden azı (önceki seçicide ~%31)", singletonSlots / (allRounds * 2) < 0.15, `${(100 * singletonSlots / (allRounds * 2)).toFixed(1)}%`);
+  console.log(`  (bilgi) seçici: zayıf uç ${(100 * weakSlots / (allRounds * 2)).toFixed(1)}%, tek-A ülke ${(100 * singletonSlots / (allRounds * 2)).toFixed(1)}%`);
   const share = (n: number) => n / allRounds;
   ok("toplu kova payları ≈ üçte bir (her biri %29–%38)", Object.values(bucketTotals).every((n) => share(n) > 0.29 && share(n) < 0.38), JSON.stringify(bucketTotals));
   ok("kova sınırları: kısa < 1000, orta 1000–5000, uzun > 5000", bucketOf(999) === "short" && bucketOf(1000) === "mid" && bucketOf(5000) === "mid" && bucketOf(5001) === "long" && SHORT_MAX_KM === 1000 && MID_MAX_KM === 5000);
@@ -435,15 +520,15 @@ const TIER_B = CITIES.filter(isTierB);
   ok("çeşitlilik: hiçbir ülke şehir yuvalarının %6'sından fazlasını almıyor", topCountry < 0.06, `en yüksek ${(100 * topCountry).toFixed(1)}%`);
   ok("çeşitlilik: 3000 oyunda ≥ 185 farklı ülke göründü", seenCountries.size >= 185, `${seenCountries.size} ülke`);
   ok("A kademesindeki her ülke göründü", [...new Set(TIER_A.map((c) => c.iso2))].every((k) => seenCountries.has(k)));
-  ok("A kademesindeki her şehir 3000 oyunda en az bir kez çıktı", TIER_A.every((c) => cityUse.has(c.id)), TIER_A.filter((c) => !cityUse.has(c.id)).map((c) => c.name).join(", "));
+  ok("A kademesindeki her şehir 3000 oyunda en az bir kez çıktı (küçük rehberli yerler dahil)", TIER_A.every((c) => cityUse.has(c.id)), TIER_A.filter((c) => !cityUse.has(c.id)).map((c) => c.name).join(", "));
   const topCities = [...cityUse].sort((x, y) => y[1] - x[1]).slice(0, 5);
   const topCityShare = topCities[0][1] / slots;
-  ok("çeşitlilik: hiçbir şehir toplam yuvaların %1'inden fazlasını almıyor", topCityShare <= 0.01,
+  ok("çeşitlilik: hiçbir şehir toplam yuvaların %1,2'sinden fazlasını almıyor", topCityShare <= 0.012,
     topCities.map(([id, n]) => `${CITIES[id].name} ${(100 * n / slots).toFixed(2)}%`).join(", "));
-  ok("A şehirlerinin en çok geçeni en az geçenin 60 katını aşmıyor (ağırlık dengesi)", (() => {
-    const counts = TIER_A.map((c) => cityUse.get(c.id) ?? 0);
+  ok("güçlü A şehirlerinin en çok geçeni en az geçenin 60 katını aşmıyor (ağırlık dengesi)", (() => {
+    const counts = TIER_A.filter((c) => isStrong(c, GUIDED)).map((c) => cityUse.get(c.id) ?? 0);
     return Math.max(...counts) / Math.max(1, Math.min(...counts)) <= 60;
-  })(), `${Math.max(...TIER_A.map((c) => cityUse.get(c.id) ?? 0))} / ${Math.min(...TIER_A.map((c) => cityUse.get(c.id) ?? 0))}`);
+  })(), `${Math.max(...TIER_A.filter((c) => isStrong(c, GUIDED)).map((c) => cityUse.get(c.id) ?? 0))} / ${Math.min(...TIER_A.filter((c) => isStrong(c, GUIDED)).map((c) => cityUse.get(c.id) ?? 0))}`);
 
   // Math.random yolu (seed yok).
   let randomOk = true;
@@ -531,8 +616,9 @@ const TIER_B = CITIES.filter(isTierB);
   }
   const linkedA = TIER_A.filter((c) => cityKey(c) in links).length;
   console.log(`  (bilgi) A kademesindeki ${TIER_A.length} şehirden ${linkedA} tanesinin rehberi var; toplam ${entries.length}/${CITIES.length}`);
-  ok("A kademesinin rehber kuralı bu eşleşmeden gelir: guideNames ve guideLinks aynı anahtarlar",
-    JSON.stringify(Object.keys(guideNames()).sort()) === JSON.stringify(Object.keys(links).sort()));
+  const linkOnly = Object.entries(GUIDE_ALIASES).filter(([, a]) => a.linkOnly).map(([k]) => k);
+  ok("A kademesinin rehber kuralı bu eşleşmeden gelir: guideNames anahtarları = guideLinks anahtarları − yalnız-bağlantı takma adları",
+    JSON.stringify(Object.keys(guideNames()).sort()) === JSON.stringify(Object.keys(links).filter((k) => !linkOnly.includes(k)).sort()));
   const siteNames = guideNames();
   const badName = Object.entries(siteNames).filter(([k, name]) => !byCode.get(k.slice(0, 2))!.cities.some((c) => c.name === name));
   ok("guideNames: her ad rehberdeki gerçek şehir adı", badName.length === 0, badName.slice(0, 3).map(([k]) => k).join(", "));
@@ -553,6 +639,321 @@ const TIER_B = CITIES.filter(isTierB);
   ok("ülke adları: Almanya / Germany / Alemania", tr.DE === "Almanya" && en.DE === "Germany" && es.DE === "Alemania");
 }
 
+
+/* --------------------------- rehber takma adları --------------------------- */
+{
+  const links = guideLinks();
+  const names = guideNames();
+  ok("takma ad: Recife, Manaus, Salta, Guilin rehbere bağlanır", ["BR:Recife", "BR:Manaus", "AR:Salta", "CN:Guilin"].every((k) => k in links),
+    ["BR:Recife", "BR:Manaus", "AR:Salta", "CN:Guilin"].filter((k) => !(k in links)).join(", "));
+  ok("takma ad: ekranda 'Recife ve Olinda' yazmaz (yalnız bağlantı), Türkçede veri adı kalır",
+    !("BR:Recife" in names) && cityDisplayName("Recife", "BR", "tr", names["BR:Recife"]) === "Recife" &&
+    cityDisplayName("Guilin", "CN", "tr", names["CN:Guilin"]) === "Guilin");
+  ok("takma ad: Pilsen → Plzeň ve Ko Samui → Koh Samui adı gösterir (aynı yerin başka yazımı)", names["CZ:Pilsen"] === "Plzeň" && names["TH:Ko Samui"] === "Koh Samui");
+  ok("rehberi olmayan 'X ve Y' kayıtları bilerek eşleşmedi (Keukenhof ve Lisse, Postojna ve Predjama)",
+    !Object.values(links).some((h) => /keukenhof|postojna/.test(h)));
+  const hrefs = Object.values(links);
+  const dup = hrefs.filter((h, i) => hrefs.indexOf(h) !== i);
+  ok("bir rehber en çok bir oyun şehrine bağlanır", dup.length === 0, dup.slice(0, 3).join(", "));
+  ok("her takma ad anahtarı veride var", Object.keys(GUIDE_ALIASES).every((k) => CITIES.some((c) => cityKey(c) === k)));
+  ok("rehberli şehirlerin çoğu eşleşti (≥ 285 bağlantı)", Object.keys(links).length >= 285, String(Object.keys(links).length));
+  const okinawa = Object.values(links).some((h) => h.endsWith("/okinawa"));
+  ok("rehberi ada olan Okinawa, aynı adlı şehre bağlanmadı", !okinawa);
+}
+
+/* ------------------------------ Günün Turu ------------------------------ */
+{
+  const guided = GUIDED;
+  const dayA = "2026-10-09";
+  const dayB = "2026-10-10";
+  const run = (key: string) => pickRounds({ seed: dailySeed(key), guided });
+  ok("aynı tarih → aynı 10 tur (dört kez, bayt bayt)", (() => {
+    const first = JSON.stringify(run(dayA));
+    return [1, 2, 3].every(() => JSON.stringify(run(dayA)) === first) && run(dayA).length === 10;
+  })());
+  ok("farklı tarih → farklı turlar", JSON.stringify(run(dayA)) !== JSON.stringify(run(dayB)));
+  const days = Array.from({ length: 400 }, (_, i) => addDays("2026-01-01", i));
+  const sigs = new Set(days.map((d) => JSON.stringify(run(d).map((r) => [r.a.id, r.b.id]))));
+  ok("400 ardışık gün için 400 farklı oyun (tohum çakışması yok)", sigs.size === 400, String(sigs.size));
+  const seeds = new Set(days.map(dailySeed));
+  ok("400 gün için 400 farklı tohum", seeds.size === 400);
+  ok("tohum tarihin saf işlevi: sabit değerler (FNV-1a, tuzlu)", dailySeed("2026-10-09") === 3551455644 && dailySeed("2026-10-10") !== dailySeed("2026-10-09"));
+  ok("Günün Turu da seçici kurallarını taşır (10 tur, tekrarsız şehir, ≥ 1 güçlü uç)", days.slice(0, 60).every((d) => {
+    const rounds = run(d);
+    const ids = rounds.flatMap((r) => [r.a.id, r.b.id]);
+    return rounds.length === 10 && new Set(ids).size === 20 && rounds.every((r) => isStrong(r.a, guided) || isStrong(r.b, guided));
+  }));
+  ok("tarih anahtarı biçimi", isDateKey("2026-10-09") && !isDateKey("2026-13-01") && !isDateKey("2026-02-30") && !isDateKey("26-10-09") && !isDateKey(20261009));
+  ok("yerel tarih anahtarı: bileşenlerden", dateKeyOf(new Date(2026, 9, 9, 23, 59, 59)) === "2026-10-09" && dateKeyOf(new Date(2026, 9, 10, 0, 0, 1)) === "2026-10-10");
+  ok("saat dilimi sınırı: aynı an, farklı yerel gün (İstanbul 10 Ekim, Los Angeles 9 Ekim)", (() => {
+    const instant = new Date("2026-10-10T02:30:00Z");
+    return dateKeyOf(instant, "Europe/Istanbul") === "2026-10-10" && dateKeyOf(instant, "America/Los_Angeles") === "2026-10-09" &&
+      dateKeyOf(instant, "Pacific/Kiritimati") === "2026-10-10";
+  })());
+  ok("gün aritmetiği: ay, yıl ve artık gün sınırları", daysBetween("2026-02-28", "2026-03-01") === 1 && daysBetween("2028-02-28", "2028-03-01") === 2 &&
+    daysBetween("2026-12-31", "2027-01-01") === 1 && addDays("2026-12-31", 1) === "2027-01-01" && addDays("2026-03-01", -1) === "2026-02-28" && daysBetween("2026-10-09", "2026-10-02") === -7);
+  ok("yaz saati geçişi günü 1 gün sayılır (Avrupa 2026-03-29, ABD 2026-03-08 ileri; 2026-10-25 geri)",
+    daysBetween("2026-03-28", "2026-03-29") === 1 && daysBetween("2026-03-29", "2026-03-30") === 1 && daysBetween("2026-10-24", "2026-10-26") === 2 && daysBetween("2026-03-07", "2026-03-09") === 2);
+  ok("localDateFromKey öğlen yerel saat (gün kaymaz)", dateKeyOf(localDateFromKey("2026-10-09")) === "2026-10-09" && localDateFromKey("2026-10-09").getHours() === 12);
+}
+
+/* -------------------------- emoji şeridi ve puan eşikleri -------------------------- */
+{
+  ok("eşikler: 1000 → 🟩, 800 → 🟩, 799 → 🟨, 400 → 🟨, 399 → 🟧, 100 → 🟧, 99 → 🟥, 0 → 🟥",
+    emojiFor(1000) === "🟩" && emojiFor(800) === "🟩" && emojiFor(799) === "🟨" && emojiFor(400) === "🟨" &&
+    emojiFor(399) === "🟧" && emojiFor(100) === "🟧" && emojiFor(99) === "🟥" && emojiFor(0) === "🟥");
+  ok("şerit: 10 tur → 10 kare, sırayla", emojiStrip([1000, 800, 799, 400, 399, 100, 99, 0, 650, 250]) === "🟩🟩🟨🟨🟧🟧🟥🟥🟨🟧");
+  ok("şerit: her kare tek bir emoji (UTF-16 uzunluğu 2)", [...emojiStrip(Array(10).fill(900))].length === 10);
+  const base = { header: "Wangoh · Kaç kilometre? — Günün Turu 9 Ekim 2026 · seri 3", scores: [900, 500, 150, 20, 810, 820, 450, 120, 990, 5], scoreLine: "4.765 / 10.000", url: "wangoh.com/mesafe" };
+  const text = shareText(base);
+  ok("paylaşım metni: başlık, emoji şeridi, puan, adres (4 satır)", text.split("\n").length === 4 && text.split("\n")[0] === base.header && text.split("\n")[1] === "🟩🟨🟧🟥🟩🟩🟨🟧🟩🟥" && text.endsWith("wangoh.com/mesafe") && text.includes("4.765 / 10.000"));
+  ok("paylaşım adresi dile göre: tr wangoh.com/mesafe, en /en/distance, es /es/distancia", shareUrl("tr") === "wangoh.com/mesafe" && shareUrl("en") === "wangoh.com/en/distance" && shareUrl("es") === "wangoh.com/es/distancia" && shareUrl("xx") === "wangoh.com/mesafe");
+}
+
+/* ------------------------------ seri ve istatistik ------------------------------ */
+{
+  const game = (mode: "free" | "daily", dateKey: string, total: number) => ({ mode, dateKey, total, scores: Array(10).fill(Math.round(total / 10)) });
+  let st: Stats = EMPTY_STATS;
+  const play = (mode: "free" | "daily", dateKey: string, total: number) => {
+    const r = recordGame(st, game(mode, dateKey, total));
+    st = r.stats;
+    return r;
+  };
+
+  let r = play("daily", "2026-10-01", 5000);
+  ok("ilk günün turu: resmî, seri 1, istatistik 1 oyun", r.official && r.counted && st.streak === 1 && st.played === 1 && st.best === 5000 && st.daily["2026-10-01"].total === 5000);
+  ok("ilk oyunda 'yeni rekor' denmez (geçilecek rekor yok)", r.newBest === false);
+  r = play("daily", "2026-10-01", 9000);
+  ok("aynı gün tekrar: resmî puan, istatistik, seri DEĞİŞMEZ", !r.official && !r.counted && st.daily["2026-10-01"].total === 5000 && st.played === 1 && st.best === 5000 && st.streak === 1);
+  r = play("daily", "2026-10-02", 6000);
+  ok("ertesi gün: seri 2", r.official && st.streak === 2 && st.bestStreak === 2 && r.newBest && st.best === 6000);
+  r = play("free", "2026-10-02", 4000);
+  ok("serbest oyun seriyi değiştirmez, istatistiğe işler", !r.official && r.counted && st.streak === 2 && st.played === 3 && !r.newBest);
+  r = play("daily", "2026-10-03", 7000);
+  ok("üçüncü gün: seri 3", st.streak === 3 && st.bestStreak === 3 && r.streak === 3);
+  r = play("daily", "2026-10-06", 3000);
+  ok("gün atlayınca (4 ve 5 Ekim oynanmadı) seri 1'e döner, en uzun seri 3 kalır", st.streak === 1 && st.bestStreak === 3 && r.streak === 1);
+  ok("ortalama: toplam puan / sayılan oyun", st.played === 5 && averageScore(st) === Math.round((5000 + 6000 + 4000 + 7000 + 3000) / 5), String(averageScore(st)));
+  ok("güncel seri: oynadığı gün ve ertesi gün süregelir, iki gün sonra kopar",
+    currentStreak(st, "2026-10-06") === 1 && currentStreak(st, "2026-10-07") === 1 && currentStreak(st, "2026-10-08") === 0 && currentStreak(EMPTY_STATS, "2026-10-08") === 0);
+  ok("güncel seri: cihaz saati / saat dilimi geriye gitse (bir gün önce) seri bozulmaz", currentStreak(st, "2026-10-05") === 1);
+  // saat dilimi sınırı: doğuya uçuş (aynı takvim günü atlandı) ve batıya uçuş (aynı gün iki kez görünür)
+  let travel: Stats = EMPTY_STATS;
+  travel = recordGame(travel, game("daily", "2026-10-09", 5000)).stats;
+  const west = recordGame(travel, game("daily", "2026-10-08", 6000));
+  ok("batıya uçuş: yerel gün geri gitti (8 Ekim) — yeni gün sayılır ama seri/son gün ilerlemez, çökmez",
+    west.official && west.stats.lastDaily === "2026-10-09" && west.stats.streak === 1 && currentStreak(west.stats, "2026-10-08") === 1);
+  const east = recordGame(travel, game("daily", "2026-10-11", 6000));
+  ok("doğuya uçuş: bir gün atlandı (10 Ekim yok) → seri 1'e döner", east.stats.streak === 1 && east.stats.lastDaily === "2026-10-11");
+  // eski kayıttan göç
+  const legacy = parseStats({ best: 7300, played: 12 });
+  ok("v1 kaydı ({best, played}) göçü: rekor ve oyun sayısı korunur, ortalama bilinmez", legacy.best === 7300 && legacy.played === 12 && averageScore(legacy) === null && legacy.streak === 0 && legacy.sound === false);
+  const afterLegacy = recordGame(legacy, game("free", "2026-10-09", 5000)).stats;
+  ok("göç sonrası ortalama yalnız yeni oyunlardan", averageScore(afterLegacy) === 5000 && afterLegacy.played === 13);
+  ok("bozuk kayıt güvenle okunur (null, dizi, sayı, çöp alanlar)", [null, undefined, 5, "x", [], { best: "a", played: -3, streak: 99, daily: { bad: 1, "2026-01-01": { total: 1, scores: [1] } } }].every((v) => {
+    const p = parseStats(v);
+    return p.played >= 0 && p.best >= 0 && p.streak === 0 && Object.keys(p.daily).length === 0 && p.sound === false;
+  }));
+  ok("ses tercihi kayda işlenir ve okunur", parseStats({ ...st, sound: true }).sound === true && parseStats({ ...st, sound: "yes" }).sound === false);
+  ok("kayıt gidiş-dönüş: JSON'dan okununca aynı", JSON.stringify(parseStats(JSON.parse(JSON.stringify(st)))) === JSON.stringify(st));
+  // eski günlükler budanır
+  let long: Stats = EMPTY_STATS;
+  for (let i = 0; i < DAILY_KEEP_DAYS + 20; i++) long = recordGame(long, game("daily", addDays("2026-01-01", i), 5000)).stats;
+  ok("günlük sonuçlar son 45 günle sınırlı; seri budamadan etkilenmez", Object.keys(long.daily).length <= DAILY_KEEP_DAYS + 1 && long.streak === DAILY_KEEP_DAYS + 20);
+}
+
+/* --------------------------- durum makinesi: modlar --------------------------- */
+{
+  const rounds = pickRounds({ seed: 5 });
+  const daily = reducer(INITIAL_STATE, { type: "start", rounds, mode: "daily", dateKey: "2026-10-09" });
+  ok("günün turu başlangıcı mod ve tarihi taşır", daily.mode === "daily" && daily.dateKey === "2026-10-09");
+  const free = reducer(daily, { type: "start", rounds, mode: "free" });
+  ok("serbest başlangıç tarihi temizler; modsuz start serbest sayılır", free.mode === "free" && free.dateKey === null && reducer(INITIAL_STATE, { type: "start", rounds }).mode === "free");
+  ok("home → giriş ekranı", reducer(daily, { type: "home" }) === INITIAL_STATE);
+}
+
+/* ------------------------------ geri bildirim ------------------------------ */
+{
+  ok("kaydırıcı tık eşikleri 1-2-5 dizisi: 100, 200, 500, 1000, 2000, 5000, 10000", JSON.stringify(DETENTS_KM) === JSON.stringify([100, 200, 500, 1000, 2000, 5000, 10000]));
+  ok("tık sayısı km ile azalmaz; 99→100 ve 4999→5000 eşik geçer, 101→199 geçmez",
+    detentIndex(10) === 0 && detentIndex(99) === 0 && detentIndex(100) === 1 && detentIndex(199) === 1 && detentIndex(200) === 2 && detentIndex(4999) === 5 && detentIndex(5000) === 6 && detentIndex(20000) === 7);
+  let prev = -1;
+  let mono = true;
+  for (let p = 0; p <= SLIDER_STEPS; p++) {
+    const d = detentIndex(kmFromPosition(p));
+    if (d < prev) mono = false;
+    prev = d;
+  }
+  ok("kaydırıcıyı baştan sona sürüklemek tam 7 eşik geçer", mono && prev === 7);
+}
+
+/* --------------------------- cevap haritası geometrisi --------------------------- */
+{
+  const rounds = Array.from({ length: 60 }, (_, i) => pickRounds({ seed: 7000 + i, guided: GUIDED })).flat();
+  const lonLat = (c: City): LngLat => [c.lng, c.lat];
+  ok("yayın A'dan 'tahmin' km uzaktaki noktası gerçekten o kadar uzakta (haversine, ±%1)", rounds.slice(0, 200).every((r) => {
+    const g = pointAlong(lonLat(r.a), lonLat(r.b), r.km, r.km * 0.5);
+    const d = haversineKm(r.a.lat, r.a.lng, g[1], g[0]);
+    return Math.abs(d - r.km * 0.5) <= r.km * 0.01 + 1;
+  }));
+  ok("pointAlong B'nin ötesine uzanır (1,3 × mesafe) ve büyük daire üzerinde kalır", rounds.slice(0, 120).every((r) => {
+    const g = pointAlong(lonLat(r.a), lonLat(r.b), r.km, r.km * 1.3);
+    const dA = haversineKm(r.a.lat, r.a.lng, g[1], g[0]);
+    return Math.abs(dA - Math.min(r.km * 1.3, 40030 - r.km * 1.3)) <= r.km * 0.02 + 2;
+  }));
+  ok("tahmin dairesi: her köşe merkezden tahmin km uzakta (±%1)", [10, 120, 1500, 9000, 19000].every((km) => {
+    const center: LngLat = [28.97, 41.01];
+    const ring = guessCircle(center, km).coordinates[0] as LngLat[];
+    return ring.length > 20 && ring.every((p) => Math.abs(haversineKm(center[1], center[0], p[1], p[0]) - km) <= km * 0.01 + 0.5);
+  }));
+  ok("kmToDegrees: 111,19 km ≈ 1 derece", near(kmToDegrees(111.195), 1, 0.001));
+  ok("kamera uçları: en az MIN_VIEW_KM genişliğinde bir bölge (50 km'lik çiftte bile)", (() => {
+    const [e1, e2] = cameraEnds([2.35, 48.85], [2.9, 48.85], 41, ) as [LngLat, LngLat];
+    return haversineKm(e1[1], e1[0], e2[1], e2[0]) >= MIN_VIEW_KM * 0.98;
+  })());
+  ok("kamera uçları: çok uzak çiftte yarım küreyi aşmaz", rounds.filter((r) => r.km > 15000).every((r) => {
+    const [e1, e2] = cameraEnds(lonLat(r.a), lonLat(r.b), r.km);
+    return haversineKm(e1[1], e1[0], e2[1], e2[0]) <= 19500 + 1;
+  }));
+
+  // Kamera: 480 gerçek soruda iki şehir de kadrajın içinde ve kenarlardan uzak.
+  let cameraBad = 0;
+  let nullPoint = 0;
+  let tinyArc = 0;
+  for (const r of rounds.slice(0, 480)) {
+    const camera = makeCamera(lonLat(r.a), lonLat(r.b), r.km);
+    const pa = camera.projection(lonLat(r.a));
+    const pb = camera.projection(lonLat(r.b));
+    if (!pa || !pb) { nullPoint++; continue; }
+    const inside = (p: number[]) => p[0] >= 20 && p[0] <= MAP_WIDTH - 20 && p[1] >= 24 && p[1] <= MAP_HEIGHT - 24;
+    if (!inside(pa) || !inside(pb)) cameraBad++;
+    if (Math.hypot(pa[0] - pb[0], pa[1] - pb[1]) < 8) tinyArc++;
+  }
+  ok("kamera: 480 soruda iki şehir de kadrajda (kenardan ≥ 20 px) ve görünür yarım kürede", cameraBad === 0 && nullPoint === 0, `${cameraBad} dışarıda, ${nullPoint} görünmez`);
+  ok("kamera: en yakın çiftte bile iki nokta ayırt edilir (≥ 8 px)", tinyArc === 0, `${tinyArc} çift`);
+
+  // Etiketler hiçbir soruda birbirinin üstüne binmez, kutudan taşmaz ve tahmin işaretini nadiren örter.
+  let labelBad = 0;
+  let coversGuess = 0;
+  const rng = makeRng(42);
+  const rounds480 = rounds.slice(0, 480);
+  for (const r of rounds480) {
+    const camera = makeCamera(lonLat(r.a), lonLat(r.b), r.km);
+    const pa = camera.projection(lonLat(r.a))! as [number, number];
+    const pb = camera.projection(lonLat(r.b))! as [number, number];
+    const guessKm = r.km * (0.3 + rng() * 2.2);
+    const gp = camera.projection(pointAlong(lonLat(r.a), lonLat(r.b), r.km, guessKm)) as [number, number] | null;
+    const wa = estimateLabelWidth(r.a.name);
+    const wb = estimateLabelWidth(r.b.name);
+    const { a, b } = placeLabels(pa, pb, wa, wb, { width: MAP_WIDTH, height: MAP_HEIGHT }, gp ? [gp] : []);
+    const rect = (spot: { x: number; y: number }, w: number) => ({ l: spot.x - w / 2, r: spot.x + w / 2, t: spot.y - 11, b: spot.y + 4 });
+    const ra = rect(a, wa);
+    const rb = rect(b, wb);
+    const overlap = ra.l < rb.r && rb.l < ra.r && ra.t < rb.b && rb.t < ra.b;
+    const out = [ra, rb].some((q) => q.l < 0 || q.r > MAP_WIDTH || q.t < 0 || q.b > MAP_HEIGHT);
+    if (overlap || out) labelBad++;
+    if (gp && [ra, rb].some((q) => gp[0] > q.l - 4 && gp[0] < q.r + 4 && gp[1] > q.t - 4 && gp[1] < q.b + 4)) coversGuess++;
+  }
+  ok("etiketler: 480 soruda birbirine binmez ve harita kutusundan taşmaz", labelBad === 0, `${labelBad} sorun`);
+  ok("etiketler: tahmin işaretini örtmez (480 soruda ≤ %2)", coversGuess <= rounds480.length * 0.02, `${coversGuess} soru`);
+
+  // Harita yolları gerçekten üretiliyor (dünya verisi, çevrimdışı JSON).
+  const sample = rounds.slice(0, 12);
+  const t0 = Date.now();
+  const drawn = sample.map((r) => prepare(lonLat(r.a), lonLat(r.b), r.km).paths);
+  ok("dünya yolları: kara, sınır, küre ve çizgi ağı üretilir", drawn.every((d) => d.land.length > 500 && d.borders.length > 100 && d.sphere.length > 10 && d.graticule.length > 100));
+  console.log(`  (bilgi) ${sample.length} haritanın yolları ${Date.now() - t0} ms (Node, ${Math.round((Date.now() - t0) / sample.length)} ms/harita)`);
+  ok("vurgu: Paris ve Tokyo'nun ülkeleri bulunur", (() => {
+    const paris: LngLat = [2.35, 48.85];
+    const tokyo: LngLat = [139.69, 35.69];
+    const d = prepare(paris, tokyo, 9712).paths;
+    return !!d.highlightA && !!d.highlightB;
+  })());
+  ok("orta nokta iki şehre eşit uzaklıkta", (() => {
+    const a: LngLat = [2.35, 48.85];
+    const b: LngLat = [139.69, 35.69];
+    const m = midpoint(a, b);
+    return near(haversineKm(a[1], a[0], m[1], m[0]), haversineKm(b[1], b[0], m[1], m[0]), 1);
+  })());
+}
+
+/* ------------------- erişilebilirlik: kontrast ve kaynak taraması ------------------- */
+{
+  const lum = (hex: string) => {
+    const [r, g, b] = [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16) / 255).map((c) => (c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4));
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+  };
+  const lumRgb = (r: number, g: number, b: number) => {
+    const [R, G, B] = [r, g, b].map((v) => v / 255).map((c) => (c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4));
+    return 0.2126 * R + 0.7152 * G + 0.0722 * B;
+  };
+  const ratio = (l1: number, l2: number) => (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05);
+  const BG = lum("#06090f");
+  const PANEL = lumRgb(6 + 0.06 * (255 - 6), 9 + 0.06 * (255 - 9), 15 + 0.06 * (255 - 15)); // bg-white/[0.06] üstü
+  // Not: Renk sabitleri ui.tsx'te; dosyadan okunur ki test gerçek değerleri denetlesin.
+  const uiSource = readFileSync(join(__dirname, "..", "src", "features", "distance-game", "ui.tsx"), "utf8");
+  const tintMatch = /TINTS = \{ great: "(#\w+)", good: ACCENT, fair: "(#\w+)", far: "(#\w+)" \}/.exec(uiSource)!;
+  const tints = [tintMatch[1], "#c8a45e", tintMatch[2], tintMatch[3]];
+  ok("tur sonucu renkleri koyu zeminde ≥ 4,5:1", tints.every((c) => ratio(lum(c), BG) >= 4.5), tints.map((c) => ratio(lum(c), BG).toFixed(2)).join(", "));
+  ok("tur sonucu renkleri cevap panelinin (hafif açık) zemininde de ≥ 4,5:1", tints.every((c) => ratio(lum(c), PANEL) >= 4.5), tints.map((c) => ratio(lum(c), PANEL).toFixed(2)).join(", "));
+  const whiteAt = (alpha: number, under = BG) => ratio(lumRgb(...([6, 9, 15].map((v) => v + alpha * (255 - v)) as [number, number, number])), under);
+  ok("ikincil yazı beyaz/%55 ve üstü koyu zeminde ≥ 4,5:1 (en düşük izin verilen)", whiteAt(0.55) >= 4.5, whiteAt(0.55).toFixed(2));
+  ok("kaydırıcının dolmamış rayı (beyaz/%38) zeminden ≥ 3:1 (arayüz bileşeni)", whiteAt(0.38) >= 3, whiteAt(0.38).toFixed(2));
+  const css = readFileSync(join(__dirname, "..", "src", "app", "globals.css"), "utf8");
+  ok("kaydırıcı rayı CSS'i 0,38 opaklıkta", /rgba\(255, 255, 255, 0\.38\) var\(--fill\)/.test(css));
+
+  // Kaynak taraması: oyunun hiçbir bileşeni %55'ten sönük metin rengi kullanmaz.
+  const dir = join(__dirname, "..", "src", "features", "distance-game");
+  const files = readdirSync(dir).filter((f) => f.endsWith(".tsx"));
+  const low: string[] = [];
+  for (const f of files) {
+    const src = readFileSync(join(dir, f), "utf8");
+    for (const m of src.matchAll(/text-white\/(\d+)/g)) if (Number(m[1]) < 55) low.push(`${f}: ${m[0]}`);
+    for (const m of src.matchAll(/text-\[var\(--gold\)\]\/(\d+)/g)) if (Number(m[1]) < 80) low.push(`${f}: ${m[0]}`);
+  }
+  ok("oyun bileşenlerinde sönük metin rengi yok (text-white/<55, altın metin <%80)", low.length === 0, low.join("; "));
+
+  // Dokunma hedefi ve erişilebilirlik işaretleri (kaynakta).
+  const play = readFileSync(join(dir, "PlayScreen.tsx"), "utf8");
+  ok("kaydırıcı: aria-valuetext, aria-label ve soruya aria-describedby", /aria-valuetext=\{t\("sliderValueText"/.test(play) && /aria-label=\{t\("sliderLabel"\)\}/.test(play) && /aria-describedby="dg-question dg-scale-hint"/.test(play));
+  ok("tur sonucu kalıcı canlı bölgede duyurulur (role=status aria-live=polite)", /role="status" aria-live="polite" className="sr-only"/.test(play));
+  ok("odak: yeni turda kaydırıcıya, cevaptan sonra 'sıradaki tur' düğmesine", /\(revealed \? nextRef : sliderRef\)\.current\?\.focus/.test(play));
+  ok("−/+ düğmeleri 44 px (size-11) ve kaydırıcı 44 px yükseklikte", /size-11/.test(play) && /height: 44px;/.test(css));
+  ok("güvenli alan: çentik ve ev çubuğu payı (env(safe-area-inset-*)) oyun kabuğunda", ["top", "right", "bottom", "left"].every((side) => css.includes(`env(safe-area-inset-${side})`)));
+  ok("hareket azaltma: dg-* animasyonları prefers-reduced-motion'da kapanır", /@media \(prefers-reduced-motion: reduce\) \{\s*\.dg-rise[^}]*animation: none/.test(css));
+  const feedback = readFileSync(join(dir, "feedback.ts"), "utf8");
+  ok("titreşim: try/catch içinde, varlık denetimiyle, hareket azaltılmışsa yok", /typeof navigator\.vibrate !== "function"/.test(feedback) && /reducedMotion\(\)/.test(feedback) && /catch \{/.test(feedback));
+  ok("ses varsayılan KAPALI (EMPTY_STATS.sound = false) ve dosya yok (WebAudio)", EMPTY_STATS.sound === false && /createOscillator/.test(feedback) && !/new Audio\(|\.mp3|\.wav|\.ogg/.test(feedback));
+}
+
+/* ----------------- ağ yok: oyun kodu hiçbir uzak adres çağırmaz ----------------- */
+{
+  const dir = join(__dirname, "..", "src", "features", "distance-game");
+  const offenders: string[] = [];
+  for (const f of readdirSync(dir)) {
+    if (!/\.(tsx?|css)$/.test(f)) continue;
+    const src = readFileSync(join(dir, f), "utf8");
+    if (/\bfetch\(|XMLHttpRequest|sendBeacon|new WebSocket|https?:\/\/(?!www\.geonames\.org|creativecommons\.org)[a-z]/i.test(src.replace(/\/\*[\s\S]*?\*\/|\/\/.*$/gm, ""))) offenders.push(f);
+  }
+  ok("oyun kodunda fetch / XHR / uzak adres yok (GeoNames atıf bağlantıları hariç)", offenders.length === 0, offenders.join(", "));
+  const mapSrc = readFileSync(join(dir, "worldMap.ts"), "utf8");
+  ok("harita verisi world-atlas paketinden içe aktarılır (ikinci kopya ve CDN yok)", /from "world-atlas\/countries-110m\.json"/.test(mapSrc) && !/jsdelivr|unpkg|cdn\./.test(mapSrc));
+  const game = readFileSync(join(dir, "DistanceGame.tsx"), "utf8") + readFileSync(join(dir, "PlayScreen.tsx"), "utf8") + readFileSync(join(dir, "IntroScreen.tsx"), "utf8");
+  ok("ana pakete harita verisi girmez: oyun ekranları worldMap/RevealMap'i yalnız dinamik içe aktarır", !/from "\.\/(worldMap|RevealMap)"/.test(game) && /import\("\.\/RevealMap"\)/.test(game));
+}
+
+/* ------------------------------- çerez politikası ------------------------------- */
+{
+  const files = [
+    join(__dirname, "..", "src", "app", "[locale]", "(kurumsal)", "cerez-politikasi", "page.tsx"),
+    join(__dirname, "..", "src", "components", "legal", "en", "Cookies.tsx"),
+    join(__dirname, "..", "src", "components", "legal", "es", "Cookies.tsx"),
+  ];
+  ok("yeni localStorage anahtarı (wangoh.distancegame.v2) üç dilde çerez politikasında", files.every((f) => readFileSync(f, "utf8").includes("wangoh.distancegame.v2")));
+  const hook = readFileSync(join(__dirname, "..", "src", "features", "distance-game", "useDistanceGame.ts"), "utf8");
+  ok("oyun kodu yalnız belgelenmiş anahtarı yazar (v2); v1 yalnız okunur", /setItem\(STORAGE_KEY/.test(hook) && !/setItem\(LEGACY_KEY/.test(hook) && /STORAGE_KEY = "wangoh\.distancegame\.v2"/.test(hook) && !/document\.cookie/.test(hook));
+}
+
 /* ------------------------------ mesajlar ------------------------------ */
 {
   type Tree = { [key: string]: string | Tree };
@@ -571,5 +972,26 @@ const TIER_B = CITIES.filter(isTierB);
   ok("en atıf satırı 'City data: GeoNames (CC BY 4.0)'", String(get(load("en"), "DistanceGame.dataCredit")).replace(/<[^>]+>/g, "") === "City data: GeoNames (CC BY 4.0)");
 }
 
-console.log(`\n${pass} passed, ${fail} failed`);
-process.exit(fail ? 1 : 0);
+/* ------------------------- eşzamansız: kademeli hazırlık ------------------------- */
+const pending: Promise<void>[] = [];
+{
+  const a: LngLat = [28.97, 41.01];
+  const b: LngLat = [-0.13, 51.51];
+  let pauses = 0;
+  pending.push(
+    prepareIdle(a, b, 2500, async () => {
+      pauses++;
+      await new Promise((r) => setTimeout(r, 0));
+    }).then(() => {
+      const t0 = Date.now();
+      const paths = prepare(a, b, 2500).paths;
+      ok("kademeli hazırlık: dört adım arasında ana iş parçacığına nefes verir", pauses === 4, String(pauses));
+      ok("kademeli hazırlık sonrası prepare() anında döner ve tüm yollar hazır", Date.now() - t0 < 5 && paths.land.length > 500 && paths.borders.length > 100 && paths.graticule.length > 50 && paths.sphere.length > 10);
+    })
+  );
+}
+
+Promise.all(pending).then(() => {
+  console.log(`\n${pass} passed, ${fail} failed`);
+  process.exit(fail ? 1 : 0);
+});
