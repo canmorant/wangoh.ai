@@ -28,6 +28,7 @@ const STATIC_SEGMENTS: Record<string, Record<SlugLocale, string>> = {
   "gizlilik-politikasi": { en: "privacy-policy", es: "politica-de-privacidad" },
   "cerez-politikasi": { en: "cookie-policy", es: "politica-de-cookies" },
   "kullanim-kosullari": { en: "terms-of-use", es: "condiciones-de-uso" },
+  mesafe: { en: "distance", es: "distancia" },
 };
 
 interface Maps {

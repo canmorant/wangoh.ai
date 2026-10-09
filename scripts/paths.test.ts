@@ -22,7 +22,7 @@ const ok = (n: string, c: boolean, d = "") => {
 /** Uygulamanın ilk düzey sabit yolları (route klasörleri). */
 const STATIC_ROUTES = [
   "gezi-rehberleri", "hakkimizda", "iletisim", "gizlilik-politikasi",
-  "cerez-politikasi", "kullanim-kosullari", "tests", "flags", "cevrimdisi",
+  "cerez-politikasi", "kullanim-kosullari", "tests", "flags", "mesafe", "cevrimdisi",
 ];
 
 const countryPaths = allCountries.map((c) => `/${countrySlug(c)}`);

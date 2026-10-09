@@ -320,6 +320,59 @@
     "noBorders": "No land borders",
     "secondsValue": "{value}s"
   },
+  "DistanceGame": {
+    "eyebrow": "{rounds} rounds · works offline",
+    "title": "How many kilometres?",
+    "intro": "Two cities, one question: how many kilometres apart are they? Guess with the slider and collect points over {rounds} rounds.",
+    "howScale": "The slider is logarithmic: fine steps for short distances, wide steps for long ones. Fine-tune with the arrow keys or the − and + buttons.",
+    "howScore": "Within 2% of the real distance earns the full 1,000 points; the further off you are, the faster the score drops.",
+    "offline": "No internet needed: the game runs entirely on your device.",
+    "start": "Start playing",
+    "bestResult": "Best result",
+    "gamesPlayed": "Games played",
+    "round": "Round {current}/{total}",
+    "score": "Score",
+    "progress": "{done} of {total} rounds completed",
+    "question": "How far is it from <city>{a}</city> to <city>{b}</city>?",
+    "caption": "How many kilometres apart are they?",
+    "sliderLabel": "Estimated distance in kilometres",
+    "sliderValueText": "{km} kilometres",
+    "scaleHint": "Logarithmic scale: 10 km to 20,000 km",
+    "decrease": "Decrease the estimate",
+    "increase": "Increase the estimate",
+    "guess": "Guess",
+    "verdict": {
+      "perfect": "Spot on!",
+      "great": "Very close",
+      "good": "Good guess",
+      "fair": "Not bad",
+      "far": "Quite far off"
+    },
+    "roundScore": "Round score",
+    "actualDistance": "Actual distance",
+    "yourGuess": "Your guess",
+    "rulerGuess": "Guess",
+    "rulerActual": "Actual",
+    "errorLabel": "Error",
+    "direction": {
+      "over": "Too high",
+      "under": "Too low",
+      "exact": "Exact"
+    },
+    "readGuide": "Read this city’s guide",
+    "nextRound": "Next round",
+    "seeResults": "See results",
+    "gameOver": "Game over",
+    "totalScore": "Total score",
+    "outOf": "out of {max}",
+    "newBest": "New best!",
+    "bestSoFar": "Best result: {score}",
+    "recap": "Rounds",
+    "recapDetail": "Actual {actual} km · guess {guess} km",
+    "playAgain": "Play again",
+    "exploreGuides": "Browse the travel guides",
+    "dataCredit": "City data: <geo>GeoNames</geo> (<cc>CC BY 4.0</cc>)"
+  },
   "Flight": {
     "preparing": "Preparing your journey...",
     "nextStop": "Next stop: {country} {flag}",
@@ -598,6 +651,10 @@
     "flags": {
       "title": "Wangoh — Guess the Flag",
       "description": "Every flag in the world, one at a time. Three hints, each worth fewer points. How far can you go?"
+    },
+    "distance": {
+      "title": "Wangoh — How Many Kilometres?",
+      "description": "Guess the distance between two cities with a logarithmic slider. Score points over 10 rounds and beat your best. A travel game that works offline too."
     }
   },
   "Nav": {
@@ -609,7 +666,8 @@
     "tests": "Quizzes",
     "randomClub": "Random Football Club",
     "countryWheel": "Country Wheel",
-    "guessFlag": "Guess the Flag"
+    "guessFlag": "Guess the Flag",
+    "distance": "How Far?"
   },
   "NotFound": {
     "eyebrow": "404",

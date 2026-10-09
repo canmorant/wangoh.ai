@@ -320,6 +320,59 @@
     "noBorders": "Kara sınırı yok",
     "secondsValue": "{value} sn"
   },
+  "DistanceGame": {
+    "eyebrow": "{rounds} tur · çevrimdışı çalışır",
+    "title": "Kaç kilometre?",
+    "intro": "İki şehir, tek soru: aralarında kaç kilometre var? Kaydırıcıyla tahmin et, {rounds} tur boyunca puan topla.",
+    "howScale": "Kaydırıcı logaritmik: kısa mesafelerde ince, uzun mesafelerde geniş adımlarla ilerler. Ok tuşlarıyla ya da − ve + düğmeleriyle ince ayar yapabilirsin.",
+    "howScore": "Hatan en fazla %2 ise tam puan (1.000) alırsın; tahmin gerçeğe uzaklaştıkça puan hızla düşer.",
+    "offline": "İnternet gerekmez; oyun tamamen cihazında çalışır.",
+    "start": "Oyuna başla",
+    "bestResult": "En iyi sonuç",
+    "gamesPlayed": "Oynanan oyun",
+    "round": "Tur {current}/{total}",
+    "score": "Puan",
+    "progress": "{done} / {total} tur tamamlandı",
+    "question": "<city>{a}</city> ile <city>{b}</city> arası kaç kilometre?",
+    "caption": "Aralarında kaç kilometre var?",
+    "sliderLabel": "Tahmin edilen mesafe (kilometre)",
+    "sliderValueText": "{km} kilometre",
+    "scaleHint": "Logaritmik ölçek: 10 km’den 20.000 km’ye",
+    "decrease": "Tahmini azalt",
+    "increase": "Tahmini artır",
+    "guess": "Tahmin et",
+    "verdict": {
+      "perfect": "Tam isabet!",
+      "great": "Çok yakın",
+      "good": "İyi tahmin",
+      "fair": "Fena değil",
+      "far": "Epey uzak kaldın"
+    },
+    "roundScore": "Tur puanı",
+    "actualDistance": "Gerçek mesafe",
+    "yourGuess": "Tahminin",
+    "rulerGuess": "Tahmin",
+    "rulerActual": "Gerçek",
+    "errorLabel": "Hata",
+    "direction": {
+      "over": "Gerçeğinden fazla",
+      "under": "Gerçeğinden az",
+      "exact": "Tam"
+    },
+    "readGuide": "Bu şehrin rehberini oku",
+    "nextRound": "Sıradaki tur",
+    "seeResults": "Sonuçları gör",
+    "gameOver": "Oyun bitti",
+    "totalScore": "Toplam puan",
+    "outOf": "/ {max}",
+    "newBest": "Yeni rekor!",
+    "bestSoFar": "En iyi sonuç: {score}",
+    "recap": "Turlar",
+    "recapDetail": "Gerçek {actual} km · tahmin {guess} km",
+    "playAgain": "Tekrar oyna",
+    "exploreGuides": "Gezi rehberlerine göz at",
+    "dataCredit": "Şehir verisi: <geo>GeoNames</geo> (<cc>CC BY 4.0</cc>)"
+  },
   "Flight": {
     "preparing": "Yolculuğun hazırlanıyor...",
     "nextStop": "Sıradaki durak: {country} {flag}",
@@ -598,6 +651,10 @@
     "flags": {
       "title": "Wangoh — Bayrağı Bil",
       "description": "Dünyadaki her bayrak, teker teker. Üç ipucu, her biri daha az puan. Nereye kadar gidebilirsin?"
+    },
+    "distance": {
+      "title": "Wangoh — Kaç Kilometre?",
+      "description": "İki şehir arasındaki mesafeyi logaritmik kaydırıcıyla tahmin et. 10 turda puan topla, rekorunu kır. Çevrimdışı da çalışan bir seyahat oyunu."
     }
   },
   "Nav": {
@@ -609,7 +666,8 @@
     "tests": "Testler",
     "randomClub": "Rastgele Futbol Kulübü",
     "countryWheel": "Ülke Çarkı",
-    "guessFlag": "Bayrağı Bil"
+    "guessFlag": "Bayrağı Bil",
+    "distance": "Kaç Km?"
   },
   "NotFound": {
     "eyebrow": "404",

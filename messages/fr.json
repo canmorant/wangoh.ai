@@ -320,6 +320,59 @@
     "noBorders": "Aucune frontière terrestre",
     "secondsValue": "{value} s"
   },
+  "DistanceGame": {
+    "eyebrow": "{rounds} manches · fonctionne hors ligne",
+    "title": "Combien de kilomètres ?",
+    "intro": "Deux villes, une question : combien de kilomètres les séparent ? Devinez avec le curseur et cumulez des points sur {rounds} manches.",
+    "howScale": "Le curseur est logarithmique : pas fins pour les courtes distances, pas larges pour les longues. Affinez avec les flèches du clavier ou les boutons − et +.",
+    "howScore": "Si votre écart est de 2 % au plus, vous gagnez les 1 000 points ; plus vous vous éloignez, plus le score chute vite.",
+    "offline": "Aucune connexion nécessaire : le jeu fonctionne entièrement sur votre appareil.",
+    "start": "Commencer à jouer",
+    "bestResult": "Meilleur résultat",
+    "gamesPlayed": "Parties jouées",
+    "round": "Manche {current}/{total}",
+    "score": "Score",
+    "progress": "{done} manches sur {total} terminées",
+    "question": "Quelle distance sépare <city>{a}</city> de <city>{b}</city> ?",
+    "caption": "Combien de kilomètres les séparent ?",
+    "sliderLabel": "Distance estimée en kilomètres",
+    "sliderValueText": "{km} kilomètres",
+    "scaleHint": "Échelle logarithmique : de 10 km à 20 000 km",
+    "decrease": "Diminuer l’estimation",
+    "increase": "Augmenter l’estimation",
+    "guess": "Valider",
+    "verdict": {
+      "perfect": "En plein dans le mille !",
+      "great": "Très proche",
+      "good": "Bonne estimation",
+      "fair": "Pas mal",
+      "far": "Assez loin"
+    },
+    "roundScore": "Score de la manche",
+    "actualDistance": "Distance réelle",
+    "yourGuess": "Votre estimation",
+    "rulerGuess": "Estimation",
+    "rulerActual": "Réel",
+    "errorLabel": "Écart",
+    "direction": {
+      "over": "Trop haut",
+      "under": "Trop bas",
+      "exact": "Exact"
+    },
+    "readGuide": "Lire le guide de cette ville",
+    "nextRound": "Manche suivante",
+    "seeResults": "Voir le résultat",
+    "gameOver": "Partie terminée",
+    "totalScore": "Score total",
+    "outOf": "sur {max}",
+    "newBest": "Nouveau record !",
+    "bestSoFar": "Meilleur résultat : {score}",
+    "recap": "Manches",
+    "recapDetail": "Réel {actual} km · estimation {guess} km",
+    "playAgain": "Rejouer",
+    "exploreGuides": "Parcourir les guides de voyage",
+    "dataCredit": "Données des villes : <geo>GeoNames</geo> (<cc>CC BY 4.0</cc>)"
+  },
   "Flight": {
     "preparing": "Préparation de votre voyage…",
     "nextStop": "Prochaine escale : {country} {flag}",
@@ -598,6 +651,10 @@
     "flags": {
       "title": "Wangoh — Devinez le drapeau",
       "description": "Tous les drapeaux du monde, un par un. Trois indices, chacun rapporte moins de points. Jusqu’où irez-vous ?"
+    },
+    "distance": {
+      "title": "Wangoh — Combien de kilomètres ?",
+      "description": "Devinez la distance entre deux villes avec un curseur logarithmique. Cumulez des points sur 10 manches et battez votre record. Un jeu de voyage hors ligne."
     }
   },
   "Nav": {
@@ -609,7 +666,8 @@
     "tests": "Tests",
     "randomClub": "Club de foot au hasard",
     "countryWheel": "Roue des pays",
-    "guessFlag": "Devinez le drapeau"
+    "guessFlag": "Devinez le drapeau",
+    "distance": "Combien de km ?"
   },
   "NotFound": {
     "eyebrow": "404",

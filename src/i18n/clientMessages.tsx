@@ -7,7 +7,7 @@ import { getMessages } from "next-intl/server";
  *
  * Kök layout yalnız her sayfada bulunan istemci bileşenlerinin mesajını
  * (dil seçici) veriyor; büyük istemci ağaçları olan sayfalar (ana sayfa,
- * testler, bayrak oyunu) kendi ihtiyaçlarını <ClientMessages> ile ekliyor.
+ * testler, bayrak ve mesafe oyunları) kendi ihtiyaçlarını <ClientMessages> ile ekliyor.
  * Böylece örneğin bir şehir rehberi ana sayfa animasyonlarının metinlerini
  * HTML'inde taşımıyor.
  *
@@ -40,6 +40,7 @@ export const CLIENT_NAMESPACES = {
   nav: ["LanguageSwitcher", "Nav", "Search"],
   tests: ["LanguageSwitcher", "TravelTest"],
   flags: ["LanguageSwitcher", "FlagGame", "Geo", "Common"],
+  distance: ["LanguageSwitcher", "DistanceGame"],
 } as const;
 
 type Namespace = (typeof CLIENT_NAMESPACES)[keyof typeof CLIENT_NAMESPACES][number];

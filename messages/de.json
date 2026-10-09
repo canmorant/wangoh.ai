@@ -320,6 +320,59 @@
     "noBorders": "Keine Landgrenzen",
     "secondsValue": "{value} s"
   },
+  "DistanceGame": {
+    "eyebrow": "{rounds} Runden · funktioniert offline",
+    "title": "Wie viele Kilometer?",
+    "intro": "Zwei Städte, eine Frage: Wie viele Kilometer liegen dazwischen? Schätze mit dem Schieberegler und sammle Punkte über {rounds} Runden.",
+    "howScale": "Der Schieberegler ist logarithmisch: feine Schritte bei kurzen, große Schritte bei langen Entfernungen. Mit den Pfeiltasten oder den Tasten − und + stellst du genau ein.",
+    "howScore": "Liegst du höchstens 2 % daneben, bekommst du die vollen 1.000 Punkte; je weiter weg, desto schneller sinkt die Punktzahl.",
+    "offline": "Kein Internet nötig: Das Spiel läuft komplett auf deinem Gerät.",
+    "start": "Spiel starten",
+    "bestResult": "Bestes Ergebnis",
+    "gamesPlayed": "Gespielte Spiele",
+    "round": "Runde {current}/{total}",
+    "score": "Punkte",
+    "progress": "{done} von {total} Runden abgeschlossen",
+    "question": "Wie weit ist es von <city>{a}</city> nach <city>{b}</city>?",
+    "caption": "Wie viele Kilometer liegen dazwischen?",
+    "sliderLabel": "Geschätzte Entfernung in Kilometern",
+    "sliderValueText": "{km} Kilometer",
+    "scaleHint": "Logarithmische Skala: 10 km bis 20.000 km",
+    "decrease": "Schätzung verringern",
+    "increase": "Schätzung erhöhen",
+    "guess": "Schätzen",
+    "verdict": {
+      "perfect": "Volltreffer!",
+      "great": "Sehr nah dran",
+      "good": "Gute Schätzung",
+      "fair": "Nicht schlecht",
+      "far": "Ziemlich weit daneben"
+    },
+    "roundScore": "Punkte der Runde",
+    "actualDistance": "Tatsächliche Entfernung",
+    "yourGuess": "Deine Schätzung",
+    "rulerGuess": "Tipp",
+    "rulerActual": "Echt",
+    "errorLabel": "Abweichung",
+    "direction": {
+      "over": "Zu hoch",
+      "under": "Zu niedrig",
+      "exact": "Exakt"
+    },
+    "readGuide": "Reiseführer zu dieser Stadt lesen",
+    "nextRound": "Nächste Runde",
+    "seeResults": "Ergebnis ansehen",
+    "gameOver": "Spiel vorbei",
+    "totalScore": "Gesamtpunktzahl",
+    "outOf": "von {max}",
+    "newBest": "Neuer Rekord!",
+    "bestSoFar": "Bestes Ergebnis: {score}",
+    "recap": "Runden",
+    "recapDetail": "Tatsächlich {actual} km · Schätzung {guess} km",
+    "playAgain": "Noch mal spielen",
+    "exploreGuides": "Reiseführer ansehen",
+    "dataCredit": "Städtedaten: <geo>GeoNames</geo> (<cc>CC BY 4.0</cc>)"
+  },
   "Flight": {
     "preparing": "Deine Reise wird vorbereitet …",
     "nextStop": "Nächster Halt: {country} {flag}",
@@ -598,6 +651,10 @@
     "flags": {
       "title": "Wangoh — Errate die Flagge",
       "description": "Jede Flagge der Welt, eine nach der anderen. Drei Hinweise, jeder bringt weniger Punkte. Wie weit kommst du?"
+    },
+    "distance": {
+      "title": "Wangoh — Wie viele Kilometer?",
+      "description": "Schätze die Entfernung zwischen zwei Städten mit einem logarithmischen Regler. Sammle in 10 Runden Punkte und knacke deinen Rekord. Auch offline spielbar."
     }
   },
   "Nav": {
@@ -609,7 +666,8 @@
     "tests": "Tests",
     "randomClub": "Zufälliger Fußballverein",
     "countryWheel": "Länderrad",
-    "guessFlag": "Errate die Flagge"
+    "guessFlag": "Errate die Flagge",
+    "distance": "Wie weit?"
   },
   "NotFound": {
     "eyebrow": "404",

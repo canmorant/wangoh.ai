@@ -320,6 +320,59 @@
     "noBorders": "Sin fronteras terrestres",
     "secondsValue": "{value} s"
   },
+  "DistanceGame": {
+    "eyebrow": "{rounds} rondas · funciona sin conexión",
+    "title": "¿Cuántos kilómetros?",
+    "intro": "Dos ciudades, una pregunta: ¿cuántos kilómetros las separan? Adivina con el control deslizante y suma puntos durante {rounds} rondas.",
+    "howScale": "El control es logarítmico: pasos finos para distancias cortas y pasos amplios para las largas. Ajusta con las flechas del teclado o con los botones − y +.",
+    "howScore": "Si te quedas a menos de un 2 % de la distancia real, ganas los 1000 puntos; cuanto más te alejas, más rápido baja la puntuación.",
+    "offline": "No hace falta internet: el juego funciona por completo en tu dispositivo.",
+    "start": "Empezar a jugar",
+    "bestResult": "Mejor resultado",
+    "gamesPlayed": "Partidas jugadas",
+    "round": "Ronda {current}/{total}",
+    "score": "Puntos",
+    "progress": "{done} de {total} rondas completadas",
+    "question": "¿Cuántos kilómetros hay entre <city>{a}</city> y <city>{b}</city>?",
+    "caption": "¿Cuántos kilómetros las separan?",
+    "sliderLabel": "Distancia estimada en kilómetros",
+    "sliderValueText": "{km} kilómetros",
+    "scaleHint": "Escala logarítmica: de 10 km a 20.000 km",
+    "decrease": "Reducir la estimación",
+    "increase": "Aumentar la estimación",
+    "guess": "Adivinar",
+    "verdict": {
+      "perfect": "¡Exacto!",
+      "great": "Muy cerca",
+      "good": "Buena estimación",
+      "fair": "No está mal",
+      "far": "Bastante lejos"
+    },
+    "roundScore": "Puntos de la ronda",
+    "actualDistance": "Distancia real",
+    "yourGuess": "Tu estimación",
+    "rulerGuess": "Estimación",
+    "rulerActual": "Real",
+    "errorLabel": "Error",
+    "direction": {
+      "over": "Te pasaste",
+      "under": "Te quedaste corto",
+      "exact": "Exacto"
+    },
+    "readGuide": "Lee la guía de esta ciudad",
+    "nextRound": "Siguiente ronda",
+    "seeResults": "Ver resultados",
+    "gameOver": "Fin del juego",
+    "totalScore": "Puntuación total",
+    "outOf": "de {max}",
+    "newBest": "¡Nuevo récord!",
+    "bestSoFar": "Mejor resultado: {score}",
+    "recap": "Rondas",
+    "recapDetail": "Real {actual} km · estimación {guess} km",
+    "playAgain": "Jugar de nuevo",
+    "exploreGuides": "Ver las guías de viaje",
+    "dataCredit": "Datos de ciudades: <geo>GeoNames</geo> (<cc>CC BY 4.0</cc>)"
+  },
   "Flight": {
     "preparing": "Preparando tu viaje…",
     "nextStop": "Próxima parada: {country} {flag}",
@@ -598,6 +651,10 @@
     "flags": {
       "title": "Wangoh — Adivina la bandera",
       "description": "Todas las banderas del mundo, una a una. Tres pistas, y cada una vale menos puntos. ¿Hasta dónde llegarás?"
+    },
+    "distance": {
+      "title": "Wangoh — ¿Cuántos kilómetros?",
+      "description": "Adivina la distancia entre dos ciudades con un control deslizante logarítmico. Suma puntos en 10 rondas y supera tu récord. Un juego de viajes sin conexión."
     }
   },
   "Nav": {
@@ -609,7 +666,8 @@
     "tests": "Tests",
     "randomClub": "Club de fútbol al azar",
     "countryWheel": "Ruleta de países",
-    "guessFlag": "Adivina la bandera"
+    "guessFlag": "Adivina la bandera",
+    "distance": "¿Cuántos km?"
   },
   "NotFound": {
     "eyebrow": "404",
