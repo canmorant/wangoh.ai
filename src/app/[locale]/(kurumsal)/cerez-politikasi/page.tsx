@@ -86,6 +86,15 @@ export default async function CookiePolicyPage({ params }: Props) {
                 <td>Tarayıcı verisi silinene kadar</td>
               </tr>
               <tr>
+                <td>wangoh.mapgame.v1</td>
+                <td>Birinci taraf localStorage / işlevsel</td>
+                <td>
+                  &ldquo;Haritada Bul&rdquo; oyunundaki en iyi sonucu, oynanan oyun sayısını, ortalamayı,
+                  Günün Turu sonuçlarını, günlük seriyi ve ses efektleri tercihini hatırlamak
+                </td>
+                <td>Tarayıcı verisi silinene kadar</td>
+              </tr>
+              <tr>
                 <td>wangoh.origin</td>
                 <td>Birinci taraf localStorage / işlevsel</td>
                 <td>

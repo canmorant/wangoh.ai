@@ -66,6 +66,16 @@ export default function CookiesEs() {
                 <td>Hasta que se borren los datos del navegador</td>
               </tr>
               <tr>
+                <td>wangoh.mapgame.v1</td>
+                <td>localStorage propio / funcional</td>
+                <td>
+                  Recordar tu mejor resultado, las partidas jugadas, la media, los resultados del Tour
+                  del día, la racha diaria y tu elección de efectos de sonido en el juego &ldquo;Encuéntralo
+                  en el mapa&rdquo;
+                </td>
+                <td>Hasta que se borren los datos del navegador</td>
+              </tr>
+              <tr>
                 <td>wangoh.origin</td>
                 <td>localStorage propio / funcional</td>
                 <td>

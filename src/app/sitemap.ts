@@ -46,6 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ["/tests", 0.5],
       ["/flags", 0.5],
       ["/mesafe", 0.5],
+      ["/haritada-bul", 0.5],
     ] as const
   ).flatMap(([path, priority]) => entries(path, routing.locales, { priority }));
 

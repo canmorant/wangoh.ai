@@ -67,8 +67,8 @@ export function addDays(key: DateKey, n: number): DateKey {
  * Tarihten 32 bit tohum (FNV-1a). Tuz, tohum evrenini bu oyuna özgü kılar;
  * ayrı bir oyun aynı tarihte aynı diziye düşmesin. Aynı anahtar → aynı tohum.
  */
-export function dailySeed(key: DateKey): number {
-  const text = `wangoh.mesafe:${key}`;
+export function dailySeed(key: DateKey, salt = "wangoh.mesafe"): number {
+  const text = `${salt}:${key}`;
   let h = 0x811c9dc5;
   for (let i = 0; i < text.length; i++) {
     h ^= text.charCodeAt(i);
@@ -123,10 +123,10 @@ export const DAILY_KEEP_DAYS = 45;
 const finite = (v: unknown, min = 0, max = Number.MAX_SAFE_INTEGER): number =>
   typeof v === "number" && Number.isFinite(v) ? Math.min(max, Math.max(min, Math.round(v))) : 0;
 
-function parseDailyEntry(raw: unknown): DailyEntry | null {
+function parseDailyEntry(raw: unknown, rounds: number): DailyEntry | null {
   if (!raw || typeof raw !== "object") return null;
   const { total, scores } = raw as { total?: unknown; scores?: unknown };
-  if (!Array.isArray(scores) || scores.length !== ROUNDS_PER_GAME) return null;
+  if (!Array.isArray(scores) || scores.length !== rounds) return null;
   const clean = scores.map((s) => finite(s, 0, 1000));
   return { total: Math.min(MAX_GAME_SCORE, finite(total, 0, MAX_GAME_SCORE)), scores: clean };
 }
@@ -134,14 +134,15 @@ function parseDailyEntry(raw: unknown): DailyEntry | null {
 /**
  * localStorage'dan okunan (bozuk olabilir) değeri güvenli bir Stats'a çevirir.
  * Sürüm 1 kaydı ({ best, played }) da kabul edilir. Hiçbir durumda fırlatmaz.
+ * `rounds`: günlük kayıtta beklenen tur sayısı (oyuna göre; varsayılan Kaç kilometre?).
  */
-export function parseStats(raw: unknown): Stats {
+export function parseStats(raw: unknown, rounds = ROUNDS_PER_GAME): Stats {
   if (!raw || typeof raw !== "object") return EMPTY_STATS;
   const r = raw as Record<string, unknown>;
   const daily: Record<DateKey, DailyEntry> = {};
   if (r.daily && typeof r.daily === "object") {
     for (const [key, value] of Object.entries(r.daily as Record<string, unknown>)) {
-      const entry = isDateKey(key) ? parseDailyEntry(value) : null;
+      const entry = isDateKey(key) ? parseDailyEntry(value, rounds) : null;
       if (entry) daily[key] = entry;
     }
   }

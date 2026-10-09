@@ -503,3 +503,27 @@ a,
   }
   .dg-body > .dg-stage { padding-block: 0.75rem; }
 }
+
+/* ---------- "Haritada Bul" oyununun düzeni ----------
+   Küre kadrajın kısa kenarına sığar: genişlik kadar yükseklik, ama ekranın geri kalanına da yer bırakır. */
+.mg-stage {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  /* Alçak ekranda (iPhone SE) soru kartı, küre ve düğmeler kaydırmadan sığsın. */
+  max-height: max(16rem, calc(100svh - 21rem));
+  margin-inline: auto;
+  touch-action: none;
+}
+@media (orientation: landscape) and (max-height: 520px) {
+  .mg-body {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "stage card" "stage actions";
+    column-gap: 1.5rem;
+    align-items: start;
+  }
+  .mg-card { grid-area: card; }
+  .mg-stage { grid-area: stage; max-height: 72svh; }
+  .mg-actions { grid-area: actions; }
+}

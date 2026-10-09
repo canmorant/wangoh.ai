@@ -23,12 +23,15 @@ export interface ShareInput {
 export const shareText = ({ header, scores, scoreLine, url }: ShareInput): string =>
   [header, emojiStrip(scores), scoreLine, url].join("\n");
 
-/** Dile göre oyunun herkese açık adresi, protokolsüz (tr wangoh.com/mesafe, en wangoh.com/en/distance...). */
+/**
+ * Dile göre oyunun herkese açık adresi, protokolsüz (tr wangoh.com/mesafe, en wangoh.com/en/distance...).
+ * `path`: oyunun iç (Türkçe) yolu; varsayılan Kaç kilometre?.
+ */
 export const SHARE_HOST = "wangoh.com";
-export function shareUrl(locale: string): string {
+export function shareUrl(locale: string, path = "/mesafe"): string {
   const l = (LOCALES as readonly string[]).includes(locale) ? (locale as AppLocale) : DEFAULT_LOCALE;
   // Türkçe öneksiz (as-needed); diğer diller /en/distance gibi önekli.
-  return `${SHARE_HOST}${l === DEFAULT_LOCALE ? "" : `/${l}`}${localizePath("/mesafe", l)}`;
+  return `${SHARE_HOST}${l === DEFAULT_LOCALE ? "" : `/${l}`}${localizePath(path, l)}`;
 }
 
 export type ShareResult = "shared" | "copied" | "failed" | "cancelled";

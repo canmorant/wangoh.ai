@@ -191,6 +191,7 @@ export default function HomeExperience({
           { label: t("Nav.countryWheel"), onClick: openWheel },
           { label: t("Nav.guessFlag"), href: "/flags" },
           { label: t("Nav.distance"), href: "/mesafe" },
+          { label: t("Nav.mapGame"), href: "/haritada-bul" },
         ]}
       />
 

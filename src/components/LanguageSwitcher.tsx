@@ -61,7 +61,7 @@ export default function LanguageSwitcher({ className = "" }: { className?: strin
 
   return (
     <label
-      className={`relative inline-flex min-h-11 cursor-pointer items-center gap-1.5 rounded-full px-3 text-[12px] tracking-[0.12em] text-white/70 uppercase transition-colors hover:text-white md:min-h-0 md:py-1.5 ${isPending ? "opacity-60" : ""} ${className}`}
+      className={`relative inline-flex min-h-11 cursor-pointer items-center gap-1.5 rounded-full px-3 text-[12px] tracking-[0.12em] text-white/70 uppercase transition-colors hover:text-white lg:min-h-0 lg:py-1.5 ${isPending ? "opacity-60" : ""} ${className}`}
     >
       <Globe className="h-3.5 w-3.5 text-white/55" aria-hidden />
       <span aria-hidden>{locale}</span>

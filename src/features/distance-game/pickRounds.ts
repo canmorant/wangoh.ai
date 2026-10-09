@@ -116,8 +116,8 @@ function weighted<T>(items: readonly T[], weight: (item: T) => number, rng: () =
   return items[items.length - 1];
 }
 
-/** Önce ülke, sonra şehir. Boş listede undefined. */
-function pickCity(
+/** Önce ülke, sonra şehir. Boş listede undefined. (Haritada Bul da kullanır.) */
+export function pickCity(
   candidates: readonly City[],
   rng: () => number,
   guided: ReadonlySet<string> | undefined,

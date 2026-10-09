@@ -675,7 +675,7 @@ const TIER_B = CITIES.filter(isTierB);
   const days = Array.from({ length: 400 }, (_, i) => addDays("2026-01-01", i));
   const sigs = new Set(days.map((d) => JSON.stringify(run(d).map((r) => [r.a.id, r.b.id]))));
   ok("400 ardışık gün için 400 farklı oyun (tohum çakışması yok)", sigs.size === 400, String(sigs.size));
-  const seeds = new Set(days.map(dailySeed));
+  const seeds = new Set(days.map((d) => dailySeed(d)));
   ok("400 gün için 400 farklı tohum", seeds.size === 400);
   ok("tohum tarihin saf işlevi: sabit değerler (FNV-1a, tuzlu)", dailySeed("2026-10-09") === 3551455644 && dailySeed("2026-10-10") !== dailySeed("2026-10-09"));
   ok("Günün Turu da seçici kurallarını taşır (10 tur, tekrarsız şehir, ≥ 1 güçlü uç)", days.slice(0, 60).every((d) => {

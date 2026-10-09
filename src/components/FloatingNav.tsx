@@ -132,10 +132,10 @@ export default function FloatingNav({
         initial={false}
         animate={{ y: visible || mobileOpen ? 0 : -96, opacity: visible || mobileOpen ? 1 : 0 }}
         transition={{ duration: 0.55, ease: EASE_OUT }}
-        className="pointer-events-none fixed inset-x-0 top-0 z-[60] flex justify-center px-3 pt-[max(0.75rem,env(safe-area-inset-top))] md:px-4 md:pt-6"
+        className="pointer-events-none fixed inset-x-0 top-0 z-[60] flex justify-center px-3 pt-[max(0.75rem,env(safe-area-inset-top))] lg:px-4 lg:pt-6"
       >
         <nav
-          className="pointer-events-auto flex w-full max-w-[calc(100vw-1.5rem)] items-center justify-between gap-1 overflow-hidden rounded-full px-2 py-2 whitespace-nowrap transition-[background-color,border-color,box-shadow,backdrop-filter] duration-700 md:w-auto md:justify-start"
+          className="pointer-events-auto flex w-full max-w-[calc(100vw-1.5rem)] items-center justify-between gap-1 overflow-hidden rounded-full px-2 py-2 whitespace-nowrap transition-[background-color,border-color,box-shadow,backdrop-filter] duration-700 lg:w-auto lg:justify-start"
           style={{
             backgroundColor: solid || mobileOpen ? "rgba(14,17,26,0.82)" : "rgba(14,17,26,0)",
             border: `1px solid ${solid || mobileOpen ? "rgba(255,255,255,0.10)" : "rgba(255,255,255,0)"}`,
@@ -151,7 +151,7 @@ export default function FloatingNav({
               setMobileOpen(false);
               onHome?.();
             }}
-            className="ml-3 shrink-0 text-[13px] tracking-[0.32em] text-white/90 uppercase transition-opacity duration-300 hover:opacity-70 md:mr-2"
+            className="ml-3 shrink-0 text-[13px] tracking-[0.32em] text-white/90 uppercase transition-opacity duration-300 hover:opacity-70 lg:mr-2"
           >
             Wangoh
           </Link>
@@ -165,7 +165,7 @@ export default function FloatingNav({
                 setSearchRequested(true);
                 setSearchOpen(true);
               }}
-              className="flex min-h-11 items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3.5 text-[12px] text-white/80 transition-all hover:bg-white/20 hover:text-white md:mr-1 md:min-h-0 md:py-1.5"
+              className="flex min-h-11 items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3.5 text-[12px] text-white/80 transition-all hover:bg-white/20 hover:text-white lg:mr-1 lg:min-h-0 lg:py-1.5"
               aria-label={t("searchLabel")}
             >
               <Search className="h-3.5 w-3.5 text-white/70" />
@@ -175,7 +175,7 @@ export default function FloatingNav({
             <button
               type="button"
               onClick={() => setMobileOpen((current) => !current)}
-              className="flex h-11 w-11 items-center justify-center rounded-full text-white/75 transition-colors hover:bg-white/10 hover:text-white md:hidden"
+              className="flex h-11 w-11 items-center justify-center rounded-full text-white/75 transition-colors hover:bg-white/10 hover:text-white lg:hidden"
               aria-label={mobileOpen ? t("closeMenu") : t("openMenu")}
               aria-expanded={mobileOpen}
               aria-controls="mobile-navigation"
@@ -184,14 +184,14 @@ export default function FloatingNav({
             </button>
           </div>
 
-          <div className="hidden items-center md:flex">
+          <div className="hidden items-center lg:flex">
             {actions.map((a) => {
               const inner = (
                 <span className="relative z-10 whitespace-nowrap">{a.label}</span>
               );
 
               const shared =
-                "relative cursor-pointer rounded-full px-4 py-2 text-[13px] text-white/70 transition-colors duration-300 hover:text-white md:px-5";
+                "relative cursor-pointer rounded-full px-4 py-2 text-[13px] text-white/70 transition-colors duration-300 hover:text-white lg:px-3.5 xl:px-5";
 
               return (
                 <div key={a.label} className="relative" onPointerEnter={() => setHovered(a.label)}>
@@ -234,7 +234,7 @@ export default function FloatingNav({
             role="dialog"
             aria-modal="true"
             aria-label={t("mobileMenu")}
-            className="fixed inset-0 z-[55] md:hidden"
+            className="fixed inset-0 z-[55] lg:hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

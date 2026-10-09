@@ -25,7 +25,7 @@ interface World {
 
 let cached: World | undefined;
 
-function world(): World {
+export function world(): World {
   if (!cached) {
     cached = {
       land: feature(topology, topology.objects.land) as FeatureCollection,

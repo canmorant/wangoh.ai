@@ -41,6 +41,7 @@ export const CLIENT_NAMESPACES = {
   tests: ["LanguageSwitcher", "TravelTest"],
   flags: ["LanguageSwitcher", "FlagGame", "Geo", "Common"],
   distance: ["LanguageSwitcher", "DistanceGame"],
+  mapGame: ["LanguageSwitcher", "MapGame"],
 } as const;
 
 type Namespace = (typeof CLIENT_NAMESPACES)[keyof typeof CLIENT_NAMESPACES][number];

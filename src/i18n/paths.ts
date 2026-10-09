@@ -29,6 +29,7 @@ const STATIC_SEGMENTS: Record<string, Record<SlugLocale, string>> = {
   "cerez-politikasi": { en: "cookie-policy", es: "politica-de-cookies" },
   "kullanim-kosullari": { en: "terms-of-use", es: "condiciones-de-uso" },
   mesafe: { en: "distance", es: "distancia" },
+  "haritada-bul": { en: "find-on-map", es: "encuentra-en-el-mapa" },
 };
 
 interface Maps {

@@ -20,6 +20,7 @@ export default function SiteNav({ searchDictionaryUrl }: { searchDictionaryUrl?:
         { label: t("countryWheel"), href: "/?open=wheel" },
         { label: t("guessFlag"), href: "/flags" },
         { label: t("distance"), href: "/mesafe" },
+        { label: t("mapGame"), href: "/haritada-bul" },
       ]}
     />
   );

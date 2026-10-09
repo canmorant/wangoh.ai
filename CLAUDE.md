@@ -21,7 +21,7 @@
 ## Testler
 
 - `npx tsc --noEmit -p .`, `npx eslint .`
-- `npx tsx scripts/i18n.test.ts`, `npx tsx scripts/paths.test.ts`, `npx tsx scripts/seo-copy.test.ts`
+- `npx tsx scripts/i18n.test.ts`, `npx tsx scripts/paths.test.ts`, `npx tsx scripts/seo-copy.test.ts`, `npx tsx scripts/distance.test.ts`, `npx tsx scripts/map.test.ts`, `npx tsx scripts/turkish.test.ts`
 - Derleme sonrası yerel sunucuya karşı: `VALIDATION_BASE_URL=http://127.0.0.1:3200 npm run test:seo` ve `npm run test:guides`
 
 ## Google Maps listeleri
