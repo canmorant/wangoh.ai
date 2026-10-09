@@ -97,6 +97,12 @@ Hanoi’de yılın her ayı aynı hava beklenmez. İlkbahar ve sonbahar yürüy�
 
 Yemekler, transferler, anıt girişleri ve kuzeye devam edeceğiniz ulaşımı ayrı bütçeleyin. Uygun bir öğünün ardından pahalı bir transfer yapmanız günün toplamını değiştirir. Bir sokakta yemek bulmak kolay olsa da her gün otelin karşısına dönmek yerine yakın ziyaret bölgesinde mola vermek daha az yorucu olur.
 
+## Haritadaki durakları güne nasıl dağıtmalı?
+
+Harita seçkimiz: Hoan Kiem Gölü, Ngoc Son Tapınağı, Edebiyat Tapınağı, Thang Long İmparatorluk Kalesi, Truc Bach Gölü, Dong Xuan Pazarı, Aziz Joseph Katedrali, Tran Quoc Pagodası, Hoa Lo Hapishanesi Müzesi, Vietnam Etnoloji Müzesi.
+
+Göl ve Eski Şehir duraklarını kısa yürüyüşlere bölün; Hoa Lo Hapishanesi Müzesi’nden sonra dinlenme payı bırakın. Vietnam Etnoloji Müzesi merkezden ayrı bir ziyaret gerektirir. Bütün pinleri aynı güne sıkıştırmak yerine ilginize göre iki veya üç güne dağıtın.
+
 ## Hanoi’den sonra: bir göl daha değil, başka bir yolculuk
 
 Ninh Binh’i ekleyecekseniz Trang An’daki tekne gezisini Hanoi’deki yürüyüş gününün devamı gibi düşünmeyin. Yola çıkış, iskele, su üzerindeki ziyaret ve dönüş kendi gününü istiyor. Sabah otelden ayrılıp akşam tekrar aynı şehirde olmak mümkündür; ama başka bir yere yetişmeye çalışırken manzaraya bakmakla bütün öğleden sonrayı orada geçirmek aynı deneyim değil. Bir geceleme fikrini de değerlendirin.
@@ -208,6 +214,12 @@ Etli erişteler ile karidesli küçük hamur işleri her beslenme tercihine uygu
 
 Anıt girişlerini, mezar transferini ve varsa rehber ücretini ayrı değerlendirin. Kombine biletin hangi yerlere ve hangi süreye karşılık geldiğini satın almadan okuyun. Ucuz görünen bir araç teklifini yalnız fiyatla karşılaştırmayın; bekleme, dönüş ve seçtiğiniz mezarları gerçekten kapsaması günün değerini belirler.
 
+## Haritadaki durakları güne nasıl dağıtmalı?
+
+Harita seçkimiz: Hue İmparatorluk Şehri, Thai Hoa Sarayı, Ngo Mon Kapısı, Dong Ba Pazarı, Truong Tien Köprüsü, Quoc Hoc Lisesi, Thien Mu Pagodası, Tu Hieu Pagodası, Tu Duc Anıt Mezarı, Minh Mang Anıt Mezarı.
+
+Ngo Mon Kapısı ve Thai Hoa Sarayı İmparatorluk Şehri ziyaretinin parçalarıdır; onları üç ayrı büyük gezi gibi saymayın. Dong Ba Pazarı ve Truong Tien Köprüsü nehir gününü tamamlar. Quoc Hoc çalışan bir okuldur: giriş izni olmadığında dışarıdan bakmakla yetinin. Tu Hieu ve hanedan mezarları için ayrı araç bağlantısı ve gün ayırın.
+
 ## Hue’den Da Nang’a: geçiş gününü küçümsemeyin
 
 Hue, Da Nang ve Hoi An’ı aynı tatilde görmek mantıklı; her gün birinden diğerine gidip dönmek aynı ölçüde rahat değil. Saray ziyaretinin ardından bavulu alıp başka bir otele varacağınız günü tam bir gezi günü saymayın. Yeni odanın hazır olması, yemek ve kısa bir çevre yürüyüşü bile yeterli bir program olabilir. Bir şehirden iyi ayrılmak, sonraki şehre yorgunluk taşımamaktır.
@@ -317,6 +329,12 @@ Orta Vietnam’ın yağış düzenini kuzey veya güneydeki havayla aynı kabul 
 
 Şehir yemeği, plaj hizmetleri ve dış turları ayrı bütçeleyin. Bir resort günüyle gündelik şehir günü aynı maliyette değildir. Uzak bir tesis gezisine ulaşım, giriş ve beklemeyi birlikte ekleyin; yalnız ana bilet fiyatına bakmak günün gerçek yükünü eksik gösterir.
 
+## Haritadaki durakları güne nasıl dağıtmalı?
+
+Harita seçkimiz: Cham Heykel Müzesi, APEC Parkı, Ejderha Köprüsü, Han Pazarı, Da Nang Katedrali, Con Pazarı, Han Nehri Köprüsü, My Khe Plajı, Linh Ung Bai But Pagodası, Mermer Dağları.
+
+Müze, APEC Parkı ve Ejderha Köprüsü nehir çevresinde bir gün oluşturabilir. Han Pazarı, katedral ve Con Pazarı şehir yaşamını tanımak için başka bir yürüyüşün durakları. Han Nehri Köprüsü ile My Khe aynı küçük mahalle değildir. Linh Ung Bai But Pagodası ve Mermer Dağları için birbirinden ayrı ulaşım planlayın; bunları merkezde yürüyerek geçilecek pinler sanmayın.
+
 ## Da Nang’dan Hoi An’a: aynı kıyı, başka bir akşam
 
 Da Nang’dan Hoi An’a günübirlik gidilebilir, ancak geceleme seçimi nasıl bir akşam istediğinizle ilgili. Fenerleri gördükten sonra araca binip dönmek ile ertesi sabah dükkânlar açılırken eski sokaklara çıkmak farklı gezi biçimleri. Hoi An’ın yalnız ışıklı yüzünü değil, günün başka saatlerini de merak ediyorsanız iki şehrin konaklamasını ayrı düşünün. Transferi kolay diye aynı deneyimi sunduklarını varsaymayın.
@@ -424,6 +442,12 @@ Mart–mayıs yürüyüş ve açık hava için düşünülebilir; sıcak aylarda
 
 Eski şehirde ziyaret bileti, tekne, terzi işi ve yemek atölyesini ayrı kalemler sayın. Biletin hangi yapı ziyaretlerini kapsadığını okuyun; köprüden geçmek ile bütün tarihî evlere girmek aynı şey değildir. Alışveriş bütçesini gezi bütçesine fark etmeden eklememek için ilk gün kendinize bir sınır belirleyin.
 
+## Haritadaki durakları güne nasıl dağıtmalı?
+
+Harita seçkimiz: Japon Köprüsü, Phung Hung Tarihî Evi, Kanton Toplantı Salonu, Sa Huynh Kültür Müzesi, Tan Ky Tarihî Evi, Hoi An Halk Kültürü Müzesi, Fujian Toplantı Salonu, Hoi An Merkez Pazarı Yemek Bölümü, Tra Que Sebze Köyü, An Bang Plajı.
+
+Tan Ky ve Phung Hung evlerini yalnız cepheleriyle geçmek yerine açıklamalarına zaman ayırın. Fujian ve Kanton toplantı salonlarında liman kentinin topluluk izlerini takip edin. Sa Huynh Kültür Müzesi ile Halk Kültürü Müzesi farklı dönemlere ve konulara bakar; ikisini aynı müze sanmayın. Merkez pazarının yemek bölümünden sonra Tra Que ve An Bang için ayrı bir yarım gün bırakın; giriş kapsamını bilet alırken kontrol edin.
+
 ## Hoi An’dan My Son’a: eski limanın başka bir tarih katmanı
 
 My Son’u Hoi An’ın birkaç sokak ötesindeki ek ziyaret gibi düşünmeyin; şehir dışındaki bu tapınak alanı için ayrı ulaşım ve zaman gerekir. Rehberli bir ziyaret seçiyorsanız anlatım dili, alandaki yürüyüş ve dönüş noktasını önceden sorun. Sabah eski şehri gezip öğleden sonra bütün çevreyi bitirmek yerine bu günü Hoi An’daki diğer yürüyüşlerden ayırmak daha anlaşılır bir tarih deneyimi yaratır.
@@ -467,6 +491,8 @@ Hoi An’da cao lau ve beyaz gül mantısını et veya deniz ürünü açısınd
 - [Vietnam Tourism — Hoi An alışverişi](https://vietnam.travel/node/116)
 
 - [UNESCO — My Son](https://whc.unesco.org/en/list/949/)
+
+- [Hoi An miras merkezi — tarihî yapılar](https://www.hoianworldheritage.org.vn/en/news/Monument.hwh)
 
 
 ---
@@ -530,6 +556,12 @@ Ekmekte pate, eriştede et suyu, sebzeli tabakta balık sosu bulunabilir. Vegan 
 Şehir yıl boyunca sıcak olabilir; güneyin yağış düzeni kuzeydeki Hanoi ile aynı değildir. Yağışlı aylarda kısa kapalı mekân molaları, sıcak günlerde öğlen dinlenmesi işe yarar. Müze gününde ağır sergilerin ardından serbest zaman bırakın; gördüklerinizi sindirmek için programda sessiz bir aralık bulunması iyi gelir.
 
 Merkez yemeği, kafe, şehir transferi ve şehir dışı turu ayrı kalemler olarak görün. Çok uygun bir otel uzak bir konumdaysa gün içindeki araç gideri avantajı azaltabilir. Mekong devamında Can Tho’ya gecelemeye karar verirseniz onu ek masraf değil, deltaya daha fazla zaman ayıran ayrı bir bölüm olarak değerlendirin.
+
+## Haritadaki durakları güne nasıl dağıtmalı?
+
+Harita seçkimiz: Savaş Kalıntıları Müzesi, Bağımsızlık Sarayı, Saygon Merkez Postanesi, Saygon Notre Dame Katedrali, Saygon Opera Binası, Nguyen Hue Yürüyüş Caddesi, Ben Thanh Pazarı, Tao Dan Parkı, Jade Emperor Pagodası, Thien Hau Tapınağı.
+
+Müze ve saray gününü, postane ile katedral çevresindeki yürüyüşten ayırabilirsiniz. Opera binasının dış görünüşü bir gösteriye veya içeriye girişe eşit değildir; Nguyen Hue’de akşam yürüyüşü ayrı bir deneyim. Ben Thanh’da alışverişi Tao Dan Parkı’nda bir mola ile dengeleyin. Jade Emperor Pagodası ve Cholon’daki Thien Hau Tapınağı için araç bağlantısı düşünün; ibadet edenlerin alanına saygı gösterin.
 
 ## Saygon’dan deltaya: tur seçerken dönüşü de okuyun
 
@@ -638,6 +670,12 @@ Güneyin sıcağı ve yağışı planı etkiler; açık su üzerindeki uzun mola
 
 Tur ücretini tekne büyüklüğü, rehberlik, kahvaltı, transfer ve ek bahçe ziyaretleriyle birlikte karşılaştırın. Özel ve paylaşımlı tur aynı serbestliği sunmaz. Her durakta alışveriş beklenen bir programa girmek istemiyorsanız önceden sorun; sizin için iyi rota, ihtiyaçlarınızı açıklayabildiğiniz rotadır.
 
+## Haritadaki durakları güne nasıl dağıtmalı?
+
+Harita seçkimiz: Cai Rang Yüzen Pazarı, Ninh Kieu İskelesi, Ninh Kieu Yaya Köprüsü, Ong Tapınağı, Can Tho Eski Pazarı, Can Tho Müzesi, Binh Thuy Tarihî Evi, Binh Thuy Ortak Evi, Munir Ansay Pagodası, Quang Duc Pagodası.
+
+Cai Rang pinini tekne biniş noktası sanmayın: operatörünüzden buluşma iskelesini yazılı alın. Ninh Kieu İskelesi, yaya köprüsü, Ong Tapınağı ve Eski Pazar kısa bir merkez gezisi oluşturabilir. Can Tho Müzesi kent hikâyesine bağlam katar; Munir Ansay ve Quang Duc çalışan ibadet alanlarıdır. Binh Thuy Tarihî Evi ile Binh Thuy Ortak Evi iki farklı yapıdır; merkez dışındaki bu ziyaretleri aynı araç yolculuğunda planlayın.
+
 ## Can Tho’dan sonra: delta tek bir tekneye sığmıyor
 
 Nehir ve bahçe günü eklerken “yerel yaşam” yazan her paketin aynı deneyimi sunduğunu düşünmeyin. Programdaki bahçeyi, ev sahibini veya atölyeyi; ziyaretin nasıl yapıldığını ve nelerin ücrete dahil olduğunu öğrenin. Can Tho’yu görmenin güzel tarafı bu gündelik karşılaşmalar olabilir, ama bunları kalabalık bir günün arasına beş dakikalık fotoğraf durağı gibi sıkıştırmak ziyaretin anlamını azaltır. İlgilendiğiniz tek bir etkinliğe gerçekten zaman ayırın.
@@ -666,7 +704,7 @@ Hayır; ticaret, ziyaret saati ve koşullar değişebilir. Güncel durum için y
 
 ## Beslenme notu
 
-Can Tho’da hu tieu ve tekne kahvaltısının et suyu, et, deniz ürünü ve sos içeriğini önceden sorun. Vegan veya helal ihtiyacınızı tur rezervasyonunda belirtip hangi yemeğin sağlanacağını yazılı netleştirin; her teknenin aynı menüyü sunacağını varsaymayın.
+Can Tho’da hu tieu ve tekne kahvaltısının et suyu, et, deniz ürünü ve sos içeriğini önceden sorun. Vegan veya helal ihtiyacınızı tur rezervasyonunda belirtip hangi yemeğin sağlanacağını yazılı netleştirin; her teknenin aynı menüyü sunacağını varsaymayın. Can Tho için açık ve yeterince doğrulanmış bir helal restoran önerisi bulunamadı. Eski kaynaklardaki Lion City, 8 Ekim 2026 Google Maps kontrolünde kalıcı olarak kapalı göründüğü için listeye alınmadı.
 
 ## Doğrulama kaynakları
 
@@ -675,3 +713,7 @@ Can Tho’da hu tieu ve tekne kahvaltısının et suyu, et, deniz ürünü ve so
 - [Vietnam Tourism — Can Tho nehri ve bahçeleri](https://www.vietnam.travel/things-to-do/can-tho-glimpse-river-and-garden)
 
 - [Vietnam Tourism — Vietnam içi ulaşım](https://vietnam.travel/plan-your-trip/transport-within-vietnam)
+
+- [Can Tho turizmi — Ong Tapınağı](https://canthotourism.vn/en/chuaong)
+
+- [Can Tho turizmi — Munir Ansay](https://canthotourism.vn/en/chuamuniransay)

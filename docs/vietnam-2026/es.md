@@ -97,6 +97,12 @@ Hanói cambia durante el año. Primavera y otoño pueden favorecer paseos; calor
 
 Separa comidas, traslados, entradas y continuación al norte. Un almuerzo económico seguido de un traslado largo cambia el total. Descansar cerca de las visitas suele ser más cómodo que cruzar la ciudad para volver siempre a la calle del hotel.
 
+## Cómo repartir las paradas del mapa
+
+Nuestra selección del mapa: Lago Hoan Kiem, Templo Ngoc Son, Templo de la Literatura, Ciudadela Imperial de Thang Long, Lago Truc Bach, Mercado Dong Xuan, Catedral de San José, Pagoda Tran Quoc, Museo de la Prisión Hoa Lo, Museo de Etnología de Vietnam.
+
+Divide lago y casco antiguo en paseos cortos y deja una pausa tras la Prisión Hoa Lo. El Museo de Etnología necesita otro desplazamiento desde el centro. Reparte los puntos entre dos o tres días según tus intereses.
+
 ## Después de Hanói: elige otro tipo de viaje
 
 Si añades Ninh Binh, dedica a Trang An un día propio: salida, embarcadero, paseo por el agua y regreso cuentan. Volver en el día puede funcionar, pero mirar el paisaje pendiente del siguiente traslado no equivale a pasar allí una tarde tranquila. Valora también dormir una noche y separa el tiempo de carretera del tiempo de visita.
@@ -208,6 +214,12 @@ La primavera puede ser buena opción; con calor, visita la ciudadela temprano. L
 
 Separa entradas, transporte a tumbas y guía. Lee lugares y validez de los billetes combinados. Compara vehículos según espera, regreso y tumbas incluidas; no solo por el precio anunciado.
 
+## Cómo repartir las paradas del mapa
+
+Nuestra selección del mapa: Ciudad Imperial de Hue, Palacio Thai Hoa, Puerta Ngo Mon, Mercado Dong Ba, Puente Truong Tien, Instituto Quoc Hoc, Pagoda Thien Mu, Pagoda Tu Hieu, Tumba de Tu Duc, Tumba de Minh Mang.
+
+La Puerta Ngo Mon y el Palacio Thai Hoa forman parte de la Ciudad Imperial; no son tres excursiones completas distintas. El Mercado Dong Ba y el Puente Truong Tien completan el día fluvial. Quoc Hoc es un instituto en uso: míralo desde fuera si no permiten entrar. Reserva traslado y tiempo propios para Tu Hieu y las tumbas reales.
+
 ## De Hue a Da Nang: deja espacio al trayecto
 
 Hue, Da Nang y Hoi An encajan en unas vacaciones, pero ir y volver cada día puede agotarlas. Visitar el palacio, recoger maletas y llegar a otro hotel no deja un día completo en la nueva ciudad. Instalarte, comer y dar un paseo breve puede ser suficiente. Salir bien de un lugar también significa conservar energía para el siguiente.
@@ -317,6 +329,12 @@ No deduzcas el tiempo del centro por el del norte o sur. Primavera puede facilit
 
 Separa comidas urbanas, servicios de playa y excursiones. Un día de resort y uno cotidiano no cuestan igual. En visitas alejadas suma transporte, entrada y esperas: el billete principal no representa toda la jornada.
 
+## Cómo repartir las paradas del mapa
+
+Nuestra selección del mapa: Museo de Escultura Cham, Parque APEC, Puente del Dragón, Mercado Han, Catedral de Da Nang, Mercado Con, Puente del Río Han, Playa My Khe, Pagoda Linh Ung Bai But, Montañas de Mármol.
+
+Museo, Parque APEC y Puente del Dragón pueden formar un día junto al río. Mercado Han, catedral y Mercado Con permiten otro paseo urbano. El Puente del Río Han y My Khe no forman un barrio compacto. Planifica transporte propio para Linh Ung Bai But y las Montañas de Mármol.
+
 ## De Da Nang a Hoi An: otra forma de vivir la tarde
 
 Una excursión a Hoi An puede funcionar, pero dormir allí depende de la tarde y mañana que buscas. Volver después de los farolillos no es lo mismo que salir a las calles cuando abren las tiendas. Si te interesa algo más que su cara iluminada, considera estancias separadas. Una conexión sencilla no convierte ambas ciudades en experiencias intercambiables.
@@ -424,6 +442,12 @@ Marzo–mayo puede favorecer exteriores; con calor conviene parar al mediodía. 
 
 Separa acceso patrimonial, barco, ropa a medida y talleres. Lee qué edificios incluye el billete: cruzar un puente no equivale a entrar en todas las casas. Fija presupuesto de compras para que no absorban sin darte cuenta el resto del viaje.
 
+## Cómo repartir las paradas del mapa
+
+Nuestra selección del mapa: Puente Japonés, Casa Antigua Phung Hung, Sala de la Asamblea Cantonesa, Museo de la Cultura Sa Huynh, Casa Antigua Tan Ky, Museo de Cultura Popular de Hoi An, Sala de la Asamblea de Fujian, Zona Gastronómica del Mercado Central de Hoi An, Huertos de Tra Que, Playa An Bang.
+
+Dedica tiempo a las explicaciones de Tan Ky y Phung Hung, además de fotografiar fachadas. Sigue las comunidades del puerto en las salas de Fujian y Cantón. Sa Huynh y Cultura Popular son museos de temas distintos. Después de la zona gastronómica del mercado, reserva otra media jornada para Tra Que y An Bang y consulta qué cubre la entrada.
+
 ## De Hoi An a My Son: otro capítulo histórico
 
 My Son no es una parada a unas calles de Hoi An: el recinto de templos fuera de la ciudad requiere transporte y tiempo propios. Si vas con guía, pregunta idioma, recorrido a pie y punto de regreso. No intentes terminar casco antiguo y alrededores en una sola tarde; separar visitas ayuda a comprender también sus historias.
@@ -467,6 +491,8 @@ En Hoi An, comprueba carne y marisco en cao lau y dumplings de rosa blanca. Masa
 - [Vietnam Tourism — compras en Hoi An](https://vietnam.travel/node/116)
 
 - [UNESCO — My Son](https://whc.unesco.org/en/list/949/)
+
+- [Centro de patrimonio de Hoi An — monumentos](https://www.hoianworldheritage.org.vn/en/news/Monument.hwh)
 
 
 ---
@@ -530,6 +556,12 @@ El pan puede llevar paté, los fideos caldo de carne y las verduras salsa de pes
 La ciudad puede ser calurosa todo el año, con lluvias distintas a Hanói. Interiores ayudan cuando llueve y descanso al mediodía cuando aprieta el calor. Tras exposiciones difíciles, deja tiempo libre para asimilar en vez de correr a la siguiente visita.
 
 Separa comidas, cafés, transporte y excursiones. Un hotel barato lejos puede perder ventaja con los traslados. Dormir en Can Tho permite un capítulo propio del delta, no solo otro gasto añadido a la visita urbana.
+
+## Cómo repartir las paradas del mapa
+
+Nuestra selección del mapa: Museo de los Vestigios de la Guerra, Palacio de la Independencia, Correo Central de Saigón, Catedral de Notre Dame de Saigón, Ópera de Saigón, Paseo Nguyen Hue, Mercado Ben Thanh, Parque Tao Dan, Pagoda del Emperador de Jade, Templo Thien Hau.
+
+Separa museos y palacio del paseo por correos y catedral. Ver la fachada de la Ópera no incluye espectáculo ni entrada; Nguyen Hue ofrece otra experiencia al anochecer. Equilibra compras en Ben Thanh con descanso en Tao Dan. Prevé transporte para las pagodas del Emperador de Jade y Thien Hau en Cholon y respeta el espacio de culto.
 
 ## De Saigón al delta: revisa también el regreso
 
@@ -638,6 +670,12 @@ Calor y lluvia afectan la jornada; sobre el agua necesitas sombra y agua potable
 
 Compara tamaño de barco, guía, desayuno, traslado y visitas adicionales. Privado y compartido dan flexibilidad distinta. Pregunta por paradas comerciales si no te interesan: una buena ruta permite entender condiciones y explicar tus necesidades.
 
+## Cómo repartir las paradas del mapa
+
+Nuestra selección del mapa: Mercado Flotante Cai Rang, Muelle Ninh Kieu, Puente Peatonal Ninh Kieu, Templo Ong, Antiguo Mercado de Can Tho, Museo de Can Tho, Casa Antigua Binh Thuy, Casa Comunal Binh Thuy, Pagoda Munir Ansay, Pagoda Quang Duc.
+
+El punto Cai Rang no indica dónde embarcar: pide por escrito el muelle del operador. Ninh Kieu, su puente peatonal, el Templo Ong y el antiguo mercado forman un paseo céntrico. El museo aporta contexto; Munir Ansay y Quang Duc siguen siendo lugares de culto. La casa antigua y la casa comunal Binh Thuy son edificios distintos que pueden compartir traslado fuera del centro.
+
 ## Después de Can Tho: el delta no cabe en un solo barco
 
 En un día de río y huertos, “vida local” no describe siempre la misma visita. Pregunta por huerto, anfitrión o taller, cómo se participa y qué está incluido. Los encuentros cotidianos pueden ser lo mejor de Can Tho, pero reducirlos a cinco minutos de foto entre muchas paradas les quita sentido. Dedica a una actividad que te interese el tiempo suficiente para vivirla.
@@ -666,7 +704,7 @@ No: comercio, hora y condiciones cambian. Consulta situación actual sin esperar
 
 ## Nota alimentaria
 
-En Can Tho, consulta antes caldo, carne, marisco y salsas en hu tieu y desayunos a bordo. Indica necesidades veganas o halal al reservar y confirma comida por escrito: los barcos no ofrecen todos el mismo menú.
+En Can Tho, consulta antes caldo, carne, marisco y salsas en hu tieu y desayunos a bordo. Indica necesidades veganas o halal al reservar y confirma comida por escrito: los barcos no ofrecen todos el mismo menú. No se encontró un restaurante halal abierto y suficientemente verificado para recomendar en Can Tho. Lion City, citado en fuentes antiguas, figuraba como cerrado permanentemente en Google Maps el 8 de octubre de 2026 y se excluyó.
 
 ## Fuentes de verificación
 
@@ -675,3 +713,7 @@ En Can Tho, consulta antes caldo, carne, marisco y salsas en hu tieu y desayunos
 - [Vietnam Tourism — río y huertos de Can Tho](https://www.vietnam.travel/things-to-do/can-tho-glimpse-river-and-garden)
 
 - [Vietnam Tourism — transporte por Vietnam](https://vietnam.travel/plan-your-trip/transport-within-vietnam)
+
+- [Turismo de Can Tho — Templo Ong](https://canthotourism.vn/en/chuaong)
+
+- [Turismo de Can Tho — Munir Ansay](https://canthotourism.vn/en/chuamuniransay)

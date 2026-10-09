@@ -905,43 +905,352 @@
   {
     "countryCode": "VN",
     "city": "Hanoi",
-    "vegan": [],
-    "halal": [],
+    "vegan": [
+      {
+        "city": "Hanoi",
+        "name": "Katze",
+        "category": "vegan",
+        "cuisine": "Vietnam mutfağı",
+        "area": "Eski Şehir / Cau Go",
+        "description": "Göl çevresindeki yürüyüşün ardından Vietnam yemeklerini bitkisel bir sofrada denemek için düşünün. Menüdeki et benzerlerini gerçek et sanmak yerine içeriklerini okuyup sevdiğiniz dokuya göre seçin.",
+        "why": "8 Ekim 2026 kontrolünde Google Maps: 4,9/5, 3.385 yorum. Seçim, kontrol edilen adaylarda puan, yorum sayısı ve beslenme kanıtı birlikte değerlendirilerek yapıldı; şehir genelinde mutlak birincilik iddiası değildir.",
+        "address": "26B P. Cầu Gỗ",
+        "verification": {
+          "status": "fully-vegan",
+          "sourceName": "HappyCow",
+          "sourceUrl": "https://www.happycow.net/reviews/katze-hanoi-415095",
+          "sourceType": "vegan-directory",
+          "note": "Vegan sınıflandırmasını menü kaynağıyla kontrol ettik. Sipariş sırasında sos, yumurta ve süt içeriğini ayrıca belirtin."
+        },
+        "lastVerified": "2026-10-08"
+      },
+      {
+        "city": "Hanoi",
+        "name": "Dana Vegan House",
+        "category": "vegan",
+        "cuisine": "Vietnam mutfağı",
+        "area": "Eski Şehir / Dong Thai",
+        "description": "Kuzeyin erişte ve pirinç yemeklerini vegan bir öğünde tanımak için güzel bir durak. Bu öğünü acele bir atıştırmalık yerine şehrin yemek kültürüne ayırdığınız zaman olarak düşünün.",
+        "why": "8 Ekim 2026 kontrolünde Google Maps: 4,9/5, 2.105 yorum. Seçim, kontrol edilen adaylarda puan, yorum sayısı ve beslenme kanıtı birlikte değerlendirilerek yapıldı; şehir genelinde mutlak birincilik iddiası değildir.",
+        "address": "12 P. Đông Thái",
+        "verification": {
+          "status": "fully-vegan",
+          "sourceName": "Experience Solaria",
+          "sourceUrl": "https://experience.thesolariagroup.com/explore/dana-vegan-house-vietnamese-vegan-restaurant",
+          "sourceType": "specialist-directory",
+          "note": "Vegan sınıflandırmasını menü kaynağıyla kontrol ettik. Sipariş sırasında sos, yumurta ve süt içeriğini ayrıca belirtin."
+        },
+        "lastVerified": "2026-10-08"
+      }
+    ],
+    "halal": [
+      {
+        "city": "Hanoi",
+        "name": "Batavia Indonesian Halal Restaurant & Cafe",
+        "category": "halal",
+        "cuisine": "Endonezya ve Malay mutfağı",
+        "area": "Ngoc Ha",
+        "description": "Eski Şehir’deki erişte öğünlerinden sonra Endonezya ve Malay lezzetlerine geçmek isterseniz bu adresi değerlendirin. Restoran HCA sertifikası bildirse de güncel belgenin kapsamını ve tarihini ayrıca sorun.",
+        "why": "8 Ekim 2026 kontrolünde Google Maps: 4,6/5, 1.353 yorum. Seçim, kontrol edilen adaylarda puan, yorum sayısı ve beslenme kanıtı birlikte değerlendirilerek yapıldı; şehir genelinde mutlak birincilik iddiası değildir.",
+        "address": "116 P. Ngọc Hà",
+        "officialUrl": "https://www.bataviarestaurant.com/faqs-1",
+        "verification": {
+          "status": "restaurant-confirmed",
+          "sourceName": "Batavia Indonesian Halal Restaurant & Cafe",
+          "sourceUrl": "https://www.bataviarestaurant.com/faqs-1",
+          "sourceType": "restaurant",
+          "note": "İşletme helal yemek sunduğunu belirtiyor. Bu etiket bağımsız ve süresi geçerli bir sertifika doğrulaması değildir; belge, et tedariki ve hazırlama koşullarını işletmeyle teyit edin."
+        },
+        "lastVerified": "2026-10-08"
+      }
+    ],
     "researchNote": "Hanoi’de sebzeli görünen çorbanın et suyu, sosun balık ürünü içerebileceğini sorun. Yumurta kahvesi ve yoğunlaştırılmış süt vegan değildir. Chay ifadesini başlangıç kabul edip yumurta, süt ve sosları ayrı netleştirin. Helal uygunluğu için işletmenin güncel doğrulamasını isteyin."
   },
   {
     "countryCode": "VN",
     "city": "Hue",
-    "vegan": [],
-    "halal": [],
+    "vegan": [
+      {
+        "city": "Hue",
+        "name": "Tịnh Tâm Vegan",
+        "category": "vegan",
+        "cuisine": "Vegan Vietnam yemekleri",
+        "area": "Chu Van An",
+        "description": "Hue’nin küçük tabaklarını ve erişte yemeklerini bitkisel seçeneklerle keşfetmek için sade bir durak. Haritayı yalnız işletme adına göre açmayın; 12 Chu Van An adresini kontrol edin.",
+        "why": "8 Ekim 2026 kontrolünde Google Maps: 4,6/5, 558 yorum. Seçim, kontrol edilen adaylarda puan, yorum sayısı ve beslenme kanıtı birlikte değerlendirilerek yapıldı; şehir genelinde mutlak birincilik iddiası değildir.",
+        "address": "12 Chu Văn An",
+        "verification": {
+          "status": "fully-vegan",
+          "sourceName": "HappyCow",
+          "sourceUrl": "https://www.happycow.net/reviews/tinh-tam-vegan-hue-284105",
+          "sourceType": "vegan-directory",
+          "note": "Vegan sınıflandırmasını menü kaynağıyla kontrol ettik. Sipariş sırasında sos, yumurta ve süt içeriğini ayrıca belirtin."
+        },
+        "lastVerified": "2026-10-08"
+      }
+    ],
+    "halal": [
+      {
+        "city": "Hue",
+        "name": "An Nhien Garden Vegetarian - Nhà Hàng & Cafe",
+        "category": "halal",
+        "cuisine": "Vietnam vejetaryen mutfağı",
+        "area": "My Thuong / bahçe çevresi",
+        "description": "Saray gününün ardından sofraya daha uzun zaman ayırmak isteyenler için bahçe ortamında bir seçenek. Vejetaryen olması bütün menünün vegan olduğu anlamına gelmiyor; sütlü içecekleri ve her tabağın içeriğini ayrı kontrol edin.",
+        "why": "8 Ekim 2026 kontrolünde Google Maps: 4,9/5, 835 yorum. Seçim, kontrol edilen adaylarda puan, yorum sayısı ve beslenme kanıtı birlikte değerlendirilerek yapıldı; şehir genelinde mutlak birincilik iddiası değildir.",
+        "address": "Kiệt 11 Tỉnh lộ 10, Tây Thượng, Mỹ Thượng, Huế",
+        "officialUrl": "https://annhienvegetarian.com/",
+        "verification": {
+          "status": "certified-halal",
+          "sourceName": "An Nhien Garden Vegetarian - Nhà Hàng & Cafe",
+          "sourceUrl": "https://annhienvegetarian.com/",
+          "sourceType": "restaurant",
+          "note": "İşletmenin resmî sitesinde Vietnam National Halal sertifikası gösteriliyor. Ziyaret öncesinde güncel belgenin kapsamını teyit edin; vejetaryen menüyü tamamen vegan kabul etmeyin."
+        },
+        "lastVerified": "2026-10-08"
+      }
+    ],
     "researchNote": "Hue’nin küçük tabaklarında karides, et suyu ve fermente soslar bulunabilir. Sunumdan içerik çıkarmak yerine her tabağı ayrı sorun. Vegan tercihte yumurta ve sütü de belirtin; helal et veya hazırlama koşulu için güncel işletme doğrulaması alın."
   },
   {
     "countryCode": "VN",
     "city": "Da Nang",
-    "vegan": [],
-    "halal": [],
+    "vegan": [
+      {
+        "city": "Da Nang",
+        "name": "Roots Plant-Based Cafe",
+        "category": "vegan",
+        "cuisine": "Bitkisel kafe ve kaseler",
+        "area": "My Khe / Tran Bach Dang",
+        "description": "Sahil yürüyüşünden sonra bir kase, smoothie veya bitkisel ana yemekle mola vermek için düşünün. Aynı markanın başka şehirlerde de şubeleri var; haritada Da Nang’daki 266 Tran Bach Dang adresini seçin.",
+        "why": "8 Ekim 2026 kontrolünde Google Maps: 4,7/5, 3.997 yorum. Seçim, kontrol edilen adaylarda puan, yorum sayısı ve beslenme kanıtı birlikte değerlendirilerek yapıldı; şehir genelinde mutlak birincilik iddiası değildir.",
+        "address": "266 Trần Bạch Đằng",
+        "officialUrl": "https://rootsplantbasedcafe.com/",
+        "verification": {
+          "status": "fully-vegan",
+          "sourceName": "Roots Plant-Based Cafe",
+          "sourceUrl": "https://rootsplantbasedcafe.com/",
+          "sourceType": "restaurant",
+          "note": "Vegan sınıflandırmasını menü kaynağıyla kontrol ettik. Sipariş sırasında sos, yumurta ve süt içeriğini ayrıca belirtin."
+        },
+        "lastVerified": "2026-10-08"
+      },
+      {
+        "city": "Da Nang",
+        "name": "Chickpea Eatery",
+        "category": "vegan",
+        "cuisine": "Vegan Vietnam mutfağı",
+        "area": "An Hai / Nguyen Duy Hieu",
+        "description": "Bölgenin yemeklerini yalnız et çıkarılmış tabaklar olarak değil, kendi bitkisel tarifleriyle denemek için bir seçenek. Hoi An’da da şubesi bulunduğundan Da Nang kaydını ve adresini kontrol edin.",
+        "why": "8 Ekim 2026 kontrolünde Google Maps: 4,9/5, 1.780 yorum. Seçim, kontrol edilen adaylarda puan, yorum sayısı ve beslenme kanıtı birlikte değerlendirilerek yapıldı; şehir genelinde mutlak birincilik iddiası değildir.",
+        "address": "69 Nguyễn Duy Hiệu",
+        "officialUrl": "https://chickpeaeatery.com/da-nang-farm-to-table-cooking-experience/",
+        "verification": {
+          "status": "fully-vegan",
+          "sourceName": "Chickpea Eatery",
+          "sourceUrl": "https://chickpeaeatery.com/da-nang-farm-to-table-cooking-experience/",
+          "sourceType": "restaurant",
+          "note": "Vegan sınıflandırmasını menü kaynağıyla kontrol ettik. Sipariş sırasında sos, yumurta ve süt içeriğini ayrıca belirtin."
+        },
+        "lastVerified": "2026-10-08"
+      }
+    ],
+    "halal": [
+      {
+        "city": "Da Nang",
+        "name": "Lazeez Indian Restaurant",
+        "category": "halal",
+        "cuisine": "Hint mutfağı",
+        "area": "An Hai / Pham Van Dong",
+        "description": "Kıyı gününde Hint mutfağına ayıracağınız öğün için değerlendirilebilir. Köri, tandoori ve ekmek seçimini masadaki ihtiyaçlara göre yapın; helal hazırlama ve kullanılan et hakkında güncel teyit isteyin.",
+        "why": "8 Ekim 2026 kontrolünde Google Maps: 4,6/5, 1.400 yorum. Seçim, kontrol edilen adaylarda puan, yorum sayısı ve beslenme kanıtı birlikte değerlendirilerek yapıldı; şehir genelinde mutlak birincilik iddiası değildir.",
+        "address": "Lô i09 Phạm Văn Đồng",
+        "verification": {
+          "status": "restaurant-confirmed",
+          "sourceName": "Da Nang Visitor Center",
+          "sourceUrl": "https://danangvisitorcenter.com/en/nha-hang/lazeez-indian-halal-restaurant",
+          "sourceType": "official-tourism",
+          "note": "İşletme helal yemek sunduğunu belirtiyor. Bu etiket bağımsız ve süresi geçerli bir sertifika doğrulaması değildir; belge, et tedariki ve hazırlama koşullarını işletmeyle teyit edin."
+        },
+        "lastVerified": "2026-10-08"
+      }
+    ],
     "researchNote": "Da Nang’da mi Quang veya banh xeo adı tek başına içerik garantisi değildir; et, karides, yumurta ve sosu sorun. Sebze eşlikçileri ana yemeği vegan yapmaz. Helal uygunluk için kullanılan et ve hazırlama sürecini işletmenin güncel belgesiyle doğrulayın."
   },
   {
     "countryCode": "VN",
     "city": "Hoi An",
-    "vegan": [],
-    "halal": [],
+    "vegan": [
+      {
+        "city": "Hoi An",
+        "name": "Chickpea Eatery",
+        "category": "vegan",
+        "cuisine": "Vegan Vietnam mutfağı",
+        "area": "Eski Şehir / Phan Chau Trinh",
+        "description": "Eski sokakları gezerken Vietnam lezzetlerini bitkisel bir öğünde sürdürmek için merkezde bir seçenek. Yemekle ilgileniyorsanız pişirme deneyimini ayrıca araştırın; normal öğün rezervasyonuyla aynı hizmet saymayın.",
+        "why": "8 Ekim 2026 kontrolünde Google Maps: 4,9/5, 1.424 yorum. Seçim, kontrol edilen adaylarda puan, yorum sayısı ve beslenme kanıtı birlikte değerlendirilerek yapıldı; şehir genelinde mutlak birincilik iddiası değildir.",
+        "address": "86 Phan Châu Trinh",
+        "officialUrl": "https://chickpeaeatery.com/",
+        "verification": {
+          "status": "fully-vegan",
+          "sourceName": "Chickpea Eatery",
+          "sourceUrl": "https://chickpeaeatery.com/",
+          "sourceType": "restaurant",
+          "note": "Vegan sınıflandırmasını menü kaynağıyla kontrol ettik. Sipariş sırasında sos, yumurta ve süt içeriğini ayrıca belirtin."
+        },
+        "lastVerified": "2026-10-08"
+      },
+      {
+        "city": "Hoi An",
+        "name": "Peanuts",
+        "category": "vegan",
+        "cuisine": "Vietnam mutfağı",
+        "area": "Tran Nhan Tong",
+        "description": "Merkez dışındaki yürüyüşü aile tariflerine odaklanan bir öğünle birleştirmek için düşünün. İşletme vegan ve vejetaryen yemekler sunduğunu söylüyor; seçtiğiniz tabağın vegan olduğunu ayrı netleştirin.",
+        "why": "8 Ekim 2026 kontrolünde Google Maps: 4,9/5, 1.060 yorum. Seçim, kontrol edilen adaylarda puan, yorum sayısı ve beslenme kanıtı birlikte değerlendirilerek yapıldı; şehir genelinde mutlak birincilik iddiası değildir.",
+        "address": "122 Trần Nhân Tông",
+        "officialUrl": "https://peanuts-restaurant.com/en/about-us",
+        "verification": {
+          "status": "vegan-options",
+          "sourceName": "Peanuts",
+          "sourceUrl": "https://peanuts-restaurant.com/en/about-us",
+          "sourceType": "restaurant",
+          "note": "Vegan sınıflandırmasını menü kaynağıyla kontrol ettik. Sipariş sırasında sos, yumurta ve süt içeriğini ayrıca belirtin."
+        },
+        "lastVerified": "2026-10-08"
+      }
+    ],
+    "halal": [
+      {
+        "city": "Hoi An",
+        "name": "Baba’s Kitchen",
+        "category": "halal",
+        "cuisine": "Hint mutfağı",
+        "area": "Phan Chau Trinh",
+        "description": "Vietnam yemeklerinin arasına Hint mutfağından bir akşam eklemek isteyenler için çok yorumlanmış bir adres. Helal yemek beyanını güncel belgeyle teyit edin; vejetaryen köride süt veya tereyağı bulunabileceğini vegan seçimde unutmayın.",
+        "why": "8 Ekim 2026 kontrolünde Google Maps: 4,8/5, 7.205 yorum. Seçim, kontrol edilen adaylarda puan, yorum sayısı ve beslenme kanıtı birlikte değerlendirilerek yapıldı; şehir genelinde mutlak birincilik iddiası değildir.",
+        "address": "115 Phan Châu Trinh",
+        "officialUrl": "https://babas.kitchen/",
+        "verification": {
+          "status": "restaurant-confirmed",
+          "sourceName": "Baba’s Kitchen",
+          "sourceUrl": "https://babas.kitchen/",
+          "sourceType": "restaurant",
+          "note": "İşletme helal yemek sunduğunu belirtiyor. Bu etiket bağımsız ve süresi geçerli bir sertifika doğrulaması değildir; belge, et tedariki ve hazırlama koşullarını işletmeyle teyit edin."
+        },
+        "lastVerified": "2026-10-08"
+      }
+    ],
     "researchNote": "Hoi An’da cao lau ve beyaz gül mantısını et veya deniz ürünü açısından sorun; yalnız hamur ve yeşillik görünmesi yeterli değildir. Chay seçeneklerinde sos, yumurta ve sütü netleştirin. Helal uygunluk için güncel belge ve hazırlama koşullarını ayrıca doğrulayın."
   },
   {
     "countryCode": "VN",
     "city": "Ho Chi Minh City",
-    "vegan": [],
-    "halal": [],
+    "vegan": [
+      {
+        "city": "Ho Chi Minh City",
+        "name": "Be An Vegetarian Bistro (Nguyen Hue)",
+        "category": "vegan",
+        "cuisine": "Vietnam vejetaryen mutfağı",
+        "area": "Nguyen Hue / Saigon Garden",
+        "description": "Merkez yürüyüşünü daha sakin bir öğünle bölmek için Saigon Garden şubesini değerlendirin. Menüde vegan seçenekler var; bütün restoranı tamamen vegan kabul etmeden yumurta, süt ve sosları sorun.",
+        "why": "8 Ekim 2026 kontrolünde Google Maps: 4,8/5, 2.487 yorum. Seçim, kontrol edilen adaylarda puan, yorum sayısı ve beslenme kanıtı birlikte değerlendirilerek yapıldı; şehir genelinde mutlak birincilik iddiası değildir.",
+        "address": "Saigon Garden, 99 Nguyễn Huệ",
+        "officialUrl": "https://www.ampersand.vn/bean",
+        "verification": {
+          "status": "vegan-options",
+          "sourceName": "Be An Vegetarian Bistro (Nguyen Hue)",
+          "sourceUrl": "https://www.ampersand.vn/bean",
+          "sourceType": "restaurant",
+          "note": "Vegan sınıflandırmasını menü kaynağıyla kontrol ettik. Sipariş sırasında sos, yumurta ve süt içeriğini ayrıca belirtin."
+        },
+        "lastVerified": "2026-10-08"
+      },
+      {
+        "city": "Ho Chi Minh City",
+        "name": "Filthy Vegan",
+        "category": "vegan",
+        "cuisine": "Vegan Batı mutfağı",
+        "area": "Co Bac",
+        "description": "Üst üste Vietnam yemeklerinden sonra burger veya pizza tarzı bitkisel bir öğün arıyorsanız değerlendirin. Burası farklı bir damak molası; yerel mutfağı keşfedeceğiniz bütün öğünlerin yerine koymanız gerekmiyor.",
+        "why": "8 Ekim 2026 kontrolünde Google Maps: 4,8/5, 684 yorum. Seçim, kontrol edilen adaylarda puan, yorum sayısı ve beslenme kanıtı birlikte değerlendirilerek yapıldı; şehir genelinde mutlak birincilik iddiası değildir.",
+        "address": "86 Cô Bắc",
+        "verification": {
+          "status": "fully-vegan",
+          "sourceName": "HappyCow",
+          "sourceUrl": "https://www.happycow.net/reviews/filthy-vegan-ho-chi-minh-city-174499",
+          "sourceType": "vegan-directory",
+          "note": "Vegan sınıflandırmasını menü kaynağıyla kontrol ettik. Sipariş sırasında sos, yumurta ve süt içeriğini ayrıca belirtin."
+        },
+        "lastVerified": "2026-10-08"
+      }
+    ],
+    "halal": [
+      {
+        "city": "Ho Chi Minh City",
+        "name": "Baba’s Kitchen (Bui Vien)",
+        "category": "halal",
+        "cuisine": "Hint mutfağı",
+        "area": "Bui Vien",
+        "description": "Bui Vien çevresinde Hint mutfağı için çok yorumlanmış şubeyi seçin; aynı markanın başka adresleri de var. Eski bir menüdeki sertifika görselini bugünkü geçerlilik kanıtı saymadan güncel teyit isteyin.",
+        "why": "8 Ekim 2026 kontrolünde Google Maps: 4,8/5, 8.949 yorum. Seçim, kontrol edilen adaylarda puan, yorum sayısı ve beslenme kanıtı birlikte değerlendirilerek yapıldı; şehir genelinde mutlak birincilik iddiası değildir.",
+        "address": "274 Bùi Viện",
+        "officialUrl": "https://babas.kitchen/",
+        "verification": {
+          "status": "restaurant-confirmed",
+          "sourceName": "Baba’s Kitchen (Bui Vien)",
+          "sourceUrl": "https://babas.kitchen/",
+          "sourceType": "restaurant",
+          "note": "İşletme helal yemek sunduğunu belirtiyor. Bu etiket bağımsız ve süresi geçerli bir sertifika doğrulaması değildir; belge, et tedariki ve hazırlama koşullarını işletmeyle teyit edin."
+        },
+        "lastVerified": "2026-10-08"
+      },
+      {
+        "city": "Ho Chi Minh City",
+        "name": "Chef House Halal Food",
+        "category": "halal",
+        "cuisine": "Vietnam, Arap ve Akdeniz mutfağı",
+        "area": "Ho Tung Mau",
+        "description": "Merkezde helal yemek beyanı olan ve farklı mutfakları birleştiren bir alternatif. Bazı dış kaynaklar işletmede alkol servisi bildiriyor; bu konuda hassassanız rezervasyondan önce güncel servis ve mutfak düzenini sorun.",
+        "why": "8 Ekim 2026 kontrolünde Google Maps: 4,8/5, 917 yorum. Seçim, kontrol edilen adaylarda puan, yorum sayısı ve beslenme kanıtı birlikte değerlendirilerek yapıldı; şehir genelinde mutlak birincilik iddiası değildir.",
+        "address": "Tầng 2, 63 Hồ Tùng Mậu",
+        "officialUrl": "https://chefhousehalalfood.com/",
+        "verification": {
+          "status": "restaurant-confirmed",
+          "sourceName": "Chef House Halal Food",
+          "sourceUrl": "https://chefhousehalalfood.com/",
+          "sourceType": "restaurant",
+          "note": "İşletme helal yemek sunduğunu belirtiyor. Bu etiket bağımsız ve süresi geçerli bir sertifika doğrulaması değildir; belge, et tedariki ve hazırlama koşullarını işletmeyle teyit edin."
+        },
+        "lastVerified": "2026-10-08"
+      }
+    ],
     "researchNote": "Ho Chi Minh City’de banh mi için ezme, et, yumurta ve sosu; çorbada kullanılan suyu ayrı sorun. Chay menülerinde yumurta ve süt bulunup bulunmadığını belirtin. Helal uygunluğu yalnız yemek adından çıkarmayın; işletmenin güncel doğrulamasına bakın."
   },
   {
     "countryCode": "VN",
     "city": "Can Tho",
-    "vegan": [],
+    "vegan": [
+      {
+        "city": "Can Tho",
+        "name": "Ngon Vegan - Bến Ninh Kiều",
+        "category": "vegan",
+        "cuisine": "Vegan Vietnam mutfağı",
+        "area": "Ninh Kieu / Hai Ba Trung",
+        "description": "Nehir kıyısındaki akşam yürüyüşünü bitkisel bir öğünle tamamlamak için Ninh Kieu şubesini düşünün. Aynı isimde farklı şube sonuçları çıkıyor; 28 Hai Ba Trung adresini seçin.",
+        "why": "8 Ekim 2026 kontrolünde Google Maps: 4,9/5, 538 yorum. Seçim, kontrol edilen adaylarda puan, yorum sayısı ve beslenme kanıtı birlikte değerlendirilerek yapıldı; şehir genelinde mutlak birincilik iddiası değildir.",
+        "address": "28 Đ. Hai Bà Trưng",
+        "verification": {
+          "status": "fully-vegan",
+          "sourceName": "HappyCow",
+          "sourceUrl": "https://www.happycow.net/reviews/ngon-vegan-bistro-and-cafe-can-tho-470770",
+          "sourceType": "vegan-directory",
+          "note": "Vegan sınıflandırmasını menü kaynağıyla kontrol ettik. Sipariş sırasında sos, yumurta ve süt içeriğini ayrıca belirtin."
+        },
+        "lastVerified": "2026-10-08"
+      }
+    ],
     "halal": [],
-    "researchNote": "Can Tho’da hu tieu ve tekne kahvaltısının et suyu, et, deniz ürünü ve sos içeriğini önceden sorun. Vegan veya helal ihtiyacınızı tur rezervasyonunda belirtip hangi yemeğin sağlanacağını yazılı netleştirin; her teknenin aynı menüyü sunacağını varsaymayın."
+    "researchNote": "Can Tho’da hu tieu ve tekne kahvaltısının et suyu, et, deniz ürünü ve sos içeriğini önceden sorun. Vegan veya helal ihtiyacınızı tur rezervasyonunda belirtip hangi yemeğin sağlanacağını yazılı netleştirin; her teknenin aynı menüyü sunacağını varsaymayın. Can Tho için açık ve yeterince doğrulanmış bir helal restoran önerisi bulunamadı. Eski kaynaklardaki Lion City, 8 Ekim 2026 Google Maps kontrolünde kalıcı olarak kapalı göründüğü için listeye alınmadı."
   }
 ]

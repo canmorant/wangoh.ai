@@ -1,0 +1,94 @@
+{
+  "hanoi": {
+    "url": "https://maps.app.goo.gl/r9Uxjh4svar8dptZ9",
+    "stops": [
+      "Hoan Kiem Lake",
+      "Ngoc Son Temple",
+      "Temple of Literature",
+      "Imperial Citadel of Thang Long",
+      "Truc Bach Lake",
+      "Dong Xuan Market",
+      "St Joseph Cathedral",
+      "Tran Quoc Pagoda",
+      "Hoa Lo Prison Relic",
+      "Vietnam Museum of Ethnology"
+    ]
+  },
+  "verifiedDate": "2026-10-08",
+  "hue": {
+    "url": "https://maps.app.goo.gl/CbEYmKpr5uKJmZY68",
+    "stops": [
+      "Hue Imperial City",
+      "Thien Mu Pagoda",
+      "Mausoleum of Emperor Tu Duc",
+      "Mausoleum of Emperor Minh Mang",
+      "Dong Ba Market",
+      "Truong Tien Bridge",
+      "Quoc Hoc - Hue High School For The Gifted",
+      "Chua Tu Hieu",
+      "Thai Hoa Palace",
+      "Meridian Gate"
+    ]
+  },
+  "da-nang": {
+    "url": "https://maps.app.goo.gl/Td7Wx4CxCxBX96S97",
+    "stops": [
+      "My Khe Beach",
+      "Da Nang Museum of Cham Sculpture",
+      "Marble Mountains",
+      "Dragon Bridge",
+      "Han Market",
+      "Da Nang Cathedral",
+      "Con Market",
+      "Linh Ung Bai But Pagoda",
+      "Han River Bridge",
+      "APEC Park"
+    ]
+  },
+  "hoi-an": {
+    "url": "https://maps.app.goo.gl/kHft5DTgxyGfCo3y6",
+    "stops": [
+      "Japanese Covered Bridge, Hoi An, Vietnam",
+      "Phung Hung Old House, Hoi An, Vietnam",
+      "Cantonese Assembly Hall, Hoi An, Vietnam",
+      "Sa Huynh Cultural Museum, Hoi An, Vietnam",
+      "Old House of Tan Ky, Hoi An, Vietnam",
+      "Museum of Folk Culture, Hoi An, Vietnam",
+      "Fujian Assembly Hall, Hoi An, Vietnam",
+      "Central Market Food Hall, Hoi An, Vietnam",
+      "Tra Que Vegetable Village, Hoi An, Vietnam",
+      "An Bang Beach, Hoi An, Vietnam"
+    ]
+  },
+  "ho-chi-minh-city": {
+    "url": "https://maps.app.goo.gl/abWqDwG8pbqNu3uq5",
+    "stops": [
+      "War Remnants Museum, Ho Chi Minh City, Vietnam",
+      "Independence Palace, Ho Chi Minh City, Vietnam",
+      "Saigon Central Post Office, Ho Chi Minh City, Vietnam",
+      "Notre Dame Cathedral Basilica of Saigon, Vietnam",
+      "Ho Chi Minh City Opera House, Vietnam",
+      "Nguyen Hue Walking Street, Ho Chi Minh City, Vietnam",
+      "Ben Thanh Market, Ho Chi Minh City, Vietnam",
+      "Tao Dan Park, Ho Chi Minh City, Vietnam",
+      "Jade Emperor Pagoda, Ho Chi Minh City, Vietnam",
+      "Thien Hau Temple, Ho Chi Minh City, Vietnam"
+    ]
+  },
+  "can-tho": {
+    "url": "https://maps.app.goo.gl/9cvjqFzPR7aFDXn28",
+    "stops": [
+      "Cai Rang Floating Market, Can Tho, Vietnam",
+      "Ninh Kieu Wharf, Can Tho, Vietnam",
+      "Ninh Kieu Pedestrian Bridge, Can Tho, Vietnam",
+      "Ong Temple, Can Tho, Vietnam",
+      "Can Tho Old Market, Vietnam",
+      "Can Tho Museum, Vietnam",
+      "Binh Thuy Ancient House, Can Tho, Vietnam",
+      "Binh Thuy Communal House, Can Tho, Vietnam",
+      "Munir Ansay Pagoda, Can Tho, Vietnam",
+      "Quang Duc Pagoda, Can Tho, Vietnam"
+    ]
+  },
+  "mapsVerifiedDate": "2026-10-09"
+}

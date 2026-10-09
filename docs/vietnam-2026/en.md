@@ -97,6 +97,12 @@ Hanoi does not have one climate setting all year. Spring and autumn can suit wal
 
 Budget meals, transfers, admission and onward northern travel separately. An inexpensive lunch followed by a long private transfer changes the day’s total. Planning a break near the places you visit can also be easier than returning across the city to the same hotel street.
 
+## How to plan the stops on your map
+
+Our map selection: Hoan Kiem Lake, Ngoc Son Temple, Temple of Literature, Imperial Citadel of Thang Long, Truc Bach Lake, Dong Xuan Market, St Joseph Cathedral, Tran Quoc Pagoda, Hoa Lo Prison Relic, Vietnam Museum of Ethnology.
+
+Break the lake and Old Quarter into short walks, leaving a pause after Hoa Lo Prison Relic. The Vietnam Museum of Ethnology needs a separate journey from the centre. Spread the pins across two or three days according to your interests.
+
 ## After Hanoi: choose a different kind of journey
 
 If you add Ninh Binh, give a Trang An boat outing its own day rather than treating it as an extension of a Hanoi walk. Departure, the pier, time on the water and the return each belong in the plan. A same-day return can work, but watching the landscape while worrying about the next connection differs from spending an unhurried afternoon there. Consider an overnight stay too.
@@ -208,6 +214,12 @@ Spring can suit Hue; in hotter months, visit the citadel early. Heavy-rain perio
 
 Separate admission, tomb transfers and any guiding fee. Read the sites and validity covered by a combined ticket before buying. Compare a vehicle quote by waiting time, return journey and the actual tombs included, not only the lowest headline price.
 
+## How to plan the stops on your map
+
+Our map selection: Hue Imperial City, Thai Hoa Palace, Ngo Mon Gate, Dong Ba Market, Truong Tien Bridge, Quoc Hoc High School, Thien Mu Pagoda, Tu Hieu Pagoda, Tu Duc Tomb, Minh Mang Tomb.
+
+Ngo Mon Gate and Thai Hoa Palace belong to the Imperial City visit; they are not three independent full outings. Dong Ba Market and Truong Tien Bridge complete a river day. Quoc Hoc is a working school: view it from outside when entry is not permitted. Plan separate transport and time for Tu Hieu and the royal tombs.
+
 ## Hue to Da Nang: leave room for the journey
 
 Hue, Da Nang and Hoi An fit naturally within one trip, but commuting back and forth every day can make that trip tiring. A palace visit followed by luggage collection and another hotel is not a full sightseeing day in the new city. Check-in, a meal and a brief walk may be enough. Leaving one place well also means arriving at the next with some energy left.
@@ -317,6 +329,12 @@ Central Vietnam’s weather should not be inferred from the north or south. Spri
 
 Separate city meals, beach services and excursions in the budget. A resort day and an everyday city day have different cost structures. Add travel, admission and waiting time together for distant attractions; the main ticket alone does not describe the whole day.
 
+## How to plan the stops on your map
+
+Our map selection: Museum of Cham Sculpture, APEC Park, Dragon Bridge, Han Market, Da Nang Cathedral, Con Market, Han River Bridge, My Khe Beach, Linh Ung Bai But Pagoda, Marble Mountains.
+
+The museum, APEC Park and Dragon Bridge can form a riverside day. Han Market, the cathedral and Con Market suit another walk through everyday city life. Han River Bridge and My Khe are not one compact neighbourhood. Plan separate transport for Linh Ung Bai But Pagoda and Marble Mountains rather than treating them as central walking stops.
+
 ## Da Nang to Hoi An: another way to spend the evening
 
 A day trip to Hoi An can work, but staying overnight is a decision about the evening and following morning you want. Returning by car after the lanterns differs from stepping into the old streets as shops begin to open. If you want more than the illuminated town, consider separate stays in both cities. An easy connection does not make their experiences interchangeable.
@@ -424,6 +442,12 @@ March to May can suit outdoor days; hotter months call for midday breaks. Rainy 
 
 Treat heritage access, boats, tailoring and cooking classes as separate costs. Read which building visits a ticket includes; crossing a bridge is not the same as entering every historic house. Set a shopping allowance early so purchases do not quietly consume the rest of the holiday budget.
 
+## How to plan the stops on your map
+
+Our map selection: Japanese Covered Bridge, Phung Hung Old House, Cantonese Assembly Hall, Museum of Sa Huynh Culture, Tan Ky Old House, Hoi An Museum of Folk Culture, Fujian Assembly Hall, Hoi An Central Market Food Hall, Tra Que Vegetable Village, An Bang Beach.
+
+Give the interpretation at Tan Ky and Phung Hung time beyond a facade photograph. Follow the port’s community histories through the Fujian and Cantonese assembly halls. Sa Huynh Culture and Folk Culture are different museums with different subjects. After the central market food hall, keep a separate half-day for Tra Que and An Bang, and check admission coverage when buying tickets.
+
 ## From Hoi An to My Son: a different historical chapter
 
 My Son is not an extra stop a few streets beyond Hoi An: this temple site outside the town needs separate transport and time. For guided visits, check the language, walking arrangements and return point beforehand. Rather than touring the old town and trying to finish the surrounding area in one afternoon, give this historical chapter its own place in the trip.
@@ -467,6 +491,8 @@ In Hoi An, check cao lau and white rose dumplings for meat and seafood; dough an
 - [Vietnam Tourism — Hoi An shopping](https://vietnam.travel/node/116)
 
 - [UNESCO — My Son](https://whc.unesco.org/en/list/949/)
+
+- [Hoi An heritage centre — monuments](https://www.hoianworldheritage.org.vn/en/news/Monument.hwh)
 
 
 ---
@@ -530,6 +556,12 @@ Bread may contain pate, noodles meat stock, and vegetables fish sauce. Discuss v
 The city can be hot throughout the year, with a southern rain pattern different from Hanoi’s. Indoor intervals help in wet months and midday rest helps in heat. After emotionally demanding museum exhibits, leave unstructured time rather than immediately treating the next attraction as another item to complete.
 
 Separate meals, cafes, city transfers and excursions. A cheaper distant room may lose its advantage through daily transport. If you continue to Can Tho overnight, view it as a distinct delta chapter that buys you time, rather than simply an extra charge attached to a city holiday.
+
+## How to plan the stops on your map
+
+Our map selection: War Remnants Museum, Independence Palace, Saigon Central Post Office, Saigon Notre Dame Cathedral, Saigon Opera House, Nguyen Hue Walking Street, Ben Thanh Market, Tao Dan Park, Jade Emperor Pagoda, Thien Hau Temple.
+
+You can separate the museum-and-palace day from the post office and cathedral walk. Seeing the Opera House facade does not include a performance or interior access; an evening on Nguyen Hue offers a different experience. Balance Ben Thanh shopping with a pause in Tao Dan Park. Consider transport for Jade Emperor Pagoda and Thien Hau Temple in Cholon, respecting worshippers’ space.
 
 ## From Saigon to the delta: read the return arrangements
 
@@ -638,6 +670,12 @@ Southern heat and rain affect the day, and exposed time on the water needs shade
 
 Compare boat size, guiding, breakfast, transfers and any extra garden visits together. Private and shared outings offer different flexibility. Ask beforehand about shopping stops if they are not what you want; the most suitable route is the one whose terms you can understand and shape around your needs.
 
+## How to plan the stops on your map
+
+Our map selection: Cai Rang Floating Market, Ninh Kieu Wharf, Ninh Kieu Pedestrian Bridge, Ong Temple, Can Tho Old Market, Can Tho Museum, Binh Thuy Ancient House, Binh Thuy Communal House, Munir Ansay Pagoda, Quang Duc Pagoda.
+
+The Cai Rang pin is not a boarding instruction: get your operator’s meeting pier in writing. Ninh Kieu Wharf, its pedestrian bridge, Ong Temple and the Old Market suit a short central visit. Can Tho Museum adds context; Munir Ansay and Quang Duc remain places of worship. Binh Thuy Ancient House and Binh Thuy Communal House are different buildings that can share a journey outside the centre.
+
 ## Beyond Can Tho: the delta is more than one boat trip
 
 For a river-and-garden day, do not assume every package promising “local life” offers the same encounter. Ask about the garden, host or workshop, how the visit works and what is included. Everyday exchanges can be the rewarding part of Can Tho, but reducing them to five-minute photograph stops between many other visits loses much of their meaning. Give one activity you care about enough time to become an experience.
@@ -666,7 +704,7 @@ No: trading activity, timing and conditions vary. Ask a local operator about the
 
 ## Dietary note
 
-In Can Tho, check the stock, meat, seafood and sauces in hu tieu and boat breakfasts beforehand. State vegan or halal needs when booking and confirm the actual meal in writing; boats do not all provide the same menu.
+In Can Tho, check the stock, meat, seafood and sauces in hu tieu and boat breakfasts beforehand. State vegan or halal needs when booking and confirm the actual meal in writing; boats do not all provide the same menu. No sufficiently verified open halal restaurant was found for a recommendation in Can Tho. Lion City, mentioned in older sources, was marked permanently closed on Google Maps when checked on 8 October 2026 and was excluded.
 
 ## Verification sources
 
@@ -675,3 +713,7 @@ In Can Tho, check the stock, meat, seafood and sauces in hu tieu and boat breakf
 - [Vietnam Tourism — Can Tho river and gardens](https://www.vietnam.travel/things-to-do/can-tho-glimpse-river-and-garden)
 
 - [Vietnam Tourism — transport within Vietnam](https://vietnam.travel/plan-your-trip/transport-within-vietnam)
+
+- [Can Tho Tourism — Ong Temple](https://canthotourism.vn/en/chuaong)
+
+- [Can Tho Tourism — Munir Ansay](https://canthotourism.vn/en/chuamuniransay)

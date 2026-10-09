@@ -1,0 +1,187 @@
+{
+  "observedDate": "2026-10-08",
+  "ratingSource": "Google Maps; observed in signed-in browser, not third-party ratings",
+  "candidates": [
+    {
+      "city": "Hanoi",
+      "name": "Katze",
+      "rating": 4.9,
+      "reviews": 3385,
+      "address": "26B P. Cầu Gỗ",
+      "dietarySource": "https://www.happycow.net/reviews/katze-hanoi-415095",
+      "category": "vegan"
+    },
+    {
+      "city": "Hanoi",
+      "name": "Dana Vegan House",
+      "rating": 4.9,
+      "reviews": 2105,
+      "address": "12 P. Đông Thái",
+      "dietarySource": "https://experience.thesolariagroup.com/explore/dana-vegan-house-vietnamese-vegan-restaurant",
+      "category": "vegan"
+    },
+    {
+      "city": "Hanoi",
+      "name": "Batavia Indonesian Halal Restaurant & Cafe",
+      "rating": 4.6,
+      "reviews": 1353,
+      "address": "116 P. Ngọc Hà",
+      "dietarySource": "https://www.bataviarestaurant.com/faqs-1",
+      "category": "halal",
+      "note": "Restaurant reports HCA certification; check current certificate scope and expiry."
+    },
+    {
+      "city": "Hanoi",
+      "name": "d’LIONS Restaurant",
+      "rating": 4.5,
+      "reviews": 733,
+      "address": "92 Đ. Lê Duẩn",
+      "dietarySource": "https://dlions.tayhogroup.com/",
+      "category": "halal"
+    },
+    {
+      "city": "Hue",
+      "name": "An Nhien Garden Vegetarian - Nhà Hàng & Cafe",
+      "rating": 4.9,
+      "reviews": 835,
+      "address": "Kiệt 11 Tỉnh lộ 10, Tây Thượng, Mỹ Thượng, Huế",
+      "dietarySource": "https://annhienvegetarian.com/",
+      "category": "halal",
+      "note": "Official restaurant displays Vietnam National Halal certification; vegetarian menu includes milk drinks, not fully vegan."
+    },
+    {
+      "city": "Hue",
+      "name": "Tịnh Tâm Vegan",
+      "rating": 4.6,
+      "reviews": 558,
+      "address": "12 Chu Văn An",
+      "dietarySource": "https://www.happycow.net/reviews/tinh-tam-vegan-hue-284105",
+      "category": "vegan"
+    },
+    {
+      "city": "Da Nang",
+      "name": "Roots Plant-Based Cafe",
+      "rating": 4.7,
+      "reviews": 3997,
+      "address": "266 Trần Bạch Đằng",
+      "dietarySource": "https://rootsplantbasedcafe.com/",
+      "category": "vegan"
+    },
+    {
+      "city": "Da Nang",
+      "name": "Chickpea Eatery",
+      "rating": 4.9,
+      "reviews": 1780,
+      "address": "69 Nguyễn Duy Hiệu",
+      "dietarySource": "https://chickpeaeatery.com/da-nang-farm-to-table-cooking-experience/",
+      "category": "vegan"
+    },
+    {
+      "city": "Da Nang",
+      "name": "Lazeez Indian Restaurant",
+      "rating": 4.6,
+      "reviews": 1400,
+      "address": "Lô i09 Phạm Văn Đồng",
+      "dietarySource": "https://danangvisitorcenter.com/en/nha-hang/lazeez-indian-halal-restaurant",
+      "category": "halal"
+    },
+    {
+      "city": "Hoi An",
+      "name": "Chickpea Eatery",
+      "rating": 4.9,
+      "reviews": 1424,
+      "address": "86 Phan Châu Trinh",
+      "dietarySource": "https://chickpeaeatery.com/",
+      "category": "vegan"
+    },
+    {
+      "city": "Hoi An",
+      "name": "Peanuts",
+      "rating": 4.9,
+      "reviews": 1060,
+      "address": "122 Trần Nhân Tông",
+      "dietarySource": "https://peanuts-restaurant.com/en/about-us",
+      "category": "vegan",
+      "note": "Restaurant describes vegan and vegetarian food; classify vegan-options."
+    },
+    {
+      "city": "Hoi An",
+      "name": "Baba’s Kitchen",
+      "rating": 4.8,
+      "reviews": 7205,
+      "address": "115 Phan Châu Trinh",
+      "dietarySource": "https://babas.kitchen/",
+      "category": "halal",
+      "note": "Restaurant-confirmed halal, not independent current certification."
+    },
+    {
+      "city": "Hoi An",
+      "name": "Tasty House",
+      "rating": 4.2,
+      "reviews": 230,
+      "address": "27 Thoại Ngọc Hầu",
+      "dietarySource": "https://tastyhouse.vn/",
+      "category": "halal"
+    },
+    {
+      "city": "Ho Chi Minh City",
+      "name": "Be An Vegetarian Bistro (Nguyen Hue)",
+      "rating": 4.8,
+      "reviews": 2487,
+      "address": "Saigon Garden, 99 Nguyễn Huệ",
+      "dietarySource": "https://www.ampersand.vn/bean",
+      "category": "vegan",
+      "note": "Vegan-options; vegetarian restaurant, not fully vegan."
+    },
+    {
+      "city": "Ho Chi Minh City",
+      "name": "Filthy Vegan",
+      "rating": 4.8,
+      "reviews": 684,
+      "address": "86 Cô Bắc",
+      "dietarySource": "https://www.happycow.net/reviews/filthy-vegan-ho-chi-minh-city-174499",
+      "category": "vegan"
+    },
+    {
+      "city": "Ho Chi Minh City",
+      "name": "Baba’s Kitchen (Bui Vien)",
+      "rating": 4.8,
+      "reviews": 8949,
+      "address": "274 Bùi Viện",
+      "dietarySource": "https://babas.kitchen/",
+      "category": "halal",
+      "note": "Restaurant-confirmed; old menu certificate is not proof of current independent certification."
+    },
+    {
+      "city": "Ho Chi Minh City",
+      "name": "Chef House Halal Food",
+      "rating": 4.8,
+      "reviews": 917,
+      "address": "Tầng 2, 63 Hồ Tùng Mậu",
+      "dietarySource": "https://chefhousehalalfood.com/",
+      "category": "halal",
+      "note": "Restaurant-confirmed halal; specialist reports alcohol on premises. Verify preparation and current certificate."
+    },
+    {
+      "city": "Can Tho",
+      "name": "Ngon Vegan - Bến Ninh Kiều",
+      "rating": 4.9,
+      "reviews": 538,
+      "address": "28 Đ. Hai Bà Trưng",
+      "dietarySource": "https://www.happycow.net/reviews/ngon-vegan-bistro-and-cafe-can-tho-470770",
+      "category": "vegan"
+    }
+  ],
+  "excluded": [
+    {
+      "city": "Can Tho",
+      "name": "Lion City Can Tho - Halal Kitchen",
+      "reason": "Google Maps permanently closed; 4.2/18 reviews; 9 Nam Ky Khoi Nghia. No adequately verified open halal venue found in focused city search."
+    },
+    {
+      "city": "Ho Chi Minh City",
+      "name": "The Daun Restaurant",
+      "reason": "Official website says temporarily closed until further notice; conflicts with Maps listing, omitted."
+    }
+  ]
+}

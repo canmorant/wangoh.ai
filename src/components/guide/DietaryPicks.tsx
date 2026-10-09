@@ -127,7 +127,7 @@ export default function DietaryPicks({
         {t(hasPicks ? "heading" : "notesHeading", { city })}
       </h2>
       <p className="mt-4 max-w-[68ch] text-[15px] leading-relaxed text-white/55">
-        {t(hasPicks ? "intro" : "notesIntro", { city })}
+        {t(hasPicks ? (dietary.countryCode === "VN" ? "verifiedSelectionIntro" : "intro") : "notesIntro", { city })}
       </p>
 
       {hasPicks && (

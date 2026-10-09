@@ -43,6 +43,98 @@ export const parisMapsList: GuideMapsList = {
  * Her listede o rehberde adı geçen yerlerden seçilen 10 durak var.
  */
 const MAPS_LISTS: Record<string, GuideMapsList> = {
+  /* BEGIN VIETNAM MAPS */
+  "VN:Hanoi": {
+    url: "https://maps.app.goo.gl/r9Uxjh4svar8dptZ9",
+    stops: [
+      { id: "hoanKiem", query: "Hoan Kiem Lake, Hanoi, Vietnam" },
+      { id: "ngocSon", query: "Ngoc Son Temple, Hanoi, Vietnam" },
+      { id: "hanoiLiterature", query: "Temple of Literature, Hanoi, Vietnam" },
+      { id: "thangLong", query: "Imperial Citadel of Thang Long, Hanoi, Vietnam" },
+      { id: "trucBach", query: "Truc Bach Lake, Hanoi, Vietnam" },
+      { id: "dongXuan", query: "Dong Xuan Market, Hanoi, Vietnam" },
+      { id: "hanoiCathedral", query: "St Joseph Cathedral, Hanoi, Vietnam" },
+      { id: "tranQuoc", query: "Tran Quoc Pagoda, Hanoi, Vietnam" },
+      { id: "hoaLo", query: "Hoa Lo Prison Relic, Hanoi, Vietnam" },
+      { id: "vietnamEthnology", query: "Vietnam Museum of Ethnology, Hanoi, Vietnam" },
+    ],
+  },
+  "VN:Hue": {
+    url: "https://maps.app.goo.gl/CbEYmKpr5uKJmZY68",
+    stops: [
+      { id: "hueImperial", query: "Hue Imperial City, Hue, Vietnam" },
+      { id: "thaiHoa", query: "Thai Hoa Palace, Hue, Vietnam" },
+      { id: "ngoMon", query: "Meridian Gate, Hue, Vietnam" },
+      { id: "dongBa", query: "Dong Ba Market, Hue, Vietnam" },
+      { id: "truongTien", query: "Truong Tien Bridge, Hue, Vietnam" },
+      { id: "quocHoc", query: "Quoc Hoc Hue High School, Hue, Vietnam" },
+      { id: "thienMu", query: "Thien Mu Pagoda, Hue, Vietnam" },
+      { id: "tuHieu", query: "Tu Hieu Pagoda, Hue, Vietnam" },
+      { id: "tuDuc", query: "Mausoleum of Emperor Tu Duc, Hue, Vietnam" },
+      { id: "minhMang", query: "Mausoleum of Emperor Minh Mang, Hue, Vietnam" },
+    ],
+  },
+  "VN:Da Nang": {
+    url: "https://maps.app.goo.gl/Td7Wx4CxCxBX96S97",
+    stops: [
+      { id: "chamMuseum", query: "Da Nang Museum of Cham Sculpture, Vietnam" },
+      { id: "apecPark", query: "APEC Park, Da Nang, Vietnam" },
+      { id: "dragonBridge", query: "Dragon Bridge, Da Nang, Vietnam" },
+      { id: "hanMarket", query: "Han Market, Da Nang, Vietnam" },
+      { id: "daNangCathedral", query: "Da Nang Cathedral, Vietnam" },
+      { id: "conMarket", query: "Con Market, Da Nang, Vietnam" },
+      { id: "hanBridge", query: "Han River Bridge, Da Nang, Vietnam" },
+      { id: "myKhe", query: "My Khe Beach, Da Nang, Vietnam" },
+      { id: "linhUng", query: "Linh Ung Bai But Pagoda, Son Tra, Da Nang, Vietnam" },
+      { id: "marbleMountains", query: "Marble Mountains, Da Nang, Vietnam" },
+    ],
+  },
+  "VN:Hoi An": {
+    url: "https://maps.app.goo.gl/kHft5DTgxyGfCo3y6",
+    stops: [
+      { id: "japaneseBridge", query: "Japanese Covered Bridge, Hoi An, Vietnam" },
+      { id: "phungHung", query: "Phung Hung Old House, Hoi An, Vietnam" },
+      { id: "cantoneseHall", query: "Cantonese Assembly Hall, Hoi An, Vietnam" },
+      { id: "saHuynh", query: "Sa Huynh Cultural Museum, Hoi An, Vietnam" },
+      { id: "tanKy", query: "Old House of Tan Ky, Hoi An, Vietnam" },
+      { id: "folkHoiAn", query: "Museum of Folk Culture, Hoi An, Vietnam" },
+      { id: "fujianHall", query: "Fujian Assembly Hall, Hoi An, Vietnam" },
+      { id: "hoiAnMarket", query: "Central Market Food Hall, Hoi An, Vietnam" },
+      { id: "traQue", query: "Tra Que Vegetable Village, Hoi An, Vietnam" },
+      { id: "anBang", query: "An Bang Beach, Hoi An, Vietnam" },
+    ],
+  },
+  "VN:Ho Chi Minh City": {
+    url: "https://maps.app.goo.gl/abWqDwG8pbqNu3uq5",
+    stops: [
+      { id: "warRemnants", query: "War Remnants Museum, Ho Chi Minh City, Vietnam" },
+      { id: "independencePalace", query: "Independence Palace, Ho Chi Minh City, Vietnam" },
+      { id: "saigonPost", query: "Saigon Central Post Office, Ho Chi Minh City, Vietnam" },
+      { id: "saigonCathedral", query: "Notre Dame Cathedral Basilica of Saigon, Vietnam" },
+      { id: "saigonOpera", query: "Ho Chi Minh City Opera House, Vietnam" },
+      { id: "nguyenHue", query: "Nguyen Hue Walking Street, Ho Chi Minh City, Vietnam" },
+      { id: "benThanh", query: "Ben Thanh Market, Ho Chi Minh City, Vietnam" },
+      { id: "taoDan", query: "Tao Dan Park, Ho Chi Minh City, Vietnam" },
+      { id: "jadeEmperor", query: "Jade Emperor Pagoda, Ho Chi Minh City, Vietnam" },
+      { id: "thienHau", query: "Thien Hau Temple, Ho Chi Minh City, Vietnam" },
+    ],
+  },
+  "VN:Can Tho": {
+    url: "https://maps.app.goo.gl/9cvjqFzPR7aFDXn28",
+    stops: [
+      { id: "caiRang", query: "Cai Rang Floating Market, Can Tho, Vietnam" },
+      { id: "ninhKieu", query: "Ninh Kieu Wharf, Can Tho, Vietnam" },
+      { id: "ninhKieuBridge", query: "Ninh Kieu Pedestrian Bridge, Can Tho, Vietnam" },
+      { id: "ongTemple", query: "Ong Temple, Can Tho, Vietnam" },
+      { id: "canThoMarket", query: "Can Tho Old Market, Vietnam" },
+      { id: "canThoMuseum", query: "Can Tho Museum, Vietnam" },
+      { id: "binhThuyHouse", query: "Binh Thuy Ancient House, Can Tho, Vietnam" },
+      { id: "binhThuyTemple", query: "Binh Thuy Communal House, Can Tho, Vietnam" },
+      { id: "munirAnsay", query: "Munir Ansay Pagoda, Can Tho, Vietnam" },
+      { id: "quangDuc", query: "Quang Duc Pagoda, Can Tho, Vietnam" },
+    ],
+  },
+  /* END VIETNAM MAPS */
   /* ------------------------------ Fransa ------------------------------ */
   "FR:Paris": parisMapsList,
   "FR:Nice": {

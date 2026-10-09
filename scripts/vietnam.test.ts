@@ -32,7 +32,9 @@ for(const locale of ['tr','en','es'] as const){
   assert(guide.seoTitle.length<=60&&guide.seoDescription.length>=120&&guide.seoDescription.length<=160);
   assert(!titles.has(`${locale}:${guide.seoTitle}`));titles.add(`${locale}:${guide.seoTitle}`);
   const dietary=localizedDietary('VN',city.name,locale);assert(dietary?.complete);
-  assert.equal(dietary.value.vegan.length+dietary.value.halal.length,0,'Do not fabricate verified restaurants');
+  assert(dietary.value.vegan.length>0,'Verified vegan recommendations required');
+  assert(city.name==='Can Tho' ? dietary.value.halal.length===0 : dietary.value.halal.length>0);
+  for(const pick of [...dietary.value.vegan,...dietary.value.halal]){assert(pick.verification.sourceUrl.startsWith('https://'));assert(pick.lastVerified);assert(pick.why.includes(locale==='en'?'Google Maps':'Google Maps'));}
   assert(existsSync(`public${city.image}`));const credit=creditFor(city.image);assert(credit?.licenseName&&credit.sourceUrl&&credit.lqip);
   pages++;
  }
