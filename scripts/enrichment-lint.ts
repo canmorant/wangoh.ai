@@ -29,17 +29,19 @@ const inScope = new Set<string>();
 
 for (const f of files) {
   const path = join(DIR, f);
+  const mine = !requested.length || requested.includes(path);
   let data: Data;
   try {
     data = JSON.parse(readFileSync(path, "utf8"));
   } catch (e) {
-    errors.push(`${f}: geçersiz JSON (${(e as Error).message})`);
+    // Başka bir ajanın yazmakta olduğu dosya geçici olarak bozuk görünebilir: yalnız kendi dosyalarını raporla.
+    if (mine) errors.push(`${f}: geçersiz JSON (${(e as Error).message})`);
     continue;
   }
   for (const [key, entry] of Object.entries(data)) {
-    if (all.has(key)) err(key, `birden fazla dosyada var (${all.get(key)!.file} ve ${f})`);
+    if (all.has(key) && mine) err(key, `birden fazla dosyada var (${all.get(key)!.file} ve ${f})`);
     all.set(key, { file: f, entry });
-    if (!requested.length || requested.includes(path)) inScope.add(key);
+    if (mine) inScope.add(key);
   }
 }
 
