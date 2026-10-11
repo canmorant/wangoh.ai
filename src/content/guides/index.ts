@@ -75,6 +75,7 @@ import { denmarkGuides } from "./denmark";
 import { finlandGuides } from "./finland";
 import { nyAlesund } from "./ny-alesund";
 import { longyearbyen } from "./longyearbyen";
+import { withEnrichment } from "./enrichments";
 
 export const allCountries: Country[] = [...countries, SECRET_DESTINATION];
 
@@ -200,7 +201,7 @@ export function buildGuides(ctx: GuideContext): CityGuide[] {
     ...finlandGuides(ctx),
     ...(addedGuides as CityGuide[]).map(own),
   ];
-  return guides.map((guide) => withHowToGetFaq(guide, ctx));
+  return guides.map((guide) => withEnrichment(withHowToGetFaq(guide, ctx), ctx.locale));
 }
 
 export const GUIDES: CityGuide[] = buildGuides(TR_CONTEXT);
