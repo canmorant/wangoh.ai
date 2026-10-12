@@ -513,6 +513,33 @@ a,
   max-height: max(16rem, calc(100svh - 21rem));
   margin-inline: auto;
   touch-action: none;
+  box-shadow:
+    0 34px 90px rgba(0, 0, 0, 0.48),
+    0 0 0 1px rgba(200, 164, 94, 0.06),
+    inset 0 0 70px rgba(21, 57, 98, 0.18);
+}
+/* Harita oyunu masaüstünde telefon genişliğine sıkışmasın. Giriş ve sonuçlar
+   okunabilir bir makale genişliğinde kalır; asıl oyun büyük küre + kontrol
+   sütunu olarak monitör alanını kullanır. */
+@media (min-width: 900px) and (min-height: 640px) {
+  .dg-shell.mg-shell { max-width: 76rem; }
+  .mg-intro { max-width: 52rem; }
+  .mg-results { max-width: 58rem; }
+  .mg-body {
+    display: grid;
+    grid-template-columns: minmax(30rem, 1.45fr) minmax(20rem, 0.8fr);
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "stage card" "stage actions";
+    column-gap: clamp(1.25rem, 3vw, 2.5rem);
+    align-items: start;
+  }
+  .mg-card { grid-area: card; }
+  .mg-stage {
+    grid-area: stage;
+    max-width: 44rem;
+    max-height: min(72svh, 44rem);
+  }
+  .mg-actions { grid-area: actions; }
 }
 @media (orientation: landscape) and (max-height: 520px) {
   .mg-body {

@@ -65,7 +65,7 @@ export default function MapGame({ countryNames, guideLinks, guideNames }: Props)
         className="pointer-events-none absolute inset-0"
         style={{ background: `radial-gradient(ellipse 70% 55% at 50% -5%, ${ACCENT}1f 0%, transparent 62%)` }}
       />
-      <div className="dg-shell relative mx-auto flex min-h-[100svh] flex-col">
+      <div className="dg-shell mg-shell relative mx-auto flex min-h-[100svh] flex-col">
         {g.screen === "intro" && <Intro key="intro" g={g} />}
         {g.screen === "playing" && g.target && (
           <Playing key="playing" g={g} countryNames={countryNames} guideLinks={guideLinks} guideNames={guideNames} />
