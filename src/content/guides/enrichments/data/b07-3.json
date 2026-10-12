@@ -1,0 +1,320 @@
+{
+  "GB:İskoçya Highlands": {
+    "tr": {
+      "story": {
+        "heading": "Glencoe'dan Culloden'a: Highlands'in klan, ayaklanma ve tahliye yılları",
+        "body": [
+          "Highlands, İskoçya'yı Lowlands'ten ayıran Highland Boundary Fault'un kuzeyindeki dağlık bölgedir; Gal dili ve klan toplulukları bölgenin kimliğini yüzyıllarca belirledi. 13 Şubat 1692'de hükümet adına konuşlanan askerler Glencoe'da MacDonald klanının üyelerini öldürdü; bu olay bölgenin hafızasında hâlâ canlıdır. 1745'te Prens Charles Edward Stuart, Glenfinnan'da bayrağını açarak Jacobite ayaklanmasını başlattı.",
+          "Ayaklanma 16 Nisan 1746'da Inverness yakınındaki Culloden'da bastırıldı; Britanya toprağında yapılan son açık meydan savaşı olarak anılır. Ardından klan sistemi bozuldu, 18. ve 19. yüzyıllarda Highland Clearances denen tahliyeler toprağı yer yer boşalttı ve birçok aile kıyıya ya da denizaşırı ülkelere göç etti. Thomas Telford'un tasarladığı Caledonian Canal 1822'de açıldı ve Inverness'i Loch Ness üzerinden Fort William'a bağlar. Britanya Adaları'nın en yüksek dağı Ben Nevis de Fort William'ın yanında yükselir."
+        ]
+      },
+      "flavors": {
+        "heading": "Oatcake, funda balı ve langoustine: Highlands'in viski ötesi tatları",
+        "body": [
+          "Highlands'te viski, arpanın çimlendirilip kurutulmasıyla başlar; bazı damıtımevlerinde bu kurutma turba dumanı üzerinde yapılır, damıtık ise yıllarca meşe fıçıda dinlenir, bu yüzden bazı şişelerde dumanlı bir tat bulunur. Oatcake, yulaf, su ve az yağla yapılan kuru bir İskoç bisküvisidir; peynir ya da füme balıkla yenir.",
+          "Funda (heather) bozkırlarının balı yoğun ve koyu renklidir. Norveç ıstakozu da denen langoustine, batı kıyısı ve adaların sularından tutulur. Atholl brose ise yulaf ezmesi, bal, viski ve kremayla yapılan geleneksel bir içecektir."
+        ]
+      }
+    },
+    "en": {
+      "story": {
+        "heading": "From Glencoe to Culloden: clans, rising and clearances in the Scottish Highlands",
+        "body": [
+          "The Highlands are the mountainous region north of the Highland Boundary Fault, which separates them from the Lowlands, and for centuries the Gaelic language and clan communities defined the region's identity. On 13 February 1692, soldiers acting for the government killed members of the MacDonald clan at Glencoe, an event the region still remembers. In 1745 Prince Charles Edward Stuart raised his standard at Glenfinnan and began the Jacobite rising.",
+          "The rising was crushed on 16 April 1746 at Culloden, near Inverness, which is remembered as the last pitched battle fought on British soil. The clan system broke down afterwards, and in the eighteenth and nineteenth centuries the evictions known as the Highland Clearances emptied parts of the land, with many families moving to the coast or overseas. Thomas Telford's Caledonian Canal opened in 1822 and links Inverness to Fort William by way of Loch Ness. Ben Nevis, the highest mountain in the British Isles, rises beside Fort William."
+        ]
+      },
+      "flavors": {
+        "heading": "Oatcakes, heather honey and langoustines: Highland flavours beyond whisky",
+        "body": [
+          "In the Highlands whisky is made by malting barley and drying it, in some distilleries over peat smoke, then maturing the spirit for years in oak casks, which is why some bottles carry a smoky taste. An oatcake is a dry Scottish biscuit made from oats, water and a little fat, eaten with cheese or smoked fish.",
+          "Honey from heather moors is thick and dark. Langoustines, or Norway lobsters, are caught in the waters of the west coast and the islands. Atholl brose is a traditional drink made from oatmeal, honey, whisky and cream."
+        ]
+      }
+    },
+    "es": {
+      "story": {
+        "heading": "De Glencoe a Culloden: clanes, levantamiento y desalojos en las Tierras Altas de Escocia",
+        "body": [
+          "Las Tierras Altas son la región montañosa al norte de la falla Highland Boundary, que las separa de las Tierras Bajas, y durante siglos el gaélico y las comunidades de clanes definieron la identidad de la región. El 13 de febrero de 1692, soldados que actuaban por orden del gobierno mataron a miembros del clan MacDonald en Glencoe, un hecho que la región aún recuerda. En 1745 el príncipe Carlos Eduardo Estuardo alzó su estandarte en Glenfinnan y dio comienzo al levantamiento jacobita.",
+          "El levantamiento fue aplastado el 16 de abril de 1746 en Culloden, cerca de Inverness, y se recuerda como la última batalla campal librada en suelo británico. El sistema de clanes se deshizo después, y en los siglos XVIII y XIX los desalojos conocidos como Highland Clearances vaciaron parte del territorio, y muchas familias se marcharon a la costa o al extranjero. El Canal Caledoniano, obra de Thomas Telford, se abrió en 1822 y une Inverness con Fort William a través del lago Ness. El Ben Nevis, la montaña más alta de las Islas Británicas, se alza junto a Fort William."
+        ]
+      },
+      "flavors": {
+        "heading": "Oatcakes, miel de brezo y cigalas: sabores de las Tierras Altas más allá del whisky",
+        "body": [
+          "En las Tierras Altas el whisky se elabora malteando la cebada y secándola, en algunas destilerías sobre humo de turba, y madurando después el destilado durante años en barricas de roble, por lo que algunas botellas tienen un sabor ahumado. La oatcake es una galleta escocesa seca hecha con avena, agua y un poco de grasa, que se come con queso o pescado ahumado.",
+          "La miel de los páramos de brezo es espesa y oscura. Las cigalas se pescan en las aguas de la costa oeste y de las islas. El Atholl brose es una bebida tradicional hecha con harina de avena, miel, whisky y nata."
+        ]
+      }
+    }
+  },
+  "GB:Cotswolds": {
+    "tr": {
+      "story": {
+        "heading": "Yün zenginliği ve bal rengi taş: Cotswolds'un koyunları, yün kiliseleri ve Arts and Crafts izi",
+        "body": [
+          "Adın 'wold' kısmı alçak, yuvarlak tepeler demektir. Orta Çağ'da bu otlaklarda yetişen uzun yünlü Cotswold koyunu ('Cotswold Lion') İngiltere'nin yün ticaretinin dayanaklarındandı; yünden kazanılan para Cirencester, Northleach ve Chipping Campden gibi yerlerdeki büyük 'yün kiliselerini' finanse etti. Roma izleri de çoktur: Fosse Way yolu Cotswolds'tan geçer ve Cirencester, Roma döneminde Corinium adıyla önemli bir kentti.",
+          "Jura döneminden kalma oolitik kireçtaşı, evlere ve duvarlara bal rengini verir; bölge 1966'da 'Area of Outstanding Natural Beauty' ilan edildi ve 2023'ten beri 'National Landscape' adıyla anılıyor. William Morris, Cotswolds'un kenarındaki Kelmscott Manor'ı 1871'de kiraladı; C. R. Ashbee'nin Guild of Handicraft atölyeleri 1902'de Londra'dan Chipping Campden'a taşındı ve Arts and Crafts hareketi böylece kırsalda kök saldı."
+        ]
+      },
+      "flavors": {
+        "heading": "Double Gloucester, Old Spot domuzu ve perry: Cotswolds'un Gloucestershire sofrası",
+        "body": [
+          "Gloucestershire'ın en bilinen peyniri Double Gloucester, sert, turuncumsu renkli ve yumuşak tadı olan bir peynirdir; daha hafif kardeşi Single Gloucester ise menşe adıyla korunur. Gloucester Old Spot, derisindeki lekelerle tanınan bir domuz ırkıdır; geleneksel olarak meyve bahçelerinde yere düşen elmalarla beslendiği söylenir ve bu yüzden 'orchard pig' diye anılır.",
+          "Elmanın yanında armut da bölgenin içeceğini verir: armuttan yapılan 'perry', Gloucestershire, Herefordshire ve Worcestershire çevresindeki 'Three Counties' yöresinin geleneğidir. Cotswold tepelerinin otlaklarında yetişen kuzu eti pazar yemeği sofralarının klasiğidir."
+        ]
+      }
+    },
+    "en": {
+      "story": {
+        "heading": "Wool wealth and honey-coloured stone: sheep, wool churches and Arts and Crafts in the Cotswolds",
+        "body": [
+          "The 'wold' in the name means rolling hills. In the Middle Ages the long-woolled Cotswold sheep, nicknamed the Cotswold Lion, grazed these uplands and underpinned England's wool trade; the money paid for the grand 'wool churches' of places such as Cirencester, Northleach and Chipping Campden. Roman traces are plentiful too: the Fosse Way crosses the Cotswolds, and Cirencester was an important town in Roman times under the name Corinium.",
+          "Jurassic oolitic limestone gives the houses and walls their honey colour. The area was designated an Area of Outstanding Natural Beauty in 1966 and has been called a National Landscape since 2023. William Morris leased Kelmscott Manor, on the edge of the Cotswolds, in 1871, and C. R. Ashbee's Guild of Handicraft moved from London to Chipping Campden in 1902, so the Arts and Crafts movement took root in the countryside."
+        ]
+      },
+      "flavors": {
+        "heading": "Double Gloucester, Old Spot pork and perry: the Gloucestershire table of the Cotswolds",
+        "body": [
+          "Double Gloucester, Gloucestershire's best-known cheese, is hard, orange-tinted and mellow, and its lighter cousin Single Gloucester is protected by designation of origin. The Gloucester Old Spot is a pig breed recognised by the spots on its coat and, traditionally, it is said to have fed on windfall apples in orchards, hence the name orchard pig.",
+          "Alongside apples, pears give the region its drink: perry, made from pears, is a tradition of the Three Counties area around Gloucestershire, Herefordshire and Worcestershire. Lamb raised on the pastures of the Cotswold hills is a classic of the Sunday roast table."
+        ]
+      }
+    },
+    "es": {
+      "story": {
+        "heading": "Lana y piedra color miel: ovejas, iglesias laneras y Arts and Crafts en los Cotswolds",
+        "body": [
+          "La palabra 'wold' del nombre significa colinas suaves. En la Edad Media, la oveja Cotswold, de lana larga y apodada el León de los Cotswolds, pastaba estas tierras altas y sostenía el comercio de lana de Inglaterra; el dinero pagó las grandes 'iglesias de la lana' de lugares como Cirencester, Northleach y Chipping Campden. También abundan las huellas romanas: la Fosse Way cruza los Cotswolds, y Cirencester fue una ciudad importante en época romana con el nombre de Corinium.",
+          "La caliza oolítica del Jurásico da a las casas y los muros su color de miel. La zona fue declarada Área de Excepcional Belleza Natural en 1966 y se llama Paisaje Nacional desde 2023. William Morris alquiló Kelmscott Manor, en el borde de los Cotswolds, en 1871, y el Guild of Handicraft de C. R. Ashbee se trasladó de Londres a Chipping Campden en 1902, de modo que el movimiento Arts and Crafts echó raíces en el campo."
+        ]
+      },
+      "flavors": {
+        "heading": "Double Gloucester, cerdo Old Spot y perry: la mesa de Gloucestershire en los Cotswolds",
+        "body": [
+          "El Double Gloucester, el queso más conocido de Gloucestershire, es duro, de tono anaranjado y suave, y su primo más ligero, el Single Gloucester, está protegido por denominación de origen. El Gloucester Old Spot es una raza de cerdo que se reconoce por las manchas de su piel y, según la tradición, se alimentaba de las manzanas caídas en los huertos, de ahí el nombre de cerdo de huerto.",
+          "Junto a la manzana, la pera da a la región su bebida: el perry, hecho con peras, es una tradición de la zona de los Three Counties, en torno a Gloucestershire, Herefordshire y Worcestershire. El cordero criado en los pastos de las colinas Cotswold es un clásico de la mesa del asado dominical."
+        ]
+      }
+    }
+  },
+  "GB:Lake District": {
+    "tr": {
+      "story": {
+        "heading": "Buzul vadileri, Wordsworth ve Beatrix Potter: Lake District'in UNESCO'ya uzanan peyzajı",
+        "body": [
+          "Lake District'in gölleri ve U biçimli vadilerini Buzul Çağı'nda buzullar oydu. Fell (dağ), tarn (dağ gölcüğü), beck (dere) ve thwaite (açıklık) gibi yer adı sözcüklerinin çoğu, bölgeye yaklaşık bin yıl önce yerleşen İskandinav dilli topluluklardan kalmadır. Windermere İngiltere'nin en büyük doğal gölü, Scafell Pike ise İngiltere'nin en yüksek dağıdır.",
+          "Romantik şair William Wordsworth 1799'da Grasmere'ye yerleşti; Coleridge ve Southey de Keswick çevresinde yaşadı. Beatrix Potter kazandığı gelirle çiftlikler satın aldı ve ölümünde geniş arazilerini National Trust'a bıraktı; Trust'ın kurucularından Hardwicke Rawnsley de bölgede papazlık yaptı. Bölge 1951'de milli park oldu, 2017'de ise kültürel peyzaj olarak UNESCO Dünya Mirası Listesi'ne girdi."
+        ]
+      },
+      "flavors": {
+        "heading": "Kendal Mint Cake, Cumberland sosisi ve rum butter: Lake District'in dağ ve çiftlik tatları",
+        "body": [
+          "Kendal Mint Cake, şeker ve nane yağından yapılan, Kendal kasabasıyla özdeşleşmiş beyaz bir şekerlemedir; yürüyüşçüler ve dağcılar enerji için yanlarında taşır, 1953 Everest seferinde de bulunduğu bilinir. Cumberland sausage, spiral biçiminde sarılı, biberli ve bol baharatlı iri bir domuz sosistir ve 2011'den beri Avrupa'da coğrafi işaretle korunur.",
+          "Cumberland rum butter, tereyağı, esmer şeker ve romla yapılan sürülebilir bir kremadır; geleneksel olarak vaftiz ve Noel kutlamalarında yenirdi. Güneydeki Lyth Vadisi, 'damson' denen küçük mor erikle bilinir; damson reçeli ve damson cin yapılır. Morecambe Körfezi'nin kahverengi karidesi ise tereyağında mace baharatıyla pişirilip kavanozlanarak 'potted shrimps' olur."
+        ]
+      }
+    },
+    "en": {
+      "story": {
+        "heading": "Glacial valleys, Wordsworth and Beatrix Potter: the Lake District's road to UNESCO",
+        "body": [
+          "The lakes and U-shaped valleys of the Lake District were carved by glaciers in the Ice Age. Many of its place-name words, such as fell (mountain), tarn (mountain pool), beck (stream) and thwaite (clearing), come from the Norse-speaking settlers who arrived about a thousand years ago. Windermere is the largest natural lake in England, and Scafell Pike is its highest mountain.",
+          "The Romantic poet William Wordsworth settled at Grasmere in 1799, and Coleridge and Southey also lived around Keswick. Beatrix Potter bought farms with her earnings and left large areas of land to the National Trust at her death; Hardwicke Rawnsley, one of the Trust's founders, was a vicar in the region. The area became a national park in 1951 and joined the UNESCO World Heritage List as a cultural landscape in 2017."
+        ]
+      },
+      "flavors": {
+        "heading": "Kendal Mint Cake, Cumberland sausage and rum butter: fell-side flavours of the Lake District",
+        "body": [
+          "Kendal Mint Cake is a white sweet made of sugar and peppermint oil that is closely tied to the town of Kendal; walkers and climbers carry it for energy, and it is known to have been taken on the 1953 Everest expedition. Cumberland sausage is a large pork sausage coiled in a spiral, peppery and generously spiced, and it has been protected by geographical indication in Europe since 2011.",
+          "Cumberland rum butter is a spread of butter, brown sugar and rum, traditionally eaten at christenings and at Christmas. The Lyth Valley in the south is known for damsons, small purple plums, which become damson jam and damson gin. Brown shrimps from Morecambe Bay are cooked in butter with mace and potted in jars as potted shrimps."
+        ]
+      }
+    },
+    "es": {
+      "story": {
+        "heading": "Valles glaciares, Wordsworth y Beatrix Potter: el camino del Distrito de los Lagos a la UNESCO",
+        "body": [
+          "Los lagos y los valles en forma de U del Distrito de los Lagos fueron excavados por los glaciares de la Edad de Hielo. Muchas de las palabras de sus topónimos, como fell (montaña), tarn (laguna de montaña), beck (arroyo) y thwaite (claro), proceden de los colonos de lengua nórdica que llegaron hace unos mil años. Windermere es el mayor lago natural de Inglaterra, y Scafell Pike, su montaña más alta.",
+          "El poeta romántico William Wordsworth se instaló en Grasmere en 1799, y Coleridge y Southey también vivieron en torno a Keswick. Beatrix Potter compró granjas con sus ganancias y legó a su muerte grandes extensiones de terreno al National Trust; Hardwicke Rawnsley, uno de los fundadores del Trust, fue párroco en la región. La zona se convirtió en parque nacional en 1951 y entró en la lista del Patrimonio Mundial de la UNESCO como paisaje cultural en 2017."
+        ]
+      },
+      "flavors": {
+        "heading": "Kendal Mint Cake, salchicha Cumberland y mantequilla al ron del Distrito de los Lagos",
+        "body": [
+          "El Kendal Mint Cake es un dulce blanco de azúcar y aceite de menta, muy ligado a la ciudad de Kendal; senderistas y alpinistas lo llevan como fuente de energía, y se sabe que formó parte del equipo de la expedición al Everest de 1953. La Cumberland sausage es una salchicha de cerdo grande, enrollada en espiral, picante y generosamente especiada, y goza de indicación geográfica protegida en Europa desde 2011.",
+          "La Cumberland rum butter es una untable de mantequilla, azúcar moreno y ron que se comía tradicionalmente en los bautizos y en Navidad. El valle de Lyth, en el sur, es conocido por las ciruelas damascenas (damsons), pequeñas y moradas, con las que se hacen mermelada y ginebra. Las gambas pardas de la bahía de Morecambe se cocinan en mantequilla con macis y se conservan en tarros como potted shrimps."
+        ]
+      }
+    }
+  },
+  "GR:Atina": {
+    "tr": {
+      "story": {
+        "heading": "Athena'nın şehri: Atina'nın Parthenon'dan 1896 Olimpiyatları'na uzanan katmanları",
+        "body": [
+          "Efsaneye göre şehir, Athena'nın zeytin ağacı armağanıyla Poseidon'u adlandırma yarışında geçmesi sonucu Atina adını aldı. Parthenon MÖ 447 ile 432 arasında Perikles döneminde yapıldı; Kleisthenes'in reformlarıyla MÖ 508-507'de kurulan demokrasi, şehri yöneten yurttaşların meclis toplantılarıyla işledi. Sokrates, Platon'un Akademisi (MÖ 387 dolayları) ve Aristoteles'in Lykeion'u (MÖ 335 dolayları) Atina'yı düşünce merkezi yaptı.",
+          "Roma döneminde İmparator Hadrianus şehri yeniden süsledi; Olympieion onun zamanında, 131-132'de tamamlandı. Atina 1458'de Osmanlı yönetimine geçti; Parthenon 1687'de Venedik kuşatması sırasında barut deposu olarak kullanıldığı için vurulup yıkıldı. Yunanistan'ın bağımsızlığından sonra Atina 1834'te başkent oldu; modern Olimpiyat Oyunları 1896'da Panathenaiko Stadyumu'nda yapıldı. Akropolis 1987'de UNESCO Dünya Mirası Listesi'ne alındı."
+        ]
+      },
+      "flavors": {
+        "heading": "Atina'da retsina, Hymettos balı ve loukoumades: Attika'nın bağ ve bal sofrası",
+        "body": [
+          "Retsina, Attika bölgesinin eski şarap tarzıdır: ağırlıklı olarak Savatiano üzümünden yapılan beyaz şarap, mayalanma sırasında eklenen çam reçinesiyle kokulanır. Anason kokulu ouzo suyla karıştırılınca bulanıp süt beyazına döner; bu etki anetol adlı bileşikten gelir.",
+          "Atina'nın doğusundaki Hymettos Dağı'nın kekik balı Antik Çağ'dan beri övülür. Loukoumades, kızartılıp bal şerbetine batırılan, tarçın ve cevizle servis edilen küçük hamur toplarıdır. Yunan kahvesi ise briki denen küçük bir bakır cezvede pişirilir; kalın telvesi fincanda kalır ve kahve yavaş yavaş yudumlanır."
+        ]
+      }
+    },
+    "en": {
+      "story": {
+        "heading": "The city of Athena: Athens from the Parthenon to the 1896 Olympics",
+        "body": [
+          "According to legend, the city took the name Athens when Athena won the contest with Poseidon to name it by giving the olive tree. The Parthenon was built between 447 and 432 BC under Pericles, and the democracy established through Cleisthenes' reforms in 508-507 BC ran on meetings of the citizens who governed the city. Socrates, Plato's Academy (around 387 BC) and Aristotle's Lyceum (around 335 BC) made Athens a centre of thought.",
+          "Under Rome the emperor Hadrian embellished the city, and the Temple of Olympian Zeus was completed in his time, in 131-132. Athens passed to Ottoman rule in 1458, and the Parthenon was hit and wrecked in 1687 during the Venetian siege because it was being used as a powder store. After Greek independence, Athens became the capital in 1834, and the first modern Olympic Games were held in 1896 in the Panathenaic Stadium. The Acropolis joined the UNESCO World Heritage List in 1987."
+        ]
+      },
+      "flavors": {
+        "heading": "Retsina, Hymettus honey and loukoumades: Attica's vine-and-honey table in Athens",
+        "body": [
+          "Retsina is the old wine style of Attica: a white wine made mainly from the Savatiano grape and flavoured with pine resin added during fermentation. Ouzo, an aniseed spirit, turns cloudy and milk-white when water is added, an effect that comes from the compound anethole.",
+          "The thyme honey of Mount Hymettus, east of Athens, has been praised since antiquity. Loukoumades are small balls of dough fried and dipped in honey syrup, served with cinnamon and walnuts. Greek coffee is brewed in a small copper pot called a briki; the thick grounds stay in the cup, and the coffee is sipped slowly."
+        ]
+      }
+    },
+    "es": {
+      "story": {
+        "heading": "La ciudad de Atenea: Atenas del Partenón a los Juegos Olímpicos de 1896",
+        "body": [
+          "Según la leyenda, la ciudad tomó el nombre de Atenas cuando Atenea ganó a Poseidón la disputa por darle nombre con el regalo del olivo. El Partenón se construyó entre 447 y 432 a. C. bajo Pericles, y la democracia fundada con las reformas de Clístenes en 508-507 a. C. funcionaba con las asambleas de los ciudadanos que gobernaban la ciudad. Sócrates, la Academia de Platón (hacia 387 a. C.) y el Liceo de Aristóteles (hacia 335 a. C.) hicieron de Atenas un centro del pensamiento.",
+          "Bajo Roma, el emperador Adriano embelleció la ciudad, y el templo de Zeus Olímpico se terminó en su época, en 131-132. Atenas pasó al dominio otomano en 1458, y el Partenón fue alcanzado y destruido en 1687 durante el asedio veneciano porque se usaba como polvorín. Tras la independencia griega, Atenas fue capital desde 1834, y los primeros Juegos Olímpicos modernos se celebraron en 1896 en el Estadio Panatenaico. La Acrópolis entró en la lista del Patrimonio Mundial de la UNESCO en 1987."
+        ]
+      },
+      "flavors": {
+        "heading": "Retsina, miel del Himeto y loukoumades: la mesa de viñas y miel del Ática en Atenas",
+        "body": [
+          "El retsina es el estilo de vino antiguo del Ática: un vino blanco elaborado sobre todo con uva savatiano y aromatizado con resina de pino añadida durante la fermentación. El ouzo, un aguardiente de anís, se vuelve turbio y blanco como la leche al añadirle agua, un efecto que procede del compuesto anetol.",
+          "La miel de tomillo del monte Himeto, al este de Atenas, se alaba desde la Antigüedad. Los loukoumades son pequeñas bolas de masa fritas y bañadas en almíbar de miel, que se sirven con canela y nueces. El café griego se prepara en un pequeño recipiente de cobre llamado briki; los posos espesos quedan en la taza y el café se bebe a sorbos lentos."
+        ]
+      }
+    }
+  },
+  "GR:Selanik": {
+    "tr": {
+      "story": {
+        "heading": "Kassandros'un MÖ 315 şehri: Selanik'in Roma, Bizans, Sefarad ve Osmanlı katmanları",
+        "body": [
+          "Selanik'i MÖ 315 dolaylarında Makedon kralı Kassandros kurdu ve eşi Thessalonike'nin adını verdi; Thessalonike, Büyük İskender'in üvey kız kardeşiydi. Roma'nın Via Egnatia yolu şehirden geçerdi, Galerius'un tetrarşi döneminde yapılan saray ve kemer topluluğu da bu çağın kanıtıdır. Aziz Pavlus MS 1. yüzyılda şehre geldi; Hagios Dimitrios Bazilikası, şehrin koruyucu azizinin adını taşır.",
+          "Şehir 1430'dan 1912'ye kadar Osmanlı yönetimindeydi. 1492'den sonra İspanya'dan sürülen Sefarad Yahudileri buraya yerleşti ve uzun süre bu liman kentinin en kalabalık topluluğu oldular; cemaatin büyük bölümü 1943'te Nazi işgali altında sürülüp öldürüldü. Mustafa Kemal Atatürk 1881'de Selanik'te doğdu. Şehrin Erken Hristiyan ve Bizans anıtları 1988'de UNESCO Dünya Mirası Listesi'ne girdi."
+        ]
+      },
+      "flavors": {
+        "heading": "Selanik'te trigona, frappé ve mezeli tsipouro: şehrin tatlı ve içki gelenekleri",
+        "body": [
+          "Trigona Panoramatos, üçgen biçimli, içi kremalı ve şerbetli ince yufka tatlısıdır; adını Panorama semtinden alır. Frappé, hazır kahve, soğuk su ve şekerin çalkalanmasıyla yapılan köpüklü buzlu kahvedir ve 1957'de Selanik'te bir fuarda doğduğu anlatılır.",
+          "Tsipouro, üzüm posasından damıtılan bir içkidir ve geleneksel olarak her turun yanında küçük bir meze tabağı gelir; Kuzey Yunanistan'da çok sevilen bir içki ve atıştırma düzenidir. Küçük Asya'dan gelen göçmenler pastourma (pastırma) gibi ürünleri getirdi; Termaikos Körfezi'nde yetiştirilen midyeler de şehrin deniz ürünü sofralarında yer alır."
+        ]
+      },
+      "transport": [
+        "Makedonia Havalimanı (SKG) şehrin yaklaşık 15 km güneydoğusundadır ve merkezle otobüs ve taksiyle bağlanır; aynı zamanda Halkidiki kumsallarına gidenlerin de ana kapısıdır. Atina'dan intercity trenle ya da KTEL otobüsüyle gelinebilir; Yeni Demiryolu İstasyonu merkezin batı yakasında, kısa bir taksi mesafesindedir."
+      ]
+    },
+    "en": {
+      "story": {
+        "heading": "Cassander's city of 315 BC: Thessaloniki's Roman, Byzantine, Sephardic and Ottoman layers",
+        "body": [
+          "Thessaloniki was founded around 315 BC by the Macedonian king Cassander, who named it after his wife Thessalonike, Alexander the Great's half-sister. The Roman Via Egnatia ran through it, and the palace and arch complex built in the Tetrarchy of Galerius is evidence of that era. The apostle Paul came to the city in the first century AD, and the basilica of Hagios Demetrios carries the name of the city's patron saint.",
+          "The city was under Ottoman rule from 1430 to 1912. Sephardic Jews expelled from Spain after 1492 settled here, and for a long time they were the largest community in this port city; most of the community was deported and murdered in 1943 under the Nazi occupation. Mustafa Kemal Atatürk was born in Thessaloniki in 1881. The city's Early Christian and Byzantine monuments joined the UNESCO World Heritage List in 1988."
+        ]
+      },
+      "flavors": {
+        "heading": "Trigona, frappé and tsipouro with meze: Thessaloniki's sweets and drinking customs",
+        "body": [
+          "Trigona Panoramatos is a triangular pastry of thin phyllo filled with cream and soaked in syrup, named after the Panorama district. Frappé is an iced coffee whipped from instant coffee, cold water and sugar, and it is said to have been born at a trade fair in Thessaloniki in 1957.",
+          "Tsipouro is a spirit distilled from grape pomace, and traditionally each round arrives with a small plate of meze, a drinking-and-snacking custom loved in northern Greece. Refugees from Asia Minor brought products such as pastourma, a spiced cured beef, and mussels farmed in the Thermaic Gulf also feature on the city's seafood tables."
+        ]
+      },
+      "transport": [
+        "Macedonia Airport (SKG) lies about 15 km south-east of the city and connects to the centre by bus and taxi; it is also the main gateway for visitors heading to the beaches of Halkidiki. Athens can be reached by intercity train or by KTEL bus, and the New Railway Station sits on the western side of the centre, a short taxi ride away."
+      ]
+    },
+    "es": {
+      "story": {
+        "heading": "La ciudad de Casandro en 315 a. C.: capas romana, bizantina, sefardí y otomana de Tesalónica",
+        "body": [
+          "Tesalónica fue fundada hacia 315 a. C. por el rey macedonio Casandro, que le dio el nombre de su esposa Tesalónice, hermanastra de Alejandro Magno. La Vía Egnatia romana pasaba por ella, y el conjunto de palacio y arco levantado en tiempos de la Tetrarquía de Galerio es testimonio de esa época. El apóstol Pablo llegó a la ciudad en el siglo I d. C., y la basílica de San Demetrio lleva el nombre del santo patrono de la ciudad.",
+          "La ciudad estuvo bajo dominio otomano de 1430 a 1912. Los judíos sefardíes expulsados de España después de 1492 se asentaron aquí, y durante mucho tiempo fueron la comunidad más numerosa de esta ciudad portuaria; la mayor parte de la comunidad fue deportada y asesinada en 1943 bajo la ocupación nazi. Mustafa Kemal Atatürk nació en Tesalónica en 1881. Los monumentos paleocristianos y bizantinos de la ciudad entraron en la lista del Patrimonio Mundial de la UNESCO en 1988."
+        ]
+      },
+      "flavors": {
+        "heading": "Trigona, frappé y tsipouro con mezes: dulces y costumbres de copa en Tesalónica",
+        "body": [
+          "La Trigona Panoramatos es un pastel triangular de masa filo fina relleno de crema y empapado en almíbar, que toma su nombre del barrio de Panorama. El frappé es un café helado batido con café instantáneo, agua fría y azúcar, y se dice que nació en una feria comercial de Tesalónica en 1957.",
+          "El tsipouro es un aguardiente destilado del orujo de uva, y tradicionalmente cada ronda llega con un platillo de mezes, una costumbre de beber y picar muy querida en el norte de Grecia. Los refugiados de Asia Menor trajeron productos como la pastourma, una carne vacuna curada y especiada, y los mejillones criados en el golfo Termaico también figuran en las mesas de marisco de la ciudad."
+        ]
+      },
+      "transport": [
+        "El aeropuerto de Macedonia (SKG) está a unos 15 km al sureste de la ciudad y se conecta con el centro en autobús y taxi; es también la principal puerta de entrada para quienes van a las playas de Calcídica. Desde Atenas se llega en tren intercity o en autobús KTEL, y la Nueva Estación de Ferrocarril queda en el lado oeste del centro, a poca distancia en taxi."
+      ]
+    }
+  },
+  "GR:Santorini": {
+    "tr": {
+      "story": {
+        "heading": "Kaldera, Akrotiri ve Aziz İrini: Santorini'yi Tunç Çağı patlaması nasıl biçimlendirdi",
+        "body": [
+          "Santorini'nin hilal biçimi, Tunç Çağı'nda, yaklaşık MÖ 17. yüzyılda (kesin tarih hâlâ tartışmalıdır) yaşanan büyük bir yanardağ patlamasının ürünüdür; patlama adanın ortasını çökertip kalderayı oluşturdu. Akrotiri'deki Minos dönemi kenti kül altında kaldı ve 1967'den beri Spyridon Marinatos'un başlattığı kazılarla gün ışığına çıkarılıyor. Antik adı Thera olan ada, Orta Çağ'daki Latin yönetimi döneminde Aziz İrini'ye (Santa Irini) gönderme yapan Santorini adını aldı.",
+          "1707-1711 arasında kalderanın ortasında Nea Kameni adlı yeni bir volkanik adacık yükseldi; yanardağ bugün de etkin bir sistem olarak izlenir. 9 Temmuz 1956 depremi Oia ve Fira'da büyük hasara yol açtı. Yoksul adalıların yumuşak volkanik küle oyduğu mağara evler ile 19. yüzyılda denizci kaptanların Oia'da yaptırdığı konaklar, adanın iki ayrı mimari geleneğidir."
+        ]
+      },
+      "flavors": {
+        "heading": "Kouloura asmaları, vinsanto ve küçük domates: Santorini'nin volkanik ürünleri",
+        "body": [
+          "Assyrtiko asmaları 'kouloura' denen sepet biçiminde örülür: yere yakın sarılan dallar üzümü kuvvetli rüzgârdan ve sıcaktan korur, sabah çiğini de toplar. Vinsanto, güneşte kurutulan üzümlerden, ağırlıklı olarak Assyrtiko ile Aidani ve Athiri'den yapılan tatlı bir şaraptır.",
+          "Küçük ve tatlı Santorini domatesi ile adanın favası korumalı menşe adı taşır. Beyaz patlıcan ve kapari da yerel ürünlerdendir; adada yağış azdır ve bu bitkilerin hepsi kurak, volkanik toprakta az suyla yetişir."
+        ]
+      },
+      "transport": [
+        "Havalimanı (JTR) adanın doğu yakasındadır ve Fira'ya kısa bir mesafededir; otobüs ve taksi seferleri vardır. Feribotlar kaldera yamacının dibindeki Athinios Limanı'na yanaşır; buradan otobüs ve taksiler yokuş yoldan Fira'ya çıkar. Fira adanın KTEL otobüs merkezidir ve Oia, Kamari ve Perissa hatları buradan kalkar. Pire'den hızlı feribotlar birkaç saatte, klasik feribotlar daha uzun sürede gelir; Mikonos, Naxos ve Girit'ten de seferler vardır."
+      ]
+    },
+    "en": {
+      "story": {
+        "heading": "Caldera, Akrotiri and Saint Irene: how Santorini's Bronze Age eruption shaped the island",
+        "body": [
+          "Santorini's crescent shape comes from a huge volcanic eruption in the Bronze Age, around the seventeenth century BC (the exact date is still debated), which collapsed the middle of the island and formed the caldera. The Minoan-era town at Akrotiri was buried in ash and has been uncovered since 1967 in excavations begun by Spyridon Marinatos. The island's ancient name was Thera, and it took the name Santorini, a reference to Saint Irene (Santa Irini), under the Latin rulers of the Middle Ages.",
+          "Between 1707 and 1711 a new volcanic islet, Nea Kameni, rose in the middle of the caldera, and the volcano is still monitored as an active system. The earthquake of 9 July 1956 caused great damage in Oia and Fira. Cave houses dug by poorer islanders into the soft volcanic ash, and the mansions that sea captains had built in Oia in the nineteenth century, are the island's two different architectural traditions."
+        ]
+      },
+      "flavors": {
+        "heading": "Kouloura vines, vinsanto and the small tomato: Santorini's volcanic produce",
+        "body": [
+          "Assyrtiko vines are trained into a basket shape called a kouloura: the branches are coiled low to protect the grapes from strong wind and heat, and they also collect the morning dew. Vinsanto is a sweet wine made from grapes dried in the sun, mainly Assyrtiko with Aidani and Athiri.",
+          "The small, sweet Santorini tomato and the island's fava both carry a protected designation of origin. White aubergines and capers are other local products; rainfall on the island is low, and all of these plants grow on little water in dry, volcanic soil."
+        ]
+      },
+      "transport": [
+        "The airport (JTR) lies on the east side of the island, a short ride from Fira, with bus and taxi services. Ferries dock at Athinios Port at the foot of the caldera cliff, and buses and taxis climb the hill road to Fira from there. Fira is the island's KTEL bus hub, and the Oia, Kamari and Perissa lines leave from it. High-speed ferries from Piraeus take a few hours and conventional ferries longer; there are also sailings from Mykonos, Naxos and Crete."
+      ]
+    },
+    "es": {
+      "story": {
+        "heading": "Caldera, Akrotiri y santa Irene: cómo la erupción de la Edad del Bronce dio forma a Santorini",
+        "body": [
+          "La forma de media luna de Santorini procede de una enorme erupción volcánica de la Edad del Bronce, hacia el siglo XVII a. C. (la fecha exacta aún se debate), que hundió el centro de la isla y formó la caldera. La ciudad de época minoica de Akrotiri quedó sepultada bajo la ceniza y se descubre desde 1967 en las excavaciones iniciadas por Spyridon Marinatos. El nombre antiguo de la isla era Thera, y tomó el de Santorini, en referencia a santa Irene (Santa Irini), bajo los gobernantes latinos de la Edad Media.",
+          "Entre 1707 y 1711, en medio de la caldera surgió un nuevo islote volcánico, Nea Kameni, y el volcán sigue vigilándose como sistema activo. El terremoto del 9 de julio de 1956 causó grandes daños en Oia y Fira. Las casas cueva excavadas por los isleños más humildes en la ceniza volcánica blanda, y las mansiones que los capitanes de barco hicieron construir en Oia en el siglo XIX, son las dos tradiciones arquitectónicas de la isla."
+        ]
+      },
+      "flavors": {
+        "heading": "Viñas kouloura, vinsanto y el tomate pequeño: productos volcánicos de Santorini",
+        "body": [
+          "Las cepas de assyrtiko se conducen en forma de cesta, la llamada kouloura: los sarmientos se enroscan cerca del suelo para proteger las uvas del fuerte viento y del calor, y también recogen el rocío de la mañana. El vinsanto es un vino dulce hecho con uvas secadas al sol, sobre todo assyrtiko con aidani y athiri.",
+          "El pequeño y dulce tomate de Santorini y la fava de la isla cuentan ambos con denominación de origen protegida. Las berenjenas blancas y las alcaparras son otros productos locales; en la isla llueve poco, y todas estas plantas crecen con poca agua en un suelo seco y volcánico."
+        ]
+      },
+      "transport": [
+        "El aeropuerto (JTR) está en el lado este de la isla, a poca distancia de Fira, con servicio de autobús y taxi. Los ferris atracan en el puerto de Athinios, al pie del acantilado de la caldera, y desde allí autobuses y taxis suben por la carretera de montaña hasta Fira. Fira es el centro de autobuses KTEL de la isla, y de allí salen las líneas a Oia, Kamari y Perissa. Los ferris rápidos desde El Pireo tardan unas horas y los convencionales más; también hay salidas desde Míkonos, Naxos y Creta."
+      ]
+    }
+  }
+}

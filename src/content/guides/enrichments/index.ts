@@ -1,6 +1,6 @@
 import type { AppLocale } from "@/i18n/routing";
 import type { CityGuide, GuideSection } from "../types";
-import pilot from "./data/pilot.json";
+import { DATA_FILES } from "./data";
 
 /**
  * Rehber zenginleştirmeleri: mevcut rehber metnine EKLENEN, şehre özgü bölümler.
@@ -31,10 +31,8 @@ export interface LocaleEnrichment {
 
 export type Enrichment = Partial<Record<"tr" | "en" | "es", LocaleEnrichment>>;
 
-/** Kayıtlı veri dosyaları; yeni bir toplu dosya eklendikçe buraya da eklenir. */
-const FILES: Record<string, Enrichment>[] = [pilot as Record<string, Enrichment>];
-
-export const ENRICHMENTS: Record<string, Enrichment> = Object.assign({}, ...FILES);
+/** Veri dosyaları data/index.ts'te kayıtlıdır (node scripts/enrichment-register.mjs üretir). */
+export const ENRICHMENTS: Record<string, Enrichment> = Object.assign({}, ...DATA_FILES);
 
 export const STORY_ID = "hikaye";
 export const FLAVORS_ID = "yerel-lezzetler";

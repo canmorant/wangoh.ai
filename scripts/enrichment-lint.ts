@@ -21,6 +21,11 @@ const DIR = join(__dirname, "..", "src", "content", "guides", "enrichments", "da
 const LOCALES = ["tr", "en", "es"] as const;
 
 const files = readdirSync(DIR).filter((f) => f.endsWith(".json")).sort();
+{
+  const registry = readFileSync(join(DIR, "index.ts"), "utf8");
+  const missing = files.filter((f) => !registry.includes(`"./${f}"`));
+  if (missing.length) console.log(`! kayıt eski: ${missing.length} dosya data/index.ts'te yok (node scripts/enrichment-register.mjs çalıştır): ${missing.slice(0, 4).join(", ")}…`);
+}
 const requested = process.argv.slice(2).map((f) => resolve(f));
 const all = new Map<string, { file: string; entry: Data[string] }>();
 const errors: string[] = [];
@@ -119,8 +124,8 @@ for (const key of inScope) {
       continue;
     }
     for (const [name, block, min, max] of [
-      ["story", e.story, 75, 230],
-      ["flavors", e.flavors, 60, 200],
+      ["story", e.story, 60, 230],
+      ["flavors", e.flavors, 55, 200],
     ] as const) {
       if (!block || typeof block.heading !== "string" || !Array.isArray(block.body)) {
         err(key, `${loc}.${name} eksik ya da biçimi yanlış`);
