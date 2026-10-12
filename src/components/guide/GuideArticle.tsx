@@ -12,6 +12,7 @@ import { mapsListFor } from "@/content/maps-lists";
 import GuideMapsList from "./GuideMapsList";
 import { GUIDE_TEMPLATES } from "@/content/guides/templates";
 import type { AppLocale } from "@/i18n/routing";
+import { SITE } from "@/lib/site";
 
 /**
  * Şehir rehberinin editoryal gövdesi.
@@ -114,6 +115,38 @@ export default function GuideArticle({
               {t("audienceNote")}
             </p>
           )}
+          <aside className="mb-10 rounded-2xl border border-[var(--gold)]/15 bg-[var(--gold)]/[0.035] p-5 sm:p-6">
+            <p className="text-[9.5px] tracking-[0.24em] text-[var(--gold)]/75 uppercase">
+              {t("editorialLabel")}
+            </p>
+            <p className="mt-2 text-[14px] font-semibold text-white/88">
+              {t("editorialBy", { name: `Wangoh ${t("editorialTeam")}` })}
+            </p>
+            <p className="mt-2 max-w-[64ch] text-[13.5px] leading-relaxed text-white/52">
+              {t("editorialMethod")}
+            </p>
+            <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-[11px] text-white/42">
+              <span>
+                {t("reviewedOn", {
+                  date: format.dateTime(new Date(`${guide.reviewed}T12:00:00Z`), {
+                    day: "numeric",
+                    month: "long",
+                    year: "numeric",
+                    timeZone: "UTC",
+                  }),
+                })}
+              </span>
+              <Link href="/hakkimizda" className="text-[var(--gold)]/75 transition-colors hover:text-[var(--gold)]">
+                {t("editorialPrinciples")} →
+              </Link>
+              <a
+                href={`mailto:${SITE.email}?subject=${encodeURIComponent(`${city.name} guide correction`)}`}
+                className="text-[var(--gold)]/75 transition-colors hover:text-[var(--gold)]"
+              >
+                {t("reportCorrection")} →
+              </a>
+            </div>
+          </aside>
           {guide.sections.map((s) => (
             <section key={s.id} id={s.id} className="mb-12 scroll-mt-24 sm:mb-16 sm:scroll-mt-28">
               <h2 className="font-display text-[clamp(1.6rem,3.2vw,2.2rem)] leading-tight text-white">
