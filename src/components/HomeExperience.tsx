@@ -8,7 +8,7 @@ import { SECRET_DESTINATION } from "@/data/secret";
 import { slugify } from "@/lib/slug";
 import { getPathname } from "@/i18n/navigation";
 import { IS_APP_BUILD, routing, type AppLocale } from "@/i18n/routing";
-import { isRegion, type Region } from "@/data/continents";
+import { isRegion, REGION_OF, type Region } from "@/data/continents";
 import type { CityCardData } from "@/content/cityCardData";
 import { detectOrigin } from "@/hooks/useFlightOrigin";
 import FloatingNav from "@/components/FloatingNav";
@@ -119,7 +119,10 @@ export default function HomeExperience({
     // history.back() değil: Portekiz'den sonra Japonya'ya uçulduysa geri gitmek
     // Portekiz'i açardı. "Tüm rotalar" her zaman ana sayfaya dönmeli.
     const home = getPathname({ href: "/", locale });
-    if (window.location.pathname !== home) window.history.pushState(null, "", home);
+    // Uygulamada ana sayfa dosya yoluyla (/tr/index.html) açılıyor; logoya her
+    // basışta geçmişe yeni giriş eklenmesin.
+    const here = window.location.pathname.replace(/\/index\.html$/, "");
+    if (here !== home || (IS_APP_BUILD && window.location.search)) window.history.pushState(null, "", home);
   }, [locale]);
 
   const regionHref = useCallback(
@@ -190,6 +193,7 @@ export default function HomeExperience({
       const kita = new URLSearchParams(window.location.search).get("kita");
       if (country) {
         setSelectedCountry(country);
+        if (IS_APP_BUILD) setRegion(REGION_OF[country.code] ?? null);
         setView("cities");
         window.scrollTo({ top: 0, behavior: "instant" });
       } else if (IS_APP_BUILD && isRegion(kita)) {
@@ -219,6 +223,19 @@ export default function HomeExperience({
   const openClubReveal = useCallback(() => {
     setClubRequested(true);
     setClubOpen(true);
+  }, []);
+
+  // Uygulama: bir rehber sayfasından geri dönünce adres /tr?kita=europe olabilir
+  // (kabuk arama dizgisini koruyor); kıta görünümü doğrudan açılsın.
+  useEffect(() => {
+    if (!IS_APP_BUILD) return;
+    const kita = new URLSearchParams(window.location.search).get("kita");
+    if (!isRegion(kita)) return;
+    const timer = window.setTimeout(() => {
+      setRegion(kita);
+      setView("continent");
+    }, 0);
+    return () => window.clearTimeout(timer);
   }, []);
 
   // Deep links: /?fly=JP from the travel test, /?open=club|wheel from the

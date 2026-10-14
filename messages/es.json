@@ -792,7 +792,8 @@
     "countryWheel": "Ruleta de países",
     "guessFlag": "Adivina la bandera",
     "distance": "¿Cuántos km?",
-    "mapGame": "En el mapa"
+    "mapGame": "En el mapa",
+    "back": "Atrás"
   },
   "NotFound": {
     "eyebrow": "404",

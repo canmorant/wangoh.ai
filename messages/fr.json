@@ -792,7 +792,8 @@
     "countryWheel": "Roue des pays",
     "guessFlag": "Devinez le drapeau",
     "distance": "Combien de km ?",
-    "mapGame": "Sur la carte"
+    "mapGame": "Sur la carte",
+    "back": "Retour"
   },
   "NotFound": {
     "eyebrow": "404",

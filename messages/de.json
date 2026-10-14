@@ -792,7 +792,8 @@
     "countryWheel": "Länderrad",
     "guessFlag": "Errate die Flagge",
     "distance": "Wie weit?",
-    "mapGame": "Auf der Karte"
+    "mapGame": "Auf der Karte",
+    "back": "Zurück"
   },
   "NotFound": {
     "eyebrow": "404",

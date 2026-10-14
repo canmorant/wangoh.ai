@@ -792,7 +792,8 @@
     "countryWheel": "Country Wheel",
     "guessFlag": "Guess the Flag",
     "distance": "How Far?",
-    "mapGame": "Find on Map"
+    "mapGame": "Find on Map",
+    "back": "Back"
   },
   "NotFound": {
     "eyebrow": "404",

@@ -792,7 +792,8 @@
     "countryWheel": "Колесо стран",
     "guessFlag": "Угадай флаг",
     "distance": "Сколько км?",
-    "mapGame": "Найди на карте"
+    "mapGame": "Найди на карте",
+    "back": "Назад"
   },
   "NotFound": {
     "eyebrow": "404",

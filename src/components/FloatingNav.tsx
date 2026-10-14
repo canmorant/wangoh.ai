@@ -5,12 +5,13 @@ import dynamic from "next/dynamic";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { Menu, Search, X } from "lucide-react";
+import { ChevronLeft, Menu, Search, X } from "lucide-react";
 import Magnetic from "./Magnetic";
 import type { Country } from "@/data/destinations";
 import { EASE_OUT, EASE_SOFT } from "@/lib/motion";
 import LanguageSwitcher from "./LanguageSwitcher";
-import { routing } from "@/i18n/routing";
+import { IS_APP_BUILD, routing } from "@/i18n/routing";
+import { useAppBack } from "@/hooks/useAppBack";
 
 const SearchModal = dynamic(() => import("./SearchModal"), { ssr: false });
 
@@ -35,6 +36,8 @@ export default function FloatingNav({
   searchDictionaryUrl?: string;
 }) {
   const t = useTranslations("Nav");
+  // Uygulamada geri düğmesi: ana sayfa kökü dışında her yerde (web'de hiç).
+  const { canBack, back } = useAppBack();
   const [visible, setVisible] = useState(true);
   const [solid, setSolid] = useState(false);
   const [hovered, setHovered] = useState<string | null>(null);
@@ -145,13 +148,35 @@ export default function FloatingNav({
           }}
           onPointerLeave={() => setHovered(null)}
         >
+          {canBack && (
+            <button
+              type="button"
+              onClick={() => {
+                setMobileOpen(false);
+                back();
+              }}
+              aria-label={t("back")}
+              className="flex size-11 shrink-0 items-center justify-center rounded-full text-white/90 transition-colors active:bg-white/15"
+            >
+              <ChevronLeft className="size-5" strokeWidth={2} />
+            </button>
+          )}
+
           <Link
             href="/"
-            onClick={() => {
+            onClick={(event) => {
               setMobileOpen(false);
+              // Uygulamada logo, hangi kıta/ülke görünümünde ya da sayfanın neresinde
+              // olursan ol, ana sayfanın en başına (pencere sahnesine) götürür.
+              if (IS_APP_BUILD && onHome) {
+                event.preventDefault();
+                onHome();
+                window.scrollTo({ top: 0, behavior: "instant" });
+                return;
+              }
               onHome?.();
             }}
-            className="ml-3 shrink-0 text-[13px] tracking-[0.32em] text-white/90 uppercase transition-opacity duration-300 hover:opacity-70 lg:mr-2"
+            className={`${canBack ? "ml-0.5" : "ml-3"} shrink-0 text-[13px] tracking-[0.32em] text-white/90 uppercase transition-opacity duration-300 hover:opacity-70 lg:mr-2`}
           >
             Wangoh
           </Link>
