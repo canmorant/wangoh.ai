@@ -160,6 +160,14 @@
     "footnote": "Tous les itinéraires ne sont pas imprimés",
     "yourLocation": "Votre position"
   },
+  "Continents": {
+    "eyebrow": "Continents",
+    "title": "Choisis d'abord un continent.",
+    "intro": "Quatre continents, un seul écran. Touche-en un pour voir ses pays.",
+    "countries": "{count, plural, one {# pays} other {# pays}}",
+    "back": "Tous les continents",
+    "hint": "Choisis une carte d'embarquement."
+  },
   "Dietary": {
     "status": {
       "fullyVegan": "100 % végan",
@@ -717,7 +725,14 @@
       "body": "Les règles d’entrée, les paiements, les langues, les données mobiles et le budget valent pour tout le pays ; ils sont réunis sur une seule page.",
       "link": "Infos pratiques : {country}"
     },
-    "tocDietaryNotes": "Alimentation vegan et halal"
+    "tocDietaryNotes": "Alimentation vegan et halal",
+    "editorialLabel": "Informations éditoriales",
+    "editorialTeam": "Équipe éditoriale",
+    "editorialBy": "Préparé par {name}",
+    "editorialMethod": "Ce guide repose sur des recherches propres à la destination, la vérification de sources officielles et une relecture éditoriale. Revérifie les informations susceptibles de changer avant de partir.",
+    "reviewedOn": "Dernière relecture éditoriale : {date}",
+    "editorialPrinciples": "Nos principes éditoriaux",
+    "reportCorrection": "Signaler une correction"
   },
   "Guides": {
     "metaTitle": "Guides de voyage : pays par pays, ville par ville | Wangoh",

@@ -160,6 +160,14 @@
     "footnote": "No todas las rutas están impresas",
     "yourLocation": "Tu ubicación"
   },
+  "Continents": {
+    "eyebrow": "Continentes",
+    "title": "Elige primero un continente.",
+    "intro": "Cuatro continentes, una sola pantalla. Toca uno para ver sus países.",
+    "countries": "{count, plural, one {# país} other {# países}}",
+    "back": "Todos los continentes",
+    "hint": "Elige una tarjeta de embarque."
+  },
   "Dietary": {
     "status": {
       "fullyVegan": "100 % vegano",

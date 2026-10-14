@@ -160,6 +160,14 @@
     "footnote": "Nicht jede Route ist gedruckt",
     "yourLocation": "Dein Standort"
   },
+  "Continents": {
+    "eyebrow": "Kontinente",
+    "title": "Such dir zuerst einen Kontinent aus.",
+    "intro": "Vier Kontinente, ein Bildschirm. Tippe auf einen, um seine Länder zu sehen.",
+    "countries": "{count, plural, one {# Land} other {# Länder}}",
+    "back": "Alle Kontinente",
+    "hint": "Wähle eine Bordkarte."
+  },
   "Dietary": {
     "status": {
       "fullyVegan": "Rein vegan",
@@ -717,7 +725,14 @@
       "body": "Einreiseregeln, Bezahlen, Sprachen, mobiles Internet und Budget gelten für das ganze Land und stehen deshalb auf einer Seite.",
       "link": "Praktische Informationen zu {country}"
     },
-    "tocDietaryNotes": "Vegane und Halal-Ernährung"
+    "tocDietaryNotes": "Vegane und Halal-Ernährung",
+    "editorialLabel": "Redaktionelle Hinweise",
+    "editorialTeam": "Redaktionsteam",
+    "editorialBy": "Erstellt von {name}",
+    "editorialMethod": "Dieser Reiseführer entsteht aus zielspezifischer Recherche, dem Abgleich mit amtlichen Quellen und redaktioneller Prüfung. Zeitkritische Angaben solltest du vor der Reise noch einmal prüfen.",
+    "reviewedOn": "Zuletzt redaktionell geprüft: {date}",
+    "editorialPrinciples": "Unsere redaktionellen Grundsätze",
+    "reportCorrection": "Korrektur melden"
   },
   "Guides": {
     "metaTitle": "Reiseführer: Land für Land, Stadt für Stadt | Wangoh",

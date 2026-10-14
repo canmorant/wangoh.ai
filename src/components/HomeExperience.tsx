@@ -7,7 +7,8 @@ import { countries, type Country } from "@/data/destinations";
 import { SECRET_DESTINATION } from "@/data/secret";
 import { slugify } from "@/lib/slug";
 import { getPathname } from "@/i18n/navigation";
-import { routing, type AppLocale } from "@/i18n/routing";
+import { IS_APP_BUILD, routing, type AppLocale } from "@/i18n/routing";
+import { isRegion, type Region } from "@/data/continents";
 import type { CityCardData } from "@/content/cityCardData";
 import { detectOrigin } from "@/hooks/useFlightOrigin";
 import FloatingNav from "@/components/FloatingNav";
@@ -17,6 +18,8 @@ import SiteFooter from "@/components/SiteFooter";
 import AdSenseScript from "@/components/AdSenseScript";
 
 import DestinationsSection from "@/components/DestinationsSection";
+import ContinentsSection from "@/components/ContinentsSection";
+import ContinentView from "@/components/ContinentView";
 
 const FlightAnimation = dynamic(() => import("@/components/FlightAnimation"), { ssr: false });
 const CityCards = dynamic(() => import("@/components/CityCards"), { ssr: false });
@@ -26,7 +29,7 @@ const CountryWheel = dynamic(() => import("@/features/country-wheel/CountryWheel
 });
 const ResponsiveHero = dynamic(() => import("@/components/ResponsiveHero"));
 
-type View = "landing" | "flying" | "cities";
+type View = "landing" | "flying" | "continent" | "cities";
 
 /**
  * Ülke görünümünün adresi.
@@ -72,6 +75,9 @@ export default function HomeExperience({
   const locale = useLocale();
   const [view, setView] = useState<View>("landing");
   const [selectedCountry, setSelectedCountry] = useState<Country | null>(null);
+  // Uygulama: ana sayfada ülkeler yerine kıta kartları var; seçilen kıta.
+  const [region, setRegion] = useState<Region | null>(null);
+  const [scrollToContinents, setScrollToContinents] = useState(false);
   const [secretOpen, setSecretOpen] = useState(false);
   const [clubOpen, setClubOpen] = useState(false);
   const [wheelOpen, setWheelOpen] = useState(false);
@@ -108,12 +114,62 @@ export default function HomeExperience({
 
   const handleBack = useCallback(() => {
     setSelectedCountry(null);
+    setRegion(null);
     setView("landing");
     // history.back() değil: Portekiz'den sonra Japonya'ya uçulduysa geri gitmek
     // Portekiz'i açardı. "Tüm rotalar" her zaman ana sayfaya dönmeli.
     const home = getPathname({ href: "/", locale });
     if (window.location.pathname !== home) window.history.pushState(null, "", home);
   }, [locale]);
+
+  const regionHref = useCallback(
+    (r: Region | null) => `${getPathname({ href: "/", locale })}${r ? `?kita=${r}` : ""}`,
+    [locale]
+  );
+
+  // Uygulama: bir kıtanın ülkelerine geç. Geri tuşu (iOS kaydırma, Android) kıta
+  // kartlarına döner; adres /?kita=europe olur.
+  const openRegion = useCallback(
+    (r: Region) => {
+      setRegion(r);
+      setSelectedCountry(null);
+      setView("continent");
+      window.scrollTo({ top: 0, behavior: "instant" });
+      window.history.pushState(null, "", regionHref(r));
+    },
+    [regionHref]
+  );
+
+  // "Tüm kıtalar": ana sayfaya, doğrudan kıta kartlarının olduğu yere dön (kahraman
+  // sahnesini baştan kaydırtma).
+  const backToContinents = useCallback(() => {
+    setRegion(null);
+    setSelectedCountry(null);
+    setView("landing");
+    setScrollToContinents(true);
+    window.history.pushState(null, "", regionHref(null));
+  }, [regionHref]);
+
+  // Şehir görünümündeki "Tüm rotalar": uygulamada geldiği kıtaya, yoksa ana sayfaya.
+  const backFromCities = useCallback(() => {
+    if (IS_APP_BUILD && region) {
+      setSelectedCountry(null);
+      setView("continent");
+      window.scrollTo({ top: 0, behavior: "instant" });
+      window.history.pushState(null, "", regionHref(region));
+    } else {
+      handleBack();
+    }
+  }, [handleBack, region, regionHref]);
+
+  useEffect(() => {
+    if (!scrollToContinents || view !== "landing") return;
+    const frame = requestAnimationFrame(() => {
+      document.getElementById("continents")?.scrollIntoView({ behavior: "instant", block: "start" });
+      setScrollToContinents(false);
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [scrollToContinents, view]);
 
   // Uçuşun kalkış noktası (yaklaşık konum) ziyaretçi bir ülke seçmeden,
   // sayfa boştayken sorulur; animasyon başladığında hazır olur. Ağır uçuş
@@ -131,12 +187,19 @@ export default function HomeExperience({
   useEffect(() => {
     const onPopState = () => {
       const country = countryAtPath(window.location.pathname);
+      const kita = new URLSearchParams(window.location.search).get("kita");
       if (country) {
         setSelectedCountry(country);
         setView("cities");
         window.scrollTo({ top: 0, behavior: "instant" });
+      } else if (IS_APP_BUILD && isRegion(kita)) {
+        setSelectedCountry(null);
+        setRegion(kita);
+        setView("continent");
+        window.scrollTo({ top: 0, behavior: "instant" });
       } else {
         setSelectedCountry(null);
+        setRegion(null);
         setView("landing");
       }
     };
@@ -210,15 +273,31 @@ export default function HomeExperience({
         <>
           <h1 className="sr-only">{t("Home.srTitle")}</h1>
           <ResponsiveHero />
-          {guideLinks}
-          <DestinationsSection onSelectCountry={flyTo} />
+          {IS_APP_BUILD ? (
+            <>
+              <ContinentsSection onSelect={openRegion} />
+              {guideLinks}
+            </>
+          ) : (
+            <>
+              {guideLinks}
+              <DestinationsSection onSelectCountry={flyTo} />
+            </>
+          )}
+          <SiteFooter />
+        </>
+      )}
+
+      {view === "continent" && region && (
+        <>
+          <ContinentView region={region} onBack={backToContinents} onSelectCountry={flyTo} />
           <SiteFooter />
         </>
       )}
 
       {view === "cities" && selectedCountry && (
         <>
-          <CityCards country={selectedCountry} data={cityCardData} onBack={handleBack} />
+          <CityCards country={selectedCountry} data={cityCardData} onBack={backFromCities} />
           <SiteFooter />
         </>
       )}

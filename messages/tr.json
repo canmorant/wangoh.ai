@@ -160,6 +160,14 @@
     "footnote": "Her rota basılı değil",
     "yourLocation": "Konumun"
   },
+  "Continents": {
+    "eyebrow": "Kıtalar",
+    "title": "Önce bir kıta seç.",
+    "intro": "Dört kıta, tek ekranda. Dokun, ülkelere geç.",
+    "countries": "{count, plural, one {# ülke} other {# ülke}}",
+    "back": "Tüm kıtalar",
+    "hint": "Bir biniş kartı seç."
+  },
   "Dietary": {
     "status": {
       "fullyVegan": "Tamamen vegan",
