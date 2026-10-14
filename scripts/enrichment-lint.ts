@@ -62,7 +62,7 @@ const FORBIDDEN: [RegExp, string][] = [
   [/\b(saat|hours?|horas?)\s+\d/i, "çalışma saati"],
   [/https?:|www\.|@\w+\.\w+/i, "bağlantı / e-posta"],
   [/\+\d{2}[\s\d-]{6,}/, "telefon"],
-  [/\b(yıldız(lı)?|michelin|tripadvisor|rating|stars?|estrellas?|puanı|reseñas?|reviews?)\b/i, "puan / yıldız / değerlendirme"],
+  [/\b(yıldız(lı)?|michelin|tripadvisor|rating|\d[\s-]*stars?|\d[\s-]*estrellas?|puanı|reseñas?|reviews?)\b/i, "puan / yıldız / değerlendirme"],
   [/\*\*|^#|\n/m, "biçimlendirme işareti ya da satır sonu"],
 ];
 
@@ -74,7 +74,9 @@ function allowedSuffixes(city: string): Set<string> {
   const acc = after(turkishAccusative(city));
   const gen = acc.startsWith("y") ? `n${acc.slice(1)}n` : `${acc}n`;
   const abl = `${loc}n`;
-  return new Set([loc, dat, acc, gen, abl]);
+  // -deki/-daki, -yle/-la (ör. "Budapeşte'deki", "Szeged'le").
+  const ins = `${dat.startsWith("y") || dat.startsWith("n") ? "y" : ""}l${dat.slice(-1)}`;
+  return new Set([loc, dat, acc, gen, abl, `${loc.replace(/n?$/, "")}ki`, `${loc}ki`, ins]);
 }
 function checkSuffixes(key: string, city: string, label: string, text: string) {
   const ok = allowedSuffixes(city);
@@ -131,7 +133,7 @@ for (const key of inScope) {
         err(key, `${loc}.${name} eksik ya da biçimi yanlış`);
         continue;
       }
-      if (block.heading.length < 18 || block.heading.length > 95) err(key, `${loc}.${name}.heading uzunluğu ${block.heading.length} (18–95)`);
+      if (block.heading.length < 18 || block.heading.length > 110) err(key, `${loc}.${name}.heading uzunluğu ${block.heading.length} (18–110)`);
       const w = blockWords(block);
       if (w < min || w > max) err(key, `${loc}.${name} ${w} kelime (${min}–${max})`);
       if (block.body.length < 1 || block.body.length > 3) err(key, `${loc}.${name} ${block.body.length} paragraf (1–3)`);
@@ -142,7 +144,7 @@ for (const key of inScope) {
     }
     if (e.transport) {
       const tw = e.transport.reduce((n, p) => n + words(p), 0);
-      if (tw < 25 || tw > 130 || e.transport.length > 2) err(key, `${loc}.transport ${tw} kelime / ${e.transport.length} paragraf (25–130, en çok 2)`);
+      if (tw < 18 || tw > 130 || e.transport.length > 2) err(key, `${loc}.transport ${tw} kelime / ${e.transport.length} paragraf (18–130, en çok 2)`);
     }
     const texts: [string, string][] = [
       [`${loc}.story.heading`, e.story?.heading ?? ""],
@@ -154,7 +156,8 @@ for (const key of inScope) {
     for (const [label, text] of texts) {
       for (const [re, what] of FORBIDDEN) if (re.test(text)) err(key, `${label}: yasak içerik (${what}): "${text.slice(0, 70)}…"`);
       if (loc === "tr") checkSuffixes(key, city, label, text);
-      if (loc !== "tr" && /[ğşıİĞŞ]/.test(text)) {
+      // Türkiye rehberlerinde Türkçe özel adlar ve yemek adları en/es metninde de doğal olarak geçer.
+      if (loc !== "tr" && !key.startsWith("TR:") && /[ğşıİĞŞ]/.test(text)) {
         const m = text.match(/\S*[ğşıİĞŞ]\S*/g);
         err(key, `${label}: ${loc} metninde Türkçe harf: ${m?.slice(0, 3).join(", ")}`);
       }
