@@ -78,12 +78,24 @@ export default function IslandFrame() {
     };
 
     measure();
+    // WebView güvenli alanı ilk kareden sonra bildirebilir; birkaç kez yeniden ölç.
+    const retries = [150, 600, 1500, 3500].map((ms) => window.setTimeout(measure, ms));
+    const onVisible = () => {
+      if (document.visibilityState === "visible") measure();
+    };
     window.addEventListener("scroll", schedule, { passive: true });
     window.addEventListener("resize", measure);
+    window.addEventListener("orientationchange", measure);
+    window.addEventListener("pageshow", measure);
+    document.addEventListener("visibilitychange", onVisible);
     window.addEventListener("wangoh:hero", schedule);
     return () => {
+      retries.forEach((id) => window.clearTimeout(id));
       window.removeEventListener("scroll", schedule);
       window.removeEventListener("resize", measure);
+      window.removeEventListener("orientationchange", measure);
+      window.removeEventListener("pageshow", measure);
+      document.removeEventListener("visibilitychange", onVisible);
       window.removeEventListener("wangoh:hero", schedule);
       if (frame) cancelAnimationFrame(frame);
     };

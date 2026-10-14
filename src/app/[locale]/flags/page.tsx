@@ -24,7 +24,7 @@ export default async function FlagsPage({ params }: Props) {
   const locale = await resolveLocale(params);
   return (
     <>
-      <SiteHeader locale={locale} />
+      <SiteHeader locale={locale} topInset={false} />
       <ClientMessages namespaces={CLIENT_NAMESPACES.flags}>
         <FlagGame />
       </ClientMessages>

@@ -26,7 +26,7 @@ export default async function TestsPage({ params }: Props) {
   const locale = await resolveLocale(params);
   return (
     <>
-      <SiteHeader locale={locale} />
+      <SiteHeader locale={locale} topInset={false} />
       <ClientMessages namespaces={CLIENT_NAMESPACES.tests}>
         <ContentTextProvider dictionary={destinationDictionary(locale)}>
           <TravelTest />

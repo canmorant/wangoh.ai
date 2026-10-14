@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { IS_APP_BUILD } from "@/i18n/routing";
 import { motion, AnimatePresence } from "framer-motion";
 import { countries } from "@/data/countries";
 import { useFlagGame } from "./useFlagGame";
@@ -62,7 +63,7 @@ export default function FlagGame() {
           frame budget — leaves the player staring at nothing. Screen changes
           are user-initiated and infrequent; replaying an entrance on a keyed
           remount looks the same and cannot deadlock. */}
-      <div className="relative mx-auto flex min-h-[100svh] max-w-5xl flex-col px-4 py-16 sm:px-8 sm:py-20">
+      <div className={`relative mx-auto flex min-h-[100svh] max-w-5xl flex-col px-4 py-16 sm:px-8 sm:py-20 ${IS_APP_BUILD ? "pt-[calc(max(0.75rem,env(safe-area-inset-top))_+_5.25rem)]" : ""}`}>
         {g.screen === "setup" && <Setup key="setup" g={g} />}
         {g.screen === "playing" && <Playing key="playing" g={g} accent={accent} />}
         {g.screen === "results" && <Results key="results" g={g} accent={accent} />}

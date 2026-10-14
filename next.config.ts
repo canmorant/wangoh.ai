@@ -1,3 +1,4 @@
+import { execSync } from "node:child_process";
 import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
 
@@ -22,6 +23,22 @@ const isApp = process.env.BUILD_TARGET === "app";
  * uygulama derlemesi şimdilik yalnız Türkçe. Yeni bir dil yalnız tüm
  * içeriği çevrilip kontrol edildikten sonra bu listeye eklenir.
  */
+/**
+ * Uygulama derlemesinin sürüm damgası (altbilgide görünür): telefondaki uygulamanın
+ * hangi koddan üretildiğini ayırt etmek için. Web'de boş.
+ */
+const appBuild = isApp
+  ? (() => {
+      let sha = "";
+      try {
+        sha = execSync("git rev-parse --short HEAD", { stdio: ["ignore", "pipe", "ignore"] }).toString().trim();
+      } catch {
+        // git yoksa yalnız tarih
+      }
+      return `${sha || "sürüm?"} · ${new Date().toISOString().slice(0, 16).replace("T", " ")} UTC`;
+    })()
+  : "";
+
 const siteLocales = process.env.NEXT_PUBLIC_SITE_LOCALES ?? (isApp ? "tr" : "tr,en,es");
 
 const nextConfig: NextConfig = {
@@ -31,6 +48,7 @@ const nextConfig: NextConfig = {
     // uygulamada dil öneki her zaman var ve bağlantılar dosya yoludur
     // (bkz. i18n/routing.ts ve i18n/navigation.ts). Web'de değer "web".
     NEXT_PUBLIC_BUILD_TARGET: isApp ? "app" : "web",
+    NEXT_PUBLIC_APP_BUILD: appBuild,
   },
   experimental: {
     // Kök layout üst seviye dinamik bir segmentte (app/[locale]/layout.tsx).

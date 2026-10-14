@@ -9,15 +9,15 @@ import SiteNav from "./SiteNav";
  * aramanın mesajlarını ve destinasyon sözlüğünü kendisi sağlıyor; sayfanın
  * geri kalanının istemci mesajlarına dokunmuyor.
  */
-export default async function SiteHeader({ locale }: { locale: AppLocale }) {
+export default async function SiteHeader({ locale, topInset = true }: { locale: AppLocale; topInset?: boolean }) {
   return (
     <ClientMessages namespaces={CLIENT_NAMESPACES.nav}>
       {process.env.BUILD_TARGET === "app" || locale === "tr" ? (
         <ContentTextProvider dictionary={destinationDictionary(locale)}>
-          <SiteNav />
+          <SiteNav topInset={topInset} />
         </ContentTextProvider>
       ) : (
-        <SiteNav searchDictionaryUrl={`/api/search-dictionary/${locale}`} />
+        <SiteNav searchDictionaryUrl={`/api/search-dictionary/${locale}`} topInset={topInset} />
       )}
     </ClientMessages>
   );
