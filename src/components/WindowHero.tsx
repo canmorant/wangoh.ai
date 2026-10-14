@@ -16,6 +16,7 @@ import {
 import { HERO_PLATE, HERO_PLATE_SOFT } from "@/lib/heroPlate";
 import { IS_APP_BUILD } from "@/i18n/routing";
 import { ISLAND, islandCenterY, readSafeTop } from "@/lib/island";
+import { drawMorph, morphShape, type MorphFrame } from "@/lib/islandMorph";
 
 /**
  * Telefon ve tabletlerin "pencereden içeri gir" sahnesi.
@@ -48,6 +49,7 @@ export default function WindowHero() {
   const bloomRef = useRef<HTMLDivElement>(null);
   const cabinRef = useRef<HTMLDivElement>(null);
   const wallRef = useRef<HTMLDivElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
   const glassRef = useRef<HTMLDivElement>(null);
   const introRef = useRef<HTMLDivElement>(null);
   const arriveRef = useRef<HTMLDivElement>(null);
@@ -61,10 +63,11 @@ export default function WindowHero() {
     // .hero-window'daki --gw formülüyle aynı: min(332px, 60vw, 44svh).
     let maxScale = 3;
     let viewH = 0;
-    // Adalı iPhone (uygulama): pencere kadrajdan çıkmak yerine küçülüp adaya iner.
+    // Adalı iPhone (uygulama): pencere kadrajdan çıkmak yerine ada çerçevesine dönüşür
+    // (bkz. lib/islandMorph); şekil canvas'a çiziliyor, CSS kabin ve duvar gizleniyor.
     let islandMode = false;
-    let dockDy = 0;
-    let dockScale = 0.12;
+    let morphFrame: MorphFrame = { viewW: 0, viewH: 0, glassW: 0, dockY: 0 };
+    let drawKey = "";
     const measure = () => {
       const w = Math.max(320, view.clientWidth);
       const h = Math.max(480, view.clientHeight);
@@ -84,12 +87,24 @@ export default function WindowHero() {
 
       const safeTop = IS_APP_BUILD ? readSafeTop() : 0;
       islandMode = IS_APP_BUILD && safeTop >= ISLAND.MIN_INSET;
-      if (islandMode) {
-        // Pencere kutusu yüksekliği glassW/0.74; açık renkli çerçevenin dış kenarı her yönde 0.162·glassW.
-        const windowOuterH = glassW * (1 / 0.74 + 2 * 0.162);
-        // Adada sönecek kadar küçük: pencere adanın siyahının altına girip kayboluyor.
-        dockScale = (ISLAND.H - 4) / windowOuterH;
-        dockDy = islandCenterY(safeTop) - view.clientHeight / 2;
+      const canvas = canvasRef.current;
+      if (cabinRef.current) cabinRef.current.style.display = islandMode ? "none" : "";
+      if (wallRef.current) wallRef.current.style.display = islandMode ? "none" : "";
+      if (canvas) canvas.style.display = islandMode ? "block" : "none";
+      if (islandMode && canvas) {
+        const viewW = view.clientWidth;
+        const viewH2 = view.clientHeight;
+        morphFrame = {
+          viewW,
+          viewH: viewH2,
+          glassW: Math.min(332, viewW * 0.6, viewH2 * 0.44),
+          dockY: islandCenterY(safeTop),
+        };
+        const dpr = Math.min(window.devicePixelRatio || 1, 3);
+        canvas.width = Math.round(viewW * dpr);
+        canvas.height = Math.round(viewH2 * dpr);
+        canvas.getContext("2d")?.setTransform(dpr, 0, 0, dpr, 0, 0);
+        drawKey = "";
       }
     };
 
@@ -98,19 +113,22 @@ export default function WindowHero() {
       const cabin = cabinRef.current;
       const wall = wallRef.current;
       if (islandMode) {
-        // Pencere kaydırdıkça küçülüp yukarı süzülür, duvar ve cam silinir, pencere adaya
-        // varınca IslandFrame'in çerçevesiyle yer değiştirir. Yalnız transform ve opacity.
-        const move = smooth(0.06, 0.86, q);
-        const transform = `translate3d(-50%,-50%,0) translate3d(0,${dockDy * move}px,0) scale(${Math.pow(dockScale, move)})`;
-        if (cabin) {
-          cabin.style.transform = transform;
-          cabin.style.opacity = String(1 - smooth(0.82, 0.93, q));
+        // Tek şekil: kaydırdıkça her adımda biraz küçülür, biraz daha ada biçimini alır ve
+        // yukarı süzülür; duvar ve cam silinir. Adaya varınca IslandFrame'in aynı çerçevesine
+        // geçilir (ikisi birebir aynı ölçüde).
+        const m = smooth(0.03, 0.88, q);
+        const fade = 1 - smooth(0.1, 0.5, q);
+        const fill = smooth(0.8, 1, m);
+        const key = `${m.toFixed(4)}|${fade.toFixed(3)}|${fill.toFixed(3)}`;
+        const canvas = canvasRef.current;
+        if (canvas) {
+          if (key !== drawKey) {
+            drawKey = key;
+            const ctx = canvas.getContext("2d");
+            if (ctx) drawMorph(ctx, morphFrame, morphShape(m, morphFrame), { wall: fade, glass: fade, fill });
+          }
+          canvas.style.opacity = String(1 - smooth(0.9, 0.96, q));
         }
-        if (wall) {
-          wall.style.transform = transform;
-          wall.style.opacity = String(1 - smooth(0.12, 0.55, q));
-        }
-        if (glassRef.current) glassRef.current.style.opacity = String(1 - smooth(0.1, 0.5, q));
         if (bloomRef.current) bloomRef.current.style.opacity = "0";
       } else {
         const transform = `translate3d(-50%,-50%,0) scale(${dollyScale(q, maxScale)})`;
@@ -173,11 +191,15 @@ export default function WindowHero() {
 
     measure();
     update();
+    // WebView güvenli alanı ilk kareden sonra bildirebilir (ada algılanamazsa eski hareket
+    // oynardı); birkaç kez yeniden ölç.
+    const retries = IS_APP_BUILD ? [150, 600, 1500, 3500].map((ms) => window.setTimeout(onResize, ms)) : [];
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onResize);
     // Uygulamadaki Dynamic Island çerçevesi (IslandFrame) sahnenin geldiğini/gittiğini bilsin.
     window.dispatchEvent(new Event("wangoh:hero"));
     return () => {
+      retries.forEach((id) => window.clearTimeout(id));
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onResize);
       if (frame) cancelAnimationFrame(frame);
@@ -246,6 +268,15 @@ export default function WindowHero() {
         >
           <div ref={glassRef} className="hero-glass hero-fade absolute inset-0" />
         </div>
+
+        {IS_APP_BUILD && (
+          <canvas
+            ref={canvasRef}
+            aria-hidden
+            className="pointer-events-none absolute inset-0 h-full w-full"
+            style={{ display: "none" }}
+          />
+        )}
 
         <div className="pointer-events-none absolute inset-0 hero-vignette" />
 
