@@ -10,6 +10,7 @@ import { useContentText } from "@/components/ContentText";
 import { slugify } from "@/lib/slug";
 import { useFormatter, useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import { IS_APP_BUILD } from "@/i18n/routing";
 import { countryName } from "@/lib/countryNames";
 import { localizeBestSeason, localizeBudget, localizeFlightTime } from "@/lib/travelData";
 import { useFlightOrigin } from "@/hooks/useFlightOrigin";
@@ -49,7 +50,10 @@ export default function CityCards({ country, data, onBack }: CityCardsProps) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
-      className="min-h-screen px-4 py-20 sm:px-6 sm:py-24"
+      className={`min-h-screen px-4 py-20 sm:px-6 sm:py-24 ${
+        // Uygulamada menü güvenli alanın altında: içerik de menünün altından başlasın.
+        IS_APP_BUILD ? "pt-[calc(max(0.75rem,env(safe-area-inset-top))_+_5.25rem)] sm:pt-[calc(max(0.75rem,env(safe-area-inset-top))_+_6rem)]" : ""
+      }`}
     >
       <div className="max-w-7xl mx-auto">
         <motion.button

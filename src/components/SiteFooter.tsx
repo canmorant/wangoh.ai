@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { SITE } from "@/lib/site";
+import { IS_APP_BUILD } from "@/i18n/routing";
 import LanguageSwitcher from "./LanguageSwitcher";
 import ConsentSettingsButton from "./consent/ConsentSettingsButton";
 
@@ -84,6 +85,7 @@ export default function SiteFooter() {
 
       <div className="mx-auto mt-10 flex max-w-[1160px] flex-col gap-2 border-t border-white/[0.06] pt-6 text-[11px] leading-relaxed text-white/22 sm:flex-row sm:items-center sm:justify-between">
         <p>{t("copyright", { year: new Date().getFullYear() })}</p>
+        {IS_APP_BUILD && <p className="text-white/30">build {process.env.NEXT_PUBLIC_APP_BUILD}</p>}
         <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
           <p>
             {t.rich("imageSource", {

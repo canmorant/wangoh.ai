@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import SiteFooter from "@/components/SiteFooter";
 import { Link } from "@/i18n/navigation";
 import { resolveLocale } from "@/i18n/server";
+import { IS_APP_BUILD } from "@/i18n/routing";
 
 const links = [
   { href: "/hakkimizda", key: "about" },
@@ -22,7 +23,12 @@ export default async function CorporateLayout({
   const tContent = await getTranslations("Content");
   return (
     <div className="min-h-screen bg-[#080b14]">
-      <header className="border-b border-white/[0.07] bg-[#080b14]/95 px-4 backdrop-blur-xl sm:px-8">
+      <header
+        className={`border-b border-white/[0.07] bg-[#080b14]/95 px-4 backdrop-blur-xl sm:px-8 ${
+          // Uygulamada üst çubuk çentik/ada altına girmesin.
+          IS_APP_BUILD ? "pt-[env(safe-area-inset-top)]" : ""
+        }`}
+      >
         <nav
           aria-label={t("nav")}
           className="mx-auto flex min-h-18 max-w-[1160px] items-center justify-between gap-6"

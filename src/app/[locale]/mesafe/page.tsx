@@ -31,7 +31,7 @@ export default async function DistancePage({ params }: Props) {
   const locale = await resolveLocale(params);
   return (
     <>
-      <SiteHeader locale={locale} />
+      <SiteHeader locale={locale} topInset={false} />
       <ClientMessages namespaces={CLIENT_NAMESPACES.distance}>
         <DistanceGame countryNames={countryNamesFor(locale)} guideLinks={guideLinks()} guideNames={guideNames()} />
       </ClientMessages>

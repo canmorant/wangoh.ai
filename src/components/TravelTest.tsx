@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useRef, useState } from "react";
+import { IS_APP_BUILD } from "@/i18n/routing";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { countries } from "@/data/destinations";
@@ -132,7 +133,7 @@ export default function TravelTest() {
         />
       </div>
 
-      <div className="relative mx-auto flex min-h-[100svh] max-w-3xl flex-col justify-center px-4 py-20 sm:px-10 sm:py-28">
+      <div className={`relative mx-auto flex min-h-[100svh] max-w-3xl flex-col justify-center px-4 py-20 sm:px-10 sm:py-28 ${IS_APP_BUILD ? "pt-[calc(max(0.75rem,env(safe-area-inset-top))_+_5.25rem)]" : ""}`}>
         <AnimatePresence mode="wait">
           {!done ? (
             <motion.section
