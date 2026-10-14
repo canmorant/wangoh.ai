@@ -1,10 +1,13 @@
 /**
- * Dynamic Island ölçüleri (yalnız uygulama; bkz. IslandFrame ve WindowHero).
+ * Dynamic Island ölçüleri (yalnız uygulama; bkz. IslandFrame, WindowHero ve islandMorph).
  *
  * Ada ≈126×37pt, üst kenarı üst güvenli alanın 48px üstünde (59→11, 62→14).
  * Üst güvenli alan adalı iPhone'larda ≥ 59; çentikli eski modellerde 44–50.
  */
 export const ISLAND = {
+  /** Adanın kendisi (donanım). */
+  REAL_W: 126,
+  REAL_H: 37,
   /** Çerçevenin siyah zemini: adadan her yönde 1px büyük. */
   W: 128,
   H: 39,
@@ -24,4 +27,5 @@ export function readSafeTop(): number {
 }
 
 /** Adanın ekranın üstünden dikey ortası (px). */
-export const islandCenterY = (safeTop: number): number => safeTop - ISLAND.INSET_TO_TOP + ISLAND.H / 2;
+export const islandCenterY = (safeTop: number): number =>
+  safeTop - ISLAND.INSET_TO_TOP + ISLAND.REAL_H / 2;

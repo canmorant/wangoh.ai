@@ -7,9 +7,9 @@ import { ISLAND, readSafeTop } from "@/lib/island";
 /**
  * Dynamic Island'ın çevresindeki ince pencere çerçevesi (yalnız uygulama, yalnız adalı iPhone).
  *
- * Ana sayfada pencere sahnesi (WindowHero) kaydırdıkça küçülüp adaya iner; pencere adaya
- * vardığı anda bu çerçeve onun yerini alıyor (kısa bir çapraz geçiş) ve sayfa boyu, tüm
- * sayfalarda adanın çevresinde kalıyor. Geri kaydırınca pencere yeniden büyür.
+ * Ana sayfada pencere sahnesi (WindowHero) kaydırdıkça ada çerçevesine dönüşür; şekil adaya
+ * vardığı anda bu çerçeve onun yerini alıyor (birebir aynı ölçüde, kısa bir çapraz geçiş) ve
+ * sayfa boyu, tüm sayfalarda adanın çevresinde kalıyor. Geri kaydırınca pencereye döner.
  *
  * Hero sahnesinden haber almak için sahnenin bölümünü `data-hero-stage` ile buluyor;
  * sahne yoksa (kıta görünümü, diğer sayfalar) çerçeve doğrudan görünür. Yalnız opacity.
@@ -37,8 +37,8 @@ export default function IslandFrame() {
         const rect = stage.getBoundingClientRect();
         const travel = rect.height - view.clientHeight;
         const p = travel <= 0 ? 0 : clamp01(-rect.top / travel);
-        // WindowHero'daki pencerenin adaya varış anıyla aynı aralık.
-        show = smooth(0.84, 0.94, progress(p));
+        // WindowHero'daki canvas çerçevenin adaya vardığı an (m=1 → q=0,88) ve onun sönmesi (0,90–0,96).
+        show = smooth(0.88, 0.94, progress(p));
       }
       const key = show.toFixed(3);
       if (key === last) return;
