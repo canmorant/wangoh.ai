@@ -14,6 +14,8 @@ import {
   worldScale,
 } from "@/lib/camera";
 import { HERO_PLATE, HERO_PLATE_SOFT } from "@/lib/heroPlate";
+import { IS_APP_BUILD } from "@/i18n/routing";
+import { ISLAND, islandCenterY, readSafeTop } from "@/lib/island";
 
 /**
  * Telefon ve tabletlerin "pencereden içeri gir" sahnesi.
@@ -45,6 +47,7 @@ export default function WindowHero() {
   const hazeRef = useRef<HTMLDivElement>(null);
   const bloomRef = useRef<HTMLDivElement>(null);
   const cabinRef = useRef<HTMLDivElement>(null);
+  const wallRef = useRef<HTMLDivElement>(null);
   const glassRef = useRef<HTMLDivElement>(null);
   const introRef = useRef<HTMLDivElement>(null);
   const arriveRef = useRef<HTMLDivElement>(null);
@@ -58,6 +61,10 @@ export default function WindowHero() {
     // .hero-window'daki --gw formülüyle aynı: min(332px, 60vw, 44svh).
     let maxScale = 3;
     let viewH = 0;
+    // Adalı iPhone (uygulama): pencere kadrajdan çıkmak yerine küçülüp adaya iner.
+    let islandMode = false;
+    let dockDy = 0;
+    let dockScale = 0.12;
     const measure = () => {
       const w = Math.max(320, view.clientWidth);
       const h = Math.max(480, view.clientHeight);
@@ -74,13 +81,49 @@ export default function WindowHero() {
           bez: glassW * 0.155,
           lip: glassW * 0.052,
         }) * CAMERA.clearMargin;
+
+      const safeTop = IS_APP_BUILD ? readSafeTop() : 0;
+      islandMode = IS_APP_BUILD && safeTop >= ISLAND.MIN_INSET;
+      if (islandMode) {
+        // Pencere kutusu yüksekliği glassW/0.74; açık renkli çerçevenin dış kenarı her yönde 0.162·glassW.
+        const windowOuterH = glassW * (1 / 0.74 + 2 * 0.162);
+        // Adada sönecek kadar küçük: pencere adanın siyahının altına girip kayboluyor.
+        dockScale = (ISLAND.H - 4) / windowOuterH;
+        dockDy = islandCenterY(safeTop) - view.clientHeight / 2;
+      }
     };
 
     const render = (p: number) => {
       const q = progress(p);
       const cabin = cabinRef.current;
-      if (cabin) {
-        cabin.style.transform = `translate3d(-50%,-50%,0) scale(${dollyScale(q, maxScale)})`;
+      const wall = wallRef.current;
+      if (islandMode) {
+        // Pencere kaydırdıkça küçülüp yukarı süzülür, duvar ve cam silinir, pencere adaya
+        // varınca IslandFrame'in çerçevesiyle yer değiştirir. Yalnız transform ve opacity.
+        const move = smooth(0.06, 0.86, q);
+        const transform = `translate3d(-50%,-50%,0) translate3d(0,${dockDy * move}px,0) scale(${Math.pow(dockScale, move)})`;
+        if (cabin) {
+          cabin.style.transform = transform;
+          cabin.style.opacity = String(1 - smooth(0.82, 0.93, q));
+        }
+        if (wall) {
+          wall.style.transform = transform;
+          wall.style.opacity = String(1 - smooth(0.12, 0.55, q));
+        }
+        if (glassRef.current) glassRef.current.style.opacity = String(1 - smooth(0.1, 0.5, q));
+        if (bloomRef.current) bloomRef.current.style.opacity = "0";
+      } else {
+        const transform = `translate3d(-50%,-50%,0) scale(${dollyScale(q, maxScale)})`;
+        if (cabin) {
+          cabin.style.transform = transform;
+          cabin.style.opacity = "1";
+        }
+        if (wall) {
+          wall.style.transform = transform;
+          wall.style.opacity = "1";
+        }
+        if (glassRef.current) glassRef.current.style.opacity = String(1 - smooth(0.55, 0.85, q));
+        if (bloomRef.current) bloomRef.current.style.opacity = String(0.3 * pulse(q, 0.55, 0.8, 0.99));
       }
       if (worldRef.current) {
         worldRef.current.style.transform = `translate3d(0,0,0) scale(${worldScale(q)})`;
@@ -89,8 +132,6 @@ export default function WindowHero() {
       if (hazeRef.current) {
         hazeRef.current.style.opacity = String(0.05 + 0.55 * (1 - smooth(0.02, 0.86, q)));
       }
-      if (bloomRef.current) bloomRef.current.style.opacity = String(0.3 * pulse(q, 0.55, 0.8, 0.99));
-      if (glassRef.current) glassRef.current.style.opacity = String(1 - smooth(0.55, 0.85, q));
 
       const introOut = smooth(0.01, 0.13, p);
       if (introRef.current) {
@@ -186,11 +227,21 @@ export default function WindowHero() {
           style={{ opacity: 0 }}
         />
 
-        {/* ---------- kabin: duvar, çerçeve ve cam tek kutuda ---------- */}
+        {/* ---------- kabin: duvar, çerçeve ve cam ---------- */}
+        {/* Uygulamada duvar ayrı bir katman: pencere adaya küçülürken duvar silinsin diye.
+            Web'de duvar çerçeve kutusunun son gölge halkası (aynı görünüm). */}
+        {IS_APP_BUILD && (
+          <div
+            ref={wallRef}
+            aria-hidden
+            className="hero-wall hero-layer hero-fade absolute left-1/2 top-1/2"
+            style={{ transform: "translate3d(-50%,-50%,0) scale(1)" }}
+          />
+        )}
         <div
           ref={cabinRef}
           aria-hidden
-          className="hero-window hero-layer absolute left-1/2 top-1/2"
+          className={`hero-window hero-layer absolute left-1/2 top-1/2${IS_APP_BUILD ? " hero-fade hero-window--bare" : ""}`}
           style={{ transform: "translate3d(-50%,-50%,0) scale(1)" }}
         >
           <div ref={glassRef} className="hero-glass hero-fade absolute inset-0" />

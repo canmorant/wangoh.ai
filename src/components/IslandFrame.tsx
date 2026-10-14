@@ -2,36 +2,25 @@
 
 import { useEffect, useRef } from "react";
 import { clamp01, progress, smooth } from "@/lib/camera";
-
-/** Dynamic Island'ın üst kenarı, üst güvenli alanın bu kadar piksel üstünde (59→11, 62→14). */
-const INSET_TO_TOP = 48;
-/** Adalı iPhone'larda üst güvenli alan ≥ 55px (çentikli eski modellerde 44–47). */
-const MIN_INSET = 55;
-const ISLAND_H = 39;
-/** Çerçeve pencerenin camında bu kadar büyük başlar, adaya konarken 1'e iner. */
-const START_SCALE = 2.3;
+import { ISLAND, readSafeTop } from "@/lib/island";
 
 /**
- * Dynamic Island'ın çevresindeki küçük pencere çerçevesi (yalnız uygulama, yalnız adalı iPhone).
+ * Dynamic Island'ın çevresindeki ince pencere çerçevesi (yalnız uygulama, yalnız adalı iPhone).
  *
- * Ana sayfada pencereden içeri girerken (WindowHero) çerçeve camın ortasında belirir,
- * kaydırdıkça yukarı süzülüp küçülür ve adaya oturur; sonra sayfa boyunca (ve tüm
- * sayfalarda) adanın çevresinde kalır. Geri kaydırınca aynı yoldan camın ortasına döner.
+ * Ana sayfada pencere sahnesi (WindowHero) kaydırdıkça küçülüp adaya iner; pencere adaya
+ * vardığı anda bu çerçeve onun yerini alıyor (kısa bir çapraz geçiş) ve sayfa boyu, tüm
+ * sayfalarda adanın çevresinde kalıyor. Geri kaydırınca pencere yeniden büyür.
  *
- * Hero sahnesinden haber almak için sahnenin bölümünü `data-hero-stage` ile buluyor
- * (WindowHero); sahne yoksa (kıta görünümü, diğer sayfalar) çerçeve doğrudan adada.
- * Yalnız transform ve opacity değişiyor.
+ * Hero sahnesinden haber almak için sahnenin bölümünü `data-hero-stage` ile buluyor;
+ * sahne yoksa (kıta görünümü, diğer sayfalar) çerçeve doğrudan görünür. Yalnız opacity.
  */
 export default function IslandFrame() {
-  const probeRef = useRef<HTMLDivElement>(null);
   const ringRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const probe = probeRef.current;
     const ring = ringRef.current;
-    if (!probe || !ring) return;
+    if (!ring) return;
 
-    let inset = 0;
     let hasIsland = false;
     let stage: HTMLElement | null = null;
     let frame = 0;
@@ -44,35 +33,26 @@ export default function IslandFrame() {
       const view = stage?.firstElementChild as HTMLElement | null;
 
       let show = 1;
-      let m = 1;
-      let cy = window.innerHeight / 2;
       if (stage && view) {
         const rect = stage.getBoundingClientRect();
-        const viewH = view.clientHeight;
-        const travel = rect.height - viewH;
+        const travel = rect.height - view.clientHeight;
         const p = travel <= 0 ? 0 : clamp01(-rect.top / travel);
-        const q = progress(p);
-        show = smooth(0.08, 0.34, q);
-        m = smooth(0.3, 0.92, q);
-        cy = viewH / 2;
+        // WindowHero'daki pencerenin adaya varış anıyla aynı aralık.
+        show = smooth(0.84, 0.94, progress(p));
       }
-      const dock = inset - INSET_TO_TOP + ISLAND_H / 2;
-      const y = (1 - m) * (cy - dock);
-      const s = 1 + (START_SCALE - 1) * (1 - m);
-      const key = `${show.toFixed(3)}|${y.toFixed(1)}|${s.toFixed(3)}`;
+      const key = show.toFixed(3);
       if (key === last) return;
       last = key;
-      ring.style.opacity = String(show);
-      ring.style.transform = `translate3d(-50%,${y}px,0) scale(${s})`;
+      ring.style.opacity = key;
     };
     const schedule = () => {
       if (!frame) frame = requestAnimationFrame(render);
     };
     const measure = () => {
-      inset = parseFloat(getComputedStyle(probe).paddingTop) || 0;
-      hasIsland = inset >= MIN_INSET;
+      const inset = readSafeTop();
+      hasIsland = inset >= ISLAND.MIN_INSET;
       ring.style.display = hasIsland ? "block" : "none";
-      ring.style.top = `${inset - INSET_TO_TOP}px`;
+      ring.style.top = `${inset - ISLAND.INSET_TO_TOP}px`;
       last = "";
       schedule();
     };
@@ -102,19 +82,11 @@ export default function IslandFrame() {
   }, []);
 
   return (
-    <>
-      <div
-        ref={probeRef}
-        aria-hidden
-        className="pointer-events-none invisible fixed top-0 left-0 h-0 w-0"
-        style={{ paddingTop: "env(safe-area-inset-top)" }}
-      />
-      <div
-        ref={ringRef}
-        aria-hidden
-        className="island-frame"
-        style={{ display: "none", opacity: 0, transform: "translate3d(-50%,0,0)" }}
-      />
-    </>
+    <div
+      ref={ringRef}
+      aria-hidden
+      className="island-frame"
+      style={{ display: "none", opacity: 0, transform: "translate3d(-50%,0,0)" }}
+    />
   );
 }
