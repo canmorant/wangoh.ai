@@ -24,7 +24,7 @@ export function Results({ g, countryNames, guideNames }: { g: G } & Pick<Names, 
     : "";
 
   return (
-    <section className="dg-rise flex flex-1 flex-col py-2">
+    <section className="mg-results dg-rise mx-auto flex w-full flex-1 flex-col py-2">
       <div className="flex items-center justify-between gap-3">
         <p className="min-w-0 text-[11px] leading-snug tracking-[0.28em] text-white/65 uppercase">
           {daily ? t("dailyTitle", { date: dateLabel }) : t("gameOver")}

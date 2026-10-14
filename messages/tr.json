@@ -160,6 +160,14 @@
     "footnote": "Her rota basılı değil",
     "yourLocation": "Konumun"
   },
+  "Continents": {
+    "eyebrow": "Kıtalar",
+    "title": "Önce bir kıta seç.",
+    "intro": "Dört kıta, tek ekranda. Dokun, ülkelere geç.",
+    "countries": "{count, plural, one {# ülke} other {# ülke}}",
+    "back": "Tüm kıtalar",
+    "hint": "Bir biniş kartı seç."
+  },
   "Dietary": {
     "status": {
       "fullyVegan": "Tamamen vegan",
@@ -697,6 +705,13 @@
     "faq": "Sık sorulan sorular",
     "note": "Not:",
     "lastUpdated": "Son güncelleme:",
+    "editorialLabel": "Editoryal bilgi",
+    "editorialTeam": "Editorya Ekibi",
+    "editorialBy": "Hazırlayan: {name}",
+    "editorialMethod": "Bu rehber destinasyona özgü araştırma, resmî kaynak kontrolü ve editoryal incelemeyle hazırlanır. Değişebilen bilgiler yolculuk öncesinde yeniden doğrulanmalıdır.",
+    "reviewedOn": "Son editoryal kontrol: {date}",
+    "editorialPrinciples": "Editoryal ilkelerimiz",
+    "reportCorrection": "Düzeltme bildir",
     "sources": "Resmî kaynaklar ve son kontrol",
     "sourcesIntro": "Değişebilen vize, ulaşım, giriş ve ziyaret bilgilerini yolculuktan önce bu kurumsal kaynaklardan yeniden doğrulayın.",
     "toc": "İçindekiler",

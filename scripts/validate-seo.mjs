@@ -47,8 +47,11 @@ const decode = (s) =>
 
 const sitemap = (await get("/sitemap.xml")).html;
 const robots = (await get("/robots.txt")).html;
+const home = (await get("/")).html;
 assert(robots.includes(`Sitemap: ${canonical}/sitemap.xml`), "robots.txt sitemap'i göstermiyor");
 assert(!/Disallow:\s*\/\s*$/m.test(robots), "robots.txt tüm siteyi kapatıyor");
+assert(home.includes("pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"), "AdSense betiği ana sayfada yok");
+assert(home.includes('name="google-adsense-account"'), "AdSense hesap meta etiketi ana sayfada yok");
 
 const urls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map((m) => norm(decode(m[1])));
 assert(urls.length > 0, "sitemap boş");

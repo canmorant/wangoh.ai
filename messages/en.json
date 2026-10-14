@@ -160,6 +160,14 @@
     "footnote": "Not every route is printed",
     "yourLocation": "Your location"
   },
+  "Continents": {
+    "eyebrow": "Continents",
+    "title": "Pick a continent first.",
+    "intro": "Four continents, one screen. Tap one to see its countries.",
+    "countries": "{count, plural, one {# country} other {# countries}}",
+    "back": "All continents",
+    "hint": "Pick a boarding pass."
+  },
   "Dietary": {
     "status": {
       "fullyVegan": "Fully vegan",
@@ -697,6 +705,13 @@
     "faq": "Frequently asked questions",
     "note": "Note:",
     "lastUpdated": "Last updated:",
+    "editorialLabel": "Editorial information",
+    "editorialTeam": "Editorial Team",
+    "editorialBy": "Prepared by {name}",
+    "editorialMethod": "This guide is produced through destination-specific research, checks against official sources and editorial review. Re-check time-sensitive details before travelling.",
+    "reviewedOn": "Last editorial review: {date}",
+    "editorialPrinciples": "Our editorial principles",
+    "reportCorrection": "Report a correction",
     "sources": "Official sources and latest check",
     "sourcesIntro": "Visa, transport, entry and visiting rules change — re-check them with these official sources before you travel.",
     "toc": "Contents",

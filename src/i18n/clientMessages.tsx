@@ -25,6 +25,8 @@ export const CLIENT_NAMESPACES = {
     "Hero",
     "Search",
     "Destinations",
+    "Continents",
+    "Regions",
     "BoardingPass",
     "TravelData",
     "Flight",

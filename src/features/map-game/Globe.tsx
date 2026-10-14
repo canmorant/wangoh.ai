@@ -75,9 +75,10 @@ const PIN_POP_MS = 340;
 const HINT_FADE_MS = 500;
 const TWO_PI = Math.PI * 2;
 
-const SEA_NEAR = "#1d3a66";
-const SEA_FAR = "#0a1528";
-const LAND = "#2d4870";
+const SEA_NEAR = "#24598c";
+const SEA_FAR = "#071321";
+const LAND_NEAR = "#52758c";
+const LAND_FAR = "#233d55";
 const PIN_COLOR = "#ffffff";
 
 const easeOutBack = (t: number) => {
@@ -255,6 +256,19 @@ function drawScene(ctx: CanvasRenderingContext2D, s: Scene) {
   ctx.fillStyle = sea;
   ctx.fill();
 
+  // Sol üstten gelen soğuk ışık: düz renk diski yerine cam/küre derinliği verir.
+  ctx.save();
+  ctx.beginPath();
+  path({ type: "Sphere" });
+  ctx.clip();
+  const oceanLight = ctx.createRadialGradient(cx - R * 0.42, cy - R * 0.5, 0, cx - R * 0.2, cy - R * 0.25, R * 1.25);
+  oceanLight.addColorStop(0, "rgba(124,196,236,0.2)");
+  oceanLight.addColorStop(0.42, "rgba(49,111,160,0.06)");
+  oceanLight.addColorStop(1, "rgba(0,0,0,0)");
+  ctx.fillStyle = oceanLight;
+  ctx.fillRect(0, 0, w, h);
+  ctx.restore();
+
   // Enlem/boylam ağı: hareket sırasında seyrek (yakında 5°'lik ağ pahalı), yavaş cihazda hiç.
   if (!(s.moving && s.lite)) {
     ctx.beginPath();
@@ -267,17 +281,21 @@ function drawScene(ctx: CanvasRenderingContext2D, s: Scene) {
   // Kara ve sınırlar.
   ctx.beginPath();
   path(land);
-  ctx.fillStyle = LAND;
+  const landLight = ctx.createLinearGradient(cx - R * 0.7, cy - R * 0.8, cx + R * 0.65, cy + R * 0.75);
+  landLight.addColorStop(0, LAND_NEAR);
+  landLight.addColorStop(0.48, "#365b76");
+  landLight.addColorStop(1, LAND_FAR);
+  ctx.fillStyle = landLight;
   ctx.fill();
-  ctx.lineWidth = 0.7;
-  ctx.strokeStyle = "rgba(200,164,94,0.5)";
+  ctx.lineWidth = 1;
+  ctx.strokeStyle = "rgba(220,188,119,0.64)";
   ctx.lineJoin = "round";
   ctx.stroke();
   if (!(s.moving && s.lite)) {
     ctx.beginPath();
     path(borders);
     ctx.lineWidth = view.zoom > 3 ? 1 : 0.65;
-    ctx.strokeStyle = "rgba(255,255,255,0.2)";
+    ctx.strokeStyle = "rgba(224,236,244,0.3)";
     ctx.stroke();
   }
 
@@ -312,8 +330,13 @@ function drawScene(ctx: CanvasRenderingContext2D, s: Scene) {
   // Küre kenarı.
   ctx.beginPath();
   path({ type: "Sphere" });
-  ctx.lineWidth = 1.2;
-  ctx.strokeStyle = "rgba(200,164,94,0.4)";
+  ctx.lineWidth = 1.5;
+  ctx.strokeStyle = "rgba(220,188,119,0.6)";
+  ctx.stroke();
+  ctx.beginPath();
+  path({ type: "Sphere" });
+  ctx.lineWidth = 7;
+  ctx.strokeStyle = "rgba(52,116,168,0.12)";
   ctx.stroke();
 
   // Ortadaki artı: ince ayar işareti.

@@ -32,7 +32,6 @@ import JsonLd from "@/components/guide/JsonLd";
 import { googleMapsSearchUrl } from "@/content/dietary";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
-import AdSenseScript from "@/components/AdSenseScript";
 import { canonicalCountrySlug } from "@/lib/countryAliases";
 import { countryName } from "@/lib/countryNames";
 import ContentNotice from "@/components/guide/ContentNotice";
@@ -145,6 +144,7 @@ export default async function CityGuidePage({ params }: { params: Promise<Params
   const t = await getTranslations("City");
   const tContent = await getTranslations("Content");
   const tGuides = await getTranslations("Guides");
+  const tGuide = await getTranslations("Guide");
   const pageUrl = complete ? localizedUrl(path, locale) : absolute(path);
 
   // Ana sayfa › Rehberler › Ülke › Şehir: her şehir hem ülke hub'ına hem
@@ -170,7 +170,6 @@ export default async function CityGuidePage({ params }: { params: Promise<Params
   return (
     <main className="relative min-h-screen bg-[#080b14] pt-24 sm:pt-28">
       <SiteHeader locale={locale} />
-      <AdSenseScript />
       <JsonLd data={breadcrumbSchema} />
 
       {guide && (
@@ -187,8 +186,13 @@ export default async function CityGuidePage({ params }: { params: Promise<Params
                 : undefined,
               dateModified: guide.reviewed,
               mainEntityOfPage: { "@type": "WebPage", "@id": pageUrl },
-              publisher: { "@type": "Organization", name: SITE.name, url: localizedUrl("/", locale) },
-              author: { "@type": "Organization", name: SITE.name, url: localizedUrl("/hakkimizda", locale) },
+              publisher: { "@id": `${SITE.url}/#organization` },
+              author: {
+                "@type": "Organization",
+                "@id": `${SITE.url}/#organization`,
+                name: `${SITE.name} ${tGuide("editorialTeam")}`,
+                url: localizedUrl("/hakkimizda", locale),
+              },
               about: { "@type": "Place", name: `${cityLabel}, ${countryLabel}` },
             }}
           />

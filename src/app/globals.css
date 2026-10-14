@@ -259,6 +259,29 @@ a,
     0 0 0 100vmax #1d1f25;
 }
 
+/* Dynamic Island'ın çevresindeki küçük pencere çerçevesi (yalnız uygulama).
+   İçi, ada (≈126×37pt) kadar siyah bir hap; çevresinde .hero-window ile aynı
+   renk sırasında halkalar. Ada donanımsal olarak bunun üstünü örter, halkalar
+   adaya "yapışık" görünür. */
+.hero-island {
+  width: 128px;
+  height: 39px;
+  margin-top: -1px;
+  border-radius: 999px;
+  background: #000;
+  box-shadow:
+    0 0 0 1.5px #ffffff,
+    0 0 0 3.5px #e9e9e6,
+    0 0 0 5.5px #e0e0dd,
+    0 0 0 7.5px #d6d6d3,
+    0 0 0 10px #cbcbc8,
+    0 0 0 12px #c2c2bf,
+    0 0 0 12.6px #ecebe8,
+    0 0 0 15px #0e0f13,
+    0 0 0 19px #131419,
+    0 6px 26px 19px rgba(10, 12, 18, 0.55);
+}
+
 /* Akrilik camın kendisi: hafif mavi ton, üst kenarda gölge ve çapraz bir
    yansıma. Camdan geçerken söner. */
 .hero-glass {
@@ -513,6 +536,33 @@ a,
   max-height: max(16rem, calc(100svh - 21rem));
   margin-inline: auto;
   touch-action: none;
+  box-shadow:
+    0 34px 90px rgba(0, 0, 0, 0.48),
+    0 0 0 1px rgba(200, 164, 94, 0.06),
+    inset 0 0 70px rgba(21, 57, 98, 0.18);
+}
+/* Harita oyunu masaüstünde telefon genişliğine sıkışmasın. Giriş ve sonuçlar
+   okunabilir bir makale genişliğinde kalır; asıl oyun büyük küre + kontrol
+   sütunu olarak monitör alanını kullanır. */
+@media (min-width: 900px) and (min-height: 640px) {
+  .dg-shell.mg-shell { max-width: 76rem; }
+  .mg-intro { max-width: 52rem; }
+  .mg-results { max-width: 58rem; }
+  .mg-body {
+    display: grid;
+    grid-template-columns: minmax(30rem, 1.45fr) minmax(20rem, 0.8fr);
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "stage card" "stage actions";
+    column-gap: clamp(1.25rem, 3vw, 2.5rem);
+    align-items: start;
+  }
+  .mg-card { grid-area: card; }
+  .mg-stage {
+    grid-area: stage;
+    max-width: 44rem;
+    max-height: min(72svh, 44rem);
+  }
+  .mg-actions { grid-area: actions; }
 }
 @media (orientation: landscape) and (max-height: 520px) {
   .mg-body {

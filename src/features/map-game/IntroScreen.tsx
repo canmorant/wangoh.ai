@@ -20,7 +20,7 @@ export function Intro({ g }: { g: G }) {
     : " ";
 
   return (
-    <section className="dg-rise flex flex-1 flex-col justify-center py-4">
+    <section className="mg-intro dg-rise mx-auto flex w-full flex-1 flex-col justify-center py-4">
       <div className="flex items-center justify-between gap-3">
         <p className="flex min-w-0 items-center gap-3 text-[11px] leading-snug tracking-[0.28em] text-white/65 uppercase">
           <span className="inline-block h-px w-6 shrink-0 bg-white/30" />

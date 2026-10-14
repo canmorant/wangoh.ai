@@ -18,6 +18,8 @@ import { HERO_PLATE } from "@/lib/heroPlate";
 import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
 import ConsentManager from "@/components/consent/ConsentManager";
 import { CONSENT_DEFAULT_SCRIPT } from "@/lib/consent";
+import AdSenseScript from "@/components/AdSenseScript";
+import JsonLd from "@/components/guide/JsonLd";
 
 type Props = { children: ReactNode; params: Promise<{ locale: string }> };
 
@@ -117,12 +119,37 @@ export default async function LocaleLayout({ children, params }: Props) {
         <script id="consent-default" dangerouslySetInnerHTML={{ __html: CONSENT_DEFAULT_SCRIPT }} />
       </head>
       <body>
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "Organization",
+                "@id": `${SITE.url}/#organization`,
+                name: SITE.name,
+                url: SITE.url,
+                email: SITE.email,
+                logo: { "@type": "ImageObject", url: `${SITE.url}/icons/icon-512.png` },
+              },
+              {
+                "@type": "WebSite",
+                "@id": `${SITE.url}/#website`,
+                name: SITE.name,
+                url: SITE.url,
+                inLanguage: locale,
+                publisher: { "@id": `${SITE.url}/#organization` },
+              },
+            ],
+          }}
+        />
         <NextIntlClientProvider messages={messages}>
           {children}
           {/* Çerez izin penceresi; Google Analytics'i yalnız izinle yükler. */}
           <ConsentManager />
         </NextIntlClientProvider>
         <ServiceWorkerRegister />
+        {/* Otomatik reklamlar ve AdSense site doğrulaması tüm sayfalarda çalışır. */}
+        <AdSenseScript />
         {process.env.VERCEL ? (
           <Script src="/_vercel/insights/script.js" strategy="afterInteractive" />
         ) : null}
