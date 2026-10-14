@@ -14,7 +14,6 @@ import {
   worldScale,
 } from "@/lib/camera";
 import { HERO_PLATE, HERO_PLATE_SOFT } from "@/lib/heroPlate";
-import { IS_APP_BUILD } from "@/i18n/routing";
 
 /**
  * Telefon ve tabletlerin "pencereden içeri gir" sahnesi.
@@ -36,10 +35,6 @@ import { IS_APP_BUILD } from "@/i18n/routing";
  * HTML'de geliyor, JS yalnızca kaydırma dinleyicisini bağlıyor. Masaüstünde
  * CinematicHero yüklenene kadar da bu sahne görünüyor.
  */
-/** Dynamic Island'ın üst kenarı, üst güvenli alanın bu kadar piksel üstünde (59→11, 62→14). */
-const ISLAND_INSET_TO_TOP = 48;
-const ISLAND_MIN_INSET = 55;
-
 export default function WindowHero() {
   const t = useTranslations("Hero");
   const format = useFormatter();
@@ -53,8 +48,6 @@ export default function WindowHero() {
   const glassRef = useRef<HTMLDivElement>(null);
   const introRef = useRef<HTMLDivElement>(null);
   const arriveRef = useRef<HTMLDivElement>(null);
-  const insetRef = useRef<HTMLDivElement>(null);
-  const islandRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const stage = stageRef.current;
@@ -65,18 +58,7 @@ export default function WindowHero() {
     // .hero-window'daki --gw formülüyle aynı: min(332px, 60vw, 44svh).
     let maxScale = 3;
     let viewH = 0;
-    let hasIsland = false;
     const measure = () => {
-      // Uygulama + Dynamic Island'lı iPhone: üst güvenli alan ≥ 55px (çentikli
-      // eski modellerde 44–47, adadan sonrakilerde 59–62; iPad ve yatayda daha az).
-      const inset = insetRef.current ? parseFloat(getComputedStyle(insetRef.current).paddingTop) || 0 : 0;
-      hasIsland = IS_APP_BUILD && inset >= ISLAND_MIN_INSET;
-      const island = islandRef.current;
-      if (island) {
-        island.style.display = hasIsland ? "block" : "none";
-        island.style.top = `${inset - ISLAND_INSET_TO_TOP}px`;
-      }
-
       const w = Math.max(320, view.clientWidth);
       const h = Math.max(480, view.clientHeight);
       viewH = h;
@@ -109,16 +91,6 @@ export default function WindowHero() {
       }
       if (bloomRef.current) bloomRef.current.style.opacity = String(0.3 * pulse(q, 0.55, 0.8, 0.99));
       if (glassRef.current) glassRef.current.style.opacity = String(1 - smooth(0.55, 0.85, q));
-
-      // Pencere kadrajı terk ederken çerçevenin halkaları adanın çevresine yerleşir:
-      // büyük çerçeve gider, küçük bir pencere adayı sarar. Yalnız transform ve opacity.
-      const island = islandRef.current;
-      if (hasIsland && island) {
-        const into = smooth(0.6, 0.92, q);
-        const out = 1 - smooth(0.9, 0.99, p);
-        island.style.opacity = String(into * out);
-        island.style.transform = `translate3d(-50%,0,0) scale(${1 + 1.4 * (1 - into)})`;
-      }
 
       const introOut = smooth(0.01, 0.13, p);
       if (introRef.current) {
@@ -162,16 +134,20 @@ export default function WindowHero() {
     update();
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onResize);
+    // Uygulamadaki Dynamic Island çerçevesi (IslandFrame) sahnenin geldiğini/gittiğini bilsin.
+    window.dispatchEvent(new Event("wangoh:hero"));
     return () => {
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onResize);
       if (frame) cancelAnimationFrame(frame);
+      window.dispatchEvent(new Event("wangoh:hero"));
     };
   }, []);
 
   return (
     <section
       ref={stageRef}
+      data-hero-stage
       className="relative h-[265svh] bg-[#0b0d12] sm:h-[310vh]"
       aria-label={t("regionLabel")}
     >
@@ -221,24 +197,6 @@ export default function WindowHero() {
         </div>
 
         <div className="pointer-events-none absolute inset-0 hero-vignette" />
-
-        {/* ---------- Dynamic Island çerçevesi (yalnız uygulama, yalnız adalı iPhone) ---------- */}
-        {IS_APP_BUILD && (
-          <>
-            <div
-              ref={insetRef}
-              aria-hidden
-              className="pointer-events-none invisible absolute top-0 left-0 h-0 w-0"
-              style={{ paddingTop: "env(safe-area-inset-top)" }}
-            />
-            <div
-              ref={islandRef}
-              aria-hidden
-              className="hero-island hero-layer hero-fade pointer-events-none absolute left-1/2 z-20"
-              style={{ display: "none", opacity: 0, transform: "translate3d(-50%,0,0) scale(2.4)" }}
-            />
-          </>
-        )}
 
         {/* ---------- açılış başlığı ---------- */}
         <div

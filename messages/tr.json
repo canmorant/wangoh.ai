@@ -792,7 +792,8 @@
     "countryWheel": "Ülke Çarkı",
     "guessFlag": "Bayrağı Bil",
     "distance": "Kaç Km?",
-    "mapGame": "Haritada Bul"
+    "mapGame": "Haritada Bul",
+    "back": "Geri"
   },
   "NotFound": {
     "eyebrow": "404",

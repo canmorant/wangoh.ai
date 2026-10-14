@@ -11,7 +11,7 @@ import "@fontsource/instrument-serif/400-italic.css";
 import "../globals.css";
 import { SITE } from "@/lib/site";
 import { ADSENSE_CLIENT } from "@/lib/adsense";
-import { routing } from "@/i18n/routing";
+import { IS_APP_BUILD, routing } from "@/i18n/routing";
 import { OG_LOCALE, ogAlternateLocales, translatedAlternates } from "@/i18n/seo";
 import { ogImage } from "@/lib/ogImage";
 import { HERO_PLATE } from "@/lib/heroPlate";
@@ -19,6 +19,7 @@ import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
 import ConsentManager from "@/components/consent/ConsentManager";
 import { CONSENT_DEFAULT_SCRIPT } from "@/lib/consent";
 import AdSenseScript from "@/components/AdSenseScript";
+import AppChrome from "@/components/AppChrome";
 import JsonLd from "@/components/guide/JsonLd";
 
 type Props = { children: ReactNode; params: Promise<{ locale: string }> };
@@ -146,6 +147,8 @@ export default async function LocaleLayout({ children, params }: Props) {
           {children}
           {/* Çerez izin penceresi; Google Analytics'i yalnız izinle yükler. */}
           <ConsentManager />
+          {/* Yalnız uygulama: Dynamic Island çerçevesi ve kenardan geri hareketi. */}
+          {IS_APP_BUILD && <AppChrome />}
         </NextIntlClientProvider>
         <ServiceWorkerRegister />
         {/* Otomatik reklamlar ve AdSense site doğrulaması tüm sayfalarda çalışır. */}
