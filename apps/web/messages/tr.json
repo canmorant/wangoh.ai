@@ -1,0 +1,1023 @@
+{
+  "BoardingPass": {
+    "badge": "Ülke Rehberi",
+    "cityCount": "{count} Şehir",
+    "from": "Kalkış",
+    "to": "Varış",
+    "flight": "Sefer",
+    "gate": "Kapı",
+    "seat": "Koltuk",
+    "boards": "Biniş",
+    "duration": "Süre",
+    "sequence": "Sıra",
+    "boarded": "BİNİLDİ",
+    "goTo": "{place} Git",
+    "details": "Ayrıntılar",
+    "back": "Geri",
+    "showDetails": "{country} ayrıntılarını göster",
+    "hideDetails": "{country} ayrıntılarını gizle",
+    "boardLabel": "{country} ülkesine {flight} sefer numaralı uçuşa bin",
+    "summary": "{from} çıkışlı {to} varışlı {flight} sefer sayılı uçuş, kapı {gate}, koltuk {seat}",
+    "detail": {
+      "country": "Ülke",
+      "capital": "Başkent",
+      "bestSeason": "En iyi mevsim",
+      "budget": "Bütçe",
+      "highlight": "Kaçırma",
+      "cities": "Şehirler",
+      "cityGuides": "bu ülkedeki {count} şehir rehberi"
+    },
+    "yourLocation": "Konumun",
+    "distance": "Mesafe",
+    "distanceValue": "≈ {km} km"
+  },
+  "City": {
+    "metaTitle": "{city} Gezi Rehberi — {country} | Wangoh",
+    "metaDescription": "{city} için Wangoh rehberi: {summary}",
+    "heading": "{city} Gezi Rehberi",
+    "heroAlt": "{city} şehrinden bir görünüm, {country}",
+    "dietaryListName": "{city} vegan ve helal restoran önerileri",
+    "pendingTitle": "{city} rehberi hazırlanıyor",
+    "pendingBody": "Bu şehir için kapsamlı rehberimizi henüz yayınlamadık. Doğrulanmamış bilgiyle sayfa doldurmak yerine beklemeyi tercih ediyoruz — {city} rehberi de diğerleri gibi gezilecek yerler, semt semt konaklama, gerçek yemek adresleri, ulaşım ve gün gün gezi planı içerecek.",
+    "knownSoFar": "Şimdilik bildiğimiz",
+    "publishedGuides": "{country} için yayında olan rehberler",
+    "readGuide": "Rehberi oku →",
+    "backToCountry": "← {country} rehberine dön"
+  },
+  "CityCards": {
+    "backLabel": "Ülkelere dön",
+    "allRoutes": "Tüm Rotalar",
+    "title": "{country} rotasını keşfet",
+    "eyebrow": "{country} gezi rehberi",
+    "overviewTitle": "{country} hakkında kısa bilgiler",
+    "readCountryGuide": "Ayrıntılı ülke rehberini oku",
+    "fact": {
+      "capital": "Başkent",
+      "budget": "Bütçe",
+      "bestSeason": "En iyi dönem",
+      "fromIstanbul": "İstanbul'dan",
+      "transport": "Ulaşım",
+      "byRoute": "Rotaya göre",
+      "distance": "Kuş uçuşu mesafe",
+      "distanceValue": "≈ {km} km",
+      "flightTime": "Uçuş süresi"
+    },
+    "empty": {
+      "description": "{country} henüz tarifeli bir Wangoh rotasında değil — bu uçuş doğrudan haritadan çizildi.",
+      "title": "Haritanın dışına indin",
+      "body": "{country} için henüz bir rehber yazmadık. Rota gerçek, varıştan sonrası sana kalmış.",
+      "back": "Kalkışlara dön"
+    },
+    "cityGuides": "Şehir rehberleri",
+    "citiesHeading": "{country}'da gezilecek şehirler",
+    "chooseCity": "{count} özgün rota arasından sana en uygun şehri seç.",
+    "openCityGuide": "{city} gezi rehberini aç",
+    "readGuide": "Rehberi oku",
+    "goToGuide": "Rehbere git"
+  },
+  "ClubReveal": {
+    "dialogLabel": "Rastgele futbol kulübü",
+    "eyebrow": "Rastgele kulüp",
+    "flyTo": "{place} uç",
+    "picking": "Kulüp seçiliyor…"
+  },
+  "Common": {
+    "close": "Kapat",
+    "back": "Geri",
+    "north": "K",
+    "east": "D"
+  },
+  "Content": {
+    "breadcrumb": "Sayfa yolu",
+    "home": "Ana sayfa",
+    "imageCredits": "Görsel atıfları",
+    "source": "kaynak",
+    "turkishOnly": "Bu sayfanın içeriği şu anda yalnızca Türkçe.",
+    "turkishOnlyHint": "Arayüz seçtiğin dilde; rehber metinleri çevrildikçe burada yayımlanacak."
+  },
+  "Corporate": {
+    "nav": "Kurumsal navigasyon",
+    "lastUpdated": "Son güncelleme: {date}",
+    "about": {
+      "title": "Hakkımızda | Wangoh",
+      "description": "Wangoh'un seyahat yayıncılığı yaklaşımı, editoryal ilkeleri, içerik üretim yöntemi ve iletişim bilgileri."
+    },
+    "contact": {
+      "title": "İletişim | Wangoh",
+      "description": "Wangoh'a içerik düzeltmeleri, öneriler, iş birlikleri ve gizlilik talepleri için ulaşın."
+    },
+    "privacy": {
+      "title": "Gizlilik Politikası ve KVKK Aydınlatma Metni | Wangoh",
+      "description": "Wangoh'un kişisel veri işleme faaliyetleri, hukuki sebepleri, veri aktarımı, saklama süreleri ve KVKK kapsamındaki haklarınız."
+    },
+    "cookies": {
+      "title": "Çerez Politikası | Wangoh",
+      "description": "Wangoh'ta kullanılan çerezler, localStorage kaydı, olası AdSense reklam teknolojileri ve tercih yönetimi."
+    },
+    "terms": {
+      "title": "Kullanım Koşulları | Wangoh",
+      "description": "Wangoh seyahat içerikleri, haricî bağlantılar, fikrî haklar, reklamlar ve site kullanımına ilişkin koşullar."
+    }
+  },
+  "Country": {
+    "metaTitle": "{country} Gezi Rehberi: Gezilecek Şehirler ve Rotalar",
+    "metaDescription": "{country} seyahat rehberi — {cities} ve daha fazlası. En iyi dönem, uçuş süresi, bütçe ve şehir şehir rehberler.",
+    "touristType": "Kültür, gastronomi, şehir ve doğa gezginleri",
+    "destinations": "{country} destinasyonları",
+    "eyebrow": "Ülke rehberi",
+    "heading": "{country} Gezi Rehberi",
+    "fact": {
+      "gateway": "Giriş noktası",
+      "capital": "Başkent",
+      "flightTime": "Uçuş süresi",
+      "domestic": "Ülke içi rotaya göre",
+      "fromIstanbul": "İstanbul'dan {time}",
+      "bestSeason": "En iyi dönem",
+      "budget": "Bütçe"
+    },
+    "dontMiss": "Kaçırmayın",
+    "essentials": "Gitmeden önce bilinmesi gerekenler",
+    "citiesHeading": "{country}’da gezilecek şehirler",
+    "allPublished": "{total} şehrin tamamı için özgün rehber yayında",
+    "somePublished": "{written}/{total} şehir rehberi yayında",
+    "badgeReady": "Rehber yayında",
+    "badgePending": "Hazırlanıyor",
+    "practical": {
+      "heading": "{country} için pratik bilgiler",
+      "entry": "Giriş koşulları",
+      "payments": "Para ve ödeme",
+      "language": "Dil",
+      "connectivity": "Telefon, internet ve uygulamalar",
+      "budget": "Bütçe"
+    }
+  },
+  "Destinations": {
+    "departure": "Kalkış",
+    "titleLine1": "Biniş kartları.",
+    "titleLine2": "Biri senin.",
+    "intro": "Her rota bulunduğun yerden kalkıyor. Ayrıntılar için kartı çevir, sonra istediğine bin.",
+    "showMore": "Daha fazla ülke göster",
+    "footnote": "Her rota basılı değil",
+    "yourLocation": "Konumun"
+  },
+  "Dietary": {
+    "status": {
+      "fullyVegan": "Tamamen vegan",
+      "veganFocused": "Vegan odaklı",
+      "veganOptions": "Vegan seçenekli",
+      "certifiedHalal": "Sertifikalı helal",
+      "restaurantConfirmed": "İşletme beyanlı",
+      "halalOptions": "Helal seçenekli",
+      "muslimFriendly": "Müslüman dostu",
+      "verificationRecommended": "Yeniden doğrulama önerilir"
+    },
+    "veganPick": "Vegan Pick",
+    "halalPick": "Halal Pick",
+    "whyWePicked": "Neden seçtik:",
+    "verificationNote": "Doğrulama notu",
+    "source": "Kaynak: {name} ↗",
+    "officialSite": "Resmî site ↗",
+    "lastChecked": "Son kontrol: {date}",
+    "eyebrow": "Beslenme tercihleri",
+    "heading": "{city} vegan ve helal restoran önerileri",
+    "intro": "{city} için bir bitki bazlı ve bir Müslüman gezgin odaklı adres seçtik. Helal etiketleri aynı anlama gelmez: sertifika, işletme beyanı ve yalnızca bazı helal seçenekler kartlarda ayrı ayrı gösterilir.",
+    "researchNote": "Araştırma notu:",
+    "disclaimer": "Restoran menüleri, tedarikçiler ve sertifikalar değişebilir. Özellikle sıkı helal hassasiyetinde güncel sertifikayı, alkolü, sos içeriklerini ve ortak mutfak riskini doğrudan işletmeden doğrulayın.",
+    "notesHeading": "{city} vegan ve helal beslenme ipuçları",
+    "notesIntro": "Vegan veya helal beslenme için yerel yemeklerde dikkat edilecek içerikler ve sipariş öncesi sorulacak sorular.",
+    "verifiedSelectionIntro": "{city} için puanları, yorum sayıları ve beslenme bilgileri kontrol edilen adresleri bir araya getirdik. Vegan kapsamı ve helal doğrulamasının türü her kartta ayrı gösterilir; doğrulanmış bir seçenek bulunamadığında araştırma notunda belirtilir."
+  },
+  "Discovery": {
+    "heading": "Bir sonraki şehrin gezi rehberi",
+    "intro": "Nereler gezilir, nerede kalınır, şehir içinde nasıl dolaşılır? Türkçe şehir rehberleriyle duraklarını seç, yemek adreslerini bul ve gün gün rotanı oluştur.",
+    "guideTitle": "{city} Gezi Rehberi",
+    "allGuides": "Tüm ülke ve şehir rehberleri →",
+    "featured": {
+      "newYork": {
+        "name": "New York",
+        "detail": "Gezilecek yerler, semt seçimi, metro ve gün gün rota."
+      },
+      "madrid": {
+        "name": "Madrid",
+        "detail": "Prado, tapas durakları, konaklama ve 4 günlük plan."
+      },
+      "tokyo": {
+        "name": "Tokyo",
+        "detail": "Mahalleler, ulaşım, yeme içme ve gezi planı."
+      },
+      "rome": {
+        "name": "Roma",
+        "detail": "Tarihi duraklar, yemek ve yürüyüş rotaları."
+      },
+      "paris": {
+        "name": "Paris",
+        "detail": "Müzeler, semtler ve ilk ziyaret için öneriler."
+      },
+      "barcelona": {
+        "name": "Barcelona",
+        "detail": "Gaudí, mahalleler, sahil ve 5 günlük rota."
+      }
+    }
+  },
+  "FlagGame": {
+    "poolSize": "{count} bayrak",
+    "title": "Bayrağı Bil",
+    "intro": "Dünyadaki her ülke. Üç ipucu; her biri bir öncekinden daha az puan.",
+    "level": "Seviye",
+    "levelValue": "Seviye {level}",
+    "xp": "XP",
+    "bestStreak": "En iyi seri",
+    "learned": "Öğrenilen",
+    "record": "Rekor {score}",
+    "modes": {
+      "classic": {
+        "name": "Klasik",
+        "tagline": "Saat yok, baskı yok. Kendi hızında öğren."
+      },
+      "timeattack": {
+        "name": "Zamana Karşı",
+        "tagline": "Süre bitmeden olabildiğince çok bayrak."
+      },
+      "endless": {
+        "name": "Sonsuz",
+        "tagline": "Sen durana kadar devam."
+      },
+      "survival": {
+        "name": "Hayatta Kalma",
+        "tagline": "Belirli sayıda hata ve oyun biter."
+      },
+      "daily": {
+        "name": "Günlük",
+        "tagline": "Her gün herkese aynı sıra."
+      }
+    },
+    "howLong": "Ne kadar sürsün?",
+    "durationSeconds": "{seconds} sn",
+    "durationMinutes": "{minutes} dk",
+    "howManyLives": "Kaç can?",
+    "livesCount": "{count} can",
+    "whichRegion": "Hangi bölge?",
+    "wholeWorld": "Tüm dünya",
+    "start": "Oynamaya başla",
+    "score": "Puan",
+    "round": "Tur",
+    "streak": "Seri",
+    "lives": "Can",
+    "endSession": "Oturumu bitir",
+    "timeLeft": "Kalan süre",
+    "flagAlt": "{country} bayrağı",
+    "flagToIdentify": "Tanımlanacak bayrak",
+    "combo": {
+      "nice": "Güzel",
+      "onFire": "Alev Aldın",
+      "incredible": "İnanılmaz",
+      "masterExplorer": "Kâşif Ustası"
+    },
+    "inARow": "üst üste {count}",
+    "streakCount": "{count} seri",
+    "hintCapital": "Başkent",
+    "noCapital": "Kayıtlı resmî başkent yok",
+    "hintContinent": "Kıta",
+    "hintBorders": "Kara sınırı",
+    "andMore": " — ve {count} tane daha",
+    "noBordersSentence": "Bu ülkenin kara sınırı yok.",
+    "guessLabel": "Bu bayrak hangi ülkeye ait?",
+    "guessPlaceholder": "Ülkenin adını yaz",
+    "submit": "Tahmin et",
+    "allHintsUsed": "Tüm ipuçları açıldı",
+    "giveHint": "İpucu ver ({used}/{max})",
+    "showAnswer": "Cevabı göster",
+    "feedback": {
+      "wrongCountry": "Gerçek bir ülke — ama bu bayrak o değil.",
+      "notQuite": "Tam değil. Tekrar dene ya da ipucu aç."
+    },
+    "correct": "Doğru",
+    "answerWas": "Cevap şuydu",
+    "scoreBase": "{points} temel",
+    "scoreSpeed": " · +{points} hız",
+    "scoreCombo": " · +{points} kombo",
+    "noBordersFact": "Yok — bu ülkenin kara sınırı yok.",
+    "nextFlag": "Sıradaki bayrak",
+    "exploreCountry": "Bu ülkeyi keşfet",
+    "sessionOver": "Oturum bitti",
+    "points": "puan",
+    "statCorrect": "Doğru",
+    "statWrong": "Yanlış",
+    "accuracy": "İsabet",
+    "avgTime": "Ort. süre",
+    "hintsUsed": "Kullanılan ipucu",
+    "learnedCountries": "Öğrenilen ülke",
+    "timePlayed": "Oynanan süre",
+    "timePlayedValue": "{minutes}dk {seconds}sn",
+    "playAgain": "Tekrar oyna",
+    "changeMode": "Modu değiştir",
+    "reviewMisses": "{count} yanlışı incele",
+    "exploreCountries": "Ülkeleri keşfet",
+    "review": "İnceleme",
+    "missedTitle": "Bilemediğin {count} bayrak",
+    "replayMissed": "Bunları tekrar oyna",
+    "neighbours": "Komşuları: {list}",
+    "noBorders": "Kara sınırı yok",
+    "secondsValue": "{value} sn"
+  },
+  "DistanceGame": {
+    "eyebrow": "{rounds} tur · çevrimdışı çalışır",
+    "title": "Kaç kilometre?",
+    "intro": "İki şehir, tek soru: aralarında kaç kilometre var? Kaydırıcıyla tahmin et, {rounds} tur boyunca puan topla.",
+    "howScale": "Kaydırıcı logaritmik: kısa mesafelerde ince, uzun mesafelerde geniş adımlarla ilerler. Ok tuşlarıyla ya da − ve + düğmeleriyle ince ayar yapabilirsin.",
+    "howScore": "Hatan en fazla %2 ise tam puan (1.000) alırsın; tahmin gerçeğe uzaklaştıkça puan hızla düşer.",
+    "offline": "İnternet gerekmez; oyun tamamen cihazında çalışır.",
+    "bestResult": "En iyi sonuç",
+    "gamesPlayed": "Oynanan oyun",
+    "round": "Tur {current}/{total}",
+    "score": "Puan",
+    "progress": "{done} / {total} tur tamamlandı",
+    "question": "<city>{a}</city> ile <city>{b}</city> arası kaç kilometre?",
+    "caption": "Aralarında kaç kilometre var?",
+    "sliderLabel": "Tahmin edilen mesafe (kilometre)",
+    "sliderValueText": "{km} kilometre",
+    "scaleHint": "Logaritmik ölçek: 10 km’den 20.000 km’ye",
+    "decrease": "Tahmini azalt",
+    "increase": "Tahmini artır",
+    "guess": "Tahmin et",
+    "verdict": {
+      "perfect": "Tam isabet!",
+      "great": "Çok yakın",
+      "good": "İyi tahmin",
+      "fair": "Fena değil",
+      "far": "Epey uzak kaldın"
+    },
+    "roundScore": "Tur puanı",
+    "actualDistance": "Gerçek mesafe",
+    "yourGuess": "Tahminin",
+    "errorLabel": "Hata",
+    "direction": {
+      "over": "Gerçeğinden fazla",
+      "under": "Gerçeğinden az",
+      "exact": "Tam"
+    },
+    "readGuide": "Bu şehrin rehberini oku",
+    "nextRound": "Sıradaki tur",
+    "seeResults": "Sonuçları gör",
+    "gameOver": "Oyun bitti",
+    "totalScore": "Toplam puan",
+    "outOf": "/ {max}",
+    "newBest": "Yeni rekor!",
+    "bestSoFar": "En iyi sonuç: {score}",
+    "recap": "Turlar",
+    "recapDetail": "Gerçek {actual} km · tahmin {guess} km",
+    "playAgain": "Tekrar oyna",
+    "exploreGuides": "Gezi rehberlerine göz at",
+    "otherGame": "Haritada Bul oyununu dene",
+    "dataCredit": "Şehir verisi: <geo>GeoNames</geo> (<cc>CC BY 4.0</cc>)",
+    "modeDaily": "Günün Turu",
+    "modeFree": "Serbest",
+    "modeDailyHint": "Herkes için aynı {rounds} tur. Günde bir kez resmî puan alırsın; seri için her gün oyna.",
+    "modeFreeHint": "Her seferinde yeni {rounds} tur. Puanın rekoruna ve ortalamana işler.",
+    "playDaily": "Günün Turu’nu oyna",
+    "playFree": "Serbest oyna",
+    "replayDaily": "Bugünün turunu tekrar oyna",
+    "replayDailyNote": "Tekrarda resmî puanın ve serin değişmez.",
+    "dailyDoneLabel": "Bugünkü resmî puanın",
+    "streakLabel": "{count} günlük seri",
+    "average": "Ortalama",
+    "bestStreak": "En uzun seri",
+    "soundLabel": "Ses efektleri",
+    "mapCaption": "Kesikli daire: tahminin buraya kadar uzanıyordu.",
+    "mapAria": "Harita: {a} ile {b} arası gerçek mesafe {actual} kilometre; tahminin {guess} kilometre.",
+    "announce": "Gerçek mesafe {actual} kilometre, tahminin {guess} kilometre. {score} puan. {verdict}",
+    "stripLabel": "Tur puanları: {scores}",
+    "dailyTitle": "Günün Turu · {date}",
+    "dailyOfficial": "Resmî puanın: {score}",
+    "dailyReplayNote": "Bu bir tekrardı: resmî puanın {score} olarak kaldı.",
+    "share": "Sonucunu paylaş",
+    "copied": "Kopyalandı",
+    "copyFailed": "Kopyalanamadı",
+    "shareHeaderFree": "Wangoh · Kaç kilometre?",
+    "shareHeaderDaily": "Wangoh · Kaç kilometre? — Günün Turu {date}",
+    "shareHeaderDailyStreak": "Wangoh · Kaç kilometre? — Günün Turu {date} · seri {count}",
+    "backToModes": "Modlara dön"
+  },
+  "MapGame": {
+    "eyebrow": "{rounds} tur · çevrimdışı çalışır",
+    "title": "Haritada bul",
+    "intro": "Bir şehrin adı verilir, sen dünya küresinde yerini bulursun. Küreyi çevir, yakınlaştır, dokunarak işaretle; {rounds} tur boyunca puan topla.",
+    "howGesture": "Küreyi sürükleyerek çevir, iki parmakla yakınlaştır. Bir yere dokununca işaret düşer; işareti istediğin kadar taşıyabilirsin. Klavyede ok tuşları ve + / − çalışır.",
+    "howScore": "Gerçek yere 50 km kadar yaklaşırsan tam puan (1.000) alırsın; uzaklaştıkça puan düzgünce düşer.",
+    "howHint": "Takılırsan İpucu al: yaklaşık bölgeyi gösteren bir halka belirir, ama o turun puanı yarıya iner.",
+    "offline": "İnternet gerekmez; oyun tamamen cihazında çalışır.",
+    "bestResult": "En iyi sonuç",
+    "gamesPlayed": "Oynanan oyun",
+    "round": "Tur {current}/{total}",
+    "score": "Puan",
+    "progress": "{done} / {total} tur tamamlandı",
+    "find": "Haritada bul",
+    "globeAria": "Dünya küresi. {city}, {country} şehrinin yerini işaretle.",
+    "keyboardHelp": "Küre: ok tuşlarıyla çevir, artı ve eksi tuşlarıyla yakınlaştır, Enter ya da boşluk tuşuyla ekranın ortasını işaretle.",
+    "gestureHint": "Sürükle: çevir · İki parmak: yakınlaştır · Dokun: işaretle",
+    "zoomIn": "Yakınlaştır",
+    "zoomOut": "Uzaklaştır",
+    "markCenter": "Ortadaki noktayı işaretle",
+    "resetView": "Tüm küreyi göster",
+    "hint": "İpucu",
+    "hintNote": "İpucu yaklaşık bir bölge gösterir; tur puanı yarıya iner.",
+    "hintUsed": "İpucu açık · en çok {max} puan",
+    "guess": "Tahmin et",
+    "guessWaiting": "Küreye dokun",
+    "pinPlaced": "İşaret konuldu. Tahmin et düğmesine basabilirsin.",
+    "verdict": {
+      "perfect": "Tam isabet!",
+      "great": "Çok yakın",
+      "good": "İyi tahmin",
+      "fair": "Fena değil",
+      "far": "Epey uzak kaldın"
+    },
+    "roundScore": "Tur puanı",
+    "roundScoreHint": "Tur puanı (ipuçlu)",
+    "distanceLabel": "Gerçek yere uzaklık",
+    "onTarget": "Tam yerinde!",
+    "awayFrom": "kuş uçuşu",
+    "readGuide": "Bu şehrin rehberini oku",
+    "nextRound": "Sıradaki tur",
+    "seeResults": "Sonuçları gör",
+    "announce": "Gerçek yere {km} kilometre uzaktasın. {score} puan. {verdict}",
+    "gameOver": "Oyun bitti",
+    "totalScore": "Toplam puan",
+    "outOf": "/ {max}",
+    "newBest": "Yeni rekor!",
+    "bestSoFar": "En iyi sonuç: {score}",
+    "recap": "Turlar",
+    "recapDetail": "{km} km uzakta",
+    "recapHint": "ipucu",
+    "playAgain": "Tekrar oyna",
+    "otherGame": "Kaç kilometre? oyununu dene",
+    "exploreGuides": "Gezi rehberlerine göz at",
+    "dataCredit": "Şehir verisi: <geo>GeoNames</geo> (<cc>CC BY 4.0</cc>) · Harita: <ne>Natural Earth</ne>",
+    "modeDaily": "Günün Turu",
+    "modeFree": "Serbest",
+    "modeDailyHint": "Herkes için aynı {rounds} şehir. Günde bir kez resmî puan alırsın; seri için her gün oyna.",
+    "modeFreeHint": "Her seferinde yeni {rounds} şehir. Puanın rekoruna ve ortalamana işler.",
+    "playDaily": "Günün Turu’nu oyna",
+    "playFree": "Serbest oyna",
+    "replayDaily": "Bugünün turunu tekrar oyna",
+    "replayDailyNote": "Tekrarda resmî puanın ve serin değişmez.",
+    "dailyDoneLabel": "Bugünkü resmî puanın",
+    "streakLabel": "{count} günlük seri",
+    "average": "Ortalama",
+    "bestStreak": "En uzun seri",
+    "soundLabel": "Ses efektleri",
+    "stripLabel": "Tur puanları: {scores}",
+    "dailyTitle": "Günün Turu · {date}",
+    "dailyOfficial": "Resmî puanın: {score}",
+    "dailyReplayNote": "Bu bir tekrardı: resmî puanın {score} olarak kaldı.",
+    "share": "Sonucunu paylaş",
+    "copied": "Kopyalandı",
+    "copyFailed": "Kopyalanamadı",
+    "shareHeaderFree": "Wangoh · Haritada bul",
+    "shareHeaderDaily": "Wangoh · Haritada bul — Günün Turu {date}",
+    "shareHeaderDailyStreak": "Wangoh · Haritada bul — Günün Turu {date} · seri {count}",
+    "backToModes": "Modlara dön"
+  },
+  "Flight": {
+    "preparing": "Yolculuğun hazırlanıyor...",
+    "nextStop": "Sıradaki durak: {country} {flag}",
+    "welcome": "{country} ülkesine hoş geldin!",
+    "from": "Kalkış: {city}",
+    "change": "Değiştir",
+    "changeLabel": "Kalkış şehrini değiştir",
+    "yourLocation": "Bulunduğun yer",
+    "chooseTitle": "Nereden yola çıkıyorsun?",
+    "chooseHint": "Konumunu tespit edemedik. Uçuş seçtiğin şehirden kalkacak; seçimin bu cihazda hatırlanır.",
+    "changeHint": "Uçuş seçtiğin şehirden kalkacak; seçimin bu cihazda hatırlanır.",
+    "cityLabel": "Kalkış şehri",
+    "turkey": "Türkiye",
+    "world": "Dünya",
+    "start": "Uçuşa başla",
+    "cancel": "Vazgeç"
+  },
+  "Footer": {
+    "tagline": "Şehirleri yalnızca işaretlemeyen; bir yolculuğun ritmini, mahallesini ve sofrasını anlatan bağımsız seyahat yayını.",
+    "corporateNav": "Kurumsal sayfalar",
+    "policyNav": "Yasal ve gizlilik sayfaları",
+    "policyHeading": "Gizlilik ve koşullar",
+    "allGuides": "Tüm gezi rehberleri",
+    "about": "Hakkımızda",
+    "contact": "İletişim",
+    "privacy": "Gizlilik",
+    "cookies": "Çerezler",
+    "terms": "Kullanım Koşulları",
+    "copyright": "© {year} Wangoh. Tüm hakları saklıdır.",
+    "imageSource": "Görseller ağırlıklı olarak <link>Unsplash</link>’ten sağlanır.",
+    "cookieSettings": "Çerez tercihleri"
+  },
+  "Geo": {
+    "continent": {
+      "africa": "Afrika",
+      "americas": "Amerika",
+      "asia": "Asya",
+      "europe": "Avrupa",
+      "oceania": "Okyanusya",
+      "antarctic": "Antarktika"
+    },
+    "subregion": {
+      "australiaNewZealand": "Avustralya ve Yeni Zelanda",
+      "caribbean": "Karayipler",
+      "centralAmerica": "Orta Amerika",
+      "centralAsia": "Orta Asya",
+      "centralEurope": "Orta Avrupa",
+      "easternAfrica": "Doğu Afrika",
+      "easternAsia": "Doğu Asya",
+      "easternEurope": "Doğu Avrupa",
+      "melanesia": "Melanezya",
+      "micronesia": "Mikronezya",
+      "middleAfrica": "Orta Afrika",
+      "northAmerica": "Kuzey Amerika",
+      "northernAfrica": "Kuzey Afrika",
+      "northernEurope": "Kuzey Avrupa",
+      "polynesia": "Polinezya",
+      "southAmerica": "Güney Amerika",
+      "southEasternAsia": "Güneydoğu Asya",
+      "southeastEurope": "Güneydoğu Avrupa",
+      "southernAfrica": "Güney Afrika",
+      "southernAsia": "Güney Asya",
+      "southernEurope": "Güney Avrupa",
+      "westernAfrica": "Batı Afrika",
+      "westernAsia": "Batı Asya",
+      "westernEurope": "Batı Avrupa"
+    }
+  },
+  "Guide": {
+    "mapsEyebrow": "Gezilecek yerler · {count} durak",
+    "mapsHeading": "{city} duraklarını haritana taşı",
+    "mapsIntro": "Bu rehberde geçen yerlerden seçtiğimiz {count} durağı bir araya getirdik.",
+    "mapsButton": "{city} listesini Google Maps’te aç",
+    "mapsSaveHelp": "Açılan Google Maps listesinde “Listeyi kaydet” seçeneğine dokunun. Duraklar ayrı bir Wangoh listesi olarak kaydedilir; kişisel “Gitmek istediğim yerler” listenize otomatik eklenmez.",
+    "mapsPending": "Paylaşılan liste hazırlanıyor. Şimdilik yukarıdaki durakları tek tek Google Maps’te açabilirsiniz.",
+    "mapsToc": "Google Maps listesi",
+    "mapsPlaceLink": "{place} — Google Maps’te aç (yeni sekme)",
+    "mapsPlaces": {
+      "eiffel": "Eyfel Kulesi",
+      "louvre": "Louvre Müzesi",
+      "notreDame": "Notre-Dame Katedrali",
+      "sainteChapelle": "Sainte-Chapelle",
+      "orsay": "Musée d’Orsay",
+      "orangerie": "Orangerie Müzesi",
+      "tuileries": "Tuileries Bahçesi",
+      "luxembourg": "Luxembourg Bahçesi",
+      "sacreCoeur": "Sacré-Cœur Bazilikası",
+      "versailles": "Versailles Sarayı",
+      "promenadeAnglais": "Promenade des Anglais",
+      "castleHill": "Colline du Château",
+      "coursSaleya": "Cours Saleya",
+      "placeRossetti": "Place Rossetti",
+      "portLympia": "Port Lympia",
+      "matisse": "Musée Matisse",
+      "chagall": "Musée Marc-Chagall",
+      "cimiezArena": "Arènes de Cimiez",
+      "cimiezGarden": "Jardin du Monastère de Cimiez",
+      "villaEphrussi": "Villa Ephrussi de Rothschild",
+      "fourviere": "Basilique Notre-Dame de Fourvière",
+      "lyonCathedral": "Cathédrale Saint-Jean-Baptiste",
+      "romanTheatre": "Théâtre Gallo Romain",
+      "canuts": "La Maison des Canuts",
+      "bellecour": "Place Bellecour",
+      "terreaux": "Place des Terreaux",
+      "lyonFineArts": "Musée des Beaux-Arts de Lyon",
+      "hallesBocuse": "Les Halles de Lyon Paul Bocuse",
+      "teteOr": "Parc de la Tête d’Or",
+      "confluences": "Musée des Confluences",
+      "vieuxPort": "Vieux-Port",
+      "panier": "Le Panier",
+      "vieilleCharite": "Centre de la Vieille Charité",
+      "mucem": "Mucem",
+      "fortSaintJean": "Fort Saint-Jean",
+      "garde": "Notre-Dame de la Garde",
+      "vallonAuffes": "Vallon des Auffes",
+      "coursJulien": "Cours Julien",
+      "chateauIf": "Château d’If",
+      "sugiton": "Calanque de Sugiton",
+      "bourse": "Place de la Bourse",
+      "miroir": "Miroir d’eau",
+      "cailhau": "Porte Cailhau",
+      "grandTheatre": "Grand Théâtre",
+      "peyBerland": "Tour Pey-Berland",
+      "jardinPublic": "Jardin Public",
+      "citeVin": "Cité du Vin",
+      "bassins": "Bassins des Lumières",
+      "capucins": "Marché des Capucins",
+      "darwin": "Darwin Écosystème",
+      "strasbourgCathedral": "Cathédrale Notre-Dame de Strasbourg",
+      "petiteFrance": "La Petite France",
+      "pontsCouverts": "Ponts Couverts",
+      "vauban": "Barrage Vauban",
+      "kammerzell": "Maison Kammerzell",
+      "gutenberg": "Place Gutenberg",
+      "republique": "Place de la République",
+      "palaisRhin": "Palais du Rhin",
+      "europeanParliament": "Parlement européen",
+      "orangeriePark": "Parc de l’Orangerie",
+      "hoanKiem": "Hoan Kiem Gölü",
+      "ngocSon": "Ngoc Son Tapınağı",
+      "hanoiLiterature": "Edebiyat Tapınağı",
+      "thangLong": "Thang Long İmparatorluk Kalesi",
+      "trucBach": "Truc Bach Gölü",
+      "dongXuan": "Dong Xuan Pazarı",
+      "hanoiCathedral": "Aziz Joseph Katedrali",
+      "tranQuoc": "Tran Quoc Pagodası",
+      "hoaLo": "Hoa Lo Hapishanesi Müzesi",
+      "vietnamEthnology": "Vietnam Etnoloji Müzesi",
+      "hueImperial": "Hue İmparatorluk Şehri",
+      "thaiHoa": "Thai Hoa Sarayı",
+      "ngoMon": "Ngo Mon Kapısı",
+      "dongBa": "Dong Ba Pazarı",
+      "truongTien": "Truong Tien Köprüsü",
+      "quocHoc": "Quoc Hoc Lisesi",
+      "thienMu": "Thien Mu Pagodası",
+      "tuHieu": "Tu Hieu Pagodası",
+      "tuDuc": "Tu Duc Anıt Mezarı",
+      "minhMang": "Minh Mang Anıt Mezarı",
+      "chamMuseum": "Cham Heykel Müzesi",
+      "apecPark": "APEC Parkı",
+      "dragonBridge": "Ejderha Köprüsü",
+      "hanMarket": "Han Pazarı",
+      "daNangCathedral": "Da Nang Katedrali",
+      "conMarket": "Con Pazarı",
+      "hanBridge": "Han Nehri Köprüsü",
+      "myKhe": "My Khe Plajı",
+      "linhUng": "Linh Ung Bai But Pagodası",
+      "marbleMountains": "Mermer Dağları",
+      "japaneseBridge": "Japon Köprüsü",
+      "phungHung": "Phung Hung Tarihî Evi",
+      "cantoneseHall": "Kanton Toplantı Salonu",
+      "saHuynh": "Sa Huynh Kültür Müzesi",
+      "tanKy": "Tan Ky Tarihî Evi",
+      "folkHoiAn": "Hoi An Halk Kültürü Müzesi",
+      "fujianHall": "Fujian Toplantı Salonu",
+      "hoiAnMarket": "Hoi An Merkez Pazarı Yemek Bölümü",
+      "traQue": "Tra Que Sebze Köyü",
+      "anBang": "An Bang Plajı",
+      "warRemnants": "Savaş Kalıntıları Müzesi",
+      "independencePalace": "Bağımsızlık Sarayı",
+      "saigonPost": "Saygon Merkez Postanesi",
+      "saigonCathedral": "Saygon Notre Dame Katedrali",
+      "saigonOpera": "Saygon Opera Binası",
+      "nguyenHue": "Nguyen Hue Yürüyüş Caddesi",
+      "benThanh": "Ben Thanh Pazarı",
+      "taoDan": "Tao Dan Parkı",
+      "jadeEmperor": "Jade Emperor Pagodası",
+      "thienHau": "Thien Hau Tapınağı",
+      "caiRang": "Cai Rang Yüzen Pazarı",
+      "ninhKieu": "Ninh Kieu İskelesi",
+      "ninhKieuBridge": "Ninh Kieu Yaya Köprüsü",
+      "ongTemple": "Ong Tapınağı",
+      "canThoMarket": "Can Tho Eski Pazarı",
+      "canThoMuseum": "Can Tho Müzesi",
+      "binhThuyHouse": "Binh Thuy Tarihî Evi",
+      "binhThuyTemple": "Binh Thuy Ortak Evi",
+      "munirAnsay": "Munir Ansay Pagodası",
+      "quangDuc": "Quang Duc Pagodası"
+    },
+    "quickFacts": "Hızlı bilgiler",
+    "whereToEat": "Nerede yenir? Seçilmiş adresler",
+    "whereToEatIntro": "Aşağıdakiler tek tek gezilecek adresler değil, şehrin yeme kültürünü en iyi anlatan duraklar. Çalışma saatleri ve fiyatlar değişebildiği için yola çıkmadan önce doğrulayın.",
+    "highlights": "Öne çıkan duraklar",
+    "highlightsIntro": "Şehri en iyi anlatan duraklar. Saatli giriş, bilet ve çalışma saatleri değişebildiği için yola çıkmadan önce resmî kanaldan doğrulayın.",
+    "priceBudget": "Ekonomik",
+    "priceMid": "Orta",
+    "priceHigh": "Yüksek",
+    "itinerary": "Gün gün gezi planı",
+    "morning": "Sabah",
+    "afternoon": "Öğleden sonra",
+    "evening": "Akşam",
+    "beforeYouGo": "Bilmeden gitme",
+    "practicalFallback": "{city}'ta işinizi kolaylaştıracak bilgiler",
+    "continueRoute": "{country} rotasını sürdürün",
+    "continueRouteIntro": "Bu şehir tek başına güçlü bir rota; zamanı olanlar için aşağıdaki duraklar aynı ülke yolculuğuna farklı bir bölge ve şehir deneyimi ekler.",
+    "readGuide": "Rehberi oku →",
+    "faq": "Sık sorulan sorular",
+    "note": "Not:",
+    "lastUpdated": "Son güncelleme:",
+    "editorialLabel": "Editoryal bilgi",
+    "editorialTeam": "Editorya Ekibi",
+    "editorialBy": "Hazırlayan: {name}",
+    "editorialMethod": "Bu rehber destinasyona özgü araştırma, resmî kaynak kontrolü ve editoryal incelemeyle hazırlanır. Değişebilen bilgiler yolculuk öncesinde yeniden doğrulanmalıdır.",
+    "reviewedOn": "Son editoryal kontrol: {date}",
+    "editorialPrinciples": "Editoryal ilkelerimiz",
+    "reportCorrection": "Düzeltme bildir",
+    "sources": "Resmî kaynaklar ve son kontrol",
+    "sourcesIntro": "Değişebilen vize, ulaşım, giriş ve ziyaret bilgilerini yolculuktan önce bu kurumsal kaynaklardan yeniden doğrulayın.",
+    "toc": "İçindekiler",
+    "tocWhereToEat": "Nerede yenir?",
+    "tocDietary": "Vegan & helal restoranlar",
+    "tocContinue": "Rotayı sürdür",
+    "tocSources": "Resmî kaynaklar",
+    "otherCities": "{country} içindeki diğer şehirler",
+    "countryRoutes": "{country} rotaları",
+    "inProgress": "hazırlanıyor",
+    "countryGuide": "{country} rehberi →",
+    "audienceNote": "Giriş, vize ve telefon hattı notları Türkiye'den yola çıkan okur için yazılmıştır.",
+    "mapsParisNote": "Versailles şehir dışında, tam günlük bir gezi seçeneğidir.",
+    "mapsNiceNote": "Villa Ephrussi, Saint-Jean-Cap-Ferrat’ta şehir dışında bir gezi seçeneğidir.",
+    "mapsMarseilleNote": "Château d’If bir ada gezisidir. Sugiton için mevsimsel rezervasyon ve erişim koşullarını rehberden kontrol edin.",
+    "countryInfo": {
+      "title": "{country} için vize, para ve telefon",
+      "body": "Giriş kuralları, ödeme, dil, mobil internet ve bütçe bilgileri ülkenin tamamı için geçerli; tek sayfada toplandı.",
+      "link": "{country} pratik bilgileri"
+    },
+    "tocDietaryNotes": "Vegan ve helal beslenme"
+  },
+  "Guides": {
+    "metaTitle": "Gezi Rehberleri: Ülke Ülke, Şehir Şehir Seyahat | Wangoh",
+    "metaDescription": "New York, Madrid, Tokyo, Roma ve daha fazlası: Türkçe şehir rehberlerinde gezilecek yerler, konaklama, ulaşım, yemek ve gün gün gezi planları.",
+    "breadcrumb": "Gezi rehberleri",
+    "title": "Ülke ve şehir gezi rehberleri",
+    "intro": "Gideceğin ülkeyi seç, şehir rehberinden gezilecek yerleri ve ulaşım seçeneklerini incele. Konaklama bölgeleri, yemek durakları ve günlük planlarla kendi rotanı kur.",
+    "countriesNav": "Ülkelere git"
+  },
+  "Hero": {
+    "regionLabel": "Wangoh seyahat keşfi",
+    "titleLine1": "Hiç",
+    "titleLine2": "gitmediğin",
+    "titleLine3": "bir yere var",
+    "subtitle": "Dünyanın en güzel şehirlerine açılan bir cam kenarı. Unutulmaz rotalar, büyüleyici duraklar ve kesintisiz tek bir manzara.",
+    "scroll": "Kaydır",
+    "landing": "Şimdi iniyoruz",
+    "north": "K",
+    "shadeLabel": "Pencere perdesi — aşağı sürükleyerek kapat, yukarı sürükleyerek aç"
+  },
+  "Home": {
+    "srTitle": "Şehir Şehir Gezi Rehberleri — Wangoh"
+  },
+  "LanguageSwitcher": {
+    "label": "Dil seç"
+  },
+  "Metadata": {
+    "site": {
+      "title": "Wangoh | Şehir Gezi Rehberleri ve Seyahat Rotaları",
+      "description": "New York, Madrid, Tokyo ve dünyanın şehirleri için Türkçe gezi rehberleri. Gezilecek yerler, konaklama, ulaşım, yemek ve gün gün seyahat rotaları."
+    },
+    "tests": {
+      "title": "Wangoh — Cam Kenarını Bul",
+      "description": "Beş soru, tek rota. Önce hangi şehri görmen gerektiğini söyleyen kısa bir test."
+    },
+    "flags": {
+      "title": "Wangoh — Bayrağı Bil",
+      "description": "Dünyadaki her bayrak, teker teker. Üç ipucu, her biri daha az puan. Nereye kadar gidebilirsin?"
+    },
+    "distance": {
+      "title": "Wangoh — Kaç Kilometre?",
+      "description": "İki şehir arasındaki mesafeyi logaritmik kaydırıcıyla tahmin et. 10 turda puan topla, rekorunu kır. Çevrimdışı da çalışan bir seyahat oyunu."
+    },
+    "mapGame": {
+      "title": "Wangoh — Haritada Bul",
+      "description": "Bir şehrin adı verilir, sen dünya küresinde yerini işaretlersin. Küreyi çevir, yakınlaştır, 8 turda puan topla. Çevrimdışı da çalışan bir seyahat oyunu."
+    }
+  },
+  "Nav": {
+    "search": "Ara",
+    "searchLabel": "Arama yap",
+    "openMenu": "Menüyü aç",
+    "closeMenu": "Menüyü kapat",
+    "mobileMenu": "Mobil menü",
+    "tests": "Testler",
+    "randomClub": "Rastgele Futbol Kulübü",
+    "countryWheel": "Ülke Çarkı",
+    "guessFlag": "Bayrağı Bil",
+    "distance": "Kaç Km?",
+    "mapGame": "Haritada Bul"
+  },
+  "NotFound": {
+    "eyebrow": "404",
+    "title": "Bu rota haritada yok",
+    "description": "Aradığın sayfa taşınmış ya da hiç var olmamış olabilir.",
+    "home": "Ana sayfaya dön"
+  },
+  "Offline": {
+    "metaTitle": "Çevrimdışısınız — Wangoh",
+    "metaDescription": "Bağlantı yokken gösterilen sayfa.",
+    "eyebrow": "Bağlantı yok",
+    "title": "Şu an çevrimdışısın",
+    "body": "Daha önce açtığın rehberler bağlantı olmadan da okunabilir. Henüz açmadığın sayfalar için internete ihtiyacın var.",
+    "home": "Ana sayfaya dön"
+  },
+  "Search": {
+    "dialogLabel": "Şehir ve ülke ara",
+    "placeholder": "Şehir veya ülke ara... (örn: Tokyo, Japonya, Paris, New York)",
+    "inputLabel": "Şehir veya ülke ara",
+    "close": "Aramayı kapat",
+    "filterAll": "Tümü",
+    "filterCities": "Şehirler",
+    "filterCountries": "Ülkeler",
+    "typeCountry": "Ülke",
+    "typeCity": "Şehir",
+    "countrySubtitle": "{gateway} · {count} Şehir Rehberi",
+    "citySubtitle": "{country} {flag} · Gezi Rehberi",
+    "noResults": "Sonuç bulunamadı",
+    "noResultsBody": "\"{query}\" ile eşleşen bir şehir veya ülke bulunamadı.",
+    "examples": "Örnek aramalar:",
+    "footerBrand": "Wangoh Seyahat & Keşif Rehberi",
+    "footerHint": "Hızlı Arama",
+    "go": "Git"
+  },
+  "SecretRoute": {
+    "dialogLabel": "Gizli rota",
+    "eyebrow": "Listede olmayan rota",
+    "choose": "Bu rotayı seç",
+    "notNow": "Şimdi değil"
+  },
+  "TravelData": {
+    "budget": {
+      "high": "Yüksek",
+      "moderate": "Orta",
+      "budget": "Ekonomik"
+    },
+    "flight": {
+      "duration": "{hours}sa {minutes}dk",
+      "origin": "Başlangıç noktası"
+    },
+    "season": {
+      "byRegion": "Bölgeye göre",
+      "general": "{months} genel",
+      "winterExperience": "kış deneyimi",
+      "forNorthernLights": "kuzey ışıkları için {months}",
+      "forWinter": "kış için {months}"
+    }
+  },
+  "TravelTest": {
+    "questions": {
+      "firstMorning": {
+        "kicker": "İlk sabah",
+        "prompt": "Yeni bir yerde uyandın. Seni yataktan ne kaldırır?",
+        "options": {
+          "silence": {
+            "label": "Şehir uyanmadan önceki sessizlik",
+            "note": "Boş sokaklar, soğuk hava"
+          },
+          "market": {
+            "label": "Çoktan uğuldayan bir pazar",
+            "note": "Buhar, bağırışlar, kahvaltı"
+          },
+          "espresso": {
+            "label": "Ayakta, tezgâhta bir kahve",
+            "note": "Doksan saniye, sonra dışarı"
+          },
+          "run": {
+            "label": "Silüet eşliğinde bir koşu",
+            "note": "Uçsuz bucaksız bir yerde"
+          }
+        }
+      },
+      "texture": {
+        "kicker": "Doku",
+        "prompt": "Elinin altında hissetmek istediğin yüzeyi seç.",
+        "options": {
+          "stone": {
+            "label": "Güneşten ısınmış, yıpranmış taş",
+            "note": "Yüzyılların izi"
+          },
+          "cedar": {
+            "label": "İşlenmemiş sedir ağacı",
+            "note": "Yumuşak, soluk, özenli"
+          },
+          "steel": {
+            "label": "Fırçalanmış çelik ve cam",
+            "note": "Soğuk, keskin"
+          },
+          "teak": {
+            "label": "Islak tik ağacı ve tuz",
+            "note": "Suya yakın bir yerde"
+          }
+        }
+      },
+      "dinner": {
+        "kicker": "Akşam yemeği",
+        "prompt": "Yolculuğun en iyi yemeği nerede olur?",
+        "options": {
+          "counter": {
+            "label": "Sekiz kişilik bir tezgâh",
+            "note": "Menü yok, seçenek yok"
+          },
+          "stool": {
+            "label": "Kaldırımda plastik bir tabure",
+            "note": "Hayatında yediğin en iyi şey"
+          },
+          "longTable": {
+            "label": "Sürekli uzayan uzun bir masa",
+            "note": "Kimse kalkmıyor"
+          },
+          "reservation": {
+            "label": "Aylar önce rezervasyon yaptığın bir yer",
+            "note": "Her kuruşuna değer"
+          }
+        }
+      },
+      "light": {
+        "kicker": "Işık",
+        "prompt": "Hangi ışık için şehri baştan sona geçersin?",
+        "options": {
+          "neon": {
+            "label": "Islak asfaltta neon",
+            "note": "Gece yarısından sonra"
+          },
+          "limestone": {
+            "label": "Kireçtaşı üzerinde altın rengi",
+            "note": "Alacakaranlıktan önceki son saat"
+          },
+          "noon": {
+            "label": "Suyun üzerinde sert öğle güneşi",
+            "note": "Bakamayacak kadar parlak"
+          },
+          "sunrise": {
+            "label": "Gökdelenler arasında gün doğumu",
+            "note": "Bütün şehir ışıldıyor"
+          }
+        }
+      },
+      "extraDay": {
+        "kicker": "Bir gün daha",
+        "prompt": "Beklemediğin fazladan bir gün kazandın.",
+        "options": {
+          "train": {
+            "label": "Plansız bir trene bin",
+            "note": "Doğru göründüğü yerde in"
+          },
+          "return": {
+            "label": "En sevdiğin tek yere geri dön",
+            "note": "Bu sefer doğru dürüst gez"
+          },
+          "water": {
+            "label": "Suyu bul ve içinde kal",
+            "note": "Başka hiçbir şey yok"
+          },
+          "neighbourhood": {
+            "label": "Bir mahalle daha gör",
+            "note": "Ayakların ağrıyana kadar yürü"
+          }
+        }
+      }
+    },
+    "resultEyebrow": "Cam kenarın",
+    "flyNow": "Hemen uç",
+    "restart": "Baştan çöz",
+    "remaining": "{count} soru kaldı · yanlış cevap yok"
+  },
+  "Wheel": {
+    "label": "Ülke çarkı",
+    "spin": "Çevir",
+    "hint": "Çevir · ya da çarkı sürükle",
+    "statusSettled": "Rotan",
+    "statusSpinning": "Çark dönüyor",
+    "statusIdle": "Bir sonraki rotanı keşfetmek için çarkı çevir",
+    "capital": "Başkent",
+    "subregion": "Alt bölge",
+    "landBorder": "Kara sınırı",
+    "neighbours": "{count} komşu",
+    "noLandBorder": "Yok — ada ya da izole",
+    "gateway": "Giriş noktası",
+    "takeMe": "Beni {country} ülkesine götür",
+    "spinToChoose": "Seçmek için çevir"
+  },
+  "Consent": {
+    "eyebrow": "Gizliliğiniz",
+    "title": "Çerez tercihleriniz",
+    "body": "Siteyi çalıştırmak için gerekli depolamayı her zaman kullanırız. İzin verirseniz Google Analytics ile siteyi nasıl kullandığınızı ölçer ve Google reklamlarını ilgi alanlarınıza göre kişiselleştirebiliriz. Tercihinizi sayfanın altındaki “Çerez tercihleri” bağlantısından istediğiniz zaman değiştirebilirsiniz.",
+    "policyLink": "Çerez Politikası",
+    "acceptAll": "Tümünü kabul et",
+    "rejectAll": "Tümünü reddet",
+    "manage": "Tercihleri yönet",
+    "save": "Seçimleri kaydet",
+    "dialogTitle": "Çerez tercihleri",
+    "dialogIntro": "Hangi teknolojilere izin verdiğinizi seçin. Zorunlu olanlar sitenin çalışması için gereklidir ve kapatılamaz. Ayrıntılar için:",
+    "close": "Kapat",
+    "alwaysOn": "Her zaman açık",
+    "necessaryTitle": "Zorunlu ve işlevsel",
+    "necessaryBody": "Sayfaların güvenli biçimde sunulması; çerez tercihinizin, uçuş animasyonundaki kalkış şehrinin ve bayrak oyunu ilerlemenizin cihazınızda hatırlanması; ziyaret ettiğiniz sayfaların çevrimdışı okunabilmesi için önbelleğe alınması. Hiçbiri başka sitelerde izleme için kullanılmaz.",
+    "analyticsTitle": "Analitik",
+    "analyticsBody": "Google Analytics ile hangi sayfaların okunduğunu ve sitenin nasıl kullanıldığını ölçmek. İzin verirseniz Google Analytics çerezleri (_ga) kullanılır; vermezseniz Google Analytics hiç yüklenmez.",
+    "adsTitle": "Reklam",
+    "adsBody": "Google AdSense'in reklamları ilgi alanlarınıza göre kişiselleştirmesi ve ölçmesi için çerezler ve tanımlayıcılar. Reddederseniz kişiselleştirilmemiş veya sınırlı reklamlar görebilirsiniz.",
+    "saved": "Çerez tercihleriniz kaydedildi."
+  },
+  "Regions": {
+    "europe": {
+      "name": "Avrupa",
+      "guides": "Avrupa gezi rehberleri",
+      "more": "Avrupa'daki diğer ülke rehberleri"
+    },
+    "asia": {
+      "name": "Asya",
+      "guides": "Asya gezi rehberleri",
+      "more": "Asya'daki diğer ülke rehberleri"
+    },
+    "americas": {
+      "name": "Amerika kıtası",
+      "guides": "Amerika kıtası gezi rehberleri",
+      "more": "Amerika kıtasındaki diğer ülke rehberleri"
+    },
+    "africa": {
+      "name": "Afrika",
+      "guides": "Afrika gezi rehberleri",
+      "more": "Afrika’daki diğer ülke rehberleri"
+    }
+  }
+}

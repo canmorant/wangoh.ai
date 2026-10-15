@@ -3,19 +3,19 @@
   "configurations": [
     {
       "name": "dev",
-      "runtimeExecutable": "npm",
+      "runtimeExecutable": "pnpm",
       "runtimeArgs": [
-        "run",
-        "dev"
+        "dev:web"
       ],
       "port": 3000,
       "autoPort": true
     },
     {
       "name": "preview-en",
-      "runtimeExecutable": "npx",
+      "runtimeExecutable": "pnpm",
       "runtimeArgs": [
-        "next",
+        "--filter",
+        "web",
         "start",
         "-p",
         "3100"
@@ -27,9 +27,10 @@
     },
     {
       "name": "preview-es",
-      "runtimeExecutable": "npx",
+      "runtimeExecutable": "pnpm",
       "runtimeArgs": [
-        "next",
+        "--filter",
+        "web",
         "start",
         "-p",
         "3200"

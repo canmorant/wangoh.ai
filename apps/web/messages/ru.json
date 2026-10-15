@@ -1,0 +1,1023 @@
+{
+  "BoardingPass": {
+    "badge": "Путеводитель по стране",
+    "cityCount": "{count, plural, one {# город} few {# города} many {# городов} other {# города}}",
+    "from": "Откуда",
+    "to": "Куда",
+    "flight": "Рейс",
+    "gate": "Выход",
+    "seat": "Место",
+    "boards": "Посадка",
+    "duration": "В пути",
+    "sequence": "№",
+    "boarded": "НА БОРТУ",
+    "goTo": "{place}: в путь",
+    "details": "Подробнее",
+    "back": "Назад",
+    "showDetails": "Показать подробности: {country}",
+    "hideDetails": "Скрыть подробности: {country}",
+    "boardLabel": "Сесть на рейс {flight}, направление: {country}",
+    "summary": "Рейс {flight}: {from} — {to}, выход {gate}, место {seat}",
+    "detail": {
+      "country": "Страна",
+      "capital": "Столица",
+      "bestSeason": "Лучший сезон",
+      "budget": "Бюджет",
+      "highlight": "Не пропустите",
+      "cities": "Города",
+      "cityGuides": "{count, plural, one {# путеводитель по городу} few {# путеводителя по городам} many {# путеводителей по городам} other {# путеводителя по городам}} в этой стране"
+    },
+    "yourLocation": "Ваше место",
+    "distance": "Расстояние",
+    "distanceValue": "≈ {km} км"
+  },
+  "City": {
+    "metaTitle": "Путеводитель: {city} — {country} | Wangoh",
+    "metaDescription": "Путеводитель Wangoh: {city}. {summary}",
+    "heading": "Путеводитель: {city}",
+    "heroAlt": "Вид на город {city}, {country}",
+    "dietaryListName": "Веганские и халяльные рестораны: {city}",
+    "pendingTitle": "Путеводитель по городу {city} готовится",
+    "pendingBody": "Мы ещё не опубликовали полный путеводитель по этому городу. Вместо того чтобы заполнять страницу непроверенной информацией, мы предпочитаем подождать — как и остальные, путеводитель по городу {city} расскажет, что посмотреть, где остановиться в каждом районе, где по-настоящему вкусно поесть, как передвигаться, и предложит маршрут по дням.",
+    "knownSoFar": "Что мы знаем пока",
+    "publishedGuides": "Опубликованные путеводители: {country}",
+    "readGuide": "Читать путеводитель →",
+    "backToCountry": "← Назад к путеводителю: {country}"
+  },
+  "CityCards": {
+    "backLabel": "Назад к странам",
+    "allRoutes": "Все маршруты",
+    "title": "{country}: время открытий",
+    "eyebrow": "Путеводитель: {country}",
+    "overviewTitle": "{country} вкратце",
+    "readCountryGuide": "Читать подробный путеводитель по стране",
+    "fact": {
+      "capital": "Столица",
+      "budget": "Бюджет",
+      "bestSeason": "Лучшее время",
+      "fromIstanbul": "Из Стамбула",
+      "transport": "Как добраться",
+      "byRoute": "Зависит от маршрута",
+      "distance": "Расстояние по прямой",
+      "distanceValue": "≈ {km} км",
+      "flightTime": "Время полёта"
+    },
+    "empty": {
+      "description": "{country} пока не входит в регулярные маршруты Wangoh — этот рейс проложен прямо по карте.",
+      "title": "Вы приземлились за пределами карты",
+      "body": "Путеводителя по направлению «{country}» мы ещё не написали. Маршрут настоящий — а что будет после посадки, решать вам.",
+      "back": "Назад к вылетам"
+    },
+    "cityGuides": "Путеводители по городам",
+    "citiesHeading": "Города, которые стоит посетить: {country}",
+    "chooseCity": "{count, plural, one {Выберите подходящий город — # авторский маршрут.} few {Выберите подходящий город из # авторских маршрутов.} many {Выберите подходящий город из # авторских маршрутов.} other {Выберите подходящий город из # авторского маршрута.}}",
+    "openCityGuide": "Открыть путеводитель: {city}",
+    "readGuide": "Читать путеводитель",
+    "goToGuide": "К путеводителю"
+  },
+  "ClubReveal": {
+    "dialogLabel": "Случайный футбольный клуб",
+    "eyebrow": "Случайный клуб",
+    "flyTo": "Лететь: {place}",
+    "picking": "Выбираем клуб…"
+  },
+  "Common": {
+    "close": "Закрыть",
+    "back": "Назад",
+    "north": "С",
+    "east": "В"
+  },
+  "Content": {
+    "breadcrumb": "Навигационная цепочка",
+    "home": "Главная",
+    "imageCredits": "Авторы изображений",
+    "source": "источник",
+    "turkishOnly": "Содержимое этой страницы пока доступно только на турецком языке.",
+    "turkishOnlyHint": "Интерфейс — на вашем языке; тексты путеводителей появятся здесь по мере перевода."
+  },
+  "Corporate": {
+    "nav": "Навигация по разделам о компании",
+    "lastUpdated": "Последнее обновление: {date}",
+    "about": {
+      "title": "О нас | Wangoh",
+      "description": "Подход Wangoh к материалам о путешествиях, редакционные принципы, как создаётся контент и как с нами связаться."
+    },
+    "contact": {
+      "title": "Контакты | Wangoh",
+      "description": "Свяжитесь с Wangoh по поводу исправлений, предложений, сотрудничества и запросов о персональных данных."
+    },
+    "privacy": {
+      "title": "Политика конфиденциальности и уведомление KVKK | Wangoh",
+      "description": "Как Wangoh обрабатывает персональные данные: правовые основания, передача данных, сроки хранения и ваши права по турецкому закону о защите персональных данных (KVKK)."
+    },
+    "cookies": {
+      "title": "Политика в отношении файлов cookie | Wangoh",
+      "description": "Файлы cookie и localStorage на Wangoh, возможные рекламные технологии AdSense и управление настройками."
+    },
+    "terms": {
+      "title": "Условия использования | Wangoh",
+      "description": "Условия, касающиеся материалов Wangoh о путешествиях, внешних ссылок, интеллектуальной собственности, рекламы и использования сайта."
+    }
+  },
+  "Country": {
+    "metaTitle": "{country}: путеводитель — города и маршруты",
+    "metaDescription": "Путеводитель: {country} — {cities} и не только. Лучшее время для поездки, время в пути, бюджет и путеводители по городам.",
+    "touristType": "Путешественники, которых интересуют культура, гастрономия, города и природа",
+    "destinations": "Направления: {country}",
+    "eyebrow": "Путеводитель по стране",
+    "heading": "{country}: путеводитель",
+    "fact": {
+      "gateway": "Точка въезда",
+      "capital": "Столица",
+      "flightTime": "Время в пути",
+      "domestic": "Зависит от внутреннего маршрута",
+      "fromIstanbul": "{time} из Стамбула",
+      "bestSeason": "Лучшее время",
+      "budget": "Бюджет"
+    },
+    "dontMiss": "Не пропустите",
+    "essentials": "Что важно знать перед поездкой",
+    "citiesHeading": "Города, которые стоит посетить: {country}",
+    "allPublished": "{total, plural, one {Авторский путеводитель есть для единственного города} few {Авторские путеводители есть для всех # городов} many {Авторские путеводители есть для всех # городов} other {Авторские путеводители есть для всех # города}}",
+    "somePublished": "Опубликовано путеводителей: {written} из {total}",
+    "badgeReady": "Путеводитель готов",
+    "badgePending": "Готовится",
+    "practical": {
+      "heading": "Практическая информация: {country}",
+      "entry": "Условия въезда",
+      "payments": "Деньги и оплата",
+      "language": "Языки",
+      "connectivity": "Телефон, интернет и приложения",
+      "budget": "Бюджет"
+    }
+  },
+  "Destinations": {
+    "departure": "Вылет",
+    "titleLine1": "Посадочные талоны.",
+    "titleLine2": "Один из них — ваш.",
+    "intro": "Каждый маршрут начинается там, где вы находитесь. Переверните посадочный талон, чтобы узнать подробности, и садитесь на нужный рейс.",
+    "showMore": "Показать больше стран",
+    "footnote": "Не каждый маршрут напечатан",
+    "yourLocation": "Ваше местоположение"
+  },
+  "Dietary": {
+    "status": {
+      "fullyVegan": "Полностью веганское",
+      "veganFocused": "Веганская кухня",
+      "veganOptions": "Есть веганские блюда",
+      "certifiedHalal": "Сертифицированный халяль",
+      "restaurantConfirmed": "Халяль со слов ресторана",
+      "halalOptions": "Есть халяльные блюда",
+      "muslimFriendly": "Подходит мусульманам",
+      "verificationRecommended": "Рекомендуется перепроверить"
+    },
+    "veganPick": "Веганский выбор",
+    "halalPick": "Халяльный выбор",
+    "whyWePicked": "Почему мы его выбрали:",
+    "verificationNote": "Примечание о проверке",
+    "source": "Источник: {name} ↗",
+    "officialSite": "Официальный сайт ↗",
+    "lastChecked": "Последняя проверка: {date}",
+    "eyebrow": "Особенности питания",
+    "heading": "Веганские и халяльные рестораны: {city}",
+    "intro": "В городе {city} мы выбрали одно заведение с растительной кухней и одно, ориентированное на мусульманских путешественников. Отметки «халяль» значат не одно и то же: сертификация, заявление самого ресторана и «некоторые халяльные блюда» указаны на каждой карточке отдельно.",
+    "researchNote": "Примечание к подбору:",
+    "disclaimer": "Меню, поставщики и сертификаты меняются. Если вы строго соблюдаете халяль, уточните действующий сертификат, наличие алкоголя, состав соусов и риск общей кухни непосредственно в ресторане.",
+    "notesHeading": "Веганское и халяльное питание: {city}",
+    "notesIntro": "Какие ингредиенты уточнить в местных блюдах и что спросить перед заказом при веганском или халяльном питании.",
+    "verifiedSelectionIntro": "For {city}, we selected restaurants after checking ratings, review counts and dietary information. Each card explains its vegan scope or halal evidence; where no verified option was found, the research note says so."
+  },
+  "Discovery": {
+    "heading": "Путеводитель для вашего следующего города",
+    "intro": "Что посмотреть, где остановиться, как передвигаться? Выберите остановки, найдите, где поесть, и составьте маршрут по дням с нашими путеводителями — пока они доступны на турецком языке.",
+    "guideTitle": "Путеводитель: {city}",
+    "allGuides": "Все путеводители по странам и городам →",
+    "featured": {
+      "newYork": {
+        "name": "Нью-Йорк",
+        "detail": "Достопримечательности, выбор района, метро и маршрут по дням."
+      },
+      "madrid": {
+        "name": "Мадрид",
+        "detail": "Прадо, тапас-бары, где остановиться и план на 4 дня."
+      },
+      "tokyo": {
+        "name": "Токио",
+        "detail": "Районы, транспорт, еда и план поездки."
+      },
+      "rome": {
+        "name": "Рим",
+        "detail": "Исторические места, еда и пешие маршруты."
+      },
+      "paris": {
+        "name": "Париж",
+        "detail": "Музеи, районы и советы для первой поездки."
+      },
+      "barcelona": {
+        "name": "Барселона",
+        "detail": "Гауди, районы, пляж и маршрут на 5 дней."
+      }
+    }
+  },
+  "FlagGame": {
+    "poolSize": "{count, plural, one {# флаг} few {# флага} many {# флагов} other {# флага}}",
+    "title": "Угадай флаг",
+    "intro": "Все страны мира. Три подсказки — и каждая приносит меньше очков, чем предыдущая.",
+    "level": "Уровень",
+    "levelValue": "Уровень {level}",
+    "xp": "XP",
+    "bestStreak": "Лучшая серия",
+    "learned": "Изучено",
+    "record": "Рекорд: {score}",
+    "modes": {
+      "classic": {
+        "name": "Классика",
+        "tagline": "Без таймера и спешки. Учитесь в своём темпе."
+      },
+      "timeattack": {
+        "name": "На время",
+        "tagline": "Как можно больше флагов, пока не вышло время."
+      },
+      "endless": {
+        "name": "Без конца",
+        "tagline": "Игра идёт, пока вы не остановитесь."
+      },
+      "survival": {
+        "name": "Выживание",
+        "tagline": "Несколько ошибок — и игра окончена."
+      },
+      "daily": {
+        "name": "Ежедневный",
+        "tagline": "Каждый день одна и та же последовательность для всех."
+      }
+    },
+    "howLong": "Сколько времени?",
+    "durationSeconds": "{seconds} с",
+    "durationMinutes": "{minutes} мин",
+    "howManyLives": "Сколько жизней?",
+    "livesCount": "{count, plural, one {# жизнь} few {# жизни} many {# жизней} other {# жизни}}",
+    "whichRegion": "Какой регион?",
+    "wholeWorld": "Весь мир",
+    "start": "Начать игру",
+    "score": "Очки",
+    "round": "Раунд",
+    "streak": "Серия",
+    "lives": "Жизни",
+    "endSession": "Завершить игру",
+    "timeLeft": "Осталось времени",
+    "flagAlt": "Флаг: {country}",
+    "flagToIdentify": "Флаг, который нужно угадать",
+    "combo": {
+      "nice": "Неплохо",
+      "onFire": "В ударе",
+      "incredible": "Невероятно",
+      "masterExplorer": "Мастер открытий"
+    },
+    "inARow": "{count} подряд",
+    "streakCount": "Серия: {count}",
+    "hintCapital": "Столица",
+    "noCapital": "Официальная столица не указана",
+    "hintContinent": "Континент",
+    "hintBorders": "Сухопутные границы",
+    "andMore": " — и ещё {count}",
+    "noBordersSentence": "У этой страны нет сухопутных границ.",
+    "guessLabel": "Какой стране принадлежит этот флаг?",
+    "guessPlaceholder": "Введите название страны",
+    "submit": "Ответить",
+    "allHintsUsed": "Все подсказки открыты",
+    "giveHint": "Подсказка ({used}/{max})",
+    "showAnswer": "Показать ответ",
+    "feedback": {
+      "wrongCountry": "Такая страна есть — но флаг не её.",
+      "notQuite": "Не совсем. Попробуйте ещё раз или откройте подсказку."
+    },
+    "correct": "Верно",
+    "answerWas": "Правильный ответ",
+    "scoreBase": "база: {points}",
+    "scoreSpeed": " · +{points} за скорость",
+    "scoreCombo": " · +{points} за комбо",
+    "noBordersFact": "Нет — у этой страны нет сухопутных границ.",
+    "nextFlag": "Следующий флаг",
+    "exploreCountry": "Узнать об этой стране",
+    "sessionOver": "Игра окончена",
+    "points": "очки",
+    "statCorrect": "Верно",
+    "statWrong": "Неверно",
+    "accuracy": "Точность",
+    "avgTime": "Ср. время",
+    "hintsUsed": "Использовано подсказок",
+    "learnedCountries": "Изучено стран",
+    "timePlayed": "Время игры",
+    "timePlayedValue": "{minutes} мин {seconds} с",
+    "playAgain": "Играть снова",
+    "changeMode": "Сменить режим",
+    "reviewMisses": "{count, plural, one {Разобрать # ошибку} few {Разобрать # ошибки} many {Разобрать # ошибок} other {Разобрать # ошибки}}",
+    "exploreCountries": "Открыть страны",
+    "review": "Разбор",
+    "missedTitle": "{count, plural, one {# пропущенный флаг} few {# пропущенных флага} many {# пропущенных флагов} other {# пропущенного флага}}",
+    "replayMissed": "Сыграть их снова",
+    "neighbours": "Соседи: {list}",
+    "noBorders": "Нет сухопутных границ",
+    "secondsValue": "{value} с"
+  },
+  "DistanceGame": {
+    "eyebrow": "{rounds} раундов · работает офлайн",
+    "title": "Сколько километров?",
+    "intro": "Два города, один вопрос: сколько километров между ними? Угадывайте с помощью ползунка и набирайте очки в серии из {rounds} раундов.",
+    "howScale": "Ползунок логарифмический: мелкие шаги для малых расстояний и крупные для больших. Для точной настройки используйте стрелки на клавиатуре или кнопки − и +.",
+    "howScore": "Если ошибка не превышает 2 %, вы получаете полные 1000 очков; чем сильнее ошибка, тем быстрее падает счёт.",
+    "offline": "Интернет не нужен: игра целиком работает на вашем устройстве.",
+    "bestResult": "Лучший результат",
+    "gamesPlayed": "Сыграно игр",
+    "round": "Раунд {current}/{total}",
+    "score": "Очки",
+    "progress": "Пройдено раундов: {done} из {total}",
+    "question": "Сколько километров от <city>{a}</city> до <city>{b}</city>?",
+    "caption": "Сколько километров между ними?",
+    "sliderLabel": "Предполагаемое расстояние в километрах",
+    "sliderValueText": "{km} км",
+    "scaleHint": "Логарифмическая шкала: от 10 до 20 000 км",
+    "decrease": "Уменьшить оценку",
+    "increase": "Увеличить оценку",
+    "guess": "Угадать",
+    "verdict": {
+      "perfect": "Точно в цель!",
+      "great": "Очень близко",
+      "good": "Хорошая оценка",
+      "fair": "Неплохо",
+      "far": "Довольно далеко"
+    },
+    "roundScore": "Очки за раунд",
+    "actualDistance": "Реальное расстояние",
+    "yourGuess": "Ваш ответ",
+    "errorLabel": "Ошибка",
+    "direction": {
+      "over": "Слишком много",
+      "under": "Слишком мало",
+      "exact": "Точно"
+    },
+    "readGuide": "Читать путеводитель по этому городу",
+    "nextRound": "Следующий раунд",
+    "seeResults": "Посмотреть результат",
+    "gameOver": "Игра окончена",
+    "totalScore": "Итоговый счёт",
+    "outOf": "из {max}",
+    "newBest": "Новый рекорд!",
+    "bestSoFar": "Лучший результат: {score}",
+    "recap": "Раунды",
+    "recapDetail": "Реально {actual} км · ответ {guess} км",
+    "playAgain": "Играть снова",
+    "exploreGuides": "Смотреть путеводители",
+    "otherGame": "Попробуйте «Найди на карте»",
+    "dataCredit": "Данные о городах: <geo>GeoNames</geo> (<cc>CC BY 4.0</cc>)",
+    "modeDaily": "Тур дня",
+    "modeFree": "Свободная игра",
+    "modeDailyHint": "Одинаковые {rounds} раундов для всех. Один зачётный результат в день; играйте каждый день, чтобы набрать серию.",
+    "modeFreeHint": "Каждый раз новые {rounds} раундов. Результат идёт в рекорд и средний счёт.",
+    "playDaily": "Играть в тур дня",
+    "playFree": "Играть свободно",
+    "replayDaily": "Сыграть тур дня ещё раз",
+    "replayDailyNote": "Повтор не меняет зачётный результат и серию.",
+    "dailyDoneLabel": "Ваш зачётный результат сегодня",
+    "streakLabel": "{count, plural, one {# день подряд} few {# дня подряд} many {# дней подряд} other {# дня подряд}}",
+    "average": "Средний счёт",
+    "bestStreak": "Лучшая серия",
+    "soundLabel": "Звуковые эффекты",
+    "mapCaption": "Пунктирный круг: так далеко простиралась ваша оценка.",
+    "mapAria": "Карта: реальное расстояние между {a} и {b} — {actual} км; ваша оценка — {guess} км.",
+    "announce": "Реальное расстояние {actual} км, ваша оценка {guess} км. Очков: {score}. {verdict}",
+    "stripLabel": "Очки по раундам: {scores}",
+    "dailyTitle": "Тур дня · {date}",
+    "dailyOfficial": "Ваш зачётный результат: {score}",
+    "dailyReplayNote": "Это был повтор: зачётный результат остаётся {score}.",
+    "share": "Поделиться результатом",
+    "copied": "Скопировано",
+    "copyFailed": "Не удалось скопировать",
+    "shareHeaderFree": "Wangoh · Сколько километров?",
+    "shareHeaderDaily": "Wangoh · Сколько километров? — Тур дня {date}",
+    "shareHeaderDailyStreak": "Wangoh · Сколько километров? — Тур дня {date} · серия: {count}",
+    "backToModes": "К выбору режима"
+  },
+  "MapGame": {
+    "eyebrow": "{rounds} раундов · работает офлайн",
+    "title": "Найди на карте",
+    "intro": "Вам называют город, а вы находите его на глобусе. Вращайте, приближайте и касайтесь, чтобы поставить метку; набирайте очки в течение {rounds} раундов.",
+    "howGesture": "Проведите пальцем, чтобы вращать глобус, и разведите два пальца, чтобы приблизить. Коснитесь, чтобы поставить метку; её можно переставлять сколько угодно. На клавиатуре: стрелки и + / −.",
+    "howScore": "Если вы ошиблись не больше чем на 50 км, получите максимум (1 000 очков); чем дальше от цели, тем меньше очков.",
+    "howHint": "Застряли? Возьмите подсказку: появится кольцо с примерной областью, но очки за раунд уменьшатся вдвое.",
+    "offline": "Интернет не нужен: игра целиком работает на вашем устройстве.",
+    "bestResult": "Лучший результат",
+    "gamesPlayed": "Сыграно игр",
+    "round": "Раунд {current}/{total}",
+    "score": "Очки",
+    "progress": "Пройдено раундов: {done} из {total}",
+    "find": "Найди на карте",
+    "globeAria": "Глобус. Отметьте, где находится {city}, {country}.",
+    "keyboardHelp": "Глобус: стрелки вращают, плюс и минус меняют масштаб, Enter или пробел отмечают центр экрана.",
+    "gestureHint": "Тяните: вращать · Два пальца: масштаб · Касание: метка",
+    "zoomIn": "Приблизить",
+    "zoomOut": "Отдалить",
+    "markCenter": "Отметить центр",
+    "resetView": "Показать весь глобус",
+    "hint": "Подсказка",
+    "hintNote": "Подсказка показывает примерную область; очки за раунд уменьшатся вдвое.",
+    "hintUsed": "Подсказка включена · не больше {max} очков",
+    "guess": "Проверить",
+    "guessWaiting": "Коснитесь глобуса",
+    "pinPlaced": "Метка поставлена. Можно нажимать «Проверить».",
+    "verdict": {
+      "perfect": "Точно в цель!",
+      "great": "Очень близко",
+      "good": "Хорошая оценка",
+      "fair": "Неплохо",
+      "far": "Довольно далеко"
+    },
+    "roundScore": "Очки за раунд",
+    "roundScoreHint": "Очки за раунд (с подсказкой)",
+    "distanceLabel": "Расстояние до настоящего места",
+    "onTarget": "Точно в цель!",
+    "awayFrom": "по прямой",
+    "readGuide": "Читать путеводитель по этому городу",
+    "nextRound": "Следующий раунд",
+    "seeResults": "Посмотреть результат",
+    "announce": "До настоящего места {km} километров. Очков: {score}. {verdict}",
+    "gameOver": "Игра окончена",
+    "totalScore": "Итоговый счёт",
+    "outOf": "из {max}",
+    "newBest": "Новый рекорд!",
+    "bestSoFar": "Лучший результат: {score}",
+    "recap": "Раунды",
+    "recapDetail": "в {km} км",
+    "recapHint": "подсказка",
+    "playAgain": "Играть снова",
+    "otherGame": "Попробуйте «Сколько километров?»",
+    "exploreGuides": "Смотреть путеводители",
+    "dataCredit": "Данные о городах: <geo>GeoNames</geo> (<cc>CC BY 4.0</cc>) · Карта: <ne>Natural Earth</ne>",
+    "modeDaily": "Тур дня",
+    "modeFree": "Свободная игра",
+    "modeDailyHint": "Одинаковые {rounds} городов для всех. Один зачётный результат в день; играйте каждый день, чтобы набрать серию.",
+    "modeFreeHint": "Каждый раз новые {rounds} городов. Результат идёт в рекорд и средний счёт.",
+    "playDaily": "Играть в тур дня",
+    "playFree": "Играть свободно",
+    "replayDaily": "Сыграть тур дня ещё раз",
+    "replayDailyNote": "Повтор не меняет зачётный результат и серию.",
+    "dailyDoneLabel": "Ваш зачётный результат сегодня",
+    "streakLabel": "{count, plural, one {# день подряд} few {# дня подряд} many {# дней подряд} other {# дня подряд}}",
+    "average": "Средний счёт",
+    "bestStreak": "Лучшая серия",
+    "soundLabel": "Звуковые эффекты",
+    "stripLabel": "Очки по раундам: {scores}",
+    "dailyTitle": "Тур дня · {date}",
+    "dailyOfficial": "Ваш зачётный результат: {score}",
+    "dailyReplayNote": "Это был повтор: зачётный результат остаётся {score}.",
+    "share": "Поделиться результатом",
+    "copied": "Скопировано",
+    "copyFailed": "Не удалось скопировать",
+    "shareHeaderFree": "Wangoh · Найди на карте",
+    "shareHeaderDaily": "Wangoh · Найди на карте — Тур дня {date}",
+    "shareHeaderDailyStreak": "Wangoh · Найди на карте — Тур дня {date} · серия: {count}",
+    "backToModes": "К выбору режима"
+  },
+  "Flight": {
+    "preparing": "Готовим ваше путешествие…",
+    "nextStop": "Следующая остановка: {country} {flag}",
+    "welcome": "{country} — добро пожаловать!",
+    "from": "Вылет: {city}",
+    "change": "Изменить",
+    "changeLabel": "Изменить город вылета",
+    "yourLocation": "Ваше местоположение",
+    "chooseTitle": "Откуда вы летите?",
+    "chooseHint": "Нам не удалось определить ваше местоположение. Самолёт вылетит из выбранного вами города; выбор сохранится на этом устройстве.",
+    "changeHint": "Самолёт вылетит из выбранного вами города; выбор сохранится на этом устройстве.",
+    "cityLabel": "Город вылета",
+    "turkey": "Турция",
+    "world": "Мир",
+    "start": "Начать полёт",
+    "cancel": "Отмена"
+  },
+  "Footer": {
+    "tagline": "Независимое издание о путешествиях: мы не просто отмечаем города на карте, а рассказываем о ритме поездки, её кварталах и застольях.",
+    "corporateNav": "О Wangoh",
+    "policyNav": "Правовая информация и конфиденциальность",
+    "policyHeading": "Конфиденциальность и условия",
+    "allGuides": "Все путеводители",
+    "about": "О нас",
+    "contact": "Контакты",
+    "privacy": "Конфиденциальность",
+    "cookies": "Файлы cookie",
+    "terms": "Условия использования",
+    "copyright": "© {year} Wangoh. Все права защищены.",
+    "imageSource": "Изображения в основном взяты с <link>Unsplash</link>.",
+    "cookieSettings": "Настройки cookie"
+  },
+  "Geo": {
+    "continent": {
+      "africa": "Африка",
+      "americas": "Америка",
+      "asia": "Азия",
+      "europe": "Европа",
+      "oceania": "Океания",
+      "antarctic": "Антарктида"
+    },
+    "subregion": {
+      "australiaNewZealand": "Австралия и Новая Зеландия",
+      "caribbean": "Карибский регион",
+      "centralAmerica": "Центральная Америка",
+      "centralAsia": "Центральная Азия",
+      "centralEurope": "Центральная Европа",
+      "easternAfrica": "Восточная Африка",
+      "easternAsia": "Восточная Азия",
+      "easternEurope": "Восточная Европа",
+      "melanesia": "Меланезия",
+      "micronesia": "Микронезия",
+      "middleAfrica": "Центральная Африка",
+      "northAmerica": "Северная Америка",
+      "northernAfrica": "Северная Африка",
+      "northernEurope": "Северная Европа",
+      "polynesia": "Полинезия",
+      "southAmerica": "Южная Америка",
+      "southEasternAsia": "Юго-Восточная Азия",
+      "southeastEurope": "Юго-Восточная Европа",
+      "southernAfrica": "Южная часть Африки",
+      "southernAsia": "Южная Азия",
+      "southernEurope": "Южная Европа",
+      "westernAfrica": "Западная Африка",
+      "westernAsia": "Западная Азия",
+      "westernEurope": "Западная Европа"
+    }
+  },
+  "Guide": {
+    "mapsEyebrow": "Достопримечательности · {count} мест",
+    "mapsHeading": "Добавьте эти места в {city} на свою карту",
+    "mapsIntro": "Мы собрали {count} выбранных мест, упомянутых в этом путеводителе.",
+    "mapsButton": "Открыть список {city} в Google Картах",
+    "mapsSaveHelp": "В Google Картах выберите «Сохранить список» или «Подписаться». Места сохранятся в отдельном списке Wangoh, а не автоматически в вашем личном списке «Хочу посетить».",
+    "mapsPending": "Общий список готовится. Пока можно открыть каждое из мест выше в Google Картах.",
+    "mapsToc": "Список в Google Картах",
+    "mapsPlaceLink": "{place} — открыть в Google Картах (новая вкладка)",
+    "mapsPlaces": {
+      "eiffel": "Эйфелева башня",
+      "louvre": "Лувр",
+      "notreDame": "Собор Парижской Богоматери",
+      "sainteChapelle": "Сент-Шапель",
+      "orsay": "Музей Орсе",
+      "orangerie": "Музей Оранжери",
+      "tuileries": "Сад Тюильри",
+      "luxembourg": "Люксембургский сад",
+      "sacreCoeur": "Базилика Сакре-Кёр",
+      "versailles": "Версальский дворец",
+      "promenadeAnglais": "Promenade des Anglais",
+      "castleHill": "Colline du Château",
+      "coursSaleya": "Cours Saleya",
+      "placeRossetti": "Place Rossetti",
+      "portLympia": "Port Lympia",
+      "matisse": "Musée Matisse",
+      "chagall": "Musée Marc-Chagall",
+      "cimiezArena": "Arènes de Cimiez",
+      "cimiezGarden": "Jardin du Monastère de Cimiez",
+      "villaEphrussi": "Villa Ephrussi de Rothschild",
+      "fourviere": "Basilique Notre-Dame de Fourvière",
+      "lyonCathedral": "Cathédrale Saint-Jean-Baptiste",
+      "romanTheatre": "Théâtre Gallo Romain",
+      "canuts": "La Maison des Canuts",
+      "bellecour": "Place Bellecour",
+      "terreaux": "Place des Terreaux",
+      "lyonFineArts": "Musée des Beaux-Arts de Lyon",
+      "hallesBocuse": "Les Halles de Lyon Paul Bocuse",
+      "teteOr": "Parc de la Tête d’Or",
+      "confluences": "Musée des Confluences",
+      "vieuxPort": "Vieux-Port",
+      "panier": "Le Panier",
+      "vieilleCharite": "Centre de la Vieille Charité",
+      "mucem": "Mucem",
+      "fortSaintJean": "Fort Saint-Jean",
+      "garde": "Notre-Dame de la Garde",
+      "vallonAuffes": "Vallon des Auffes",
+      "coursJulien": "Cours Julien",
+      "chateauIf": "Château d’If",
+      "sugiton": "Calanque de Sugiton",
+      "bourse": "Place de la Bourse",
+      "miroir": "Miroir d’eau",
+      "cailhau": "Porte Cailhau",
+      "grandTheatre": "Grand Théâtre",
+      "peyBerland": "Tour Pey-Berland",
+      "jardinPublic": "Jardin Public",
+      "citeVin": "Cité du Vin",
+      "bassins": "Bassins des Lumières",
+      "capucins": "Marché des Capucins",
+      "darwin": "Darwin Écosystème",
+      "strasbourgCathedral": "Cathédrale Notre-Dame de Strasbourg",
+      "petiteFrance": "La Petite France",
+      "pontsCouverts": "Ponts Couverts",
+      "vauban": "Barrage Vauban",
+      "kammerzell": "Maison Kammerzell",
+      "gutenberg": "Place Gutenberg",
+      "republique": "Place de la République",
+      "palaisRhin": "Palais du Rhin",
+      "europeanParliament": "Parlement européen",
+      "orangeriePark": "Parc de l’Orangerie",
+      "hoanKiem": "Hoan Kiem Lake",
+      "ngocSon": "Ngoc Son Temple",
+      "hanoiLiterature": "Temple of Literature",
+      "thangLong": "Imperial Citadel of Thang Long",
+      "trucBach": "Truc Bach Lake",
+      "dongXuan": "Dong Xuan Market",
+      "hanoiCathedral": "St Joseph Cathedral",
+      "tranQuoc": "Tran Quoc Pagoda",
+      "hoaLo": "Hoa Lo Prison Relic",
+      "vietnamEthnology": "Vietnam Museum of Ethnology",
+      "hueImperial": "Hue Imperial City",
+      "thaiHoa": "Thai Hoa Palace",
+      "ngoMon": "Ngo Mon Gate",
+      "dongBa": "Dong Ba Market",
+      "truongTien": "Truong Tien Bridge",
+      "quocHoc": "Quoc Hoc High School",
+      "thienMu": "Thien Mu Pagoda",
+      "tuHieu": "Tu Hieu Pagoda",
+      "tuDuc": "Tu Duc Tomb",
+      "minhMang": "Minh Mang Tomb",
+      "chamMuseum": "Museum of Cham Sculpture",
+      "apecPark": "APEC Park",
+      "dragonBridge": "Dragon Bridge",
+      "hanMarket": "Han Market",
+      "daNangCathedral": "Da Nang Cathedral",
+      "conMarket": "Con Market",
+      "hanBridge": "Han River Bridge",
+      "myKhe": "My Khe Beach",
+      "linhUng": "Linh Ung Bai But Pagoda",
+      "marbleMountains": "Marble Mountains",
+      "japaneseBridge": "Japanese Covered Bridge",
+      "phungHung": "Phung Hung Old House",
+      "cantoneseHall": "Cantonese Assembly Hall",
+      "saHuynh": "Museum of Sa Huynh Culture",
+      "tanKy": "Tan Ky Old House",
+      "folkHoiAn": "Hoi An Museum of Folk Culture",
+      "fujianHall": "Fujian Assembly Hall",
+      "hoiAnMarket": "Hoi An Central Market Food Hall",
+      "traQue": "Tra Que Vegetable Village",
+      "anBang": "An Bang Beach",
+      "warRemnants": "War Remnants Museum",
+      "independencePalace": "Independence Palace",
+      "saigonPost": "Saigon Central Post Office",
+      "saigonCathedral": "Saigon Notre Dame Cathedral",
+      "saigonOpera": "Saigon Opera House",
+      "nguyenHue": "Nguyen Hue Walking Street",
+      "benThanh": "Ben Thanh Market",
+      "taoDan": "Tao Dan Park",
+      "jadeEmperor": "Jade Emperor Pagoda",
+      "thienHau": "Thien Hau Temple",
+      "caiRang": "Cai Rang Floating Market",
+      "ninhKieu": "Ninh Kieu Wharf",
+      "ninhKieuBridge": "Ninh Kieu Pedestrian Bridge",
+      "ongTemple": "Ong Temple",
+      "canThoMarket": "Can Tho Old Market",
+      "canThoMuseum": "Can Tho Museum",
+      "binhThuyHouse": "Binh Thuy Ancient House",
+      "binhThuyTemple": "Binh Thuy Communal House",
+      "munirAnsay": "Munir Ansay Pagoda",
+      "quangDuc": "Quang Duc Pagoda"
+    },
+    "quickFacts": "Коротко о главном",
+    "whereToEat": "Где поесть: избранные места",
+    "whereToEatIntro": "Это не список мест «для галочки», а остановки, которые лучше всего показывают, как ест этот город. Часы работы и цены меняются — проверьте их перед визитом.",
+    "highlights": "Главные остановки",
+    "highlightsIntro": "Остановки, которые лучше всего раскрывают город. Время входа, билеты и часы работы меняются — проверьте их по официальным каналам перед поездкой.",
+    "priceBudget": "Недорого",
+    "priceMid": "Средний чек",
+    "priceHigh": "Дорого",
+    "itinerary": "Маршрут по дням",
+    "morning": "Утро",
+    "afternoon": "День",
+    "evening": "Вечер",
+    "beforeYouGo": "Что важно знать заранее",
+    "practicalFallback": "Полезное для поездки: {city}",
+    "continueRoute": "Продолжить маршрут: {country}",
+    "continueRouteIntro": "Этот город хорош и сам по себе; если есть время, остановки ниже добавят к той же поездке другой регион и ещё один город.",
+    "readGuide": "Читать путеводитель →",
+    "faq": "Частые вопросы",
+    "note": "Примечание:",
+    "lastUpdated": "Последнее обновление:",
+    "sources": "Официальные источники и последняя проверка",
+    "sourcesIntro": "Визовые и транспортные правила, условия въезда и посещения меняются — перепроверьте их перед поездкой по этим официальным источникам.",
+    "toc": "Содержание",
+    "tocWhereToEat": "Где поесть",
+    "tocDietary": "Веганские и халяльные рестораны",
+    "tocContinue": "Продолжить маршрут",
+    "tocSources": "Официальные источники",
+    "otherCities": "Другие города: {country}",
+    "countryRoutes": "Маршруты: {country}",
+    "inProgress": "готовится",
+    "audienceNote": "Сведения о въезде, визах и мобильной связи в этом путеводителе написаны для путешественников из Турции с турецким паспортом. Проверьте актуальные правила для своего паспорта и тарифа по официальным источникам.",
+    "countryGuide": "Путеводитель: {country} →",
+    "mapsParisNote": "Версаль находится за городом; на поездку стоит выделить целый день.",
+    "mapsNiceNote": "Вилла Эфрусси находится за пределами Ниццы, в Сен-Жан-Кап-Ферра.",
+    "mapsMarseilleNote": "Замок Иф — поездка на остров. Проверьте в путеводителе сезонные условия бронирования и доступа к Сюжитону.",
+    "countryInfo": {
+      "title": "Визы, деньги и связь: {country}",
+      "body": "Правила въезда, оплата, языки, мобильный интернет и бюджет действуют для всей страны, поэтому собраны на одной странице.",
+      "link": "Практическая информация: {country}"
+    },
+    "tocDietaryNotes": "Веганское и халяльное питание",
+    "editorialLabel": "Редакционная информация",
+    "editorialTeam": "Редакция",
+    "editorialBy": "Подготовил(а): {name}",
+    "editorialMethod": "Этот путеводитель создан на основе исследования конкретного направления, сверки с официальными источниками и редакторской проверки. Данные, которые могут меняться, перепроверьте перед поездкой.",
+    "reviewedOn": "Последняя редакторская проверка: {date}",
+    "editorialPrinciples": "Наши редакционные принципы",
+    "reportCorrection": "Сообщить об ошибке"
+  },
+  "Guides": {
+    "metaTitle": "Путеводители: страна за страной, город за городом | Wangoh",
+    "metaDescription": "Нью-Йорк, Мадрид, Токио, Рим и не только: путеводители по городам — что посмотреть, где остановиться, как передвигаться, где поесть и маршруты по дням. Пока на турецком языке.",
+    "breadcrumb": "Путеводители",
+    "title": "Путеводители по странам и городам",
+    "intro": "Выберите страну, а затем в путеводителе по каждому городу узнайте, что посмотреть и как передвигаться. Составьте свой маршрут с районами для проживания, гастрономическими остановками и планами на каждый день. Сами путеводители пока написаны на турецком языке.",
+    "countriesNav": "Перейти к стране"
+  },
+  "Hero": {
+    "regionLabel": "Wangoh: открытия в путешествиях",
+    "titleLine1": "Есть место,",
+    "titleLine2": "которого вы ещё",
+    "titleLine3": "не знаете",
+    "subtitle": "Место у окна с видом на самые красивые города мира. Незабываемые маршруты, захватывающие остановки и вид, который ничто не прерывает.",
+    "scroll": "Листайте",
+    "landing": "Заходим на посадку",
+    "north": "С",
+    "shadeLabel": "Шторка иллюминатора — потяните вниз, чтобы закрыть, и вверх, чтобы открыть"
+  },
+  "Home": {
+    "srTitle": "Путеводители по городам — Wangoh"
+  },
+  "LanguageSwitcher": {
+    "label": "Выбрать язык"
+  },
+  "Metadata": {
+    "site": {
+      "title": "Wangoh | Путеводители по городам и маршруты путешествий",
+      "description": "Путеводители по Нью-Йорку, Мадриду, Токио и городам всего мира: что посмотреть, где остановиться, как передвигаться, что попробовать и маршруты по дням."
+    },
+    "tests": {
+      "title": "Wangoh — Найдите своё место у окна",
+      "description": "Пять вопросов, один маршрут. Короткий тест подскажет, какой город стоит увидеть первым."
+    },
+    "flags": {
+      "title": "Wangoh — Угадай флаг",
+      "description": "Все флаги мира, один за другим. Три подсказки, и каждая стоит меньше очков. Как далеко вы зайдёте?"
+    },
+    "distance": {
+      "title": "Wangoh — Сколько километров?",
+      "description": "Угадайте расстояние между двумя городами с помощью логарифмического ползунка. Набирайте очки в 10 раундах и побейте рекорд. Игра работает и офлайн."
+    },
+    "mapGame": {
+      "title": "Wangoh — Найди на карте",
+      "description": "Вам называют город, а вы находите его на глобусе. Вращайте, приближайте и ставьте метку, набирайте очки в 8 раундах. Игра работает и без интернета."
+    }
+  },
+  "Nav": {
+    "search": "Поиск",
+    "searchLabel": "Открыть поиск",
+    "openMenu": "Открыть меню",
+    "closeMenu": "Закрыть меню",
+    "mobileMenu": "Мобильное меню",
+    "tests": "Тесты",
+    "randomClub": "Случайный футбольный клуб",
+    "countryWheel": "Колесо стран",
+    "guessFlag": "Угадай флаг",
+    "distance": "Сколько км?",
+    "mapGame": "Найди на карте"
+  },
+  "NotFound": {
+    "eyebrow": "404",
+    "title": "Этого маршрута нет на карте",
+    "description": "Страница, которую вы ищете, переехала — или её никогда не было.",
+    "home": "Вернуться на главную"
+  },
+  "Offline": {
+    "metaTitle": "Нет подключения — Wangoh",
+    "metaDescription": "Показывается, когда нет подключения к сети.",
+    "eyebrow": "Нет подключения",
+    "title": "Сейчас вы офлайн",
+    "body": "Путеводители, которые вы уже открывали, можно читать и без подключения. Для страниц, которые вы ещё не открывали, нужен интернет.",
+    "home": "Вернуться на главную"
+  },
+  "Search": {
+    "dialogLabel": "Поиск городов и стран",
+    "placeholder": "Город или страна… (например, Токио, Япония, Париж, Нью-Йорк)",
+    "inputLabel": "Найти город или страну",
+    "close": "Закрыть поиск",
+    "filterAll": "Все",
+    "filterCities": "Города",
+    "filterCountries": "Страны",
+    "typeCountry": "Страна",
+    "typeCity": "Город",
+    "countrySubtitle": "{gateway} · {count, plural, one {# путеводитель} few {# путеводителя} many {# путеводителей} other {# путеводителя}}",
+    "citySubtitle": "{country} {flag} · Путеводитель",
+    "noResults": "Ничего не найдено",
+    "noResultsBody": "По запросу «{query}» не найдено ни городов, ни стран.",
+    "examples": "Попробуйте найти:",
+    "footerBrand": "Wangoh — путеводитель для путешествий и открытий",
+    "go": "Перейти",
+    "footerHint": "Быстрый поиск"
+  },
+  "SecretRoute": {
+    "dialogLabel": "Секретный маршрут",
+    "eyebrow": "Маршрут, которого нет в расписании",
+    "choose": "Выбрать этот маршрут",
+    "notNow": "Не сейчас"
+  },
+  "TravelData": {
+    "budget": {
+      "high": "Высокий",
+      "moderate": "Средний",
+      "budget": "Экономный"
+    },
+    "flight": {
+      "duration": "{hours} ч {minutes} мин",
+      "origin": "Точка отправления"
+    },
+    "season": {
+      "byRegion": "Зависит от региона",
+      "general": "{months} в целом",
+      "winterExperience": "зимние впечатления",
+      "forNorthernLights": "{months} — ради северного сияния",
+      "forWinter": "{months} — для зимнего отдыха"
+    }
+  },
+  "TravelTest": {
+    "questions": {
+      "firstMorning": {
+        "kicker": "Первое утро",
+        "prompt": "Вы просыпаетесь в новом месте. Что поднимает вас с постели?",
+        "options": {
+          "silence": {
+            "label": "Тишина, пока город ещё спит",
+            "note": "Пустые улицы, холодный воздух"
+          },
+          "market": {
+            "label": "Рынок, который уже шумит",
+            "note": "Пар, крики, завтрак"
+          },
+          "espresso": {
+            "label": "Кофе стоя у барной стойки",
+            "note": "Девяносто секунд — и за дверь"
+          },
+          "run": {
+            "label": "Пробежка с видом на панораму города",
+            "note": "Где-то без конца и края"
+          }
+        }
+      },
+      "texture": {
+        "kicker": "Фактура",
+        "prompt": "Выберите поверхность, которую хочется ощутить ладонью.",
+        "options": {
+          "stone": {
+            "label": "Тёплый от солнца, выветренный камень",
+            "note": "Следы веков"
+          },
+          "cedar": {
+            "label": "Необработанный кедр",
+            "note": "Мягкий, светлый, продуманный"
+          },
+          "steel": {
+            "label": "Шлифованная сталь и стекло",
+            "note": "Прохладно и чётко"
+          },
+          "teak": {
+            "label": "Мокрый тик и соль",
+            "note": "Где-то у воды"
+          }
+        }
+      },
+      "dinner": {
+        "kicker": "Ужин",
+        "prompt": "Где случится лучший ужин поездки?",
+        "options": {
+          "counter": {
+            "label": "За стойкой на восемь мест",
+            "note": "Ни меню, ни выбора"
+          },
+          "stool": {
+            "label": "На пластиковом табурете у тротуара",
+            "note": "Лучшее, что вы когда-либо ели"
+          },
+          "longTable": {
+            "label": "За длинным столом, который всё растёт",
+            "note": "Никто не встаёт"
+          },
+          "reservation": {
+            "label": "В месте, забронированном за несколько месяцев",
+            "note": "Стоит каждой копейки"
+          }
+        }
+      },
+      "light": {
+        "kicker": "Свет",
+        "prompt": "Ради какого света вы пересекли бы весь город?",
+        "options": {
+          "neon": {
+            "label": "Неон на мокром асфальте",
+            "note": "После полуночи"
+          },
+          "limestone": {
+            "label": "Золото на известняке",
+            "note": "Последний час перед сумерками"
+          },
+          "noon": {
+            "label": "Резкое полуденное солнце на воде",
+            "note": "Глазам больно смотреть"
+          },
+          "sunrise": {
+            "label": "Рассвет между небоскрёбами",
+            "note": "Весь город светится"
+          }
+        }
+      },
+      "extraDay": {
+        "kicker": "Ещё один день",
+        "prompt": "У вас появился день, которого вы не ждали.",
+        "options": {
+          "train": {
+            "label": "Сесть на незапланированный поезд",
+            "note": "Выйти там, где подскажет чутьё"
+          },
+          "return": {
+            "label": "Вернуться туда, где понравилось больше всего",
+            "note": "На этот раз — не спеша"
+          },
+          "water": {
+            "label": "Найти воду и остаться в ней",
+            "note": "И больше ничего"
+          },
+          "neighbourhood": {
+            "label": "Посмотреть ещё один район",
+            "note": "Гулять, пока не заболят ноги"
+          }
+        }
+      }
+    },
+    "resultEyebrow": "Ваше место у окна",
+    "flyNow": "Лететь сейчас",
+    "restart": "Начать заново",
+    "remaining": "{count, plural, one {Остался # вопрос} few {Осталось # вопроса} many {Осталось # вопросов} other {Осталось # вопроса}} · неправильных ответов нет"
+  },
+  "Wheel": {
+    "label": "Колесо стран",
+    "spin": "Крутить",
+    "hint": "Крутите · или потяните колесо",
+    "statusSettled": "Ваш маршрут",
+    "statusSpinning": "Колесо вращается",
+    "statusIdle": "Крутите колесо и откройте свой следующий маршрут",
+    "capital": "Столица",
+    "subregion": "Субрегион",
+    "landBorder": "Сухопутные границы",
+    "neighbours": "{count, plural, one {# сосед} few {# соседа} many {# соседей} other {# соседа}}",
+    "noLandBorder": "Нет — остров или изолированная территория",
+    "gateway": "Точка въезда",
+    "takeMe": "Летим: {country}",
+    "spinToChoose": "Крутите, чтобы выбрать"
+  },
+  "Consent": {
+    "eyebrow": "Конфиденциальность",
+    "title": "Настройки файлов cookie",
+    "body": "Мы всегда используем хранилище, необходимое для работы сайта. С вашего согласия мы измеряем использование сайта с помощью Google Analytics и позволяем Google подбирать рекламу по вашим интересам. Изменить выбор можно в любое время по ссылке «Настройки cookie» внизу страницы.",
+    "policyLink": "Политика cookie",
+    "acceptAll": "Принять все",
+    "rejectAll": "Отклонить все",
+    "manage": "Настроить",
+    "save": "Сохранить выбор",
+    "dialogTitle": "Настройки cookie",
+    "dialogIntro": "Выберите, какие технологии разрешить. Необходимые нужны для работы сайта и не отключаются. Подробнее:",
+    "close": "Закрыть",
+    "alwaysOn": "Всегда включены",
+    "necessaryTitle": "Необходимые и функциональные",
+    "necessaryBody": "Безопасная доставка страниц; сохранение на вашем устройстве выбора по cookie, города вылета в анимации полёта и прогресса в игре с флагами; кэширование посещённых страниц для чтения офлайн. Ничего из этого не используется для отслеживания на других сайтах.",
+    "analyticsTitle": "Аналитика",
+    "analyticsBody": "Измерение с помощью Google Analytics того, какие страницы читают и как используется сайт. С вашего согласия используются cookie Google Analytics (_ga); без него Google Analytics не загружается вовсе.",
+    "adsTitle": "Реклама",
+    "adsBody": "Cookie и идентификаторы, с помощью которых Google AdSense персонализирует рекламу по вашим интересам и измеряет её. Если вы откажетесь, вы можете видеть неперсонализированную или ограниченную рекламу.",
+    "saved": "Настройки cookie сохранены."
+  },
+  "Regions": {
+    "europe": {
+      "name": "Европа",
+      "guides": "Путеводители по Европе",
+      "more": "Другие путеводители по странам Европы"
+    },
+    "asia": {
+      "name": "Азия",
+      "guides": "Путеводители по Азии",
+      "more": "Другие путеводители по странам Азии"
+    },
+    "americas": {
+      "name": "Америка",
+      "guides": "Путеводители по Америке",
+      "more": "Другие путеводители по странам Америки"
+    },
+    "africa": {
+      "name": "Африка",
+      "guides": "Путеводители по Африке",
+      "more": "Другие путеводители по странам Африки"
+    }
+  }
+}

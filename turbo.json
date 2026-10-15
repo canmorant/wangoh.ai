@@ -1,0 +1,25 @@
+{
+  "$schema": "https://turborepo.com/schema.json",
+  // Görevler yalnız ilgili uygulamada tanımlı betikleri çalıştırır: build ve dev
+  // web'de, mobilde yok (Expo'nun yerel derlemesi Turbo'nun işi değil), lint web'de,
+  // typecheck ikisinde.
+  //
+  // Mevcut derleme ortamı (Vercel sistem değişkenleri, NEXT_PUBLIC_* ve sunucu
+  // değişkenleri) aynen görünsün diye strict değil loose kip. Önbellek anahtarına
+  // girmesi gerekenler `env` içinde (web'in okuduğu değişkenler).
+  "envMode": "loose",
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": [".next/**", "!.next/cache/**"],
+      "env": ["NEXT_PUBLIC_*", "GOOGLE_SITE_VERIFICATION", "VERCEL"]
+    },
+    "lint": {},
+    "typecheck": {},
+    "dev": {
+      "cache": false,
+      "persistent": true
+    }
+  }
+}
