@@ -1,0 +1,15 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "categories": {
+    "correctness": "error"
+  },
+  "rules": {
+    "typescript/no-explicit-any": "off",
+    "typescript/no-floating-promises": "off",
+    "no-unused-vars": ["error", { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }]
+  },
+  "env": {
+    "node": true
+  },
+  "ignorePatterns": ["dist", ".data", "drizzle"]
+}

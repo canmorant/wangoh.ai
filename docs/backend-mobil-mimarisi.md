@@ -63,7 +63,7 @@ Yol çözümleme: `src/db/migrate.ts` ve tohum yükleyici, `drizzle/` ve `seed/`
 | Derleme | `nest build` (tsc). tsx/esbuild decorator metadata üretmez; çalıştırma ve OpenAPI dışa aktarma derlenmiş koddan |
 | Test | Vitest 4 + supertest. Birim `*.spec.ts`, e2e `*.e2e-spec.ts` (`test/`) |
 | Lint | oxlint (`apps/api`), web'de mevcut ESLint |
-| Veritabanı | PostgreSQL. `DATABASE_URL` varsa node-postgres, yoksa PGlite (dev: `apps/api/.data/pglite`, test: bellek) |
+| Veritabanı | PostgreSQL. `DATABASE_URL` varsa node-postgres, yoksa PGlite (dev: `apps/api/.data/pglite`, test: bellek). PGlite tek süreçlidir: klasörü `<klasör>.lock` ile korunur, ikinci açılış hatayla reddedilir. `int8` (bigint) sonuçları (`count(*)`, `rank()`...) iki sürücüde de `number` döner; `numeric` dizgidir |
 | ORM | Drizzle ORM (pg-core) + drizzle-kit migrasyonları |
 | Doğrulama | class-validator + class-transformer, global `ValidationPipe({ whitelist, forbidNonWhitelisted, transform })` |
 | Swagger | `@nestjs/swagger`, `/docs` (UI) ve `/docs-json`; Bearer JWT şeması; `operationId` = `<Denetleyici><Metot>` (ör. `authLogin`, `contentListCountries`) |
@@ -82,12 +82,12 @@ API (`apps/api/.env.example`):
 | `PORT` | varsayılan 3001 |
 | `NODE_ENV` | development / test / production |
 | `DATABASE_URL` | yoksa PGlite |
-| `PGLITE_DIR` | varsayılan `.data/pglite`; `memory://` bellek |
-| `JWT_ACCESS_SECRET` | production'da ZORUNLU, ≥ 32 karakter. dev/test'te sabit güvensiz varsayılan + uyarı |
+| `PGLITE_DIR` | varsayılan `.data/pglite`; `memory://` bellek. Klasörü aynı anda tek süreç açar |
+| `JWT_ACCESS_SECRET` | production'da ZORUNLU, ≥ 32 karakter (belirteç imzalayan sunucu için; `db:seed` CLI'si istemez). dev/test'te sabit güvensiz varsayılan + uyarı |
 | `ACCESS_TOKEN_TTL` | varsayılan `15m` |
 | `REFRESH_TOKEN_TTL_DAYS` | varsayılan 30 |
 | `CORS_ORIGINS` | virgülle ayrılmış; dev'de `localhost` kaynaklarına izin |
-| `TRUST_PROXY` | ters vekil arkasında istemci IP'si için |
+| `TRUST_PROXY` | ters vekil arkasında istemci IP'si için: `true`/`false`, atlama sayısı, `loopback`/`linklocal`/`uniquelocal` ya da virgülle ayrılmış IP/alt ağ listesi. Geçersiz değer açılışta Türkçe yapılandırma hatasıdır |
 | `ADMIN_EMAIL`, `ADMIN_PASSWORD` | ikisi de varsa açılışta idempotent admin oluşturur |
 | `ASSETS_BASE_URL` | varsayılan `https://wangoh.com` (görsel/bayrak mutlak adresleri) |
 | `SEED_ON_BOOT` | dev/test: `true`, production: `false`; tohum idempotent (upsert) |
@@ -110,7 +110,9 @@ Web: `NEXT_PUBLIC_API_URL`.
 - Yenileme belirteci: 256 bit rastgele opak değer, veritabanında yalnız SHA-256 özeti. Her
   yenilemede döner (rotation). Aynı aileden kullanılmış bir belirteç yeniden gelirse ailenin tamamı
   iptal edilir (reuse detection). Çıkış, parola değişimi, hesap silme ve devre dışı bırakma ilgili
-  belirteçleri iptal eder.
+  belirteçleri iptal eder. Belirteç satırına dokunan her işlem önce sahibinin `users` satırını kilitler
+  (kilit sırası `users` → `refresh_tokens`): eşzamanlı yenileme, çıkış ve yönetici işlemleri kilitlenmeye
+  (deadlock) girmez ve aile iptali sürmekte olan bir yenilemenin yeni belirtecini kaçırmaz.
 - Global guard'lar: `JwtAuthGuard` (varsayılan kapalı kapı), `@Public()` ile açılır; `RolesGuard`
   ve `@Roles("admin")`.
 - Giriş: bilinmeyen e-postada da parola doğrulama süresi benzeri (sahte özet), genel hata mesajı.
@@ -134,7 +136,10 @@ Web: `NEXT_PUBLIC_API_URL`.
 Hata gövdesi her yerde aynı: `{ statusCode, code, message, details? }`. `message` Türkçe ve kullanıcıya
 gösterilebilir, `code` makine okur (`AUTH_INVALID_CREDENTIALS`, `AUTH_EMAIL_TAKEN`,
 `AUTH_TOKEN_INVALID`, `FORBIDDEN`, `VALIDATION_FAILED`, `NOT_FOUND`, `RATE_LIMITED`...). Üretimde iç
-ayrıntı sızmaz.
+ayrıntı sızmaz. Doğrulama hatasında `details` en fazla 50 kayıttır. İstemci girdisi hiçbir zaman 500
+üretmez: çok derin iç içe JSON (> 64 seviye), nesne başına > 500 anahtar, eşleşmemiş vekil karakter ve
+yoldaki/sorgudaki `%00` ayrıştırıldıktan hemen sonra 400 `VALIDATION_FAILED` olur. Açılış hataları da
+SQL parametresi (`ADMIN_EMAIL`, parola özeti) içermeden, temizlenmiş özetle yazılır.
 
 ## 6. İçerik (kıtalar, ülkeler, şehirler, rehberler)
 
@@ -296,6 +301,10 @@ export function apiFetch<T>(url: string, init?: RequestInit): Promise<T>;  // Or
   gelir. Yasal/çerez metinlerine dokunma.
 - **Dil:** kod ve API alan adları İngilizce; kullanıcıya görünen metinler (mobil arayüz, API hata
   mesajları) Türkçe; kod yorumları kısa ve Türkçe, yalnız "neden"i anlatır.
+- **DTO/SQL kuralları:** JSON gövdede "isteğe bağlı ama null olamaz" alanlarda `@IsOptional()` değil
+  `@IsOptionalNotNull()` (`common/validators.ts`); serbest metin alanlarına `@NoNullBytes()`. `count(*)` gibi
+  ham `int8` ifadeleri iki sürücüde de `number` döner, `avg(...)` (`numeric`) dizgidir. Belirteç satırına
+  dokunan yeni kod önce `TokensService.lockUser` ile kullanıcıyı kilitler.
 - **Testler:** her alan görevi kendi testlerini yazar (e2e, gerçek PGlite bellek veritabanı, mock yok).
   Test verisini kendi kurar (ortak yardımcı: `apps/api/test/helpers`); başka modülün tohumuna bağlanmaz.
 - **Kanıt:** "çalışıyor" demeden önce komutu çalıştır (derleme, tip denetimi, lint, test) ve çıktıyı

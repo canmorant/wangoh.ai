@@ -1,0 +1,1268 @@
+{
+  "components": {
+    "schemas": {
+      "AdminUpdateUserDto": {
+        "properties": {
+          "disabled": {
+            "type": "boolean"
+          },
+          "displayName": {
+            "maxLength": 50,
+            "minLength": 2,
+            "type": "string"
+          },
+          "role": {
+            "enum": [
+              "user",
+              "admin"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "AuthResponseDto": {
+        "properties": {
+          "accessToken": {
+            "description": "Kısa ömürlü JWT (HS256). `Authorization: Bearer <accessToken>` ile gönderilir.",
+            "type": "string"
+          },
+          "expiresIn": {
+            "description": "Erişim belirtecinin saniye cinsinden ömrü.",
+            "example": 900,
+            "type": "integer"
+          },
+          "refreshToken": {
+            "description": "Opak yenileme belirteci (256 bit). Sunucuda yalnız SHA-256 özeti tutulur.",
+            "type": "string"
+          },
+          "user": {
+            "$ref": "#/components/schemas/UserDto"
+          }
+        },
+        "required": [
+          "accessToken",
+          "refreshToken",
+          "expiresIn",
+          "user"
+        ],
+        "type": "object"
+      },
+      "ChangePasswordDto": {
+        "properties": {
+          "currentPassword": {
+            "format": "password",
+            "maxLength": 128,
+            "type": "string"
+          },
+          "newPassword": {
+            "format": "password",
+            "maxLength": 128,
+            "minLength": 8,
+            "type": "string"
+          }
+        },
+        "required": [
+          "currentPassword",
+          "newPassword"
+        ],
+        "type": "object"
+      },
+      "DeleteAccountDto": {
+        "properties": {
+          "password": {
+            "description": "Hesabı silmeyi onaylamak için mevcut parola.",
+            "format": "password",
+            "maxLength": 128,
+            "type": "string"
+          }
+        },
+        "required": [
+          "password"
+        ],
+        "type": "object"
+      },
+      "ErrorResponseDto": {
+        "properties": {
+          "code": {
+            "description": "Makine okur hata kodu.",
+            "example": "VALIDATION_FAILED",
+            "type": "string"
+          },
+          "details": {
+            "description": "Doğrulama hatalarında (`VALIDATION_FAILED`) alan başına ayrıntı; diğer hatalarda yoktur.",
+            "items": {
+              "$ref": "#/components/schemas/FieldErrorDetailDto"
+            },
+            "type": "array"
+          },
+          "message": {
+            "description": "Kullanıcıya gösterilebilir Türkçe mesaj.",
+            "example": "Girilen bilgiler geçersiz.",
+            "type": "string"
+          },
+          "statusCode": {
+            "example": 400,
+            "type": "integer"
+          }
+        },
+        "required": [
+          "statusCode",
+          "code",
+          "message"
+        ],
+        "type": "object"
+      },
+      "FieldErrorDetailDto": {
+        "properties": {
+          "code": {
+            "description": "Makine okur kısıt adı (class-validator): `isEmail`, `maxLength`, `whitelistValidation`...",
+            "example": "isEmail",
+            "type": "string"
+          },
+          "field": {
+            "description": "Noktalı alan yolu (`items.0.text`). Gövde düzeyi hatalarda boş.",
+            "example": "email",
+            "type": "string"
+          },
+          "message": {
+            "description": "Kullanıcıya gösterilebilir Türkçe açıklama.",
+            "example": "Geçerli bir e-posta adresi girin.",
+            "type": "string"
+          }
+        },
+        "required": [
+          "field",
+          "code",
+          "message"
+        ],
+        "type": "object"
+      },
+      "HealthDto": {
+        "properties": {
+          "status": {
+            "example": "ok",
+            "type": "string"
+          }
+        },
+        "required": [
+          "status"
+        ],
+        "type": "object"
+      },
+      "LoginDto": {
+        "properties": {
+          "email": {
+            "example": "ayse@example.com",
+            "format": "email",
+            "maxLength": 254,
+            "type": "string"
+          },
+          "password": {
+            "format": "password",
+            "maxLength": 128,
+            "type": "string"
+          }
+        },
+        "required": [
+          "email",
+          "password"
+        ],
+        "type": "object"
+      },
+      "RefreshTokenDto": {
+        "properties": {
+          "refreshToken": {
+            "description": "Son verilen yenileme belirteci. Her yenilemede döner; eskisi bir daha kullanılamaz.",
+            "maxLength": 256,
+            "minLength": 16,
+            "type": "string"
+          }
+        },
+        "required": [
+          "refreshToken"
+        ],
+        "type": "object"
+      },
+      "RegisterDto": {
+        "properties": {
+          "displayName": {
+            "example": "Ayşe",
+            "maxLength": 50,
+            "minLength": 2,
+            "type": "string"
+          },
+          "email": {
+            "description": "Küçük harfe çevrilir ve kırpılır; benzersizlik büyük/küçük harf duyarsızdır.",
+            "example": "ayse@example.com",
+            "format": "email",
+            "maxLength": 254,
+            "type": "string"
+          },
+          "password": {
+            "format": "password",
+            "maxLength": 128,
+            "minLength": 8,
+            "type": "string"
+          }
+        },
+        "required": [
+          "email",
+          "password",
+          "displayName"
+        ],
+        "type": "object"
+      },
+      "UpdateMeDto": {
+        "properties": {
+          "displayName": {
+            "example": "Ayşe",
+            "maxLength": 50,
+            "minLength": 2,
+            "type": "string"
+          }
+        },
+        "required": [
+          "displayName"
+        ],
+        "type": "object"
+      },
+      "UserDto": {
+        "properties": {
+          "createdAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "disabled": {
+            "description": "Devre dışı hesaplar giriş yapamaz; mevcut belirteçleri anında reddedilir.",
+            "type": "boolean"
+          },
+          "displayName": {
+            "example": "Ayşe",
+            "type": "string"
+          },
+          "email": {
+            "example": "ayse@example.com",
+            "format": "email",
+            "type": "string"
+          },
+          "id": {
+            "format": "uuid",
+            "type": "string"
+          },
+          "role": {
+            "enum": [
+              "user",
+              "admin"
+            ],
+            "type": "string"
+          },
+          "updatedAt": {
+            "format": "date-time",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "email",
+          "displayName",
+          "role",
+          "disabled",
+          "createdAt",
+          "updatedAt"
+        ],
+        "type": "object"
+      },
+      "UserPageDto": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/UserDto"
+            },
+            "type": "array"
+          },
+          "page": {
+            "example": 1,
+            "type": "integer"
+          },
+          "pageSize": {
+            "example": 20,
+            "type": "integer"
+          },
+          "total": {
+            "description": "Filtreyle eşleşen toplam kayıt sayısı.",
+            "example": 0,
+            "type": "integer"
+          }
+        },
+        "required": [
+          "items",
+          "page",
+          "pageSize",
+          "total"
+        ],
+        "type": "object"
+      }
+    },
+    "securitySchemes": {
+      "bearer": {
+        "bearerFormat": "JWT",
+        "scheme": "bearer",
+        "type": "http"
+      }
+    }
+  },
+  "info": {
+    "contact": {},
+    "description": "Wangoh mobil ve web istemcileri için REST API. Tüm yollar `/v1` altındadır. Kimlik doğrulama: `Authorization: Bearer <accessToken>`. Hata gövdesi her yerde `{ statusCode, code, message, details? }`.",
+    "title": "Wangoh API",
+    "version": "0.1.0"
+  },
+  "openapi": "3.0.0",
+  "paths": {
+    "/v1/auth/login": {
+      "post": {
+        "operationId": "authLogin",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthResponseDto"
+                }
+              }
+            },
+            "description": "Giriş başarılı."
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Geçersiz istek ya da doğrulama hatası."
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kimlik doğrulama gerekli ya da belirteç geçersiz."
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Bu işlem için yetki yok."
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çok fazla istek (hız sınırı)."
+          }
+        },
+        "summary": "E-posta ve parolayla giriş yapar",
+        "tags": [
+          "auth"
+        ]
+      }
+    },
+    "/v1/auth/logout": {
+      "post": {
+        "description": "Belirtecin ailesini iptal eder. Bilinmeyen belirteç de 204 döner.",
+        "operationId": "authLogout",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RefreshTokenDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "204": {
+            "description": "Oturum kapatıldı."
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Geçersiz istek ya da doğrulama hatası."
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çok fazla istek (hız sınırı)."
+          }
+        },
+        "summary": "Oturumu kapatır",
+        "tags": [
+          "auth"
+        ]
+      }
+    },
+    "/v1/auth/me": {
+      "get": {
+        "operationId": "authMe",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserDto"
+                }
+              }
+            },
+            "description": "Oturumdaki kullanıcı."
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kimlik doğrulama gerekli ya da belirteç geçersiz."
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çok fazla istek (hız sınırı)."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Oturumdaki kullanıcıyı döner",
+        "tags": [
+          "auth"
+        ]
+      }
+    },
+    "/v1/auth/refresh": {
+      "post": {
+        "description": "Yeni erişim + yenileme belirteci çifti verir; gönderilen belirteç tek kullanımlıktır. Kullanılmış bir belirteç tekrar gelirse oturumun tamamı iptal edilir.",
+        "operationId": "authRefresh",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RefreshTokenDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthResponseDto"
+                }
+              }
+            },
+            "description": "Yeni belirteç çifti."
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Geçersiz istek ya da doğrulama hatası."
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kimlik doğrulama gerekli ya da belirteç geçersiz."
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çok fazla istek (hız sınırı)."
+          }
+        },
+        "summary": "Yenileme belirtecini döndürür",
+        "tags": [
+          "auth"
+        ]
+      }
+    },
+    "/v1/auth/register": {
+      "post": {
+        "description": "Her zaman `user` rolü verir. Yanıt oturum açılmış gibi belirteç çiftini de döner.",
+        "operationId": "authRegister",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthResponseDto"
+                }
+              }
+            },
+            "description": "Hesap oluşturuldu; oturum belirteçleri döner."
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Geçersiz istek ya da doğrulama hatası."
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çakışma (ör. e-posta kayıtlı, sıra bozuk)."
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çok fazla istek (hız sınırı)."
+          }
+        },
+        "summary": "Yeni hesap oluşturur",
+        "tags": [
+          "auth"
+        ]
+      }
+    },
+    "/v1/health": {
+      "get": {
+        "operationId": "healthCheck",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthDto"
+                }
+              }
+            },
+            "description": "Servis ve veritabanı çalışıyor."
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çok fazla istek (hız sınırı)."
+          }
+        },
+        "summary": "Sağlık denetimi (veritabanı bağlantısını da sınar)",
+        "tags": [
+          "health"
+        ]
+      }
+    },
+    "/v1/users": {
+      "get": {
+        "operationId": "usersList",
+        "parameters": [
+          {
+            "description": "Sayfa numarası (1'den başlar).",
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "default": 1,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          {
+            "description": "Sayfa boyutu (en fazla 100).",
+            "in": "query",
+            "name": "pageSize",
+            "required": false,
+            "schema": {
+              "default": 20,
+              "maximum": 100,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          {
+            "description": "E-posta ya da görünen adda arama (büyük/küçük harf duyarsız, joker karakterler kaçırılır).",
+            "in": "query",
+            "name": "q",
+            "required": false,
+            "schema": {
+              "maxLength": 100,
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "role",
+            "required": false,
+            "schema": {
+              "enum": [
+                "user",
+                "admin"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserPageDto"
+                }
+              }
+            },
+            "description": "Sayfalı kullanıcı listesi."
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Geçersiz istek ya da doğrulama hatası."
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kimlik doğrulama gerekli ya da belirteç geçersiz."
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Bu işlem için yetki yok."
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çok fazla istek (hız sınırı)."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Kullanıcıları listeler (yönetici)",
+        "tags": [
+          "users"
+        ]
+      }
+    },
+    "/v1/users/me": {
+      "delete": {
+        "description": "Parola onayı ister. Son yönetici hesabı silinemez (409 `LAST_ADMIN`).",
+        "operationId": "usersDeleteMe",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteAccountDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "204": {
+            "description": "Hesap ve ilişkili veriler silindi."
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Geçersiz istek ya da doğrulama hatası."
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kimlik doğrulama gerekli ya da belirteç geçersiz."
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Bu işlem için yetki yok."
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çakışma (ör. e-posta kayıtlı, sıra bozuk)."
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çok fazla istek (hız sınırı)."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Hesabı kalıcı olarak siler",
+        "tags": [
+          "users"
+        ]
+      },
+      "patch": {
+        "description": "Rol, e-posta gibi alanlar kabul edilmez (400).",
+        "operationId": "usersUpdateMe",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateMeDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserDto"
+                }
+              }
+            },
+            "description": "Güncellenmiş kullanıcı."
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Geçersiz istek ya da doğrulama hatası."
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kimlik doğrulama gerekli ya da belirteç geçersiz."
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çok fazla istek (hız sınırı)."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Görünen adı günceller",
+        "tags": [
+          "users"
+        ]
+      }
+    },
+    "/v1/users/me/password": {
+      "post": {
+        "description": "Başarılı olunca tüm oturumlar (bu cihaz dahil) kapanır; istemci yeniden giriş ister.",
+        "operationId": "usersChangePassword",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangePasswordDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "204": {
+            "description": "Parola değişti, tüm belirteçler iptal edildi."
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Geçersiz istek ya da doğrulama hatası."
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kimlik doğrulama gerekli ya da belirteç geçersiz."
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Bu işlem için yetki yok."
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çakışma (ör. e-posta kayıtlı, sıra bozuk)."
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çok fazla istek (hız sınırı)."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Parolayı değiştirir",
+        "tags": [
+          "users"
+        ]
+      }
+    },
+    "/v1/users/{id}": {
+      "delete": {
+        "operationId": "usersRemove",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Kullanıcı silindi."
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Geçersiz istek ya da doğrulama hatası."
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kimlik doğrulama gerekli ya da belirteç geçersiz."
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Bu işlem için yetki yok."
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kayıt bulunamadı."
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çakışma (ör. e-posta kayıtlı, sıra bozuk)."
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çok fazla istek (hız sınırı)."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Kullanıcıyı siler (yönetici)",
+        "tags": [
+          "users"
+        ]
+      },
+      "get": {
+        "operationId": "usersGet",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserDto"
+                }
+              }
+            },
+            "description": "Kullanıcı."
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Geçersiz istek ya da doğrulama hatası."
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kimlik doğrulama gerekli ya da belirteç geçersiz."
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Bu işlem için yetki yok."
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kayıt bulunamadı."
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çok fazla istek (hız sınırı)."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Kullanıcı ayrıntısı (yönetici)",
+        "tags": [
+          "users"
+        ]
+      },
+      "patch": {
+        "description": "Son aktif yönetici düşürülemez/devre dışı bırakılamaz (409 `LAST_ADMIN`). Devre dışı bırakma oturumları anında kapatır.",
+        "operationId": "usersUpdate",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdminUpdateUserDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserDto"
+                }
+              }
+            },
+            "description": "Güncellenmiş kullanıcı."
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Geçersiz istek ya da doğrulama hatası."
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kimlik doğrulama gerekli ya da belirteç geçersiz."
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Bu işlem için yetki yok."
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kayıt bulunamadı."
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çakışma (ör. e-posta kayıtlı, sıra bozuk)."
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çok fazla istek (hız sınırı)."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Rol, devre dışı durumu ya da adı günceller (yönetici)",
+        "tags": [
+          "users"
+        ]
+      }
+    }
+  },
+  "servers": [],
+  "tags": []
+}
