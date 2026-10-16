@@ -15,6 +15,8 @@ const nextConfig: NextConfig = {
   env: {
     NEXT_PUBLIC_SITE_LOCALES: siteLocales,
   },
+  // Ortak API istemcisi (packages/api-client) derlenmeden TypeScript kaynağı olarak tüketilir.
+  transpilePackages: ["@wangoh/api-client"],
   experimental: {
     // Kök layout üst seviye dinamik bir segmentte (app/[locale]/layout.tsx).
     // Next 16 dokümanı bu yapı için global-not-found.tsx öneriyor: hiçbir

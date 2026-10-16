@@ -1,0 +1,28 @@
+{
+  "name": "@wangoh/api-client",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Wangoh API istemcisi: apps/api/openapi.json dosyasından Orval ile üretilen TanStack Query v5 kancaları.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "generate": "orval --config orval.config.ts",
+    "typecheck": "tsc --noEmit -p .",
+    "test": "vitest run"
+  },
+  "peerDependencies": {
+    "@tanstack/react-query": "^5",
+    "react": "^19"
+  },
+  "devDependencies": {
+    "@tanstack/react-query": "^5.104.3",
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "orval": "^8",
+    "react": "19.2.4",
+    "typescript": "^5",
+    "vitest": "^4"
+  }
+}

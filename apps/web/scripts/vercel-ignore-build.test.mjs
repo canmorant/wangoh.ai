@@ -6,7 +6,7 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import test from "node:test";
 
-test("Vercel skips mobile and documentation changes but builds every website, root config and dependency change since the last deployment", () => {
+test("Vercel skips mobile, API and documentation changes but builds every website, shared package, root config and dependency change since the last deployment", () => {
   const repo = mkdtempSync(join(tmpdir(), "wangoh-ignore-build-"));
   const script = fileURLToPath(new URL("./vercel-ignore-build.mjs", import.meta.url));
   const git = (...args) => execFileSync("git", args, { cwd: repo, encoding: "utf8" }).trim();
@@ -38,7 +38,7 @@ test("Vercel skips mobile and documentation changes but builds every website, ro
     assert.equal(decision(base, documentation), 0, "mobile and documentation only");
 
     let previousCommit = documentation;
-    for (const rootFile of ["package.json", "package-lock.json", "turbo.json"]) {
+    for (const rootFile of ["package.json", "package-lock.json", "pnpm-lock.yaml", "pnpm-workspace.yaml", "turbo.json"]) {
       write(rootFile, rootFile);
       const rootChange = commit();
       assert.equal(decision(previousCommit, rootChange), 1, `${rootFile} affects the website build`);
@@ -47,6 +47,36 @@ test("Vercel skips mobile and documentation changes but builds every website, ro
     write("apps/mobile/package.json", "mobile dependency");
     const mobileManifest = commit();
     assert.equal(decision(previousCommit, mobileManifest), 0, "apps/mobile alone does not affect the website");
+
+    write("apps/api/src/main.ts", "api server");
+    write("apps/api/openapi.json", "{}");
+    write("apps/api/drizzle/0000_init.sql", "create table t ();");
+    write("apps/api/package.json", "api dependency");
+    const apiOnly = commit();
+    assert.equal(decision(mobileManifest, apiOnly), 0, "apps/api alone does not affect the website");
+
+    write("apps/api/src/app.module.ts", "api module");
+    write("apps/mobile/app/index.tsx", "mobile screen");
+    write("docs/backend-mobil-mimarisi.md", "docs");
+    const apiMobileDocs = commit();
+    assert.equal(decision(apiOnly, apiMobileDocs), 0, "api, mobile and documentation together still skip");
+
+    write("apps/api/src/users.ts", "api");
+    write("apps/web/src/lib/api/ApiProvider.tsx", "website wiring");
+    const apiAndWebsite = commit();
+    assert.equal(decision(apiMobileDocs, apiAndWebsite), 1, "a website file next to API changes still builds");
+
+    write("packages/api-client/src/mutator.ts", "shared client");
+    const clientSource = commit();
+    assert.equal(decision(apiAndWebsite, clientSource), 1, "packages/* is compiled into the website");
+    write("packages/api-client/package.json", "client manifest");
+    const clientManifest = commit();
+    assert.equal(decision(clientSource, clientManifest), 1, "a packages/* manifest affects the website install");
+
+    write("apps/api/src/later.ts", "api only again");
+    const apiAfterPackages = commit();
+    assert.equal(decision(clientManifest, apiAfterPackages), 0);
+    assert.equal(decision(apiAndWebsite, apiAfterPackages), 1, "an earlier unpublished packages change must still trigger a build");
 
     write("apps/web/src/page.tsx", "website update");
     const website = commit();

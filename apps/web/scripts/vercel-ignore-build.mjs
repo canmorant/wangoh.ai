@@ -11,12 +11,13 @@ try {
   const paths = execFileSync("git", ["diff", "--no-renames", "--name-only", "-z", previous, current], {
     encoding: "utf8",
   }).split("\0").filter(Boolean);
-  // Monorepo: yalnız mobil uygulamayı (apps/mobile) ve dokümantasyonu ilgilendiren
-  // değişiklikler web yayınını tetiklemez. Kök yapılandırma ve bağımlılık dosyaları
-  // (package.json, package-lock.json, turbo.json ...) ve apps/web altındaki her şey
-  // derlemeyi tetikler.
+  // Monorepo: yalnız mobil uygulamayı (apps/mobile), API'yi (apps/api) ve dokümantasyonu
+  // ilgilendiren değişiklikler web yayınını tetiklemez. Kök yapılandırma ve bağımlılık
+  // dosyaları (package.json, pnpm-lock.yaml, pnpm-workspace.yaml, turbo.json ...),
+  // ortak paketler (packages/*, web onları kaynak olarak derler) ve apps/web altındaki
+  // her şey derlemeyi tetikler.
   const nonWebChange = (path) =>
-    /^apps\/mobile\//.test(path) ||
+    /^apps\/(mobile|api)\//.test(path) ||
     /^(docs|reports|\.claude|\.codex)\//.test(path) ||
     /^apps\/web\/docs\//.test(path) ||
     /^[^/]+\.md$/i.test(path) ||

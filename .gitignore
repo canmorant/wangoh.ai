@@ -9,3 +9,13 @@ node_modules/
 
 # TypeScript artımlı derleme önbelleği
 *.tsbuildinfo
+
+# API (apps/api): derleme çıktısı, yerel PGlite veritabanı, test kapsama raporu.
+# Orval çıktısı (packages/api-client/src/generated) ve apps/api/openapi.json commit'lenir.
+# .expo/ ve expo-env.d.ts apps/mobile/.gitignore'da.
+dist/
+.data/
+coverage/
+
+# Günlük dosyaları
+*.log

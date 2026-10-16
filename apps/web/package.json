@@ -15,8 +15,10 @@
   "dependencies": {
     "@fontsource/instrument-serif": "^5.3.0",
     "@gsap/react": "^2.1.2",
+    "@tanstack/react-query": "^5.104.3",
     "@types/d3-geo": "^3.1.0",
     "@types/topojson-client": "^3.1.5",
+    "@wangoh/api-client": "workspace:*",
     "d3-geo": "^3.1.1",
     "flag-icons": "^7.5.0",
     "framer-motion": "^12.43.0",
