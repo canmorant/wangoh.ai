@@ -1,0 +1,10 @@
+{
+  // Saf birim testleri (node:test) için ayrı program: uygulama kodunda Node tipleri yüklenmez,
+  // çünkü global setTimeout gibi tipleri React Native'inkilerle çakıştırır.
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "types": ["node"]
+  },
+  "include": ["src/**/*.test.ts"],
+  "exclude": ["node_modules", "dist"]
+}
