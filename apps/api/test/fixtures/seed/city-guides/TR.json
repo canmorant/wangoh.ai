@@ -1,0 +1,107 @@
+{
+ "countryCode": "TR",
+ "guides": [
+  {
+   "citySlug": "istanbul",
+   "completeLangs": [],
+   "reviewed": false,
+   "translations": {
+    "tr": {
+     "countryInfoOnHub": true,
+     "faqs": [
+      {
+       "a": "Test cevap.",
+       "q": "Test soru?"
+      }
+     ],
+     "h1": "İstanbul Rehberi",
+     "itinerary": [
+      {
+       "afternoon": "Öğleden sonra",
+       "evening": "Akşam",
+       "morning": "Sabah",
+       "title": "1. gün"
+      }
+     ],
+     "lede": "Test giriş cümlesi.",
+     "places": [
+      {
+       "area": "Merkez",
+       "known": "Test",
+       "name": "Test Mekânı 1",
+       "price": "Orta",
+       "tip": "Test ipucu.",
+       "why": "Test nedeni."
+      },
+      {
+       "area": "Merkez",
+       "known": "Test",
+       "name": "Test Mekânı 2",
+       "why": "Test nedeni."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Pratik bilgiler",
+     "practicalTips": [
+      {
+       "body": "Test ipucu gövdesi.",
+       "title": "Test"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Para birimi",
+       "value": "Euro"
+      },
+      {
+       "label": "Dil",
+       "value": "Test"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "İzmir'e geçin",
+       "city": "İzmir",
+       "description": "Test ilgili rehber."
+      }
+     ],
+     "reviewedAt": "2026-01-31",
+     "sections": [
+      {
+       "body": [
+        "Test ulaşım paragrafı."
+       ],
+       "heading": "Ulaşım",
+       "id": "ulasim",
+       "subsections": [
+        {
+         "body": [
+          "Test alt bölüm."
+         ],
+         "heading": "Metro"
+        }
+       ]
+      },
+      {
+       "body": [
+        "Test mutfak paragrafı.",
+        "İkinci paragraf."
+       ],
+       "heading": "Mutfak",
+       "id": "mutfak"
+      }
+     ],
+     "seoDescription": "İstanbul için test rehberi.",
+     "seoTitle": "İstanbul Gezi Rehberi",
+     "sources": [
+      {
+       "name": "Test kaynak",
+       "url": "https://example.com/kaynak"
+      }
+     ],
+     "volatileNote": "Test not."
+    }
+   }
+  }
+ ]
+}

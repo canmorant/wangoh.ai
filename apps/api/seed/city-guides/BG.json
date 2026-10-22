@@ -1,0 +1,2252 @@
+{
+ "countryCode": "BG",
+ "guides": [
+  {
+   "citySlug": "sofya",
+   "completeLangs": [
+    "en",
+    "es"
+   ],
+   "reviewed": true,
+   "translations": {
+    "en": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Knyaginya Mariya Luiza Blvd",
+        "category": "halal",
+        "cuisine": "Turkish grills and home cooking",
+        "description": "Certified halal Turkish grill house steps away from the historic Banya Bashi Mosque, offering grilled meats, stews and fresh bread.",
+        "lastVerified": "2026-10-06",
+        "name": "Restaurant Türk (Banyabaşı Camii yanı)",
+        "price": "Ekonomik",
+        "verification": {
+         "note": "Meat sourcing is certified halal; alcohol-free restaurant.",
+         "sourceName": "Chief Mufti's Office of Bulgaria Halal Guide",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://www.visitsofia.bg/en",
+         "status": "certified-halal"
+        },
+        "why": "The number one choice in central Sofia for guaranteed halal meats right beside the historic mosque."
+       }
+      ],
+      "researchNote": "Salads with sirene cheese are ubiquitous in Bulgaria; ask for no cheese for vegan diets. Head to the Banya Bashi area for halal meats.",
+      "vegan": [
+       {
+        "area": "Central Sofia / Kniaz Boris I St",
+        "category": "vegan",
+        "cuisine": "Street food and vegan burgers",
+        "description": "Friendly central Sofia bistro serving 100% vegan burgers, homemade falafel wraps, seasonal salad bowls and raw guilt-free desserts.",
+        "lastVerified": "2026-10-06",
+        "name": "Edgy Veggy",
+        "price": "Ekonomik",
+        "verification": {
+         "note": "Dedicated vegan kitchen with no dairy, cheese or eggs present.",
+         "sourceName": "HappyCow's current vegan restaurant directory",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/edgy-veggy-sofia-129420",
+         "status": "fully-vegan"
+        },
+        "why": "Sofia's most popular vegan spot for a quick, wholesome and completely plant-based lunch while touring the city centre."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Two full days for the centre, three or four with Vitosha or Rila.",
+       "q": "How many days do you need in Sofia?"
+      },
+      {
+       "a": "The euro from 2026. Check current euro prices; older lev-based guide prices are outdated.",
+       "q": "What currency does Sofia use?"
+      },
+      {
+       "a": "Not for central sightseeing: walking and metro work. Assess outdoor trips separately.",
+       "q": "Do you need a car in Sofia?"
+      },
+      {
+       "a": "Sofia Airport (SOF) has its metro connection on the Terminal 2 side; check the terminal transfer if arriving elsewhere. Verify current metro operating hours for late arrivals and compare hotels by access to Serdica or another useful station.",
+       "q": "How do you get to Sofia?"
+      }
+     ],
+     "h1": "Sofia Travel Guide: Things to Do and a 2-Day Itinerary",
+     "itinerary": [
+      {
+       "afternoon": "One central museum matching your interests",
+       "evening": "Dinner near Vitosha Boulevard",
+       "morning": "Alexander Nevsky and St. Sophia",
+       "title": "Day 1 — Cathedral and culture"
+      },
+      {
+       "afternoon": "Market and side-street walk",
+       "evening": "Relaxed dinner and onward-trip planning",
+       "morning": "Serdica layers and central squares",
+       "title": "Day 2 — Serdica and neighbourhoods"
+      }
+     ],
+     "lede": "Sofia reveals itself gradually: Roman remains, a cathedral and quiet streets for coffee sit close together once you start walking. Two days can be enough to enjoy its understated side. The mountain backdrop is lovely too, but Vitosha deserves more thought than a quick park break between central sights.",
+     "places": [
+      {
+       "area": "Around the cathedral",
+       "known": "Cathedral and domes",
+       "name": "Alexander Nevsky Cathedral",
+       "tip": "Check interior photography and visitor conditions on site.",
+       "why": "For a key landmark of the capital’s architecture."
+      },
+      {
+       "area": "Serdica area",
+       "known": "Roman remains and central walks",
+       "name": "Serdica and the central layers",
+       "tip": "Distinguish open sites from paid museum access.",
+       "why": "For ancient and living city layers in one route."
+      },
+      {
+       "area": "South of Sofia",
+       "known": "Mountain scenery and walking",
+       "name": "Vitosha area",
+       "tip": "Confirm trail, weather and final public transport return.",
+       "why": "For an outdoor extension in suitable conditions."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Practical tips for Sofia",
+     "practicalTips": [
+      {
+       "body": "Do not calculate 2026 Bulgarian spending from older BGN prices.",
+       "title": "Use euro prices"
+      },
+      {
+       "body": "Check how your arrival terminal connects to the metro before flying.",
+       "title": "Terminal connection"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Recommended stay",
+       "value": "2–3 full days"
+      },
+      {
+       "label": "Best time to visit",
+       "value": "May–June and September–October"
+      },
+      {
+       "label": "Getting around",
+       "value": "Walking and metro"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Plovdiv Travel Guide: Old Town, Kapana and Roman Sights",
+       "city": "Plovdiv",
+       "description": "Walk between the Ancient Theatre, museum houses, Kapana and Roman mosaics."
+      },
+      {
+       "anchor": "Varna Travel Guide: Sea Garden, Museums and Beaches",
+       "city": "Varna",
+       "description": "Archaeology, Roman baths, the Sea Garden and beaches combine in a Black Sea city stay."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "Start around Serdica and connect the layers of the centre with short walks. Include Alexander Nevsky in that city day and leave room for a leisurely lunch. For day two, choose a museum, the Boyana area or Vitosha. Treating Sofia as just a few hours in the capital squeezes these different experiences into one hurried circuit.",
+        "For Vitosha, plan transport, the return journey and the walk separately; clear city weather does not guarantee the same conditions higher up. If a mountain day is not what you want, stay with the centre. Sofia is better enjoyed through a few experiences you like than a compulsory sweep of every surrounding attraction.",
+        "When continuing to Plovdiv, keep the transfer day separate from your busiest museum plans. Luggage storage, reaching the station and checking into the next hotel all take time. Two nights may mean only one full Sofia day. A relaxed central walk and a good dinner can fit that window better than a rushed mountain outing."
+       ],
+       "heading": "Two days in Sofia: a central walk and time to explore further",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Sofia Airport (SOF) has its metro connection on the Terminal 2 side; check the terminal transfer if arriving elsewhere. Verify current metro operating hours for late arrivals and compare hotels by access to Serdica or another useful station.",
+        "Central sights link well on foot; farther museums and Vitosha require transport and a last-mile connection. Check current tickets and payment rules rather than relying on old lev-denominated fares."
+       ],
+       "heading": "Getting to and around Sofia",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Pair the cathedral and museums on one day, Serdica and central streets on another. Add a separate Vitosha day with a return and weather plan rather than cutting both city days short."
+       ],
+       "heading": "Things to do in Sofia",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Link the cathedral with St. Sophia and nearby cultural stops. Visit quietly during worship and check interior photography and separate exhibition rules. Nearby museums add substance beyond the square’s photograph."
+         ],
+         "heading": "Alexander Nevsky Cathedral"
+        },
+        {
+         "body": [
+          "Combine Serdica’s remains with the central squares. Different historical periods appear along one walk, with separate access arrangements for open ruins and museums. A nearby market and meal complete the everyday-city view."
+         ],
+         "heading": "Serdica and the central layers"
+        },
+        {
+         "body": [
+          "Vitosha is not a central city park. Elevation, terrain and time depend on the trail; check current bus or lift operation. Sunshine in Sofia does not establish conditions on the mountain."
+         ],
+         "heading": "Vitosha area"
+        }
+       ]
+      },
+      {
+       "body": [
+        "Around Serdica, ancient remains and modern transport share the same setting. Take time below street level, then continue the walk above. These small layers give Sofia its own character. A city day built only around a cathedral photograph misses much of what makes the centre interesting.",
+        "A table on Vitosha Boulevard makes a pleasant pause for watching the city go by. Side streets offer a quieter evening after the main pedestrian thoroughfare. Allow for respectful, unhurried visits to museums and places of worship, and keep a few breaks in the walking day. Short distances still deserve some time to rest."
+       ],
+       "heading": "Everyday Sofia from Serdica to Vitosha Boulevard",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Serdica and the centre suit transport, Vitosha Boulevard dining and walking, and quieter side streets sleeping comfort. Check main-street noise, parking if driving and your airport connection.",
+        "A short stay is easier near Serdica or a central metro stop. The main pedestrian streets help with dining, but not every room will be quiet at night. A hotel one street back may offer better rest than a more conspicuous address. Even with a mountain outing, choose the base around your city time.",
+        "For a first visit, staying around Serdika makes it easier to link central sights on foot. Around Vitosha Boulevard, restaurants and evening activity can affect room noise. Ask which street your room faces, and compare the actual walk to a metro station for outer districts."
+       ],
+       "heading": "Where to stay in Sofia",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Banitsa suits breakfast, with shopska salad, tarator and kavarma offering different meal styles. Cheese salad and yogurt soup are not vegan; ask about meat and dairy and read the euro total including service.",
+        "Banitsa and coffee in the morning, a lighter salad at lunch and a warm dinner fit a sightseeing day well. Cheese defines shopska and yoghurt is central to tarator, so vegetable-based does not automatically mean suitable for every diet. Spread different Bulgarian dishes across a few meals instead of relying on one large feast."
+       ],
+       "heading": "What to eat in Sofia",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "Late spring and autumn suit walking. Summer heat, winter icy pavements and shorter daylight affect pacing. Check a mountain forecast separately for Vitosha.",
+        "Central walks and metro keep costs manageable; mountain transfers and distant museums add spending. Compare current euro prices for hotels, admissions and meals rather than older lev-based totals."
+       ],
+       "heading": "Sofia: weather and budget planning",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Plovdiv is a natural short cultural extension; compare train and bus times. Varna is a longer Black Sea leg. Give Rila a separate full day with confirmed return arrangements if you add it."
+       ],
+       "heading": "Trips beyond Sofia",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Explore Sofia’s Alexander Nevsky Cathedral, Serdica and Vitosha with a 2-day itinerary, airport metro advice, local food and areas to stay.",
+     "seoTitle": "Sofia Travel Guide: Things to Do and a 2-Day Itinerary",
+     "sources": [
+      {
+       "name": "Visit Sofia — official tourism",
+       "url": "https://www.visitsofia.bg/en/"
+      },
+      {
+       "name": "Metropolitan — Sofia metro",
+       "url": "https://www.metropolitan.bg/en/"
+      },
+      {
+       "name": "European Commission — Bulgaria and the euro",
+       "url": "https://economy-finance.ec.europa.eu/euro/eu-countries-and-euro/bulgaria-and-euro_en"
+      },
+      {
+       "name": "Visit Sofia — city walks and Vitosha",
+       "url": "https://www.visitsofia.bg/en/routes-sofia/9?view=route"
+      }
+     ],
+     "volatileNote": "Admission prices, services and opening hours can change. Check the official sources below before booking."
+    },
+    "es": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Knyaginya Mariya Luiza Blvd",
+        "category": "halal",
+        "cuisine": "Parrilla turca y guisos caseros",
+        "description": "Asador turco halal junto a la mezquita histórica Banya Bashi, con carnes a la brasa, guisos tradicionales y pan recién hecho.",
+        "lastVerified": "2026-10-06",
+        "name": "Restaurant Türk (Banyabaşı Camii yanı)",
+        "price": "Ekonomik",
+        "verification": {
+         "note": "Suministro de carne con certificación halal; restaurante sin alcohol.",
+         "sourceName": "Guía Halal del Gran Muftí de Bulgaria",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://www.visitsofia.bg/en",
+         "status": "certified-halal"
+        },
+        "why": "La mejor opción en el centro de Sofía para comer carne halal con garantías junto a la mezquita histórica."
+       }
+      ],
+      "researchNote": "Las ensaladas con queso sirene son habituales en Bulgaria; pide sin queso para dieta vegana. Elige la zona de Banya Bashi para carne halal.",
+      "vegan": [
+       {
+        "area": "Centro de Sofía / Kniaz Boris I St",
+        "category": "vegan",
+        "cuisine": "Comida callejera y hamburguesas veganas",
+        "description": "Acogedor bistró en el centro de Sofía con hamburguesas 100% vegetales, wraps caseros de falafel y postres crudiveganos.",
+        "lastVerified": "2026-10-06",
+        "name": "Edgy Veggy",
+        "price": "Ekonomik",
+        "verification": {
+         "note": "Cocina exclusivamente vegana sin lácteos, queso ni huevos.",
+         "sourceName": "Directorio actualizado de restaurantes veganos de HappyCow",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/edgy-veggy-sofia-129420",
+         "status": "fully-vegan"
+        },
+        "why": "El local vegano más popular de Sofía para un almuerzo rápido, nutritivo y vegetal mientras se visita el centro."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Dos días completos para el centro; tres o cuatro con Vitosha o Rila.",
+       "q": "¿Cuántos días dedicar a Sofía?"
+      },
+      {
+       "a": "El euro desde 2026. Consulta precios actuales en euros; las guías con tarifas en levas están desactualizadas.",
+       "q": "¿Qué moneda se usa en Sofía?"
+      },
+      {
+       "a": "No para el centro: paseos y metro funcionan. Valora por separado las excursiones de naturaleza.",
+       "q": "¿Hace falta coche en Sofía?"
+      },
+      {
+       "a": "El metro de Sofia Airport (SOF) está del lado de la Terminal 2; revisa conexión entre terminales si llegas a otra. Para llegadas nocturnas confirma servicio actual y alternativa. Compara hoteles por acceso a Serdica u otra estación útil.",
+       "q": "¿Cómo llegar a Sofía?"
+      }
+     ],
+     "h1": "Qué ver en Sofía: ruta de 2 días y dónde alojarse",
+     "itinerary": [
+      {
+       "afternoon": "Un museo céntrico según tus intereses",
+       "evening": "Cena cerca de Vitosha Boulevard",
+       "morning": "Alexander Nevsky y St. Sophia",
+       "title": "Día 1 — Catedral y cultura"
+      },
+      {
+       "afternoon": "Mercado y calles laterales",
+       "evening": "Cena tranquila y preparación de siguiente etapa",
+       "morning": "Serdica y plazas del centro",
+       "title": "Día 2 — Serdica y barrios"
+      }
+     ],
+     "lede": "Sofía se descubre poco a poco: restos romanos, una catedral y calles tranquilas para tomar café aparecen cerca unas de otras. Dos días permiten apreciar ese encanto discreto. La montaña también atrae, pero Vitosha necesita más preparación que una pausa en un parque entre visitas céntricas.",
+     "places": [
+      {
+       "area": "Alrededores de la catedral",
+       "known": "Catedral y cúpulas",
+       "name": "Catedral Alexander Nevsky",
+       "tip": "Consulta fotos y condiciones de visita interior.",
+       "why": "Para conocer un icono arquitectónico de la capital."
+      },
+      {
+       "area": "Zona de Serdica",
+       "known": "Restos romanos y paseo céntrico",
+       "name": "Serdica y capas del centro",
+       "tip": "Distingue espacios abiertos y museos de pago.",
+       "why": "Para recorrer capas antiguas y vida actual juntas."
+      },
+      {
+       "area": "Sur de Sofía",
+       "known": "Naturaleza de montaña y caminatas",
+       "name": "Entorno de Vitosha",
+       "tip": "Confirma sendero, tiempo y último transporte de vuelta.",
+       "why": "Para añadir naturaleza con condiciones adecuadas."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Consejos para visitar Sofía",
+     "practicalTips": [
+      {
+       "body": "No calcules gastos de 2026 con antiguas tarifas en BGN.",
+       "title": "Usa precios en euros"
+      },
+      {
+       "body": "Comprueba antes del vuelo cómo conecta tu terminal con el metro.",
+       "title": "Conexión de terminal"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Duración recomendada",
+       "value": "2–3 días completos"
+      },
+      {
+       "label": "Mejor época",
+       "value": "Mayo–junio y septiembre–octubre"
+      },
+      {
+       "label": "Cómo moverse",
+       "value": "A pie y metro"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Qué ver en Plovdiv: casco antiguo, Kapana y teatro",
+       "city": "Plovdiv",
+       "description": "Pasea entre teatro antiguo, casas museo, Kapana y mosaicos romanos."
+      },
+      {
+       "anchor": "Qué ver en Varna: Sea Garden, museos y playas",
+       "city": "Varna",
+       "description": "Arqueología, termas romanas, Sea Garden y playas para una estancia junto al mar Negro."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "Empieza por Serdica y enlaza las capas del centro con paseos breves. Incluye Alexander Nevsky y una comida sin prisa. Para el segundo día, elige museo, zona de Boyana o Vitosha. Si piensas en Sofía como unas pocas horas de paso, acabarás metiendo experiencias distintas en una sola vuelta acelerada.",
+        "Para Vitosha, piensa por separado transporte, regreso y recorrido; el buen tiempo en la ciudad no garantiza lo mismo arriba. Si no buscas una jornada de montaña, disfruta más del centro. Sofía funciona mejor con unas experiencias elegidas que intentando completar obligatoriamente todos sus alrededores.",
+        "Si continúas a Plovdiv, no llenes el día de traslado con museos. Dejar maletas, llegar a la estación y entrar en otro hotel también lleva tiempo. Dos noches pueden dejar solo un día completo en Sofía. Un paseo céntrico y una buena cena encajan mejor que una salida apresurada a la montaña."
+       ],
+       "heading": "Dos días en Sofía: centro y una visita con calma",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "El metro de Sofia Airport (SOF) está del lado de la Terminal 2; revisa conexión entre terminales si llegas a otra. Para llegadas nocturnas confirma servicio actual y alternativa. Compara hoteles por acceso a Serdica u otra estación útil.",
+        "Los monumentos céntricos se unen a pie; museos lejanos y Vitosha necesitan transporte adicional. Consulta billetes y pago actuales, sin usar tarifas antiguas en levas como precios de 2026."
+       ],
+       "heading": "Cómo llegar a Sofía y moverse",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Agrupa catedral y museos en un día, Serdica y calles céntricas en otro. Añade Vitosha como jornada propia con plan de tiempo y regreso."
+       ],
+       "heading": "Qué ver en Sofía",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Enlaza la catedral con St. Sophia y visitas culturales cercanas. Respeta el culto y consulta fotografía y exposiciones separadas. Los museos próximos amplían la jornada más allá de la foto de la plaza."
+         ],
+         "heading": "Catedral Alexander Nevsky"
+        },
+        {
+         "body": [
+          "Combina restos de Serdica y plazas del centro. Una caminata muestra épocas distintas, con acceso diferente a ruinas abiertas y museos. Mercado y comida cercana completan la vida cotidiana."
+         ],
+         "heading": "Serdica y capas del centro"
+        },
+        {
+         "body": [
+          "Vitosha no es un parque céntrico. Desnivel, terreno y tiempo cambian por ruta; consulta autobús o remontes actuales. Sol en Sofía no demuestra el mismo tiempo en montaña."
+         ],
+         "heading": "Entorno de Vitosha"
+        }
+       ]
+      },
+      {
+       "body": [
+        "En Serdica, restos antiguos y transporte actual comparten espacio. Dedica un rato a lo que aparece bajo la calle y continúa después arriba. Esas pequeñas capas dan personalidad a Sofía. Un recorrido centrado solo en la foto de la catedral deja fuera buena parte de su interés.",
+        "Sentarte en Vitosha Boulevard permite ver pasar la ciudad. Después, las calles laterales ofrecen una tarde más tranquila que el paseo principal. Visita museos y lugares de culto con calma y respeto, y deja descansos entre caminatas. Que las distancias sean cortas no elimina la necesidad de una pausa."
+       ],
+       "heading": "La Sofía cotidiana entre Serdica y Vitosha Boulevard",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Serdica y centro facilitan transporte; Vitosha Boulevard, restaurantes y paseos; calles laterales, calma. Comprueba ruido, aparcamiento si conduces y conexión al aeropuerto.",
+        "Para una visita breve, estar cerca de Serdica o una estación céntrica facilita todo. La calle peatonal ayuda para comer, pero no garantiza silencio en la habitación. Un hotel una calle más atrás puede permitir dormir mejor. Aunque visites la montaña, elige la base según el tiempo que pasarás en la ciudad.",
+        "Para una primera visita, alojarte cerca de Serdika facilita unir lugares del centro a pie. En torno al bulevar Vitosha, restaurantes y actividad nocturna pueden influir en el ruido. Pregunta a qué calle da la habitación y compara distancia real al metro fuera del centro."
+       ],
+       "heading": "Dónde alojarse en Sofía",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Banitsa encaja en desayuno; shopska, tarator y kavarma ofrecen otras comidas. Ensalada con queso y sopa de yogur no son veganas; pregunta por carne y lácteos y revisa el total en euros.",
+        "Banitsa y café por la mañana, una ensalada al mediodía y un plato caliente de noche encajan con la visita. El queso define la shopska y el yogur el tarator: su aspecto vegetal no los hace aptos para cualquier dieta. Reparte los sabores búlgaros entre varias comidas."
+       ],
+       "heading": "Qué comer en Sofía",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "Final de primavera y otoño favorecen paseos. Calor estival, hielo invernal y días cortos cambian el ritmo. Consulta un pronóstico de montaña específico para Vitosha.",
+        "Paseos céntricos y metro moderan gasto; montaña y museos alejados añaden costes. Compara precios actuales en euros, no presupuestos antiguos en levas."
+       ],
+       "heading": "Sofía: cuándo ir y presupuesto",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Plovdiv prolonga una escapada cultural; compara tren y autobús. Varna es una etapa lejana del mar Negro. Para Rila reserva un día completo con regreso confirmado."
+       ],
+       "heading": "Excursiones desde Sofía",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Qué ver en Sofía: catedral Alexander Nevsky, Serdica y Vitosha, con ruta de 2 días, metro del aeropuerto, comida local y zonas de alojamiento.",
+     "seoTitle": "Qué ver en Sofía: ruta de 2 días y dónde alojarse",
+     "sources": [
+      {
+       "name": "Visit Sofia — turismo oficial",
+       "url": "https://www.visitsofia.bg/en/"
+      },
+      {
+       "name": "Metropolitan — metro de Sofía",
+       "url": "https://www.metropolitan.bg/en/"
+      },
+      {
+       "name": "Comisión Europea — Bulgaria y el euro",
+       "url": "https://economy-finance.ec.europa.eu/euro/eu-countries-and-euro/bulgaria-and-euro_en"
+      },
+      {
+       "name": "Visit Sofia — paseos y Vitosha",
+       "url": "https://www.visitsofia.bg/en/routes-sofia/9?view=route"
+      }
+     ],
+     "volatileNote": "Los precios, los servicios y los horarios pueden cambiar. Consulta las fuentes oficiales indicadas antes de reservar."
+    },
+    "tr": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Knyaginya Mariya Luiza Blvd",
+        "category": "halal",
+        "cuisine": "Türk ızgara ve tencere yemekleri",
+        "description": "Mimar Sinan yapımı tarihi Banyabaşı Camii'nin birkaç adım ötesinde helal sertifikalı ızgara köfte, kuzu kavurma ve geleneksel çorbalar.",
+        "lastVerified": "2026-10-06",
+        "name": "Restaurant Türk (Banyabaşı Camii yanı)",
+        "price": "Ekonomik",
+        "verification": {
+         "note": "Et tedariki helal kesim sertifikalıdır; alkolsüz restorandır.",
+         "sourceName": "Bulgaristan Başmüftülüğü helal yemek rehberi",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://www.visitsofia.bg/en",
+         "status": "certified-halal"
+        },
+        "why": "Sofya merkezinde tarihi camiye sıfır mesafede helal et garantisiyle lezzetli ve doyurucu bir öğün için 1 numaradır."
+       }
+      ],
+      "researchNote": "Bulgaristan'da sirene peynirli salatalar yaygındır; vegan tercihte peynirsiz sipariş verin. Helal et için Banyabaşı Camii civarını tercih edin.",
+      "vegan": [
+       {
+        "area": "Sofya Merkez / Kniaz Boris I St",
+        "category": "vegan",
+        "cuisine": "Sokak lezzetleri ve vegan burger",
+        "description": "Sofya'nın kalbinde %100 vegan burgerler, ev yapımı falafel dürümleri, taze kaseler ve glütensiz çiğ tatlılar sunan samimi bistro.",
+        "lastVerified": "2026-10-06",
+        "name": "Edgy Veggy",
+        "price": "Ekonomik",
+        "verification": {
+         "note": "Tamamen vegan mutfaktır; süt, peynir ve yumurta kesinlikle bulunmaz.",
+         "sourceName": "HappyCow güncel vegan restoran dizini",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/edgy-veggy-sofia-129420",
+         "status": "fully-vegan"
+        },
+        "why": "Sofya anıtlar turunda hızlı, besleyici ve tamamen bitkisel bir öğle yemeği için kentin en popüler vegan mekanıdır."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Merkez için iki tam gün; Vitoşa veya Rila eklenecekse üç ya da dört gün.",
+       "q": "Sofya kaç günde gezilir?"
+      },
+      {
+       "a": "2026’dan itibaren avro. Güncel fiyatı avro üzerinden kontrol edin; eski leva etiketli rehberler güncel değildir.",
+       "q": "Sofya’da para birimi nedir?"
+      },
+      {
+       "a": "Merkez gezisinde hayır; yürüyüş ve metro yeterlidir. Şehir dışı doğa gününü ayrı değerlendirin.",
+       "q": "Sofya’da araba gerekir mi?"
+      },
+      {
+       "a": "Sofia Airport (SOF) metro bağlantısı Terminal 2 tarafındadır; farklı terminale iniyorsanız terminal geçişini kontrol edin. Geç saatli varışta metro işletmesini ve alternatif transferi güncel doğrulayın. Otelinizi Serdica veya uygun metro durağına erişimle karşılaştırın.",
+       "q": "Sofya'ya nasıl gidilir?"
+      }
+     ],
+     "h1": "Sofya Gezi Rehberi: Gezilecek Yerler ve 2 Günlük Rota",
+     "itinerary": [
+      {
+       "afternoon": "İlginize göre bir merkez müzesi",
+       "evening": "Vitosha Boulevard çevresinde yemek",
+       "morning": "Alexander Nevsky ve St. Sophia",
+       "title": "1. Gün — Katedral ve kültür"
+      },
+      {
+       "afternoon": "Pazar ve yan sokak yürüyüşü",
+       "evening": "Sakin yemek ve sonraki rota hazırlığı",
+       "morning": "Serdica katmanları ve merkez",
+       "title": "2. Gün — Serdica ve mahalleler"
+      }
+     ],
+     "lede": "Sofya ilk anda büyük bir gösteri sunmuyor; biraz yürüyünce Roma kalıntıları, bir katedral ve kahve içilen sakin sokaklar yan yana geliyor. Şehre iki gün ayırmak bu sade tarafını sevmeye yetebilir. Dağ manzarası da güzel, ama Vitoşa’yı merkezin arasında sıkıştırılacak kısa bir park molası sanmayın.",
+     "places": [
+      {
+       "area": "Katedral çevresi",
+       "known": "Büyük katedral ve kubbeler",
+       "name": "Alexander Nevsky Katedrali",
+       "tip": "İç mekân fotoğraf ve ziyaret koşulunu yerinde sorun.",
+       "why": "Başkent mimarisinin ana simgesini görmek için."
+      },
+      {
+       "area": "Serdica çevresi",
+       "known": "Roma kalıntıları ve merkez yürüyüşü",
+       "name": "Serdica ve merkez katmanları",
+       "tip": "Açık alan ile ücretli müze girişini ayırın.",
+       "why": "Eski ve yaşayan şehri aynı rotada görmek için."
+      },
+      {
+       "area": "Sofya’nın güneyi",
+       "known": "Dağ doğası ve yürüyüş",
+       "name": "Vitoşa çevresi",
+       "tip": "Patika, hava ve son toplu taşıma dönüşünü doğrulayın.",
+       "why": "Uygun koşullarda şehir gezisine doğa eklemek için."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Sofya için pratik ipuçları",
+     "practicalTips": [
+      {
+       "body": "Bulgaristan’da 2026 harcamasını eski BGN fiyatlarına göre hesaplamayın.",
+       "title": "Avro fiyatını kullanın"
+      },
+      {
+       "body": "Metro erişiminin varış terminalinizden nasıl sağlandığını uçuş öncesinde öğrenin.",
+       "title": "Terminal bağlantısı"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Önerilen süre",
+       "value": "2–3 tam gün"
+      },
+      {
+       "label": "En uygun dönem",
+       "value": "Mayıs–Haziran ve Eylül–Ekim"
+      },
+      {
+       "label": "Ulaşım yaklaşımı",
+       "value": "Yürüyüş ve metro"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Plovdiv Gezi Rehberi: Eski Şehir, Kapana ve Antik Tiyatro",
+       "city": "Plovdiv",
+       "description": "Antik Tiyatro, müze evleri, Kapana ve Roma mozaikleri arasında yürüyüşle kültür gezisi."
+      },
+      {
+       "anchor": "Varna Gezi Rehberi: Sea Garden, Müzeler ve Plajlar",
+       "city": "Varna",
+       "description": "Arkeoloji müzesi, Roma hamamları, Sea Garden ve plajla birleşen Karadeniz şehri."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "İlk gün Serdica çevresinden başlayıp merkezdeki tarih katmanlarını kısa yürüyüşlerle birleştirin. Alexander Nevsky ziyaretini aynı şehir gününe alıp araya uzun bir öğle molası bırakabilirsiniz. İkinci gün için bir müze, Boyana çevresi veya Vitoşa arasında seçim yapmak daha dengeli. Şehre yalnız “başkentte birkaç saat” diye bakınca bu farklı deneyimler aynı acele yürüyüşe sıkışıyor.",
+        "Vitoşa’ya gidecekseniz şehirde açık olan havayı dağda da aynı sanmayın. Ulaşım, dönüş ve yürüyüş uzunluğu için ayrı plan gerekiyor. Doğa günü istemiyorsanız kendinizi zorlamak yerine merkezde daha fazla zaman geçirin. Sofya’nın değerini bütün çevre duraklarını görmekten çok, sevdiğiniz iki üç deneyimi rahatça birleştirerek anlayabilirsiniz.",
+        "Plovdiv’e geçecekseniz ulaşım gününü merkezin en yoğun müze günüyle birleştirmeyin. Sabah bavul bırakma, istasyona gidiş ve yeni otele varış da zaman alır. Sofya’da iki geceyle yalnız bir tam gün kalacağını hesaba katın; sakin bir şehir yürüyüşü ve güzel bir akşam yemeği, acele bir dağ gezisinden daha iyi tamamlanabilir."
+       ],
+       "heading": "Sofya’da iki gün: merkez yürüyüşü ve bir derinleşme günü",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Sofia Airport (SOF) metro bağlantısı Terminal 2 tarafındadır; farklı terminale iniyorsanız terminal geçişini kontrol edin. Geç saatli varışta metro işletmesini ve alternatif transferi güncel doğrulayın. Otelinizi Serdica veya uygun metro durağına erişimle karşılaştırın.",
+        "Merkez anıtlar yürüyüşle bağlanır; daha uzak müze veya Vitoşa için metro ve son bağlantı gerekir. Güncel bilet ve ödeme koşulunu işletmeciden kontrol edin; eski leva fiyatlarını 2026 tarifesi sanmayın."
+       ],
+       "heading": "Sofya ulaşım rehberi",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Katedral ve müze eksenini bir güne, Serdica ve merkez sokaklarını başka güne ayırın. Doğa günü ekleyecekseniz merkezin iki gününü bölmeyin; Vitoşa için dönüş ve hava planı oluşturun."
+       ],
+       "heading": "Sofya gezilecek yerler",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Katedral çevresini St. Sophia ve yakın kültür duraklarıyla yürüyüşe bağlayın. İbadet sırasında sessiz ziyaret edin; iç fotoğraf ve ayrı sergi koşullarını kontrol edin. Meydan fotoğrafından sonra yakındaki müzeler şehir gününü derinleştirir."
+         ],
+         "heading": "Alexander Nevsky Katedrali"
+        },
+        {
+         "body": [
+          "Serdica çevresindeki kalıntılarla merkez meydanlarını birleştirin. Kentin farklı dönemlerini aynı yürüyüşte görebilirsiniz; müze alanı ve açık kalıntıların ziyaret koşulu aynı olmayabilir. Yakındaki pazar ve yemek molası gündelik şehir ritmini tamamlar."
+         ],
+         "heading": "Serdica ve merkez katmanları"
+        },
+        {
+         "body": [
+          "Vitoşa’yı merkezdeki bir park gibi düşünmeyin. Seçilen parkura göre yükseklik, zemin ve süre değişir; teleferik veya otobüsün güncel çalışmasını kontrol edin. Şehirde güneşli hava, dağda aynı koşulların kanıtı değildir."
+         ],
+         "heading": "Vitoşa çevresi"
+        }
+       ]
+      },
+      {
+       "body": [
+        "Serdica çevresinde yerin altındaki antik izlerle bugünkü ulaşımın yan yana olması şehir gezisini ilginç kılıyor. Kalıntılara kısa bir bakışın ardından sokak seviyesine çıkıp çevreyi yürüyerek tamamlayabilirsiniz. Bütün günü yalnız katedral fotoğrafına ayırmak yerine bu küçük katmanları görmek Sofya’yı daha kendine özgü bir yer hâline getiriyor.",
+        "Vitosha Boulevard’da bir masaya oturup insanları izlemek merkez yürüyüşüne hoş bir mola ekler. Ana caddenin hareketinden sonra yan sokaklara geçerek daha sakin bir akşam bulabilirsiniz. Müze ve ibadet yeri ziyaretlerinde sessizliğe, sokakta ise kendi temponuza alan bırakın. Şehir kısa mesafelerde dolaşmaya uygun olsa da bir dinlenme molası her zaman iyi gelir."
+       ],
+       "heading": "Serdica’dan Vitosha Boulevard’a gündelik Sofya",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Serdica–merkez ulaşım, Vitosha Boulevard çevresi yemek ve yürüyüş, daha sakin yan sokaklar gece konforu için uygundur. Ana caddedeki odada gürültüyü, araçta otoparkı ve havaalanı bağlantısını kontrol edin.",
+        "Kısa ziyarette Serdica’ya veya merkezi metro duraklarına yakınlık işleri kolaylaştırır. Yaya caddesinin üstünde kalmak yemek için rahat, gece sessizliği için her odada aynı avantajı sunmayabilir. Bir sokak gerideki sakin otel, daha gösterişli fakat gürültülü bir konumdan daha iyi uyku sağlayabilir. Dağ geziniz olsa da ilk üs seçimini şehirde geçireceğiniz saatlere göre yapın.",
+        "İlk ziyarette Serdika çevresini üs almak merkez duraklarını yürüyerek bağlamayı kolaylaştırır. Vitosha Bulvarı çevresinde restoran ve akşam hareketi vardır; sessiz oda isteyenler cephenin hangi sokağa baktığını sormalı. Merkez dışı otelde metroya gerçek yürüyüş mesafesini karşılaştırın."
+       ],
+       "heading": "Sofya nerede kalınır?",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Banitsa kahvaltı, shopska salatası, tarator ve kavarma ise farklı öğün seçenekleridir. Peynirli salata ve yoğurtlu çorba vegan değildir; tarifte et ve süt ürününü sorun. Menü fiyatını avro ve servis dahil son tutar üzerinden okuyun.",
+        "Sabah banitsa ve kahveyle başlamak, öğlen daha hafif bir salata, akşam sıcak bir yemek seçmek geziyle kolay birleşiyor. Shopska’nın peyniri ve taratorun yoğurdu bu tabakların karakteri; özel beslenme ihtiyacınız varsa yalnız sebze görünümüne güvenmeyin. Bulgar mutfağını keşfetmek için tek uzun ziyafet yerine birkaç öğüne farklı tatlar yayabilirsiniz."
+       ],
+       "heading": "Sofya ne yenir?",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "İlkbahar sonu ve sonbahar yürüyüş için dengelidir. Yazın öğle molası, kışın buzlu kaldırım ve kısa günler planı etkiler. Vitoşa için şehir tahmininden ayrı dağ havasını okuyun.",
+        "Yürüyüşle merkez ve metro bütçeyi dengeler; dağ transferi ve uzak müzeler ek masraftır. Eski levaya göre hazırlanmış toplamları kullanmayın; otel, bilet ve yemek bedelini güncel avro fiyatıyla karşılaştırın."
+       ],
+       "heading": "Sofya için mevsim ve bütçe planı",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Plovdiv kısa kültür devamıdır; tren ve otobüsün gerçek sürelerini karşılaştırın. Varna uzak Karadeniz ayağıdır. Rila ziyareti ekleyecekseniz onu ayrı tam gün sayıp erişim ve dönüşü önceden planlayın."
+       ],
+       "heading": "Sofya çevresinde rota önerileri",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Sofya gezi rehberi: Alexander Nevsky, Serdica ve Vitoşa için gezilecek yerler, metro ve havalimanı ulaşımı, yemek, otel bölgeleri ve rota.",
+     "seoTitle": "Sofya Gezi Rehberi: Gezilecek Yerler ve 2 Günlük Rota",
+     "sources": [
+      {
+       "name": "Visit Sofia — resmî turizm",
+       "url": "https://www.visitsofia.bg/en/"
+      },
+      {
+       "name": "Metropolitan — Sofya metrosu",
+       "url": "https://www.metropolitan.bg/en/"
+      },
+      {
+       "name": "Avrupa Komisyonu — Bulgaristan ve avro",
+       "url": "https://economy-finance.ec.europa.eu/euro/eu-countries-and-euro/bulgaria-and-euro_en"
+      },
+      {
+       "name": "Visit Sofia — şehir yürüyüşleri ve Vitoşa",
+       "url": "https://www.visitsofia.bg/en/routes-sofia/9?view=route"
+      }
+     ],
+     "volatileNote": "Bilet ücretleri, seferler ve ziyaret saatleri değişebilir. Rezervasyon öncesinde aşağıdaki resmî kaynaklardan güncel bilgiyi kontrol edin."
+    }
+   }
+  },
+  {
+   "citySlug": "plovdiv",
+   "completeLangs": [
+    "en",
+    "es"
+   ],
+   "reviewed": true,
+   "translations": {
+    "en": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Roman Stadium and Dzhumaya Mosque Square",
+        "category": "halal",
+        "cuisine": "Levantine and Turkish grills",
+        "description": "Halal dining stop beside the 14th-century Dzhumaya Mosque and Roman Stadium, serving grilled kebabs, hummus and Levantine mezze.",
+        "lastVerified": "2026-10-06",
+        "name": "Mayrigos (Cuma Camii Yanı)",
+        "price": "Orta",
+        "verification": {
+         "note": "Halal meat declaration confirmed by establishment; alcohol-free seating available.",
+         "sourceName": "Plovdiv Municipality Tourism Portal",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://www.visitplovdiv.com/en",
+         "status": "restaurant-confirmed"
+        },
+        "why": "The most central venue in Plovdiv to enjoy verified halal kebabs overlooking the historic mosque and ancient stadium."
+       }
+      ],
+      "researchNote": "Plovdiv's Kapana district has great vegan alternatives; for halal options, the Dzhumaya Mosque area is the best base.",
+      "vegan": [
+       {
+        "area": "Kapana Arts District",
+        "category": "vegan",
+        "cuisine": "Organic plant-based dishes",
+        "description": "Peaceful plant-based haven in Plovdiv's artsy Kapana district, offering organic vegetable bowls, lentil patties and homemade vegan cakes.",
+        "lastVerified": "2026-10-06",
+        "name": "Veggic",
+        "price": "Orta",
+        "verification": {
+         "note": "All dishes prepared with 100% plant-based and organic ingredients.",
+         "sourceName": "HappyCow's current vegan restaurant directory",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/veggic-plovdiv-98425",
+         "status": "fully-vegan"
+        },
+        "why": "Perfect for a creative, healthy and peaceful plant-based meal in the heart of Plovdiv's historic arts quarter."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Two full days balance Old Town, the theatre, Kapana and mosaics.",
+       "q": "How many days do you need in Plovdiv?"
+      },
+      {
+       "a": "Yes, but an overnight stay leaves time for museums and a Kapana evening. Check journey time and the final return.",
+       "q": "Can you visit Plovdiv on a day trip from Sofia?"
+      },
+      {
+       "a": "Not for the centre; Old Town parking and vehicle access can be limited. Ask your accommodation about drop-off.",
+       "q": "Do you need a car in Plovdiv?"
+      }
+     ],
+     "h1": "Plovdiv Travel Guide: Old Town, Kapana and Roman Sights",
+     "itinerary": [
+      {
+       "afternoon": "Ancient Theatre and views",
+       "evening": "Dinner in Kapana",
+       "morning": "Cobbled lanes and one museum house",
+       "title": "Day 1 — Old Town"
+      },
+      {
+       "afternoon": "Kapana workshops and pedestrian centre",
+       "evening": "A quiet break near Tsar Simeon Garden",
+       "morning": "Basilica mosaics",
+       "title": "Day 2 — Mosaics and neighbourhoods"
+      }
+     ],
+     "lede": "The pace naturally eases when you come down from Plovdiv’s old-town hills and settle into a café in Kapana. An ancient theatre, colourful houses and a lively neighbourhood are close together, but they deserve more than a quick photo circuit. Two days give you time to enjoy the spaces between them.",
+     "places": [
+      {
+       "area": "Old Town hills",
+       "known": "Roman theatre and performance stage",
+       "name": "Ancient Theatre",
+       "tip": "Check visitor and performance tickets separately.",
+       "why": "For a historic monument linked to the living city."
+      },
+      {
+       "area": "Historic hills",
+       "known": "Residential heritage and cobbled streets",
+       "name": "Old Town and museum houses",
+       "tip": "Choose one or two museum houses by your interests.",
+       "why": "For interiors behind the historic facades."
+      },
+      {
+       "area": "Merkez",
+       "known": "Creative district and archaeology",
+       "name": "Kapana and basilica mosaics",
+       "tip": "Balance the basilica visit with a café break.",
+       "why": "For contemporary neighbourhood life and Roman heritage."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Practical tips for Plovdiv",
+     "practicalTips": [
+      {
+       "body": "Grippy shoes and a planned luggage drop-off help in Old Town.",
+       "title": "Cobbled surfaces"
+      },
+      {
+       "body": "Check theatre visiting arrangements on performance days.",
+       "title": "A working stage"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Recommended stay",
+       "value": "2 full days"
+      },
+      {
+       "label": "Best time to visit",
+       "value": "April–June and September–October"
+      },
+      {
+       "label": "Getting around",
+       "value": "Walking in the centre"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Sofia Travel Guide: Things to Do and a 2-Day Itinerary",
+       "city": "Sofya",
+       "description": "Alexander Nevsky, Serdica, museums and Vitosha foothills anchor a walkable capital visit."
+      },
+      {
+       "anchor": "Varna Travel Guide: Sea Garden, Museums and Beaches",
+       "city": "Varna",
+       "description": "Archaeology, Roman baths, the Sea Garden and beaches combine in a Black Sea city stay."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "Start with the old town and Ancient Theatre in the morning, then descend towards Kapana in the afternoon. Use the next day for a longer visit to mosaics or house museums. Cobbled slopes make short map distances slower, especially in summer. One substantial visit and a generous neighbourhood break can make a full, enjoyable day.",
+        "A day trip from Sofia is possible, but travel times dictate the experience. One night lets you have dinner in Kapana after day visitors leave and enjoy quieter streets next morning. Two nights leave more room for museums and historic houses. The extra time buys an evening in the city, not just another sight.",
+        "The Ancient Theatre and Kapana ask for different kinds of time. One invites you to understand architecture and history; the other is for wandering among workshops and cafés. A monuments-only trip can miss the living city, while cafés alone overlook its layers. Plovdiv works best when short walks connect both."
+       ],
+       "heading": "Two days in Plovdiv: the old town and the living city",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Compare actual journey times and arrival points for trains or buses from Sofia. For a Plovdiv Airport (PDV) flight, check the final central transfer. Ask old-town hotels about drop-off points and the luggage climb.",
+        "Old Town, Kapana and the main pedestrian axis link over short distances, but paving and slopes slow walking. Use grippy shoes and visit hills early, with indoor mosaics or museums at midday in heat."
+       ],
+       "heading": "Getting to and around Plovdiv",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Old Town and the theatre on day one, Kapana, the basilica and gardens on day two form a natural sequence. Check theatre access against the current performance calendar."
+       ],
+       "heading": "Things to do in Plovdiv",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "The theatre still hosts performances, with distinct event and daytime-visit arrangements. Leave time for the setting and avoid the strongest sun. Visit as part of your Old Town loop to reduce repeated climbs."
+         ],
+         "heading": "Ancient Theatre"
+        },
+        {
+         "body": [
+          "Choose houses such as Hindliyan or Balabanov for detail rather than rushing through every interior. Take the cobbled lanes slowly, and check current access around Nebet Tepe before finishing with city views."
+         ],
+         "heading": "Old Town and museum houses"
+        },
+        {
+         "body": [
+          "Give Kapana’s workshops and small shops time, then the basilica’s mosaic interpretation. They are separate places linked by a central walk. Check your room’s street position if you want quiet after busy evenings."
+         ],
+         "heading": "Kapana and basilica mosaics"
+        }
+       ]
+      },
+      {
+       "body": [
+        "Do not treat Kapana simply as the place where you stop for lunch. Browse a shop, wander a few small streets and then choose a table. Evenings can be lively, so step away from the busiest terraces if you want quiet. Some free time in the neighbourhood is more useful than a checklist of venues.",
+        "A house museum helps you imagine the life behind the old-town façades. Choose one or two that interest you rather than visiting every house for the same allotted minutes. Afterwards, pause for a view instead of continuing endlessly over cobbles. Much of Plovdiv’s charm appears in these spaces between formal visits."
+       ],
+       "heading": "A Kapana pause and a closer look inside historic houses",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Kapana and the pedestrian axis suit access and dining, while Old Town offers atmosphere. Historic houses need checks for cooling, stairs and luggage access; lively Kapana streets can affect sleep.",
+        "An old-town house offers atmosphere; a hotel near Kapana can make evening returns easier. Think about slopes and the drop-off point when arriving with luggage. On a one-night visit, location directly affects your sightseeing time. A quiet side street may balance access to the centre with a better night’s sleep.",
+        "Old-town accommodation puts historic lanes nearby, but paving and slopes can complicate luggage access. Kapana has more visible café and evening activity; check room noise. If arriving by car, distinguish reaching the hotel door from the location of its parking."
+       ],
+       "heading": "Where to stay in Plovdiv",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Banitsa, shopska salad, grills and vegetables form an everyday menu. Kapana café spending differs from a full dinner budget. For wine tasting, plan portions and onward travel, avoiding a driving day with alcohol.",
+        "A leisurely Kapana dinner balances a simple daytime meal or banitsa. If local wine interests you, choose an evening when you will not drive. Look beyond the most photogenic terrace to what you actually want to eat. A two-day stay gives you enough meals to explore several Bulgarian dishes without overdoing any one sitting."
+       ],
+       "heading": "What to eat in Plovdiv",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "Spring and autumn make the slopes easier. In summer, walk Old Town early and visit indoor museums at midday. Compare theatre schedules and accommodation during festivals and performance periods.",
+        "Compare museum-house and theatre tickets against your actual visits; a combined product is not always cheaper. Central walking reduces transport costs; use current euro prices."
+       ],
+       "heading": "Plovdiv: weather and budget planning",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Sofia offers a two- or three-day capital extension. For Varna, leave a separate block for the longer eastbound journey rather than treating the coast as a quick day trip."
+       ],
+       "heading": "Trips beyond Plovdiv",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Explore Plovdiv’s Old Town, Ancient Theatre, Kapana and basilica mosaics with Sofia connections, where to stay, local food and a 2-day route.",
+     "seoTitle": "Plovdiv Travel Guide: Old Town, Kapana and Roman Sights",
+     "sources": [
+      {
+       "name": "Visit Plovdiv — official city guide",
+       "url": "https://www.visitplovdiv.com/en/why-plovdiv"
+      },
+      {
+       "name": "Visit Plovdiv — Ancient Theatre",
+       "url": "https://www.visitplovdiv.com/en/node/522"
+      },
+      {
+       "name": "BDZ — Bulgarian railways",
+       "url": "https://www.bdz.bg/en"
+      }
+     ],
+     "volatileNote": "Admission prices, services and opening hours can change. Check the official sources below before booking."
+    },
+    "es": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Plaza del estadio romano y mezquita Dzhumaya",
+        "category": "halal",
+        "cuisine": "Parrilla levantina y turca",
+        "description": "Restaurante halal junto a la mezquita Dzhumaya del siglo XIV y el estadio romano, con brochetas a la brasa, hummus y mezes.",
+        "lastVerified": "2026-10-06",
+        "name": "Mayrigos (Cuma Camii Yanı)",
+        "price": "Orta",
+        "verification": {
+         "note": "Declaración de carne halal confirmada por el local; zona sin alcohol disponible.",
+         "sourceName": "Portal de Turismo del Ayuntamiento de Plovdiv",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://www.visitplovdiv.com/en",
+         "status": "restaurant-confirmed"
+        },
+        "why": "El lugar más céntrico de Plovdiv para disfrutar de kebabs halal con vistas a la mezquita histórica y el estadio romano."
+       }
+      ],
+      "researchNote": "El distrito de Kapana en Plovdiv cuenta con buenas opciones veganas; para halal, la zona de la mezquita Dzhumaya es la más adecuada.",
+      "vegan": [
+       {
+        "area": "Distrito artístico de Kapana",
+        "category": "vegan",
+        "cuisine": "Platos vegetales orgánicos",
+        "description": "Rincón vegetal en el creativo distrito de Kapana en Plovdiv, con boles orgánicos, hamburguesas de lentejas y tartas veganas caseras.",
+        "lastVerified": "2026-10-06",
+        "name": "Veggic",
+        "price": "Orta",
+        "verification": {
+         "note": "Todos los platos se elaboran con ingredientes vegetales y ecológicos.",
+         "sourceName": "Directorio actualizado de restaurantes veganos de HappyCow",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/veggic-plovdiv-98425",
+         "status": "fully-vegan"
+        },
+        "why": "Perfecto para una comida vegetal creativa y saludable en el corazón del animado barrio artístico de Plovdiv."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Dos días completos equilibran casco antiguo, teatro, Kapana y mosaicos.",
+       "q": "¿Cuántos días dedicar a Plovdiv?"
+      },
+      {
+       "a": "Sí, pero dormir una noche da tiempo a museos y tarde en Kapana. Consulta duración y último regreso.",
+       "q": "¿Se puede ir a Plovdiv en un día desde Sofía?"
+      },
+      {
+       "a": "No para el centro; aparcamiento y acceso al casco antiguo pueden estar limitados. Pregunta por punto de bajada.",
+       "q": "¿Hace falta coche en Plovdiv?"
+      }
+     ],
+     "h1": "Qué ver en Plovdiv: casco antiguo, Kapana y teatro",
+     "itinerary": [
+      {
+       "afternoon": "Teatro antiguo y vistas",
+       "evening": "Cena en Kapana",
+       "morning": "Calles de piedra y una casa museo",
+       "title": "Día 1 — Casco antiguo"
+      },
+      {
+       "afternoon": "Talleres de Kapana y centro peatonal",
+       "evening": "Descanso cerca del jardín Tsar Simeon",
+       "morning": "Mosaicos de la basílica",
+       "title": "Día 2 — Mosaicos y barrio"
+      }
+     ],
+     "lede": "En Plovdiv, bajar del casco antiguo y sentarte en un café de Kapana hace que el día vaya más despacio. Teatro antiguo, casas de colores y un barrio vivo quedan cerca, pero merecen más que una vuelta para hacer fotos. Dos días permiten disfrutar lo que hay entre las visitas.",
+     "places": [
+      {
+       "area": "Colinas del casco antiguo",
+       "known": "Teatro romano y escenario",
+       "name": "Teatro antiguo",
+       "tip": "Consulta por separado entradas de visita y espectáculo.",
+       "why": "Para ver un monumento conectado con la ciudad viva."
+      },
+      {
+       "area": "Colinas históricas",
+       "known": "Patrimonio residencial y calles de piedra",
+       "name": "Casco antiguo y casas museo",
+       "tip": "Elige una o dos casas museo según tu interés.",
+       "why": "Para conocer interiores tras fachadas históricas."
+      },
+      {
+       "area": "Centro",
+       "known": "Barrio creativo y arqueología",
+       "name": "Kapana y mosaicos de basílica",
+       "tip": "Equilibra basílica y descanso de café.",
+       "why": "Para combinar barrio actual y patrimonio romano."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Consejos para visitar Plovdiv",
+     "practicalTips": [
+      {
+       "body": "Calzado adherente y punto de bajada con equipaje ayudan en el casco antiguo.",
+       "title": "Pavimento de piedra"
+      },
+      {
+       "body": "Consulta condiciones de visita en días de actuación.",
+       "title": "Un escenario vivo"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Duración recomendada",
+       "value": "2 días completos"
+      },
+      {
+       "label": "Mejor época",
+       "value": "Abril–junio y septiembre–octubre"
+      },
+      {
+       "label": "Cómo moverse",
+       "value": "A pie en el centro"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Qué ver en Sofía: ruta de 2 días y dónde alojarse",
+       "city": "Sofya",
+       "description": "Alexander Nevsky, Serdica, museos y estribaciones de Vitosha para descubrir la capital."
+      },
+      {
+       "anchor": "Qué ver en Varna: Sea Garden, museos y playas",
+       "city": "Varna",
+       "description": "Arqueología, termas romanas, Sea Garden y playas para una estancia junto al mar Negro."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "Empieza por casco antiguo y Teatro Antiguo por la mañana y baja a Kapana por la tarde. El día siguiente puede dar más tiempo a mosaicos o casas museo. Las cuestas empedradas alargan distancias cortas, sobre todo en verano. Una visita importante y una pausa larga por el barrio pueden llenar bien el día.",
+        "Puedes venir desde Sofía en un día, aunque los horarios de ida y vuelta condicionan la visita. Una noche permite cenar en Kapana y salir a calles más tranquilas al día siguiente. Dos noches dan espacio a museos y casas históricas. El tiempo extra sirve también para conocer la tarde de la ciudad.",
+        "El Teatro Antiguo y Kapana piden tiempos distintos: uno para arquitectura e historia, otro para pasear entre talleres y cafés. Solo monumentos dejan fuera la vida urbana; solo cafeterías ocultan sus capas antiguas. El encanto de Plovdiv está en enlazar ambos con paseos breves."
+       ],
+       "heading": "Dos días en Plovdiv: casco antiguo y barrios vivos",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Desde Sofía compara duración real y llegada de tren o autobús. Si vuelas a Plovdiv Airport (PDV), revisa el último traslado. Pregunta al hotel antiguo por punto de bajada y subida con equipaje.",
+        "Casco antiguo, Kapana y eje peatonal quedan cerca, con piedra y pendientes que ralentizan. Usa calzado adherente y deja cuestas para temprano, mosaicos o museos para las horas cálidas."
+       ],
+       "heading": "Cómo llegar a Plovdiv y moverse",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Casco antiguo y teatro el primer día, Kapana, basílica y jardines el segundo forman una secuencia natural. Revisa acceso al teatro según el calendario de actuaciones."
+       ],
+       "heading": "Qué ver en Plovdiv",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "El teatro sigue acogiendo actuaciones, con condiciones diferentes a la visita diurna. Dedica tiempo al entorno y evita sol fuerte. Inclúyelo en el circuito antiguo para reducir subidas repetidas."
+         ],
+         "heading": "Teatro antiguo"
+        },
+        {
+         "body": [
+          "Elige casas como Hindliyan o Balabanov para ver detalles sin correr por todos los interiores. Pasea despacio por la piedra y consulta acceso actual a Nebet Tepe antes de completar con vistas."
+         ],
+         "heading": "Casco antiguo y casas museo"
+        },
+        {
+         "body": [
+          "Dedica tiempo a talleres y tiendas de Kapana y a los mosaicos de la basílica. Son lugares distintos conectados por un paseo. Para dormir tranquilo, comprueba hacia qué calle mira la habitación."
+         ],
+         "heading": "Kapana y mosaicos de basílica"
+        }
+       ]
+      },
+      {
+       "body": [
+        "Kapana no es solo el sitio donde parar a comer. Mira una tienda, recorre calles pequeñas y después elige una mesa. Por la tarde puede animarse bastante; busca una calle menos concurrida si prefieres calma. Un rato libre por el barrio vale más que una lista de locales.",
+        "Entrar en una casa museo ayuda a imaginar la vida detrás de las fachadas. Elige una o dos que te interesen sin intentar visitar todas por igual. Después descansa junto a una vista en vez de seguir caminando sobre piedras. Buena parte del encanto aparece entre estas pausas."
+       ],
+       "heading": "Una pausa en Kapana y curiosidad por las casas históricas",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Kapana y eje peatonal facilitan acceso y comida; casco antiguo aporta ambiente. En casas históricas revisa aire, escaleras y equipaje; calles animadas de Kapana pueden afectar el descanso.",
+        "Una casa del casco antiguo ofrece ambiente; un hotel junto a Kapana facilita volver de cenar. Cuenta con cuestas y lugar de llegada si llevas maleta. Para una noche, la ubicación cambia el tiempo disponible. Una calle lateral tranquila puede equilibrar cercanía y descanso.",
+        "Dormir en el casco antiguo acerca calles históricas, pero adoquines y pendientes complican el equipaje. Kapana concentra cafeterías y actividad de tarde: comprueba ruido. Si llegas en coche, distingue acceso hasta la puerta del hotel y ubicación del aparcamiento."
+       ],
+       "heading": "Dónde alojarse en Plovdiv",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Banitsa, shopska, parrilla y verduras forman un menú cotidiano. Un café en Kapana no cuesta como una cena completa. En catas planifica cantidad y regreso; no combines conducción y alcohol.",
+        "Una cena larga en Kapana equilibra una comida sencilla o banitsa durante el día. Si te interesa el vino local, déjalo para una noche sin conducir. Mira qué quieres comer, además de la terraza más fotogénica. En dos días hay tiempo para probar varios platos búlgaros sin hacerlo todo de una vez."
+       ],
+       "heading": "Qué comer en Plovdiv",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "Primavera y otoño facilitan las cuestas. En verano, casco antiguo temprano y museos al mediodía. En festivales compara calendario del teatro y alojamiento.",
+        "Compara entradas de casas museo y teatro con visitas reales; un bono no siempre ahorra. Caminar por el centro reduce transporte; usa precios actuales en euros."
+       ],
+       "heading": "Plovdiv: cuándo ir y presupuesto",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Sofía amplía dos o tres días de capital. Para Varna deja tiempo al traslado largo hacia el este; no plantees la costa como excursión corta de un día."
+       ],
+       "heading": "Excursiones desde Plovdiv",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Qué ver en Plovdiv: casco antiguo, teatro, Kapana y mosaicos de basílica, con conexiones desde Sofía, alojamiento, comida y una ruta de 2 días.",
+     "seoTitle": "Qué ver en Plovdiv: casco antiguo, Kapana y teatro",
+     "sources": [
+      {
+       "name": "Visit Plovdiv — guía oficial de la ciudad",
+       "url": "https://www.visitplovdiv.com/en/why-plovdiv"
+      },
+      {
+       "name": "Visit Plovdiv — teatro antiguo",
+       "url": "https://www.visitplovdiv.com/en/node/522"
+      },
+      {
+       "name": "BDZ — ferrocarriles de Bulgaria",
+       "url": "https://www.bdz.bg/en"
+      }
+     ],
+     "volatileNote": "Los precios, los servicios y los horarios pueden cambiar. Consulta las fuentes oficiales indicadas antes de reservar."
+    },
+    "tr": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Roma Stadyumu ve Cuma Camii Meydanı",
+        "category": "halal",
+        "cuisine": "Şark ve Türk ızgaraları",
+        "description": "14. yüzyıl Dzhumaya (Cuma) Camii'nin gölgesinde helal etli kebaplar, zengin şark mezeleri ve geleneksel fırın lezzetleri.",
+        "lastVerified": "2026-10-06",
+        "name": "Mayrigos (Cuma Camii Yanı)",
+        "price": "Orta",
+        "verification": {
+         "note": "Helal et beyanı işletme tarafından verilmektedir; alkolsüz alan mevcuttur.",
+         "sourceName": "Plovdiv Belediyesi Turizm Portalı",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://www.visitplovdiv.com/en",
+         "status": "restaurant-confirmed"
+        },
+        "why": "Plovdiv antik kent merkezinde cami ve Roma stadyumu manzarası eşliğinde güvenilir helal kebap yemek için en merkezi noktadır."
+       }
+      ],
+      "researchNote": "Plovdiv Kapana bölgesi vegan ve vejetaryen seçenekler bakımından zengindir; helal et arayışında Cuma Camii çevresi en uygun bölgedir.",
+      "vegan": [
+       {
+        "area": "Kapana Sanat Mahallesi",
+        "category": "vegan",
+        "cuisine": "Organik sebze ve kinoa yemekleri",
+        "description": "Plovdiv'in yaratıcı Kapana mahallesinde organik sebze güveçleri, mercimekli burgerler ve taze bitkisel sütlü tatlılar sunan sakin vaha.",
+        "lastVerified": "2026-10-06",
+        "name": "Veggic",
+        "price": "Orta",
+        "verification": {
+         "note": "Menünün tamamı bitkisel ve organik içeriklerle hazırlanır.",
+         "sourceName": "HappyCow güncel vegan restoran dizini",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/veggic-plovdiv-98425",
+         "status": "fully-vegan"
+        },
+        "why": "Tarihi taş sokakların ortasında yaratıcı, sağlıklı ve huzurlu bir bitki bazlı yemek molası için mükemmeldir."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "İki tam gün eski şehir, tiyatro, Kapana ve mozaikler için dengelidir.",
+       "q": "Plovdiv kaç günde gezilir?"
+      },
+      {
+       "a": "Olur, fakat bir gece kalmak müze ve Kapana akşamı için daha rahattır. Sefer süresiyle son dönüşü kontrol edin.",
+       "q": "Sofya’dan Plovdiv günübirlik olur mu?"
+      },
+      {
+       "a": "Merkez için hayır; eski şehirde park ve araç erişimi kısıtlı olabilir. Konaklamanın bırakma noktasını öğrenin.",
+       "q": "Plovdiv’de araba gerekir mi?"
+      }
+     ],
+     "h1": "Plovdiv Gezi Rehberi: Eski Şehir, Kapana ve Antik Tiyatro",
+     "itinerary": [
+      {
+       "afternoon": "Antik Tiyatro ve manzara",
+       "evening": "Kapana’da akşam yemeği",
+       "morning": "Taş sokaklar ve bir müze evi",
+       "title": "1. Gün — Eski şehir"
+      },
+      {
+       "afternoon": "Kapana atölyeleri ve yaya merkezi",
+       "evening": "Tsar Simeon bahçesi çevresinde sakin mola",
+       "morning": "Bazilika mozaikleri",
+       "title": "2. Gün — Mozaik ve mahalle"
+      }
+     ],
+     "lede": "Plovdiv’de eski şehir yokuşlarından inip Kapana’da bir kahveye oturduğunuzda günün temposu kendiliğinden yavaşlıyor. Antik tiyatro, renkli evler ve yaşayan bir mahalle birbirine yakın; yine de burayı acele bir fotoğraf turuna çevirmeden iki gün ayırmak çok daha güzel.",
+     "places": [
+      {
+       "area": "Eski şehir tepeleri",
+       "known": "Roma tiyatrosu ve sahne",
+       "name": "Antik Tiyatro",
+       "tip": "Ziyaret ve gösteri biletlerini ayrı kontrol edin.",
+       "why": "Tarihi yapının şehirle bağını görmek için."
+      },
+      {
+       "area": "Tarihî tepeler",
+       "known": "Konut mirası ve taş sokaklar",
+       "name": "Eski Şehir ve müze evleri",
+       "tip": "İlginize göre bir veya iki müze evi seçin.",
+       "why": "Cephelerin arkasındaki iç mekânı tanımak için."
+      },
+      {
+       "area": "Merkez",
+       "known": "Yaratıcı mahalle ve arkeoloji",
+       "name": "Kapana ve bazilika mozaikleri",
+       "tip": "Bazilika ziyaretini kafe molasıyla dengeleyin.",
+       "why": "Çağdaş mahalleyle Roma mirasını aynı gün görmek için."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Plovdiv için pratik ipuçları",
+     "practicalTips": [
+      {
+       "body": "Kaymayan ayakkabı ve bavul için kısa araç son bağlantısı eski şehirde değerli olabilir.",
+       "title": "Taş zemin"
+      },
+      {
+       "body": "Antik tiyatronun etkinlik gününde ziyaret kapsamını güncel kontrol edin.",
+       "title": "Canlı sahne"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Önerilen süre",
+       "value": "2 tam gün"
+      },
+      {
+       "label": "En uygun dönem",
+       "value": "Nisan–Haziran ve Eylül–Ekim"
+      },
+      {
+       "label": "Ulaşım yaklaşımı",
+       "value": "Merkezde yürüyüş"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Sofya Gezi Rehberi: Gezilecek Yerler ve 2 Günlük Rota",
+       "city": "Sofya",
+       "description": "Alexander Nevsky, Serdica, müzeler ve Vitoşa eteklerinde yürünebilir başkent rotası."
+      },
+      {
+       "anchor": "Varna Gezi Rehberi: Sea Garden, Müzeler ve Plajlar",
+       "city": "Varna",
+       "description": "Arkeoloji müzesi, Roma hamamları, Sea Garden ve plajla birleşen Karadeniz şehri."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "İlk sabah eski şehir ve Antik Tiyatro çevresine çıkıp öğleden sonra Kapana’ya inmek rahat bir başlangıç. Ertesi gün mozaiklere veya müze evlerine daha uzun bir ziyaret ayırabilirsiniz. Taşlı yokuşlar haritadaki kısa mesafeyi uzatır; özellikle yazın bütün eski şehri öğle saatine bırakmayın. Bir büyük ziyaret ve uzun bir mahalle molası gün için yeterli olabilir.",
+        "Sofya’dan günübirlik gelmek mümkündür, ama geliş ve dönüş saatleri gezinin karakterini değiştirir. Bir gece kalırsanız kalabalık dağıldıktan sonra Kapana’da yemek yiyip ertesi sabah daha sakin sokaklara çıkabilirsiniz. İki gece ise müze ve ev ziyaretlerine alan açar. Burada kazanılan zaman yalnız yeni bir durak değil, şehrin akşamını da görmektir.",
+        "Antik Tiyatro ile Kapana’yı aynı tür durak gibi düşünmeyin. Birinde mimariyi ve tarihi anlamaya, diğerinde sokaklarda dolaşıp atölye ve kafelere bakmaya zaman ayırırsınız. Programda yalnız antik yapılar varsa şehir biraz donuk kalabilir; yalnız kafeler varsa tarih tarafını kaçırırsınız. Plovdiv’in keyfi ikisini kısa yürüyüşlerle bağlamakta."
+       ],
+       "heading": "Plovdiv’de iki gün: eski şehir ve yaşayan mahalleler",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Sofya’dan tren veya otobüste gerçek süre, istasyon ve terminali karşılaştırın. Plovdiv Airport (PDV) uçuşu varsa merkeze son bağlantıyı ayrıca kontrol edin. Eski şehir oteline bavulla gidecekseniz araç bırakma noktası ve yokuşu öğrenin.",
+        "Eski şehir, Kapana ve ana yaya ekseni kısa mesafelerde bağlanır, fakat taş ve eğim yürüyüşü yavaşlatır. Kaymayan ayakkabı kullanın. Sıcak havada yokuşu sabah, kapalı mozaik veya müze ziyaretini öğle saatlerine yerleştirin."
+       ],
+       "heading": "Plovdiv ulaşım rehberi",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "İlk gün eski şehir ve tiyatro, ikinci gün Kapana, bazilika ve parklar doğal bir sıralamadır. Tiyatronun gösteri gününde gündüz erişimi değişebileceğinden güncel takvimi kontrol edin."
+       ],
+       "heading": "Plovdiv gezilecek yerler",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Tiyatro bugün de gösterilere ev sahipliği yapar; etkinlik bileti ile gündüz ziyaretini karıştırmayın. Basamaklarda manzara için zaman bırakın ve güneşin güçlü olduğu saatlerden kaçının. Eski şehir yürüyüşünün içinde ziyaret etmek gereksiz iniş-çıkışı azaltır."
+         ],
+         "heading": "Antik Tiyatro"
+        },
+        {
+         "body": [
+          "Hindliyan ve Balabanov gibi evleri aynı gün hızla bitirmek yerine bir veya ikisinde ayrıntıya odaklanın. Taş sokaklarda yavaş tempo gerekir. Nebet Tepe çevresinde güncel erişimi kontrol ederek şehir manzarasıyla yürüyüşü tamamlayın."
+         ],
+         "heading": "Eski Şehir ve müze evleri"
+        },
+        {
+         "body": [
+          "Kapana’da atölye ve küçük mağazalara, bazilikada ise mozaik anlatımına zaman bırakın. Bu iki durak aynı bina değildir; merkez yürüyüşüyle bağlanır. Kalabalık akşamların ardından sessiz oda istiyorsanız otelin sokak yönünü kontrol edin."
+         ],
+         "heading": "Kapana ve bazilika mozaikleri"
+        }
+       ]
+      },
+      {
+       "body": [
+        "Kapana’yı “yemek yenip çıkılacak bölge” diye hızla geçmeyin. Küçük sokaklarda dolaşıp beğendiğiniz bir dükkâna bakmak ve ardından oturmak daha doğal bir gezi kurar. Akşam hareketli olabilir; sessiz bir mola istiyorsanız ana masaların bir sokak gerisini deneyin. Her mekânı tek tek işaretlemek yerine mahallede biraz boş zaman bırakın.",
+        "Eski şehirde bir müze evine girmek cephelerin arkasındaki hayatı anlamaya yardımcı olur. Her eve aynı süreyi ayırmak yerine ilginizi çeken bir iki tanesini seçin. İçeriden çıktıktan sonra manzaralı bir mola, taşlı sokaklarda sürekli yürümekten daha iyi denge kurar. Plovdiv’i sevdiren ayrıntılar çoğu zaman bu kısa durakların arasında ortaya çıkıyor."
+       ],
+       "heading": "Kapana’da mola, eski evlerde biraz merak",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Kapana ve ana yaya caddesi erişim ve yemek; eski şehir atmosfer için uygundur. Eski evde klima, merdiven, araç girişi ve bavul yolunu kontrol edin. Kapana’nın hareketli sokaklarında gece sesi oda seçiminde önemlidir.",
+        "Eski şehirde bir evde kalmak atmosferli, Kapana’ya yakın bir otel ise akşam dönüşü daha kolay olabilir. Bavulla gelişte yokuşları ve araç bırakma noktasını düşünün. Bir gecelik ziyarette otelin konumu gezi süresini doğrudan etkiler; sakin bir yan sokak hem merkeze erişimi hem de uykuyu dengeleyebilir.",
+        "Eski şehir konaklaması tarihî sokaklara yakınlık sağlar ama taş zemin ve eğim bagajı zorlaştırabilir. Kapana’da kafe ve akşam hayatı daha belirgindir; odanın ses koşulunu sorun. Araçla geliyorsanız otel kapısına ulaşım ile park yerinin konumunu ayrı doğrulayın."
+       ],
+       "heading": "Plovdiv nerede kalınır?",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Banitsa, shopska salatası, ızgara ve sebze yemekleriyle gündelik menü kurabilirsiniz. Kapana’da kafe fiyatıyla tam akşam yemeği bütçesi aynı değildir. Yerel şarap tadımında porsiyon ve ulaşımı planlayın; araç kullanacak günü alkol programıyla birleştirmeyin.",
+        "Kapana akşamında uzun bir masa, gündüz ise banitsa veya sade bir öğün güzel denge kuruyor. Yerel şarapla ilgileniyorsanız bunu araç kullanmayacağınız akşama bırakabilirsiniz. Yalnız en fotojenik terasa bakmak yerine menüde gerçekten ne yemek istediğinizi seçin. İki günlük gezide birkaç farklı Bulgar yemeği denemek için yeterli öğün var."
+       ],
+       "heading": "Plovdiv ne yenir?",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "İlkbahar ve sonbahar taşlı yokuşlarda daha rahat geçer. Yaz sıcaklığında sabah eski şehir, öğlen kapalı müze iyi çalışır. Gösteri ve festival dönemlerinde tiyatro takvimi ile konaklamayı birlikte kontrol edin.",
+        "Müze evleri ve tiyatro biletlerini gerçekten gireceğiniz yerlerle karşılaştırın; birleşik ürün her gezgin için tasarruf değildir. Merkezde yürümek ulaşım maliyetini düşürür; 2026 fiyatlarını avro üzerinden okuyun."
+       ],
+       "heading": "Plovdiv için mevsim ve bütçe planı",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Sofya iki veya üç günlük başkent devamıdır. Varna’ya giderken uzun doğu transferi için ayrı zaman bırakın; Plovdiv’den sahili kısa günübirlik rota diye planlamayın."
+       ],
+       "heading": "Plovdiv çevresinde rota önerileri",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Plovdiv gezi rehberi: Antik Tiyatro, eski şehir, Kapana ve bazilika mozaikleri; nerede kalınır, Sofya bağlantısı, yemek ve 2 günlük rota.",
+     "seoTitle": "Plovdiv Gezi Rehberi: Eski Şehir, Kapana ve Antik Tiyatro",
+     "sources": [
+      {
+       "name": "Visit Plovdiv — resmî şehir rehberi",
+       "url": "https://www.visitplovdiv.com/en/why-plovdiv"
+      },
+      {
+       "name": "Visit Plovdiv — Antik Tiyatro",
+       "url": "https://www.visitplovdiv.com/en/node/522"
+      },
+      {
+       "name": "BDZ — Bulgaristan trenleri",
+       "url": "https://www.bdz.bg/en"
+      }
+     ],
+     "volatileNote": "Bilet ücretleri, seferler ve ziyaret saatleri değişebilir. Rezervasyon öncesinde aşağıdaki resmî kaynaklardan güncel bilgiyi kontrol edin."
+    }
+   }
+  },
+  {
+   "citySlug": "varna",
+   "completeLangs": [
+    "en",
+    "es"
+   ],
+   "reviewed": true,
+   "translations": {
+    "en": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Railway Station and Port area",
+        "category": "halal",
+        "cuisine": "Halal grills and bakery",
+        "description": "Reliable halal grill house near the railway station and coastal promenade, offering grilled lamb, beef dishes and warm flatbreads.",
+        "lastVerified": "2026-10-06",
+        "name": "Kervan Halal Grill",
+        "price": "Ekonomik",
+        "verification": {
+         "note": "Meats sourced from halal-certified wholesalers.",
+         "sourceName": "Varna Tourism Information Centre",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://visit.varna.bg/en/",
+         "status": "restaurant-confirmed"
+        },
+        "why": "A practical Varna spot with clear halal declarations, serving generous and hearty grilled meat portions."
+       }
+      ],
+      "researchNote": "Seafood restaurants along the Varna coast offer good halal-friendly alternatives; vegans can opt for baked bean and vegetable dishes.",
+      "vegan": [
+       {
+        "area": "Central Varna / San Stefano St",
+        "category": "vegan",
+        "cuisine": "Healthy bowls and vegan wraps",
+        "description": "Cheerful plant-based cafe near the Varna coast, serving nutrient-rich smoothie bowls, vegan wraps and wholesome daily specials.",
+        "lastVerified": "2026-10-06",
+        "name": "Green House Healthy Bar & Kitchen",
+        "price": "Ekonomik",
+        "verification": {
+         "note": "Broad plant-based selection; plant milks used in place of dairy.",
+         "sourceName": "HappyCow's current vegan restaurant directory",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/green-house-varna-153400",
+         "status": "vegan-focused"
+        },
+        "why": "Ideal before exploring Varna's Sea Garden for light, wholesome and energizing plant-based meals."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Two days for centre, museums and coast; three or four with nearby trips and relaxed beach time.",
+       "q": "How many days do you need in Varna?"
+      },
+      {
+       "a": "Yes: it balances museums, restaurants and park access for a first trip. Compare coastal resorts separately for a resort holiday.",
+       "q": "Is central Varna a good place to stay?"
+      },
+      {
+       "a": "No: museums and the centre support other seasons too. Adjust beach and swimming expectations to the time of year.",
+       "q": "Is Varna only worth visiting in summer?"
+      }
+     ],
+     "h1": "Varna Travel Guide: Sea Garden, Museums and Beaches",
+     "itinerary": [
+      {
+       "afternoon": "Central walk and Roman Baths",
+       "evening": "Local food",
+       "morning": "Archaeological Museum",
+       "title": "Day 1 — Archaeology and centre"
+      },
+      {
+       "afternoon": "Beach if conditions permit",
+       "evening": "A short seafront walk",
+       "morning": "A selected Sea Garden section",
+       "title": "Day 2 — Park and coast"
+      },
+      {
+       "afternoon": "Return and rest",
+       "evening": "A quiet central evening",
+       "morning": "Choose Aladzha or Pobiti Kamani",
+       "title": "Day 3 — Nearby outing"
+      }
+     ],
+     "lede": "In Varna you can spend the morning in a museum and reach the sea through the shade of the Sea Garden that afternoon. A few days here can accommodate both history and beach time. Just distinguish a stay in the city from a resort week further along the coast.",
+     "places": [
+      {
+       "area": "City centre",
+       "known": "Archaeology and gold finds",
+       "name": "Varna Archaeological Museum",
+       "tip": "Leave more time than a quick photo stop.",
+       "why": "For the coast’s history beyond a beach holiday."
+      },
+      {
+       "area": "Old central waterfront area",
+       "known": "Ancient Odessos remains",
+       "name": "Roman Baths",
+       "tip": "Carry water and sun protection for the open site.",
+       "why": "For the scale of everyday life in the ancient city."
+      },
+      {
+       "area": "Varna coast",
+       "known": "Coastal park and beach",
+       "name": "Sea Garden and the city beach",
+       "tip": "Check beach flags and the return route.",
+       "why": "For an outdoor break after museum visits."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Practical tips for Varna",
+     "practicalTips": [
+      {
+       "body": "A Golden Sands hotel does not offer the same daily access as a central Varna hotel.",
+       "title": "Resort and city distinction"
+      },
+      {
+       "body": "Choose a Sea Garden section matching your daily walking capacity.",
+       "title": "Park distances"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Recommended stay",
+       "value": "2–3 full days"
+      },
+      {
+       "label": "Best time to visit",
+       "value": "May–September; summer for beach time"
+      },
+      {
+       "label": "Getting around",
+       "value": "Central walks and transport to farther beaches"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Sofia Travel Guide: Things to Do and a 2-Day Itinerary",
+       "city": "Sofya",
+       "description": "Alexander Nevsky, Serdica, museums and Vitosha foothills anchor a walkable capital visit."
+      },
+      {
+       "anchor": "Plovdiv Travel Guide: Old Town, Kapana and Roman Sights",
+       "city": "Plovdiv",
+       "description": "Walk between the Ancient Theatre, museum houses, Kapana and Roman mosaics."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "Two or three days in the centre make a useful first visit. Give the Archaeological Museum a morning, then group the Roman Baths and central streets in another block. The Sea Garden creates an easy transition towards the coast. One main visit followed by flexible outdoor time works better than stacking museums and a demanding beach schedule.",
+        "If you stay around Golden Sands, include journeys into Varna in the daily plan. A resort week and a city-based culture break serve different purposes. The coast may suit a hotel-and-beach holiday; the centre may suit a shorter visit with museums and meals out. Choose around where you want to spend most of your time.",
+        "Summer makes it easy to combine museums and swimming. In other seasons, enjoy the waterfront without making a beach day the test of a successful trip. Varna has enough archaeology, central streets and seaside pauses for a two-day visit even when swimming is not part of the plan."
+       ],
+       "heading": "Varna: a city break or a coastal holiday?",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Book a Varna Airport (VAR) transfer to the actual centre or resort. Land journeys from Sofia or Plovdiv can be long: compare current train and bus times. Golden Sands is not the same arrival point as central Varna.",
+        "The centre, museum and nearby park sections connect on foot, but the whole Sea Garden is not a short loop. Check buses or transfers for outlying beaches and the monastery, including the final return journey."
+       ],
+       "heading": "Getting to and around Varna",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "One day for archaeology and the centre, another for Sea Garden and the beach, with a third for a nearby history or nature outing, keeps the visit balanced."
+       ],
+       "heading": "Things to do in Varna",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Gold finds from the Varna necropolis are a major collection theme. Read the chronology and interpretation instead of rushing through displays. An indoor visit balances beach time on hot or rainy days."
+         ],
+         "heading": "Varna Archaeological Museum"
+        },
+        {
+         "body": [
+          "Pair the baths with a central walk. Read interpretation to understand walls and room arrangements, checking restoration or access changes before visiting. Cooler hours are easier than exposed midday sun."
+         ],
+         "heading": "Roman Baths"
+        },
+        {
+         "body": [
+          "Choose a manageable park-and-coast section with breaks. Current waves and flags determine swimming conditions. For late waterfront evenings, consider the hotel’s location alongside your need for a quiet room."
+         ],
+         "heading": "Sea Garden and the city beach"
+        }
+       ]
+      },
+      {
+       "body": [
+        "The Sea Garden is more than a route from town to beach. Shade, places to sit and short walks give the day breathing room. Visit after a museum morning or stroll through one section before dinner. There is no need to cover the whole park before stopping somewhere you like.",
+        "In the archaeological collection, looking closely at a few objects can be more rewarding than a rapid tour of everything. The Roman Baths offer another way to encounter the city’s past outdoors. Put a neighbourhood meal between the visits and present-day Varna becomes part of the itinerary too."
+       ],
+       "heading": "Take your time in the Sea Garden",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "For a first city stay, the centre–Sea Garden area balances museums, food and the coast. Resorts such as Golden Sands offer a separate beach holiday: include daily town transfers if needed and check night noise.",
+        "For a first two-night visit, a base near the centre and Sea Garden reduces daily transport planning. A resort makes sense when most of your time will be on the beach. Prioritise location over the room view: walking to a museum and waiting for a transfer lead to quite different short breaks.",
+        "A central Varna hotel connects museums, Roman baths and everyday city life; coastal resorts outside the centre focus more on beach stays. Do not rely on the name “Varna” alone: compare the address, actual distance, buses and evening return before booking."
+       ],
+       "heading": "Where to stay in Varna",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Black Sea fish and mussels sit alongside shopska salad and Bulgarian home-style dishes. Check portions, preparation and side-dish prices; compare the total premium for park or waterfront views.",
+        "A fish or mussel meal suits the coast, but seafood need not dominate every sitting. Alternate it with Bulgarian home-style dishes or a lighter salad and grill. A sea-view table can make an enjoyable evening; for a brief lunch, a straightforward central place may leave the sightseeing day easier."
+       ],
+       "heading": "What to eat in Varna",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "Summer favours beaches and coastal events; May and September may offer quieter city walks. Winter suits museums and the centre rather than a beach holiday. Assess sea conditions as well as air temperature before swimming.",
+        "Summer resorts, beach services and taxis increase costs. Link museum visits on foot from a central base. Ask about loungers, umbrellas and spending requirements before settling in, using current euro prices."
+       ],
+       "heading": "Varna: weather and budget planning",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Aladzha Monastery or Pobiti Kamani can fill a third day, but neither is an extension of a short central stroll. Sofia and Plovdiv are longer onward legs with separate travel days."
+       ],
+       "heading": "Trips beyond Varna",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Explore Varna’s Sea Garden, Archaeological Museum, Roman baths and beaches with transport, areas to stay, local food and a 3-day Black Sea route.",
+     "seoTitle": "Varna Travel Guide: Sea Garden, Museums and Beaches",
+     "sources": [
+      {
+       "name": "Varna Municipality — official tourism",
+       "url": "https://visit.varna.bg/en/sights.html?listType=list"
+      },
+      {
+       "name": "Varna Municipality — parks and routes",
+       "url": "https://visit.varna.bg/en/turove-i-aktivnosti.html"
+      },
+      {
+       "name": "Varna Municipality — nearby trips",
+       "url": "https://visit.varna.bg/en/sights_near_varna.html"
+      },
+      {
+       "name": "Visit Varna — Sea Garden",
+       "url": "https://visit.varna.bg/en/sea_garden.html"
+      },
+      {
+       "name": "Visit Varna — cultural visits",
+       "url": "https://visit.varna.bg/en/kulturen-turizam.html"
+      }
+     ],
+     "volatileNote": "Admission prices, services and opening hours can change. Check the official sources below before booking."
+    },
+    "es": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Zona de la estación y puerto de Varna",
+        "category": "halal",
+        "cuisine": "Parrilla halal y panadería",
+        "description": "Asador halal de confianza cerca de la estación y el paseo marítimo, con carnes de cordero y ternera a la parrilla y panes calientes.",
+        "lastVerified": "2026-10-06",
+        "name": "Kervan Halal Grill",
+        "price": "Ekonomik",
+        "verification": {
+         "note": "Carnes suministradas por mayoristas con certificación halal.",
+         "sourceName": "Centro de Información Turística de Varna",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://visit.varna.bg/en/",
+         "status": "restaurant-confirmed"
+        },
+        "why": "Un local práctico en Varna con declaración halal clara, que sirve raciones generosas de carne a la parrilla."
+       }
+      ],
+      "researchNote": "Las marisquerías de la costa de Varna son buenas alternativas para dieta halal; los veganos pueden optar por guisos de alubias y verduras.",
+      "vegan": [
+       {
+        "area": "Centro de Varna / San Stefano St",
+        "category": "vegan",
+        "cuisine": "Boles saludables y wraps veganos",
+        "description": "Cafetería vegetal cerca de la costa de Varna, con boles de batido nutritivos, wraps veganos y platos del día saludables.",
+        "lastVerified": "2026-10-06",
+        "name": "Green House Healthy Bar & Kitchen",
+        "price": "Ekonomik",
+        "verification": {
+         "note": "Amplia selección vegetal; se emplean leches vegetales en lugar de lácteos.",
+         "sourceName": "Directorio actualizado de restaurantes veganos de HappyCow",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/green-house-varna-153400",
+         "status": "vegan-focused"
+        },
+        "why": "Ideal antes de recorrer el parque marítimo de Varna para una comida vegetal ligera y revitalizante."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Dos días para centro, museos y costa; tres o cuatro con excursiones y playa tranquila.",
+       "q": "¿Cuántos días dedicar a Varna?"
+      },
+      {
+       "a": "Sí, equilibra museos, restaurantes y parque en la primera visita. Para vacaciones de resort compara establecimientos costeros aparte.",
+       "q": "¿Conviene dormir en el centro de Varna?"
+      },
+      {
+       "a": "No; museos y centro funcionan también fuera del verano. Ajusta expectativas de playa y baño a la época.",
+       "q": "¿Varna solo merece visita en verano?"
+      }
+     ],
+     "h1": "Qué ver en Varna: Sea Garden, museos y playas",
+     "itinerary": [
+      {
+       "afternoon": "Paseo céntrico y termas romanas",
+       "evening": "Comida local",
+       "morning": "Museo Arqueológico",
+       "title": "Día 1 — Arqueología y centro"
+      },
+      {
+       "afternoon": "Playa si las condiciones lo permiten",
+       "evening": "Paseo costero breve",
+       "morning": "Tramo elegido de Sea Garden",
+       "title": "Día 2 — Parque y costa"
+      },
+      {
+       "afternoon": "Regreso y descanso",
+       "evening": "Tarde tranquila en el centro",
+       "morning": "Elige Aladzha o Pobiti Kamani",
+       "title": "Día 3 — Entorno cercano"
+      }
+     ],
+     "lede": "En Varna puedes visitar un museo por la mañana y bajar al mar por la sombra del Sea Garden después. Unos días permiten combinar historia y playa. Solo conviene distinguir una estancia urbana de una semana en un resort más alejado de la costa.",
+     "places": [
+      {
+       "area": "Centro de la ciudad",
+       "known": "Arqueología y hallazgos de oro",
+       "name": "Museo Arqueológico de Varna",
+       "tip": "Reserva más que una parada rápida para fotos.",
+       "why": "Para conocer la historia costera más allá de la playa."
+      },
+      {
+       "area": "Zona costera del centro antiguo",
+       "known": "Restos de la antigua Odessos",
+       "name": "Termas romanas",
+       "tip": "Lleva agua y protección solar para el recinto abierto.",
+       "why": "Para conocer la escala cotidiana de la ciudad antigua."
+      },
+      {
+       "area": "Costa de Varna",
+       "known": "Parque costero y playa",
+       "name": "Sea Garden y playa urbana",
+       "tip": "Consulta banderas de playa y regreso.",
+       "why": "Para descansar al aire libre tras los museos."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Consejos para visitar Varna",
+     "practicalTips": [
+      {
+       "body": "Un hotel de Golden Sands no ofrece el mismo acceso diario que uno céntrico de Varna.",
+       "title": "Distingue resort y ciudad"
+      },
+      {
+       "body": "Elige un tramo de Sea Garden adecuado a tu capacidad de caminata.",
+       "title": "Distancias del parque"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Duración recomendada",
+       "value": "2–3 días completos"
+      },
+      {
+       "label": "Mejor época",
+       "value": "Mayo–septiembre; verano para playa"
+      },
+      {
+       "label": "Cómo moverse",
+       "value": "Paseos céntricos y transporte a playas lejanas"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Qué ver en Sofía: ruta de 2 días y dónde alojarse",
+       "city": "Sofya",
+       "description": "Alexander Nevsky, Serdica, museos y estribaciones de Vitosha para descubrir la capital."
+      },
+      {
+       "anchor": "Qué ver en Plovdiv: casco antiguo, Kapana y teatro",
+       "city": "Plovdiv",
+       "description": "Pasea entre teatro antiguo, casas museo, Kapana y mosaicos romanos."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "Dos o tres días en el centro equilibran bien una primera visita. Dedica una mañana al Museo Arqueológico y otro bloque a termas romanas y calles céntricas. Sea Garden enlaza cómodamente con la costa. Una visita principal y tiempo flexible fuera funcionan mejor que acumular museos y planes de playa.",
+        "Si te alojas en Golden Sands, incluye los desplazamientos a Varna en el plan. Una semana de resort y una escapada cultural buscan cosas distintas. La costa encaja con playa y hotel; el centro con museos y comidas fuera. Decide según dónde quieras pasar la mayor parte del tiempo.",
+        "En verano es fácil combinar museos y baños. En otras épocas, disfruta la costa sin exigir un día de playa para considerar bueno el viaje. Arqueología, calles del centro y pausas frente al mar pueden llenar dos días aunque no te bañes."
+       ],
+       "heading": "Varna: escapada urbana o vacaciones costeras",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Reserva desde Varna Airport (VAR) hacia centro o resort concreto. Desde Sofía o Plovdiv el viaje terrestre puede ser largo: compara tren y autobús actuales. Golden Sands no equivale al centro de Varna.",
+        "Centro, museo y parte próxima del parque se unen a pie; Sea Garden entero no es un circuito corto. Consulta autobús o coche para playas lejanas y monasterio, con atención al regreso."
+       ],
+       "heading": "Cómo llegar a Varna y moverse",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Un día de arqueología y centro, otro de Sea Garden y playa, y un tercero de historia o naturaleza cercana equilibran la estancia."
+       ],
+       "heading": "Qué ver en Varna",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Los hallazgos de oro de la necrópolis son un tema destacado. Lee cronología y contexto sin correr por las vitrinas. Una visita interior equilibra playa en jornadas cálidas o lluviosas."
+         ],
+         "heading": "Museo Arqueológico de Varna"
+        },
+        {
+         "body": [
+          "Combina las termas con un paseo céntrico. Lee explicaciones para entender muros y salas y consulta posibles obras o cambios de acceso. Las horas frescas son más cómodas."
+         ],
+         "heading": "Termas romanas"
+        },
+        {
+         "body": [
+          "Elige un tramo manejable de parque y costa con descansos. Oleaje y banderas del día determinan el baño. Si sales de noche, valora ubicación del hotel y necesidad de dormir sin ruido."
+         ],
+         "heading": "Sea Garden y playa urbana"
+        }
+       ]
+      },
+      {
+       "body": [
+        "Sea Garden es más que el camino del centro a la playa. Sombra, bancos y paseos breves dan aire a la jornada. Acércate después del museo o recorre un tramo antes de cenar. No necesitas terminar todo el parque para disfrutar un rincón que te guste.",
+        "Mirar unos pocos objetos con atención en la colección arqueológica puede aportar más que recorrer todo rápido. Las termas ofrecen otra forma de ver el pasado al aire libre. Separa ambas visitas con una comida por el barrio para incluir también la Varna actual."
+       ],
+       "heading": "Baja el ritmo en Sea Garden",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "En primera visita, centro–Sea Garden equilibra museos, comidas y costa. Golden Sands ofrece otra estancia de playa: añade traslados diarios al centro y comprueba ruido nocturno.",
+        "En una primera visita de dos noches, centro y Sea Garden reducen la necesidad de organizar transporte cada día. Un resort tiene sentido si pasarás casi todo el tiempo en la playa. Prioriza ubicación sobre vistas: caminar al museo o esperar un traslado cambian bastante una escapada breve.",
+        "Un hotel en el centro de Varna une museos, termas romanas y vida urbana; los complejos costeros exteriores se centran más en playa. No te guíes solo por el nombre «Varna»: compara dirección, distancia real, autobús y regreso de tarde antes de reservar."
+       ],
+       "heading": "Dónde alojarse en Varna",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Pescado y mejillones del mar Negro acompañan shopska y platos búlgaros caseros. Pregunta por porción, preparación y guarniciones; compara el suplemento por vistas en el total.",
+        "Pescado o mejillones encajan con la costa, sin tener que elegir marisco en cada comida. Alterna con cocina búlgara casera o ensalada y parrilla. Una mesa con vistas puede ser agradable de noche; al mediodía, un sitio sencillo en el centro facilita seguir el recorrido."
+       ],
+       "heading": "Qué comer en Varna",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "Verano favorece playa y eventos; mayo y septiembre pueden ser más tranquilos para pasear. En invierno prioriza museos y centro. Para bañarte valora el mar, además de temperatura ambiente.",
+        "Resorts estivales, servicios de playa y taxis elevan gasto. Une museos caminando desde el centro. Pregunta por tumbona, sombrilla y consumo antes de sentarte, con precios actuales en euros."
+       ],
+       "heading": "Varna: cuándo ir y presupuesto",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Aladzha o Pobiti Kamani pueden ocupar el tercer día; no son una prolongación del paseo céntrico. Sofía y Plovdiv exigen etapas largas con días de traslado propios."
+       ],
+       "heading": "Excursiones desde Varna",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Qué ver en Varna: Sea Garden, Museo Arqueológico, termas romanas y playas, con transporte, alojamiento, comida local y ruta de 3 días por la costa.",
+     "seoTitle": "Qué ver en Varna: Sea Garden, museos y playas",
+     "sources": [
+      {
+       "name": "Municipio de Varna — turismo oficial",
+       "url": "https://visit.varna.bg/en/sights.html?listType=list"
+      },
+      {
+       "name": "Municipio de Varna — parques y rutas",
+       "url": "https://visit.varna.bg/en/turove-i-aktivnosti.html"
+      },
+      {
+       "name": "Municipio de Varna — excursiones cercanas",
+       "url": "https://visit.varna.bg/en/sights_near_varna.html"
+      },
+      {
+       "name": "Visit Varna — Sea Garden",
+       "url": "https://visit.varna.bg/en/sea_garden.html"
+      },
+      {
+       "name": "Visit Varna — visitas culturales",
+       "url": "https://visit.varna.bg/en/kulturen-turizam.html"
+      }
+     ],
+     "volatileNote": "Los precios, los servicios y los horarios pueden cambiar. Consulta las fuentes oficiales indicadas antes de reservar."
+    },
+    "tr": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Varna Garı & Liman civarı",
+        "category": "halal",
+        "cuisine": "Helal ızgaralar ve pide fırını",
+        "description": "Deniz kıyısına yakın konumda güvenilir helal dana ve kuzu ızgaraları, taze salatalar ve sıcak pide ekmekleri sunan lezzet durağı.",
+        "lastVerified": "2026-10-06",
+        "name": "Kervan Halal Grill",
+        "price": "Ekonomik",
+        "verification": {
+         "note": "Etler helal kesim sertifikalı toptancılardan temin edilir.",
+         "sourceName": "Varna Turizm Enformasyon Merkezi",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://visit.varna.bg/en/",
+         "status": "restaurant-confirmed"
+        },
+        "why": "Varna'da helal et konusunda açık beyan sunan ve doyurucu ızgara porsiyonları hazırlayan pratik bir restorandır."
+       }
+      ],
+      "researchNote": "Varna sahilindeki balık lokantaları helal beslenme için iyi bir alternatiftir; veganlar fırın sebze ve fasulye yemeklerini tercih edebilir.",
+      "vegan": [
+       {
+        "area": "Varna Merkez / San Stefano St",
+        "category": "vegan",
+        "cuisine": "Sağlıklı kaseler ve vegan wrap",
+        "description": "Karadeniz sahiline yakın konumda taze smoothie kaseleri, vegan wrap'ler ve mevsime göre hazırlanan bitki bazlı sıcak öğünler.",
+        "lastVerified": "2026-10-06",
+        "name": "Green House Healthy Bar & Kitchen",
+        "price": "Ekonomik",
+        "verification": {
+         "note": "Menüde geniş bitki bazlı seçenekler bulunur; süt ürünleri yerine bitkisel süt kullanılır.",
+         "sourceName": "HappyCow güncel vegan restoran dizini",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/green-house-varna-153400",
+         "status": "vegan-focused"
+        },
+        "why": "Varna sahil parkı gezisi öncesinde hafif, taze ve sindirimi kolay bitkisel gıdalarla beslenmek için idealdir."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Merkez, müze ve kıyı için iki gün; çevre gezisi ve rahat plaj zamanı için üç veya dört gün.",
+       "q": "Varna kaç günde gezilir?"
+      },
+      {
+       "a": "Evet; ilk gezi için müze, restoran ve park erişimini dengeler. Resort tatili istiyorsanız kıyı tesislerini ayrı karşılaştırın.",
+       "q": "Varna şehir merkezinde kalınır mı?"
+      },
+      {
+       "a": "Hayır; müze ve merkez yılın diğer dönemlerinde de şehir gezisi sunar. Deniz ve plaj beklentisini mevsime göre ayarlayın.",
+       "q": "Varna yalnız yazın mı gezilir?"
+      }
+     ],
+     "h1": "Varna Gezi Rehberi: Sea Garden, Müzeler ve Plajlar",
+     "itinerary": [
+      {
+       "afternoon": "Merkez yürüyüşü ve Roma Hamamları",
+       "evening": "Yerel yemek",
+       "morning": "Arkeoloji Müzesi",
+       "title": "1. Gün — Arkeoloji ve merkez"
+      },
+      {
+       "afternoon": "Koşullar uygunsa plaj",
+       "evening": "Kısa sahil yürüyüşü",
+       "morning": "Sea Garden’ın seçilmiş bölümü",
+       "title": "2. Gün — Park ve kıyı"
+      },
+      {
+       "afternoon": "Dönüş ve dinlenme",
+       "evening": "Merkezde sakin akşam",
+       "morning": "Aladzha veya Pobiti Kamani’den biri",
+       "title": "3. Gün — Yakın çevre"
+      }
+     ],
+     "lede": "Varna’da sabah müzeye girip öğleden sonra Sea Garden’ın gölgesinden denize inebilirsiniz. Bu şehir plajla tarih arasında seçim yapmayı gerektirmiyor; birkaç günlük konaklamada ikisine de alan var. Yalnız merkezdeki bir şehir tatiliyle uzaktaki resortta geçirilen haftayı aynı gezi sanmayın.",
+     "places": [
+      {
+       "area": "Şehir merkezi",
+       "known": "Arkeoloji ve altın buluntular",
+       "name": "Varna Arkeoloji Müzesi",
+       "tip": "Koleksiyon için hızlı fotoğraf molasından fazla süre bırakın.",
+       "why": "Kıyı şehrinin tarihini deniz tatilinin ötesinde okumak için."
+      },
+      {
+       "area": "Eski merkez kıyısı",
+       "known": "Antik Odessos kalıntıları",
+       "name": "Roma Hamamları",
+       "tip": "Açık alan için su ve güneş koruması taşıyın.",
+       "why": "Antik kentin gündelik yaşam ölçeğini görmek için."
+      },
+      {
+       "area": "Varna kıyısı",
+       "known": "Kıyı parkı ve plaj",
+       "name": "Sea Garden ve şehir plajı",
+       "tip": "Plaj bayraklarını ve dönüş yolunu kontrol edin.",
+       "why": "Müze gününden sonra açık hava molası için."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Varna için pratik ipuçları",
+     "practicalTips": [
+      {
+       "body": "Golden Sands oteli Varna merkezindeki otelle aynı günlük erişimi sunmaz.",
+       "title": "Resort ve şehir ayrımı"
+      },
+      {
+       "body": "Sea Garden’da bütün park yerine günlük kapasitenize uygun bir bölüm seçin.",
+       "title": "Park ölçeği"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Önerilen süre",
+       "value": "2–3 tam gün"
+      },
+      {
+       "label": "En uygun dönem",
+       "value": "Mayıs–Eylül; deniz için yaz"
+      },
+      {
+       "label": "Ulaşım yaklaşımı",
+       "value": "Merkezde yürüyüş, uzak kıyıya araç"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Sofya Gezi Rehberi: Gezilecek Yerler ve 2 Günlük Rota",
+       "city": "Sofya",
+       "description": "Alexander Nevsky, Serdica, müzeler ve Vitoşa eteklerinde yürünebilir başkent rotası."
+      },
+      {
+       "anchor": "Plovdiv Gezi Rehberi: Eski Şehir, Kapana ve Antik Tiyatro",
+       "city": "Plovdiv",
+       "description": "Antik Tiyatro, müze evleri, Kapana ve Roma mozaikleri arasında yürüyüşle kültür gezisi."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "İlk ziyaret için merkezde iki veya üç gün, müze ve denizi dengeleyen bir başlangıç. Arkeoloji Müzesi’ni bir sabaha, Roma Hamamları ve merkez yürüyüşünü başka bir bloğa alabilirsiniz. Sea Garden günün kalanına rahat bir geçiş sağlar. Sabah iki kapalı ziyaret ve öğleden sonra uzun plaj programı yerine bir ana ziyaretle başlayan daha boş günler kurun.",
+        "Golden Sands gibi kıyı bölgelerini seçiyorsanız Varna merkezine günlük geçişi planın içine katın. Resortta kalmanın keyfi başka; her gün müzeye ve şehir yemeğine dönmek ise ayrı ulaşım gerektiriyor. Deniz ve otel ağırlıklı bir hafta için resort, kısa kültür gezisi için merkez daha anlaşılır olabilir. İyi tercih, en çok nerede zaman geçirmek istediğinize bağlı.",
+        "Yazın müze ile denizi aynı gezide birleştirmek güzel; diğer mevsimlerde ise kıyı yürüyüşünü yüzme beklentisinden ayrı düşünün. Varna’yı yalnız hava yeterince sıcaksa değerli bir yer saymayın. Arkeoloji, merkez sokakları ve deniz kenarında sakin bir mola, plaj günü olmadan da iki günlük geziyi doldurabilir."
+       ],
+       "heading": "Varna’da şehir tatili mi, kıyı tatili mi?",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Varna Airport (VAR) transferini şehir merkezi veya seçtiğiniz resort adıyla ayırın. Sofya ve Plovdiv’den kara yolculuğu uzun olabilir; gerçek tren ve otobüs süresini karşılaştırın. Golden Sands konaklaması şehir merkeziyle aynı varış noktası değildir.",
+        "Merkez, müze ve parkın yakın kısmı yürüyüşle bağlanır; Sea Garden’ın tamamı kısa bir halka değildir. Uzak plaj ve manastır için güncel otobüs veya araç planlayın. Plaj dönüşündeki son bağlantıyı gündüz gidişi kadar önemseyin."
+       ],
+       "heading": "Varna ulaşım rehberi",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Müze ve eski merkez için bir gün, Sea Garden ve plaj için başka gün ayırın. Yakın çevredeki doğa veya tarih gezisini üçüncü güne koymak kıyıda geçirilen zamanı korur."
+       ],
+       "heading": "Varna gezilecek yerler",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Varna nekropolü altın buluntuları koleksiyonun öne çıkan temasıdır. Eserleri kronoloji ve bağlamıyla inceleyin; müze yazıları için zaman bırakın. Sıcak veya yağışlı günde kapalı mekân ziyareti sahil programını dengeleyebilir."
+         ],
+         "heading": "Varna Arkeoloji Müzesi"
+        },
+        {
+         "body": [
+          "Hamam alanını merkezdeki kısa yürüyüşe bağlayın. Duvar ve mekân düzenini anlamak için açıklamaları okuyun; restorasyon veya erişim değişikliğini ziyaret öncesinde kontrol edin. Güneşli öğle yerine erken veya serin saat daha rahattır."
+         ],
+         "heading": "Roma Hamamları"
+        },
+        {
+         "body": [
+          "Parkı kıyıyla bağlayan kısa bir bölüm seçip mola noktalarıyla yürüyün. Deniz girişinde o günün dalga ve bayrak bilgisi belirleyicidir. Gece geç kıyı eğlencesi düşünüyorsanız otelin konumu ve sakin oda ihtiyacını birlikte değerlendirin."
+         ],
+         "heading": "Sea Garden ve şehir plajı"
+        }
+       ]
+      },
+      {
+       "body": [
+        "Sea Garden’ı merkezle deniz arasında yalnız geçilecek bir park saymayın. Gölge, oturacak yer ve kısa yollarla geziye nefes aldırıyor. Sabah müzeden çıkıp parka uzanmak veya akşam yemek öncesi bir bölümünde yürümek yeterli. Parkın tamamını bitirmek zorunda kalmadan sevdiğiniz bir köşede durabilirsiniz.",
+        "Arkeoloji koleksiyonunda birkaç nesneye gerçekten vakit ayırmak uzun bir hızlı turdan daha öğretici olabilir. Roma Hamamları ise kentin tarihini açık alanda görmenin başka bir yolu. İki ziyareti araya bir mahalle öğünü koyarak ayırırsanız Varna yalnız eski eserlerden oluşan bir liste gibi kalmaz; bugünkü şehir de geziye katılır."
+       ],
+       "heading": "Sea Garden’da yürüyüşü biraz yavaşlatın",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "İlk şehir gezisinde merkez–Sea Garden çevresi müze, yemek ve sahili dengeler. Golden Sands gibi resortlar ayrı plaj tatili sunar; her gün merkeze dönüş maliyetini ekleyin. Denize yakın oda ile sessiz oda aynı tercih olmayabilir.",
+        "İki gecelik ilk ziyarette merkez ve Sea Garden çevresinde kalmak, her gün yeniden ulaşım planı kurma ihtiyacını azaltır. Tatilinizin çoğu plajda geçecekse resort seçimi mantıklı olabilir. Konumu oda manzarasından önce düşünün: sabah müzeye yürümekle uzaktan araç beklemek kısa bir gezinin akışını belirgin biçimde değiştiriyor.",
+        "Varna merkezindeki otel müze, Roma hamamları ve şehir hayatını birleştirir; dış kıyı tatil yerleri daha çok plaj konaklamasına yöneliktir. Rezervasyonda yalnız “Varna” adına bakmayın: merkezden gerçek mesafeyi, otobüs bağlantısını ve akşam dönüşünü adres üzerinden karşılaştırın."
+       ],
+       "heading": "Varna nerede kalınır?",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Karadeniz balığı ve midye, shopska salatası ve Bulgar ev yemekleriyle birleşir. Deniz ürününde porsiyon, hazırlama ve yan tabak fiyatını sorun. Park veya sahil manzarası için ödediğiniz farkı toplam hesap üzerinden karşılaştırın.",
+        "Kıyıda balık veya midye yemeğini geziye eklemek güzel; her öğünü deniz ürününe çevirmek şart değil. Bir gün Bulgar ev yemekleri, başka bir gün hafif bir salata ve ızgara seçebilirsiniz. Deniz manzaralı masa özellikle akşam keyifli olabilir, ama kısa öğle molasında merkeze yakın sade bir yer gününüzü daha rahat bırakır."
+       ],
+       "heading": "Varna ne yenir?",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "Yaz plaj ve kıyı etkinlikleri için öne çıkar; mayıs ve eylül şehir yürüyüşlerinde daha sakin olabilir. Kışın deniz tatili yerine müze ve merkez programı kurun. Yüzme için hava sıcaklığı kadar deniz koşuluna bakın.",
+        "Yaz resortları, plaj işletmeleri ve taksi bütçeyi artırır. Merkezde yürüyerek müze gününü birleştirmek masrafı azaltır. Şezlong, şemsiye ve tüketim koşulunu plajda oturmadan sorun; fiyatları avro üzerinden kontrol edin."
+       ],
+       "heading": "Varna için mevsim ve bütçe planı",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Aladzha Manastırı veya Pobiti Kamani üçüncü gün için seçeneklerdir; ikisini tek kısa şehir yürüyüşünün uzantısı sanmayın. Sofya ve Plovdiv uzak şehir devamıdır; transfer günlerini gezi gününden ayrı tutun."
+       ],
+       "heading": "Varna çevresinde rota önerileri",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Varna gezi rehberi: Sea Garden, Arkeoloji Müzesi, Roma hamamları ve plajlar; nerede kalınır, ulaşım, yemek ve 3 günlük Karadeniz rotası.",
+     "seoTitle": "Varna Gezi Rehberi: Sea Garden, Müzeler ve Plajlar",
+     "sources": [
+      {
+       "name": "Varna Belediyesi — resmî turizm",
+       "url": "https://visit.varna.bg/en/sights.html?listType=list"
+      },
+      {
+       "name": "Varna Belediyesi — parklar ve rotalar",
+       "url": "https://visit.varna.bg/en/turove-i-aktivnosti.html"
+      },
+      {
+       "name": "Varna Belediyesi — çevre gezileri",
+       "url": "https://visit.varna.bg/en/sights_near_varna.html"
+      },
+      {
+       "name": "Visit Varna — Sea Garden",
+       "url": "https://visit.varna.bg/en/sea_garden.html"
+      },
+      {
+       "name": "Visit Varna — kültür gezileri",
+       "url": "https://visit.varna.bg/en/kulturen-turizam.html"
+      }
+     ],
+     "volatileNote": "Bilet ücretleri, seferler ve ziyaret saatleri değişebilir. Rezervasyon öncesinde aşağıdaki resmî kaynaklardan güncel bilgiyi kontrol edin."
+    }
+   }
+  }
+ ]
+}

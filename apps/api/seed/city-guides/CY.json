@@ -1,0 +1,2988 @@
+{
+ "countryCode": "CY",
+ "guides": [
+  {
+   "citySlug": "girne",
+   "completeLangs": [
+    "en",
+    "es"
+   ],
+   "reviewed": true,
+   "translations": {
+    "en": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Opposite Kyrenia Old Harbour",
+        "category": "halal",
+        "cuisine": "Cypriot kebabs and grills",
+        "description": "Historic Kyrenia institution since 1949, famed for its original 'Full Kebab' using locally sourced halal meats and traditional meze.",
+        "lastVerified": "2026-10-06",
+        "name": "Niazi's Restaurant",
+        "price": "Orta",
+        "verification": {
+         "note": "All red meat and poultry products are sourced from local halal slaughter.",
+         "sourceName": "Cyprus Turkish Hoteliers and Restaurateurs Association",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://visitncy.com/",
+         "status": "restaurant-confirmed"
+        },
+        "why": "The most established restaurant in Kyrenia harbour to enjoy Cyprus's famous sheftalia kebab and grills with verified halal meat."
+       }
+      ],
+      "researchNote": "In Cyprus, sheftalia is a meat kebab wrapped in caul fat, containing no fruit. Halloumi is dairy; vegans can choose olive and tahini mezze.",
+      "vegan": [
+       {
+        "area": "Kyrenia Coastal Road",
+        "category": "vegan",
+        "cuisine": "Mediterranean salads and plant dishes",
+        "description": "Popular coastal restaurant in Kyrenia with a dedicated vegetarian section, fresh Mediterranean herb salads, hummus and vegan wraps.",
+        "lastVerified": "2026-10-06",
+        "name": "Eziç Peanuts (Vegan & Vejetaryen Seçkisi)",
+        "price": "Orta",
+        "verification": {
+         "note": "Salads and mezze can be ordered without halloumi or yogurt for vegan dining.",
+         "sourceName": "HappyCow's current vegan restaurant directory",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/ezic-peanuts-kyrenia-84210",
+         "status": "vegan-options"
+        },
+        "why": "The best-known local venue in Kyrenia for fresh, reliable Mediterranean plant-based dishes with sea views."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Two days for harbour, castle and Bellapais; three or four with beach time.",
+       "q": "How many days do you need in Kyrenia?"
+      },
+      {
+       "a": "It is not a short extension of the harbour walk. Slopes and roads make a separate transfer more practical for most visitors.",
+       "q": "Can you walk to Bellapais from central Kyrenia?"
+      },
+      {
+       "a": "Centre for a first cultural stay, Bellapais for quieter views, or a coastal hotel with verified beach access for a sea-focused trip.",
+       "q": "Where should you stay in Kyrenia?"
+      }
+     ],
+     "h1": "Kyrenia Travel Guide: Harbour, Castle and Bellapais",
+     "itinerary": [
+      {
+       "afternoon": "Kyrenia Castle and exhibitions",
+       "evening": "Waterfront walk and dinner",
+       "morning": "Old harbour and surrounding lanes",
+       "title": "Day 1 — Harbour and castle"
+      },
+      {
+       "afternoon": "Abbey, village and meal break",
+       "evening": "Return to town or rest at the hotel",
+       "morning": "Transfer to Bellapais",
+       "title": "Day 2 — Bellapais"
+      }
+     ],
+     "lede": "A Girne day flows easily around the old harbour: visit the castle in the morning, sit by the water later and save Bellapais for another outing. A short holiday does not need a new stop every hour. Harbour walks, coastal pauses and a village visit make a comfortable balance.",
+     "places": [
+      {
+       "area": "Central Kyrenia",
+       "known": "Harbour walks and stone buildings",
+       "name": "Kyrenia Old Harbour",
+       "tip": "Read menu and total prices before taking a waterfront table.",
+       "why": "For the city’s waterfront scale on foot."
+      },
+      {
+       "area": "Eastern old harbour",
+       "known": "Castle courtyard and maritime heritage",
+       "name": "Kyrenia Castle",
+       "tip": "Check currently accessible sections and visiting hours.",
+       "why": "For architecture and history beside the harbour."
+      },
+      {
+       "area": "Hills above Kyrenia",
+       "known": "Abbey architecture and panorama",
+       "name": "Bellapais Abbey and village",
+       "tip": "Include slopes and return transport in your timing.",
+       "why": "For a village and viewpoint break above the coast."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Practical tips for Kyrenia",
+     "practicalTips": [
+      {
+       "body": "Check the hotel’s actual harbour distance and evening return costs.",
+       "title": "Centre or coast?"
+      },
+      {
+       "body": "Confirm the castle collection you want is currently accessible.",
+       "title": "Exhibition access"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Recommended stay",
+       "value": "2–3 full days"
+      },
+      {
+       "label": "Best time to visit",
+       "value": "April–June and September–October"
+      },
+      {
+       "label": "Getting around",
+       "value": "Central walks and a Bellapais transfer"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Famagusta Travel Guide: Walled Town, Othello and Salamis",
+       "city": "Gazimağusa",
+       "description": "Walled-town lanes, Othello Castle and Salamis archaeology offer two contrasting coastal history days."
+      },
+      {
+       "anchor": "Paphos Travel Guide: Mosaics, Tombs and Where to Stay",
+       "city": "Baf",
+       "description": "Kato Paphos mosaics, Tombs of the Kings and the harbour form an archaeology-focused Mediterranean stay."
+      },
+      {
+       "anchor": "Larnaca Travel Guide: Finikoudes, Salt Lake and Stays",
+       "city": "Larnaka",
+       "description": "Finikoudes, Saint Lazarus, Hala Sultan Tekke and the seasonal Salt Lake make a coastal walking base."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "With two full days, devote one to the harbour and castle and the other to Bellapais with a coastal break. Give the castle interiors and views time rather than stopping at an exterior photograph. Heat and steps affect the pace even in a compact centre. A seated lunch break adds as much to the day as another sight.",
+        "For a beach holiday with Girne visits, distinguish the central sightseeing days from hotel days. Coming to the harbour every evening from a distant coastal property adds daily travel. Choose the centre for restaurants and town life, or the coast for rest. A good holiday need not repeat both every day.",
+        "Plan Bellapais as a separate village outing. After the abbey, a short walk and a seated pause help you enjoy the setting. Think through the return before setting out. Give Famagusta or another town a different day rather than trying to turn one Girne excursion into a tour of the whole island."
+       ],
+       "heading": "Your first Girne visit: the harbour, castle and Bellapais",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "For an Ercan arrival, arrange a transfer to the hotel’s exact location. From another airport, confirm required documents and the chosen transfer route before booking. A “Kyrenia hotel” may be central or much farther along the coast.",
+        "The harbour and old centre are walkable; Bellapais and farther beaches need separate transport. Agree taxi waiting and return prices, and check left-side driving, hotel parking and rental coverage for every intended route."
+       ],
+       "heading": "Getting to and around Kyrenia",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Separate a central harbour-and-castle day from Bellapais. Adding a third beach day is calmer than squeezing villages and coast into one car tour."
+       ],
+       "heading": "Things to do in Kyrenia",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "See the harbour with quieter morning lanes and a separate evening waterfront walk. Explore beyond the main view; for boat trips, check duration, route and return pier, and compare waterfront menus."
+         ],
+         "heading": "Kyrenia Old Harbour"
+        },
+        {
+         "body": [
+          "If accessible, allow time for the courtyard and exhibitions rather than only the exterior. Confirm access to sections such as the shipwreck collection beforehand, with suitable shoes for steps and water for exposed areas."
+         ],
+         "heading": "Kyrenia Castle"
+        },
+        {
+         "body": [
+          "Bellapais is not a walkable extension of the central harbour. Travel separately, then pair the abbey with a village walk and meal. Allow half a day while checking current admissions and view-led dining prices."
+         ],
+         "heading": "Bellapais Abbey and village"
+        }
+       ]
+      },
+      {
+       "body": [
+        "The harbour changes with the time of day. The route you walked towards the castle in the morning gains different light and activity before dinner. Choose a place you enjoy without assuming all waterfront tables offer the same meal or price. Taking in the view does not require a lengthy dining package.",
+        "After looking at the abbey’s stonework, wander a little around Bellapais. Small details reveal a village that still has everyday life beyond its photographs. Be considerate around homes and narrow lanes. Time for a coffee can make the outing more memorable than a quick visit followed immediately by the drive back."
+       ],
+       "heading": "A slower evening at the harbour and in the village",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Central stays suit harbour and restaurants, Bellapais views and quiet, and farther coastal hotels a beach priority. Check actual swimming access, town transfers and evening returns before choosing a resort.",
+        "For a first two-night visit, walking out from a central base is convenient. Bellapais offers views and quiet, with separate plans needed for meals and trips into town. A beach hotel described as being in Girne may not be walkable to the harbour. Its actual address tells you more than the room photographs."
+       ],
+       "heading": "Where to stay in Kyrenia",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Halloumi, sheftalia, olive-based foods and meze introduce local dining. Sheftalia is a meat preparation, not a peach dish. Distinguish fish prices by weight and portion and check dairy-based sauces for vegan meals.",
+        "Start with halloumi and meze, then choose fish or a grilled dish without trying everything at once. Despite its name, şeftali kebabı is a meat dish. A harbour-view table one day and a quieter village meal the next add variety. Even a short stay can spread local flavours across several meals."
+       ],
+       "heading": "What to eat in Kyrenia",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "Spring and autumn suit castle and village walks. In summer, visit exposed places early and account for heat on Bellapais slopes. Follow current beach flags and wave conditions for swimming.",
+        "Budget castle, abbey, beach services and transfers separately. Confirm charging currency, card acceptance and service charges. Daily taxis may offset a lower room rate at a distant hotel."
+       ],
+       "heading": "Kyrenia: weather and budget planning",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Famagusta offers a different two-day cultural leg around the walled town and Salamis. Confirm transfer and vehicle conditions for onward travel rather than using map distance as the only planning measure."
+       ],
+       "heading": "Trips beyond Kyrenia",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Explore Kyrenia’s old harbour, castle and Bellapais with places to stay, beach choices, transport, local food and a balanced 2-day itinerary.",
+     "seoTitle": "Kyrenia Travel Guide: Harbour, Castle and Bellapais",
+     "sources": [
+      {
+       "name": "Kyrenia — local tourism guide",
+       "url": "https://www.visitncy.com/discover/kyrenia-castle-shipwreck-museum/"
+      },
+      {
+       "name": "Bellapais — visitor guide",
+       "url": "https://www.visitncy.com/discover/bellapais-abbey/"
+      }
+     ],
+     "volatileNote": "Admission prices, services and opening hours can change. Check the official sources below before booking."
+    },
+    "es": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Frente al puerto antiguo de Kyrenia",
+        "category": "halal",
+        "cuisine": "Kebabs chipriotas y parrilla",
+        "description": "Institución histórica de Kyrenia desde 1949, famosa por su 'Full Kebab' con carnes halal locales a la brasa y mezes tradicionales.",
+        "lastVerified": "2026-10-06",
+        "name": "Niazi's Restaurant",
+        "price": "Orta",
+        "verification": {
+         "note": "Toda la carne roja y aves proceden de matanza local halal.",
+         "sourceName": "Asociación de Hoteleros y Restauradores Turcochipriotas",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://visitncy.com/",
+         "status": "restaurant-confirmed"
+        },
+        "why": "El restaurante más consagrado del puerto de Kyrenia para degustar el famoso kebab sheftalia y parrilladas con carne halal."
+       }
+      ],
+      "researchNote": "En Chipre, el sheftalia es un kebab de carne en redaño y no lleva fruta. El halloumi es lácteo; los veganos pueden elegir mezes con aceitunas y tahini.",
+      "vegan": [
+       {
+        "area": "Paseo marítimo de Kyrenia",
+        "category": "vegan",
+        "cuisine": "Ensaladas mediterráneas y platos vegetales",
+        "description": "Restaurante costero en Kyrenia con sección vegetariana, ensaladas mediterráneas de hierbas frescas, hummus y wraps vegetales.",
+        "lastVerified": "2026-10-06",
+        "name": "Eziç Peanuts (Vegan & Vejetaryen Seçkisi)",
+        "price": "Orta",
+        "verification": {
+         "note": "Se pueden pedir ensaladas y mezes sin halloumi ni yogur para dieta vegana.",
+         "sourceName": "Directorio actualizado de restaurantes veganos de HappyCow",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/ezic-peanuts-kyrenia-84210",
+         "status": "vegan-options"
+        },
+        "why": "La opción local más reconocida en Kyrenia para disfrutar de platos vegetales frescos frente al mar."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Dos días para puerto, castillo y Bellapais; tres o cuatro con playa.",
+       "q": "¿Cuántos días dedicar a Kyrenia?"
+      },
+      {
+       "a": "No es una prolongación breve del puerto. Cuestas y carretera hacen más práctico un traslado propio para la mayoría.",
+       "q": "¿Se llega a Bellapais a pie desde el centro?"
+      },
+      {
+       "a": "Centro para cultura, Bellapais para vistas tranquilas o hotel costero con acceso comprobado a playa para vacaciones de mar.",
+       "q": "¿Dónde alojarse en Kyrenia?"
+      }
+     ],
+     "h1": "Qué ver en Kyrenia: puerto, castillo y Bellapais",
+     "itinerary": [
+      {
+       "afternoon": "Castillo de Kyrenia y exposiciones",
+       "evening": "Paseo costero y cena",
+       "morning": "Puerto antiguo y calles próximas",
+       "title": "Día 1 — Puerto y castillo"
+      },
+      {
+       "afternoon": "Abadía, pueblo y comida",
+       "evening": "Regreso al centro o descanso en hotel",
+       "morning": "Traslado a Bellapais",
+       "title": "Día 2 — Bellapais"
+      }
+     ],
+     "lede": "En Girne, el día fluye alrededor del puerto antiguo: castillo por la mañana, una pausa junto al agua después y Bellapais en otra salida. Una escapada no necesita una parada nueva cada hora. Paseos por el centro, costa y un pueblo forman un buen equilibrio.",
+     "places": [
+      {
+       "area": "Centro de Kyrenia",
+       "known": "Paseo portuario y edificios de piedra",
+       "name": "Puerto antiguo de Kyrenia",
+       "tip": "Lee menú y precios antes de sentarte frente al puerto.",
+       "why": "Para conocer la escala costera a pie."
+      },
+      {
+       "area": "Este del puerto antiguo",
+       "known": "Patio del castillo y patrimonio marítimo",
+       "name": "Castillo de Kyrenia",
+       "tip": "Consulta zonas accesibles y horario actual.",
+       "why": "Para añadir arquitectura e historia al puerto."
+      },
+      {
+       "area": "Laderas sobre Kyrenia",
+       "known": "Arquitectura de abadía y panorámica",
+       "name": "Abadía y pueblo de Bellapais",
+       "tip": "Cuenta cuestas y transporte de regreso.",
+       "why": "Para equilibrar costa con pueblo y vistas."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Consejos para visitar Kyrenia",
+     "practicalTips": [
+      {
+       "body": "Comprueba distancia real al puerto y coste de regreso nocturno.",
+       "title": "¿Centro o costa?"
+      },
+      {
+       "body": "Confirma que la colección del castillo que te interesa sea accesible actualmente.",
+       "title": "Acceso a exposiciones"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Duración recomendada",
+       "value": "2–3 días completos"
+      },
+      {
+       "label": "Mejor época",
+       "value": "Abril–junio y septiembre–octubre"
+      },
+      {
+       "label": "Cómo moverse",
+       "value": "Paseos céntricos y traslado a Bellapais"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Qué ver en Famagusta: murallas, Otelo y Salamina",
+       "city": "Gazimağusa",
+       "description": "Calles amuralladas, castillo de Otelo y arqueología de Salamina para dos jornadas históricas distintas."
+      },
+      {
+       "anchor": "Qué ver en Pafos: mosaicos, tumbas y dónde alojarse",
+       "city": "Baf",
+       "description": "Mosaicos de Kato Pafos, Tumbas de los Reyes y puerto para una estancia mediterránea de arqueología."
+      },
+      {
+       "anchor": "Qué ver en Lárnaca: Finikoudes, lago salado y playas",
+       "city": "Larnaka",
+       "description": "Finikoudes, San Lázaro, Hala Sultan Tekke y lago salado estacional para una base costera."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "Con dos días completos, dedica uno al puerto y castillo y otro a Bellapais con una pausa costera. Deja tiempo para interiores y vistas del castillo, además de la foto exterior. Calor y escaleras influyen incluso en un centro pequeño. Descansar a mediodía aporta tanto como otra visita.",
+        "Si combinas playa y Girne, separa los días urbanos de los del hotel. Venir al puerto cada noche desde un alojamiento costero lejano añade transporte diario. El centro encaja con restaurantes y vida urbana; la costa con descanso. No tienes que repetir ambos planes todos los días.",
+        "Planifica Bellapais como una salida al pueblo. Después de la abadía, un paseo breve y una pausa permiten disfrutar su ambiente. Piensa en el regreso antes de salir. Reserva otro día para Famagusta u otra ciudad en vez de convertir una excursión en una vuelta por toda la isla."
+       ],
+       "heading": "Primera visita a Girne: puerto, castillo y Bellapais",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Si llegas por Ercan, reserva el traslado a la ubicación exacta del hotel. Desde otro aeropuerto confirma documentos y condiciones del recorrido antes de reservar. “Hotel en Kyrenia” puede significar centro o costa bastante alejada.",
+        "Puerto y centro antiguo se pasean; Bellapais y playas lejanas necesitan conexión propia. Acuerda espera y regreso del taxi y revisa conducción por la izquierda, aparcamiento y cobertura de rutas del alquiler."
+       ],
+       "heading": "Cómo llegar a Kyrenia y moverse",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Separa puerto y castillo de la jornada de Bellapais. Un tercer día de playa resulta más tranquilo que comprimir pueblos y costa en un tour de coche."
+       ],
+       "heading": "Qué ver en Kyrenia",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Conoce el puerto con calles tranquilas por la mañana y otro paseo al atardecer. Explora fuera de la vista principal; en barcos confirma duración, ruta y muelle de regreso, y compara menús frente al agua."
+         ],
+         "heading": "Puerto antiguo de Kyrenia"
+        },
+        {
+         "body": [
+          "Si están accesibles, dedica tiempo a patio y exposiciones además de la fachada. Confirma secciones como la colección del naufragio y lleva calzado para escalones y agua para exteriores."
+         ],
+         "heading": "Castillo de Kyrenia"
+        },
+        {
+         "body": [
+          "Bellapais no prolonga a pie el puerto céntrico. Desplázate aparte y combina abadía, paseo y comida. Reserva medio día, revisando entradas actuales y precios de terrazas con vistas."
+         ],
+         "heading": "Abadía y pueblo de Bellapais"
+        }
+       ]
+      },
+      {
+       "body": [
+        "El puerto cambia según la hora. El camino al castillo por la mañana tiene otra luz y movimiento antes de cenar. Elige un lugar que te guste sin asumir que todas las mesas costeras ofrecen la misma comida o precio. Disfrutar las vistas no exige contratar una cena larga.",
+        "Después de mirar la piedra de la abadía, pasea un poco por Bellapais. Los detalles muestran un pueblo con vida cotidiana, no un decorado para fotos. Respeta viviendas y calles estrechas. Un café puede hacer la salida más memorable que visitar deprisa y volver inmediatamente."
+       ],
+       "heading": "Una tarde tranquila en el puerto y el pueblo",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Centro facilita puerto y restaurantes; Bellapais, vistas y calma; costa alejada, playa. Revisa entrada real al agua, trayecto al centro y regreso nocturno antes de elegir resort.",
+        "Para una primera visita de dos noches, salir caminando desde el centro es cómodo. Bellapais ofrece vistas y tranquilidad, pero exige organizar comidas y traslados. Que un hotel de playa se anuncie en Girne no significa que permita caminar al puerto. La dirección real explica más que las fotos."
+       ],
+       "heading": "Dónde alojarse en Kyrenia",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Halloumi, sheftalia, aceitunas y meze introducen la mesa local. Sheftalia es carne, no un plato de melocotón. Distingue pescado por peso y ración y pregunta por salsas lácteas para vegano.",
+        "Puedes empezar con halloumi y meze y seguir con pescado o parrilla sin probarlo todo de una vez. El şeftali kebabı es de carne, pese a su nombre. Una mesa frente al puerto y otra tranquila en el pueblo aportan variedad. Incluso una estancia corta permite repartir sabores entre comidas."
+       ],
+       "heading": "Qué comer en Kyrenia",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "Primavera y otoño favorecen castillo y pueblo. En verano visita exteriores temprano y cuenta calor en las cuestas de Bellapais. Respeta banderas y oleaje actuales para bañarte.",
+        "Separa castillo, abadía, playa y traslados. Confirma moneda de cobro, tarjeta y servicio. Los taxis diarios pueden compensar la habitación más barata de un hotel lejano."
+       ],
+       "heading": "Kyrenia: cuándo ir y presupuesto",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Famagusta aporta otra etapa cultural de dos días con murallas y Salamina. Confirma traslado y condiciones del vehículo para continuar; distancia en mapa no garantiza una conexión sencilla."
+       ],
+       "heading": "Excursiones desde Kyrenia",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Qué ver en Kyrenia: puerto antiguo, castillo y Bellapais, con alojamiento, playas, transporte, cocina local y una ruta equilibrada de 2 días.",
+     "seoTitle": "Qué ver en Kyrenia: puerto, castillo y Bellapais",
+     "sources": [
+      {
+       "name": "Kyrenia — guía turística local",
+       "url": "https://www.visitncy.com/discover/kyrenia-castle-shipwreck-museum/"
+      },
+      {
+       "name": "Bellapais — guía de visita",
+       "url": "https://www.visitncy.com/discover/bellapais-abbey/"
+      }
+     ],
+     "volatileNote": "Los precios, los servicios y los horarios pueden cambiar. Consulta las fuentes oficiales indicadas antes de reservar."
+    },
+    "tr": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Girne Eski Liman karşısı",
+        "category": "halal",
+        "cuisine": "Kıbrıs kebapları ve ızgara",
+        "description": "1949'dan beri adanın ünlü 'Full Kebab' klasiği; tescilli yerel helal dana ve kuzu etleri, kömür ızgarası ve geleneksel mezeler.",
+        "lastVerified": "2026-10-06",
+        "name": "Niazi's Restaurant",
+        "price": "Orta",
+        "verification": {
+         "note": "Tüm kırmızı et ve tavuk ürünleri yerel helal kesimdir.",
+         "sourceName": "Kıbrıs Türk Otelciler ve Restorancılar Birliği",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://visitncy.com/",
+         "status": "restaurant-confirmed"
+        },
+        "why": "Girne limanında adanın tescilli şeftali kebabı ve ızgaralarını güvenilir helal etle tatmak için en köklü restorandır."
+       }
+      ],
+      "researchNote": "Kıbrıs'ta şeftali kebabı koyun zarında pişirilen et yemeğidir; meyve içermez. Hellim süt ürünüdür, veganlar zeytinli ve tahinli mezeleri seçebilir.",
+      "vegan": [
+       {
+        "area": "Girne Sahil Yolu",
+        "category": "vegan",
+        "cuisine": "Akdeniz salataları ve bitkisel tabaklar",
+        "description": "Girne kıyı kordonunda taze Akdeniz otlu salatalar, sebzeli dürümler, humus ve zengin bitki bazlı alternatifler sunan köklü restoran.",
+        "lastVerified": "2026-10-06",
+        "name": "Eziç Peanuts (Vegan & Vejetaryen Seçkisi)",
+        "price": "Orta",
+        "verification": {
+         "note": "Hellimsiz ve yoğurtsuz vegan sipariş verilebilen ayrı salata ve meze seçenekleri mevcuttur.",
+         "sourceName": "HappyCow güncel vegan restoran dizini",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/ezic-peanuts-kyrenia-84210",
+         "status": "vegan-options"
+        },
+        "why": "Girne'de deniz manzarası eşliğinde temiz, güvenilir ve taze Akdeniz sebze tabakları bulmak için en bilinen yerel adrestir."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Liman, kale ve Bellapais için iki gün; plaj eklemek için üç veya dört gün.",
+       "q": "Girne kaç günde gezilir?"
+      },
+      {
+       "a": "Merkez limanın kısa yürüyüş uzantısı değildir. Yokuş ve yol nedeniyle çoğu ziyaretçi ayrı araç bağlantısı planlar.",
+       "q": "Bellapais’e yürüyerek gidilir mi?"
+      },
+      {
+       "a": "İlk kültür gezisinde merkez; sakin manzara için Bellapais; deniz önceliğinde gerçek plaj erişimi kontrol edilmiş kıyı oteli.",
+       "q": "Girne’de nerede kalmalı?"
+      }
+     ],
+     "h1": "Girne Gezi Rehberi: Liman, Kale ve Bellapais Rotası",
+     "itinerary": [
+      {
+       "afternoon": "Girne Kalesi ve sergiler",
+       "evening": "Kıyı yürüyüşü ve yemek",
+       "morning": "Eski liman ve çevre sokakları",
+       "title": "1. Gün — Liman ve kale"
+      },
+      {
+       "afternoon": "Manastır, köy ve yemek molası",
+       "evening": "Merkeze dönüş veya otelde dinlenme",
+       "morning": "Bellapais’e transfer",
+       "title": "2. Gün — Bellapais"
+      }
+     ],
+     "lede": "Girne’de gün eski limanın etrafında kolayca akıyor: sabah kaleye uğrayıp öğleden sonra deniz kenarında oturabilir, başka bir gün Bellapais’e çıkabilirsiniz. Güzel bir kısa tatil için her saat yeni bir yer gerekmiyor; merkezdeki yürüyüşü kıyı ve köy molalarıyla dengelemek yeterli.",
+     "places": [
+      {
+       "area": "Girne merkezi",
+       "known": "Liman yürüyüşü ve taş yapılar",
+       "name": "Girne Eski Liman",
+       "tip": "Manzaralı masada menü ve toplam fiyatı okuyun.",
+       "why": "Şehrin kıyı ölçeğini yürüyerek görmek için."
+      },
+      {
+       "area": "Eski liman doğusu",
+       "known": "Kale avlusu ve denizcilik mirası",
+       "name": "Girne Kalesi",
+       "tip": "Güncel açık bölümleri ve ziyaret saatini kontrol edin.",
+       "why": "Liman gezisine mimari ve tarih eklemek için."
+      },
+      {
+       "area": "Girne üzerindeki yamaçlar",
+       "known": "Manastır mimarisi ve panorama",
+       "name": "Bellapais Manastırı ve köyü",
+       "tip": "Yokuş ve dönüş ulaşımını öğle planına ekleyin.",
+       "why": "Kıyı gününü köy ve manzara molasıyla dengelemek için."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Girne için pratik ipuçları",
+     "practicalTips": [
+      {
+       "body": "Otelin limana gerçek uzaklığını ve gece dönüş maliyetini kontrol edin.",
+       "title": "Merkez mi kıyı mı?"
+      },
+      {
+       "body": "Kalede görmek istediğiniz koleksiyonun güncel açık olduğunu ziyaret öncesinde doğrulayın.",
+       "title": "Sergi erişimi"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Önerilen süre",
+       "value": "2–3 tam gün"
+      },
+      {
+       "label": "En uygun dönem",
+       "value": "Nisan–Haziran ve Eylül–Ekim"
+      },
+      {
+       "label": "Ulaşım yaklaşımı",
+       "value": "Merkez yürüyüşü ve Bellapais transferi"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Gazimağusa Gezi Rehberi: Sur İçi ve Salamis Rotası",
+       "city": "Gazimağusa",
+       "description": "Sur içi sokakları, Othello Kalesi ve Salamis arkeolojisiyle doğu kıyısında iki farklı tarih günü."
+      },
+      {
+       "anchor": "Baf Gezi Rehberi: Mozaikler, Kral Mezarları ve Sahil",
+       "city": "Baf",
+       "description": "Kato Pafos mozaikleri, Kral Mezarları ve liman kıyısıyla arkeoloji odaklı Akdeniz gezisi."
+      },
+      {
+       "anchor": "Larnaka Gezi Rehberi: Finikoudes ve Tuz Gölü Rotası",
+       "city": "Larnaka",
+       "description": "Finikoudes, Aziz Lazarus, Hala Sultan Tekkesi ve mevsimsel Tuz Gölü ile yürüyüş ve kıyı üssü."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "İki tam gününüz varsa ilkini liman ve kaleye, ikincisini Bellapais ile bir kıyı molasına ayırabilirsiniz. Kale gezisini sadece dışarıdan fotoğrafa çevirmeyin; içerideki bölümlere ve manzaraya zaman bırakın. Merkez kompakt görünse de sıcaklık ve merdivenler tempoyu etkiler. Öğle arasında oturup dinlenmek geziye yeni bir durak kadar değer katıyor.",
+        "Girne’yi plaj tatiline ekliyorsanız merkezdeki bu iki günle otelde geçen günleri ayrı düşünün. Uzak bir kıyı tesisinden her akşam limana gelmek kısa mesafe gibi görünse de günlük ulaşım yaratır. Şehir ve restoran önceliğinde merkez, dinlenme önceliğinde kıyı daha uygun olabilir. Tatilin güzel olması ikisini her gün tekrarlamaya bağlı değil.",
+        "Bellapais’i merkezin içindeki bir sokak gibi değil ayrı bir köy ziyareti gibi planlayın. Manastırdan sonra kısa bir yürüyüş ve oturarak verilen mola köyün havasını daha iyi hissettirir. Dönüşü baştan düşünmek akşamı rahat bırakır. Gazimağusa veya başka bir şehir de görmek istiyorsanız yeni bir gün ayırın; ada gezisini tek günde tamamlamak zorunda değilsiniz."
+       ],
+       "heading": "Girne’de ilk gezi: liman, kale ve Bellapais",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Ercan üzerinden uçuş planlıyorsanız otelin tam konumuna göre transfer ayırın. Başka havalimanından geliyorsanız gerekli belgeleri ve seçtiğiniz transfer güzergâhının koşullarını rezervasyondan önce doğrulayın. “Girne oteli” ifadesi merkez veya uzun kıyı hattında farklı noktalar anlamına gelebilir.",
+        "Liman ve eski merkez yürüyerek gezilir; Bellapais ve uzak plajlar için ayrı bağlantı gerekir. Takside bekleme ve dönüş dahil fiyatı baştan konuşun. Araç kiralamada soldan trafik, otel parkı ve kullanacağınız güzergâhın sigorta kapsamını kontrol edin."
+       ],
+       "heading": "Girne ulaşım rehberi",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Merkez-kale gününü Bellapais gününden ayırın. Sahil için üçüncü gün eklemek, bütün köy ve plajları aynı araç turuna sıkıştırmaktan daha sakin bir gezi sağlar."
+       ],
+       "heading": "Girne gezilecek yerler",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Limanı sabah daha sakin sokaklarla, akşam ise kıyı yürüyüşüyle görün. Dar çevre sokakları ana manzaranın dışında farklı ayrıntılar sunar. Tekne turunda süre, rota ve dönüş iskelesini kontrol edin; limana yakın her yemek masası aynı fiyatı sunmaz."
+         ],
+         "heading": "Girne Eski Liman"
+        },
+        {
+         "body": [
+          "Kaleyi yalnız dış cepheden izlemeyin; açık bölümlerde avlu ve sergiler için zaman bırakın. Batık gemi koleksiyonu gibi bölüm erişimini ziyaret öncesinde doğrulayın. Taş basamaklar ve sıcak açık alanlar için rahat ayakkabı ve su taşıyın."
+         ],
+         "heading": "Girne Kalesi"
+        },
+        {
+         "body": [
+          "Bellapais merkez limanın yaya uzantısı değildir; araç bağlantısıyla gidilir. Manastır ziyaretini köyde kısa yürüyüş ve yemekle birleştirin. Manzaralı terasta fiyatı ve güncel ziyaret kapsamını ayrı kontrol ederek yarım gün bırakın."
+         ],
+         "heading": "Bellapais Manastırı ve köyü"
+        }
+       ]
+      },
+      {
+       "body": [
+        "Limanın çevresini günün farklı saatlerinde görmek aynı yürüyüşün tekrarından daha fazlası. Sabah kale tarafı için çıktığınız rota, akşam yemek öncesi başka bir ışık ve hareket kazanır. Her masanın aynı fiyat veya aynı yemek deneyimi sunduğunu varsaymadan hoşunuza giden bir yerde durun. Manzaranın keyfini çıkarmak için mutlaka uzun bir yemek paketi almak gerekmiyor.",
+        "Bellapais’te manastırın taş dokusuna baktıktan sonra çevrede biraz yürüyün. Köyün gündelik hayatını küçük ayrıntılar gösterir; burası yalnız fotoğraf için kurulmuş bir sahne değil. Dar sokaklarda ve evlerin yanında sakin davranmak, özel alanları gözetmek gezinin doğal parçası. Bir kahve molasına ayrılan zaman, hızlı bir gidiş dönüşten daha akılda kalıcı olabilir."
+       ],
+       "heading": "Eski limanda ve köyde sakin bir akşam",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Merkez liman ve restoran erişimi, Bellapais çevresi manzara ve sakinlik, uzak kıyı otelleri deniz önceliği için uygundur. Plaj otelinde gerçek yüzme girişi, merkeze araç süresi ve gece dönüşünü inceleyin.",
+        "İlk kez gelip iki gece kalacaksanız merkezde yürüyerek dışarı çıkabilmek büyük rahatlık. Bellapais çevresinde manzara ve sakinlik cazip, fakat yemek ve merkeze geçiş için ayrıca plan gerekir. Plaj otelinde ise “Girne’de” ifadesi limana yürüme mesafesi demek olmayabilir. Adresin gerçek konumu oda fotoğrafından daha çok şey anlatır."
+       ],
+       "heading": "Girne nerede kalınır?",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Hellim, şeftali kebabı, zeytinli ürünler ve mezeler yerel sofra için başlangıçtır. Şeftali kebabı meyve yemeği değildir; et içerir. Balık siparişinde kilo ve porsiyon fiyatını ayırın, vegan tercihte peynir ve yoğurtlu sosları sorun.",
+        "Hellim ve mezelerle başlayan bir sofra, balık veya ızgarayla devam edebilir; hepsini aynı öğünde denemek gerekmiyor. Şeftali kebabının adına aldanmayın, etli bir yemek. Liman gününde manzaralı bir masa, köy gününde daha sakin bir öğün seçmek geziyi çeşitlendiriyor. Yerel tatları birkaç öğüne yaymak kısa tatilde de mümkün."
+       ],
+       "heading": "Girne ne yenir?",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "İlkbahar ve sonbahar kale ve köy yürüyüşüne uygundur. Yazın açık alanları sabaha alın; Bellapais yokuşunda sıcaklığı hesaba katın. Deniz için plajın o günkü bayrak ve dalga koşuluna uyun.",
+        "Kale, manastır, kıyı işletmesi ve transferi ayrı bütçeleyin. Yerel fiyatın hangi para biriminde kesildiğini, kartla ödeme ve servis koşulunu sorun. Uzak otelin düşük oda bedeli günlük taksiyle dengelenebilir."
+       ],
+       "heading": "Girne için mevsim ve bütçe planı",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Gazimağusa sur içi ve Salamis için iki günlük farklı bir kültür ayağıdır. Havalimanı veya başka şehir bağlantısında transfer ve araç kapsamını doğrulayın; harita üzerindeki kısa mesafe tek başına sorunsuz ulaşım garantisi değildir."
+       ],
+       "heading": "Girne çevresinde rota önerileri",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Girne gezi rehberi: eski liman, Girne Kalesi ve Bellapais; nerede kalınır, sahil seçimi, ulaşım, yerel yemekler ve 2 günlük gezi rotası.",
+     "seoTitle": "Girne Gezi Rehberi: Liman, Kale ve Bellapais Rotası",
+     "sources": [
+      {
+       "name": "Girne — yerel turizm rehberi",
+       "url": "https://www.visitncy.com/discover/kyrenia-castle-shipwreck-museum/"
+      },
+      {
+       "name": "Bellapais — ziyaret rehberi",
+       "url": "https://www.visitncy.com/discover/bellapais-abbey/"
+      }
+     ],
+     "volatileNote": "Bilet ücretleri, seferler ve ziyaret saatleri değişebilir. Rezervasyon öncesinde aşağıdaki resmî kaynaklardan güncel bilgiyi kontrol edin."
+    }
+   }
+  },
+  {
+   "citySlug": "gazimagusa",
+   "completeLangs": [
+    "en",
+    "es"
+   ],
+   "reviewed": true,
+   "translations": {
+    "en": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Salamis Road",
+        "category": "halal",
+        "cuisine": "Traditional kebabs and döner",
+        "description": "Bustling local restaurant on Salamis Road, serving freshly roasted halal döner, thin crispy lahmacun and seasoned charcoal grills.",
+        "lastVerified": "2026-10-06",
+        "name": "Aspava Restaurant Gazimağusa",
+        "price": "Ekonomik",
+        "verification": {
+         "note": "Döner and kebab meats sourced from certified local halal slaughterhouses.",
+         "sourceName": "Cyprus Turkish Gastronomy Guide",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://visitncy.com/island/famagusta/",
+         "status": "restaurant-confirmed"
+        },
+        "why": "The city's most popular venue for a quick, hearty meal with verified halal meats before or after visiting Salamis."
+       }
+      ],
+      "researchNote": "Cold olive-oil mezze inside Famagusta's walls are great for vegans; meat dishes follow local halal standards.",
+      "vegan": [
+       {
+        "area": "Walled Town / Namık Kemal Square",
+        "category": "vegan",
+        "cuisine": "Cypriot mezze and olive oil dishes",
+        "description": "Charming walled-town courtyard cafe serving broad-bean fava, fresh hummus, artichoke dips and traditional Cypriot olive-oil dishes.",
+        "lastVerified": "2026-10-06",
+        "name": "Historia Restaurant & Cafe",
+        "price": "Orta",
+        "verification": {
+         "note": "Cold olive-oil mezze are suitable for vegans; verify fillings in hot pastries.",
+         "sourceName": "HappyCow's current vegan restaurant directory",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/historia-famagusta-102940",
+         "status": "vegan-options"
+        },
+        "why": "The most charming stop within Famagusta's stone walls to relax in a cool courtyard with meat-free Mediterranean mezze."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Two full days for the walled town and Salamis; add nights for a beach stay.",
+       "q": "How many days do you need in Famagusta?"
+      },
+      {
+       "a": "It is not part of a short central walk; arrange separate transport and a return plan.",
+       "q": "Is Salamis walking distance from central Famagusta?"
+      },
+      {
+       "a": "Yes; check vehicle access, stairs, noise and room facilities. A beach holiday may suit another hotel area.",
+       "q": "Can you stay within Famagusta’s walls?"
+      }
+     ],
+     "h1": "Famagusta Travel Guide: Walled Town, Othello and Salamis",
+     "itinerary": [
+      {
+       "afternoon": "Othello Castle and architectural stops",
+       "evening": "Local dinner and a short evening walk",
+       "morning": "Walled-town lanes and square",
+       "title": "Day 1 — Within the walls"
+      },
+      {
+       "afternoon": "Return and a cool indoor rest",
+       "evening": "A coastal break if conditions suit",
+       "morning": "Early transfer and Salamis visit",
+       "title": "Day 2 — Salamis"
+      }
+     ],
+     "lede": "Famagusta feels better when you wander the stone streets within the walls and stop for a little shade. Give Salamis a separate morning if you want to see it too. Two days let you balance an urban walk with an open archaeological site, rather than forcing all that history into one hot afternoon.",
+     "places": [
+      {
+       "area": "Old town",
+       "known": "Stone lanes and squares",
+       "name": "Famagusta Walled Town",
+       "tip": "Plan the walk around shade and short breaks.",
+       "why": "For the city’s intimate architectural fabric."
+      },
+      {
+       "area": "Within the walls",
+       "known": "Castle and Gothic architectural details",
+       "name": "Othello Castle and Lala Mustafa Pasha Mosque",
+       "tip": "Respect worship times and clothing requirements.",
+       "why": "For contrasting architectural scales."
+      },
+      {
+       "area": "Outside central Famagusta",
+       "known": "Columns, theatre and bath remains",
+       "name": "Salamis Archaeological Site",
+       "tip": "Prepare water, sun protection and the return transfer.",
+       "why": "For an unhurried open-site archaeology visit."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Practical tips for Famagusta",
+     "practicalTips": [
+      {
+       "body": "Arrange separate transport from the walled town to the site and back.",
+       "title": "Salamis is a separate journey"
+      },
+      {
+       "body": "Do not reduce Salamis to a brief hot-midday photo stop.",
+       "title": "Time in exposed sites"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Recommended stay",
+       "value": "2 full days"
+      },
+      {
+       "label": "Best time to visit",
+       "value": "April–June and September–October"
+      },
+      {
+       "label": "Getting around",
+       "value": "Walking within walls, car transfer to Salamis"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Kyrenia Travel Guide: Harbour, Castle and Bellapais",
+       "city": "Girne",
+       "description": "Old harbour walks, Kyrenia Castle and a scenic village break in Bellapais."
+      },
+      {
+       "anchor": "Paphos Travel Guide: Mosaics, Tombs and Where to Stay",
+       "city": "Baf",
+       "description": "Kato Paphos mosaics, Tombs of the Kings and the harbour form an archaeology-focused Mediterranean stay."
+      },
+      {
+       "anchor": "Larnaca Travel Guide: Finikoudes, Salt Lake and Stays",
+       "city": "Larnaka",
+       "description": "Finikoudes, Saint Lazarus, Hala Sultan Tekke and the seasonal Salt Lake make a coastal walking base."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "Connect the main sights inside the walls on day one, including time around Othello Castle. Visit Salamis the following morning. The town is explored corner by corner, while the archaeological site involves longer open-air stretches. Think about the different walking effort, footwear and water needed rather than treating them as interchangeable stops.",
+        "Inside the walls, leave time for squares and side streets rather than trying to enter every building. Historic places may have different present-day uses, so follow the visit arrangements you find. In places of worship, balance photographs and exploring with respect for quiet. Everyday life belongs to the city walk as much as the old stonework.",
+        "On a day trip from Girne, include the return journey and the separate transfer to Salamis. A central walk makes a lighter outing; exploring both areas in depth can justify staying overnight. For a beach combination, consider the coastal hotel’s exact location. The city name does not describe one continuous walking area."
+       ],
+       "heading": "Give the walled city and Salamis separate time",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Match your transfer from Ercan or another base to the walled-town hotel or coastal resort’s exact location. Check documents, route and vehicle conditions before booking rather than treating every Famagusta address as equivalent.",
+        "Short walled-town walks work well, paced for paving and exposed squares. Salamis is outside the centre and needs a separate vehicle connection. Agree pickup time and waiting at the site."
+       ],
+       "heading": "Getting to and around Famagusta",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Use day one for the walled town and the second morning for Salamis. A beach or rest afternoon makes archaeology more comfortable than an exposed midday visit."
+       ],
+       "heading": "Things to do in Famagusta",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Walk beyond the main square into side lanes rather than stopping at one landmark. Distinguish visible exteriors and open remains from visitor-accessible interiors, respecting occupied homes and allowing café breaks."
+         ],
+         "heading": "Famagusta Walled Town"
+        },
+        {
+         "body": [
+          "Check the castle’s currently open courtyards and sections. At the mosque, explore exterior details and plan interior access for appropriate hours and clothing. These are separate places within the walled-town walk."
+         ],
+         "heading": "Othello Castle and Lala Mustafa Pasha Mosque"
+        },
+        {
+         "body": [
+          "Salamis is extensive and exposed: start early and leave walking time between structures. The coastal remains cannot all be covered in a brief stop. Check current admission and keep the rest of the day light."
+         ],
+         "heading": "Salamis Archaeological Site"
+        }
+       ]
+      },
+      {
+       "body": [
+        "A lunch break inside the walls changes the rhythm of the visit. Watching the streets from a table gives a livelier sense of the town than memorising every historic building. A short detour off the main route is enough; you need not complete every lane. Return to the major sights with some energy left.",
+        "At Salamis, the open distances between the theatre and columned areas are part of the visit. Walk with water, a hat and rest points in mind. A few minutes for photographs cannot stand in for exploring the site; fewer areas seen slowly can be better. Leave a cooler break afterwards rather than another long outdoor circuit."
+       ],
+       "heading": "Stone streets and a wider walk at Salamis",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Stay within the walls for atmosphere and walks, the newer centre for everyday services, or on the coast for a beach focus. Check historic-house access and noise, or resort transfers and actual beach entry.",
+        "Stay close to the walls for history, or choose the coast when the beach is the priority. Changing hotels during a two-day visit can create unnecessary work. One base with a separate Salamis outing is easier. At historic accommodation, the drop-off point and luggage route affect comfort as much as the room.",
+        "For a stay within the walls, check the paved walk from vehicle drop-off to your room. A beach hotel may not be close to your archaeological stops; arrange Salamis transport separately. Decide how to divide town walks and beach days before choosing accommodation."
+       ],
+       "heading": "Where to stay in Famagusta",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Halloumi, meze, grills and local bakery foods make a straightforward dining plan. Carry water and a snack for Salamis rather than assuming a full restaurant inside; ask about meat and dairy for dietary needs.",
+        "A simple meal of meze or bakery food suits the walled-city day; prepare water and a small snack before Salamis. Save a longer meal for the evening. Treating food as a welcome rest after the stone streets, rather than another task to squeeze in, gives the short trip a more comfortable rhythm."
+       ],
+       "heading": "What to eat in Famagusta",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "Spring and autumn suit stone lanes and archaeology. Visit the walled town and Salamis early in summer. Check flags and waves before beach time, keeping the coast flexible after monuments.",
+        "Separate monument admission and the Salamis return transfer. A short town ride and an outlying archaeological journey have different costs; confirm charging currency before hotel and restaurant payment."
+       ],
+       "heading": "Famagusta: weather and budget planning",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Kyrenia offers another two-day leg with the harbour and Bellapais. Confirm timing, documents and vehicle coverage for farther coast or airport transfers; favour a coherent base over multiple rushed cities."
+       ],
+       "heading": "Trips beyond Famagusta",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Explore Famagusta’s walled town, Othello Castle, Lala Mustafa Pasha Mosque and Salamis with transport, stays, local food and a 2-day itinerary.",
+     "seoTitle": "Famagusta Travel Guide: Walled Town, Othello and Salamis",
+     "sources": [
+      {
+       "name": "Famagusta — local tourism guide",
+       "url": "https://www.visitncy.com/island/famagusta/"
+      },
+      {
+       "name": "Salamis — visitor guide",
+       "url": "https://www.visitncy.com/discover/salamis-ruins/"
+      },
+      {
+       "name": "Othello Castle — visitor guide",
+       "url": "https://www.visitncy.com/discover/othellos-castle/"
+      }
+     ],
+     "volatileNote": "Admission prices, services and opening hours can change. Check the official sources below before booking."
+    },
+    "es": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Salamis Road",
+        "category": "halal",
+        "cuisine": "Kebabs tradicionales y döner",
+        "description": "Concurrido restaurante local en Salamis Road, con döner halal recién cortado, lahmacun crujiente y carnes sabrosas a la brasa.",
+        "lastVerified": "2026-10-06",
+        "name": "Aspava Restaurant Gazimağusa",
+        "price": "Ekonomik",
+        "verification": {
+         "note": "La carne de döner y kebab procede de mataderos locales con certificación halal.",
+         "sourceName": "Guía Gastronómica Turcochipriota",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://visitncy.com/island/famagusta/",
+         "status": "restaurant-confirmed"
+        },
+        "why": "El local más popular de la ciudad para una comida rápida y sabrosa con carne halal garantizada antes o después de Salamina."
+       }
+      ],
+      "researchNote": "Los mezes fríos con aceite de oliva intramuros en Famagusta son ideales para veganos; las carnes siguen pautas halal locales.",
+      "vegan": [
+       {
+        "area": "Intramuros / Plaza Namık Kemal",
+        "category": "vegan",
+        "cuisine": "Mezes chipriotas y platos con aceite de oliva",
+        "description": "Cafetería en patio intramuros junto a ruinas venecianas, con fava, hummus fresco, alcachofas y platos chipriotas con aceite de oliva.",
+        "lastVerified": "2026-10-06",
+        "name": "Historia Restaurant & Cafe",
+        "price": "Orta",
+        "verification": {
+         "note": "Los mezes fríos con aceite de oliva son aptos para veganos; comprueba los rellenos de la bollería caliente.",
+         "sourceName": "Directorio actualizado de restaurantes veganos de HappyCow",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/historia-famagusta-102940",
+         "status": "vegan-options"
+        },
+        "why": "La parada más agradable dentro de las murallas de Famagusta para descansar en un patio fresco con mezes mediterráneos."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Dos días completos para murallas y Salamina; añade noches para playa.",
+       "q": "¿Cuántos días dedicar a Famagusta?"
+      },
+      {
+       "a": "No forma parte de un paseo céntrico breve; requiere transporte y plan de regreso propios.",
+       "q": "¿Salamina queda a pie del centro de Famagusta?"
+      },
+      {
+       "a": "Sí; revisa acceso de vehículo, escaleras, ruido y comodidad. Para playa puede convenir otra zona de hoteles.",
+       "q": "¿Se puede dormir intramuros en Famagusta?"
+      }
+     ],
+     "h1": "Qué ver en Famagusta: murallas, Otelo y Salamina",
+     "itinerary": [
+      {
+       "afternoon": "Castillo de Otelo y visitas arquitectónicas",
+       "evening": "Cena local y paseo breve",
+       "morning": "Calles y plaza amuralladas",
+       "title": "Día 1 — Intramuros"
+      },
+      {
+       "afternoon": "Regreso y descanso en lugar fresco",
+       "evening": "Pausa costera si las condiciones permiten",
+       "morning": "Traslado temprano y visita a Salamina",
+       "title": "Día 2 — Salamina"
+      }
+     ],
+     "lede": "Famagusta se disfruta recorriendo despacio las calles de piedra y descansando a la sombra. Si quieres ver Salamis, dale otra mañana. Dos días permiten combinar paseo urbano y yacimiento abierto sin intentar meter tanta historia en una sola tarde calurosa.",
+     "places": [
+      {
+       "area": "Casco antiguo",
+       "known": "Calles de piedra y plazas",
+       "name": "Ciudad amurallada de Famagusta",
+       "tip": "Organiza el paseo con sombra y pausas.",
+       "why": "Para conocer su arquitectura a escala de barrio."
+      },
+      {
+       "area": "Dentro de la muralla",
+       "known": "Castillo y detalles arquitectónicos góticos",
+       "name": "Castillo de Otelo y mezquita Lala Mustafa Pasha",
+       "tip": "Respeta culto y vestimenta.",
+       "why": "Para comparar escalas arquitectónicas distintas."
+      },
+      {
+       "area": "Fuera del centro de Famagusta",
+       "known": "Columnas, teatro y restos de termas",
+       "name": "Yacimiento de Salamina",
+       "tip": "Prepara agua, protección solar y traslado de vuelta.",
+       "why": "Para recorrer arqueología abierta con tiempo."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Consejos para visitar Famagusta",
+     "practicalTips": [
+      {
+       "body": "Organiza transporte independiente intramuros–yacimiento y regreso.",
+       "title": "Salamina es otro trayecto"
+      },
+      {
+       "body": "No reduzcas Salamina a una foto rápida al mediodía caluroso.",
+       "title": "Tiempo en recintos abiertos"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Duración recomendada",
+       "value": "2 días completos"
+      },
+      {
+       "label": "Mejor época",
+       "value": "Abril–junio y septiembre–octubre"
+      },
+      {
+       "label": "Cómo moverse",
+       "value": "A pie intramuros y traslado a Salamina"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Qué ver en Kyrenia: puerto, castillo y Bellapais",
+       "city": "Girne",
+       "description": "Paseos por el puerto antiguo, castillo de Kyrenia y pausa panorámica en Bellapais."
+      },
+      {
+       "anchor": "Qué ver en Pafos: mosaicos, tumbas y dónde alojarse",
+       "city": "Baf",
+       "description": "Mosaicos de Kato Pafos, Tumbas de los Reyes y puerto para una estancia mediterránea de arqueología."
+      },
+      {
+       "anchor": "Qué ver en Lárnaca: Finikoudes, lago salado y playas",
+       "city": "Larnaka",
+       "description": "Finikoudes, San Lázaro, Hala Sultan Tekke y lago salado estacional para una base costera."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "En el primer día, enlaza los lugares principales dentro de las murallas y deja tiempo para el castillo de Otelo. Visita Salamis a la mañana siguiente. La ciudad se recorre de esquina en esquina; el yacimiento implica tramos abiertos más largos. Piensa en esfuerzo, calzado y agua para cada tipo de paseo.",
+        "Dentro de las murallas, mira plazas y calles laterales sin intentar entrar en todos los edificios. Algunos espacios históricos tienen otros usos actuales; sigue sus indicaciones. En lugares de culto, combina curiosidad y fotos con respeto al silencio. La vida cotidiana también forma parte de la visita.",
+        "Si vienes desde Girne en un día, cuenta el regreso y el desplazamiento aparte a Salamis. Un paseo céntrico será más ligero; visitar ambos en profundidad puede justificar dormir aquí. Para combinar playa, mira la ubicación concreta del hotel: el nombre de la ciudad no implica una única zona caminable."
+       ],
+       "heading": "Separa la ciudad amurallada y Salamis",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Coordina traslado desde Ercan u otra base con ubicación exacta intramuros o costera. Comprueba documentación, ruta y condiciones del vehículo antes de reservar; no todas las direcciones de Famagusta equivalen.",
+        "Intramuros funcionan paseos cortos, contando piedra y plazas expuestas. Salamina queda fuera del centro y necesita vehículo. Acuerda recogida y espera en el recinto."
+       ],
+       "heading": "Cómo llegar a Famagusta y moverse",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Dedica el primer día a murallas y el segundo por la mañana a Salamina. Playa o descanso por la tarde facilitan la arqueología frente al calor del mediodía."
+       ],
+       "heading": "Qué ver en Famagusta",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Sigue de la plaza principal a calles laterales sin terminar en un solo monumento. Distingue fachadas y ruinas visibles de interiores visitables; respeta viviendas y añade pausas de café."
+         ],
+         "heading": "Ciudad amurallada de Famagusta"
+        },
+        {
+         "body": [
+          "Consulta patios y secciones abiertas del castillo. En la mezquita observa exteriores y programa interior con horario y ropa adecuados. Son lugares separados dentro del paseo amurallado."
+         ],
+         "heading": "Castillo de Otelo y mezquita Lala Mustafa Pasha"
+        },
+        {
+         "body": [
+          "Salamina es amplia y expuesta: empieza temprano y cuenta paseos entre edificios. No se cubren todos los restos costeros en una parada breve. Consulta entrada y deja ligera la tarde."
+         ],
+         "heading": "Yacimiento de Salamina"
+        }
+       ]
+      },
+      {
+       "body": [
+        "Una comida dentro de las murallas cambia el ritmo. Mirar las calles desde una mesa aporta más vida que memorizar todos los edificios. Basta con un pequeño desvío de la ruta principal, sin terminar cada calle. Así puedes volver a las visitas importantes con energía.",
+        "En Salamis, las distancias abiertas entre teatro y columnas forman parte de la visita. Avanza pensando en agua, sombrero y descansos. Unos minutos para fotos no explican todo el lugar; menos zonas recorridas despacio pueden aportar más. Después deja una pausa fresca, no otra ruta larga al sol."
+       ],
+       "heading": "Calles de piedra y un paseo amplio en Salamis",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Intramuros aporta ambiente y paseos; centro nuevo, servicios; costa, playa. Revisa escaleras, parking y ruido de casas históricas, o traslados y acceso al mar del resort.",
+        "Elige cerca de las murallas si priorizas historia o la costa si buscas playa. Cambiar de hotel durante dos días añade trabajo innecesario. Una base y una salida a Salamis resultan más cómodas. En edificios históricos, acceso y camino con maletas importan tanto como la habitación.",
+        "Si duermes dentro de las murallas, consulta el tramo empedrado desde donde te deja el vehículo hasta la habitación. Un hotel de playa no garantiza cercanía a las visitas arqueológicas: organiza Salamina aparte y decide cuánto dedicarás a ciudad y costa antes de reservar."
+       ],
+       "heading": "Dónde alojarse en Famagusta",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Halloumi, meze, parrilla y panadería local facilitan comidas. Lleva agua y algo para Salamina sin confiar en un restaurante completo dentro; pregunta por carne y lácteos según dieta.",
+        "Meze o productos de panadería encajan con el día urbano; para Salamis, lleva agua y algo pequeño preparado. Deja la comida larga para la noche. Pensar en la mesa como descanso después de las calles, en vez de otra tarea del programa, mejora el viaje."
+       ],
+       "heading": "Qué comer en Famagusta",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "Primavera y otoño favorecen piedra y arqueología. En verano visita murallas y Salamina temprano. Comprueba banderas y olas para playa, dejando la costa flexible tras los monumentos.",
+        "Separa entradas y traslado de ida y vuelta a Salamina. Un trayecto urbano corto cuesta distinto de arqueología fuera del centro; confirma moneda antes de pagar hotel y restaurante."
+       ],
+       "heading": "Famagusta: cuándo ir y presupuesto",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Kyrenia ofrece otra etapa de dos días con puerto y Bellapais. Confirma tiempos, documentos y cobertura del vehículo en traslados lejanos; prioriza una base coherente frente a muchas ciudades deprisa."
+       ],
+       "heading": "Excursiones desde Famagusta",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Qué ver en Famagusta: murallas, castillo de Otelo, mezquita Lala Mustafa Pasha y Salamina, con transporte, alojamiento, comida y ruta de 2 días.",
+     "seoTitle": "Qué ver en Famagusta: murallas, Otelo y Salamina",
+     "sources": [
+      {
+       "name": "Famagusta — guía turística local",
+       "url": "https://www.visitncy.com/island/famagusta/"
+      },
+      {
+       "name": "Salamina — guía de visita",
+       "url": "https://www.visitncy.com/discover/salamis-ruins/"
+      },
+      {
+       "name": "Castillo de Otelo — guía de visita",
+       "url": "https://www.visitncy.com/discover/othellos-castle/"
+      }
+     ],
+     "volatileNote": "Los precios, los servicios y los horarios pueden cambiar. Consulta las fuentes oficiales indicadas antes de reservar."
+    },
+    "tr": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Salamis Yolu",
+        "category": "halal",
+        "cuisine": "Geleneksel kebap ve döner",
+        "description": "Şehrin işlek caddesinde taze helal döner, lahmacun, pide ve kuzu ızgaralarıyla yerel halkın en çok tercih ettiği güvenilir lezzet durağı.",
+        "lastVerified": "2026-10-06",
+        "name": "Aspava Restaurant Gazimağusa",
+        "price": "Ekonomik",
+        "verification": {
+         "note": "Döner ve kebap etleri helal sertifikalı yerel mezbahalardan temin edilir.",
+         "sourceName": "Kıbrıs Türk Gastronomi Rehberi",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://visitncy.com/island/famagusta/",
+         "status": "restaurant-confirmed"
+        },
+        "why": "Salamis gezisi öncesi veya sonrası hızlı, doyurucu ve helal et güvencesiyle yemek yemek için kentin en popüler adresidir."
+       }
+      ],
+      "researchNote": "Gazimağusa sur içinde zeytinyağlı taze mezeler veganlar için harika seçenektir; et yemeklerinde yerel helal sertifikası geçerlidir.",
+      "vegan": [
+       {
+        "area": "Sur İçi / Namık Kemal Meydanı",
+        "category": "vegan",
+        "cuisine": "Kıbrıs mezeleri ve zeytinyağlılar",
+        "description": "Tarihi Venedik sarayı kalıntıları yanında taze humus, fava, enginar ezmesi, zeytinli mezeler ve yöresel zeytinyağlılar sunan avlu mekanı.",
+        "lastVerified": "2026-10-06",
+        "name": "Historia Restaurant & Cafe",
+        "price": "Orta",
+        "verification": {
+         "note": "Zeytinyağlı soğuk mezeler vegan beslenmeye uygundur; sıcak hamur işlerinde içerik teyit edilmelidir.",
+         "sourceName": "HappyCow güncel vegan restoran dizini",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/historia-famagusta-102940",
+         "status": "vegan-options"
+        },
+        "why": "Gazimağusa sur içi taş sokaklarında dolaşırken serin bir avluda etsiz Akdeniz mezeleriyle dinlenmek için en keyifli duraktır."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Sur içi ve Salamis için iki tam gün; deniz tatili eklenecekse daha fazla gece.",
+       "q": "Gazimağusa kaç günde gezilir?"
+      },
+      {
+       "a": "Kısa merkez yürüyüşünün parçası değildir; ayrı araç bağlantısı ve dönüş planı gerekir.",
+       "q": "Salamis merkeze yürüyüş mesafesinde mi?"
+      },
+      {
+       "a": "Evet; konaklamanın araç erişimi, merdiven, ses ve oda konforunu kontrol edin. Sahil tatili için farklı tesis bölgesi gerekebilir.",
+       "q": "Gazimağusa’da sur içinde kalınır mı?"
+      }
+     ],
+     "h1": "Gazimağusa Gezi Rehberi: Sur İçi ve Salamis Rotası",
+     "itinerary": [
+      {
+       "afternoon": "Othello Kalesi ve mimari duraklar",
+       "evening": "Yerel yemek ve kısa akşam yürüyüşü",
+       "morning": "Sur içi sokaklar ve meydan",
+       "title": "1. Gün — Sur içi"
+      },
+      {
+       "afternoon": "Dönüş ve serin mekânda dinlenme",
+       "evening": "Koşula göre sahil molası",
+       "morning": "Erken Salamis transferi ve ziyaret",
+       "title": "2. Gün — Salamis"
+      }
+     ],
+     "lede": "Gazimağusa’da surların içindeki taş sokakları ağır ağır gezip bir gölge molası verdiğinizde şehrin havası daha iyi geliyor. Salamis’i de görmek istiyorsanız ona ayrı bir sabah bırakın. İki günlük gezide kent yürüyüşüyle açık arkeolojik alanı dengelemek, bütün tarihi bir öğle sıcağına sığdırmaktan çok daha keyifli.",
+     "places": [
+      {
+       "area": "Eski şehir",
+       "known": "Taş sokaklar ve meydanlar",
+       "name": "Gazimağusa Sur İçi",
+       "tip": "Ziyaret sırasını gölge ve kısa molalarla kurun.",
+       "why": "Şehrin küçük ölçekli mimari dokusu için."
+      },
+      {
+       "area": "Sur içi",
+       "known": "Kale ve gotik mimari ayrıntılar",
+       "name": "Othello Kalesi ve Lala Mustafa Paşa Camii",
+       "tip": "İbadet saatleri ve kıyafet koşullarına uyun.",
+       "why": "Birbirinden farklı yapı ölçeklerini görmek için."
+      },
+      {
+       "area": "Gazimağusa çevresi",
+       "known": "Sütunlar, tiyatro ve hamam kalıntıları",
+       "name": "Salamis Antik Kenti",
+       "tip": "Su, güneş koruması ve dönüş transferi hazırlayın.",
+       "why": "Açık arkeolojik alanı geniş zamanla keşfetmek için."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Gazimağusa için pratik ipuçları",
+     "practicalTips": [
+      {
+       "body": "Sur içinden arkeolojik alana araç ve dönüşü ayrıca ayırın.",
+       "title": "Salamis ayrı yolculuktur"
+      },
+      {
+       "body": "Salamis’i sıcak öğlenin kısa fotoğraf molasına dönüştürmeyin.",
+       "title": "Açık alan süresi"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Önerilen süre",
+       "value": "2 tam gün"
+      },
+      {
+       "label": "En uygun dönem",
+       "value": "Nisan–Haziran ve Eylül–Ekim"
+      },
+      {
+       "label": "Ulaşım yaklaşımı",
+       "value": "Sur içinde yürüyüş, Salamis’e araç"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Girne Gezi Rehberi: Liman, Kale ve Bellapais Rotası",
+       "city": "Girne",
+       "description": "Eski liman, Girne Kalesi ve Bellapais arasında kısa yürüyüşler ve manzaralı köy molaları."
+      },
+      {
+       "anchor": "Baf Gezi Rehberi: Mozaikler, Kral Mezarları ve Sahil",
+       "city": "Baf",
+       "description": "Kato Pafos mozaikleri, Kral Mezarları ve liman kıyısıyla arkeoloji odaklı Akdeniz gezisi."
+      },
+      {
+       "anchor": "Larnaka Gezi Rehberi: Finikoudes ve Tuz Gölü Rotası",
+       "city": "Larnaka",
+       "description": "Finikoudes, Aziz Lazarus, Hala Sultan Tekkesi ve mevsimsel Tuz Gölü ile yürüyüş ve kıyı üssü."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "İlk gün sur içindeki ana yapıları kısa yürüyüşlerle bağlayıp Othello Kalesi çevresine zaman ayırabilirsiniz. İkinci sabah Salamis için yola çıkmak, hem sıcaklığı hem ziyaretlerin farklı ölçeğini daha iyi yönetir. Şehirde bir sokak köşesinden diğerine geçersiniz; Salamis’te ise açık alanda daha uzun yürüyüşler gerekir. İkisine aynı ayakkabı ve aynı su hazırlığı bile yetmeyebilir.",
+        "Sur içini her yapıya girilecek bir yarışa çevirmeden gezerken meydan ve yan sokaklara da bakın. Bazı tarihî yapılar bugün farklı kullanımda olabilir; ziyaret düzenini yerinde takip edin. Özellikle ibadet yerinde fotoğraf ve dolaşma isteğini sessizlikle dengelemek gerekir. Şehirdeki gündelik hayat, eski taşlar kadar gezinin parçası.",
+        "Girne’den günübirlik geliyorsanız dönüş yolunu ve Salamis’e ayrı geçişi aynı günün içine katın. Sadece merkezde dolaşacağınız bir gezi daha hafif; iki ana alanı ayrıntılı görmek ise konaklamalı planı hak ediyor. Deniz tatiliyle birleştiriyorsanız kıyıdaki otelin konumunu ayrıca düşünün. Gazimağusa adı tek bir yürüme bölgesi anlamına gelmiyor."
+       ],
+       "heading": "Gazimağusa’da sur içi ve Salamis’i ayrı düşünün",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Ercan veya konakladığınız başka şehirden Gazimağusa transferini sur içi otel ya da sahil tesisi konumuyla eşleştirin. Giriş belgesi, seçilen güzergâh ve araç kullanım koşulunu rezervasyon öncesi kontrol edin; aynı şehir etiketi farklı kıyı mesafeleri yaratabilir.",
+        "Sur içinde kısa yürüyüşler uygundur; taş zemin ve gölgesiz meydanlara göre tempo kurun. Salamis merkezdeki komşu sokak değildir, ayrı araç gerekir. Transferde alandan alma saati ve beklemeyi baştan netleştirin."
+       ],
+       "heading": "Gazimağusa ulaşım rehberi",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Sur içini ilk güne, Salamis’i ikinci sabaha ayırın. Öğleden sonra sahil veya dinlenme bırakmak arkeoloji gezisini daha dayanılır kılar; açık alanı sıcak öğleye koymayın."
+       ],
+       "heading": "Gazimağusa gezilecek yerler",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Ana meydandan yan sokaklara ilerleyin; yalnız tek büyük yapının fotoğrafıyla bitirmeyin. Dış cephe ve açık kalıntı ile ziyaret edilebilen iç mekânı ayırın. Yaşayan ev ve işyerlerinde fotoğraf için izin isteyin, kafe molalarını yürüyüş halkasına dahil edin."
+         ],
+         "heading": "Gazimağusa Sur İçi"
+        },
+        {
+         "body": [
+          "Kalede açık avlu ve bölüm erişimini güncel kontrol edin. Camide dış mimariyi inceleyip iç ziyareti uygun saat ve kıyafetle planlayın. İki yapıyı aynı bilet veya aynı mekân sanmadan sur içi yürüyüşe bağlayın."
+         ],
+         "heading": "Othello Kalesi ve Lala Mustafa Paşa Camii"
+        },
+        {
+         "body": [
+          "Salamis geniş ve açık bir alandır; sabah başlayıp ana yapılar arasında yürüyüş süresi bırakın. Bütün kıyıya yayılmış kalıntıları kısa molada görmek gerçekçi değildir. Güncel bilet ve erişimi kontrol edip o günün kalanını sakin tutun."
+         ],
+         "heading": "Salamis Antik Kenti"
+        }
+       ]
+      },
+      {
+       "body": [
+        "Sur içinde güzel bir öğle molası gezinin ritmini değiştirir. Bir masaya oturup çevreyi izlemek, bütün tarihi yapıların adını yetiştirmekten daha canlı bir şehir hissi verir. Dar sokaklarda gezerken ana rotadan kısa bir sapma yeterli; her köşeyi bitirme hedefi koymayın. Sakin bir yürüyüşten sonra ana yapılara dönmek daha iyi odaklanmayı sağlar.",
+        "Salamis’te tiyatro ve sütunlu alanların arasında dolaşırken aradaki açık mesafeyi de deneyimin parçası sayın. Şapka, su ve duracak gölgeyi düşünerek ilerleyin. Fotoğraf için ayrılan birkaç dakika bütün alanı anlatmaz; daha az bölümü yavaş görmek daha iyi olabilir. Ziyaret sonrasına uzun bir başka açık alan gezisi yerine serin bir mola bırakın."
+       ],
+       "heading": "Taş sokaklarda mola, Salamis’te geniş bir yürüyüş",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Sur içi atmosfer ve yürüyüş, yeni merkez gündelik hizmetler, sahil tesisleri deniz odağı içindir. Tarihî evde otopark, merdiven ve gece sesi; resortta merkeze transfer ve gerçek plaj erişimini kontrol edin.",
+        "Tarih önceliğinde sur içine yakın kalmak, plaj önceliğinde kıyıyı seçmek daha anlaşılır. İki günlük gezide oteli bir geceliğine değiştirmek çoğu zaman gereksiz iş çıkarır. Tek bir üs kurup Salamis’e oradan gitmek daha rahat. Tarihî konaklamada oda kadar kapıya araçla erişim ve bavul yolu da günlük deneyimi belirliyor.",
+        "Sur içinde kalacaksanız araç bırakma noktasıyla odanın arasındaki taş yürüyüşü öğrenin. Sahil oteli arkeoloji duraklarına otomatik yakın olmayabilir; Salamis günü için ayrıca ulaşım planlayın. İlk ziyarette şehir yürüyüşü ve plaj gününü ayırmak otel seçimini kolaylaştırır."
+       ],
+       "heading": "Gazimağusa nerede kalınır?",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Hellim, mezeler, ızgaralar ve yerel fırın ürünleriyle yemek planını sade tutabilirsiniz. Salamis sabahında su ve küçük öğün taşıyın; içeride tam restoran bulacağınızı varsaymayın. Et ve peynir içeriğini özel beslenmede baştan sorun.",
+        "Sur içi gününde mezeler veya yerel fırın ürünleriyle sade bir öğün, Salamis gününde ise önceden hazırlanan su ve küçük atıştırmalıklar işi kolaylaştırır. Akşama daha uzun bir masa ayırabilirsiniz. Yemeği programın araya sıkışmış görevi gibi değil, taşlı sokaklardan sonra dinlendiğiniz bir bölüm gibi düşünmek tatili güzelleştiriyor."
+       ],
+       "heading": "Gazimağusa ne yenir?",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "İlkbahar ve sonbahar taş sokak ile arkeoloji için uygundur. Yazın sur içi ve Salamis ziyaretini erken saatlere alın. Plajda hava, bayrak ve dalgayı kontrol edin; kıyı molası anıt gününden sonra esnek kalmalı.",
+        "Anıt girişi ve Salamis gidiş-dönüşünü ayrı hesaplayın. Şehir içi kısa mesafeyle dış arkeoloji transferi aynı bütçe kalemi değildir. Konaklama ve restoranın kullandığı para birimini ödeme öncesi teyit edin."
+       ],
+       "heading": "Gazimağusa için mevsim ve bütçe planı",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Girne liman ve Bellapais ile farklı iki günlük devam sunar. Daha uzak kıyı veya havaalanı transferinde zaman, belge ve araç kapsamını doğrulayın; günübirlik çok şehir yerine bir konaklama kümesine odaklanın."
+       ],
+       "heading": "Gazimağusa çevresinde rota önerileri",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Gazimağusa gezi rehberi: sur içi, Othello Kalesi, Lala Mustafa Paşa Camii ve Salamis; ulaşım, konaklama, yemek ve 2 günlük gezi rotası.",
+     "seoTitle": "Gazimağusa Gezi Rehberi: Sur İçi ve Salamis Rotası",
+     "sources": [
+      {
+       "name": "Gazimağusa — yerel turizm rehberi",
+       "url": "https://www.visitncy.com/island/famagusta/"
+      },
+      {
+       "name": "Salamis — ziyaret rehberi",
+       "url": "https://www.visitncy.com/discover/salamis-ruins/"
+      },
+      {
+       "name": "Othello Kalesi — ziyaret rehberi",
+       "url": "https://www.visitncy.com/discover/othellos-castle/"
+      }
+     ],
+     "volatileNote": "Bilet ücretleri, seferler ve ziyaret saatleri değişebilir. Rezervasyon öncesinde aşağıdaki resmî kaynaklardan güncel bilgiyi kontrol edin."
+    }
+   }
+  },
+  {
+   "citySlug": "baf",
+   "completeLangs": [
+    "en",
+    "es"
+   ],
+   "reviewed": true,
+   "translations": {
+    "en": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Kato Paphos / Coral Bay Road",
+        "category": "halal",
+        "cuisine": "Lebanese grills and kebabs",
+        "description": "Dedicated halal restaurant in the Kato Paphos area, offering certified halal lamb skewers, chicken shawarma, falafel and fresh meze.",
+        "lastVerified": "2026-10-06",
+        "name": "Samisen & Lebanese Halal House",
+        "price": "Orta",
+        "verification": {
+         "note": "All meats are halal certified; wide range of non-alcoholic beverages.",
+         "sourceName": "Visit Cyprus — dining directory",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://www.visitcyprus.com/",
+         "status": "certified-halal"
+        },
+        "why": "The best-known restaurant in Paphos offering certified halal meats after touring the harbour and mosaic park."
+       }
+      ],
+      "researchNote": "Tavernas in Paphos feature dairy in meze; vegans can select pulse-based dishes while Muslim travelers can opt for fresh fish or halal Lebanese venues.",
+      "vegan": [
+       {
+        "area": "Chloraka / Paphos Coastal Road",
+        "category": "vegan",
+        "cuisine": "Plant-based and gluten-free cafe",
+        "description": "Fully plant-based coastal cafe in Paphos, serving gluten-free breakfasts, nutrient-rich quinoa bowls, artisan vegan pastries and organic coffee.",
+        "lastVerified": "2026-10-06",
+        "name": "Meraki Market Cafe",
+        "price": "Orta",
+        "verification": {
+         "note": "Kitchen is 100% vegan and uses certified gluten-free ingredients.",
+         "sourceName": "HappyCow's current vegan restaurant directory",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/meraki-market-cafe-paphos-150240",
+         "status": "fully-vegan"
+        },
+        "why": "The top-rated healthy lifestyle cafe in the Paphos area offering entirely dairy-free, egg-free and fresh plant-based meals."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Two days for mosaics, tombs and harbour; three or four with beach or nature time.",
+       "q": "How many days do you need in Paphos?"
+      },
+      {
+       "a": "Kato Paphos for a first cultural trip, or a verified beach-access area for a coast-focused stay.",
+       "q": "Where should you stay in Paphos?"
+      },
+      {
+       "a": "No: they are a separate location and admission site. Plan tickets and transport separately.",
+       "q": "Are the Tombs of the Kings inside the mosaic park?"
+      }
+     ],
+     "h1": "Paphos Travel Guide: Mosaics, Tombs and Where to Stay",
+     "itinerary": [
+      {
+       "afternoon": "Meal and a cool indoor break",
+       "evening": "Harbour and castle area",
+       "morning": "Kato Paphos Archaeological Park",
+       "title": "Day 1 — Mosaics and harbour"
+      },
+      {
+       "afternoon": "Upper-town walk",
+       "evening": "Local meze dinner",
+       "morning": "Early Tombs of the Kings visit",
+       "title": "Day 2 — Tombs and town"
+      },
+      {
+       "afternoon": "Rest or a small museum",
+       "evening": "Arrange your onward city connection",
+       "morning": "A chosen beach if conditions allow",
+       "title": "Day 3 — Flexible coast"
+      }
+     ],
+     "lede": "A morning with the mosaics and an evening walk around the harbour show two lovely sides of Paphos. Archaeology and the sea do not need to compete for the trip. Spread the larger sites across separate mornings and you will still have proper time to rest beside the water.",
+     "places": [
+      {
+       "area": "Kato Paphos harbour area",
+       "known": "Roman villas and mosaics",
+       "name": "Kato Paphos Archaeological Park",
+       "tip": "Carry water for open areas and allow time for covered mosaics.",
+       "why": "For mosaic details and the ancient city layout."
+      },
+      {
+       "area": "Coast north of the harbour",
+       "known": "Rock-cut tombs and courtyards",
+       "name": "Tombs of the Kings",
+       "tip": "It is not the same admission site as the mosaic park.",
+       "why": "For funerary architecture within an open landscape."
+      },
+      {
+       "area": "Kato Paphos waterfront",
+       "known": "Waterfront walks",
+       "name": "Paphos Harbour and castle area",
+       "tip": "A harbour view is not a designated swimming area.",
+       "why": "For a coastal break after archaeological visits."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Practical tips for Paphos",
+     "practicalTips": [
+      {
+       "body": "Check admission and transport separately for the mosaics and tombs.",
+       "title": "Two separate sites"
+      },
+      {
+       "body": "Start exposed monuments early and plan water and a midday break.",
+       "title": "Heat in open sites"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Recommended stay",
+       "value": "2–3 full days"
+      },
+      {
+       "label": "Best time to visit",
+       "value": "April–June and September–October"
+      },
+      {
+       "label": "Getting around",
+       "value": "Harbour walks and regional buses or cars"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Kyrenia Travel Guide: Harbour, Castle and Bellapais",
+       "city": "Girne",
+       "description": "Old harbour walks, Kyrenia Castle and a scenic village break in Bellapais."
+      },
+      {
+       "anchor": "Famagusta Travel Guide: Walled Town, Othello and Salamis",
+       "city": "Gazimağusa",
+       "description": "Walled-town lanes, Othello Castle and Salamis archaeology offer two contrasting coastal history days."
+      },
+      {
+       "anchor": "Larnaca Travel Guide: Finikoudes, Salt Lake and Stays",
+       "city": "Larnaka",
+       "description": "Finikoudes, Saint Lazarus, Hala Sultan Tekke and the seasonal Salt Lake make a coastal walking base."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "Give one morning to Kato Paphos Archaeological Park and another to the Tombs of the Kings, keeping afternoons lighter. Use a third day for the coast or another route that suits you. Two large archaeological sites back-to-back in midday heat can feel exhausting. The park deserves more time than a brief extension of a harbour stroll.",
+        "At the mosaics, look closely at a few scenes instead of hurrying past every panel. Use the interpretation to follow the stories that interest you. The Tombs of the Kings held high-ranking officials and aristocrats, not kings; their grandeur gave the site its name. A little context makes both visits richer.",
+        "For a beach-focused trip, research the actual swimming area around the hotel. Harbour views, rocky shores and easy water access are different things. Include transport when planning a coastal outing such as Coral Bay. Staying in one area on some days can be easier than connecting town and beach every morning."
+       ],
+       "heading": "Three days in Paphos: mosaics, tombs and the coast",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Match a Paphos International (PFO) transfer to Kato Paphos, the upper centre or a farther coastal hotel. From Larnaca, include the final hotel connection and verify late-arrival bus services rather than assuming availability.",
+        "The harbour area is walkable, while the tombs, upper town and beaches need onward connections. Long walks between exposed sites become tiring in heat. Check return buses and, for rental cars, left-side traffic and parking."
+       ],
+       "heading": "Getting to and around Paphos",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Put the mosaic park on one morning and the tombs on another. Harbour breaks and coastal time between them make exposed archaeology easier to enjoy."
+       ],
+       "heading": "Things to do in Paphos",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Read the mosaics in the villas with their interpretation rather than stopping at one main photograph. The park mixes extensive exposed grounds with covered displays; check current admission and accessible structures before a harbour walk."
+         ],
+         "heading": "Kato Paphos Archaeological Park"
+        },
+        {
+         "body": [
+          "The name should not be read as a claim that all occupants were kings: the monumental tomb architecture is the focus. Visit early on exposed ground, watch your footing and check separate admission instead of assuming mosaic-park coverage."
+         ],
+         "heading": "Tombs of the Kings"
+        },
+        {
+         "body": [
+          "Walk around the castle in cooler hours. Choose waterfront meals by menu and total price as well as view. For swimming, use a suitable beach with checked entry and flag conditions rather than entering beside the harbour."
+         ],
+         "heading": "Paphos Harbour and castle area"
+        }
+       ]
+      },
+      {
+       "body": [
+        "Returning to the harbour and castle area in the evening can be a pleasant contrast to the morning. After archaeology, a short walk and dinner may be enough. Sitting by the coast as the day slows down is another way to enjoy the holiday. You need not fill every evening with a booked activity.",
+        "Some time in the upper town shows Paphos beyond the holiday waterfront. Do not try to complete both areas at once: one foregrounds the sea and archaeology, the other more everyday streets. Keep room for a café you like and a little observation rather than turning the outing into another list."
+       ],
+       "heading": "Harbour evenings and another side of Paphos uphill",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Kato Paphos suits harbour and sightseeing access, the upper town everyday city life, and areas such as Coral Bay a beach focus. Check archaeology and dining access; a rocky sea view does not guarantee easy swimming.",
+        "Kato Paphos makes harbour and park access easier on a first culture trip. For more beach time, choose around actual swimming conditions. Do not assume a hotel name means a central location: the walking route and evening surroundings matter more. One base for the archaeological days keeps a short holiday simple.",
+        "The Kato Pafos area suits harbour and archaeology walks, while stays farther along the coast emphasise beaches. “Paphos” in a listing does not mean every sight is walkable. Compare the address separately with the mosaic park, Tombs of the Kings and your chosen beach."
+       ],
+       "heading": "Where to stay in Paphos",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Vary meals with meze, halloumi, seafood and bakery foods. Meze can be an extensive multi-course meal: ask about per-person price and contents, with dairy sauces and stock checked for vegan needs.",
+        "A meze order can become a long meal with many plates rather than a small starter. Save it for a relaxed evening and keep daytime food lighter. Cheese, olives, vegetables and seafood can also introduce the cuisine across separate meals. An unhurried table fits a coastal holiday nicely."
+       ],
+       "heading": "What to eat in Paphos",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "Spring and autumn make archaeology more comfortable. In summer, visit open sites early and rest at midday. Choose boat outings around wind and waves and keep an alternative if cancelled.",
+        "Mosaic park, tombs, transfers and boat outings are separate costs. If a combined admission product is available, compare it with your actual visits. Read hotel taxes and extras alongside the euro room rate."
+       ],
+       "heading": "Paphos: weather and budget planning",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Larnaca offers a two- or three-day coast and old-centre extension. For nature areas such as Akamas, check current road, boat and weather conditions rather than adding an unprepared rural drive."
+       ],
+       "heading": "Trips beyond Paphos",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Explore Paphos mosaics, Tombs of the Kings and the harbour with transport tips, areas to stay, local food, coastal choices and a 3-day route.",
+     "seoTitle": "Paphos Travel Guide: Mosaics, Tombs and Where to Stay",
+     "sources": [
+      {
+       "name": "Visit Cyprus — Paphos mosaics",
+       "url": "https://www.visitcyprus.com/discover-cyprus/culture/sites-and-monuments/pafos-paphos-mosaics/"
+      },
+      {
+       "name": "UNESCO — Paphos",
+       "url": "https://whc.unesco.org/en/list/79/"
+      },
+      {
+       "name": "Visit Cyprus — official travel guide",
+       "url": "https://www.visitcyprus.com/"
+      },
+      {
+       "name": "Visit Cyprus — Tombs of the Kings",
+       "url": "https://www.visitcyprus.com/discover-cyprus/culture/sites-and-monuments/tombs-of-the-kings/"
+      }
+     ],
+     "volatileNote": "Admission prices, services and opening hours can change. Check the official sources below before booking."
+    },
+    "es": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Kato Pafos / Carretera de Coral Bay",
+        "category": "halal",
+        "cuisine": "Parrilla libanesa y kebabs",
+        "description": "Restaurante halal en Kato Pafos, con brochetas de cordero certificadas, shawarma de pollo, falafel crujiente y mezes frescos.",
+        "lastVerified": "2026-10-06",
+        "name": "Samisen & Lebanese Halal House",
+        "price": "Orta",
+        "verification": {
+         "note": "Todas las carnes tienen certificación halal; amplia selección de bebidas sin alcohol.",
+         "sourceName": "Visit Cyprus — directorio gastronómico",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://www.visitcyprus.com/",
+         "status": "certified-halal"
+        },
+        "why": "El restaurante más conocido de Pafos que ofrece carnes halal certificadas tras recorrer el puerto y los mosaicos."
+       }
+      ],
+      "researchNote": "Las tabernas de Pafos incluyen lácteos en los mezes; los veganos pueden pedir platos de legumbres y los musulmanes pescado o locales libaneses halal.",
+      "vegan": [
+       {
+        "area": "Chloraka / Carretera costera de Pafos",
+        "category": "vegan",
+        "cuisine": "Cafetería vegetal y sin gluten",
+        "description": "Cafetería 100% vegetal en la costa de Pafos, con desayunos sin gluten, boles de quinoa, repostería vegana artesanal y café orgánico.",
+        "lastVerified": "2026-10-06",
+        "name": "Meraki Market Cafe",
+        "price": "Orta",
+        "verification": {
+         "note": "La cocina es 100% vegana y utiliza ingredientes certificados sin gluten.",
+         "sourceName": "Directorio actualizado de restaurantes veganos de HappyCow",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/meraki-market-cafe-paphos-150240",
+         "status": "fully-vegan"
+        },
+        "why": "La cafetería saludable mejor valorada de Pafos, con comidas frescas 100% vegetales, sin lácteos ni huevos."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Dos días para mosaicos, tumbas y puerto; tres o cuatro con playa o naturaleza.",
+       "q": "¿Cuántos días dedicar a Pafos?"
+      },
+      {
+       "a": "Kato Pafos para primera visita cultural; zona con acceso real comprobado a playa si priorizas mar.",
+       "q": "¿Dónde alojarse en Pafos?"
+      },
+      {
+       "a": "No; tienen ubicación y recinto propios. Planifica entradas y transporte aparte.",
+       "q": "¿Las Tumbas de los Reyes están dentro del parque de mosaicos?"
+      }
+     ],
+     "h1": "Qué ver en Pafos: mosaicos, tumbas y dónde alojarse",
+     "itinerary": [
+      {
+       "afternoon": "Comida y descanso en interior fresco",
+       "evening": "Puerto y entorno del castillo",
+       "morning": "Parque Arqueológico de Kato Pafos",
+       "title": "Día 1 — Mosaicos y puerto"
+      },
+      {
+       "afternoon": "Paseo por centro alto",
+       "evening": "Cena de meze local",
+       "morning": "Tumbas de los Reyes temprano",
+       "title": "Día 2 — Tumbas y ciudad"
+      },
+      {
+       "afternoon": "Descanso o museo pequeño",
+       "evening": "Prepara conexión a la siguiente ciudad",
+       "morning": "Playa elegida si las condiciones permiten",
+       "title": "Día 3 — Costa flexible"
+      }
+     ],
+     "lede": "Una mañana entre mosaicos y una tarde por el puerto muestran dos caras bonitas de Pafos. Mar y arqueología no necesitan competir. Repartir los recintos grandes entre distintas mañanas deja tiempo real para descansar junto al agua.",
+     "places": [
+      {
+       "area": "Zona portuaria de Kato Pafos",
+       "known": "Villas romanas y mosaicos",
+       "name": "Parque Arqueológico de Kato Pafos",
+       "tip": "Lleva agua para exteriores y tiempo para mosaicos cubiertos.",
+       "why": "Para observar mosaicos y trazado de la ciudad antigua."
+      },
+      {
+       "area": "Costa al norte del puerto",
+       "known": "Tumbas excavadas y patios",
+       "name": "Tumbas de los Reyes",
+       "tip": "No es el mismo recinto de entrada que el parque de mosaicos.",
+       "why": "Para conocer arquitectura funeraria en paisaje abierto."
+      },
+      {
+       "area": "Costa de Kato Pafos",
+       "known": "Paseo marítimo",
+       "name": "Puerto de Pafos y entorno del castillo",
+       "tip": "Una vista portuaria no es zona de baño habilitada.",
+       "why": "Para descansar en la costa tras la arqueología."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Consejos para visitar Pafos",
+     "practicalTips": [
+      {
+       "body": "Comprueba entrada y transporte de mosaicos y tumbas por separado.",
+       "title": "Dos recintos distintos"
+      },
+      {
+       "body": "Empieza temprano en monumentos expuestos y prevé agua y descanso al mediodía.",
+       "title": "Calor en recintos abiertos"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Duración recomendada",
+       "value": "2–3 días completos"
+      },
+      {
+       "label": "Mejor época",
+       "value": "Abril–junio y septiembre–octubre"
+      },
+      {
+       "label": "Cómo moverse",
+       "value": "Paseos portuarios y autobús o coche regional"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Qué ver en Kyrenia: puerto, castillo y Bellapais",
+       "city": "Girne",
+       "description": "Paseos por el puerto antiguo, castillo de Kyrenia y pausa panorámica en Bellapais."
+      },
+      {
+       "anchor": "Qué ver en Famagusta: murallas, Otelo y Salamina",
+       "city": "Gazimağusa",
+       "description": "Calles amuralladas, castillo de Otelo y arqueología de Salamina para dos jornadas históricas distintas."
+      },
+      {
+       "anchor": "Qué ver en Lárnaca: Finikoudes, lago salado y playas",
+       "city": "Larnaka",
+       "description": "Finikoudes, San Lázaro, Hala Sultan Tekke y lago salado estacional para una base costera."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "Dedica una mañana al Parque Arqueológico de Kato Pafos y otra a las Tumbas de los Reyes, dejando tardes ligeras. El tercer día puede ser costero. Dos recintos grandes seguidos al mediodía cansan. El parque requiere más tiempo que una pequeña prolongación del paseo del puerto.",
+        "En los mosaicos, observa unas escenas con atención en vez de pasar deprisa por todos los paneles. Sigue las explicaciones de las historias que te interesen. Las Tumbas de los Reyes acogieron a altos funcionarios y aristócratas, no a reyes; su grandiosidad dio nombre al lugar. Un poco de contexto enriquece ambas visitas.",
+        "Si priorizas playa, investiga la zona real de baño del hotel. Vistas al puerto, costa rocosa y acceso cómodo al agua son cosas distintas. Incluye transporte para salidas como Coral Bay. Algunos días en una sola zona pueden ser más cómodos que enlazar ciudad y playa cada mañana."
+       ],
+       "heading": "Tres días en Pafos: mosaicos, tumbas y costa",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Coordina Paphos International (PFO) con Kato Pafos, centro alto u hotel costero alejado. Desde Lárnaca añade acceso final al hotel y comprueba servicios tardíos de autobús.",
+        "Puerto se pasea, pero tumbas, centro alto y playas necesitan otras conexiones. Caminatas largas entre recintos expuestos cansan con calor. Consulta regreso del autobús o conducción por la izquierda y parking."
+       ],
+       "heading": "Cómo llegar a Pafos y moverse",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Visita parque de mosaicos una mañana y tumbas otra. Descansos portuarios y costa entre ambos hacen más cómoda la arqueología expuesta."
+       ],
+       "heading": "Qué ver en Pafos",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Lee los mosaicos de las villas con sus explicaciones sin quedarte en una sola foto. El parque combina exteriores amplios y salas protegidas; revisa entrada y edificios accesibles antes del paseo al puerto."
+         ],
+         "heading": "Parque Arqueológico de Kato Pafos"
+        },
+        {
+         "body": [
+          "El nombre no significa que todos los enterrados fueran reyes: destaca la arquitectura monumental. Visita temprano, cuida el terreno y consulta entrada independiente sin asumir cobertura del parque de mosaicos."
+         ],
+         "heading": "Tumbas de los Reyes"
+        },
+        {
+         "body": [
+          "Pasea por el castillo en horas frescas. Elige restaurante por menú y precio final además de vistas. Para bañarte usa playa adecuada con acceso y banderas comprobados, no cualquier punto del puerto."
+         ],
+         "heading": "Puerto de Pafos y entorno del castillo"
+        }
+       ]
+      },
+      {
+       "body": [
+        "Volver al puerto y al castillo por la tarde permite verlos de otra manera. Tras la arqueología, paseo breve y cena pueden bastar. Sentarte junto a la costa mientras baja el ritmo también es disfrutar las vacaciones. No todas las noches necesitan una actividad reservada.",
+        "Una visita a la parte alta muestra Pafos más allá de la costa vacacional. No intentes completar ambos entornos a la vez: uno destaca por mar y arqueología; otro por calles cotidianas. Deja sitio para sentarte en un café y mirar alrededor."
+       ],
+       "heading": "Tardes en el puerto y otro Pafos en la parte alta",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Kato Pafos facilita puerto y visitas; centro alto, vida cotidiana; Coral Bay, playa. Revisa acceso a arqueología y restaurantes: vistas a costa rocosa no garantizan baño sencillo.",
+        "Kato Pafos facilita puerto y parque en una primera visita cultural. Si buscas más playa, elige según el baño real. El nombre del hotel no garantiza cercanía: importan el camino y el ambiente nocturno. Una base para los días arqueológicos simplifica la estancia.",
+        "Kato Pafos favorece paseos al puerto y yacimientos; alojamientos más alejados por la costa se orientan a playa. Que un anuncio diga «Pafos» no significa que todo quede a pie. Compara dirección con parque de mosaicos, Tumbas de los Reyes y playa elegida."
+       ],
+       "heading": "Dónde alojarse en Pafos",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Alterna meze, halloumi, pescado y panadería. Meze puede ser una comida extensa: pregunta precio por persona y contenido, y revisa lácteos y caldo para dieta vegana.",
+        "Un meze puede convertirse en una comida larga de muchos platos, no un entrante pequeño. Déjalo para una tarde tranquila y come más ligero durante las visitas. Queso, aceitunas, verduras y pescado también permiten conocer la cocina en distintas comidas. Una mesa sin prisa encaja con la costa."
+       ],
+       "heading": "Qué comer en Pafos",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "Primavera y otoño facilitan arqueología. En verano visita recintos abiertos temprano y descansa al mediodía. Elige barcos según viento y olas y conserva alternativa por cancelación.",
+        "Parque, tumbas, traslados y barcos son gastos distintos. Si hay bono de entrada, compáralo con tus visitas reales. En hotel revisa tasas y extras además de habitación en euros."
+       ],
+       "heading": "Pafos: cuándo ir y presupuesto",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Lárnaca amplía dos o tres días de costa y centro antiguo. Para naturaleza como Akamas consulta carreteras, barcos y tiempo actuales sin añadir conducción rural improvisada."
+       ],
+       "heading": "Excursiones desde Pafos",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Qué ver en Pafos: mosaicos, Tumbas de los Reyes y puerto, con transporte, zonas para alojarse, comida local, opciones de costa y ruta de 3 días.",
+     "seoTitle": "Qué ver en Pafos: mosaicos, tumbas y dónde alojarse",
+     "sources": [
+      {
+       "name": "Visit Cyprus — mosaicos de Pafos",
+       "url": "https://www.visitcyprus.com/discover-cyprus/culture/sites-and-monuments/pafos-paphos-mosaics/"
+      },
+      {
+       "name": "UNESCO — Pafos",
+       "url": "https://whc.unesco.org/en/list/79/"
+      },
+      {
+       "name": "Visit Cyprus — guía oficial de viaje",
+       "url": "https://www.visitcyprus.com/"
+      },
+      {
+       "name": "Visit Cyprus — Tumbas de los Reyes",
+       "url": "https://www.visitcyprus.com/discover-cyprus/culture/sites-and-monuments/tombs-of-the-kings/"
+      }
+     ],
+     "volatileNote": "Los precios, los servicios y los horarios pueden cambiar. Consulta las fuentes oficiales indicadas antes de reservar."
+    },
+    "tr": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Kato Paphos / Coral Bay Yolu",
+        "category": "halal",
+        "cuisine": "Lübnan ızgaraları ve kebap",
+        "description": "Kato Paphos liman bölgesinde helal sertifikalı kuzu şiş, tavuk shawarma, taze falafel ve zengin Levant mezeleri sunan güvenilir restoran.",
+        "lastVerified": "2026-10-06",
+        "name": "Samisen & Lebanese Halal House",
+        "price": "Orta",
+        "verification": {
+         "note": "Tüm etler helal sertifikalıdır; alkolsüz içecek seçenekleri geniştir.",
+         "sourceName": "Visit Cyprus — gastronomi rehberi",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://www.visitcyprus.com/",
+         "status": "certified-halal"
+        },
+        "why": "Mozaik parkı ve liman yürüyüşü sonrasında Baf'ta açık helal et garantisiyle yemek yemek için en bilinen mekandır."
+       }
+      ],
+      "researchNote": "Baf'ta Rum meyhanelerinde meze menüleri peynir ve yoğurt içerir; veganlar bakliyat mezelerini, Müslüman gezginler balık veya helal Lübnan lokantalarını seçebilir.",
+      "vegan": [
+       {
+        "area": "Chloraka / Paphos Kıyı Yolu",
+        "category": "vegan",
+        "cuisine": "Bitki bazlı ve glütensiz kafe",
+        "description": "Paphos kıyısında %100 bitki bazlı ve glütensiz kahvaltılar, avokadolu kinoa kaseleri, taze vegan fırın ürünleri ve organik kahveler.",
+        "lastVerified": "2026-10-06",
+        "name": "Meraki Market Cafe",
+        "price": "Orta",
+        "verification": {
+         "note": "Mutfak %100 vegandır ve glütensiz sertifikalı ürünler kullanır.",
+         "sourceName": "HappyCow güncel vegan restoran dizini",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/meraki-market-cafe-paphos-150240",
+         "status": "fully-vegan"
+        },
+        "why": "Baf bölgesinde tamamen sütsüz, yumurtasız ve katkısız taze bitkisel menü sunan en kaliteli ve popüler sağlıklı yaşam adresidir."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Mozaik, mezar ve liman için iki gün; plaj veya doğa için üç ya da dört gün.",
+       "q": "Baf kaç günde gezilir?"
+      },
+      {
+       "a": "İlk kültür gezisinde Kato Pafos; plaj önceliğinde otelin gerçek kıyı erişimi doğrulanmış bölge.",
+       "q": "Baf’ta nerede kalmalı?"
+      },
+      {
+       "a": "Hayır; ayrı konum ve ziyaret alanıdır. Bilet ile ulaşımı ayrı planlayın.",
+       "q": "Kral Mezarları mozaik parkının içinde mi?"
+      }
+     ],
+     "h1": "Baf Gezi Rehberi: Mozaikler, Kral Mezarları ve Sahil",
+     "itinerary": [
+      {
+       "afternoon": "Yemek ve serin mekânda dinlenme",
+       "evening": "Liman ve kale çevresi",
+       "morning": "Kato Pafos Arkeoloji Parkı",
+       "title": "1. Gün — Mozaikler ve liman"
+      },
+      {
+       "afternoon": "Üst merkezde yürüyüş",
+       "evening": "Yerel meze akşamı",
+       "morning": "Erken Kral Mezarları ziyareti",
+       "title": "2. Gün — Mezarlar ve merkez"
+      },
+      {
+       "afternoon": "Dinlenme veya küçük müze",
+       "evening": "Sonraki şehir bağlantısını hazırlayın",
+       "morning": "Koşula göre seçilmiş plaj",
+       "title": "3. Gün — Esnek sahil"
+      }
+     ],
+     "lede": "Baf’ta sabah mozaiklerin başında hikâyeleri okumak, akşam limanda yürümek aynı tatilin iki güzel yüzü. Burada denizle arkeolojiyi yarıştırmak gerekmiyor. Birkaç gün ayırıp büyük alanları ayrı sabahlara yaydığınızda kıyıda dinlenmek için de gerçekten zaman kalıyor.",
+     "places": [
+      {
+       "area": "Kato Pafos limanı çevresi",
+       "known": "Roma villaları ve mozaikler",
+       "name": "Kato Pafos Arkeoloji Parkı",
+       "tip": "Açık alana su ve kapalı mozaik bölümlerine zaman bırakın.",
+       "why": "Mozaik ayrıntılarını ve eski kent düzenini görmek için."
+      },
+      {
+       "area": "Baf’ın kıyı kuzeyi",
+       "known": "Kaya mezarları ve avlular",
+       "name": "Kral Mezarları",
+       "tip": "Mozaik parkıyla aynı giriş alanı değildir.",
+       "why": "Mezar mimarisini açık peyzaj içinde görmek için."
+      },
+      {
+       "area": "Kato Pafos kıyısı",
+       "known": "Kıyı yürüyüşü",
+       "name": "Baf Limanı ve kale çevresi",
+       "tip": "Liman manzarasını güvenli yüzme alanıyla karıştırmayın.",
+       "why": "Anıt gününden sonra sakin kıyı molası için."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Baf için pratik ipuçları",
+     "practicalTips": [
+      {
+       "body": "Mozaik parkı ve Kral Mezarları’nın giriş ile ulaşımını ayrı kontrol edin.",
+       "title": "İki ayrı alan"
+      },
+      {
+       "body": "Gölgesiz anıtlara erken başlayıp su ve öğle dinlenmesi planlayın.",
+       "title": "Açık alan sıcağı"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Önerilen süre",
+       "value": "2–3 tam gün"
+      },
+      {
+       "label": "En uygun dönem",
+       "value": "Nisan–Haziran ve Eylül–Ekim"
+      },
+      {
+       "label": "Ulaşım yaklaşımı",
+       "value": "Liman yürüyüşü ve bölgesel otobüs/araç"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Girne Gezi Rehberi: Liman, Kale ve Bellapais Rotası",
+       "city": "Girne",
+       "description": "Eski liman, Girne Kalesi ve Bellapais arasında kısa yürüyüşler ve manzaralı köy molaları."
+      },
+      {
+       "anchor": "Gazimağusa Gezi Rehberi: Sur İçi ve Salamis Rotası",
+       "city": "Gazimağusa",
+       "description": "Sur içi sokakları, Othello Kalesi ve Salamis arkeolojisiyle doğu kıyısında iki farklı tarih günü."
+      },
+      {
+       "anchor": "Larnaka Gezi Rehberi: Finikoudes ve Tuz Gölü Rotası",
+       "city": "Larnaka",
+       "description": "Finikoudes, Aziz Lazarus, Hala Sultan Tekkesi ve mevsimsel Tuz Gölü ile yürüyüş ve kıyı üssü."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "İlk sabah Kato Pafos Arkeoloji Parkı’na, ikinci sabah Kral Mezarları’na zaman ayırıp öğleden sonraları daha hafif bırakabilirsiniz. Üçüncü gün kıyı veya şehir çevresinde size uygun bir rota seçin. İki büyük arkeolojik alanı sıcak bir öğlene arka arkaya eklemek ziyaretin sonunu yoruyor. Parkın içindeki mesafeyi liman yürüyüşünün kısa bir uzantısı gibi düşünmeyin.",
+        "Mozaiklerde birkaç sahneyi dikkatle incelemek bütün panoları hızlıca dolaşmaktan daha akılda kalıcı. Alanın açıklama düzeninden yararlanıp hoşunuza giden hikâyelere odaklanın. Kral Mezarları’nda krallar değil, üst düzey görevliler ve soylular gömülü; adını mezarların görkeminden alıyor. Kısa bir hazırlık ziyareti daha anlamlı kılıyor.",
+        "Plaj önceliğiniz varsa otel çevresindeki gerçek yüzme alanını araştırın. Liman manzarası, kayalık kıyı ve kolay deniz girişi farklı şeyler. Coral Bay gibi ayrı kıyı duraklarını günübirlik planınıza koyarken ulaşımı da ekleyin. Şehir ve plajı her sabah birbirine bağlamaya çalışmak yerine bazı günleri tek bölgede geçirmek daha rahat."
+       ],
+       "heading": "Baf’ta üç gün: mozaikler, mezarlar ve kıyı",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Paphos International (PFO) transferini Kato Pafos, üst merkez veya daha uzak kıyı oteliyle eşleştirin. Larnaka’dan geliyorsanız şehirler arası bağlantıya otel son erişimini ekleyin. Güncel otobüs saatini kontrol etmeden geç varışa uygun olduğunu varsaymayın.",
+        "Liman çevresi yürünebilir; Kral Mezarları, üst merkez ve plajlar için ayrı bağlantı gerekir. Aynı gün farklı açık alanlar arasında uzun yürüyüş, sıcak havada yorucu olur. Otobüs dönüşünü ve kiralık araçta soldan trafik ile parkı planlayın."
+       ],
+       "heading": "Baf ulaşım rehberi",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Mozaik parkını bir sabaha, Kral Mezarları’nı başka sabaha yerleştirin. Liman molası ve deniz zamanını aralara bırakmak açık arkeolojiyi daha rahat gezmenizi sağlar."
+       ],
+       "heading": "Baf gezilecek yerler",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Dionysos ve diğer villaların mozaiklerini açıklamalarıyla inceleyin; yalnız bir ana kareyle ayrılmayın. Parkın açık alanları geniştir, bazı eserler korunaklı bölümdedir. Güncel bilet ve açık yapıları kontrol edip limanla kısa bir yürüyüşe bağlayın."
+         ],
+         "heading": "Kato Pafos Arkeoloji Parkı"
+        },
+        {
+         "body": [
+          "Adına rağmen alanı “kralların hepsi burada” diye yorumlamayın; anıtsal mezar mimarisi odaktır. Açık ve güneşli zeminde erken saatleri kullanın, inişli alanlarda ayakkabıya dikkat edin. Parkla aynı bilet kapsamını varsaymadan ayrı giriş bilgisini okuyun."
+         ],
+         "heading": "Kral Mezarları"
+        },
+        {
+         "body": [
+          "Kale çevresindeki yürüyüşü günün serin kısmına alın. Restoranı manzara kadar menü ve toplam fiyatla seçin. Yüzmek istiyorsanız liman kenarına gelişigüzel girmek yerine güncel bayrak ve giriş koşulu kontrol edilmiş plaj kullanın."
+         ],
+         "heading": "Baf Limanı ve kale çevresi"
+        }
+       ]
+      },
+      {
+       "body": [
+        "Liman ve kale çevresini sabah ziyaretinden sonra akşam yeniden görmek güzel bir tekrar olabilir. Arkeoloji gününün sonunda yeni bir ücretli etkinlik yerine kısa yürüyüş ve yemek yeterli. Kıyıda oturup günün yavaşlamasını izlemek tatilin hakkını vermenin başka bir yolu. Her güzel akşamı bir turla doldurmak gerekmiyor.",
+        "Kato Pafos’tan üst merkeze ayıracağınız bir zaman, şehrin yalnız tatil kıyısından oluşmadığını gösterir. İki çevreyi kısa bir gezi içinde aynı anda bitirmeye çalışmayın; birinde deniz ve arkeoloji, diğerinde daha gündelik sokaklar öne çıkar. Beğendiğiniz bir kafeye oturup çevreyi izlemek için de programda yer olsun."
+       ],
+       "heading": "Liman akşamı ve üst merkezde farklı bir Baf",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Kato Pafos liman ve ziyaret erişimi, üst merkez gündelik şehir yaşamı, Coral Bay gibi kıyılar plaj odağı sunar. Sahil otelinin arkeolojiye ve restorana gerçek erişimini kontrol edin; kayalık deniz görünümü kolay yüzme garantisi değildir.",
+        "İlk kültür gezisinde Kato Pafos çevresinde kalmak liman ve park erişimini kolaylaştırır. Daha çok deniz istiyorsanız kıyı otelini yüzme koşullarına göre seçin. Otel adıyla merkeze yakınlık varsaymayın; gerçek yürüyüş yolu ve akşam çevresi daha önemli. Bir üs kurup arkeoloji günlerini oradan yapmak kısa tatili sadeleştirir.",
+        "Kato Pafos çevresi liman ve arkeolojiye yürüyüş için, daha dış kıyı konaklamaları ise plaj ağırlıklı günler için uygundur. İlanda “Baf” yazması her noktaya yürünebildiği anlamına gelmez. Otel adresini mozaik parkı, mezarlar ve seçtiğiniz plajla ayrı ayrı karşılaştırın."
+       ],
+       "heading": "Baf nerede kalınır?",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Meze, halloumi, deniz ürünleri ve yerel fırın ürünleriyle çeşitlendirin. Meze çok tabaklı bir öğün olabilir; kişi başı fiyat ve içeriği sorun. Peynir, yoğurtlu sos ve et suyunu vegan tercihte ayrıca kontrol edin.",
+        "Meze siparişini küçük bir başlangıç tabağı sanmayın; pek çok yerde uzun ve çok tabaklı bir öğüne dönüşebilir. Bunu gezinin sonuna ayırıp gündüz daha hafif yemek rahat olur. Peynir, zeytin, sebze ve deniz ürünlerini farklı öğünlerde denemek de mutfağı tanıtır. Masada acele etmemek kıyı tatiline iyi yakışıyor."
+       ],
+       "heading": "Baf ne yenir?",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "İlkbahar ve sonbahar arkeoloji için daha rahattır. Yazın açık alanları sabaha, uzun öğle saatini dinlenmeye ayırın. Deniz turunu rüzgâr ve dalga koşuluna göre seçin; kıyı programının iptal alternatifi olmalı.",
+        "Mozaik parkı, mezar alanı, transfer ve deniz gezisi ayrı kalemlerdir. Güncel birleşik giriş ürünü varsa yalnız ziyaret edeceğiniz yerlerle karşılaştırın. Avro bedelli otelde oda dışında vergi ve ek hizmet toplamını okuyun."
+       ],
+       "heading": "Baf için mevsim ve bütçe planı",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Larnaka iki veya üç günlük sahil ve eski merkez devamıdır. Akamas gibi doğa alanı için güncel yol, tekne ve hava koşulunu öğrenin; ilk şehir programına hazırlıksız kırsal sürüş eklemeyin."
+       ],
+       "heading": "Baf çevresinde rota önerileri",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Baf gezi rehberi: Kato Pafos mozaikleri, Kral Mezarları ve liman; ulaşım, konaklama bölgeleri, yemek, sahil seçimi ve 3 günlük gezi rotası.",
+     "seoTitle": "Baf Gezi Rehberi: Mozaikler, Kral Mezarları ve Sahil",
+     "sources": [
+      {
+       "name": "Visit Cyprus — Baf mozaikleri",
+       "url": "https://www.visitcyprus.com/discover-cyprus/culture/sites-and-monuments/pafos-paphos-mosaics/"
+      },
+      {
+       "name": "UNESCO — Baf",
+       "url": "https://whc.unesco.org/en/list/79/"
+      },
+      {
+       "name": "Visit Cyprus — resmî seyahat rehberi",
+       "url": "https://www.visitcyprus.com/"
+      },
+      {
+       "name": "Visit Cyprus — Kral Mezarları",
+       "url": "https://www.visitcyprus.com/discover-cyprus/culture/sites-and-monuments/tombs-of-the-kings/"
+      }
+     ],
+     "volatileNote": "Bilet ücretleri, seferler ve ziyaret saatleri değişebilir. Rezervasyon öncesinde aşağıdaki resmî kaynaklardan güncel bilgiyi kontrol edin."
+    }
+   }
+  },
+  {
+   "citySlug": "larnaka",
+   "completeLangs": [
+    "en",
+    "es"
+   ],
+   "reviewed": true,
+   "translations": {
+    "en": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Finikoudes Promenade / Larnaca",
+        "category": "halal",
+        "cuisine": "Halal Levantine and Lebanese grills",
+        "description": "Established halal restaurant along the palm-lined Finikoudes promenade, serving certified halal grills, shish taouk and fresh flatbreads.",
+        "lastVerified": "2026-10-06",
+        "name": "Abu Dany Lebanese Halal Restaurant",
+        "price": "Orta",
+        "verification": {
+         "note": "All meats are certified halal; features a sea-view outdoor terrace.",
+         "sourceName": "Visit Cyprus — Larnaca dining directory",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://www.visitcyprus.com/",
+         "status": "certified-halal"
+        },
+        "why": "The premier choice along the Larnaca coast for verified halal meats and mezze after visiting Hala Sultan Tekke or the beach."
+       }
+      ],
+      "researchNote": "The historic Hala Sultan Tekke by the Larnaca Salt Lake is a revered Islamic heritage site; halal Levantine restaurants are well established along the coast.",
+      "vegan": [
+       {
+        "area": "Zinonos Kitieos St / Old Centre",
+        "category": "vegan",
+        "cuisine": "Organic plant-based kitchen",
+        "description": "Organic plant-based kitchen in central Larnaca, preparing daily vegan specials from local farm produce, lentil patties and cold-pressed juices.",
+        "lastVerified": "2026-10-06",
+        "name": "Solar Kitchen Bar",
+        "price": "Ekonomik",
+        "verification": {
+         "note": "No animal products used in the kitchen; ingredients sourced from local organic growers.",
+         "sourceName": "HappyCow's current vegan restaurant directory",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/solar-kitchen-bar-larnaca-92340",
+         "status": "fully-vegan"
+        },
+        "why": "The friendliest vegan spot in central Larnaca for fresh, home-cooked daily plant-based specials made from local organic produce."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Two days for centre, coast and lake; three or four for beach time and a slower pace.",
+       "q": "How many days do you need in Larnaca?"
+      },
+      {
+       "a": "No: water and birds are seasonal. Winter may be better, but check current lake conditions.",
+       "q": "Are flamingos always at Larnaca Salt Lake?"
+      },
+      {
+       "a": "Finikoudes–old centre for a first stay, Mackenzie for beach and activity; check night and aircraft noise separately.",
+       "q": "Where should you stay in Larnaca?"
+      }
+     ],
+     "h1": "Larnaca Travel Guide: Finikoudes, Salt Lake and Stays",
+     "itinerary": [
+      {
+       "afternoon": "Café break and waterfront rest",
+       "evening": "Finikoudes walk and dinner",
+       "morning": "Saint Lazarus and old lanes",
+       "title": "Day 1 — Centre and seafront"
+      },
+      {
+       "afternoon": "Hala Sultan Tekke and return",
+       "evening": "A quiet central evening",
+       "morning": "Seasonal Salt Lake observation",
+       "title": "Day 2 — Lake and tekke"
+      }
+     ],
+     "lede": "Larnaca makes it easy to spend a morning in old streets and return to the waterfront later. Finikoudes palms, a coffee break and an evening by the sea create a relaxed city stay. If you visit the Salt Lake, let the season shape your expectations: the landscape is not the same on every trip.",
+     "places": [
+      {
+       "area": "Central waterfront",
+       "known": "Palm-lined promenade and beach",
+       "name": "Finikoudes seafront",
+       "tip": "Check beach service conditions and flags.",
+       "why": "For city and sea along one manageable walk."
+      },
+      {
+       "area": "Old Larnaca",
+       "known": "Church and neighbourhood lanes",
+       "name": "Saint Lazarus Church and old centre",
+       "tip": "Respect worship, clothing and photography conditions.",
+       "why": "For the neighbourhood behind the waterfront."
+      },
+      {
+       "area": "Southwest of Larnaca",
+       "known": "Seasonal lake and religious site",
+       "name": "Salt Lake and Hala Sultan Tekke",
+       "tip": "Plan birdwatching for the season.",
+       "why": "For nature and a quieter visitor stop."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Practical tips for Larnaca",
+     "practicalTips": [
+      {
+       "body": "Check current lake water and birds; seasonal photos are not year-round guarantees.",
+       "title": "Flamingo season"
+      },
+      {
+       "body": "Finikoudes and the lake outing have different transport and shade conditions.",
+       "title": "Two different walks"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Recommended stay",
+       "value": "2–3 full days"
+      },
+      {
+       "label": "Best time to visit",
+       "value": "April–June and September–October"
+      },
+      {
+       "label": "Getting around",
+       "value": "Central walks and a separate lake transfer"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Kyrenia Travel Guide: Harbour, Castle and Bellapais",
+       "city": "Girne",
+       "description": "Old harbour walks, Kyrenia Castle and a scenic village break in Bellapais."
+      },
+      {
+       "anchor": "Famagusta Travel Guide: Walled Town, Othello and Salamis",
+       "city": "Gazimağusa",
+       "description": "Walled-town lanes, Othello Castle and Salamis archaeology offer two contrasting coastal history days."
+      },
+      {
+       "anchor": "Paphos Travel Guide: Mosaics, Tombs and Where to Stay",
+       "city": "Baf",
+       "description": "Kato Paphos mosaics, Tombs of the Kings and the harbour form an archaeology-focused Mediterranean stay."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "Start with Finikoudes, Saint Lazarus Church and the nearby streets. Give the Salt Lake and Hala Sultan Tekke a separate block the next day. Treating the lake as a brief extension of a central walk can underestimate the open-air distances. Two days allow both settings to be enjoyed without rushing.",
+        "If flamingos are your hope, take the season into account without building the day around a guaranteed sighting. Water levels and bird presence vary. Approach the visit as a nature break and enjoy the landscape you find. Watching from a distance respects the habitat and keeps the experience quieter.",
+        "On a short stopover or a night before flying, do not try to fit in every attraction. The centre and waterfront can make a satisfying day by themselves. Include the return trip and luggage arrangements before heading to the lake or another beach. Being near an airport does not make every hotel transfer equally quick."
+       ],
+       "heading": "Two days in Larnaca: the old centre and the lake",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "For Larnaca International (LCA), specify Finikoudes, old centre or Mackenzie as appropriate. Compare current buses and night transfers against your flight time. From Paphos, include the final stop-to-hotel connection.",
+        "Finikoudes and the old centre are walkable; the Salt Lake and Hala Sultan Tekke require separate transport. Check current trail and site access, avoiding a long airport-side walk in summer heat."
+       ],
+       "heading": "Getting to and around Larnaca",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "The old centre and coast on day one, lake and tekke on day two form a sensible split. Choose the season for flamingos; a dry summer lake is a different landscape, not the same birdwatching promise."
+       ],
+       "heading": "Things to do in Larnaca",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Walk the waterfront in cooler hours and connect to the old centre. Beach, marina and castle-side shore serve different uses; swim only in suitable areas and check lounger and umbrella arrangements."
+         ],
+         "heading": "Finikoudes seafront"
+        },
+        {
+         "body": [
+          "Pair the church with nearby lanes and squares. Check visiting hours and access during services, then stop at a café or bakery before returning to the coast for a glimpse of everyday old-centre life."
+         ],
+         "heading": "Saint Lazarus Church and old centre"
+        },
+        {
+         "body": [
+          "Water and flamingos are seasonal, with winter more suitable for birdwatching. Observe from a distance without disturbing birds. Check tekke hours and clothing, and avoid trying to walk the entire lake circuit in heat."
+         ],
+         "heading": "Salt Lake and Hala Sultan Tekke"
+        }
+       ]
+      },
+      {
+       "body": [
+        "After walking Finikoudes, head a street or two inland for another side of the city. A wander around the church and a local meal make a pleasant continuation. Step away from the main waterfront tables if you prefer a quieter corner. These simple transitions often make a small city visit enjoyable.",
+        "Consider Mackenzie as a separate beach or dinner outing. Check distances and the return route rather than expecting an effortless continuous walk from the centre. On the lake day, combine a respectful visit to the place of worship with preparation for open-air time. Different settings deserve different rhythms."
+       ],
+       "heading": "From Finikoudes to the old streets, without rushing",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Finikoudes suits first-visit access, the old centre atmosphere, and Mackenzie beach and evening activity. Check aircraft noise, nightlife and actual beach access before choosing a room.",
+        "Finikoudes is convenient for a first visit; Mackenzie offers another mix of beach and evening activity. For a quiet room, think about street, nightlife and aircraft noise. On a short stay, reception and luggage services can be more useful than a large apartment with an awkward arrival.",
+        "For a short city visit, two central nights let you see the same lanes at different times of day. On a longer beach stay, room type and waterfront services matter more. Compare walking access, night noise and your planned outings alongside the hotel photographs."
+       ],
+       "heading": "Where to stay in Larnaca",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Spread meze, halloumi, fish and bakery foods across different meals. Meze can be priced per person and involve many plates; confirm serving size and dairy or fish inclusions for vegan needs.",
+        "Fish and small plates suit a waterfront meal, while a bakery stop fits the old-centre day. Save a long meze dinner for an unhurried evening rather than lunch before a flight. Familiar ingredients such as halloumi or yoghurt sauces still matter for dietary choices. Start with one or two flavours that interest you."
+       ],
+       "heading": "What to eat in Larnaca",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "Spring and autumn suit central walks; summer is busier for beaches. For flamingos, assess winter timing and lake conditions. Do not book a dry-season lake trip on a guaranteed-birds promise.",
+        "Compare rooms, transport, beach services and meals in euros. A central hotel can reduce transfers. For a lake outing, clarify vehicle, waiting and visit coverage in one total."
+       ],
+       "heading": "Larnaca: weather and budget planning",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Paphos offers a contrasting mosaics-and-tombs cultural leg. For another coastal day, check final public transport and the hotel connection rather than breaking the first two days with lengthy drives."
+       ],
+       "heading": "Trips beyond Larnaca",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Explore Larnaca’s Finikoudes, Saint Lazarus, Salt Lake and Hala Sultan Tekke with airport transfers, places to stay, local food and a 2-day route.",
+     "seoTitle": "Larnaca Travel Guide: Finikoudes, Salt Lake and Stays",
+     "sources": [
+      {
+       "name": "Visit Cyprus — Larnaca guide",
+       "url": "https://www.visitcyprus.com/discover-cyprus/regions-cities/larnaka-regions-cities/"
+      },
+      {
+       "name": "Visit Cyprus — Salt Lake",
+       "url": "https://www.visitcyprus.com/discover-cyprus/nature/excursions/larnaka-larnaca-salt-lake/"
+      },
+      {
+       "name": "Visit Cyprus — Hala Sultan Tekke",
+       "url": "https://www.visitcyprus.com/discover-cyprus/culture/sites-and-monuments/hala-sultan-tekke/"
+      }
+     ],
+     "volatileNote": "Admission prices, services and opening hours can change. Check the official sources below before booking."
+    },
+    "es": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Paseo de Finikoudes / Lárnaca",
+        "category": "halal",
+        "cuisine": "Parrilla levantina y libanesa halal",
+        "description": "Veterano restaurante halal en el paseo marítimo de Finikoudes, con carnes a la brasa certificadas, shish taouk y panes recién horneados.",
+        "lastVerified": "2026-10-06",
+        "name": "Abu Dany Lebanese Halal Restaurant",
+        "price": "Orta",
+        "verification": {
+         "note": "Todas las carnes tienen certificación halal; terraza con vistas al mar.",
+         "sourceName": "Visit Cyprus — directorio gastronómico de Lárnaca",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://www.visitcyprus.com/",
+         "status": "certified-halal"
+        },
+        "why": "La opción principal en la costa de Lárnaca para disfrutar de carnes halal y mezes tras visitar Hala Sultan Tekke o la playa."
+       }
+      ],
+      "researchNote": "La histórica mezquita Hala Sultan Tekke junto al lago salado es un venerado lugar islámico; hay restaurantes levantinos halal en la costa.",
+      "vegan": [
+       {
+        "area": "Zinonos Kitieos St / Centro histórico",
+        "category": "vegan",
+        "cuisine": "Cocina vegetal ecológica",
+        "description": "Cocina vegetal ecológica en el centro de Lárnaca, con platos del día elaborados con verduras locales de granja, albóndigas de lentejas y zumos.",
+        "lastVerified": "2026-10-06",
+        "name": "Solar Kitchen Bar",
+        "price": "Ekonomik",
+        "verification": {
+         "note": "Sin productos de origen animal en la cocina; ingredientes de agricultores ecológicos locales.",
+         "sourceName": "Directorio actualizado de restaurantes veganos de HappyCow",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/solar-kitchen-bar-larnaca-92340",
+         "status": "fully-vegan"
+        },
+        "why": "El local vegano más acogedor del centro de Lárnaca para platos caseros diarios elaborados con productos ecológicos locales."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Dos días para centro, costa y lago; tres o cuatro para playa y ritmo tranquilo.",
+       "q": "¿Cuántos días dedicar a Lárnaca?"
+      },
+      {
+       "a": "No; agua y aves son estacionales. Invierno puede ser mejor, pero consulta condiciones actuales.",
+       "q": "¿Siempre hay flamencos en el lago salado de Lárnaca?"
+      },
+      {
+       "a": "Finikoudes–centro antiguo para primera estancia; Mackenzie para playa y actividad. Revisa ruido nocturno y de aviones.",
+       "q": "¿Dónde alojarse en Lárnaca?"
+      }
+     ],
+     "h1": "Qué ver en Lárnaca: Finikoudes, lago salado y playas",
+     "itinerary": [
+      {
+       "afternoon": "Café y descanso costero",
+       "evening": "Paseo y cena en Finikoudes",
+       "morning": "San Lázaro y calles antiguas",
+       "title": "Día 1 — Centro y costa"
+      },
+      {
+       "afternoon": "Hala Sultan Tekke y regreso",
+       "evening": "Tarde tranquila en el centro",
+       "morning": "Observación estacional del lago salado",
+       "title": "Día 2 — Lago y tekke"
+      }
+     ],
+     "lede": "Lárnaca permite pasear por calles antiguas de mañana y volver a la costa después. Palmeras de Finikoudes, una pausa para café y una tarde junto al mar crean una estancia tranquila. En el lago salado, deja que la estación marque lo que ves: el paisaje no siempre es el mismo.",
+     "places": [
+      {
+       "area": "Costa central",
+       "known": "Paseo de palmeras y playa",
+       "name": "Paseo de Finikoudes",
+       "tip": "Consulta servicios de playa y banderas.",
+       "why": "Para combinar ciudad y mar en un paseo manejable."
+      },
+      {
+       "area": "Lárnaca antigua",
+       "known": "Iglesia y calles del barrio",
+       "name": "Iglesia de San Lázaro y centro antiguo",
+       "tip": "Respeta culto, ropa y fotografía.",
+       "why": "Para conocer el barrio tras el paseo costero."
+      },
+      {
+       "area": "Suroeste de Lárnaca",
+       "known": "Lago estacional y recinto religioso",
+       "name": "Lago salado y Hala Sultan Tekke",
+       "tip": "Planifica aves según la estación.",
+       "why": "Para combinar naturaleza y visita tranquila."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Consejos para visitar Lárnaca",
+     "practicalTips": [
+      {
+       "body": "Consulta agua y aves actuales; las fotos estacionales no garantizan todo el año.",
+       "title": "Temporada de flamencos"
+      },
+      {
+       "body": "Finikoudes y el lago tienen condiciones distintas de transporte y sombra.",
+       "title": "Dos paseos distintos"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Duración recomendada",
+       "value": "2–3 días completos"
+      },
+      {
+       "label": "Mejor época",
+       "value": "Abril–junio y septiembre–octubre"
+      },
+      {
+       "label": "Cómo moverse",
+       "value": "Paseos céntricos y conexión propia al lago"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Qué ver en Kyrenia: puerto, castillo y Bellapais",
+       "city": "Girne",
+       "description": "Paseos por el puerto antiguo, castillo de Kyrenia y pausa panorámica en Bellapais."
+      },
+      {
+       "anchor": "Qué ver en Famagusta: murallas, Otelo y Salamina",
+       "city": "Gazimağusa",
+       "description": "Calles amuralladas, castillo de Otelo y arqueología de Salamina para dos jornadas históricas distintas."
+      },
+      {
+       "anchor": "Qué ver en Pafos: mosaicos, tumbas y dónde alojarse",
+       "city": "Baf",
+       "description": "Mosaicos de Kato Pafos, Tumbas de los Reyes y puerto para una estancia mediterránea de arqueología."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "Empieza por Finikoudes, San Lázaro y las calles próximas. Dedica otro bloque al lago salado y Hala Sultan Tekke. Ver el lago como un añadido breve al paseo céntrico puede hacerte subestimar las distancias abiertas. Dos días permiten disfrutar ambos sin correr.",
+        "Si esperas ver flamencos, cuenta con la estación sin dar el avistamiento por seguro. El agua y las aves cambian. Ve como una pausa de naturaleza y disfruta el paisaje que encuentres. Observar desde lejos respeta el entorno y mantiene la calma.",
+        "En una escala breve o una noche antes del vuelo, no intentes verlo todo. Centro y costa pueden llenar un día agradable. Para el lago u otra playa, cuenta regreso y maletas. Estar cerca del aeropuerto no significa que todos los hoteles tengan el mismo traslado."
+       ],
+       "heading": "Dos días en Lárnaca: centro antiguo y lago",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Desde Larnaca International (LCA), indica Finikoudes, centro antiguo o Mackenzie. Compara autobuses actuales y traslado nocturno según vuelo. Desde Pafos añade conexión de última parada al hotel.",
+        "Finikoudes y centro antiguo se pasean; lago y Hala Sultan Tekke necesitan transporte propio. Consulta acceso actual a senderos y recinto, evitando caminata larga hacia aeropuerto con calor."
+       ],
+       "heading": "Cómo llegar a Lárnaca y moverse",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Centro antiguo y costa el primer día, lago y tekke el segundo dividen bien la ruta. Para flamencos elige estación; el lago seco de verano ofrece otro paisaje, no la misma promesa de aves."
+       ],
+       "heading": "Qué ver en Lárnaca",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Pasea en horas frescas y enlaza centro antiguo. Playa, marina y costa del castillo tienen usos distintos: báñate en zonas adecuadas y revisa condiciones de tumbona y sombrilla."
+         ],
+         "heading": "Paseo de Finikoudes"
+        },
+        {
+         "body": [
+          "Combina iglesia, calles y plazas próximas. Consulta horarios y acceso durante oficios; una pausa de café o panadería antes de volver al mar muestra la vida cotidiana del centro antiguo."
+         ],
+         "heading": "Iglesia de San Lázaro y centro antiguo"
+        },
+        {
+         "body": [
+          "Agua y flamencos son estacionales, con invierno más favorable para aves. Observa sin acercarte ni molestar. Consulta horario y ropa de la tekke y evita rodear todo el lago con calor."
+         ],
+         "heading": "Lago salado y Hala Sultan Tekke"
+        }
+       ]
+      },
+      {
+       "body": [
+        "Después del paseo de Finikoudes, entra una o dos calles para conocer otro ambiente. La zona de la iglesia y una comida local dan continuidad al recorrido. Alejarte un poco de las mesas del paseo puede regalarte un rincón tranquilo. Esos cambios sencillos hacen agradable una ciudad pequeña.",
+        "Piensa en Mackenzie como una salida aparte de playa o cena. Mira distancias y regreso sin asumir un paseo continuo y cómodo desde el centro. El día del lago combina respeto en el lugar de culto y preparación para el exterior. Cada entorno merece su propio ritmo."
+       ],
+       "heading": "De Finikoudes a las calles antiguas, sin prisa",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Finikoudes facilita primera visita; centro antiguo, ambiente; Mackenzie, playa y tarde animada. Revisa ruido de aviones, ocio nocturno y acceso real al mar antes de reservar habitación.",
+        "Finikoudes facilita una primera visita; Mackenzie ofrece otro ambiente de playa y tarde. Para dormir tranquilo, piensa en calle, ocio y aviones. En una estancia breve, recepción y consigna pueden resultar más útiles que un apartamento grande de llegada complicada.",
+        "En una visita urbana breve, dos noches céntricas permiten volver a las mismas calles a distintas horas. En una estancia larga de playa pesan más habitación y servicios costeros. Compara acceso a pie, ruido nocturno y excursiones previstas, además de las fotos del hotel."
+       ],
+       "heading": "Dónde alojarse en Lárnaca",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Reparte meze, halloumi, pescado y panadería entre comidas. Meze puede cobrarse por persona y traer muchos platos: confirma para cuántos y contenido de lácteos o pescado.",
+        "Pescado y pequeños platos encajan con la costa; una panadería con el centro antiguo. Guarda un meze largo para una noche tranquila y no para comer antes del vuelo. Halloumi y salsas de yogur siguen importando según tu dieta. Basta con empezar por uno o dos sabores que te apetezcan."
+       ],
+       "heading": "Qué comer en Lárnaca",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "Primavera y otoño favorecen paseos; verano concentra playa. Para flamencos valora invierno y estado del lago. No reserves en temporada seca con promesa de aves garantizadas.",
+        "Compara alojamiento, transporte, playa y comida en euros. Un hotel céntrico reduce traslados. Para el lago aclara vehículo, espera y visitas en un precio total."
+       ],
+       "heading": "Lárnaca: cuándo ir y presupuesto",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Pafos aporta otra etapa cultural de mosaicos y tumbas. Para salir a otra costa consulta último transporte y conexión al hotel, sin partir las dos primeras jornadas con viajes largos."
+       ],
+       "heading": "Excursiones desde Lárnaca",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Qué ver en Lárnaca: Finikoudes, San Lázaro, lago salado y Hala Sultan Tekke, con traslado del aeropuerto, alojamiento, comida y ruta de 2 días.",
+     "seoTitle": "Qué ver en Lárnaca: Finikoudes, lago salado y playas",
+     "sources": [
+      {
+       "name": "Visit Cyprus — guía de Lárnaca",
+       "url": "https://www.visitcyprus.com/discover-cyprus/regions-cities/larnaka-regions-cities/"
+      },
+      {
+       "name": "Visit Cyprus — lago salado",
+       "url": "https://www.visitcyprus.com/discover-cyprus/nature/excursions/larnaka-larnaca-salt-lake/"
+      },
+      {
+       "name": "Visit Cyprus — Hala Sultan Tekke",
+       "url": "https://www.visitcyprus.com/discover-cyprus/culture/sites-and-monuments/hala-sultan-tekke/"
+      }
+     ],
+     "volatileNote": "Los precios, los servicios y los horarios pueden cambiar. Consulta las fuentes oficiales indicadas antes de reservar."
+    },
+    "tr": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Finikoudes Kordonu / Larnaka",
+        "category": "halal",
+        "cuisine": "Helal Levant ve Lübnan ızgaraları",
+        "description": "Finikoudes palmiye sahilinde helal sertifikalı ızgara kebaplar, tavuk taouk, humus ve taze lavaş ekmekleriyle bilinen köklü mekan.",
+        "lastVerified": "2026-10-06",
+        "name": "Abu Dany Lebanese Halal Restaurant",
+        "price": "Orta",
+        "verification": {
+         "note": "Tüm et çeşitleri helal sertifikalıdır; deniz manzaralı terası bulunur.",
+         "sourceName": "Visit Cyprus — Larnaka gastronomi rehberi",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://www.visitcyprus.com/",
+         "status": "certified-halal"
+        },
+        "why": "Larnaka sahilinde Hala Sultan Tekkesi veya plaj günü sonrasında güvenilir helal et ve meze yemek için 1 numaradır."
+       }
+      ],
+      "researchNote": "Larnaka Tuz Gölü kıyısındaki tarihi Hala Sultan Tekkesi İslam dünyası için kutsal bir ziyaret noktasıdır; sahil boyunca helal Levant lokantaları yaygındır.",
+      "vegan": [
+       {
+        "area": "Zinonos Kitieos St / Eski Merkez",
+        "category": "vegan",
+        "cuisine": "Organik vegan mutfak",
+        "description": "Larnaka'nın tarihi merkezinde yerel organik çiftlik sebzeleriyle hazırlanan günlük vegan menüler, mercimek köfteleri ve taze soğuk sıkım sular.",
+        "lastVerified": "2026-10-06",
+        "name": "Solar Kitchen Bar",
+        "price": "Ekonomik",
+        "verification": {
+         "note": "Mutfakta hayvansal ürün kullanılmaz; yerel organik çiftçilerden tedarik edilir.",
+         "sourceName": "HappyCow güncel vegan restoran dizini",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/solar-kitchen-bar-larnaca-92340",
+         "status": "fully-vegan"
+        },
+        "why": "Larnaka merkezinde günlük değişen taze, ev yapımı ve sağlıklı bitki bazlı yemekler yemek için kentin en samimi vegan noktasıdır."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Merkez, sahil ve göl için iki gün; plaj ve rahat tempo için üç veya dört gün.",
+       "q": "Larnaka kaç günde gezilir?"
+      },
+      {
+       "a": "Hayır; su ve kuşlar mevsimseldir. Kış daha uygun olabilir ama o günün göl koşulunu kontrol edin.",
+       "q": "Larnaka Tuz Gölü’nde her zaman flamingo var mı?"
+      },
+      {
+       "a": "İlk gezi için Finikoudes–eski merkez; plaj ve hareket için Mackenzie. Gece ve uçak sesini ayrıca kontrol edin.",
+       "q": "Larnaka’da nerede kalmalı?"
+      }
+     ],
+     "h1": "Larnaka Gezi Rehberi: Finikoudes ve Tuz Gölü Rotası",
+     "itinerary": [
+      {
+       "afternoon": "Kafe molası ve kıyı dinlenmesi",
+       "evening": "Finikoudes yürüyüşü ve yemek",
+       "morning": "Aziz Lazarus ve eski sokaklar",
+       "title": "1. Gün — Merkez ve sahil"
+      },
+      {
+       "afternoon": "Hala Sultan Tekkesi ve dönüş",
+       "evening": "Merkezde sakin akşam",
+       "morning": "Mevsime göre Tuz Gölü gözlemi",
+       "title": "2. Gün — Göl ve tekke"
+      }
+     ],
+     "lede": "Larnaka’da bir sabah eski sokaklara dalıp öğleden sonra sahile dönmek kolay. Finikoudes’in palmiyeleri, küçük bir kahve molası ve deniz kenarında geçen akşam sakin bir şehir tatili kuruyor. Tuz Gölü’nü de görmek istiyorsanız mevsimin size ne göstereceğine açık olun; her ziyaret aynı manzarayı sunmuyor.",
+     "places": [
+      {
+       "area": "Merkez kıyısı",
+       "known": "Palmiyeli yürüyüş ve plaj",
+       "name": "Finikoudes sahili",
+       "tip": "Plaj işletmesi şartı ve bayrak bilgisini kontrol edin.",
+       "why": "Şehir ve denizi aynı kısa yürüyüşte görmek için."
+      },
+      {
+       "area": "Eski Larnaka",
+       "known": "Kilise ve mahalle sokakları",
+       "name": "Aziz Lazarus Kilisesi ve eski merkez",
+       "tip": "İbadet, kıyafet ve fotoğraf koşullarına uyun.",
+       "why": "Sahil görüntüsünün arkasındaki merkez dokusunu görmek için."
+      },
+      {
+       "area": "Larnaka’nın güneybatısı",
+       "known": "Mevsimsel göl ve ziyaret alanı",
+       "name": "Tuz Gölü ve Hala Sultan Tekkesi",
+       "tip": "Kuş gözlemini mevsime göre planlayın.",
+       "why": "Doğa ile sakin ziyaret molasını birleştirmek için."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Larnaka için pratik ipuçları",
+     "practicalTips": [
+      {
+       "body": "Gölde su ve kuş varlığını güncel kontrol edin; mevsimsel fotoğrafı yıl boyu garanti sanmayın.",
+       "title": "Flamingo mevsimi"
+      },
+      {
+       "body": "Finikoudes merkez yürüyüşü ile göl çevresi gezisinin ulaşım ve gölge koşulları farklıdır.",
+       "title": "İki farklı yürüyüş"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Önerilen süre",
+       "value": "2–3 tam gün"
+      },
+      {
+       "label": "En uygun dönem",
+       "value": "Nisan–Haziran ve Eylül–Ekim"
+      },
+      {
+       "label": "Ulaşım yaklaşımı",
+       "value": "Merkez yürüyüşü ve göle ayrı bağlantı"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Girne Gezi Rehberi: Liman, Kale ve Bellapais Rotası",
+       "city": "Girne",
+       "description": "Eski liman, Girne Kalesi ve Bellapais arasında kısa yürüyüşler ve manzaralı köy molaları."
+      },
+      {
+       "anchor": "Gazimağusa Gezi Rehberi: Sur İçi ve Salamis Rotası",
+       "city": "Gazimağusa",
+       "description": "Sur içi sokakları, Othello Kalesi ve Salamis arkeolojisiyle doğu kıyısında iki farklı tarih günü."
+      },
+      {
+       "anchor": "Baf Gezi Rehberi: Mozaikler, Kral Mezarları ve Sahil",
+       "city": "Baf",
+       "description": "Kato Pafos mozaikleri, Kral Mezarları ve liman kıyısıyla arkeoloji odaklı Akdeniz gezisi."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "İlk günü Finikoudes, Aziz Lazarus Kilisesi ve çevredeki sokaklara ayırabilirsiniz. İkinci gün Tuz Gölü ve Hala Sultan Tekkesi için ayrı bir zaman bırakın. Gölü merkez yürüyüşünün sonuna kısa bir ek gibi görmek, açık alandaki mesafeyi küçümsetebilir. Şehre iki gün tanımak her iki çevreyi de acele etmeden görmenizi sağlar.",
+        "Flamingo görmek istiyorsanız mevsimi dikkate alın, ama kesin bir gözlem vaadiyle gün kurmayın. Gölün su seviyesi ve kuşların varlığı değişebilir. Bir doğa molası olarak gidip o günün manzarasını kabul etmek daha doğru beklenti. Kuşlara yaklaşmak yerine uzaktan izlemek hem çevreyi hem gezinin sakinliğini korur.",
+        "Kısa aktarma veya uçuş öncesi bir gece için geliyorsanız bütün durakları yetiştirmeye çalışmayın. Merkez ve sahil tek başına keyifli bir gün kurabilir. Göle veya başka kıyıya geçerken dönüş ve bagaj işini programa katın. Havalimanına yakın bir şehir olması, her otelden uçağa aynı sürede ulaşılacağı anlamına gelmiyor."
+       ],
+       "heading": "Larnaka’da iki gün: eski merkez ve göl çevresi",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Larnaca International (LCA) için otelin Finikoudes, eski merkez veya Mackenzie konumunu belirtin. Güncel otobüs ve gece transferini uçuş saatine göre karşılaştırın. Baf’tan şehirler arası gelişte son durakla otel arasındaki yürüyüşü de planlayın.",
+        "Finikoudes ve eski merkez yürünebilir; Tuz Gölü ile Hala Sultan Tekkesi ayrı ulaşım ister. Göl çevresindeki rota ve tesis erişimini güncel kontrol edin. Yaz sıcağında havalimanı tarafına uzun yürüyüşü kolay şehir molası sanmayın."
+       ],
+       "heading": "Larnaka ulaşım rehberi",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "İlk gün eski merkez ve kıyı, ikinci gün göl ve tekke doğal bir ayrımdır. Flamingo için mevsimi doğru seçin; yazın kuru göl de farklı peyzaj sunar ama aynı kuş beklentisi gerçekçi değildir."
+       ],
+       "heading": "Larnaka gezilecek yerler",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Sahili sabah veya akşamüstü yürüyüp eski merkezle bağlayın. Plaj, marina ve kale çevresi farklı kullanım alanlarıdır; her kıyı noktasından yüzmeyin. Şezlong ve şemsiye koşulunu yerinde okuyarak kısa mola planlayın."
+         ],
+         "heading": "Finikoudes sahili"
+        },
+        {
+         "body": [
+          "Kilise ziyaretini çevredeki küçük sokak ve meydanlarla birleştirin. Güncel ziyaret saatini ve ayin sırasında erişimi kontrol edin. Sahile geri dönmeden kafe veya fırın molası eski merkezin gündelik ritmini tanıtır."
+         ],
+         "heading": "Aziz Lazarus Kilisesi ve eski merkez"
+        },
+        {
+         "body": [
+          "Gölde su ve flamingo varlığı mevsime bağlıdır; kış dönemi kuş gözlemine daha uygundur. Kıyıdan gözleyip kuşlara yaklaşmayın. Tekkede güncel ziyaret saati ve kıyafet koşuluna uyun; göl çevresinin tamamını sıcak günde yürümeye çalışmayın."
+         ],
+         "heading": "Tuz Gölü ve Hala Sultan Tekkesi"
+        }
+       ]
+      },
+      {
+       "body": [
+        "Finikoudes’te kıyı yürüyüşünün ardından bir iki sokak içeriye geçmek şehrin farklı yüzünü gösterir. Kilise çevresinde kısa bir dolaşma ve yerel bir öğün güzel devam olur. Ana sahil masasından biraz uzaklaşmak daha sakin bir köşe bulmanıza yardımcı olabilir. Küçük şehir gezilerinin keyfi çoğu zaman bu basit geçişlerde.",
+        "Mackenzie tarafını akşam yemeği veya deniz molası için ayrı düşünebilirsiniz. Merkezden her yere kesintisiz yürünecekmiş gibi bir plan kurmadan mesafeyi ve dönüşü gözden geçirin. Tuz Gölü gününde ibadet yeri ziyaretini sakinlikle, doğa bölümünü ise açık hava hazırlığıyla birleştirin. Aynı gün içinde farklı yerlerde farklı tempo gerektiğini kabul etmek geziyi rahatlatır."
+       ],
+       "heading": "Finikoudes’ten eski sokaklara, acele etmeden",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Finikoudes ilk gezi için yürüyüş ve hizmet erişimi, eski merkez atmosfer, Mackenzie ise plaj ve akşam hareketi sunar. Uçak sesi, gece eğlencesi ve sahile gerçek erişimi oda rezervasyonundan önce kontrol edin.",
+        "İlk ziyaret için Finikoudes çevresi geziyi kolaylaştırır; Mackenzie tarafında plaj ve akşam hareketi farklı bir deneyim. Sessiz oda istiyorsanız caddeye, eğlence alanına ve uçak sesine dikkat edin. Kısa konaklamada resepsiyon ve bagaj hizmeti, büyük ama zor ulaşılan bir daireden daha değerli olabilir.",
+        "Kısa bir şehir gezisinde merkezde iki gece kalmak günün farklı saatlerinde aynı sokaklara dönmenizi sağlar. Plaj ağırlıklı uzun konaklamada oda tipi ve sahil hizmetleri önem kazanır. Otel seçimini fotoğrafa değil yürüyüş, gece sesi ve planladığınız gezilerin toplamına göre yapın."
+       ],
+       "heading": "Larnaka nerede kalınır?",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Meze, halloumi, balık ve yerel fırın ürünlerini farklı öğünlere bölün. Meze kişi başı ve çok tabaklı olabilir; kaç kişi için servis edildiğini sorun. Vegan öğünde peynir, yoğurtlu sos ve balık ekini ayrıca belirtin.",
+        "Sahil öğününde balık ve küçük tabaklar, eski merkez gününde ise fırın molası iyi eşleşir. Uzun bir meze sofrasını uçuşa yetişeceğiniz öğlene koymak yerine sakin bir akşama bırakın. Halloumi ve yoğurtlu soslar gibi tanıdık tatların her tabağı aynı beslenmeye uygun kılmadığını unutmayın. Menüde merak ettiğiniz bir iki tatla başlamak yeterli."
+       ],
+       "heading": "Larnaka ne yenir?",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "İlkbahar ve sonbahar merkez yürüyüşü için rahat, yaz ise daha yoğun plaj dönemidir. Flamingo beklentisi için kış ve göl koşulunu değerlendirin. Yazın kuru göle kuş garantisiyle tur ayırmayın.",
+        "Avro üzerinden oda, ulaşım, plaj işletmesi ve yemek toplamını karşılaştırın. Merkez oteli yürüyüşle transferi azaltabilir. Göl turunda özel araç, bekleme ve ziyaret kapsamını tek toplamda netleştirin."
+       ],
+       "heading": "Larnaka için mevsim ve bütçe planı",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Baf mozaik ve mezar odaklı farklı bir kültür ayağı sunar. Başka kıyı günü planlarken toplu taşımanın son dönüşünü ve konaklama bağlantısını kontrol edin. İlk iki günü uzun araç gezileriyle bölmeyin."
+       ],
+       "heading": "Larnaka çevresinde rota önerileri",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Larnaka gezi rehberi: Finikoudes, Aziz Lazarus, Tuz Gölü ve Hala Sultan Tekkesi; ulaşım, otel bölgeleri, yerel yemekler ve 2 günlük rota.",
+     "seoTitle": "Larnaka Gezi Rehberi: Finikoudes ve Tuz Gölü Rotası",
+     "sources": [
+      {
+       "name": "Visit Cyprus — Larnaka rehberi",
+       "url": "https://www.visitcyprus.com/discover-cyprus/regions-cities/larnaka-regions-cities/"
+      },
+      {
+       "name": "Visit Cyprus — Tuz Gölü",
+       "url": "https://www.visitcyprus.com/discover-cyprus/nature/excursions/larnaka-larnaca-salt-lake/"
+      },
+      {
+       "name": "Visit Cyprus — Hala Sultan Tekkesi",
+       "url": "https://www.visitcyprus.com/discover-cyprus/culture/sites-and-monuments/hala-sultan-tekke/"
+      }
+     ],
+     "volatileNote": "Bilet ücretleri, seferler ve ziyaret saatleri değişebilir. Rezervasyon öncesinde aşağıdaki resmî kaynaklardan güncel bilgiyi kontrol edin."
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,2246 @@
+{
+ "countryCode": "GE",
+ "guides": [
+  {
+   "citySlug": "tiflis",
+   "completeLangs": [
+    "en",
+    "es"
+   ],
+   "reviewed": true,
+   "translations": {
+    "en": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Old Tbilisi / Gorgasali Square",
+        "category": "halal",
+        "cuisine": "Caucasian and Middle Eastern grills",
+        "description": "Certified halal restaurant near the historic Tbilisi Juma Mosque, offering grilled lamb skewers, fresh Georgian bread and Caucasian dishes.",
+        "lastVerified": "2026-10-06",
+        "name": "Ali Baba Halal Restaurant",
+        "price": "Orta",
+        "verification": {
+         "note": "Meat sourced from halal certified slaughterhouses; alcohol-free family dining section.",
+         "sourceName": "Administration of All Muslims of Georgia Guide",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://georgia.travel/en/tbilisi",
+         "status": "certified-halal"
+        },
+        "why": "Most central spot near the sulfur baths and mosque for Muslim travelers seeking verified halal meats and Caucasian kebabs."
+       }
+      ],
+      "researchNote": "Cheese and meat are prominent in Georgia; pkhali (walnut paste) and lobio (bean stew) are naturally vegan. Choose certified venues for halal meat.",
+      "vegan": [
+       {
+        "area": "Sololaki / Machabeli St",
+        "category": "vegan",
+        "cuisine": "Georgian and global vegan cuisine",
+        "description": "Tbilisi's pioneering 100% vegan cafe in historic Sololaki, serving plant-based Georgian walnut rolls (badrijani), mushroom khinkali and hearty mains.",
+        "lastVerified": "2026-10-06",
+        "name": "Kiwi Vegan Cafe",
+        "price": "Ekonomik",
+        "verification": {
+         "note": "Completely independent vegan kitchen with no meat, dairy, eggs or cheese used.",
+         "sourceName": "HappyCow's current vegan restaurant directory",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/kiwi-vegan-cafe-tbilisi-60293",
+         "status": "fully-vegan"
+        },
+        "why": "The most trusted plant-based venue in the Caucasus to enjoy Georgian walnut mezze and dumplings with zero cross-contamination risk."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Three full days balance neighbourhoods, baths and views; allow four or five if adding day trips.",
+       "q": "How many days do you need in Tbilisi?"
+      },
+      {
+       "a": "Usually not for central sightseeing: walking, metro and occasional taxis work. Assess a mountain leg separately.",
+       "q": "Do you need a rental car in Tbilisi?"
+      },
+      {
+       "a": "It is possible, but road time and cloud can limit the visit. Two nights offer more flexibility for views and walks.",
+       "q": "Can you visit Kazbegi on a day trip from Tbilisi?"
+      },
+      {
+       "a": "Check TTC’s current airport link or a hotel transfer from Tbilisi International (TBS). At old-town hillside hotels, ask about vehicle access and the luggage walk. Avoid a tight international-flight connection after returning from Kazbegi.",
+       "q": "How do you get to Tbilisi?"
+      }
+     ],
+     "h1": "Tbilisi Travel Guide: Old Town, Baths and a 3-Day Route",
+     "itinerary": [
+      {
+       "afternoon": "River area and botanical garden",
+       "evening": "Booked bath or Georgian dinner",
+       "morning": "Abanotubani and old lanes",
+       "title": "Day 1 — Bath quarter"
+      },
+      {
+       "afternoon": "Rustaveli and one museum",
+       "evening": "A meal in Vera",
+       "morning": "Sololaki walk",
+       "title": "Day 2 — Sololaki and the centre"
+      },
+      {
+       "afternoon": "Café and flexible neighbourhood time",
+       "evening": "Confirm transport for your next leg",
+       "morning": "Mtatsminda in clear weather",
+       "title": "Day 3 — Views and a slower pace"
+      }
+     ],
+     "lede": "Sometimes the best moment in Tbilisi is a coffee on a balcony-lined street rather than a grand viewpoint. Bathhouse domes, hillside neighbourhoods and generous meals give the city its rhythm. Stay a few days and the handsome façades become the backdrop to a place you can settle into.",
+     "places": [
+      {
+       "area": "Old Tbilisi",
+       "known": "Sulfur baths",
+       "name": "Abanotubani",
+       "tip": "Confirm private room, duration and towels when booking.",
+       "why": "For bath-house culture and domed lanes."
+      },
+      {
+       "area": "Around Freedom Square",
+       "known": "Balconies and historic residential streets",
+       "name": "Sololaki",
+       "tip": "Ask before photographing occupied courtyards.",
+       "why": "For the city’s everyday scale beyond major landmarks."
+      },
+      {
+       "area": "Hill above the city",
+       "known": "Panorama and funicular",
+       "name": "Mtatsminda",
+       "tip": "Check the final return service as well as your ascent.",
+       "why": "For a view of the river and neighbourhood layout."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Practical tips for Tbilisi",
+     "practicalTips": [
+      {
+       "body": "Ask about vehicle access to old-town hotels; a short mapped distance may involve a steep walk.",
+       "title": "Luggage and slopes"
+      },
+      {
+       "body": "Compare room, duration, towels and extras as a single total.",
+       "title": "Bath package"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Recommended stay",
+       "value": "3–4 full days"
+      },
+      {
+       "label": "Best time to visit",
+       "value": "May–June and September–October"
+      },
+      {
+       "label": "Getting around",
+       "value": "Walking, metro and hill connections"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Batumi Travel Guide: Boulevard, Gardens and Where to Stay",
+       "city": "Batum",
+       "description": "Batumi Boulevard, the old town, botanical garden and Adjarian cooking on the Black Sea coast."
+      },
+      {
+       "anchor": "Kazbegi Travel Guide: Stepantsminda, Gergeti and Walks",
+       "city": "Kazbegi",
+       "description": "A Stepantsminda base for Gergeti, mountain views and Caucasus walks with weather flexibility."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "Spend the first day around Abanotubani and the old streets, adding a riverside walk. On the second, wander from Sololaki towards the central avenues and leave time for a museum or café. Use the third for a viewpoint, a bathhouse visit or an outing beyond town. Separate routes keep you from climbing the same hills repeatedly.",
+        "One transit night on the way to Kazbegi or Batumi leaves little room for Tbilisi’s pleasures. An afternoon is enough for photographs, but neighbourhood walks, a bathhouse and meals need more time. Even on a short trip, protecting a full city day can be more rewarding than adding another destination.",
+        "Build walks around gradients, not straight lines on a map. An old-town morning and a flatter central afternoon make a useful balance. Rain can slow you down on stone lanes and steps, so keep a bathhouse or indoor visit available. Save the viewpoint for clearer weather rather than forcing the original route."
+       ],
+       "heading": "Three days in Tbilisi: old streets, neighbourhoods and views",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Check TTC’s current airport link or a hotel transfer from Tbilisi International (TBS). At old-town hillside hotels, ask about vehicle access and the luggage walk. Avoid a tight international-flight connection after returning from Kazbegi.",
+        "Old Tbilisi and Sololaki are walkable, but slopes and paving slow progress. Metro links help farther out; check separate ticketing and operation for hill transport. A mapped shortcut is not permission to enter private courtyards."
+       ],
+       "heading": "Getting to and around Tbilisi",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Group Abanotubani and the river on one day, Sololaki and Rustaveli on another. Leave a clear-weather block for Mtatsminda and avoid rushing a bath reservation between walks."
+       ],
+       "heading": "Things to do in Tbilisi",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "The baths are both a neighbourhood walk and a separate booked experience. Ask the bathhouse about services, temperature and privacy, then leave time for nearby lanes and the approach towards the botanical garden."
+         ],
+         "heading": "Abanotubani"
+        },
+        {
+         "body": [
+          "Build short loops around Sololaki’s facades and stairways. Photogenic doors often lead to lived-in homes, so ask before entering. Its central location makes a café or meal break easy afterwards."
+         ],
+         "heading": "Sololaki"
+        },
+        {
+         "body": [
+          "Visit Mtatsminda when visibility is clear. Check current funicular operations and do not assume park activities share one ticket. Carry a light layer for wind and cooler air, with a planned return."
+         ],
+         "heading": "Mtatsminda"
+        }
+       ]
+      },
+      {
+       "body": [
+        "Many Sololaki courtyards still belong to homes. An open door is not automatically an invitation, and admiring the buildings from the street can be enough. A bakery, a small café or a street coming alive in the evening gives the walk its warmth. You do not need another monument at every turn.",
+        "Treat an Abanotubani bathhouse as a proper break, not another quick photo stop. Private rooms and shared spaces offer different experiences; choose the time and extras that feel comfortable to you. Avoid a tightly timed dinner immediately afterwards and let the evening stay relaxed after the city’s hills."
+       ],
+       "heading": "Sololaki streets and a bathhouse break",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Freedom Square–Sololaki suits central access, Vera cafés and neighbourhood life, and Abanotubani atmosphere. Ask about luggage on slopes, night noise and the actual taxi drop-off; metro access helps longer stays.",
+        "Sololaki and the old streets suit atmosphere; a central base near the metro can make daily travel simpler. A wooden balcony looks romantic, but carrying luggage up several flights will not suit everyone. For a few nights, understanding the street access and stairs is more useful than choosing the prettiest room photograph.",
+        "Abanotubani suits bath visits and old-town lanes, while the Rustaveli area brings museums and main avenues into your daily walk. Check whether the room is uphill and how you will return at night: a short route can feel different with luggage."
+       ],
+       "heading": "Where to stay in Tbilisi",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Khinkali, khachapuri, badrijani and pkhali show different sides of Georgian food. Balance rich breads with vegetable and walnut dishes. Ask about dumpling fillings, dairy and eggs, and walnuts when managing allergies.",
+        "Share a few Georgian dishes rather than relying on one large plate. Start a khinkali with a careful bite to keep its broth inside, then try walnut-and-vegetable dishes alongside it. Khachapuri is often a substantial meal in its own right. An unhurried dinner can become as memorable as the city’s sights."
+       ],
+       "heading": "What to eat in Tbilisi",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "Late spring and early autumn suit walking. In summer, use museums or baths during hotter hours; wet stone steps can be slippery. Save viewpoints for clear weather and museums for cloudier periods.",
+        "Walking and public transport keep costs manageable; private bath rooms, taxis and multi-stop excursions add up. Include slopes and daily travel in accommodation decisions, not just the nightly rate."
+       ],
+       "heading": "Tbilisi: weather and budget planning",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Two nights in Stepantsminda give Kazbegi some weather flexibility. Batumi is a separate train-linked coastal leg; adding both to a short weekend leaves little time for Tbilisi itself."
+       ],
+       "heading": "Trips beyond Tbilisi",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Explore Tbilisi’s old town, Abanotubani baths, Sololaki and Mtatsminda with transport tips, areas to stay, Georgian food and a 3-day walking route.",
+     "seoTitle": "Tbilisi Travel Guide: Old Town, Baths and a 3-Day Route",
+     "sources": [
+      {
+       "name": "Georgia Travel — official tourism",
+       "url": "https://georgia.travel/strolling-through-the-old-city-of-tbilisi"
+      },
+      {
+       "name": "Georgia Travel — sulfur baths",
+       "url": "https://georgia.travel/exploring-tbilisi-sulfur-baths"
+      },
+      {
+       "name": "TTC — Tbilisi public transport",
+       "url": "https://ttc.com.ge/en"
+      },
+      {
+       "name": "Georgia Travel — Georgian food",
+       "url": "https://georgia.travel/top-eleven-georgian-food"
+      }
+     ],
+     "volatileNote": "Admission prices, services and opening hours can change. Check the official sources below before booking."
+    },
+    "es": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Casco antiguo de Tiflis / Plaza Gorgasali",
+        "category": "halal",
+        "cuisine": "Parrilla caucásica y de Oriente Medio",
+        "description": "Restaurante halal certificado cerca de la mezquita Juma de Tiflis, con brochetas de cordero, pan georgiano caliente y guisos del Cáucaso.",
+        "lastVerified": "2026-10-06",
+        "name": "Ali Baba Halal Restaurant",
+        "price": "Orta",
+        "verification": {
+         "note": "Carne procedente de mataderos con certificación halal; zona familiar sin alcohol.",
+         "sourceName": "Guía de la Administración de Musulmanes de Georgia",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://georgia.travel/en/tbilisi",
+         "status": "certified-halal"
+        },
+        "why": "El lugar más céntrico junto a los baños de azufre y la mezquita para viajeros que buscan carnes halal verificadas."
+       }
+      ],
+      "researchNote": "El queso y la carne abundan en Georgia; el pkhali (pasta de nuez) y el lobio (alubias) son naturalmente veganos. Elige locales certificados para carne halal.",
+      "vegan": [
+       {
+        "area": "Sololaki / Machabeli St",
+        "category": "vegan",
+        "cuisine": "Cocina georgiana e internacional vegana",
+        "description": "Cafetería 100% vegana pionera en el barrio histórico de Sololaki, con rollitos georgianos de berenjena y nuez (badrijani) y khinkali de setas.",
+        "lastVerified": "2026-10-06",
+        "name": "Kiwi Vegan Cafe",
+        "price": "Ekonomik",
+        "verification": {
+         "note": "Cocina totalmente vegana e independiente, sin carne, lácteos, huevos ni queso.",
+         "sourceName": "Directorio actualizado de restaurantes veganos de HappyCow",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/kiwi-vegan-cafe-tbilisi-60293",
+         "status": "fully-vegan"
+        },
+        "why": "El local vegetal más fiable del Cáucaso para probar mezes y empanadillas georgianas sin riesgo de ingredientes animales."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Tres días completos equilibran barrios, baños y miradores; cuatro o cinco si añades excursiones.",
+       "q": "¿Cuántos días dedicar a Tiflis?"
+      },
+      {
+       "a": "Generalmente no para el centro: paseos, metro y taxi ocasional funcionan. Valora la etapa de montaña aparte.",
+       "q": "¿Hace falta alquilar coche en Tiflis?"
+      },
+      {
+       "a": "Es posible, pero carretera y nubes pueden limitarlo. Dos noches dan más margen para vistas y senderismo.",
+       "q": "¿Se puede ir a Kazbegi en un día desde Tiflis?"
+      },
+      {
+       "a": "Consulta la conexión actual de TTC o el traslado del hotel desde Tbilisi International (TBS). En hoteles en cuesta pregunta por acceso del vehículo y tramo con equipaje. Deja margen tras regresar de Kazbegi.",
+       "q": "¿Cómo llegar a Tiflis?"
+      }
+     ],
+     "h1": "Qué ver en Tiflis: casco antiguo, baños y ruta de 3 días",
+     "itinerary": [
+      {
+       "afternoon": "Río y jardín botánico",
+       "evening": "Baño reservado o cena georgiana",
+       "morning": "Abanotubani y calles antiguas",
+       "title": "Día 1 — Barrio de los baños"
+      },
+      {
+       "afternoon": "Rustaveli y un museo",
+       "evening": "Cena en Vera",
+       "morning": "Paseo por Sololaki",
+       "title": "Día 2 — Sololaki y centro"
+      },
+      {
+       "afternoon": "Café y paseo de barrio libre",
+       "evening": "Confirma transporte para la siguiente etapa",
+       "morning": "Mtatsminda con buena visibilidad",
+       "title": "Día 3 — Vistas y calma"
+      }
+     ],
+     "lede": "En Tiflis, el mejor momento puede ser un café en una calle de balcones, sin necesidad de un gran mirador. Cúpulas de baños, barrios en cuesta y mesas generosas dan ritmo a la ciudad. Unos días permiten descubrir la vida que hay detrás de sus bonitas fachadas.",
+     "places": [
+      {
+       "area": "Tiflis antiguo",
+       "known": "Baños de azufre",
+       "name": "Abanotubani",
+       "tip": "Confirma sala privada, duración y toallas al reservar.",
+       "why": "Para conocer la cultura de baños y sus cúpulas."
+      },
+      {
+       "area": "Alrededor de Freedom Square",
+       "known": "Balcones y calles residenciales históricas",
+       "name": "Sololaki",
+       "tip": "Pide permiso para fotografiar patios habitados.",
+       "why": "Para conocer la escala cotidiana fuera de los monumentos."
+      },
+      {
+       "area": "Colina sobre la ciudad",
+       "known": "Panorámica y funicular",
+       "name": "Mtatsminda",
+       "tip": "Consulta también el último regreso.",
+       "why": "Para ver río y barrios desde arriba."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Consejos para visitar Tiflis",
+     "practicalTips": [
+      {
+       "body": "Pregunta por acceso del vehículo al hotel; una distancia corta puede incluir una cuesta pronunciada.",
+       "title": "Equipaje y cuestas"
+      },
+      {
+       "body": "Compara sala, duración, toallas y extras en un precio final.",
+       "title": "Paquete de baños"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Duración recomendada",
+       "value": "3–4 días completos"
+      },
+      {
+       "label": "Mejor época",
+       "value": "Mayo–junio y septiembre–octubre"
+      },
+      {
+       "label": "Cómo moverse",
+       "value": "A pie, metro y conexiones en las cuestas"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Qué ver en Batumi: bulevar, jardín botánico y playa",
+       "city": "Batum",
+       "description": "Bulevar de Batumi, casco antiguo, jardín botánico y cocina de Adjaria junto al mar Negro."
+      },
+      {
+       "anchor": "Kazbegi: qué ver en Stepantsminda y ruta a Gergeti",
+       "city": "Kazbegi",
+       "description": "Base en Stepantsminda para Gergeti, vistas y caminatas del Cáucaso con margen por el tiempo."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "Dedica el primer día a Abanotubani, las calles antiguas y el río. El segundo puede ir de Sololaki a las avenidas céntricas, con una pausa de museo o café. Para el tercero, elige mirador, baños o una salida cercana. Separar recorridos evita repetir las mismas cuestas todos los días.",
+        "Una noche de paso hacia Kazbegi o Batumi deja poco espacio para disfrutar Tiflis. Las fotos pueden hacerse en una tarde, pero barrios, baños y comidas requieren más tiempo. Incluso en un viaje corto, reservar un día completo para la ciudad puede compensar más que añadir otro destino.",
+        "Organiza los paseos según las pendientes, no las líneas rectas del mapa. Casco antiguo por la mañana y centro más llano después forman un buen equilibrio. Con lluvia, las piedras y escaleras ralentizan la ruta; guarda baños o una visita interior como alternativa y deja el mirador para un momento despejado."
+       ],
+       "heading": "Tres días en Tiflis: casco antiguo, barrios y vistas",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Consulta la conexión actual de TTC o el traslado del hotel desde Tbilisi International (TBS). En hoteles en cuesta pregunta por acceso del vehículo y tramo con equipaje. Deja margen tras regresar de Kazbegi.",
+        "Casco antiguo y Sololaki se recorren a pie, con cuestas y pavimento que ralentizan. El metro ayuda hacia barrios lejanos; revisa billetes de funicular y otros enlaces. Un atajo del mapa no autoriza entrar en patios privados."
+       ],
+       "heading": "Cómo llegar a Tiflis y moverse",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Agrupa Abanotubani y río en una jornada, Sololaki y Rustaveli en otra. Reserva Mtatsminda para buena visibilidad y no encajes los baños con prisas."
+       ],
+       "heading": "Qué ver en Tiflis",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Los baños son barrio para pasear y experiencia con reserva. Pregunta por servicio, temperatura e intimidad; después recorre las calles próximas y el acceso hacia el jardín botánico."
+         ],
+         "heading": "Abanotubani"
+        },
+        {
+         "body": [
+          "Diseña pequeños circuitos entre fachadas y escaleras de Sololaki. Muchas puertas fotogénicas llevan a viviendas: pide permiso antes de entrar. La cercanía al centro facilita una pausa después."
+         ],
+         "heading": "Sololaki"
+        },
+        {
+         "body": [
+          "Elige buena visibilidad para Mtatsminda. Consulta el funicular y no presupongas que las actividades del parque comparten entrada. Lleva una capa ligera y planifica el regreso."
+         ],
+         "heading": "Mtatsminda"
+        }
+       ]
+      },
+      {
+       "body": [
+        "Muchos patios de Sololaki siguen siendo viviendas. Una puerta abierta no siempre invita a entrar; también puedes disfrutar las fachadas desde la calle. Una panadería, una cafetería pequeña o el movimiento de la tarde dan cercanía al paseo. No necesitas encontrar otro monumento en cada esquina.",
+        "Piensa en los baños de Abanotubani como una pausa real. Una sala privada y una zona compartida ofrecen experiencias distintas; elige duración y extras según tu comodidad. No encajes justo después una cena con horario estricto: deja una tarde tranquila tras recorrer las cuestas."
+       ],
+       "heading": "Calles de Sololaki y una pausa en los baños",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Freedom Square–Sololaki facilita el centro; Vera, cafés y barrio; Abanotubani, ambiente. Revisa cuestas con equipaje, ruido nocturno y punto de taxi. Cerca del metro resulta útil en estancias largas.",
+        "Sololaki y el casco antiguo ofrecen ambiente; una base céntrica junto al metro facilita los desplazamientos. Un balcón de madera resulta romántico, pero subir varios pisos con maletas no gusta a todo el mundo. Para varias noches, conocer accesos y escaleras vale más que elegir la foto más bonita.",
+        "Abanotubani facilita baños y calles antiguas; la zona de Rustaveli acerca museos y avenidas al paseo diario. Comprueba si el alojamiento está en cuesta y cómo regresarás de noche: un trayecto corto cambia bastante cuando llevas equipaje."
+       ],
+       "heading": "Dónde alojarse en Tiflis",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Khinkali, khachapuri, badrijani y pkhali muestran facetas de la cocina georgiana. Equilibra masas contundentes con verduras. Pregunta por rellenos, lácteos, huevo y nueces si tienes alergias.",
+        "Comparte varios platos georgianos en vez de elegir uno enorme. Empieza el khinkali con un bocado pequeño para conservar el caldo y acompáñalo con verduras y nueces. El khachapuri puede ser una comida completa por sí solo. Una cena larga puede quedarse en la memoria tanto como las visitas."
+       ],
+       "heading": "Qué comer en Tiflis",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "Final de primavera y comienzo de otoño favorecen paseos. En verano usa museos o baños en horas cálidas; la piedra mojada resbala. Reserva miradores para días despejados.",
+        "Paseos y transporte público equilibran gasto; salas privadas de baños, taxis y excursiones suman. Valora cuestas y trayectos diarios además de la tarifa del alojamiento."
+       ],
+       "heading": "Tiflis: cuándo ir y presupuesto",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Dos noches en Stepantsminda dan margen al tiempo de Kazbegi. Batumi es otra etapa costera con tren; sumar ambas a un fin de semana deja poco tiempo para Tiflis."
+       ],
+       "heading": "Excursiones desde Tiflis",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Qué ver en Tiflis: casco antiguo, baños de Abanotubani, Sololaki y Mtatsminda, con transporte, alojamiento, cocina georgiana y ruta de 3 días.",
+     "seoTitle": "Qué ver en Tiflis: casco antiguo, baños y ruta de 3 días",
+     "sources": [
+      {
+       "name": "Georgia Travel — turismo oficial",
+       "url": "https://georgia.travel/strolling-through-the-old-city-of-tbilisi"
+      },
+      {
+       "name": "Georgia Travel — baños de azufre",
+       "url": "https://georgia.travel/exploring-tbilisi-sulfur-baths"
+      },
+      {
+       "name": "TTC — transporte público de Tiflis",
+       "url": "https://ttc.com.ge/en"
+      },
+      {
+       "name": "Georgia Travel — comida georgiana",
+       "url": "https://georgia.travel/top-eleven-georgian-food"
+      }
+     ],
+     "volatileNote": "Los precios, los servicios y los horarios pueden cambiar. Consulta las fuentes oficiales indicadas antes de reservar."
+    },
+    "tr": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Eski Tiflis / Gorgasali Meydanı",
+        "category": "halal",
+        "cuisine": "Kafkas ve Orta Doğu ızgaraları",
+        "description": "Tiflis Cuma Camii'ne yürüme mesafesinde helal sertifikalı kuzu şiş, taze Gürcü lavaşı ve aromatik Kafkas tencere yemekleri.",
+        "lastVerified": "2026-10-06",
+        "name": "Ali Baba Halal Restaurant",
+        "price": "Orta",
+        "verification": {
+         "note": "Et tedariki helal kesim sertifikalıdır; alkolsüz aile salonu mevcuttur.",
+         "sourceName": "Gürcistan Müslümanları İdaresi rehberi",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://georgia.travel/en/tbilisi",
+         "status": "certified-halal"
+        },
+        "why": "Tiflis'in tarihi kükürt banyoları ve cami çevresinde güvenilir helal et ve Kafkas kebabı arayan Müslüman gezginler için en merkezi adrestir."
+       }
+      ],
+      "researchNote": "Gürcistan'da peynirli ve etli yemekler yaygındır; pkhali (cevizli sebze ezmesi) ve lobio (fasulye) doğası gereği vegandır. Helal et için sertifikalı lokantaları tercih edin.",
+      "vegan": [
+       {
+        "area": "Sololaki / Machabeli St",
+        "category": "vegan",
+        "cuisine": "Gürcü ve dünya vegan mutfağı",
+        "description": "Eski Tiflis'in tarihi Sololaki semtinde cevizli Gürcü patlıcanı (badrijani), mantarlı khinkali ve bitki bazlı burgerler sunan öncü %100 vegan kafe.",
+        "lastVerified": "2026-10-06",
+        "name": "Kiwi Vegan Cafe",
+        "price": "Ekonomik",
+        "verification": {
+         "note": "Mutfakta et, süt, yumurta ve peynir kesinlikle kullanılmaz; tamamen bağımsız vegan işletmedir.",
+         "sourceName": "HappyCow güncel vegan restoran dizini",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/kiwi-vegan-cafe-tbilisi-60293",
+         "status": "fully-vegan"
+        },
+        "why": "Geleneksel Gürcü hamur işleri ve cevizli mezelerini hiçbir hayvansal ürün riski olmadan tatmak için Kafkasya'nın en güvenilir vegan noktasıdır."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Üç tam gün mahalleler, hamam ve manzara için dengelidir; şehir dışı gezi ekleyecekseniz dört veya beş gün bırakın.",
+       "q": "Tiflis kaç günde gezilir?"
+      },
+      {
+       "a": "Merkez gezisinde genellikle hayır; yürüyüş, metro ve gerektiğinde taksi uygundur. Dağ ayağını ayrı değerlendirin.",
+       "q": "Tiflis’te araç kiralamak gerekir mi?"
+      },
+      {
+       "a": "Mümkündür, fakat yol ve bulutlu hava geziyi sınırlayabilir. Yürüyüş ve manzara için iki gece daha esnektir.",
+       "q": "Tiflis’ten Kazbegi günübirlik gidilir mi?"
+      },
+      {
+       "a": "Tbilisi International (TBS) için TTC’nin güncel havalimanı bağlantısını veya otel transferini kontrol edin. Otel eski şehir yokuşundaysa araçla kapıya erişim ve bavulla son yürüyüş önemlidir. Kazbegi’den dönüş gününü uluslararası uçuşunuza dar bağlamayın.",
+       "q": "Tiflis'e nasıl gidilir?"
+      }
+     ],
+     "h1": "Tiflis Gezi Rehberi: Eski Şehir, Hamamlar ve 3 Günlük Rota",
+     "itinerary": [
+      {
+       "afternoon": "Nehir çevresi ve botanik bahçesi",
+       "evening": "Rezervasyonlu hamam veya Gürcü yemeği",
+       "morning": "Abanotubani ve eski sokaklar",
+       "title": "1. Gün — Hamam mahallesi"
+      },
+      {
+       "afternoon": "Rustaveli ve bir müze",
+       "evening": "Vera’da yemek molası",
+       "morning": "Sololaki yürüyüşü",
+       "title": "2. Gün — Sololaki ve merkez"
+      },
+      {
+       "afternoon": "Kafe ve serbest mahalle gezisi",
+       "evening": "Ertesi rota için ulaşımı netleştirin",
+       "morning": "Açık havada Mtatsminda",
+       "title": "3. Gün — Manzara ve sakin tempo"
+      }
+     ],
+     "lede": "Tiflis’te en güzel an bazen büyük bir manzaradan çok, balkonlu bir sokakta verilen kahve molası oluyor. Hamam kubbeleri, yokuşlu mahalleler ve uzun sofralar birbirine karışıyor; şehre iki üç gün tanıyınca ilk bakıştaki güzel cephelerin arkasında yaşayan bir yer buluyorsunuz.",
+     "places": [
+      {
+       "area": "Eski Tiflis",
+       "known": "Kükürtlü hamamlar",
+       "name": "Abanotubani",
+       "tip": "Özel oda, süre ve havlu dahilini rezervasyonda sorun.",
+       "why": "Şehrin hamam kültürünü ve kubbeli sokaklarını görmek için."
+      },
+      {
+       "area": "Özgürlük Meydanı çevresi",
+       "known": "Balkonlar ve eski konut dokusu",
+       "name": "Sololaki",
+       "tip": "Yaşanan avlularda fotoğraf için izin isteyin.",
+       "why": "Şehri büyük simgelerin dışındaki gündelik ölçekte tanımak için."
+      },
+      {
+       "area": "Şehrin üzerindeki tepe",
+       "known": "Panorama ve funiküler",
+       "name": "Mtatsminda",
+       "tip": "Gidiş kadar son dönüş seferini de kontrol edin.",
+       "why": "Tiflis’in nehir ve mahalle düzenini yukarıdan görmek için."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Tiflis için pratik ipuçları",
+     "practicalTips": [
+      {
+       "body": "Eski şehir oteline araç erişimini rezervasyonda sorun; haritadaki yakınlık kolay yürüyüş demek değildir.",
+       "title": "Bavul ve yokuş"
+      },
+      {
+       "body": "Oda, süre, havlu ve ek hizmetleri tek toplam üzerinden karşılaştırın.",
+       "title": "Hamam paketi"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Önerilen süre",
+       "value": "3–4 tam gün"
+      },
+      {
+       "label": "En uygun dönem",
+       "value": "Mayıs–Haziran ve Eylül–Ekim"
+      },
+      {
+       "label": "Ulaşım yaklaşımı",
+       "value": "Yürüyüş, metro ve yokuş bağlantıları"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Batum Gezi Rehberi: Bulvar, Botanik Bahçesi ve Sahil",
+       "city": "Batum",
+       "description": "Batum Bulvarı, eski şehir, botanik bahçesi ve Acar mutfağıyla Karadeniz kıyı gezisi."
+      },
+      {
+       "anchor": "Kazbegi Gezi Rehberi: Stepantsminda ve Gergeti Rotası",
+       "city": "Kazbegi",
+       "description": "Stepantsminda merkezli Gergeti, dağ manzarası ve hava payı bırakan Kafkas yürüyüş rotası."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "İlk günü Abanotubani ve eski şehrin sokaklarına ayırın; nehir çevresini de bu yürüyüşe katabilirsiniz. İkinci gün Sololaki’den merkez caddelerine uzanıp bir müze veya kafe molası bırakın. Üçüncü gün manzara, hamam ya da şehir dışı kısa bir gezi arasında seçim yapın. Her günü aynı yokuşlara dönerek geçirmek yerine rotaları bölmek daha rahat.",
+        "Tiflis’e yalnız Kazbegi veya Batum yolunda bir aktarma gecesi ayırmak şehrin iyi taraflarını aceleye getiriyor. Eski şehir fotoğrafları bir öğleden sonra çekilir ama mahalleler, hamam ve yemekler daha fazla zaman ister. Yolculuğunuz kısa olsa bile bir tam günü burada tutup şehir dışı duraklardan birini azaltmak daha dengeli olabilir.",
+        "Yürüyüşleri haritadaki düz çizgiye göre değil yokuşlara göre kurun. Sabah eski şehirde, öğleden sonra daha düz merkez çevresinde dolaşmak iyi bir denge. Yağmurda taş sokaklar ve merdivenler programı yavaşlatabilir; o güne hamam veya kapalı bir ziyaret bırakın. Manzara durağını havanın açık olduğu bir zamanla eşleştirmek bütün günü zorla aynı rotada tutmaktan daha iyi."
+       ],
+       "heading": "Tiflis’i üç güne yaymak: eski şehir, mahalleler ve manzara",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Tbilisi International (TBS) için TTC’nin güncel havalimanı bağlantısını veya otel transferini kontrol edin. Otel eski şehir yokuşundaysa araçla kapıya erişim ve bavulla son yürüyüş önemlidir. Kazbegi’den dönüş gününü uluslararası uçuşunuza dar bağlamayın.",
+        "Eski şehir ve Sololaki yürünebilir ama taş zemin ve yokuşlar tempoyu düşürür. Metro daha uzak mahalleleri bağlar; funiküler ve teleferik gibi manzara bağlantılarının bilet ve çalışma koşullarını ayrı kontrol edin. Harita kısayolunu özel avluya girme izni sanmayın."
+       ],
+       "heading": "Tiflis ulaşım rehberi",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Abanotubani ve nehir çevresini bir güne, Sololaki ve Rustaveli eksenini başka güne ayırın. Mtatsminda için hava açıkken ayrı bir zaman bloğu bırakın; hamam rezervasyonunu yürüyüşün ortasında aceleye getirmeyin."
+       ],
+       "heading": "Tiflis gezilecek yerler",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Hamamlar hem mahalle yürüyüşü hem ayrı rezervasyon deneyimidir. Hizmet, sıcaklık ve mahremiyet koşullarını tesisten öğrenin; yalnız bina fotoğrafıyla paket seçmeyin. Çevredeki dar sokakları ve botanik bahçesine doğru geçişi rahat yürüyüşle tamamlayın."
+         ],
+         "heading": "Abanotubani"
+        },
+        {
+         "body": [
+          "Sololaki’de cephe ve merdivenleri izleyerek kısa sokak halkaları kurun. Fotojenik kapıların çoğu yaşayan konutlara açılır; içeri girmeden izin isteyin. Yakındaki merkez bağlantısı, yürüyüş sonrası kafe veya yemek molasını kolaylaştırır."
+         ],
+         "heading": "Sololaki"
+        },
+        {
+         "body": [
+          "Mtatsminda’yı açık görüşlü saatlere alın. Tepeye ulaşım için güncel funiküler işletmesini kontrol edin; park içindeki her aktivite aynı biletin parçası değildir. Yukarıda rüzgâr ve serinlik için hafif katman taşıyın, dönüşü son dakikaya bırakmayın."
+         ],
+         "heading": "Mtatsminda"
+        }
+       ]
+      },
+      {
+       "body": [
+        "Sololaki’de cephelere bakarken avluların çoğunun hâlâ ev olduğunu hatırlayın. Açık bir kapı her zaman ziyaret daveti değil; içeride yaşayanları rahatsız etmeden sokaktan bakmak da güzel. Tiflis’in samimiyeti biraz bu gündelik ayrıntılarda: bir fırın, küçük bir kafe, akşam hareketlenen bir sokak. Rotaya her zaman yeni bir anıt eklemek gerekmiyor.",
+        "Abanotubani’de hamamı gezi arasında kısa bir fotoğraf durağı yerine gerçek bir mola gibi planlayın. Özel oda ile ortak alan deneyimi farklı; süre, havlu ve kese gibi ekleri seçerken kendi rahatlığınıza bakın. Çıkışa sıkışık bir yemek rezervasyonu koymamak iyi fikir. Şehrin yokuşlarını gezdikten sonra yavaş bir akşam için alan kalır."
+       ],
+       "heading": "Sololaki sokakları ve hamam molası",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Özgürlük Meydanı–Sololaki merkez erişimi, Vera kafe ve mahalle ritmi, Abanotubani atmosfer için iyi başlangıçlardır. Yokuşlu sokakta bavul, gece gürültüsü ve gerçek taksi bırakma noktasını sorun. Metro yakınlığı daha uzun kalışta faydalıdır.",
+        "Atmosfer arıyorsanız Sololaki veya eski şehir, daha rahat günlük erişim istiyorsanız metroya yakın merkez iyi başlangıç. Fotoğraflardaki ahşap balkon romantik görünse de bavulla birkaç kat çıkmak herkes için aynı keyif değil. Birkaç gecelik konaklamada sokak ve merdiven düzenini anlamak, sırf en güzel oda fotoğrafına göre seçim yapmaktan daha kullanışlı.",
+        "Abanotubani çevresi hamam ve eski sokak yürüyüşüne, Rustaveli çevresi müze ve ana cadde gezisine daha uygundur. Odanın dik yokuşta olup olmadığını ve gece dönüşünü kontrol edin; kısa görünen mesafeyi bavulla aynı kolaylıkta yürüyemeyebilirsiniz."
+       ],
+       "heading": "Tiflis nerede kalınır?",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Khinkali, khachapuri, badrijani ve pkhali Gürcü mutfağını farklı yönleriyle açar. Hamur işi her zaman hafif öğün değildir; sebze ve cevizli tabaklarla paylaşım kurun. Khinkali’de iç dolgu, khachapuri’de peynir ve yumurta, alerjide ceviz özellikle sorulmalıdır.",
+        "Gürcü sofrasında birkaç yemeği paylaşmak tek büyük tabaktan daha keyifli. Khinkali’nin içindeki suyu dökmeden küçük bir ısırıkla başlamak, yanında cevizli sebze tabakları denemek iyi giriş. Khachapuri’yi de her öğünün yan ürünü saymayın; çoğu zaman başlı başına doyurucu bir seçim. Uzun bir akşam yemeği, Tiflis gezisinin anıtlar kadar hatırlanan kısmı olabilir."
+       ],
+       "heading": "Tiflis ne yenir?",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "İlkbahar sonu ve sonbahar başı yürüyüşe uygundur. Yazın sıcak saatleri kapalı müze veya hamamla dengeleyin; yağışta taş basamaklar kayganlaşabilir. Manzara tepesini açık hava gününe, müze programını daha kapalı güne ayırın.",
+        "Mahalle yürüyüşleri ve toplu taşıma bütçeyi dengeler; özel hamam odası, taksi ve çok duraklı turlar maliyeti artırır. Konaklamada yalnız gece fiyatını değil yokuş ve günlük ulaşımı da değerlendirin."
+       ],
+       "heading": "Tiflis için mevsim ve bütçe planı",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Kazbegi için Stepantsminda’da iki gece dağ havasına yedek verir. Batum ise trenle bağlanan ayrı kıyı ayağıdır. İkisini aynı kısa hafta sonuna eklemek Tiflis’te geçirilecek zamanı ciddi biçimde azaltır."
+       ],
+       "heading": "Tiflis çevresinde rota önerileri",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Tiflis gezi rehberi: Abanotubani, eski şehir, Sololaki ve Mtatsminda; ulaşım, nerede kalınır, Gürcü yemekleri ve 3 günlük yürüyüş rotası.",
+     "seoTitle": "Tiflis Gezi Rehberi: Eski Şehir, Hamamlar ve 3 Günlük Rota",
+     "sources": [
+      {
+       "name": "Georgia Travel — resmî turizm",
+       "url": "https://georgia.travel/strolling-through-the-old-city-of-tbilisi"
+      },
+      {
+       "name": "Georgia Travel — kükürtlü hamamlar",
+       "url": "https://georgia.travel/exploring-tbilisi-sulfur-baths"
+      },
+      {
+       "name": "TTC — Tiflis toplu taşıma",
+       "url": "https://ttc.com.ge/en"
+      },
+      {
+       "name": "Georgia Travel — Gürcü yemekleri",
+       "url": "https://georgia.travel/top-eleven-georgian-food"
+      }
+     ],
+     "volatileNote": "Bilet ücretleri, seferler ve ziyaret saatleri değişebilir. Rezervasyon öncesinde aşağıdaki resmî kaynaklardan güncel bilgiyi kontrol edin."
+    }
+   }
+  },
+  {
+   "citySlug": "batum",
+   "completeLangs": [
+    "en",
+    "es"
+   ],
+   "reviewed": true,
+   "translations": {
+    "en": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Kutaisi St / Beside Orta Mosque",
+        "category": "halal",
+        "cuisine": "Turkish and Georgian halal grills",
+        "description": "Established halal restaurant beside Batumi's historic Orta Mosque, serving halal soups, tandoor kebabs and Turkish-Georgian recipes.",
+        "lastVerified": "2026-10-06",
+        "name": "Karabak Halal Restaurant",
+        "price": "Ekonomik",
+        "verification": {
+         "note": "Meats used in the kitchen are halal certified; alcohol-free establishment.",
+         "sourceName": "Adjara Tourism Department — Batumi Guide",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://gobatumi.com/en",
+         "status": "certified-halal"
+        },
+        "why": "The most dependable address in Batumi for fresh, certified halal meat dishes right by the historic mosque."
+       }
+      ],
+      "researchNote": "Adjarian khachapuri is rich in cheese and eggs; vegans can request mushroom or bean-filled breads instead.",
+      "vegan": [
+       {
+        "area": "Old Batumi / Memed Abashidze Ave",
+        "category": "vegan",
+        "cuisine": "Georgian and Black Sea vegetarian dishes",
+        "description": "Classic Old Batumi eatery serving walnut-spinach pkhali, bubbling mushroom claypots and fresh Georgian plant-based dishes.",
+        "lastVerified": "2026-10-06",
+        "name": "Privet iz Batuma",
+        "price": "Orta",
+        "verification": {
+         "note": "Extensive walnut vegetable mezze are dairy-free; mention vegan preference when ordering.",
+         "sourceName": "HappyCow's current vegan restaurant directory",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/privet-iz-batuma-batumi-78140",
+         "status": "vegan-options"
+        },
+        "why": "One of the city's most beloved traditional venues to taste meat-free Georgian specialties in an Old Batumi ambiance."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Two days for the centre, boulevard and garden; three or four with beach and weather flexibility.",
+       "q": "How many days do you need in Batumi?"
+      },
+      {
+       "a": "Pebbly beaches are common along the city coast. Check your chosen beach’s entry surface and wave conditions.",
+       "q": "Are Batumi’s beaches sandy?"
+      },
+      {
+       "a": "For a first visit, the old centre and boulevard balance transport and dining; check central access carefully at New Boulevard hotels.",
+       "q": "Where should you stay in Batumi?"
+      }
+     ],
+     "h1": "Batumi Travel Guide: Boulevard, Gardens and Where to Stay",
+     "itinerary": [
+      {
+       "afternoon": "Boulevard parks and waterfront",
+       "evening": "Adjarian dinner",
+       "morning": "Old Batumi and squares",
+       "title": "Day 1 — Old town and boulevard"
+      },
+      {
+       "afternoon": "Garden walk and return",
+       "evening": "A short central meal break",
+       "morning": "Garden transfer and main trail",
+       "title": "Day 2 — Botanical garden"
+      },
+      {
+       "afternoon": "Museum or café if wet",
+       "evening": "Sunset waterfront walk",
+       "morning": "Beach if conditions permit",
+       "title": "Day 3 — Flexible coast time"
+      }
+     ],
+     "lede": "A boulevard walk, coffee in the old streets and a return to the water make an easy Batumi day. Black Sea weather may rearrange the plan, which is part of why this works better as a relaxed coastal city break than a beach-only holiday. Leave room for both its greenery and its street life.",
+     "places": [
+      {
+       "area": "Central seafront",
+       "known": "Parks and seafront walks",
+       "name": "Batumi Boulevard",
+       "tip": "Keep pedestrian and cycle spaces distinct.",
+       "why": "For the city’s outdoor rhythm."
+      },
+      {
+       "area": "Old centre and Piazza area",
+       "known": "Squares and small streets",
+       "name": "Old Batumi",
+       "tip": "Pair the neighbourhood walk with an everyday meal.",
+       "why": "For a contrast to the modern seafront towers."
+      },
+      {
+       "area": "Mtsvane Kontskhi",
+       "known": "Hillside gardens and sea views",
+       "name": "Batumi Botanical Garden",
+       "tip": "Match entrance and exit gates to your return transport.",
+       "why": "For a plant and nature day along the coast."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Practical tips for Batumi",
+     "practicalTips": [
+      {
+       "body": "You need not walk the entire boulevard in one day; focus on nearby stretches.",
+       "title": "A long boulevard"
+      },
+      {
+       "body": "Match your entry and exit gates to return transport beforehand.",
+       "title": "Garden gates"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Recommended stay",
+       "value": "2–3 full days"
+      },
+      {
+       "label": "Best time to visit",
+       "value": "May–June and September"
+      },
+      {
+       "label": "Getting around",
+       "value": "Walking plus a separate garden transfer"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Tbilisi Travel Guide: Old Town, Baths and a 3-Day Route",
+       "city": "Tiflis",
+       "description": "Sulfur baths, Old Tbilisi, Sololaki and Mtatsminda make a neighbourhood-focused capital visit."
+      },
+      {
+       "anchor": "Kazbegi Travel Guide: Stepantsminda, Gergeti and Walks",
+       "city": "Kazbegi",
+       "description": "A Stepantsminda base for Gergeti, mountain views and Caucasus walks with weather flexibility."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "For two or three full days, start with the boulevard and old centre, give the botanical garden its own block, then leave a coastal day flexible. The garden needs time for its distances and slopes. Use clear weather for outdoor visits and keep meals or indoor stops available when rain changes the rhythm.",
+        "For a seaside stay, expect pebbles rather than a broad sandy beach. Comfortable beach footwear and somewhere pleasant to sit afterwards are small details that help. If sightseeing is the priority, fit swims around your walks instead of committing to an entire beach day. Batumi lets both kinds of holiday share one base.",
+        "Do not count the arrival from Tbilisi as a full sightseeing day. A short boulevard walk and dinner can be enough after travelling. Save the garden or a longer route for the following morning. Enjoying Batumi means leaving some room for changeable Black Sea weather rather than expecting guaranteed blue skies."
+       ],
+       "heading": "Balance the town and the sea in Batumi",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Batumi International (BUS) and the railway station are different arrival points. From Tbilisi by train, plan the final hotel transfer. An old-centre hotel and a New Boulevard hotel create different evening and transport arrangements.",
+        "The old centre and selected boulevard stretches are walkable, but the whole coast is not one short stroll. The botanical garden requires a separate return journey. Keep a museum or café alternative for wet weather."
+       ],
+       "heading": "Getting to and around Batumi",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Give the old town and boulevard one day and the botanical garden another. A third beach day prevents a long garden walk from becoming a rushed seaside programme."
+       ],
+       "heading": "Things to do in Batumi",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Walk short loops around central parks, waterfront and sculptures rather than attempting the entire boulevard. For cycling, respect pedestrians and traffic; coastal wind can change the comfort of a long walk."
+         ],
+         "heading": "Batumi Boulevard"
+        },
+        {
+         "body": [
+          "Link Piazza and Europe Square through shorter street walks. The buildings span different periods; look at old and newer facades together. Side-street bakeries and small cafés offer a change from seafront hotel life."
+         ],
+         "heading": "Old Batumi"
+        },
+        {
+         "body": [
+          "The garden is extensive and sloping: a generous half-day allows a relaxed visit. Match gates and trails with your transport, wearing suitable shoes after rain. Explore beyond the first viewpoint rather than treating it as a photo stop."
+         ],
+         "heading": "Batumi Botanical Garden"
+        }
+       ]
+      },
+      {
+       "body": [
+        "Explore Old Batumi with a leisurely walk around Europe Square and its neighbouring streets, then stop for coffee. On the boulevard, enjoy one stretch in the morning and another in the evening rather than trying to complete it all. The same waterfront can feel quite different as the light and daily activity change.",
+        "At the botanical garden, let the walk itself be the point rather than chasing a single perfect photograph. Think through the entrance, exit, breaks and return to town together. A simple old-centre dinner afterwards can round off the greenery and sea views more pleasantly than another lengthy excursion."
+       ],
+       "heading": "Old streets, squares and time on the boulevard",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "The old centre suits dining and walks, boulevard areas the waterfront, and New Boulevard newer hotels. For inexpensive apartments in new buildings, check the completed surroundings, lifts, cooling and actual beach walk; sea views do not guarantee central access.",
+        "For a first visit, a walkable base near the old centre and boulevard may be more useful than a distant sea-view apartment. A kitchen helps on a longer stay; reception, luggage storage and an easy arrival can matter more on a short break. Consider what the neighbourhood offers on a rainy evening too."
+       ],
+       "heading": "Where to stay in Batumi",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Adjarian khachapuri is a substantial meal with cheese, egg and butter. Vary it with seafood, vegetable-walnut plates and Georgian breads; sharing can be more comfortable than ordering a large portion each.",
+        "Adjarian khachapuri is substantial, with cheese, egg and butter, rather than a small snack. Sharing it or adding a lighter vegetable dish makes a comfortable balance. A Georgian dinner after a seaside day is one of Batumi’s pleasures; you need not travel across town for a different restaurant every evening."
+       ],
+       "heading": "What to eat in Batumi",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "Early summer and September combine walking with the coast, but rain is possible in different seasons. Beaches are often pebbly: check flags, waves and lifeguard information rather than equating sunshine with safe swimming.",
+        "Seafront hotels and view-led apartments may cost more in summer. Central walks reduce transfer spending; budget the botanical-garden return trip and boat extras separately from accommodation."
+       ],
+       "heading": "Batumi: weather and budget planning",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Continue by train to Tbilisi for a city leg. Kazbegi is a longer mountain extension planned via Tbilisi, not a nearby Batumi outing; check conditions and return transport even for local nature trips."
+       ],
+       "heading": "Trips beyond Batumi",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Explore Batumi’s boulevard, old town and botanical garden with areas to stay, transport tips, Adjarian food, beach advice and a 3-day itinerary.",
+     "seoTitle": "Batumi Travel Guide: Boulevard, Gardens and Where to Stay",
+     "sources": [
+      {
+       "name": "Georgia Travel — official tourism",
+       "url": "https://georgia.travel/old-batumi"
+      },
+      {
+       "name": "Georgia Travel — Batumi Botanical Garden",
+       "url": "https://georgia.travel/batumi-botanical-garden"
+      },
+      {
+       "name": "Georgian Railway — passenger connections",
+       "url": "https://www.railway.ge/en/"
+      }
+     ],
+     "volatileNote": "Admission prices, services and opening hours can change. Check the official sources below before booking."
+    },
+    "es": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Kutaisi St / Junto a la mezquita Orta",
+        "category": "halal",
+        "cuisine": "Parrilla halal turca y georgiana",
+        "description": "Restaurante halal consolidado junto a la mezquita Orta de Batumi, con sopas caseras, carnes al horno y platos turco-georgianos.",
+        "lastVerified": "2026-10-06",
+        "name": "Karabak Halal Restaurant",
+        "price": "Ekonomik",
+        "verification": {
+         "note": "Las carnes utilizadas tienen certificación halal; local sin alcohol.",
+         "sourceName": "Departamento de Turismo de Ayaria — Guía de Batumi",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://gobatumi.com/en",
+         "status": "certified-halal"
+        },
+        "why": "La dirección más fiable de Batumi para disfrutar de carnes halal frescas y certificadas junto a la mezquita histórica."
+       }
+      ],
+      "researchNote": "El khachapuri de Ayaria lleva abundante queso y huevo; los veganos pueden pedir opciones con setas o alubias.",
+      "vegan": [
+       {
+        "area": "Casco antiguo de Batumi / Memed Abashidze Ave",
+        "category": "vegan",
+        "cuisine": "Cocina vegetal georgiana y del mar Negro",
+        "description": "Restaurante clásico en el casco antiguo de Batumi, con pkhali de espinacas y nueces, cazuelas de setas en barro y platos vegetales locales.",
+        "lastVerified": "2026-10-06",
+        "name": "Privet iz Batuma",
+        "price": "Orta",
+        "verification": {
+         "note": "Los mezes de verduras y nueces no llevan lácteos; indica tu preferencia vegana al pedir.",
+         "sourceName": "Directorio actualizado de restaurantes veganos de HappyCow",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/privet-iz-batuma-batumi-78140",
+         "status": "vegan-options"
+        },
+        "why": "Uno de los locales tradicionales más apreciados de la ciudad para saborear platos georgianos sin carne en el casco antiguo."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Dos días para centro, bulevar y jardín; tres o cuatro con playa y margen por tiempo.",
+       "q": "¿Cuántos días dedicar a Batumi?"
+      },
+      {
+       "a": "Los cantos rodados son habituales en la costa urbana. Comprueba suelo de acceso y oleaje de la playa elegida.",
+       "q": "¿Las playas de Batumi son de arena?"
+      },
+      {
+       "a": "Centro antiguo y bulevar equilibran transporte y comidas en la primera visita; en Nuevo Bulevar revisa bien la conexión al centro.",
+       "q": "¿Dónde alojarse en Batumi?"
+      }
+     ],
+     "h1": "Qué ver en Batumi: bulevar, jardín botánico y playa",
+     "itinerary": [
+      {
+       "afternoon": "Parques del bulevar y costa",
+       "evening": "Cena de cocina de Adjaria",
+       "morning": "Batumi antiguo y plazas",
+       "title": "Día 1 — Casco antiguo y bulevar"
+      },
+      {
+       "afternoon": "Paseo por jardín y regreso",
+       "evening": "Cena breve en el centro",
+       "morning": "Traslado al jardín y sendero principal",
+       "title": "Día 2 — Jardín botánico"
+      },
+      {
+       "afternoon": "Museo o café si llueve",
+       "evening": "Paseo costero al atardecer",
+       "morning": "Playa si las condiciones lo permiten",
+       "title": "Día 3 — Costa flexible"
+      }
+     ],
+     "lede": "En Batumi, pasear por el bulevar, tomar café en las calles antiguas y volver al mar sale de forma natural. El tiempo del mar Negro puede cambiar los planes; disfrútala como una escapada costera con jardines y vida urbana, además de playa.",
+     "places": [
+      {
+       "area": "Costa central",
+       "known": "Parques y paseo marítimo",
+       "name": "Bulevar de Batumi",
+       "tip": "Respeta zonas peatonales y ciclistas.",
+       "why": "Para conocer el ritmo al aire libre."
+      },
+      {
+       "area": "Centro antiguo y zona de Piazza",
+       "known": "Plazas y calles pequeñas",
+       "name": "Batumi antiguo",
+       "tip": "Combina el paseo con una comida cotidiana.",
+       "why": "Para contrastar con las torres costeras modernas."
+      },
+      {
+       "area": "Mtsvane Kontskhi",
+       "known": "Jardines en ladera y vistas al mar",
+       "name": "Jardín Botánico de Batumi",
+       "tip": "Coordina entrada y salida con transporte de regreso.",
+       "why": "Para añadir naturaleza y jardines al viaje costero."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Consejos para visitar Batumi",
+     "practicalTips": [
+      {
+       "body": "No hace falta recorrer todo el bulevar en un día; céntrate en tramos cercanos.",
+       "title": "Un bulevar largo"
+      },
+      {
+       "body": "Coordina de antemano puertas de entrada y salida con el regreso.",
+       "title": "Puertas del jardín"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Duración recomendada",
+       "value": "2–3 días completos"
+      },
+      {
+       "label": "Mejor época",
+       "value": "Mayo–junio y septiembre"
+      },
+      {
+       "label": "Cómo moverse",
+       "value": "A pie y traslado aparte al jardín"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Qué ver en Tiflis: casco antiguo, baños y ruta de 3 días",
+       "city": "Tiflis",
+       "description": "Baños de azufre, casco antiguo, Sololaki y Mtatsminda para conocer la capital por barrios."
+      },
+      {
+       "anchor": "Kazbegi: qué ver en Stepantsminda y ruta a Gergeti",
+       "city": "Kazbegi",
+       "description": "Base en Stepantsminda para Gergeti, vistas y caminatas del Cáucaso con margen por el tiempo."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "Para dos o tres días completos, empieza por bulevar y centro antiguo, dedica un bloque al jardín botánico y deja flexible la jornada costera. El jardín requiere tiempo por distancias y pendientes. Aprovecha los momentos despejados al aire libre y guarda comidas o visitas interiores para la lluvia.",
+        "Si vienes por el mar, cuenta con guijarros en vez de una gran playa de arena. Calzado cómodo y un lugar agradable para descansar después ayudan. Si priorizas la ciudad, intercala baños entre paseos sin dedicarles obligatoriamente un día entero. Batumi permite combinar ambos viajes desde una misma base.",
+        "El día de llegada desde Tiflis no equivale a una jornada completa de visitas. Un paseo breve y una cena pueden bastar tras el viaje. Deja el jardín o una ruta larga para la mañana siguiente. Disfrutar Batumi también implica aceptar el tiempo cambiante del mar Negro sin exigir cielo azul constante."
+       ],
+       "heading": "Combinar ciudad y mar en Batumi",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Batumi International (BUS) y estación ferroviaria son llegadas diferentes. Desde Tiflis en tren, añade el traslado al hotel. Centro antiguo y Nuevo Bulevar implican distintos paseos y conexiones.",
+        "Centro antiguo y tramos del bulevar se recorren a pie; no toda la costa es un paseo corto. El jardín botánico necesita ida y vuelta propias. Reserva museo o café para días lluviosos."
+       ],
+       "heading": "Cómo llegar a Batumi y moverse",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Dedica un día a casco antiguo y bulevar, otro al jardín botánico. Un tercero para playa evita terminar una larga caminata del jardín con prisas."
+       ],
+       "heading": "Qué ver en Batumi",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Haz circuitos cortos entre parques, costa y esculturas, sin recorrer todo el bulevar de una vez. En bicicleta respeta peatones y tráfico; el viento costero modifica el paseo."
+         ],
+         "heading": "Bulevar de Batumi"
+        },
+        {
+         "body": [
+          "Une Piazza y Europe Square con paseos breves. Los edificios no pertenecen todos a la misma época: observa fachadas antiguas y nuevas. Panaderías y cafés laterales dan otro ritmo al día."
+         ],
+         "heading": "Batumi antiguo"
+        },
+        {
+         "body": [
+          "El jardín es amplio y en pendiente: un medio día largo permite verlo con calma. Coordina puertas y senderos con transporte; usa calzado adecuado tras lluvia y sigue más allá del primer mirador."
+         ],
+         "heading": "Jardín Botánico de Batumi"
+        }
+       ]
+      },
+      {
+       "body": [
+        "Conoce el Batumi antiguo paseando por la plaza de Europa y sus calles, con tiempo para un café. En el bulevar, recorre un tramo por la mañana y otro al atardecer en lugar de intentar terminarlo entero. La misma costa cambia con la luz y el movimiento del día.",
+        "En el jardín botánico, el paseo puede ser el objetivo, sin perseguir una única foto perfecta. Piensa juntos entrada, salida, descansos y regreso. Después, una cena sencilla en el centro antiguo completa mejor el día de verde y mar que otra excursión larga."
+       ],
+       "heading": "Calles antiguas, plazas y tiempo en el bulevar",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Centro antiguo conviene para restaurantes y paseos; bulevar para costa; Nuevo Bulevar para hoteles modernos. En pisos nuevos baratos revisa entorno terminado, ascensor, aire y distancia real a playa.",
+        "En una primera visita, una base cerca del centro antiguo y el bulevar puede servir más que un apartamento alejado con vistas. Para estancias largas ayuda una cocina; en una escapada breve pueden importar más recepción, consigna y llegada sencilla. Piensa también qué harás cerca si llueve por la noche."
+       ],
+       "heading": "Dónde alojarse en Batumi",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "El khachapuri de Adjaria es contundente, con queso, huevo y mantequilla. Alterna con pescado, verduras con nueces y panes georgianos; compartir puede ser más cómodo que pedir una pieza grande por persona.",
+        "El khachapuri adjariano, con queso, huevo y mantequilla, es una comida contundente. Compartirlo o añadir verduras ligeras ayuda a equilibrar. Una mesa georgiana después del mar es parte del encanto de Batumi; no hace falta cruzar la ciudad buscando un restaurante distinto cada noche."
+       ],
+       "heading": "Qué comer en Batumi",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "Comienzo de verano y septiembre combinan paseos y costa, con lluvia posible en distintas épocas. Muchas playas tienen cantos rodados: consulta banderas, oleaje y socorrismo; sol no equivale a baño seguro.",
+        "En verano pueden subir hoteles y apartamentos con vistas. Caminar desde el centro reduce traslados; presupuesta jardín botánico y extras de barco aparte del alojamiento."
+       ],
+       "heading": "Batumi: cuándo ir y presupuesto",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Continúa en tren a Tiflis para la etapa urbana. Kazbegi es una prolongación larga de montaña vía Tiflis, no una excursión cercana a Batumi. Revisa tiempo y regreso también en salidas locales."
+       ],
+       "heading": "Excursiones desde Batumi",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Qué ver en Batumi: bulevar, casco antiguo y jardín botánico, con alojamiento, transporte, cocina de Adjaria, consejos de playa y ruta de 3 días.",
+     "seoTitle": "Qué ver en Batumi: bulevar, jardín botánico y playa",
+     "sources": [
+      {
+       "name": "Georgia Travel — turismo oficial",
+       "url": "https://georgia.travel/old-batumi"
+      },
+      {
+       "name": "Georgia Travel — Jardín Botánico de Batumi",
+       "url": "https://georgia.travel/batumi-botanical-garden"
+      },
+      {
+       "name": "Georgian Railway — conexiones de pasajeros",
+       "url": "https://www.railway.ge/en/"
+      }
+     ],
+     "volatileNote": "Los precios, los servicios y los horarios pueden cambiar. Consulta las fuentes oficiales indicadas antes de reservar."
+    },
+    "tr": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Kutaisi St / Orta Camii yanı",
+        "category": "halal",
+        "cuisine": "Türk ve Gürcü helal ızgaraları",
+        "description": "Batum'un tarihi Müslüman mahallesinde Orta Camii'nin hemen bitişiğinde helal etli çorbalar, tandır kebabı ve Türk-Gürcü lezzetleri.",
+        "lastVerified": "2026-10-06",
+        "name": "Karabak Halal Restaurant",
+        "price": "Ekonomik",
+        "verification": {
+         "note": "Mutfakta kullanılan etler helal sertifikalıdır; alkolsüz işletmedir.",
+         "sourceName": "Acara Turizm Departmanı — Batum Rehberi",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://gobatumi.com/en",
+         "status": "certified-halal"
+        },
+        "why": "Orta Camii sokağında taze, temiz ve helal sertifikalı et yemekleri arayanlar için Batum'daki en güvenilir merkezdir."
+       }
+      ],
+      "researchNote": "Batum'da Acar haçapurisi bol peynir ve yumurta içerir; veganlar mantarlı veya fasulyeli khachapuri alternatiflerini sorabilir.",
+      "vegan": [
+       {
+        "area": "Eski Batum / Memed Abashidze Ave",
+        "category": "vegan",
+        "cuisine": "Gürcü ve Karadeniz sebze mutfağı",
+        "description": "Tarihi Batum caddesinde taze cevizli ıspanak ezmesi (pkhali), güveçte mantarlı lobio ve Karadeniz otlarıyla hazırlanan zengin vejetaryen menüler.",
+        "lastVerified": "2026-10-06",
+        "name": "Privet iz Batuma",
+        "price": "Orta",
+        "verification": {
+         "note": "Geniş cevizli sebze mezeleri süt ve peynir içermez; sipariş esnasında vegan tercihinizi belirtin.",
+         "sourceName": "HappyCow güncel vegan restoran dizini",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/privet-iz-batuma-batumi-78140",
+         "status": "vegan-options"
+        },
+        "why": "Tarihi Batum atmosferinde etsiz yerel Gürcü mutfağını zengin çeşitlerle tatmak için kentin en sevilen geleneksel lokantalarındandır."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Eski merkez, bulvar ve bahçe için iki gün; plaj ve hava esnekliği için üç veya dört gün.",
+       "q": "Batum kaç günde gezilir?"
+      },
+      {
+       "a": "Şehir kıyısında çakıllı plajlar yaygındır. Otelin veya seçtiğiniz plajın giriş zeminini ve dalga durumunu ayrıca kontrol edin.",
+       "q": "Batum plajı kumlu mu?"
+      },
+      {
+       "a": "İlk gezi için eski merkez–bulvar çevresi ulaşım ve yemeği dengeler; Yeni Bulvar’da merkeze erişimi özellikle kontrol edin.",
+       "q": "Batum’da nerede kalmalı?"
+      }
+     ],
+     "h1": "Batum Gezi Rehberi: Bulvar, Botanik Bahçesi ve Sahil",
+     "itinerary": [
+      {
+       "afternoon": "Bulvar parkları ve sahil",
+       "evening": "Acar mutfağıyla akşam",
+       "morning": "Eski Batum ve meydanlar",
+       "title": "1. Gün — Eski şehir ve bulvar"
+      },
+      {
+       "afternoon": "Bahçe yürüyüşü ve dönüş",
+       "evening": "Merkezde kısa yemek molası",
+       "morning": "Bahçeye transfer ve ana parkur",
+       "title": "2. Gün — Botanik bahçesi"
+      },
+      {
+       "afternoon": "Yağışta müze veya kafe",
+       "evening": "Kıyıda gün batımı yürüyüşü",
+       "morning": "Koşullar uygunsa plaj",
+       "title": "3. Gün — Esnek kıyı"
+      }
+     ],
+     "lede": "Batum’da güne bulvarda yürüyerek başlayıp eski sokaklarda kahveye oturmak, sonra deniz kenarına dönmek çok doğal geliyor. Karadeniz’in havası planı biraz değiştirebilir; bu yüzden burayı yalnız plaj tatili değil, yeşili ve şehir hayatı olan rahat bir kıyı kaçamağı gibi düşünmek güzel.",
+     "places": [
+      {
+       "area": "Merkez sahili",
+       "known": "Park ve kıyı yürüyüşü",
+       "name": "Batum Bulvarı",
+       "tip": "Bisiklet ve yaya alanlarını ayırın.",
+       "why": "Şehrin açık hava ritmini görmek için."
+      },
+      {
+       "area": "Eski merkez ve Piazza çevresi",
+       "known": "Meydanlar ve küçük sokaklar",
+       "name": "Eski Batum",
+       "tip": "Mahalle yürüyüşünü gündelik yemek molasıyla birleştirin.",
+       "why": "Modern sahil kulelerinin ötesindeki şehir dokusu için."
+      },
+      {
+       "area": "Mtsvane Kontskhi",
+       "known": "Yamaç bahçesi ve deniz manzarası",
+       "name": "Batum Botanik Bahçesi",
+       "tip": "Giriş ve çıkış kapısını dönüş ulaşımıyla eşleştirin.",
+       "why": "Kıyı gezisine bitki ve doğa günü eklemek için."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Batum için pratik ipuçları",
+     "practicalTips": [
+      {
+       "body": "Bulvarın tamamını tek gün yürümek zorunda değilsiniz; yakın bölümlere odaklanın.",
+       "title": "Uzun bulvar"
+      },
+      {
+       "body": "Girdiğiniz ve çıktığınız kapıyı dönüş aracıyla önceden eşleştirin.",
+       "title": "Bahçe kapıları"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Önerilen süre",
+       "value": "2–3 tam gün"
+      },
+      {
+       "label": "En uygun dönem",
+       "value": "Mayıs–Haziran ve Eylül"
+      },
+      {
+       "label": "Ulaşım yaklaşımı",
+       "value": "Yürüyüş ve bahçe için ayrı bağlantı"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Tiflis Gezi Rehberi: Eski Şehir, Hamamlar ve 3 Günlük Rota",
+       "city": "Tiflis",
+       "description": "Abanotubani hamamları, eski şehir, Sololaki ve Mtatsminda arasında mahalle odaklı başkent gezisi."
+      },
+      {
+       "anchor": "Kazbegi Gezi Rehberi: Stepantsminda ve Gergeti Rotası",
+       "city": "Kazbegi",
+       "description": "Stepantsminda merkezli Gergeti, dağ manzarası ve hava payı bırakan Kafkas yürüyüş rotası."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "İki veya üç tam gün için bir bulvar ve eski merkez günü, bir botanik bahçe günü, bir de serbest kıyı günü rahat bir çerçeve. Bahçeyi merkez yürüyüşünün sonuna küçük bir ek gibi koymayın; orada mesafe ve eğim ayrı zaman ister. Hava güzel olduğunda açık alanları öne alıp yağmurlu saatlere yemek veya kapalı bir ziyaret bırakmak daha esnek bir tatil kurar.",
+        "Deniz için geliyorsanız çakıllı kıyının kumlu bir plajdan farklı olduğunu baştan kabul edin. Rahat deniz ayakkabısı ve yüzme sonrası oturacak bir yer küçük ama değerli ayrıntılar. Şehir gezisi önceliğinizse plaj saatlerini mecburi bir tam gün yerine yürüyüşün arasında düşünün. Batum’un güzel tarafı iki tür tatili aynı üs üzerinden birleştirebilmek.",
+        "Tiflis’ten geliş gününü tam gezi günü saymayın. Yolculuktan sonra bulvarda kısa bir yürüyüş ve yemek çoğu zaman yeterli. Bir sonraki sabaha bahçeyi veya daha uzun yürüyüşü bırakırsanız tatil koşturarak başlamaz. Batum’a sırf mavi gökyüzü garantisi için gelmek yerine Karadeniz’in değişken havasına alan açmak beklentiyi daha doğru kurar."
+       ],
+       "heading": "Batum’da şehir ve deniz günlerini dengelemek",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Batumi International (BUS) ile tren istasyonu farklı giriş noktalarıdır. Tiflis’ten trenle geliyorsanız istasyondan otele son bağlantıyı planlayın. Otel eski merkezde mi Yeni Bulvar’da mı sorusu transfer ve akşam yürüyüşünü değiştirir.",
+        "Eski merkezle bulvarın seçilmiş kısmı yürünebilir; bütün kıyıyı tek kısa yürüyüş sanmayın. Botanik bahçesi merkezin dışındadır ve ayrı gidiş-dönüş gerektirir. Yağmurlu günde uzun sahil programı yerine müze veya kafe alternatifini kullanın."
+       ],
+       "heading": "Batum ulaşım rehberi",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Bir günü eski şehir ve bulvara, bir günü botanik bahçesine ayırın. Plaj için üçüncü gün bırakmak yoğun bir bahçe yürüyüşünün ardından denizi aceleye getirmemenizi sağlar."
+       ],
+       "heading": "Batum gezilecek yerler",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Bulvarı tek uçtan diğerine yürümek yerine merkezdeki parklar, kıyı ve heykeller etrafında kısa halkalar kurun. Bisiklet kiralıyorsanız trafik ve yaya alanına dikkat edin. Deniz kenarında rüzgâr, yürüyüş planının süresini etkileyebilir."
+         ],
+         "heading": "Batum Bulvarı"
+        },
+        {
+         "body": [
+          "Piazza ve Avrupa Meydanı çevresindeki sokakları kısa yürüyüşlerle bağlayın. Binaların hepsi aynı dönemden değildir; eski ve yeni cepheleri birlikte okuyun. Yan sokaklardaki fırın ve küçük kafeler sahil oteli temposundan farklı bir mola sunar."
+         ],
+         "heading": "Eski Batum"
+        },
+        {
+         "body": [
+          "Bahçe geniş ve eğimlidir; yarım günden fazla zaman ayırmak rahat keşif sağlar. Kapı ve parkur seçimini ulaşımınızla eşleştirin. Yağıştan sonra kaygan zemin ve uzun iniş-çıkış için uygun ayakkabı giyin; yalnız ilk manzara noktasında bitirmeyin."
+         ],
+         "heading": "Batum Botanik Bahçesi"
+        }
+       ]
+      },
+      {
+       "body": [
+        "Eski Batum’u Avrupa Meydanı ve çevresindeki sokaklar üzerinden sakin bir yürüyüşle tanıyabilirsiniz. Cephelere baktıktan sonra bir kahveye oturmak şehrin gündelik ritmini gösterir. Bulvarın tamamını bitirmeye çalışmak yerine bir bölümünü sabah, başka bir bölümünü akşam gezmek daha keyifli. Aynı kıyı farklı saatlerde başka bir yüz gösteriyor.",
+        "Botanik bahçede önceliğiniz bir “en iyi fotoğraf” noktası değil, yürüyüşün kendisi olabilir. Giriş ve çıkışınızı, dinlenme molalarını ve merkeze dönüşü aynı plan içinde düşünün. Bahçe gününe yeni bir uzun gezi eklemek yerine akşam eski merkezde sade bir yemek bırakmak, yeşil ve denizle geçirilen günü daha güzel tamamlar."
+       ],
+       "heading": "Eski sokaklar, meydanlar ve bulvarda boş zaman",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Eski merkez yürüyüş ve restoran, bulvar çevresi kıyı erişimi, Yeni Bulvar modern oteller için uygundur. Yeni yapıdaki ucuz dairede tamamlanmış çevre, asansör, klima ve plaja gerçek yürüyüşü kontrol edin. Kıyı manzarası şehir merkezine yakınlık garantisi değildir.",
+        "İlk ziyarette eski merkeze ve bulvara yürüyebileceğiniz bir üs, uzaktaki manzaralı daireden daha kullanışlı olabilir. Uzun konaklamada mutfaklı bir daire rahatlık sağlar; kısa kaçamakta resepsiyon, bagaj bırakma ve kolay varış daha değerli olabilir. Otelin denize yakınlığı kadar yağmurlu bir akşamda çevresinde ne yapacağınızı da düşünün."
+       ],
+       "heading": "Batum nerede kalınır?",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Acar khachapuri’si peynir, yumurta ve tereyağıyla doyurucu bir ana öğündür. Deniz ürünleri, sebze-ceviz tabakları ve Gürcü hamur işleriyle çeşitlendirin. Çok aç olmadığınızda paylaşmak, tek kişiye büyük porsiyon almaktan daha rahat olabilir.",
+        "Acar khachapuri’sini küçük bir ara öğün sanarak sipariş etmeyin; peynir, yumurta ve tereyağıyla güçlü bir öğün. Yanına hafif bir sebze tabağı eklemek veya paylaşmak güzel denge kurar. Deniz kenarında geçen günün ardından Gürcü sofrasına oturmak Batum’un keyifli taraflarından biri; her akşam farklı ve uzak bir restoran aramak gerekmiyor."
+       ],
+       "heading": "Batum ne yenir?",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "İlk yaz ve eylül yürüyüşle kıyıyı birleştirir; Batum’da yağış yılın farklı dönemlerinde görülebilir. Deniz çoğu yerde çakıllıdır. Bayrak, dalga ve cankurtaran bilgisini yerinde kontrol edin; güneşli görünüm güvenli yüzme garantisi değildir.",
+        "Yazın sahil oteli ve manzaralı daire fiyatları artabilir. Merkezde günlük yürüme, pahalı transferleri azaltır; botanik bahçesi gidiş-dönüşünü ve tekne gibi ekleri oda fiyatından ayrı hesaplayın."
+       ],
+       "heading": "Batum için mevsim ve bütçe planı",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Tiflis’e trenle devam ederek şehir ayağını kurabilirsiniz. Kazbegi ise Tiflis üzerinden planlanacak uzun dağ devamıdır; Batum çevresindeki kısa gezi gibi sunulmaz. Yakın doğa gezisinde de hava ve dönüş bağlantısını kontrol edin."
+       ],
+       "heading": "Batum çevresinde rota önerileri",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Batum gezi rehberi: sahil bulvarı, eski şehir ve botanik bahçesi; nerede kalınır, ulaşım, Acar yemekleri, plaj koşulları ve 3 günlük rota.",
+     "seoTitle": "Batum Gezi Rehberi: Bulvar, Botanik Bahçesi ve Sahil",
+     "sources": [
+      {
+       "name": "Georgia Travel — resmî turizm",
+       "url": "https://georgia.travel/old-batumi"
+      },
+      {
+       "name": "Georgia Travel — Batum Botanik Bahçesi",
+       "url": "https://georgia.travel/batumi-botanical-garden"
+      },
+      {
+       "name": "Georgian Railway — yolcu bağlantıları",
+       "url": "https://www.railway.ge/en/"
+      }
+     ],
+     "volatileNote": "Bilet ücretleri, seferler ve ziyaret saatleri değişebilir. Rezervasyon öncesinde aşağıdaki resmî kaynaklardan güncel bilgiyi kontrol edin."
+    }
+   }
+  },
+  {
+   "citySlug": "kazbegi",
+   "completeLangs": [
+    "en",
+    "es"
+   ],
+   "reviewed": true,
+   "translations": {
+    "en": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Georgian Military Highway",
+        "category": "halal",
+        "cuisine": "Caucasian halal chicken and stews",
+        "description": "Convenient halal stop along the Georgian Military Highway in Kazbegi, offering verified halal chicken, beef stews and hot soups.",
+        "lastVerified": "2026-10-06",
+        "name": "Kazbegi Halal Corner",
+        "price": "Orta",
+        "verification": {
+         "note": "Owner states halal meat usage; verify current sourcing on site due to mountain logistics.",
+         "sourceName": "Administration of All Muslims of Georgia Guide",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://georgia.travel/en",
+         "status": "verification-recommended"
+        },
+        "why": "A dependable address in the Kazbegi mountains providing an explicit halal declaration and fresh hot meals."
+       }
+      ],
+      "researchNote": "In Kazbegi village, mushroom khinkali and claypot lobio are reliable vegan staples; ask for halal confirmations in advance for meat.",
+      "vegan": [
+       {
+        "area": "Stepantsminda Centre",
+        "category": "vegan",
+        "cuisine": "Mountain cooking and mushroom khinkali",
+        "description": "Scenic wooden mountain tavern in Stepantsminda serving handmade mushroom and potato khinkali, hot lobio bean pots and village salads.",
+        "lastVerified": "2026-10-06",
+        "name": "Cozy Corner Restaurant",
+        "price": "Ekonomik",
+        "verification": {
+         "note": "Mushroom and potato khinkali are made with 100% plant-based fillings; cooking without butter can be confirmed.",
+         "sourceName": "HappyCow's current vegan restaurant directory",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/cozy-corner-kazbegi-143210",
+         "status": "vegan-options"
+        },
+        "why": "The top mountain spot in Stepantsminda to refuel with steaming mushroom khinkali and bean stew after hiking to Gergeti."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "This guide uses Kazbegi for a mountain stay based in Stepantsminda. Use the town name as well when arranging hotels and transfers.",
+       "q": "Are Kazbegi and Stepantsminda the same place?"
+      },
+      {
+       "a": "Two nights for Gergeti and weather flexibility, or three with a farther valley walk.",
+       "q": "How many nights do you need in Kazbegi?"
+      },
+      {
+       "a": "Access depends on roads and weather, particularly in winter and shoulder seasons; confirm current local information.",
+       "q": "Can you visit Juta in every season?"
+      }
+     ],
+     "h1": "Kazbegi Travel Guide: Stepantsminda, Gergeti and Walks",
+     "itinerary": [
+      {
+       "afternoon": "Check-in and short town walk",
+       "evening": "Check next day’s roads and weather",
+       "morning": "Road trip from Tbilisi with weather buffer",
+       "title": "Day 1 — Arrival and town"
+      },
+      {
+       "afternoon": "Sno or rest according to your energy",
+       "evening": "A warm meal in town",
+       "morning": "Gergeti visit if visibility allows",
+       "title": "Day 2 — Gergeti"
+      },
+      {
+       "afternoon": "Return to Tbilisi according to road conditions",
+       "evening": "Overnight in Tbilisi",
+       "morning": "Weather backup or a pre-planned Juta trip",
+       "title": "Day 3 — Backup day or return"
+      }
+     ],
+     "lede": "Opening the curtains to the mountains is a fine way to start a Kazbegi morning. Two nights in Stepantsminda give you time for Gergeti, a valley walk and a little patience when clouds hide the view. Come with some spare time rather than a checklist that depends on perfect weather.",
+     "places": [
+      {
+       "area": "Above Stepantsminda",
+       "known": "Mountain views and church",
+       "name": "Gergeti Trinity Church",
+       "tip": "Assess walking and vehicle access against current conditions.",
+       "why": "For the town and mountain landscape together."
+      },
+      {
+       "area": "Around Stepantsminda",
+       "known": "Valley and village views",
+       "name": "Sno Valley",
+       "tip": "Confirm waiting and return arrangements for a private transfer.",
+       "why": "For a quieter outing beyond the main landmark."
+      },
+      {
+       "area": "Mountain valley",
+       "known": "Mountain walking base",
+       "name": "Juta area",
+       "tip": "Confirm road access and return time locally.",
+       "why": "For a longer nature day when access and weather allow."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Practical tips for Kazbegi",
+     "practicalTips": [
+      {
+       "body": "A Gergeti walk and a Kazbek climb require different preparation.",
+       "title": "A summit is a different activity"
+      },
+      {
+       "body": "Avoid a tight connection from the mountain road to an international flight.",
+       "title": "Keep the final night as a buffer"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Recommended stay",
+       "value": "2–3 nights"
+      },
+      {
+       "label": "Best time to visit",
+       "value": "June–September, weather permitting"
+      },
+      {
+       "label": "Getting around",
+       "value": "Road transfers and selected walks"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Tbilisi Travel Guide: Old Town, Baths and a 3-Day Route",
+       "city": "Tiflis",
+       "description": "Sulfur baths, Old Tbilisi, Sololaki and Mtatsminda make a neighbourhood-focused capital visit."
+      },
+      {
+       "anchor": "Batumi Travel Guide: Boulevard, Gardens and Where to Stay",
+       "city": "Batum",
+       "description": "Batumi Boulevard, the old town, botanical garden and Adjarian cooking on the Black Sea coast."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "The journey from Tbilisi and stops along the way already occupy part of arrival day. Settle in and take a short walk that evening. Make Gergeti the main visit the next day and keep departure day light. Add another day for Juta or a longer valley walk instead of stacking everything into one schedule.",
+        "Walking up to Gergeti and driving up for a shorter visit are different activities. A hike needs room for the return, gradients and changing weather. Going by vehicle can leave more energy for enjoying the surroundings. Choose the pace that suits you rather than feeling that only one approach makes a proper visit.",
+        "A clear mountain morning does not guarantee a clear afternoon. Gergeti, Sno and Juta should not share a crowded day merely because they look close on a map. One main walk and a shorter stop may be enough. When conditions are unsuitable, staying in the village for a warm meal is a reasonable change of plan."
+       ],
+       "heading": "Two nights in Kazbegi: leave room for the weather",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Stepantsminda is reached by road from Tbilisi, without a city rail connection. For minibus or private transfers, check departure point, luggage, stops and road status. Spend the final pre-flight night in Tbilisi as a buffer against disruption.",
+        "Short town walks are straightforward, but Gergeti and distant valleys require separate assessment of elevation, road access and fitness. Juta and Sno are not town neighbourhoods; confirm access and return transport before remote walks."
+       ],
+       "heading": "Getting to and around Kazbegi",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Prioritise Gergeti in clear visibility and choose Sno or Juta for another day based on conditions and ability. One good walk and time in town often beat adding more valleys."
+       ],
+       "heading": "Things to do in Kazbegi",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Walking and driving to Gergeti offer different experiences. Elevation and footing matter more than map distance. Visit the church quietly in suitable clothing; mountain views are not guaranteed when cloud covers the summit."
+         ],
+         "heading": "Gergeti Trinity Church"
+        },
+        {
+         "body": [
+          "Treat Sno as a shorter valley and village outing. If following Gergeti on the same day, leave energy and weather margin. Respect private land and avoid unsafe roadside stops for photographs."
+         ],
+         "heading": "Sno Valley"
+        },
+        {
+         "body": [
+          "Check Juta’s current road status, especially in winter and shoulder seasons. Choose a walk matching your experience and carry water, layers and offline navigation. A scenic valley walk is not equivalent to climbing a high summit."
+         ],
+         "heading": "Juta area"
+        }
+       ]
+      },
+      {
+       "body": [
+        "Stepantsminda need not be explored like a large city. A viewpoint, a local meal and a quiet evening at your accommodation can make a satisfying day. Waiting for clouds to move away from Gergeti is part of the experience. Without such pauses, a mountain trip can become scenery glimpsed mainly through a car window.",
+        "A shorter outing around Sno can give you a feel for the valley; choose Juta when you want time for the walk itself. Respect village life and private spaces in both. Measure a nature day differently from a city itinerary: fewer destinations and longer in one valley can be a better way to enjoy the area."
+       ],
+       "heading": "A slower day around Stepantsminda",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Central Stepantsminda suits dining and transfers; the Gergeti side offers views with more slopes. Check heating, vehicle access and flexible cancellation as carefully as the view. A remote scenic hotel is not automatically closer to every walk.",
+        "A mountain-view room is appealing, but access to meals and the centre matters on a two-night stay. Without a car, remote accommodation can require a transfer for every small errand. Heating and comfortable shared areas make a difference on cold or wet days. A practical base improves the whole Kazbegi experience."
+       ],
+       "heading": "Where to stay in Kazbegi",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Khinkali, soups and warm Georgian meals suit the return from a mountain day. Carry food and water for longer walks rather than assuming a restaurant en route; arrange guesthouse meals and dietary needs ahead.",
+        "If your guesthouse offers dinner, arranging it in advance can make the day easier. Coming back to soup and a warm Georgian meal is welcome after hours outside. Prepare food before a longer walk rather than relying on finding somewhere en route, then leave time to enjoy the evening meal without rushing."
+       ],
+       "heading": "What to eat in Kazbegi",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "June to September generally opens more walking options, but no season guarantees weather. Snow, fog and storms affect access. Summit climbing requires specialist skills, equipment and guiding rather than city-tour preparation.",
+        "Private valley transfers and view-led hotels increase costs. Compare vehicle, waiting and guiding inclusions for Gergeti and farther valleys separately, including weather-related cancellation terms."
+       ],
+       "heading": "Kazbegi: weather and budget planning",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Tbilisi provides the cultural and flight connection. Batumi is a separate long coastal leg, not a quick onward hop from the mountains. Avoid forcing a long transfer after a tiring hiking day."
+       ],
+       "heading": "Trips beyond Kazbegi",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Plan Kazbegi from Stepantsminda: Gergeti Church, Sno and Juta, with Tbilisi road transfers, places to stay, mountain walks and seasonal advice.",
+     "seoTitle": "Kazbegi Travel Guide: Stepantsminda, Gergeti and Walks",
+     "sources": [
+      {
+       "name": "Georgia Travel — official tourism",
+       "url": "https://georgia.travel/cities-towns/stepantsminda"
+      },
+      {
+       "name": "Georgian Ministry of Foreign Affairs — tourist insurance",
+       "url": "https://switzerland.mfa.gov.ge/en/news/370174-saqartveloshi-mogzaurobis-msurvelta-sakuradghebod"
+      }
+     ],
+     "volatileNote": "Admission prices, services and opening hours can change. Check the official sources below before booking."
+    },
+    "es": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Carretera militar georgiana",
+        "category": "halal",
+        "cuisine": "Pollo halal del Cáucaso y guisos",
+        "description": "Práctica parada halal en la carretera militar de Kazbegi, con platos de pollo y ternera verificados y sopas reconfortantes.",
+        "lastVerified": "2026-10-06",
+        "name": "Kazbegi Halal Corner",
+        "price": "Orta",
+        "verification": {
+         "note": "El propietario declara el uso de carne halal; conviene confirmar el suministro debido a la logística de montaña.",
+         "sourceName": "Guía de la Administración de Musulmanes de Georgia",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://georgia.travel/en",
+         "status": "verification-recommended"
+        },
+        "why": "Una dirección de confianza en las montañas de Kazbegi que ofrece declaración halal explícita y platos calientes."
+       }
+      ],
+      "researchNote": "En Kazbegi, el khinkali de setas y el lobio en barro son excelentes opciones veganas; para carnes, consulta la opción halal con antelación.",
+      "vegan": [
+       {
+        "area": "Centro de Stepantsminda",
+        "category": "vegan",
+        "cuisine": "Comida de montaña y khinkali de setas",
+        "description": "Taberna de montaña en Stepantsminda con vistas a los picos, que sirve khinkali artesano de setas y patata, y cazuelas de alubias lobio.",
+        "lastVerified": "2026-10-06",
+        "name": "Cozy Corner Restaurant",
+        "price": "Ekonomik",
+        "verification": {
+         "note": "Los khinkali de setas y patata se rellenan exclusivamente con vegetales; se puede pedir cocción sin mantequilla.",
+         "sourceName": "Directorio actualizado de restaurantes veganos de HappyCow",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/cozy-corner-kazbegi-143210",
+         "status": "vegan-options"
+        },
+        "why": "El mejor lugar de montaña en Stepantsminda para reponer fuerzas con khinkali de setas caliente y guiso de alubias tras la ruta a Gergeti."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "La guía usa Kazbegi para una estancia de montaña con base en Stepantsminda. Utiliza también el nombre del pueblo al reservar.",
+       "q": "¿Kazbegi y Stepantsminda son el mismo lugar?"
+      },
+      {
+       "a": "Dos noches para Gergeti y margen por tiempo; tres con caminata en un valle más alejado.",
+       "q": "¿Cuántas noches hacen falta en Kazbegi?"
+      },
+      {
+       "a": "El acceso depende de carretera y tiempo, especialmente en invierno y entre temporadas. Confirma información local actual.",
+       "q": "¿Se puede visitar Juta en cualquier época?"
+      }
+     ],
+     "h1": "Kazbegi: qué ver en Stepantsminda y ruta a Gergeti",
+     "itinerary": [
+      {
+       "afternoon": "Llegada al hotel y paseo breve",
+       "evening": "Revisa carretera y tiempo del día siguiente",
+       "morning": "Carretera desde Tiflis con margen por tiempo",
+       "title": "Día 1 — Llegada y pueblo"
+      },
+      {
+       "afternoon": "Sno o descanso según energía",
+       "evening": "Cena caliente en el pueblo",
+       "morning": "Gergeti si la visibilidad permite",
+       "title": "Día 2 — Gergeti"
+      },
+      {
+       "afternoon": "Regreso a Tiflis según carretera",
+       "evening": "Noche en Tiflis",
+       "morning": "Margen por tiempo o Juta planificada",
+       "title": "Día 3 — Alternativa o regreso"
+      }
+     ],
+     "lede": "Abrir la cortina y mirar las montañas ya es una buena forma de empezar en Kazbegi. Dos noches en Stepantsminda dejan tiempo para Gergeti, un paseo por el valle y esperar cuando las nubes tapan las vistas. Trae algo de tiempo libre, además de planes.",
+     "places": [
+      {
+       "area": "Sobre Stepantsminda",
+       "known": "Vistas de montaña e iglesia",
+       "name": "Iglesia de la Trinidad de Gergeti",
+       "tip": "Valora acceso a pie y en vehículo según condiciones.",
+       "why": "Para contemplar pueblo y paisaje de montaña."
+      },
+      {
+       "area": "Entorno de Stepantsminda",
+       "known": "Vistas de valle y pueblos",
+       "name": "Valle de Sno",
+       "tip": "Confirma espera y regreso del traslado privado.",
+       "why": "Para una salida más tranquila fuera del icono principal."
+      },
+      {
+       "area": "Valle de montaña",
+       "known": "Inicio de caminatas de montaña",
+       "name": "Entorno de Juta",
+       "tip": "Confirma acceso por carretera y regreso localmente.",
+       "why": "Para una jornada de naturaleza si acceso y tiempo lo permiten."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Consejos para visitar Kazbegi",
+     "practicalTips": [
+      {
+       "body": "Caminar a Gergeti y subir al Kazbek requieren preparación distinta.",
+       "title": "Una cima es otra actividad"
+      },
+      {
+       "body": "Evita un enlace ajustado entre regreso de montaña y vuelo internacional.",
+       "title": "Deja margen la última noche"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Duración recomendada",
+       "value": "2–3 noches"
+      },
+      {
+       "label": "Mejor época",
+       "value": "Junio–septiembre, según el tiempo"
+      },
+      {
+       "label": "Cómo moverse",
+       "value": "Traslados por carretera y caminatas elegidas"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Qué ver en Tiflis: casco antiguo, baños y ruta de 3 días",
+       "city": "Tiflis",
+       "description": "Baños de azufre, casco antiguo, Sololaki y Mtatsminda para conocer la capital por barrios."
+      },
+      {
+       "anchor": "Qué ver en Batumi: bulevar, jardín botánico y playa",
+       "city": "Batum",
+       "description": "Bulevar de Batumi, casco antiguo, jardín botánico y cocina de Adjaria junto al mar Negro."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "El trayecto desde Tiflis y sus paradas ya ocupan parte del día de llegada. Esa tarde basta con instalarte y pasear un poco. Dedica el día siguiente a Gergeti y deja ligera la salida. Para Juta o una caminata larga, añade una jornada en lugar de apilar todos los planes.",
+        "Subir andando a Gergeti y llegar en vehículo son actividades distintas. Una caminata requiere contar regreso, desnivel y cambios de tiempo. Ir en coche puede dejar más energía para disfrutar el entorno. Elige el ritmo que te conviene sin pensar que una sola opción hace válida la visita.",
+        "Una mañana despejada no garantiza una tarde igual. No juntes Gergeti, Sno y Juta solo porque parecen cerca en el mapa. Una caminata principal y una parada breve pueden bastar. Si las condiciones no acompañan, quedarse en el pueblo y disfrutar una comida caliente también forma parte del viaje."
+       ],
+       "heading": "Dos noches en Kazbegi: deja margen al tiempo",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Stepantsminda se alcanza por carretera desde Tiflis, sin tren urbano. En minibús o traslado privado comprueba salida, equipaje, paradas y estado vial. Deja la última noche antes del vuelo en Tiflis.",
+        "El pueblo permite paseos cortos; Gergeti y valles alejados requieren valorar desnivel, carretera y nivel físico. Juta y Sno no son barrios: confirma acceso y regreso antes de senderos remotos."
+       ],
+       "heading": "Cómo llegar a Kazbegi y moverse",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Prioriza Gergeti con buena visibilidad y elige Sno o Juta para otra jornada según tiempo y capacidad. Una buena caminata y calma en el pueblo valen más que sumar valles."
+       ],
+       "heading": "Qué ver en Kazbegi",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Subir a Gergeti a pie o en vehículo son experiencias distintas. Desnivel y terreno importan más que distancia del mapa. Visita la iglesia con ropa adecuada y calma; las nubes pueden ocultar la cima."
+         ],
+         "heading": "Iglesia de la Trinidad de Gergeti"
+        },
+        {
+         "body": [
+          "Sno permite una salida más breve de valle y pueblo. Tras Gergeti deja energía y margen por tiempo. Respeta terrenos privados y evita detenerte de forma insegura junto a la carretera."
+         ],
+         "heading": "Valle de Sno"
+        },
+        {
+         "body": [
+          "Consulta la carretera de Juta, especialmente en invierno y entre temporadas. Elige sendero según experiencia y lleva agua, capas y mapa sin conexión. Pasear por un valle no equivale a ascender una gran cima."
+         ],
+         "heading": "Entorno de Juta"
+        }
+       ]
+      },
+      {
+       "body": [
+        "Stepantsminda no necesita recorrerse como una gran ciudad. Un mirador, una comida local y una tarde tranquila en el alojamiento pueden llenar el día. Esperar a que las nubes se aparten de Gergeti también es parte de la experiencia. Sin esas pausas, las montañas pueden quedarse en vistas desde una ventanilla.",
+        "Una salida corta por Sno permite acercarte al valle; elige Juta cuando quieras dedicar tiempo a caminar. Respeta en ambos la vida de los pueblos y los espacios privados. Un día de naturaleza no se mide por paradas: visitar menos lugares y quedarse más en un valle puede ser mejor."
+       ],
+       "heading": "Una pausa entre montañas en Stepantsminda",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "El centro de Stepantsminda facilita comidas y traslados; Gergeti ofrece vistas y cuestas. Comprueba calefacción, acceso y cancelación además del paisaje. Un hotel remoto no está más cerca de todos los senderos.",
+        "Una habitación con vistas atrae, pero para dos noches también importan el centro y las comidas. Sin coche, un alojamiento remoto puede exigir transporte para cualquier cosa. La calefacción y las zonas comunes cuentan en días fríos o lluviosos. Una base cómoda mejora toda la experiencia de Kazbegi."
+       ],
+       "heading": "Dónde alojarse en Kazbegi",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Khinkali, sopas y platos georgianos calientes encajan tras la montaña. En caminatas largas lleva comida y agua sin confiar en un restaurante. Acuerda horarios, porciones y dieta en la casa de huéspedes.",
+        "Si la casa de huéspedes ofrece cena, acordarla antes facilita el día. Volver a una sopa y un plato georgiano caliente se agradece tras horas fuera. Prepara comida para una caminata larga sin confiar en encontrar algo por el camino, y disfruta después la cena sin prisa."
+       ],
+       "heading": "Qué comer en Kazbegi",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "De junio a septiembre suelen ampliarse las opciones de caminata, sin garantía de tiempo. Nieve, niebla y tormentas afectan acceso. Ascender cumbres exige formación, equipo y guía especializada.",
+        "Traslados privados y hoteles con vistas elevan coste. Compara vehículo, espera y guía para Gergeti y valles lejanos por separado, incluidas cancelaciones por tiempo."
+       ],
+       "heading": "Kazbegi: cuándo ir y presupuesto",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Tiflis conecta cultura y vuelo. Batumi es una etapa costera larga aparte, no un salto breve desde la montaña. Evita forzar un traslado largo tras una caminata agotadora."
+       ],
+       "heading": "Excursiones desde Kazbegi",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Organiza Kazbegi desde Stepantsminda: iglesia de Gergeti, Sno y Juta, con acceso desde Tiflis, alojamiento, caminatas y consejos de temporada.",
+     "seoTitle": "Kazbegi: qué ver en Stepantsminda y ruta a Gergeti",
+     "sources": [
+      {
+       "name": "Georgia Travel — turismo oficial",
+       "url": "https://georgia.travel/cities-towns/stepantsminda"
+      },
+      {
+       "name": "Ministerio georgiano de Exteriores — seguro turístico",
+       "url": "https://switzerland.mfa.gov.ge/en/news/370174-saqartveloshi-mogzaurobis-msurvelta-sakuradghebod"
+      }
+     ],
+     "volatileNote": "Los precios, los servicios y los horarios pueden cambiar. Consulta las fuentes oficiales indicadas antes de reservar."
+    },
+    "tr": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Askeri Karayolu üzeri",
+        "category": "halal",
+        "cuisine": "Kafkas helal tavuk ve güveç",
+        "description": "Kafkas dağ rotasında helal sertifikalı tavuk ve dana yemekleri, taze çorbalar ve Müslüman gezginler için güvenilir sıcak mola noktası.",
+        "lastVerified": "2026-10-06",
+        "name": "Kazbegi Halal Corner",
+        "price": "Orta",
+        "verification": {
+         "note": "İşletmeci helal et kullandığını beyan etmektedir; dağ lojistiği nedeniyle güncel tedariki teyit edin.",
+         "sourceName": "Gürcistan Müslümanları İdaresi rehberi",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://georgia.travel/en",
+         "status": "verification-recommended"
+        },
+        "why": "Kazbegi dağlarında sınırlı olan helal seçenekler arasında açık helal beyanı ve taze sıcak yemek sunan güvenilir bir adrestir."
+       }
+      ],
+      "researchNote": "Kazbegi dağ köyünde mantarlı khinkali ve kil güveçte lobio en popüler vegan seçeneklerdir; et yemeklerinde helal beyanını önceden sorun.",
+      "vegan": [
+       {
+        "area": "Stepantsminda Merkezi",
+        "category": "vegan",
+        "cuisine": "Dağ yemekleri ve mantarlı khinkali",
+        "description": "Kazbegi zirvesi manzaralı ahşap terasında el yapımı patatesli ve dağ mantarlı khinkali, kil kapta lobio fasulyesi ve taze turşular.",
+        "lastVerified": "2026-10-06",
+        "name": "Cozy Corner Restaurant",
+        "price": "Ekonomik",
+        "verification": {
+         "note": "Mantarlı ve patatesli khinkaliler tamamen bitkisel harçla hazırlanır; tereyağsız pişirme teyit edilebilir.",
+         "sourceName": "HappyCow güncel vegan restoran dizini",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/cozy-corner-kazbegi-143210",
+         "status": "vegan-options"
+        },
+        "why": "Gergeti yürüyüşü sonrasında dumanı tüten sıcacık mantarlı khinkali ve fasulye güveciyle dağda bitki bazlı beslenmek için 1 numaradır."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Rehberde Kazbegi adıyla Stepantsminda merkezli dağ gezisi kastediliyor. Otel ve transferde kasabanın güncel adını da kullanın.",
+       "q": "Kazbegi ile Stepantsminda aynı yer mi?"
+      },
+      {
+       "a": "Gergeti ve hava esnekliği için iki gece; uzak vadi yürüyüşü eklenecekse üç gece daha rahattır.",
+       "q": "Kazbegi için kaç gece gerekir?"
+      },
+      {
+       "a": "Erişim yol ve hava koşuluna bağlıdır; özellikle kış ve mevsim geçişinde güncel yerel bilgi olmadan garanti vermeyin.",
+       "q": "Juta’ya her mevsim gidilir mi?"
+      }
+     ],
+     "h1": "Kazbegi Gezi Rehberi: Stepantsminda ve Gergeti Rotası",
+     "itinerary": [
+      {
+       "afternoon": "Otele giriş ve kısa kasaba yürüyüşü",
+       "evening": "Ertesi günün yol ve hava kontrolü",
+       "morning": "Tiflis’ten hava payıyla karayolu",
+       "title": "1. Gün — Varış ve kasaba"
+      },
+      {
+       "afternoon": "Kapasitenize göre Sno veya dinlenme",
+       "evening": "Kasabada sıcak yemek",
+       "morning": "Görüş uygunsa Gergeti ziyareti",
+       "title": "2. Gün — Gergeti"
+      },
+      {
+       "afternoon": "Yol koşuluna göre Tiflis’e dönüş",
+       "evening": "Tiflis’te geceleme",
+       "morning": "Hava payı ya da önceden planlı Juta",
+       "title": "3. Gün — Yedek veya dönüş"
+      }
+     ],
+     "lede": "Kazbegi’de sabah perdeyi açıp dağa bakmak bile güne güzel bir başlangıç. Stepantsminda’da iki gece kalınca Gergeti’ye acele etmeden çıkmak, vadide yürümek ve bulutlar manzarayı kapattığında beklemek için zaman oluyor. Buraya yapılacaklar listesinden çok, biraz boş zamanla gelmek iyi geliyor.",
+     "places": [
+      {
+       "area": "Stepantsminda üzeri",
+       "known": "Dağ manzarası ve kilise",
+       "name": "Gergeti Kilisesi",
+       "tip": "Yürüyüş ve araç erişimini güncel koşulla değerlendirin.",
+       "why": "Kasaba ve dağ peyzajını birlikte görmek için."
+      },
+      {
+       "area": "Stepantsminda çevresi",
+       "known": "Vadi ve köy manzarası",
+       "name": "Sno Vadisi",
+       "tip": "Özel transferin bekleme ve dönüş kapsamını sorun.",
+       "why": "Ana simgenin dışında daha sakin çevre gezisi için."
+      },
+      {
+       "area": "Dağ vadisi",
+       "known": "Doğa yürüyüşü başlangıcı",
+       "name": "Juta çevresi",
+       "tip": "Yolun açık olduğunu ve dönüş saatini yerelde teyit edin.",
+       "why": "Hava ve erişim uygunsa daha uzun doğa günü için."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Kazbegi için pratik ipuçları",
+     "practicalTips": [
+      {
+       "body": "Gergeti yürüyüşü ile Kazbek tırmanışını aynı hazırlık düzeyinde düşünmeyin.",
+       "title": "Zirve ayrı faaliyettir"
+      },
+      {
+       "body": "Dağ yolundan dönüşü uluslararası uçuşla dar bağlamayın.",
+       "title": "Son geceyi tampon bırakın"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Önerilen süre",
+       "value": "2–3 gece"
+      },
+      {
+       "label": "En uygun dönem",
+       "value": "Haziran–Eylül; hava durumuna bağlı"
+      },
+      {
+       "label": "Ulaşım yaklaşımı",
+       "value": "Karayolu transferi ve seçilmiş yürüyüşler"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Tiflis Gezi Rehberi: Eski Şehir, Hamamlar ve 3 Günlük Rota",
+       "city": "Tiflis",
+       "description": "Abanotubani hamamları, eski şehir, Sololaki ve Mtatsminda arasında mahalle odaklı başkent gezisi."
+      },
+      {
+       "anchor": "Batum Gezi Rehberi: Bulvar, Botanik Bahçesi ve Sahil",
+       "city": "Batum",
+       "description": "Batum Bulvarı, eski şehir, botanik bahçesi ve Acar mutfağıyla Karadeniz kıyı gezisi."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "Tiflis’ten geliş günü manzara molaları ve yolculuk zaten günün bir bölümünü doldurur. O akşama yalnız yerleşme ve kısa bir yürüyüş bırakabilirsiniz. Ertesi gün Gergeti’yi ana ziyaret yapıp üçüncü günkü çıkışınızı hafif tutmak rahat bir çerçeve. Juta veya daha uzun vadi yürüyüşü istiyorsanız ek gün, programı üst üste yığmaktan daha iyi.",
+        "Gergeti’ye yürüyerek çıkmak ile araçla gidip çevrede dolaşmak aynı etkinlik değil. Yürüyüş seçiyorsanız gidiş dönüşü, eğimi ve hava değişimini günün merkezine alın. Araçla çıkmak yorulmadan çevreyi görmeye alan açabilir; yürümeyi seçmemek daha eksik bir ziyaret anlamına gelmiyor. Kendinize uygun tempoyu seçmek burada fotoğrafı yetiştirmekten daha önemli.",
+        "Dağda her açık sabah bütün günün açık kalacağı anlamına gelmez. Gergeti, Sno ve Juta’yı sırf haritada yakın göründükleri için aynı güne sıkıştırmayın. Bir ana yürüyüş ve kısa bir yan durak yeterli olabilir. Rota koşulları uygun değilse köyde kalıp sıcak bir yemek yemek de planın parçası; hava nedeniyle vazgeçilen bir yürüyüş başarısız gezi sayılmaz."
+       ],
+       "heading": "Kazbegi’de iki gece: manzaraya ve havaya alan bırakın",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Tiflis’ten Stepantsminda’ya karayoluyla gidilir; Kazbegi’ye şehir treni yoktur. Minibüs veya özel transferde kalkış noktası, bagaj, mola ve yol durumunu kontrol edin. Hava veya kar kapanmasına karşı uçuş öncesi son geceyi Tiflis’te bırakın.",
+        "Kasaba içinde kısa yürüyüşler mümkündür; Gergeti ve uzak vadiler için yükseklik, yol ve yürüme düzeyini ayrı değerlendirin. Juta ve Sno aynı kasaba mahallesi değildir. Güncel erişimi ve dönüş aracını sabitlemeden uzak parkura çıkmayın."
+       ],
+       "heading": "Kazbegi ulaşım rehberi",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Gergeti’yi görüş açıkken önceliklendirin, ikinci günü hava ve kapasitenize göre Sno veya Juta’ya ayırın. Daha fazla vadi eklemek yerine bir iyi yürüyüş ve sakin kasaba zamanı çoğu geziyi güçlendirir."
+       ],
+       "heading": "Kazbegi gezilecek yerler",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Gergeti’ye yürüyüş ile araç çıkışı farklı deneyimlerdir. Süreyi yalnız haritanın mesafesinden hesaplamayın; yükselti ve zemin tempoyu değiştirir. Kilisede uygun kıyafetle sessiz ziyaret edin; bulutlu havada zirve manzarası garanti değildir."
+         ],
+         "heading": "Gergeti Kilisesi"
+        },
+        {
+         "body": [
+          "Sno’yu çevre vadinin ve köy ölçeğinin kısa keşfi olarak düşünün. Gergeti sonrası aynı gün ekleyecekseniz enerji ve hava payı bırakın. Yerleşim içindeki özel araziye girmeden izin isteyin; fotoğraf uğruna yol kenarında gelişigüzel durmayın."
+         ],
+         "heading": "Sno Vadisi"
+        },
+        {
+         "body": [
+          "Juta için yol durumunu güncel öğrenin; kış koşullarında ve mevsim geçişinde erişim değişebilir. Rotayı deneyiminize göre seçip su, katman ve çevrimdışı harita taşıyın. Dağ manzarasına yürümek yüksek zirve tırmanışıyla aynı faaliyet değildir."
+         ],
+         "heading": "Juta çevresi"
+        }
+       ]
+      },
+      {
+       "body": [
+        "Stepantsminda’yı büyük şehir gibi sokak sokak bitirmek gerekmiyor. Bir manzara molası, yerel bir öğün ve konakladığınız yerde sakin bir akşam günün güzel parçaları olabilir. Gergeti tarafına bakarken bulutların açılmasını beklemek de deneyimin kendisi. Programda bu boşluk olmayınca dağ yolculuğu bazen yalnız araç penceresinden görülen bir manzaraya dönüşüyor.",
+        "Sno çevresinde kısa bir geziyle vadi hissini yakalayabilirsiniz; Juta’yı ise yürüyüşün kendisine vakit ayırmak istediğinizde düşünün. Her iki yerde de köy yaşamını ve özel alanları gözetin. Doğa gününü şehirdeki durak sayısıyla ölçmeyin: daha az yere gidip bir vadide uzun kalmak bu bölgeyi tanımanın gayet güzel bir yolu."
+       ],
+       "heading": "Stepantsminda’da dağların arasına bir mola",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Stepantsminda merkezi restoran ve transfer erişimi; Gergeti tarafı manzara ve yokuşlu konaklama sunar. Odanın dağa bakması kadar ısıtma, araçla erişim ve iptal esnekliğini sorun. Çok uzak bir manzara oteli her yürüyüşe daha yakın değildir.",
+        "Manzaralı bir oda güzel, fakat iki gece kalırken merkeze ve yemek seçeneklerine erişim de önemli. Araçsız gezide çok uzak bir konaklama her küçük iş için transfer gerektirebilir. Isıtma ve ortak alanlar da serin veya yağmurlu bir günde oda fotoğrafından daha fazla fark yaratır. Kazbegi’de rahat bir üs tatilin kendisini iyileştirir."
+       ],
+       "heading": "Kazbegi nerede kalınır?",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Khinkali, çorba ve sıcak Gürcü yemekleri dağ gününden sonra iyi çalışır. Uzun yürüyüşte restoran bulacağınızı varsaymadan paket öğün ve su hazırlayın. Misafirhane yemeğinde saat, porsiyon ve özel beslenme ihtiyacını bir gün önce konuşun.",
+        "Misafirhanede akşam yemeği sunuluyorsa bunu önceden konuşmak güzel bir seçenek. Gün boyu dışarıda gezdikten sonra çorba ve sıcak bir Gürcü yemeğine dönmek yolculuğu sadeleştirir. Uzun yürüyüş için “yolda bir şey buluruz” yerine sabah öğün hazırlayın; köy restoranında oturacağınız akşamı da aceleye getirmeyin."
+       ],
+       "heading": "Kazbegi ne yenir?",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "Haziran–eylül daha çok yürüyüş seçeneği açar ama hava hiçbir mevsimde garanti değildir. Kar, sis ve fırtına erişimi etkiler. Zirve tırmanışı özel eğitim, ekipman ve uzman rehber gerektirir; şehir turu gibi değerlendirmeyin.",
+        "Özel vadi transferleri ve manzaralı oteller bütçeyi artırır. Gergeti ile uzak vadiyi ayrı günlerde planlayıp her birinin araç, bekleme ve rehber kapsamını karşılaştırın. Ucuz fiyatın hava kaynaklı iptal koşulunu okuyun."
+       ],
+       "heading": "Kazbegi için mevsim ve bütçe planı",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Tiflis kültür ve dönüş uçuşu için doğal bağlantıdır. Batum’u eklemek dağdan doğrudan kısa kıyı geçişi değildir; ayrı uzun rota ayağı planlayın. Dağ günü bitiminde yorgunken uzun transferle programı zorlamayın."
+       ],
+       "heading": "Kazbegi çevresinde rota önerileri",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Kazbegi gezi rehberi: Stepantsminda, Gergeti Kilisesi, Sno ve Juta için dağ rotası, Tiflis ulaşımı, nerede kalınır ve mevsim ipuçları.",
+     "seoTitle": "Kazbegi Gezi Rehberi: Stepantsminda ve Gergeti Rotası",
+     "sources": [
+      {
+       "name": "Georgia Travel — resmî turizm",
+       "url": "https://georgia.travel/cities-towns/stepantsminda"
+      },
+      {
+       "name": "Gürcistan Dışişleri — turist sigortası",
+       "url": "https://switzerland.mfa.gov.ge/en/news/370174-saqartveloshi-mogzaurobis-msurvelta-sakuradghebod"
+      }
+     ],
+     "volatileNote": "Bilet ücretleri, seferler ve ziyaret saatleri değişebilir. Rezervasyon öncesinde aşağıdaki resmî kaynaklardan güncel bilgiyi kontrol edin."
+    }
+   }
+  }
+ ]
+}

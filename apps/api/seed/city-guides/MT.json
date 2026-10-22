@@ -1,0 +1,1477 @@
+{
+ "countryCode": "MT",
+ "guides": [
+  {
+   "citySlug": "valletta",
+   "completeLangs": [
+    "en",
+    "es"
+   ],
+   "reviewed": true,
+   "translations": {
+    "en": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Gzira / Ta' Xbiex Marina area",
+        "category": "halal",
+        "cuisine": "Refined Lebanese cuisine",
+        "description": "Malta's premier halal Lebanese restaurant since 1987, celebrated for premium halal lamb grills, spiced flatbreads and authentic mezze.",
+        "lastVerified": "2026-10-06",
+        "name": "Ali Baba Restaurant",
+        "price": "Yüksek",
+        "verification": {
+         "note": "All meats are halal certified; reservations recommended.",
+         "sourceName": "Visit Malta — official dining guide",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://www.visitmalta.com/en/restaurants/",
+         "status": "certified-halal"
+        },
+        "why": "Legendary gastronomy landmark near the Valletta ferry, offering the island's highest-quality certified halal meat experience."
+       }
+      ],
+      "researchNote": "Rabbit stew is standard in Maltese dining; Lebanese and Turkish venues are the most reliable options for halal dining.",
+      "vegan": [
+       {
+        "area": "Merchant Street No:76",
+        "category": "vegan",
+        "cuisine": "Homemade vegan pasta and bowls",
+        "description": "Atmospheric cafe on Merchant Street serving fresh homemade vegan pasta, Buddha bowls, veggie burgers and organic Maltese-Italian recipes.",
+        "lastVerified": "2026-10-06",
+        "name": "Soul Food",
+        "price": "Orta",
+        "verification": {
+         "note": "Vegan pastas made fresh daily without eggs; plant-based cheese options available.",
+         "sourceName": "HappyCow's current vegan restaurant directory",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/soul-food-valletta-47890",
+         "status": "vegan-focused"
+        },
+        "why": "The top plant-based venue in Valletta to enjoy freshly made vegan pasta and wholesome dishes between palace visits."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Two full days suit the cathedral, museums and harbour; use three or four as a base for wider Malta visits.",
+       "q": "How many days do you need in Valletta?"
+      },
+      {
+       "a": "Valletta for morning and evening historic streets; Sliema for more hotels and waterfront options. Include crossings in your total budget.",
+       "q": "Valletta or Sliema for accommodation?"
+      },
+      {
+       "a": "Not in the centre: walking is easier with narrow streets and parking constraints. Assess wider island trips separately.",
+       "q": "Do you need a car in Valletta?"
+      },
+      {
+       "a": "Malta International (MLA) is the main flight gateway. Check the current bus or transfer to your Valletta hotel; the City Gate transport hub and a narrow-lane hotel doorway are different locations. Ask about luggage, steps and drop-off.",
+       "q": "How do you get to Valletta?"
+      }
+     ],
+     "h1": "Valletta Travel Guide: Things to Do and Harbour Walks",
+     "itinerary": [
+      {
+       "afternoon": "A museum and central streets",
+       "evening": "Dinner and a short Valletta walk",
+       "morning": "St John’s visit",
+       "title": "Day 1 — Art and streets"
+      },
+      {
+       "afternoon": "Ferry trip to the Birgu area",
+       "evening": "Planned return and a waterfront break",
+       "morning": "Upper Barrakka views",
+       "title": "Day 2 — The harbour"
+      }
+     ],
+     "lede": "In Valletta, one street ends at the sea and the next opens onto a broad harbour view. The city is small enough for a gentle day of a cathedral visit, historic lanes and a long lunch. Stay into the evening, when fewer visitors make it easier to enjoy life within the walls.",
+     "places": [
+      {
+       "area": "Central Valletta",
+       "known": "Baroque interiors and art",
+       "name": "St John’s Co-Cathedral",
+       "tip": "Check visitor hours, clothing and photography rules.",
+       "why": "For the city’s rich interior art."
+      },
+      {
+       "area": "Harbour bastions",
+       "known": "Panorama and waterfront connection",
+       "name": "Upper Barrakka and Grand Harbour",
+       "tip": "Check current lift and waterfront connection details.",
+       "why": "For the peninsula and harbour layout."
+      },
+      {
+       "area": "Across Grand Harbour",
+       "known": "Harbour neighbourhoods",
+       "name": "The Three Cities connection",
+       "tip": "Check the return ferry and pier beforehand.",
+       "why": "For Valletta views from the opposite shore."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Practical tips for Valletta",
+     "practicalTips": [
+      {
+       "body": "Include slopes and stairways even when distances look short.",
+       "title": "Small city, many steps"
+      },
+      {
+       "body": "Distinguish local harbour ferries from the Gozo fast ferry.",
+       "title": "Ferry type"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Recommended stay",
+       "value": "2–3 full days"
+      },
+      {
+       "label": "Best time to visit",
+       "value": "April–June and September–October"
+      },
+      {
+       "label": "Getting around",
+       "value": "Walking and harbour ferries"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Gozo Travel Guide: Temples, Coast and Ferry Planning",
+       "city": "Gozo",
+       "description": "A separate Maltese island reached by ferry, with Victoria’s Cittadella, Ġgantija, Dwejra and village stays."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "Give the first day to the streets within the walls, St John’s Co-Cathedral and Upper Barrakka. Cross to the Three Cities on the second for another perspective on the harbour. Short distances do not mean short visits: the cathedral interior and a museum deserve their own unhurried blocks.",
+        "If your hotel is elsewhere in Malta, avoid repeated journeys in and out of Valletta. One longer city block can be easier than a brief midday return to your room. In summer, use cooler hours for streets and warmer hours for interiors. Remember that a beautiful sea view is not the same thing as a swimming beach.",
+        "For Gozo, consider both the crossing and time on the island rather than treating it as a casual half-day from Valletta. Malta’s destinations do not all belong in the same day. On a four-day trip, choosing priorities between Valletta, another main-island area and Gozo can be more rewarding than racing through every island."
+       ],
+       "heading": "Two days in Valletta: within the walls and across the harbour",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Malta International (MLA) is the main flight gateway. Check the current bus or transfer to your Valletta hotel; the City Gate transport hub and a narrow-lane hotel doorway are different locations. Ask about luggage, steps and drop-off.",
+        "The centre is walkable, with slopes and stairs affecting pace. Check current piers and final sailings for Sliema and the Three Cities, allowing for weather changes. A Gozo fast-ferry ticket is separate from local harbour crossings."
+       ],
+       "heading": "Getting to and around Valletta",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Give the cathedral and main museums one day, the harbour and opposite shore another. Indoor collections provide a useful midday break from exposed fortified walks."
+       ],
+       "heading": "Things to do in Valletta",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Do not judge the visit by the restrained exterior: the interior and artworks are its focus. Check current visiting hours, worship-related changes, clothing rules and the ticket’s museum or oratory coverage."
+         ],
+         "heading": "St John’s Co-Cathedral"
+        },
+        {
+         "body": [
+          "Use the garden to read the harbour and opposite settlements. Check stairs or lift access before descending to the waterfront, avoiding repeated climbs. Verify any timed demonstration or event against the current calendar."
+         ],
+         "heading": "Upper Barrakka and Grand Harbour"
+        },
+        {
+         "body": [
+          "Use an afternoon for the harbour and lanes around Birgu. You need not rush through all three settlements; build a walk around nearby stops and check the final ferry and a land alternative."
+         ],
+         "heading": "The Three Cities connection"
+        }
+       ]
+      },
+      {
+       "body": [
+        "At Upper Barrakka, sit and watch the harbour instead of leaving as soon as you have a photograph. Light and movement change the scene. Back in the streets, a couple of turns away from the main route can be enough. On stepped lanes, remember that your return journey has gradients too.",
+        "A Three Cities outing brings the harbour neighbourhoods closer. Choose a waterfront walk and a meal, then leave some time simply to wander. If using a ferry, factor the last return into the plan and allow for a different connection in poor weather. A little spare time avoids an evening spent watching the clock."
+       ],
+       "heading": "Harbour views and evening streets",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "A Valletta stay gives quieter morning and evening access; Sliema offers more accommodation choices across the water. Check stairs, lifts and night noise, remembering that proximity to a ferry does not guarantee operation in rough weather.",
+        "Staying in Valletta lets you enjoy the walled city early and late. Sliema offers another accommodation base, but include the daily crossing in your decision. In a historic building, stairs and room light may matter more than the harbour photograph. Prioritise everyday comfort on a stay of several nights."
+       ],
+       "heading": "Where to stay in Valletta",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Pastizzi, ftira and local seafood introduce Maltese cooking. Pastizzi may have ricotta or pea fillings, with pastry fats varying by maker. Distinguish meat-based traditions such as fenkata from plant-based options.",
+        "Pastizzi can make a quick sightseeing pause, while ftira offers something more substantial. For a longer dinner, explore seasonal menus and fish options. Rather than searching for one definitive national dish, spread local flavours across several meals and let them become part of your days in Malta."
+       ],
+       "heading": "What to eat in Valletta",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "Spring and autumn suit street and bastion walks. Use museums for hot, busy summer middays. Winter wind and sea conditions may affect ferries, so keep indoor alternatives.",
+        "Budget cathedral, museums, accommodation and harbour crossings separately. Walking reduces costs; compare a cheaper Sliema room against daily ferries, taxis and travel time."
+       ],
+       "heading": "Valletta: weather and budget planning",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Two or three nights on Gozo offer a separate island experience. Mdina can be a day trip, but do not squeeze it into a Gozo day. Leave weather and port-connection buffer before a flight."
+       ],
+       "heading": "Trips beyond Valletta",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Explore Valletta’s St John’s Co-Cathedral, Upper Barrakka and Grand Harbour with walks, places to stay, Maltese food, transport and Gozo links.",
+     "seoTitle": "Valletta Travel Guide: Things to Do and Harbour Walks",
+     "sources": [
+      {
+       "name": "Visit Malta — official tourism",
+       "url": "https://www.visitmalta.com/en/"
+      },
+      {
+       "name": "St John’s — official visitor information",
+       "url": "https://www.stjohnscocathedral.com/"
+      },
+      {
+       "name": "UNESCO — Valletta",
+       "url": "https://whc.unesco.org/en/list/131/"
+      },
+      {
+       "name": "Malta Public Transport — services",
+       "url": "https://www.publictransport.com.mt/"
+      }
+     ],
+     "volatileNote": "Admission prices, services and opening hours can change. Check the official sources below before booking."
+    },
+    "es": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Gzira / Zona del puerto deportivo de Ta' Xbiex",
+        "category": "halal",
+        "cuisine": "Alta cocina libanesa",
+        "description": "El restaurante libanés halal más prestigioso de Malta desde 1987, reconocido por sus carnes a la brasa, panes especiados y mezes auténticos.",
+        "lastVerified": "2026-10-06",
+        "name": "Ali Baba Restaurant",
+        "price": "Yüksek",
+        "verification": {
+         "note": "Todas las carnes tienen certificación halal; se recomienda reservar.",
+         "sourceName": "Visit Malta — guía gastronómica oficial",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://www.visitmalta.com/en/restaurants/",
+         "status": "certified-halal"
+        },
+        "why": "Emblemático restaurante cerca del ferry de La Valeta que ofrece la experiencia de carne halal certificada de mayor calidad de la isla."
+       }
+      ],
+      "researchNote": "El estofado de conejo es típico en Malta; los restaurantes libaneses y turcos son las opciones más fiables para comida halal.",
+      "vegan": [
+       {
+        "area": "Merchant Street No:76",
+        "category": "vegan",
+        "cuisine": "Pasta vegana casera y boles",
+        "description": "Cafetería en Merchant Street con pasta fresca vegana artesanal, boles saludables, hamburguesas vegetales y toques malteses.",
+        "lastVerified": "2026-10-06",
+        "name": "Soul Food",
+        "price": "Orta",
+        "verification": {
+         "note": "Pastas veganas elaboradas a diario sin huevo; opciones de queso vegetal disponibles.",
+         "sourceName": "Directorio actualizado de restaurantes veganos de HappyCow",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/soul-food-valletta-47890",
+         "status": "vegan-focused"
+        },
+        "why": "El local vegetal de referencia en La Valeta para disfrutar de pasta fresca artesanal y platos saludables entre palacios."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Dos días completos para catedral, museos y puerto; tres o cuatro como base para conocer más de Malta.",
+       "q": "¿Cuántos días dedicar a La Valeta?"
+      },
+      {
+       "a": "La Valeta para calles históricas mañana y tarde; Sliema para más hoteles y costa. Añade cruces al presupuesto total.",
+       "q": "¿La Valeta o Sliema para dormir?"
+      },
+      {
+       "a": "No en el centro: caminar resulta más sencillo por calles estrechas y aparcamiento limitado. Valora salidas por la isla aparte.",
+       "q": "¿Hace falta coche en La Valeta?"
+      },
+      {
+       "a": "Malta International (MLA) es la entrada aérea principal. Consulta autobús o traslado al hotel de La Valeta: nodo de City Gate y puerta de hotel en calle estrecha son puntos distintos. Pregunta por equipaje, escalones y bajada.",
+       "q": "¿Cómo llegar a La Valeta?"
+      }
+     ],
+     "h1": "Qué ver en La Valeta: ruta de 2 días y dónde dormir",
+     "itinerary": [
+      {
+       "afternoon": "Museo y calles céntricas",
+       "evening": "Cena y paseo breve en La Valeta",
+       "morning": "Visita a San Juan",
+       "title": "Día 1 — Arte y calles"
+      },
+      {
+       "afternoon": "Ferry hacia la zona de Birgu",
+       "evening": "Regreso planificado y descanso junto al puerto",
+       "morning": "Vistas de Upper Barrakka",
+       "title": "Día 2 — Puerto"
+      }
+     ],
+     "lede": "En La Valeta, una calle acaba en el mar y otra se abre al puerto. No necesitas correr: una visita a la concatedral, calles históricas y una comida larga forman un buen día. Quédate hasta la tarde, cuando bajan las visitas y se aprecia mejor la vida entre murallas.",
+     "places": [
+      {
+       "area": "Centro de La Valeta",
+       "known": "Interior barroco y arte",
+       "name": "Concatedral de San Juan",
+       "tip": "Consulta horario, vestimenta y fotografía.",
+       "why": "Para conocer la riqueza artística interior."
+      },
+      {
+       "area": "Baluartes del puerto",
+       "known": "Panorámica y conexión a la costa",
+       "name": "Upper Barrakka y Grand Harbour",
+       "tip": "Consulta condiciones actuales de ascensor y puerto.",
+       "why": "Para comprender península y puerto."
+      },
+      {
+       "area": "Frente a Grand Harbour",
+       "known": "Barrios portuarios",
+       "name": "Conexión con las Tres Ciudades",
+       "tip": "Consulta de antemano ferry y muelle de vuelta.",
+       "why": "Para mirar La Valeta desde la orilla opuesta."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Consejos para visitar La Valeta",
+     "practicalTips": [
+      {
+       "body": "Cuenta pendientes y escaleras aunque las distancias parezcan cortas.",
+       "title": "Ciudad pequeña, muchas escaleras"
+      },
+      {
+       "body": "Distingue ferris locales del puerto y ferry rápido a Gozo.",
+       "title": "Tipo de ferry"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Duración recomendada",
+       "value": "2–3 días completos"
+      },
+      {
+       "label": "Mejor época",
+       "value": "Abril–junio y septiembre–octubre"
+      },
+      {
+       "label": "Cómo moverse",
+       "value": "A pie y ferris del puerto"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Qué ver en Gozo: templos, costa y cómo llegar en ferry",
+       "city": "Gozo",
+       "description": "Isla maltesa con acceso en ferry, Cittadella de Victoria, Ġgantija, Dwejra y pueblos."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "Dedica el primer día a las calles amuralladas, la Concatedral de San Juan y Upper Barrakka. El segundo puedes cruzar a las Tres Ciudades para mirar el puerto desde otro lado. Distancias cortas no significan visitas breves: concatedral y museo necesitan su propio tiempo.",
+        "Si duermes en otra zona de Malta, evita entrar y salir varias veces de La Valeta. Un bloque urbano largo puede ser más cómodo que volver un rato al hotel. En verano, pasea en horas frescas y reserva interiores para el calor. Una vista al mar no equivale a una playa para bañarse.",
+        "Si añades Gozo, planifica el trayecto y el tiempo allí sin tratarlo como una escapada improvisada de medio día. No todos los lugares de Malta caben en la misma jornada. En cuatro días, elegir entre La Valeta, otra zona y Gozo puede resultar mejor que recorrer todas las islas deprisa."
+       ],
+       "heading": "Dos días en La Valeta: murallas y la otra orilla",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Malta International (MLA) es la entrada aérea principal. Consulta autobús o traslado al hotel de La Valeta: nodo de City Gate y puerta de hotel en calle estrecha son puntos distintos. Pregunta por equipaje, escalones y bajada.",
+        "El centro se recorre a pie, con pendientes y escaleras. Consulta muelles y últimos ferris a Sliema y Tres Ciudades, sujetos al tiempo. El ferry rápido a Gozo es distinto de los cruces locales."
+       ],
+       "heading": "Cómo llegar a La Valeta y moverse",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Dedica un día a catedral y museos, otro al puerto y costa opuesta. Las colecciones interiores ofrecen descanso al mediodía frente a paseos expuestos por las murallas."
+       ],
+       "heading": "Qué ver en La Valeta",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "No juzgues la visita por la fachada sobria: interior y obras son el centro. Consulta horarios actuales, cambios por culto, vestimenta y cobertura de museo u oratorio de la entrada."
+         ],
+         "heading": "Concatedral de San Juan"
+        },
+        {
+         "body": [
+          "Desde el jardín observa puerto y poblaciones de enfrente. Revisa escaleras o ascensor antes de bajar, evitando subir y bajar repetidamente. Confirma calendario actual de demostraciones o eventos con hora."
+         ],
+         "heading": "Upper Barrakka y Grand Harbour"
+        },
+        {
+         "body": [
+          "Dedica una tarde al puerto y calles de Birgu. No necesitas completar deprisa las tres poblaciones: agrupa paradas cercanas y confirma último ferry y alternativa terrestre."
+         ],
+         "heading": "Conexión con las Tres Ciudades"
+        }
+       ]
+      },
+      {
+       "body": [
+        "En Upper Barrakka, siéntate a mirar el puerto después de la foto. Luz y movimiento cambian la escena. De vuelta a las calles, basta con desviarte un par de veces de la ruta principal. En las vías con escaleras, piensa también en las pendientes del regreso.",
+        "Las Tres Ciudades acercan a los barrios del puerto. Elige un paseo costero y una comida y deja el resto para callejear. Si usas ferri, cuenta con el último regreso y una alternativa con mal tiempo. Un pequeño margen evita pasar la tarde pendiente del reloj."
+       ],
+       "heading": "Vistas del puerto y calles al atardecer",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Dormir en La Valeta facilita mañanas y tardes tranquilas; Sliema ofrece más opciones al otro lado del agua. Comprueba escaleras, ascensor y ruido; estar cerca del ferry no garantiza servicio con mal tiempo.",
+        "Dormir en La Valeta permite disfrutarla temprano y al final del día. Sliema ofrece otra base, pero cuenta con los trayectos diarios. En un edificio histórico, escaleras y luz de la habitación pueden importar más que la foto del puerto. Prioriza la comodidad cotidiana."
+       ],
+       "heading": "Dónde alojarse en La Valeta",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Pastizzi, ftira y pescado local acercan a la cocina maltesa. Pastizzi puede llevar ricotta o guisantes, con grasas de masa variables. No confundas tradiciones cárnicas como fenkata con opciones vegetales.",
+        "Los pastizzi sirven para una pausa breve; la ftira puede ser una comida más completa. Para una cena larga, mira menús de temporada y pescado. En vez de buscar un único plato nacional obligatorio, reparte sabores locales entre varias comidas y días."
+       ],
+       "heading": "Qué comer en La Valeta",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "Primavera y otoño favorecen calles y murallas. Usa museos al mediodía caluroso de verano. Viento y mar invernales pueden afectar ferris; deja alternativas interiores.",
+        "Separa catedral, museos, alojamiento y cruces del puerto. Caminar reduce gasto; compara habitación barata en Sliema con ferris, taxis y tiempo diarios."
+       ],
+       "heading": "La Valeta: cuándo ir y presupuesto",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Dos o tres noches en Gozo aportan otra experiencia insular. Mdina puede ser excursión de un día, sin meterla en la misma jornada que Gozo. Deja margen de mar y puerto antes del vuelo."
+       ],
+       "heading": "Excursiones desde La Valeta",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Qué ver en La Valeta: Concatedral de San Juan, Upper Barrakka y Grand Harbour, con paseos, alojamiento, comida maltesa, transporte y conexión a Gozo.",
+     "seoTitle": "Qué ver en La Valeta: ruta de 2 días y dónde dormir",
+     "sources": [
+      {
+       "name": "Visit Malta — turismo oficial",
+       "url": "https://www.visitmalta.com/en/"
+      },
+      {
+       "name": "San Juan — información oficial de visita",
+       "url": "https://www.stjohnscocathedral.com/"
+      },
+      {
+       "name": "UNESCO — La Valeta",
+       "url": "https://whc.unesco.org/en/list/131/"
+      },
+      {
+       "name": "Malta Public Transport — servicios",
+       "url": "https://www.publictransport.com.mt/"
+      }
+     ],
+     "volatileNote": "Los precios, los servicios y los horarios pueden cambiar. Consulta las fuentes oficiales indicadas antes de reservar."
+    },
+    "tr": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Gzira / Ta' Xbiex Marina çevresi",
+        "category": "halal",
+        "cuisine": "Rafine Lübnan mutfağı",
+        "description": "1987'den beri Malta'nın en saygın helal Lübnan restoranı; kuzu şiş, taze fırın ekmekleri ve zengin mezelerle adadaki 1 numaralı helal adres.",
+        "lastVerified": "2026-10-06",
+        "name": "Ali Baba Restaurant",
+        "price": "Yüksek",
+        "verification": {
+         "note": "Etlerin tamamı helal sertifikalıdır; rezervasyon önerilir.",
+         "sourceName": "Visit Malta — resmî gastronomi rehberi",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://www.visitmalta.com/en/restaurants/",
+         "status": "certified-halal"
+        },
+        "why": "Valletta feribotuna kısa mesafede, Malta adasındaki en yüksek kaliteli ve tescilli helal et ziyafetini sunan efsanevi gastronomi kurumudur."
+       }
+      ],
+      "researchNote": "Malta geleneksel mutfağında tavşan yahnisi yaygındır; helal arayışında Lübnan ve Türk restoranları en güvenilir adreslerdir.",
+      "vegan": [
+       {
+        "area": "Merchant Street No:76",
+        "category": "vegan",
+        "cuisine": "Ev yapımı vegan makarna ve kaseler",
+        "description": "Valletta'nın tarihi yaya sokağında ev yapımı taze vegan makarnalar, Buda kaseleri, sebze burgerleri ve organik İtalyan-Malta esintileri.",
+        "lastVerified": "2026-10-06",
+        "name": "Soul Food",
+        "price": "Orta",
+        "verification": {
+         "note": "Vegan makarnalar yumurtasız unla günlük açılır; vegan peynir alternatifleri mevcuttur.",
+         "sourceName": "HappyCow güncel vegan restoran dizini",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/soul-food-valletta-47890",
+         "status": "vegan-focused"
+        },
+        "why": "Valletta surları ve sarayları arasında yürürken taze el yapımı vegan makarna ve hafif sebze yemekleri için başkentin 1 numaralı bitkisel mekanıdır."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Katedral, müze ve liman için iki tam gün; daha fazla Malta gezisi için üç veya dört gün üs olarak kullanılabilir.",
+       "q": "Valletta kaç günde gezilir?"
+      },
+      {
+       "a": "Tarihî sokaklarda sabah-akşam için Valletta; daha fazla otel ve kıyı seçeneği için Sliema. Günlük geçişleri toplam maliyete ekleyin.",
+       "q": "Valletta mı Sliema mı?"
+      },
+      {
+       "a": "Merkez için hayır; dar sokak ve park nedeniyle yürüyüş daha uygundur. Ada dışı günlük planlarda bağlantıyı ayrı değerlendirin.",
+       "q": "Valletta’da araba gerekir mi?"
+      },
+      {
+       "a": "Malta International (MLA) adanın ana uçuş kapısıdır; Valletta oteline güncel otobüs veya transferi kontrol edin. Şehir kapısı yakınındaki ulaşım düğümü ile dar sokaktaki otel kapısı aynı nokta değildir. Bavul, basamak ve araç bırakma noktasını rezervasyonda sorun.",
+       "q": "Valletta'ya nasıl gidilir?"
+      }
+     ],
+     "h1": "Valletta Gezi Rehberi: Gezilecek Yerler ve 2 Günlük Rota",
+     "itinerary": [
+      {
+       "afternoon": "İlginize göre müze ve merkez sokakları",
+       "evening": "Valletta’da yemek ve kısa yürüyüş",
+       "morning": "St. John ziyareti",
+       "title": "1. Gün — Sanat ve sokaklar"
+      },
+      {
+       "afternoon": "Feribotla Birgu çevresi",
+       "evening": "Saatli dönüş ve kıyı molası",
+       "morning": "Upper Barrakka manzarası",
+       "title": "2. Gün — Liman"
+      }
+     ],
+     "lede": "Valletta’da bir sokağın sonu denize, başka bir köşesi geniş bir liman manzarasına açılıyor. Küçük şehirde büyük bir koşturmaya gerek yok: katedral, birkaç tarihî sokak ve uzun bir öğle molası güzel bir gün kuruyor. Akşam ziyaretçiler azaldığında surların içindeki hayatı görmek için burada biraz daha kalın.",
+     "places": [
+      {
+       "area": "Valletta merkezi",
+       "known": "Barok iç mekân ve sanat",
+       "name": "St. John Eş Katedrali",
+       "tip": "Ziyaret saati, kıyafet ve fotoğraf kuralını kontrol edin.",
+       "why": "Şehrin sanat yoğunluğunu içeriden görmek için."
+      },
+      {
+       "area": "Liman surları",
+       "known": "Panorama ve kıyı bağlantısı",
+       "name": "Upper Barrakka ve Büyük Liman",
+       "tip": "Asansör ve liman bağlantısının güncel koşulunu okuyun.",
+       "why": "Şehrin yarımada ve liman düzenini anlamak için."
+      },
+      {
+       "area": "Büyük Liman karşı kıyısı",
+       "known": "Liman mahalleleri",
+       "name": "Üç Şehirler bağlantısı",
+       "tip": "Feribot dönüşünü ve iskeleyi önceden kontrol edin.",
+       "why": "Valletta manzarasına karşı kıyıdan bakmak için."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Valletta için pratik ipuçları",
+     "practicalTips": [
+      {
+       "body": "Mesafe kısa olsa da yokuş ve merdiveni günlük programa dahil edin.",
+       "title": "Küçük şehir, çok basamak"
+      },
+      {
+       "body": "Şehir içi liman feribotu ile Gozo hızlı feribotunun farklı bağlantılar olduğunu kontrol edin.",
+       "title": "Feribot türü"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Önerilen süre",
+       "value": "2–3 tam gün"
+      },
+      {
+       "label": "En uygun dönem",
+       "value": "Nisan–Haziran ve Eylül–Ekim"
+      },
+      {
+       "label": "Ulaşım yaklaşımı",
+       "value": "Yürüyüş ve liman feribotları"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Gozo Gezi Rehberi: Gezilecek Yerler ve Feribot Planı",
+       "city": "Gozo",
+       "description": "Victoria Cittadella, Ġgantija, Dwejra ve köyler arasında feribotla ulaşılan ayrı Malta adası."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "İlk günü surların içindeki sokaklar, St. John Eş Katedrali ve Upper Barrakka çevresine ayırın. İkinci gün limanın karşı yakasındaki Üç Şehirler’e geçmek, aynı şehri yeniden dolaşmaktan farklı bir deneyim verir. Kısa mesafeler ziyaretlerin kısa sürdüğü anlamına gelmiyor; katedralin içi ve bir müze için kendi zamanlarını bırakın.",
+        "Malta’da başka bir yerde kalıyorsanız Valletta’ya geliş ve dönüşü günün ortasına defalarca koymayın. Tek bir uzun şehir bloğu, öğlen kısa otele dönüşten daha rahat olabilir. Yaz sıcağında sokak yürüyüşlerini sabah veya akşama, kapalı ziyaretleri günün daha sıcak bölümüne almak iyi denge. Denize bakan manzara noktasıyla yüzülebilen plajı da birbirine karıştırmayın.",
+        "Gozo’yu ekleyecekseniz Valletta’dan yarım gün kaçamağı gibi düşünmek yerine ulaşım biçimini ve adada geçireceğiniz zamanı birlikte planlayın. Malta ana adasındaki her durak aynı günün içine sığmaz. Dört günlük tatilde Valletta, bir başka bölge ve Gozo arasında öncelik seçmek; bütün adaları hızlıca görmekten daha keyifli olabilir."
+       ],
+       "heading": "Valletta’da iki gün: sur içi ve limanın karşı yakası",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Malta International (MLA) adanın ana uçuş kapısıdır; Valletta oteline güncel otobüs veya transferi kontrol edin. Şehir kapısı yakınındaki ulaşım düğümü ile dar sokaktaki otel kapısı aynı nokta değildir. Bavul, basamak ve araç bırakma noktasını rezervasyonda sorun.",
+        "Merkez yürüyüş için uygundur ama yokuş ve merdivenler rotayı uzatır. Sliema ve Üç Şehirler için güncel feribot iskelesi ile son dönüşü kontrol edin; hava seferi değiştirebilir. Gozo hızlı feribotu şehir içi liman geçişiyle aynı bilet değildir."
+       ],
+       "heading": "Valletta ulaşım rehberi",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Katedral ve ana müzeleri bir güne, liman manzarasıyla karşı kıyıyı diğerine ayırın. Güneşli öğle saatinde uzun sur yürüyüşü yerine kapalı koleksiyon ziyaretini tercih etmek tempoyu dengeler."
+       ],
+       "heading": "Valletta gezilecek yerler",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Sade dış cepheye bakıp geçmeyin; iç mekân ve eserler ziyaretin asıl odağıdır. Güncel ziyaret saatini, ayin kaynaklı değişikliği ve kıyafet kuralını resmî siteden okuyun. Müze veya oratoryo kapsamını biletten kontrol edin."
+         ],
+         "heading": "St. John Eş Katedrali"
+        },
+        {
+         "body": [
+          "Bahçeden karşı kıyıdaki yerleşimlerle liman ölçeğini görün. Alt kıyıya inecekseniz merdiven veya asansör bağlantısını önceden öğrenin; aynı günü sürekli iniş-çıkışlarla bölmeyin. Saatli gösteri veya etkinlik düşünüyorsanız takvimi güncel doğrulayın."
+         ],
+         "heading": "Upper Barrakka ve Büyük Liman"
+        },
+        {
+         "body": [
+          "Bir öğleden sonrayı Birgu çevresinde liman ve küçük sokaklara ayırın. Üç yerleşimin tamamını hızla bitirmek şart değildir; yakın duraklarla yürüyüş kurun. Valletta’ya dönüşte son sefer ve alternatif kara bağlantısını öğrenin."
+         ],
+         "heading": "Üç Şehirler bağlantısı"
+        }
+       ]
+      },
+      {
+       "body": [
+        "Upper Barrakka’da yalnız fotoğraf çekip ayrılmak yerine oturup limanı izleyin. Aynı manzara gemiler, ışık ve günün temposuyla değişiyor. Sokaklara döndüğünüzde ana yürüyüş hattından bir iki yan sokağa sapmak yeterli; küçük şehri yeni duraklarla doldurmak zorunda değilsiniz. Merdivenli yolları gezerken dönüş rotanızın da iniş çıkışlarını düşünün.",
+        "Üç Şehirler gezisi limanın çevresindeki mahalleleri daha yakından hissettirir. Bir kıyı yürüyüşü ve bir öğün seçip gerisini sokaklarda dolaşmaya bırakabilirsiniz. Feribot kullanacaksanız son dönüşü programınıza katın; kötü havada farklı bir bağlantı gerekebilir. Akşamı sürekli saate bakarak geçirmek yerine dönüş için küçük bir pay bırakın."
+       ],
+       "heading": "Liman manzaraları ve akşam sokakları",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Valletta’da kalmak sabah ve akşam sokaklarını rahat görmenizi sağlar; Sliema daha fazla otel seçeneği ve karşı kıyı bağlantısı sunar. Odanın merdiven, asansör ve gece sesini kontrol edin. Feribota yakınlık kötü havada her bağlantının garanti olduğu anlamına gelmez.",
+        "Valletta’da kalırsanız sabah erken ve akşam geç saatlerde sur içini yaşama şansınız olur. Sliema’da kalmak daha geniş otel seçimi sağlayabilir, ama her günkü geçişi düşünün. Tarihî binada merdiven ve oda ışığı, liman fotoğrafından daha belirleyici olabilir; birkaç gecelik gezi için günlük rahatlığı öne alın."
+       ],
+       "heading": "Valletta nerede kalınır?",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Pastizzi, ftira ve yerel deniz ürünleri Malta’ya giriş sağlar. Pastizzi dolgusunda ricotta veya bezelye olabilir; tarif ve hamur yağı işletmeye göre değişir. Tam akşam yemeği için fenkata gibi etli gelenekleri vegan seçenekle karıştırmayın.",
+        "Pastizzi’yi gezi arasında kısa bir mola, ftira’yı ise daha doyurucu bir öğün gibi düşünebilirsiniz. Akşamı uzun bir masaya ayırmak isterseniz mevsimlik menü ve balık seçeneklerine bakın. Malta mutfağını tanımak için tek bir “ulusal yemek” aramak yerine birkaç farklı öğüne yerel tatları dağıtmak daha doğal."
+       ],
+       "heading": "Valletta ne yenir?",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "İlkbahar ve sonbahar sur ve sokak yürüyüşünde daha rahattır. Yazın sıcak ve kalabalık öğle saatlerini müzeye ayırın. Kışın rüzgâr ve deniz koşulu feribotu etkileyebilir; kapalı mekân alternatifi bırakın.",
+        "Katedral, müze, konaklama ve liman geçişini ayrı hesaplayın. Şehirde yürümek maliyeti düşürür; Sliema’daki ucuz odayı günlük feribot, taksi ve zaman toplamıyla karşılaştırın."
+       ],
+       "heading": "Valletta için mevsim ve bütçe planı",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Gozo’da iki veya üç gece ayrı ada deneyimi sunar. Mdina günübirlik eklenebilir ama aynı güne Gozo ve Mdina’yı doldurmayın. Gozo dönüşünde uçuş öncesi hava ve liman geçişi için pay bırakın."
+       ],
+       "heading": "Valletta çevresinde rota önerileri",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Valletta gezi rehberi: St. John, Upper Barrakka ve Büyük Liman; yürüyüş rotası, nerede kalınır, ulaşım, Malta yemekleri ve Gozo bağlantısı.",
+     "seoTitle": "Valletta Gezi Rehberi: Gezilecek Yerler ve 2 Günlük Rota",
+     "sources": [
+      {
+       "name": "Visit Malta — resmî turizm",
+       "url": "https://www.visitmalta.com/en/"
+      },
+      {
+       "name": "St. John — resmî ziyaret bilgileri",
+       "url": "https://www.stjohnscocathedral.com/"
+      },
+      {
+       "name": "UNESCO — Valletta",
+       "url": "https://whc.unesco.org/en/list/131/"
+      },
+      {
+       "name": "Malta Public Transport — seferler",
+       "url": "https://www.publictransport.com.mt/"
+      }
+     ],
+     "volatileNote": "Bilet ücretleri, seferler ve ziyaret saatleri değişebilir. Rezervasyon öncesinde aşağıdaki resmî kaynaklardan güncel bilgiyi kontrol edin."
+    }
+   }
+  },
+  {
+   "citySlug": "gozo",
+   "completeLangs": [
+    "en",
+    "es"
+   ],
+   "reviewed": true,
+   "translations": {
+    "en": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Victoria / Below Gozo Citadel",
+        "category": "halal",
+        "cuisine": "Mediterranean and Middle Eastern dishes",
+        "description": "Reliable Mediterranean restaurant below Victoria's Citadel, serving halal lamb tagines, grilled meats and fresh island seafood.",
+        "lastVerified": "2026-10-06",
+        "name": "Al Qantara Restaurant",
+        "price": "Orta",
+        "verification": {
+         "note": "Establishment confirms halal meat supply; island fish is sourced fresh daily.",
+         "sourceName": "Visit Gozo — official island tourism portal",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://www.visitgozo.com/",
+         "status": "restaurant-confirmed"
+        },
+        "why": "The most convenient and trusted base on Gozo for fresh halal meats and Mediterranean seafood after visiting the Citadel."
+       }
+      ],
+      "researchNote": "Fresh Mediterranean fish in Gozo is ideal for halal diets; local goat cheese (ġbejna) is not suitable for vegan requirements.",
+      "vegan": [
+       {
+        "area": "Gharb Village Square",
+        "category": "vegan",
+        "cuisine": "Organic island vegetables and mezze",
+        "description": "Serene village cafe in Gharb serving seasonal Gozitan tomato dishes, broad bean dips (bigilla), caper salads and fresh vegan fare.",
+        "lastVerified": "2026-10-06",
+        "name": "Rangers Cafe & Holistic Dining",
+        "price": "Ekonomik",
+        "verification": {
+         "note": "Traditional bigilla dip and olive oil dishes prepared dairy-free.",
+         "sourceName": "HappyCow's current vegan restaurant directory",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/rangers-cafe-gharb-183420",
+         "status": "vegan-options"
+        },
+        "why": "The most tranquil spot in rural Gozo to taste fresh local produce and traditional bigilla bean dip in a vegan setting."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "For a day trip, choose one or two areas. Two or three nights are easier for culture and coast.",
+       "q": "How many days do you need in Gozo?"
+      },
+      {
+       "a": "The Ċirkewwa–Mġarr vehicle ferry allows it; check rental terms and current sailings. Valletta’s passenger fast ferry is different.",
+       "q": "Can you take a car to Gozo?"
+      },
+      {
+       "a": "No: it collapsed in 2017. Dwejra’s coast and Inland Sea remain, with boats and swimming dependent on conditions.",
+       "q": "Does the Azure Window still exist?"
+      }
+     ],
+     "h1": "Gozo Travel Guide: Temples, Coast and Ferry Planning",
+     "itinerary": [
+      {
+       "afternoon": "Ġgantija and Xagħra",
+       "evening": "Dinner near your accommodation",
+       "morning": "Cittadella and Victoria streets",
+       "title": "Day 1 — Victoria and temples"
+      },
+      {
+       "afternoon": "Nearby village and rest",
+       "evening": "A coastal evening near Xlendi",
+       "morning": "Dwejra, with a short boat trip if conditions allow",
+       "title": "Day 2 — Western coast"
+      },
+      {
+       "afternoon": "Leave time for the ferry return",
+       "evening": "Overnight on Malta’s main island",
+       "morning": "Ramla Bay or a village according to weather",
+       "title": "Day 3 — Flexible island day"
+      }
+     ],
+     "lede": "A lovely Gozo day might start at the citadel, pause for lunch in a village square and end on a rocky stretch of coast. Two nights suit a slower island visit. Spend longer in a few places instead of trying to reach every bay, and the island’s quieter character has room to emerge.",
+     "places": [
+      {
+       "area": "Victoria",
+       "known": "Citadel lanes and island views",
+       "name": "Victoria Cittadella",
+       "tip": "Check wall access and museum admissions separately.",
+       "why": "For the island’s settlement pattern from above."
+      },
+      {
+       "area": "Xagħra",
+       "known": "Megalithic temples",
+       "name": "Ġgantija Temples",
+       "tip": "Confirm admission hours and open-site conditions.",
+       "why": "For island history beyond coastal scenery."
+      },
+      {
+       "area": "Western Gozo coast",
+       "known": "Rocky coast and Inland Sea",
+       "name": "Dwejra",
+       "tip": "Do not mistake old Azure Window photos for a standing arch.",
+       "why": "For a contrasting island coastline."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Practical tips for Gozo",
+     "practicalTips": [
+      {
+       "body": "Calculate bus connections or driving time between Gozo’s stops.",
+       "title": "An island, not a city"
+      },
+      {
+       "body": "The Azure Window no longer stands; visit Dwejra for its present coastline.",
+       "title": "Old arch photographs"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Recommended stay",
+       "value": "2–3 nights"
+      },
+      {
+       "label": "Best time to visit",
+       "value": "April–June and September–October"
+      },
+      {
+       "label": "Getting around",
+       "value": "Buses, vehicles and local walks"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Valletta Travel Guide: Things to Do and Harbour Walks",
+       "city": "Valletta",
+       "description": "St John’s, Upper Barrakka, fortified streets and Three Cities connections in Malta’s compact capital."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "On a day trip, start with Victoria and one main coastal or historical stop. Cittadella, Ġgantija, Dwejra and several beaches in one day can turn Gozo into a view through a vehicle window. Two nights let you separate them and enjoy meals and village walks. An island evening offers something a daytime tour cannot.",
+        "Victoria makes a practical transport base, while a coastal stay keeps the sea close at the end of the day. Without a car, allow for return connections before chaining together bays. Being able to reach a place by bus does not guarantee a quick link to the next one. Fewer stops can make a better Gozo day.",
+        "Treat Ġgantija as time for history and Dwejra as time for the coast, rather than two quick photo stops. Wind can change a seaside plan, so keep a village walk or historical visit as an alternative. Avoid saving the most distant coastal outing for departure morning when a ferry connection is waiting."
+       ],
+       "heading": "A Gozo day trip or two nights on the island?",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "The main vehicle ferry runs Ċirkewwa–Mġarr; Valletta’s passenger fast ferry is a separate service. Plan onward travel from the port to Victoria or your hotel and include road travel, port time and waiting in the airport-to-island journey.",
+        "Many buses connect through Victoria, so nearby coastal points may still require a transfer. For driving, consider left-side traffic and narrow lanes. Group adjacent stops rather than visiting every island edge in one day."
+       ],
+       "heading": "Getting to and around Gozo",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Victoria and Ġgantija make a central/eastern culture day, Dwejra a western coast day. Use another day for a village or beach and keep rough-weather alternatives."
+       ],
+       "heading": "Things to do in Gozo",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Give the citadel’s lanes and collections time as well as the views. Museums, cathedral and outdoor access may have different admissions. Victoria’s transport hub makes onward connections easier."
+         ],
+         "heading": "Victoria Cittadella"
+        },
+        {
+         "body": [
+          "Start with interpretation, then observe the scale and arrangement of the stone structures. Carry water for exposed areas and pair the visit with a Xagħra meal break rather than a quick photo stop."
+         ],
+         "heading": "Ġgantija Temples"
+        },
+        {
+         "body": [
+          "The Azure Window collapsed in 2017; today the visit focuses on Dwejra’s coast and Inland Sea. Boats and swimming depend on conditions. Stay back from cliff edges and check the return bus before setting out."
+         ],
+         "heading": "Dwejra"
+        }
+       ]
+      },
+      {
+       "body": [
+        "After the views from Cittadella, return to Victoria’s streets for a bakery or square-side lunch. That gives the island more depth than seeing it only from above. In smaller villages, remember that everyday life continues around your walk. Respecting the quiet helps preserve what makes the outing enjoyable.",
+        "At Dwejra, do not expect the Azure Window seen in older photographs: the arch is no longer there. The rocky coastline still deserves time in its own right. If sea conditions do not suit boating or swimming, enjoy it from land. A good Gozo visit does not depend on completing every outdoor activity."
+       ],
+       "heading": "From Victoria to the villages: more than the views",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Victoria suits car-free transport and dining, Xagħra village atmosphere, and Marsalforn or Xlendi the coast. For rural farmhouses, plan meals, shopping and evening access; a pool does not make the property central.",
+        "Victoria is convenient for a first car-free visit. Marsalforn or Xlendi may appeal if you want coastal evenings. A rural house suits rest, but groceries and restaurants need some thought. Pick one base for a two-night trip rather than losing time moving between several accommodations."
+       ],
+       "heading": "Where to stay in Gozo",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Gozitan ftira, local cheeses and seafood feature strongly. Ftira toppings can contain dairy, fish or meat. Check seasonal opening days; small villages may have limited late-dinner choices.",
+        "Mix a bakery meal with a longer village-restaurant lunch on another day. Ftira fillings and local cheeses introduce some island flavours. In rural accommodation, think through breakfast and dinner arrangements instead of assuming every meal can be improvised. An unhurried table fits naturally into a slower Gozo visit."
+       ],
+       "heading": "What to eat in Gozo",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "Spring suits walking and greener landscapes, early autumn quieter coastal visits. See exposed temples early in summer. Winter wind and waves can affect ferries and boats, so keep a pre-flight buffer.",
+        "Separate ferry, vehicle or bus, temple admissions and small boat costs. Compare a day tour with an independent two-night stay by time actually spent on the island, not ticket prices alone."
+       ],
+       "heading": "Gozo: weather and budget planning",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Coordinate a Valletta return with museums and flights. Comino boats depend on weather and season; do not add one to a day already covering all Gozo’s coast. Leave luggage and connection time at the port."
+       ],
+       "heading": "Trips beyond Gozo",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Explore Gozo’s Cittadella, Ġgantija temples and Dwejra with Malta ferry options, island transport, areas to stay and a relaxed 3-day itinerary.",
+     "seoTitle": "Gozo Travel Guide: Temples, Coast and Ferry Planning",
+     "sources": [
+      {
+       "name": "Visit Gozo — official island guide",
+       "url": "https://visitgozo.com/"
+      },
+      {
+       "name": "Gozo Channel — ferry services",
+       "url": "https://www.gozochannel.com/"
+      },
+      {
+       "name": "UNESCO — Megalithic Temples of Malta",
+       "url": "https://whc.unesco.org/en/list/132/"
+      },
+      {
+       "name": "Visit Gozo — Dwejra",
+       "url": "https://visitgozo.com/places/dwejra/"
+      }
+     ],
+     "volatileNote": "Admission prices, services and opening hours can change. Check the official sources below before booking."
+    },
+    "es": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Victoria / A los pies de la ciudadela de Gozo",
+        "category": "halal",
+        "cuisine": "Platos mediterráneos y de Oriente Medio",
+        "description": "Restaurante mediterráneo a los pies de la ciudadela de Victoria, con tajines de cordero halal, carnes a la brasa y pescado fresco de la isla.",
+        "lastVerified": "2026-10-06",
+        "name": "Al Qantara Restaurant",
+        "price": "Orta",
+        "verification": {
+         "note": "El establecimiento confirma suministro de carne halal; el pescado es fresco del día.",
+         "sourceName": "Visit Gozo — portal oficial de turismo de la isla",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://www.visitgozo.com/",
+         "status": "restaurant-confirmed"
+        },
+        "why": "El lugar más práctico y fiable de Gozo para comer carne halal fresca y pescado mediterráneo tras visitar la ciudadela."
+       }
+      ],
+      "researchNote": "El pescado fresco en Gozo es ideal para dieta halal; el queso local de cabra (ġbejna) no es apto para veganos.",
+      "vegan": [
+       {
+        "area": "Plaza del pueblo de Gharb",
+        "category": "vegan",
+        "cuisine": "Verduras ecológicas de la isla y mezes",
+        "description": "Cafetería tranquila en el pueblo de Gharb, con platos de tomate de Gozo, paté de habas (bigilla), alcaparras y cocina vegana fresca.",
+        "lastVerified": "2026-10-06",
+        "name": "Rangers Cafe & Holistic Dining",
+        "price": "Ekonomik",
+        "verification": {
+         "note": "El paté tradicional bigilla y los platos con aceite de oliva se elaboran sin lácteos.",
+         "sourceName": "Directorio actualizado de restaurantes veganos de HappyCow",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/rangers-cafe-gharb-183420",
+         "status": "vegan-options"
+        },
+        "why": "El rincón más sosegado del campo de Gozo para probar productos locales frescos y el paté tradicional bigilla en versión vegetal."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "En un día elige una o dos zonas; dos o tres noches permiten cultura y costa con calma.",
+       "q": "¿Cuántos días dedicar a Gozo?"
+      },
+      {
+       "a": "El ferry de vehículos Ċirkewwa–Mġarr lo permite; revisa contrato y horarios. El rápido de pasajeros desde La Valeta es distinto.",
+       "q": "¿Se puede llevar coche a Gozo?"
+      },
+      {
+       "a": "No; se derrumbó en 2017. Costa de Dwejra e Inland Sea siguen, con barcos y baño sujetos a condiciones.",
+       "q": "¿Sigue existiendo Azure Window?"
+      }
+     ],
+     "h1": "Qué ver en Gozo: templos, costa y cómo llegar en ferry",
+     "itinerary": [
+      {
+       "afternoon": "Ġgantija y Xagħra",
+       "evening": "Cena cerca del alojamiento",
+       "morning": "Cittadella y calles de Victoria",
+       "title": "Día 1 — Victoria y templos"
+      },
+      {
+       "afternoon": "Pueblo cercano y descanso",
+       "evening": "Tarde costera cerca de Xlendi",
+       "morning": "Dwejra y barco breve si las condiciones permiten",
+       "title": "Día 2 — Costa occidental"
+      },
+      {
+       "afternoon": "Margen para regreso en ferry",
+       "evening": "Noche en la isla principal de Malta",
+       "morning": "Ramla Bay o pueblo según tiempo",
+       "title": "Día 3 — Isla flexible"
+      }
+     ],
+     "lede": "Un buen día en Gozo puede empezar en la ciudadela, seguir con una comida en un pueblo y acabar en la costa rocosa. Dos noches favorecen una visita más lenta. Quedarte más tiempo en unos pocos lugares permite apreciar mejor la calma de la isla.",
+     "places": [
+      {
+       "area": "Victoria",
+       "known": "Calles de ciudadela y vistas insulares",
+       "name": "Cittadella de Victoria",
+       "tip": "Consulta murallas y museos por separado.",
+       "why": "Para ver desde arriba la distribución de la isla."
+      },
+      {
+       "area": "Xagħra",
+       "known": "Templos megalíticos",
+       "name": "Templos de Ġgantija",
+       "tip": "Confirma horario y condiciones del recinto abierto.",
+       "why": "Para conocer historia insular más allá de la costa."
+      },
+      {
+       "area": "Costa occidental de Gozo",
+       "known": "Costa rocosa e Inland Sea",
+       "name": "Dwejra",
+       "tip": "No confundas fotos antiguas de Azure Window con un arco existente.",
+       "why": "Para conocer otra costa de la isla."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Consejos para visitar Gozo",
+     "practicalTips": [
+      {
+       "body": "Calcula transbordos o conducción entre visitas de Gozo.",
+       "title": "Una isla, no una ciudad"
+      },
+      {
+       "body": "Azure Window ya no está en pie; visita Dwejra por su costa actual.",
+       "title": "Fotos antiguas del arco"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Duración recomendada",
+       "value": "2–3 noches"
+      },
+      {
+       "label": "Mejor época",
+       "value": "Abril–junio y septiembre–octubre"
+      },
+      {
+       "label": "Cómo moverse",
+       "value": "Autobús, vehículo y paseos locales"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Qué ver en La Valeta: ruta de 2 días y dónde dormir",
+       "city": "Valletta",
+       "description": "San Juan, Upper Barrakka, calles amuralladas y conexión con las Tres Ciudades en la capital maltesa."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "En una excursión de un día, elige Victoria y una parada costera o histórica principal. Añadir Cittadella, Ġgantija, Dwejra y varias playas puede reducir Gozo a vistas desde el coche. Con dos noches puedes repartirlas y disfrutar comidas, pueblos y una tarde que el visitante de paso se pierde.",
+        "Victoria facilita el transporte; dormir en la costa acerca el mar al final del día. Sin coche, piensa también en el regreso antes de encadenar bahías. Llegar en autobús a un lugar no garantiza enlazar rápido con otro. Menos paradas pueden mejorar el día.",
+        "Piensa en Ġgantija como el momento histórico y Dwejra como el costero, no como dos fotos rápidas. El viento puede cambiar el plan del mar; guarda un pueblo o una visita histórica como alternativa. No dejes la costa más alejada para la mañana en que debes coger el ferri."
+       ],
+       "heading": "Gozo en un día o con dos noches",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "El ferry principal de vehículos enlaza Ċirkewwa–Mġarr; el rápido de pasajeros desde La Valeta es otro servicio. Planifica puerto–Victoria u hotel y suma carretera, puerto y espera al trayecto desde aeropuerto.",
+        "Muchos autobuses conectan en Victoria: puntos costeros próximos pueden requerir transbordo. Al conducir considera circulación por la izquierda y caminos estrechos. Agrupa visitas cercanas sin recorrer todos los extremos."
+       ],
+       "heading": "Cómo llegar a Gozo y moverse",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Victoria y Ġgantija forman una jornada cultural central/oriental; Dwejra, costa occidental. Dedica otro día a pueblo o playa y conserva alternativas por viento."
+       ],
+       "heading": "Qué ver en Gozo",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Dedica tiempo a calles y colecciones además de las vistas. Museo, catedral y exteriores pueden tener entradas distintas. El nodo de autobuses de Victoria facilita otras conexiones."
+         ],
+         "heading": "Cittadella de Victoria"
+        },
+        {
+         "body": [
+          "Empieza por la interpretación y observa escala y disposición de las piedras. Lleva agua para zonas expuestas y añade una comida en Xagħra, sin reducirlo a una foto rápida."
+         ],
+         "heading": "Templos de Ġgantija"
+        },
+        {
+         "body": [
+          "Azure Window se derrumbó en 2017; hoy la visita se centra en costa de Dwejra e Inland Sea. Barco y baño dependen del mar. Mantente lejos de bordes y consulta autobús de regreso."
+         ],
+         "heading": "Dwejra"
+        }
+       ]
+      },
+      {
+       "body": [
+        "Tras las vistas de Cittadella, vuelve a las calles de Victoria para una panadería o una comida junto a una plaza. La isla gana profundidad más allá del mirador. En los pueblos pequeños continúa la vida cotidiana: respetar la calma ayuda a conservar lo que te gusta del paseo.",
+        "En Dwejra no esperes encontrar la Azure Window de las fotos antiguas: el arco ya no existe. La costa rocosa sigue mereciendo una visita. Si el mar no permite barco o baño, disfrútala desde tierra. Un buen viaje a Gozo no depende de hacer todas las actividades posibles."
+       ],
+       "heading": "De Victoria a los pueblos: algo más que paisajes",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Victoria facilita transporte sin coche y comida; Xagħra, ambiente de pueblo; Marsalforn y Xlendi, costa. En casas rurales planifica comidas, compras y regreso; tener piscina no garantiza ubicación céntrica.",
+        "Victoria resulta práctica sin coche. Marsalforn o Xlendi atraen si quieres tardes junto al mar. Una casa rural permite descansar, pero exige pensar en tiendas y restaurantes. Para dos noches, elige una base en vez de perder tiempo cambiando de alojamiento."
+       ],
+       "heading": "Dónde alojarse en Gozo",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Ftira de Gozo, quesos locales y pescado destacan. Los rellenos pueden llevar lácteos, pescado o carne. Consulta días de apertura; los pueblos pequeños pueden tener pocas cenas tardías.",
+        "Combina una comida de panadería con otra más larga en un restaurante de pueblo. Rellenos de ftira y quesos locales acercan a los sabores de la isla. En un alojamiento rural, piensa antes en desayuno y cena sin dejarlo todo improvisado. Una mesa tranquila continúa el ritmo pausado del viaje."
+       ],
+       "heading": "Qué comer en Gozo",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "Primavera favorece paseos y paisaje verde; comienzo de otoño, costa tranquila. En verano visita templos temprano. Viento y oleaje invernales afectan ferris y barcos: deja margen antes del vuelo.",
+        "Separa ferry, coche o autobús, entradas y barcos. Compara excursión de un día y estancia independiente de dos noches por tiempo real en la isla, además del precio."
+       ],
+       "heading": "Gozo: cuándo ir y presupuesto",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Coordina regreso a La Valeta con museos y vuelos. Comino depende de tiempo y temporada; no lo añadas a una jornada que recorre toda Gozo. Deja margen de equipaje y conexión en puerto."
+       ],
+       "heading": "Excursiones desde Gozo",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Qué ver en Gozo: Cittadella, templos de Ġgantija y Dwejra, con ferris desde Malta, transporte insular, alojamiento y una ruta tranquila de 3 días.",
+     "seoTitle": "Qué ver en Gozo: templos, costa y cómo llegar en ferry",
+     "sources": [
+      {
+       "name": "Visit Gozo — guía oficial de la isla",
+       "url": "https://visitgozo.com/"
+      },
+      {
+       "name": "Gozo Channel — ferris",
+       "url": "https://www.gozochannel.com/"
+      },
+      {
+       "name": "UNESCO — templos megalíticos de Malta",
+       "url": "https://whc.unesco.org/en/list/132/"
+      },
+      {
+       "name": "Visit Gozo — Dwejra",
+       "url": "https://visitgozo.com/places/dwejra/"
+      }
+     ],
+     "volatileNote": "Los precios, los servicios y los horarios pueden cambiar. Consulta las fuentes oficiales indicadas antes de reservar."
+    },
+    "tr": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Victoria / Gozo Kalesi eteği",
+        "category": "halal",
+        "cuisine": "Akdeniz ve Orta Doğu lezzetleri",
+        "description": "Gozo'nun tarihi Victoria kalesi yakınında helal kuzu güveçleri, ızgaralar ve taze yerel Akdeniz balıkları sunan güvenilir lezzet durağı.",
+        "lastVerified": "2026-10-06",
+        "name": "Al Qantara Restaurant",
+        "price": "Orta",
+        "verification": {
+         "note": "İşletme helal et tedarikini beyan etmektedir; ada balıkları günlük tazedir.",
+         "sourceName": "Visit Gozo — resmî ada turizm portalı",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://www.visitgozo.com/",
+         "status": "restaurant-confirmed"
+        },
+        "why": "Gozo adasında kale gezisinden sonra taze helal et ve Akdeniz balığı yemek için en pratik ve güvenilir merkezdir."
+       }
+      ],
+      "researchNote": "Gozo'da taze Akdeniz balıkları helal diyetler için mükemmeldir; yerel keçi peynirleri (ġbejna) vegan beslenmeye uygun değildir.",
+      "vegan": [
+       {
+        "area": "Gharb Köy Meydanı",
+        "category": "vegan",
+        "cuisine": "Organik ada sebzeleri ve meze",
+        "description": "Dingin Gozo köyünde taze yerel domatesler, kapariler, bakla ezmesi ve organik ada zeytinyağıyla hazırlanan bitki bazlı tabaklar.",
+        "lastVerified": "2026-10-06",
+        "name": "Rangers Cafe & Holistic Dining",
+        "price": "Ekonomik",
+        "verification": {
+         "note": "Bigilla ezmesi ve yerel zeytinyağlılar peynirsiz ve sütsüz hazırlanır.",
+         "sourceName": "HappyCow güncel vegan restoran dizini",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/rangers-cafe-gharb-183420",
+         "status": "vegan-options"
+        },
+        "why": "Gozo kırsalında yerel köy ürünlerinin tazeliğini ve meşhur bigilla bakla ezmesini vegan yorumla tatmak için en huzurlu duraktır."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Günübirlikte bir veya iki bölge seçin; ada kültürü ve kıyıları için iki ya da üç gece daha rahattır.",
+       "q": "Gozo kaç günde gezilir?"
+      },
+      {
+       "a": "Ċirkewwa–Mġarr araç feribotu bunu sağlar; kiralama koşulu ve güncel seferi kontrol edin. Valletta yaya hızlı feribotu farklıdır.",
+       "q": "Gozo’ya araçla geçilir mi?"
+      },
+      {
+       "a": "Hayır; 2017’de çöktü. Dwejra kıyısı ve Inland Sea ziyaret edilebilir, fakat tekne ve yüzme hava koşuluna bağlıdır.",
+       "q": "Azure Window hâlâ var mı?"
+      }
+     ],
+     "h1": "Gozo Gezi Rehberi: Gezilecek Yerler ve Feribot Planı",
+     "itinerary": [
+      {
+       "afternoon": "Ġgantija ve Xagħra",
+       "evening": "Konaklama çevresinde yemek",
+       "morning": "Cittadella ve Victoria sokakları",
+       "title": "1. Gün — Victoria ve tapınaklar"
+      },
+      {
+       "afternoon": "Yakın köy ve dinlenme",
+       "evening": "Xlendi çevresinde kıyı akşamı",
+       "morning": "Dwejra; koşula göre kısa tekne",
+       "title": "2. Gün — Batı kıyısı"
+      },
+      {
+       "afternoon": "Feribot dönüşüne zaman payı",
+       "evening": "Malta ana adasında geceleme",
+       "morning": "Havaya göre Ramla Bay veya köy",
+       "title": "3. Gün — Esnek ada günü"
+      }
+     ],
+     "lede": "Gozo’da güzel bir gün bazen kaleden başlayıp bir köy meydanında öğle molasına, oradan kayalık bir kıyıya uzanıyor. Malta’dan daha yavaş bir ada gezisi arıyorsanız burada iki gece kalmak iyi geliyor. Her koya yetişmek yerine birkaç yeri uzun uzun görmek, adanın sakin tarafını daha iyi hissettiriyor.",
+     "places": [
+      {
+       "area": "Victoria",
+       "known": "Kale sokakları ve ada panoraması",
+       "name": "Victoria Cittadella",
+       "tip": "Surlar ile müze girişlerini ayrı kontrol edin.",
+       "why": "Adanın yerleşim düzenini yukarıdan görmek için."
+      },
+      {
+       "area": "Xagħra",
+       "known": "Megalitik tapınaklar",
+       "name": "Ġgantija Tapınakları",
+       "tip": "Giriş saatini ve açık alan koşulunu doğrulayın.",
+       "why": "Adanın tarihini kıyı manzaralarının ötesinde tanımak için."
+      },
+      {
+       "area": "Gozo batı kıyısı",
+       "known": "Kayalık kıyı ve Inland Sea",
+       "name": "Dwejra",
+       "tip": "Eski Azure Window fotoğrafını mevcut yapı sanmayın.",
+       "why": "Adanın farklı kıyı peyzajını görmek için."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Gozo için pratik ipuçları",
+     "practicalTips": [
+      {
+       "body": "Gozo’daki duraklar arasında otobüs aktarması veya araç süresini ayrı hesaplayın.",
+       "title": "Ada, şehir değildir"
+      },
+      {
+       "body": "Azure Window ayakta değildir; Dwejra’yı mevcut kıyı peyzajı için ziyaret edin.",
+       "title": "Eski kemer fotoğrafları"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Önerilen süre",
+       "value": "2–3 gece"
+      },
+      {
+       "label": "En uygun dönem",
+       "value": "Nisan–Haziran ve Eylül–Ekim"
+      },
+      {
+       "label": "Ulaşım yaklaşımı",
+       "value": "Otobüs, araç ve yerel yürüyüş"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Valletta Gezi Rehberi: Gezilecek Yerler ve 2 Günlük Rota",
+       "city": "Valletta",
+       "description": "St. John, Upper Barrakka, sur sokakları ve Üç Şehirler bağlantısıyla Malta’nın küçük başkenti."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "Günübirlik geliyorsanız Victoria ile bir ana kıyı veya tarih durağı seçmek gerçekçi bir başlangıç. Cittadella, Ġgantija, Dwejra ve iki farklı plajı aynı güne eklemek adayı araç camından görmeye çevirebilir. İki gece kaldığınızda bunları ayrı günlere bölüp öğün ve köy yürüyüşlerine de alan açarsınız. Adada geçirilen sakin akşam, gündüz turundan farklı bir deneyim.",
+        "Victoria ulaşım için kullanışlı bir üs; kıyıda konaklamak ise günün sonunda deniz kenarında kalmayı kolaylaştırır. Araç kiralamadan geziyorsanız farklı koylar arasında peş peşe geçiş koymadan dönüş bağlantınızı da düşünün. Otobüsle bir yere ulaşabilmek, sonraki durağa hızlı geçileceği anlamına gelmez. Az duraklı bir gün burada sıkıcı değil, daha rahat olabilir.",
+        "Ġgantija’yı ada gezisinin tarih bölümü, Dwejra’yı ise kıyı ve doğa bölümü gibi düşünün. İkisi de “bir fotoğraf çekip devam” durağı olmak zorunda değil. Rüzgârlı gün kıyı planını değiştirebilir; iç kesimdeki bir köy yürüyüşü veya tarih ziyareti yedek olsun. Son gün feribota yetişme telaşı yaşamamak için uzaktaki kıyıyı çıkış sabahına bırakmayın."
+       ],
+       "heading": "Gozo’da günübirlik gezi ile iki gecelik tatilin farkı",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Malta’dan Gozo’ya ana araç feribotu Ċirkewwa–Mġarr hattıdır; Valletta yaya hızlı feribotu ayrı hizmettir. Varışta limandan Victoria veya otelinize son bağlantıyı planlayın. Havalimanından adaya toplam sürede kara yolu, liman ve beklemeyi birlikte hesaplayın.",
+        "Birçok otobüs bağlantısı Victoria üzerinden kurulur; iki kıyı durağı haritada yakın olsa da aktarma gerekebilir. Araç kiralamada soldan trafik ve dar yolları düşünün. Aynı gün adanın tüm uçlarını dolaşmak yerine yakın duraklar seçin."
+       ],
+       "heading": "Gozo ulaşım rehberi",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Victoria ve Ġgantija doğu/merkez kültür gününü, Dwejra batı kıyı gününü oluşturabilir. Üçüncü günü köy veya plaja ayırın; rüzgârlı havada açık deniz programını değiştirecek esneklik bırakın."
+       ],
+       "heading": "Gozo gezilecek yerler",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Cittadella’da yalnız sur manzarası değil küçük sokak ve koleksiyonlara da zaman bırakın. Müze, katedral ve dış alanın bilet kapsamı aynı olmayabilir. Victoria’daki otobüs düğümü bu ziyareti başka duraklarla birleştirmeyi kolaylaştırır."
+         ],
+         "heading": "Victoria Cittadella"
+        },
+        {
+         "body": [
+          "Ziyarete yorumlayıcı bölümle başlayıp taş yapıların ölçeğine ve düzenine dikkat edin. Güneşli alanda su taşıyın. Xagħra çevresinde yemek molasıyla bağlamak, tapınağı hızlı tek fotoğraf durağı olmaktan çıkarır."
+         ],
+         "heading": "Ġgantija Tapınakları"
+        },
+        {
+         "body": [
+          "Azure Window 2017’de çöktü; bugün rota Dwejra’nın kıyısı ve Inland Sea çevresine odaklanır. Tekne ve yüzme güncel dalga koşuluna bağlıdır. Kayalık kenarlara yaklaşmadan izleyin ve dönüş otobüsünü önceden kontrol edin."
+         ],
+         "heading": "Dwejra"
+        }
+       ]
+      },
+      {
+       "body": [
+        "Cittadella’ya çıkıp manzarayı gördükten sonra Victoria’nın sokaklarına dönmek adayı tek bir yüksek noktadan okumaktan daha güzel. Bir fırına veya meydana uğrayıp öğle molası bırakın. Daha küçük bir köyde yürürken buranın insanların günlük hayatını sürdürdüğü yer olduğunu unutmayın; sakinliği korumak gezinin keyfini de artırır.",
+        "Dwejra’da eski Azure Window fotoğraflarını bugünkü manzara sanmayın; kemer artık yerinde değil. Yine de kayalık kıyı başlı başına görülmeye değer bir durak. Deniz koşulları uygun değilse tekne veya yüzme yerine karadan izlemekle yetinebilirsiniz. Gozo gezisinin iyi olması bütün açık hava etkinliklerinin yapılmasına bağlı değil."
+       ],
+       "heading": "Victoria’dan köylere, manzara kadar gündelik hayat",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Victoria araçsız ulaşım ve restoran, Xagħra köy atmosferi, Marsalforn ve Xlendi kıyı için iyi seçeneklerdir. Kırsal çiftlik evinde yemek, alışveriş ve gece dönüşünü planlayın; havuzlu ev adanın tüm duraklarına yakın değildir.",
+        "Victoria’da kalmak özellikle araçsız ilk gezide kolaylık sağlar. Marsalforn veya Xlendi’de akşam denize yakın olmak daha cazip gelebilir. Kırsal ev ise dinlenme için güzel, ama market ve restoran erişimini ayrı düşünün. İki gecelik geziyi üç ayrı konaklamaya bölmek yerine bir üs seçip adayı oradan gezmek daha rahat."
+       ],
+       "heading": "Gozo nerede kalınır?",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Gozitan ftira, yerel peynirler ve deniz ürünleri adanın yemek omurgasıdır. Ftira’nın dolgusunda peynir, balık veya et olabilir. Köy restoranının mevsimsel çalışma günlerini kontrol edin; geç akşam öğünü için her küçük köyde aynı seçenek yoğunluğunu beklemeyin.",
+        "Gozo’da bir fırın öğünüyle köy restoranında uzun bir yemeği farklı günlere ayırabilirsiniz. Ftira’nın dolgusu ve yerel peynirler adanın tadını tanımaya yardımcı olur. Kırsal konaklamada bütün öğünleri spontane bırakmak yerine kahvaltı ve akşam yemeği düzenini baştan düşünün. Sakin bir sofra, adayı yavaş gezmenin doğal devamı."
+       ],
+       "heading": "Gozo ne yenir?",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "İlkbahar yürüyüş ve yeşil peyzaj, erken sonbahar daha sakin kıyı gezisi için uygundur. Yaz sıcağında açık tapınakları sabaha alın. Kış rüzgârı ve dalga feribotla tekneyi etkileyebilir; uçuş öncesine tampon koyun.",
+        "Feribot, araç veya otobüs, tapınak bileti ve küçük tekne gezisini ayrı hesaplayın. Günübirlik tur ile iki gecelik bağımsız geziyi yalnız bilet fiyatına göre karşılaştırmayın; adada kalan gerçek süre önemli bir farktır."
+       ],
+       "heading": "Gozo için mevsim ve bütçe planı",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Valletta dönüşünü müze ve uçuş takvimiyle uyumlu kurun. Comino tekne gezisi hava ve sezon ürünüdür; Gozo’nun tüm kıyılarıyla aynı kısa güne eklemeyin. Liman bağlantısında bagaj ve aktarma payı bırakın."
+       ],
+       "heading": "Gozo çevresinde rota önerileri",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Gozo gezi rehberi: Victoria Cittadella, Ġgantija ve Dwejra; Malta’dan feribot, ada içi ulaşım, nerede kalınır ve 3 günlük sakin ada rotası.",
+     "seoTitle": "Gozo Gezi Rehberi: Gezilecek Yerler ve Feribot Planı",
+     "sources": [
+      {
+       "name": "Visit Gozo — resmî ada rehberi",
+       "url": "https://visitgozo.com/"
+      },
+      {
+       "name": "Gozo Channel — feribot",
+       "url": "https://www.gozochannel.com/"
+      },
+      {
+       "name": "UNESCO — Malta megalitik tapınakları",
+       "url": "https://whc.unesco.org/en/list/132/"
+      },
+      {
+       "name": "Visit Gozo — Dwejra",
+       "url": "https://visitgozo.com/places/dwejra/"
+      }
+     ],
+     "volatileNote": "Bilet ücretleri, seferler ve ziyaret saatleri değişebilir. Rezervasyon öncesinde aşağıdaki resmî kaynaklardan güncel bilgiyi kontrol edin."
+    }
+   }
+  }
+ ]
+}

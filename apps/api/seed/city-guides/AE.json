@@ -1,0 +1,1492 @@
+{
+ "countryCode": "AE",
+ "guides": [
+  {
+   "citySlug": "dubai",
+   "completeLangs": [
+    "en",
+    "es"
+   ],
+   "reviewed": true,
+   "translations": {
+    "en": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Al Seef / Dubai Creek",
+        "category": "halal",
+        "cuisine": "Traditional Emirati cuisine",
+        "description": "Authentic Emirati restaurant in a nostalgic 1960s courtyard setting, serving traditional machboos, harees and freshly fried luqaimat.",
+        "lastVerified": "2026-10-06",
+        "name": "Al Fanar Restaurant & Cafe",
+        "price": "Orta",
+        "verification": {
+         "note": "Meat sourcing complies with official UAE halal standards; no alcohol is served on the premises.",
+         "sourceName": "Visit Dubai — official gastronomy guide",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://www.visitdubai.com/en/places-to-visit/al-fanar-restaurant-and-cafe",
+         "status": "certified-halal"
+        },
+        "why": "The most trusted address along Dubai Creek to experience authentic Emirati recipes and certified halal meats in a heritage atmosphere."
+       }
+      ],
+      "researchNote": "Local Emirati food in Dubai is generally halal; luxury hotel dining often includes alcohol service. For vegan meals, confirm that butter or ghee is not used.",
+      "vegan": [
+       {
+        "area": "Jumeirah 1",
+        "category": "vegan",
+        "cuisine": "Plant-based and gluten-free cafe",
+        "description": "Dubai's original fully plant-based cafe, serving raw desserts, wholesome smoothie bowls and gluten-free dishes in a serene garden.",
+        "lastVerified": "2026-10-06",
+        "name": "SEVA Experience",
+        "price": "Orta",
+        "verification": {
+         "note": "The entire menu is 100% plant-based and gluten-free; no animal products including dairy or eggs are used.",
+         "sourceName": "HappyCow's current vegan restaurant directory",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/seva-table-dubai-44280",
+         "status": "fully-vegan"
+        },
+        "why": "The leading spot in Dubai for a 100% plant-based, gluten-free breakfast or lunch in a peaceful garden setting away from the towers."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Allow three full days for Old Dubai, Downtown and the coast; four or five is easier with museums or a desert trip.",
+       "q": "How many days do you need in Dubai?"
+      },
+      {
+       "a": "A metro-and-taxi combination can cover a first city trip. For driving, account for traffic, parking and your hotel’s parking charges.",
+       "q": "Do you need a car in Dubai?"
+      },
+      {
+       "a": "Bur Dubai–Deira for the creek, Downtown for the modern centre, and Marina–JBR for the beach; check transport access in each.",
+       "q": "Where should you stay in Dubai?"
+      }
+     ],
+     "h1": "Dubai Travel Guide: Things to Do and a 3-Day Itinerary",
+     "itinerary": [
+      {
+       "afternoon": "Creek, abra crossing and Deira souks",
+       "evening": "Dinner in Bur Dubai and a creek walk",
+       "morning": "Al Fahidi lanes and small exhibitions",
+       "title": "Day 1 — Old Dubai"
+      },
+      {
+       "afternoon": "Dubai Mall and an indoor break nearby",
+       "evening": "A short Downtown walk",
+       "morning": "Your booked Burj Khalifa visit",
+       "title": "Day 2 — Downtown"
+      },
+      {
+       "afternoon": "Rest or one additional visit",
+       "evening": "Marina walk and dinner",
+       "morning": "Cooler hours on JBR beach",
+       "title": "Day 3 — The coast"
+      }
+     ],
+     "lede": "One morning in Dubai can mean an abra across the creek and a wander through the spice souk; that evening, you might be walking beneath illuminated towers. Make room for both sides of the city and your trip becomes much more than a circuit of malls and observation decks.",
+     "places": [
+      {
+       "area": "Bur Dubai and Deira",
+       "known": "Historic lanes and an abra crossing",
+       "name": "Al Fahidi and Dubai Creek",
+       "tip": "Check the departure and return abra piers separately.",
+       "why": "For port life and traditional architecture in one walk."
+      },
+      {
+       "area": "Downtown Dubai",
+       "known": "Observation decks and skyline",
+       "name": "Burj Khalifa and Downtown",
+       "tip": "Compare deck level, time slot and ticket inclusions.",
+       "why": "For a sense of modern Dubai’s scale."
+      },
+      {
+       "area": "Marina waterfront",
+       "known": "Waterfront walks and the beach",
+       "name": "Dubai Marina and JBR",
+       "tip": "Avoid long waterfront walks in midday heat.",
+       "why": "For an outdoor coastal break between city visits."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Practical tips for Dubai",
+     "practicalTips": [
+      {
+       "body": "Check whether your flight uses DXB or DWC; a generic “Dubai airport” transfer is not precise enough.",
+       "title": "Airport terminal matters"
+      },
+      {
+       "body": "Keep visits near your timed admission in the same area to reduce travel.",
+       "title": "One area per day"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Recommended stay",
+       "value": "3–4 full days"
+      },
+      {
+       "label": "Best time to visit",
+       "value": "November–March"
+      },
+      {
+       "label": "Getting around",
+       "value": "Metro, walking and last-mile taxis"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Abu Dhabi Travel Guide: Mosque, Museums and Where to Stay",
+       "city": "Abu Dabi",
+       "description": "The Grand Mosque, Saadiyat museums, Qasr Al Watan and Corniche connect culture with the coast."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "For a first visit, give Old Dubai, Downtown and the Marina their own days. Walk from Al Fahidi down to the water, cross by abra and explore Deira’s souks. Anchor your Downtown day around a Burj Khalifa booking. Keep the coastal day looser: swimming, a long waterfront walk and a leisurely meal deserve some breathing room.",
+        "The cost of Dubai depends heavily on what you choose to do. Skyline restaurants, private beaches and paid observation decks soon add up. Balance them with neighbourhood walks, straightforward meals from the city’s many cuisines and metro journeys. An evening by the water can be satisfying without another elaborate booking.",
+        "Treat a desert excursion as a substantial part of the day. Hotel pickups, driving and the return journey all shape the schedule. Dune driving and a quiet desert evening are quite different experiences, so choose the actual programme rather than its headline. With four days, replace a beach or museum block instead of squeezing the excursion into an already full day."
+       ],
+       "heading": "Your first Dubai trip: three different moods",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Dubai International (DXB) and Al Maktoum (DWC) are different airports. DXB Terminals 1 and 3 have metro connections; check separate transfers for other terminals and late arrivals. Match the hotel transfer to your actual arrival airport.",
+        "Use the metro as your backbone, with a nol card and the correct fare zones. A short map distance from a station may still be an uncomfortable hot walk. Group Creek, Downtown and Marina separately, and check RTA’s current abra services."
+       ],
+       "heading": "Getting to and around Dubai",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "A creek day, a Downtown day and a coastal day form a practical geographical sequence. Build each day around any timed admission you book."
+       ],
+       "heading": "Things to do in Dubai",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Walk Al Fahidi in the morning, then descend to the creek and cross by abra for Deira’s souks. Al Seef offers a more curated waterfront; leave room for small exhibitions rather than treating every lane as identical heritage."
+         ],
+         "heading": "Al Fahidi and Dubai Creek"
+        },
+        {
+         "body": [
+          "Burj Khalifa tickets differ by deck and time slot: read the admission details, not just the headline price. Include walking time through the Dubai Mall connection and keep the rest of your day in the Downtown area."
+         ],
+         "heading": "Burj Khalifa and Downtown"
+        },
+        {
+         "body": [
+          "The Marina walkway follows the yacht harbour, while JBR faces the open beach. Visit in cooler hours and check loungers, towels and minimum-spend conditions before settling into a beach business."
+         ],
+         "heading": "Dubai Marina and JBR"
+        }
+       ]
+      },
+      {
+       "body": [
+        "Continue from Al Fahidi towards Al Seef for a waterfront pause. The carefully arranged Al Seef promenade feels different from Al Fahidi’s historic lanes; enjoy each on its own terms. Even without shopping, crossing between the two creek banks gives the day a sense of place that a taxi ride between landmarks cannot offer.",
+        "A Marina and JBR evening works well with little more than a walk and dinner. Sitting by the water is part of the holiday, especially after a hot sightseeing day. For families or anyone travelling at a gentler pace, one booked attraction and some unstructured outdoor time can be a better combination than a packed schedule."
+       ],
+       "heading": "Slow down beside the creek and the coast",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Choose Deira or Bur Dubai for the creek and relatively affordable stays, Downtown for towers and shopping, or Marina–JBR for the beach. Real walking access to transport, noise and daily transfer costs matter more than a room’s skyline photo.",
+        "A distant resort may look wonderful in photographs but turn a short city break into repeated transfers. That trade-off can suit a beach holiday; for neighbourhoods and central sights, a base near the metro is usually easier. Think about the streets you will return through after dinner as well as the room itself."
+       ],
+       "heading": "Where to stay in Dubai",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Try machboos, harees and luqaimat for an introduction to Emirati food. Deira and Bur Dubai also have rich South Asian and Levantine dining. For brunch or view-led packages, compare drink inclusions, service charges and taxes rather than assuming identical value.",
+        "Keep lunch close to the day’s sightseeing: a small restaurant around the creek, or a table in Downtown on your tower day. To try Emirati cooking, look for specific dishes rather than a broad “Arabic food” label. Indian, Pakistani and Levantine kitchens are also part of Dubai’s dining character and make a welcome change from hotel buffets."
+       ],
+       "heading": "What to eat in Dubai",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "November to March is more comfortable outdoors, with higher accommodation demand. In summer, do not pile beach, desert and long walks into one day; combine indoor visits with shorter evening outings.",
+        "Observation decks, theme parks and private desert trips add up quickly. Choose a main paid experience and balance it with creek walks; compare a cheaper distant hotel against the transport bill."
+       ],
+       "heading": "Dubai: weather and budget planning",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Abu Dhabi makes a worthwhile museum and Grand Mosque extension, ideally with an overnight stay. For desert excursions, confirm driving, food, camp arrangements and return transport in writing."
+       ],
+       "heading": "Trips beyond Dubai",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Explore Dubai Creek, Al Fahidi, Burj Khalifa and the Marina, with a 3-day itinerary, metro and nol tips, local food and areas to stay in Dubai.",
+     "seoTitle": "Dubai Travel Guide: Things to Do and a 3-Day Itinerary",
+     "sources": [
+      {
+       "name": "Visit Dubai — official tourism",
+       "url": "https://www.visitdubai.com/en/"
+      },
+      {
+       "name": "RTA — public transport and abra",
+       "url": "https://www.rta.ae/wps/portal/rta/ae/home/promotion/dubai-creek-abra"
+      },
+      {
+       "name": "Burj Khalifa — visits and tickets",
+       "url": "https://www.burjkhalifa.ae/"
+      },
+      {
+       "name": "Visit Dubai — Al Seef waterfront",
+       "url": "https://www.visitdubai.com/en/explore-dubai/dubai-neighbourhoods/al-seef"
+      }
+     ],
+     "volatileNote": "Admission prices, services and opening hours can change. Check the official sources below before booking."
+    },
+    "es": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Al Seef / Dubai Creek",
+        "category": "halal",
+        "cuisine": "Cocina emiratí tradicional",
+        "description": "Restaurante emiratí tradicional en un patio ambientado en los años 60, con machboos a fuego lento, harees y buñuelos luqaimat.",
+        "lastVerified": "2026-10-06",
+        "name": "Al Fanar Restaurant & Cafe",
+        "price": "Orta",
+        "verification": {
+         "note": "El suministro de carne cumple las normas halal oficiales de EAU; no se sirve alcohol en el establecimiento.",
+         "sourceName": "Visit Dubai — guía gastronómica oficial",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://www.visitdubai.com/en/places-to-visit/al-fanar-restaurant-and-cafe",
+         "status": "certified-halal"
+        },
+        "why": "La dirección más fiable junto a Dubai Creek para probar recetas emiratíes tradicionales y carnes halal certificadas en un entorno histórico."
+       }
+      ],
+      "researchNote": "La cocina emiratí en Dubái suele ser halal; los restaurantes de hoteles de lujo suelen servir alcohol. Para opciones veganas, confirma que no se use mantequilla ni ghee.",
+      "vegan": [
+       {
+        "area": "Jumeirah 1",
+        "category": "vegan",
+        "cuisine": "Cafetería vegetal y sin gluten",
+        "description": "La primera cafetería 100% vegetal de Dubái, con repostería crudivegana, boles de quinoa y platos sin gluten en un jardín tranquilo.",
+        "lastVerified": "2026-10-06",
+        "name": "SEVA Experience",
+        "price": "Orta",
+        "verification": {
+         "note": "Toda la carta es 100% vegetal y sin gluten; no se utiliza ningún producto de origen animal.",
+         "sourceName": "Directorio actualizado de restaurantes veganos de HappyCow",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/seva-table-dubai-44280",
+         "status": "fully-vegan"
+        },
+        "why": "El lugar de referencia en Dubái para un desayuno o almuerzo 100% vegetal y sin gluten en un jardín relajante lejos de los rascacielos."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Calcula tres días completos para casco antiguo, Downtown y costa; cuatro o cinco si añades museos o desierto.",
+       "q": "¿Cuántos días hacen falta en Dubái?"
+      },
+      {
+       "a": "Metro y taxi pueden bastar en una primera visita. Si alquilas coche, incluye tráfico, aparcamiento y tarifa de parking del hotel.",
+       "q": "¿Hace falta coche en Dubái?"
+      },
+      {
+       "a": "Bur Dubai–Deira para Creek, Downtown para el centro moderno y Marina–JBR para playa; verifica el acceso al transporte.",
+       "q": "¿Dónde conviene alojarse en Dubái?"
+      }
+     ],
+     "h1": "Qué ver en Dubái: ruta de 3 días y dónde alojarse",
+     "itinerary": [
+      {
+       "afternoon": "Creek, abra y zocos de Deira",
+       "evening": "Cena en Bur Dubai y paseo por Creek",
+       "morning": "Calles de Al Fahidi y pequeñas exposiciones",
+       "title": "Día 1 — Dubái antiguo"
+      },
+      {
+       "afternoon": "Dubai Mall y descanso en un interior cercano",
+       "evening": "Paseo breve por Downtown",
+       "morning": "Visita reservada a Burj Khalifa",
+       "title": "Día 2 — Downtown"
+      },
+      {
+       "afternoon": "Descanso o una visita adicional",
+       "evening": "Paseo y cena en Marina",
+       "morning": "Playa de JBR en horas frescas",
+       "title": "Día 3 — Costa"
+      }
+     ],
+     "lede": "En Dubái puedes cruzar el Creek en abra y perderte entre especias por la mañana, y pasear bajo rascacielos iluminados esa misma noche. Dale espacio a ambos ambientes: el viaje gana mucho cuando dejas de enlazar centros comerciales y miradores.",
+     "places": [
+      {
+       "area": "Bur Dubai y Deira",
+       "known": "Barrio histórico y travesía en abra",
+       "name": "Al Fahidi y Dubai Creek",
+       "tip": "Comprueba los embarcaderos de ida y vuelta.",
+       "why": "Para conocer vida portuaria y arquitectura tradicional."
+      },
+      {
+       "area": "Downtown Dubai",
+       "known": "Miradores y rascacielos",
+       "name": "Burj Khalifa y Downtown",
+       "tip": "Compara planta, franja horaria y servicios incluidos.",
+       "why": "Para comprender la escala del Dubái moderno."
+      },
+      {
+       "area": "Paseo de Marina",
+       "known": "Paseos costeros y playa",
+       "name": "Dubai Marina y JBR",
+       "tip": "Evita paseos largos junto al mar al mediodía.",
+       "why": "Para añadir costa y descanso al recorrido urbano."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Consejos para visitar Dubái",
+     "practicalTips": [
+      {
+       "body": "Comprueba DXB o DWC en el billete; un traslado genérico al “aeropuerto de Dubái” puede llevarte al lugar equivocado.",
+       "title": "Importa la terminal"
+      },
+      {
+       "body": "Agrupa las visitas alrededor de tu entrada con hora fija para reducir desplazamientos.",
+       "title": "Una zona cada día"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Duración recomendada",
+       "value": "3–4 días completos"
+      },
+      {
+       "label": "Mejor época",
+       "value": "Noviembre–marzo"
+      },
+      {
+       "label": "Cómo moverse",
+       "value": "Metro, paseos y taxi para el último tramo"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Qué ver en Abu Dabi: mezquita, museos y alojamiento",
+       "city": "Abu Dabi",
+       "description": "La gran mezquita, museos de Saadiyat, Qasr Al Watan y Corniche unen cultura y costa."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "En una primera visita, separa el casco antiguo, Downtown y Marina por días. Baja desde Al Fahidi hasta el agua, cruza en abra y recorre los zocos de Deira. Organiza Downtown alrededor de la entrada a Burj Khalifa. Deja más libre la jornada costera para bañarte, pasear y comer sin mirar continuamente el reloj.",
+        "El presupuesto cambia mucho según tus planes. Los restaurantes con vistas, las playas privadas y los miradores de pago se acumulan rápidamente. Compénsalos con paseos por barrios, comidas sencillas de distintas cocinas y trayectos en metro. No hace falta reservar una experiencia de lujo para disfrutar cada noche.",
+        "Una excursión al desierto ocupa una parte importante del día, entre recogida, desplazamientos y regreso. Conducir sobre dunas y pasar una tarde tranquila en el desierto son experiencias distintas. Elige el programa concreto que te apetece y, si tienes cuatro días, dale su propio espacio en lugar de añadirlo a una jornada completa."
+       ],
+       "heading": "Primera vez en Dubái: tres ambientes para un viaje",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Dubai International (DXB) y Al Maktoum (DWC) son aeropuertos distintos. Las terminales 1 y 3 de DXB tienen metro; para otras terminales o llegadas nocturnas comprueba el traslado. Reserva según tu aeropuerto real.",
+        "Utiliza el metro con tarjeta nol y las zonas correctas. Una distancia corta desde la estación puede resultar incómoda con calor. Agrupa Creek, Downtown y Marina por jornadas y consulta en RTA los servicios de abra."
+       ],
+       "heading": "Cómo llegar a Dubái y moverse",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Un día para Creek, otro para Downtown y otro para la costa forman una secuencia práctica. Organiza cada jornada alrededor de las entradas con hora fija."
+       ],
+       "heading": "Qué ver en Dubái",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Recorre Al Fahidi por la mañana y baja al Creek para cruzar en abra hacia los zocos de Deira. Al Seef ofrece un paseo más acondicionado; reserva tiempo para pequeñas exposiciones y talleres."
+         ],
+         "heading": "Al Fahidi y Dubai Creek"
+        },
+        {
+         "body": [
+          "Las entradas de Burj Khalifa cambian según mirador y horario. Lee las condiciones y suma el paseo por la conexión con Dubai Mall. Completa la jornada en Downtown en lugar de interrumpirla con Marina."
+         ],
+         "heading": "Burj Khalifa y Downtown"
+        },
+        {
+         "body": [
+          "Marina bordea el puerto deportivo; JBR mira a la playa. Pasea en horas frescas y comprueba tumbona, toalla y consumo mínimo antes de instalarte en un establecimiento costero."
+         ],
+         "heading": "Dubai Marina y JBR"
+        }
+       ]
+      },
+      {
+       "body": [
+        "Después de Al Fahidi, acércate al paseo de Al Seef. Su frente marítimo acondicionado tiene un carácter distinto al de las callejuelas históricas: disfruta ambos sin confundirlos. Aunque no quieras comprar, cruzar de una orilla a otra ayuda a entender la ciudad mejor que saltar entre monumentos en taxi.",
+        "Para una tarde en Marina y JBR basta con un paseo y una cena. Sentarte junto al agua también forma parte de las vacaciones, sobre todo después de un día caluroso. Con niños o a un ritmo tranquilo, una sola actividad reservada y tiempo libre al aire libre suelen funcionar mejor que una agenda llena."
+       ],
+       "heading": "Un Dubái más tranquilo junto al Creek y la costa",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Deira y Bur Dubai funcionan para Creek y alojamientos más asequibles; Downtown para rascacielos y compras; Marina–JBR para playa. Valora acceso real al transporte, ruido y traslados diarios antes que las vistas.",
+        "Un resort alejado puede salir precioso en las fotos y obligarte a desplazarte cada mañana. Para unas vacaciones de playa quizá compense; para recorrer barrios y monumentos, una base junto al metro resulta más práctica. Piensa también en el entorno al que volverás después de cenar."
+       ],
+       "heading": "Dónde alojarse en Dubái",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Prueba machboos, harees y luqaimat para acercarte a la cocina emiratí. Deira y Bur Dubai también ofrecen cocina sudasiática y levantina. En brunches y cenas con vistas, compara bebidas, servicio e impuestos.",
+        "Come cerca de los lugares que visites: una pequeña cocina junto al Creek o una mesa en Downtown el día del mirador. Para probar comida emiratí, busca platos concretos y no solo la etiqueta «comida árabe». Las cocinas india, pakistaní y levantina también merecen espacio entre los bufés de hotel."
+       ],
+       "heading": "Qué comer en Dubái",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "De noviembre a marzo se pasea mejor, aunque aumenta la demanda hotelera. En verano combina interiores y salidas cortas al atardecer; no acumules playa, desierto y largas caminatas en una jornada.",
+        "Miradores, parques y excursiones privadas al desierto suman rápido. Elige una experiencia principal de pago y equilibra con paseos por Creek; compara hotel barato y coste de transporte."
+       ],
+       "heading": "Dubái: cuándo ir y presupuesto",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Abu Dabi permite ampliar el viaje con museos y la gran mezquita, mejor con una noche allí. En el desierto confirma por escrito conducción, comida, campamento y regreso."
+       ],
+       "heading": "Excursiones desde Dubái",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Qué ver en Dubái: Al Fahidi, Dubai Creek, Burj Khalifa y Marina, con ruta de 3 días, consejos de metro y tarjeta nol, comida local y alojamiento.",
+     "seoTitle": "Qué ver en Dubái: ruta de 3 días y dónde alojarse",
+     "sources": [
+      {
+       "name": "Visit Dubai — turismo oficial",
+       "url": "https://www.visitdubai.com/en/"
+      },
+      {
+       "name": "RTA — transporte público y abra",
+       "url": "https://www.rta.ae/wps/portal/rta/ae/home/promotion/dubai-creek-abra"
+      },
+      {
+       "name": "Burj Khalifa — visitas y entradas",
+       "url": "https://www.burjkhalifa.ae/"
+      },
+      {
+       "name": "Visit Dubai — paseo de Al Seef",
+       "url": "https://www.visitdubai.com/en/explore-dubai/dubai-neighbourhoods/al-seef"
+      }
+     ],
+     "volatileNote": "Los precios, los servicios y los horarios pueden cambiar. Consulta las fuentes oficiales indicadas antes de reservar."
+    },
+    "tr": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Al Seef / Dubai Creek",
+        "category": "halal",
+        "cuisine": "Geleneksel Emirlik mutfağı",
+        "description": "1960'ların otantik Emirlik mimarisinde odun ateşinde machboos, aromatik harees ve çıtır luqaimat tatlısı sunan tescilli geleneksel helal restoran.",
+        "lastVerified": "2026-10-06",
+        "name": "Al Fanar Restaurant & Cafe",
+        "price": "Orta",
+        "verification": {
+         "note": "Et tedariki BAE resmî helal standartlarına uygundur; mekânda alkol servisi bulunmamaktadır.",
+         "sourceName": "Visit Dubai — resmî gastronomi rehberi",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://www.visitdubai.com/en/places-to-visit/al-fanar-restaurant-and-cafe",
+         "status": "certified-halal"
+        },
+        "why": "Dubai Creek kıyısında otantik Emirlik mutfağını ve tescilli helal etlerini tarihî bir ambiyansta deneyimlemek için en güvenilir adrestir."
+       }
+      ],
+      "researchNote": "Dubai'de yerel Emirlik yemekleri çoğunlukla helaldir; lüks otel restoranlarında alkol servisi yaygındır. Vegan tercihlerde tereyağı ve ghee (sade yağ) ayrımını baştan belirtin.",
+      "vegan": [
+       {
+        "area": "Jumeirah 1",
+        "category": "vegan",
+        "cuisine": "Bitki bazlı ve glütensiz kafe",
+        "description": "Yeşillikler içindeki bahçe avlusunda çiğ tatlılar, besleyici kinoa kaseleri ve organik lezzetler sunan Dubai'nin ilk tamamen vegan sağlıklı yaşam vahası.",
+        "lastVerified": "2026-10-06",
+        "name": "SEVA Experience",
+        "price": "Orta",
+        "verification": {
+         "note": "Menünün tamamı %100 bitki bazlı ve glütensizdir; süt ve yumurta dahil hiçbir hayvansal ürün kullanılmaz.",
+         "sourceName": "HappyCow güncel vegan restoran dizini",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/seva-table-dubai-44280",
+         "status": "fully-vegan"
+        },
+        "why": "Dubai'de gökdelen temposundan uzak, sakin bir bahçede %100 bitki bazlı ve glütensiz bir kahvaltı veya öğle yemeği için 1 numaradır."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Eski Dubai, Downtown ve sahil için üç tam gün; müze veya çöl eklemek için dört ya da beş gün daha rahat olur.",
+       "q": "Dubai kaç günde gezilir?"
+      },
+      {
+       "a": "İlk şehir gezisinde metro ve taksi kombinasyonu yeterli olabilir. Dağınık rota için araba seçerken otopark, trafik ve otel park ücretini hesaba katın.",
+       "q": "Dubai’de araba gerekir mi?"
+      },
+      {
+       "a": "Creek için Bur Dubai–Deira, modern merkez için Downtown, plaj için Marina–JBR. Her birinde ulaşım erişimini ayrıca kontrol edin.",
+       "q": "Dubai’de nerede kalmalı?"
+      }
+     ],
+     "h1": "Dubai Gezi Rehberi: Gezilecek Yerler ve 3 Günlük Rota",
+     "itinerary": [
+      {
+       "afternoon": "Creek, abra ve Deira çarşıları",
+       "evening": "Bur Dubai’de yemek ve kıyı yürüyüşü",
+       "morning": "Al Fahidi sokakları ve küçük sergiler",
+       "title": "1. Gün — Eski Dubai"
+      },
+      {
+       "afternoon": "Dubai Mall ve çevrede kapalı mekân molası",
+       "evening": "Downtown çevresinde kısa yürüyüş",
+       "morning": "Saatli Burj Khalifa ziyareti",
+       "title": "2. Gün — Downtown"
+      },
+      {
+       "afternoon": "Dinlenme veya tek bir ek ziyaret",
+       "evening": "Marina yürüyüşü ve akşam yemeği",
+       "morning": "JBR sahilinde serin saatler",
+       "title": "3. Gün — Kıyı"
+      }
+     ],
+     "lede": "Dubai’de bir sabah abra ile Creek’i geçip baharat çarşısına karışabilir, aynı akşam gökdelenlerin ışıkları altında yürüyebilirsiniz. Şehrin güzel tarafı bu iki dünyayı birlikte görmekte; birkaç doğru mahalle seçimiyle tatil, alışveriş merkezleri arasında geçen bir koşturmacadan çok daha fazlasına dönüşüyor.",
+     "places": [
+      {
+       "area": "Bur Dubai ve Deira",
+       "known": "Tarihî mahalle ve abra geçişi",
+       "name": "Al Fahidi ve Dubai Creek",
+       "tip": "Gidiş ve dönüş abra iskelesini ayrı kontrol edin.",
+       "why": "Liman yaşamı ile geleneksel mimariyi birlikte görmek için."
+      },
+      {
+       "area": "Downtown Dubai",
+       "known": "Gözlem terası ve modern siluet",
+       "name": "Burj Khalifa ve Downtown",
+       "tip": "Kat, giriş saati ve bilet kapsamını karşılaştırın.",
+       "why": "Modern Dubai’nin ölçeğini ve şehir manzarasını anlamak için."
+      },
+      {
+       "area": "Marina sahili",
+       "known": "Kıyı yürüyüşü ve plaj",
+       "name": "Dubai Marina ve JBR",
+       "tip": "Öğle sıcağında uzun kıyı yürüyüşü planlamayın.",
+       "why": "Şehir gezisine açık hava ve deniz molası eklemek için."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Dubai için pratik ipuçları",
+     "practicalTips": [
+      {
+       "body": "Uçuş biletinizde DXB veya DWC yazdığını kontrol edin; transferi yalnız “Dubai havalimanı” diye ayırmayın.",
+       "title": "Terminal ayrımı"
+      },
+      {
+       "body": "Saatli bilet çevresindeki ziyaretleri aynı bölgede seçerek şehir içi mesafeyi azaltın.",
+       "title": "Tek gün, tek bölge"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Önerilen süre",
+       "value": "3–4 tam gün"
+      },
+      {
+       "label": "En uygun dönem",
+       "value": "Kasım–Mart"
+      },
+      {
+       "label": "Ulaşım yaklaşımı",
+       "value": "Metro, yürüyüş ve son bağlantı taksisi"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Abu Dabi Gezi Rehberi: Gezilecek Yerler ve Müze Rotası",
+       "city": "Abu Dabi",
+       "description": "Şeyh Zayed Camii, Saadiyat müzeleri, Qasr Al Watan ve Corniche ile kültür ve kıyı başkenti."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "İlk ziyaret için eski Dubai, Downtown ve Marina’yı ayrı günlere ayırmak rahat bir başlangıç. Creek gününde Al Fahidi’nin dar sokaklarından suya inin, abra geçişinin ardından Deira çarşılarında dolaşın. Downtown gününde Burj Khalifa rezervasyonunu merkeze alın. Sahil gününü ise mümkün olduğunca boş bırakın; denize girmekle uzun bir kıyı yürüyüşü aynı tempoyu istemiyor.",
+        "“Dubai pahalı mı?” sorusunun cevabı seçtiğiniz güne göre değişiyor. Manzaralı restoran, özel plaj ve ücretli terasları peş peşe eklemek bütçeyi büyütür. Buna karşılık eski mahallelerde yürümek, farklı mutfaklardan sade bir öğün seçmek ve ulaşımda metroyu kullanmak daha dengeli bir gezi kurmanıza yardımcı olur. Her akşamın gösterişli bir rezervasyon olması gerekmiyor.",
+        "Çöl turu istiyorsanız onu şehir gezisine küçük bir ek gibi düşünmeyin. Otelden alınış, araçta geçen süre ve dönüş saati gününüzün büyük bölümünü belirler. Kumul sürüşü ile sakin bir çöl akşamı farklı deneyimlerdir; satın alacağınız programın gerçekten size uygun olduğuna bakın. Dört gününüz varsa bir sahil veya müze bloğunu buna ayırmak, programı üst üste yığmaktan daha keyifli olur."
+       ],
+       "heading": "Dubai’yi ilk kez gezeceklere: üç farklı şehir, tek tatil",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Dubai International (DXB) ile Al Maktoum (DWC) aynı havalimanı değildir. DXB’nin Terminal 1 ve 3’ünde metro bağlantısı bulunur; diğer terminaller ve geç saatli inişler için transfer seçeneğini ayrıca kontrol edin. Otel seçimini gerçek varış terminalinizle eşleştirin.",
+        "Nol kartı ve doğru zon biletiyle metroyu omurga yapın. İstasyondan çıkan harita mesafesi, sıcak havada rahat yürüyüş anlamına gelmez. Creek, Downtown ve Marina’yı aynı gün uçtan uca bağlamak yerine yakın durak kümeleri kurun; abra hattının güncel çalışmasını RTA’dan kontrol edin."
+       ],
+       "heading": "Dubai ulaşım rehberi",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "İlk gün eski Dubai, ikinci gün Downtown, üçüncü gün sahil iyi bir coğrafi sıralamadır. Saatli gözlem terası veya müze bileti aldıysanız o günün diğer duraklarını aynı bölgeye yerleştirin."
+       ],
+       "heading": "Dubai gezilecek yerler",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Al Fahidi’yi sabah yürüyüp Creek kıyısına inin; karşı yakadaki çarşıları abra geçişiyle birleştirin. Al Seef daha düzenlenmiş bir sahil deneyimidir. Bütün sokakları aynı tarihî doku sanmadan, atölye ve küçük sergilere zaman bırakın."
+         ],
+         "heading": "Al Fahidi ve Dubai Creek"
+        },
+        {
+         "body": [
+          "Burj Khalifa’da farklı teras ve saat seçenekleri vardır; yalnız en ucuz başlığa bakmadan katı ve rezervasyon koşulunu okuyun. Dubai Mall bağlantısındaki yürüyüş süresini ekleyin. Downtown gününü daha uzak Marina programıyla bölmek yerine çevredeki yürüyüş ve kapalı mekânlarla tamamlayın."
+         ],
+         "heading": "Burj Khalifa ve Downtown"
+        },
+        {
+         "body": [
+          "Marina’nın su kenarı yolu ve JBR sahili aynı bölgede farklı deneyimler sunar: biri yat limanı çevresi, diğeri deniz kıyısıdır. Yürüyüşü günün serin kısmına alın. Sahil işletmesinde şezlong, havlu ve tüketim şartını oturmadan önce sorun."
+         ],
+         "heading": "Dubai Marina ve JBR"
+        }
+       ]
+      },
+      {
+       "body": [
+        "Al Fahidi’nin ardından Al Seef kıyısına uzanmak eski şehir gününe iyi bir mola ekliyor. Al Seef’in daha düzenlenmiş görünümünü Al Fahidi’nin tarihî sokaklarıyla karıştırmadan ikisinin keyfini ayrı çıkarın. Çarşı alışverişi ilginizi çekmese bile suyun iki yakasını görmek şehrin neden burada büyüdüğünü daha anlaşılır kılıyor.",
+        "Marina ve JBR akşamını uzun bir yapılacaklar listesi yerine yürüyüş ve yemekle bırakabilirsiniz. Gündüz sıcaklığında yorulan bir gezinin ardından kıyıda oturmak da tatilin parçası. Çocukla veya daha sakin bir tempoyla geziyorsanız günün tek ücretli etkinliğini seçip kalan zamanı bu açık alanlara bırakmak Dubai’yi çok daha rahat yaşatır."
+       ],
+       "heading": "Creek kıyısında ve sahilde acele etmeyen bir Dubai",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Deira veya Bur Dubai, Creek ve daha hesaplı şehir konaklaması için; Downtown, kule ve alışveriş odağı için; Marina–JBR, plaj için uygundur. Metroya gerçek yürüme mesafesi, gece ses düzeyi ve günlük transfer maliyeti oda manzarasından daha kullanışlı seçim ölçüleridir.",
+        "Kısa bir şehir kaçamağında sırf fotoğrafı güzel diye uzak bir resort seçmek her sabah yeniden yola çıkmak demek olabilir. Plaj tatili istiyorsanız bu mesafe kabul edilebilir; tarihî mahalleleri ve şehir merkezini gezecekseniz metroya yakın bir üs daha rahat. Otelin adı kadar, akşam yemekten sonra yürüyerek dönebileceğiniz çevresi de önemli."
+       ],
+       "heading": "Dubai nerede kalınır?",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Machboos, harees ve luqaimat Emirlik mutfağını tanımak için iyi başlangıçlardır. Deira ve Bur Dubai’de Güney Asya ve Levant mutfakları da güçlüdür. Brunch veya manzaralı akşam paketinde içecek kapsamını, servis ve vergiyi karşılaştırın; şehirdeki bütün restoranları aynı mutfak sanmayın.",
+        "Creek gününde öğünü küçük bir lokantaya, Downtown gününde ise aynı bölgedeki bir masaya ayırmak yolculuğu kolaylaştırıyor. Emirlik yemeklerini denemek istiyorsanız menüde yalnız “Arabic food” yazmasına değil, aradığınız yemeğin adına bakın. Şehrin Hint, Pakistan ve Levant mutfakları da geziye renk katıyor; her öğünü uluslararası otel büfesine bırakmayın."
+       ],
+       "heading": "Dubai ne yenir?",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "Kasım–mart açık hava için daha rahattır; popüler dönemlerde otel fiyatları yükselir. Yazın plaj, çöl ve uzun yürüyüşleri tek güne yığmayın. Klimalı mekânlarla akşamüstü programı kurmak, sıcak havada mesafe hedeflemekten daha gerçekçidir.",
+        "Gözlem terasları, tema parkları ve özel çöl turları bütçeyi hızla büyütür. Bir ücretli ana deneyim seçip Creek yürüyüşleriyle dengeleyin. Ucuz ama ulaşımı uzak oteli, metro ve taksi toplamıyla karşılaştırın."
+       ],
+       "heading": "Dubai için mevsim ve bütçe planı",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Abu Dabi müze ve büyük cami için anlamlı devam noktasıdır; aynı güne tüm simgeleri sığdırmak yerine geceleyin. Çöl turunda sürüş, yemek, kamp ve dönüşün dahil olup olmadığını yazılı kontrol edin."
+       ],
+       "heading": "Dubai çevresinde rota önerileri",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Dubai gezi rehberi: Al Fahidi, Dubai Creek, Burj Khalifa ve Marina; metro, nol kartı, nerede kalınır, yerel yemekler ve 3 günlük rota planı.",
+     "seoTitle": "Dubai Gezi Rehberi: Gezilecek Yerler ve 3 Günlük Rota",
+     "sources": [
+      {
+       "name": "Visit Dubai — resmî turizm",
+       "url": "https://www.visitdubai.com/en/"
+      },
+      {
+       "name": "RTA — toplu taşıma ve abra",
+       "url": "https://www.rta.ae/wps/portal/rta/ae/home/promotion/dubai-creek-abra"
+      },
+      {
+       "name": "Burj Khalifa — ziyaret ve bilet",
+       "url": "https://www.burjkhalifa.ae/"
+      },
+      {
+       "name": "Visit Dubai — Al Seef kıyısı",
+       "url": "https://www.visitdubai.com/en/explore-dubai/dubai-neighbourhoods/al-seef"
+      }
+     ],
+     "volatileNote": "Bilet ücretleri, seferler ve ziyaret saatleri değişebilir. Rezervasyon öncesinde aşağıdaki resmî kaynaklardan güncel bilgiyi kontrol edin."
+    }
+   }
+  },
+  {
+   "citySlug": "abu-dabi",
+   "completeLangs": [
+    "en",
+    "es"
+   ],
+   "reviewed": true,
+   "translations": {
+    "en": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Al Muneera / Al Raha Beach",
+        "category": "halal",
+        "cuisine": "Emirati home cooking",
+        "description": "Warm Emirati restaurant founded by local women, serving freshly baked khameer breads, lamb machboos and home-style Gulf recipes by the water.",
+        "lastVerified": "2026-10-06",
+        "name": "Meylas",
+        "price": "Orta",
+        "verification": {
+         "note": "All meats are halal certified; family-friendly alcohol-free venue.",
+         "sourceName": "Experience Abu Dhabi — official tourism portal",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://visitabudhabi.ae/en/where-to-eat/meylas",
+         "status": "certified-halal"
+        },
+        "why": "Ideal for experiencing authentic Gulf home cooking in a welcoming, family-run atmosphere by the water."
+       }
+      ],
+      "researchNote": "Rice and meat dishes in Abu Dhabi follow halal standards; for vegan meals, confirm that meat stock or butter is not used.",
+      "vegan": [
+       {
+        "area": "Qasr Al Hosn Cultural Quarter",
+        "category": "vegan",
+        "cuisine": "Organic vegan cafe",
+        "description": "Contemporary 100% organic vegan cafe near historic Qasr Al Hosn, offering cold-pressed juices, acai bowls and wholesome plant-based meals.",
+        "lastVerified": "2026-10-06",
+        "name": "Wild & The Moon",
+        "price": "Orta",
+        "verification": {
+         "note": "Verified 100% plant-based, unrefined and dairy-free organic ingredients.",
+         "sourceName": "HappyCow's current vegan restaurant directory",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/wild-and-the-moon-cultural-foundation-abu-dhabi-209252",
+         "status": "fully-vegan"
+        },
+        "why": "One of Abu Dhabi's finest stops for a light, fresh and entirely plant-based meal while exploring the cultural district."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Allow two full days for the main cultural sights, or three to four with Yas or beach time.",
+       "q": "How many days do you need in Abu Dhabi?"
+      },
+      {
+       "a": "Yes, but choose only two main stops once transfers are included. An overnight stay is better for a museum, mosque and palace combination.",
+       "q": "Can you visit Abu Dhabi on a day trip from Dubai?"
+      },
+      {
+       "a": "Corniche for city sightseeing, Saadiyat for beach and museums, Yas for theme parks; compare total transfer costs.",
+       "q": "Where should you stay in Abu Dhabi?"
+      },
+      {
+       "a": "Zayed International Airport (AUH) needs its own transfer plan. Saadiyat, Yas and Corniche hotels involve different journeys; arriving from Dubai also requires a final connection from the bus terminal.",
+       "q": "How do you get to Abu Dhabi?"
+      }
+     ],
+     "h1": "Abu Dhabi Travel Guide: Mosque, Museums and Where to Stay",
+     "itinerary": [
+      {
+       "afternoon": "Dome and a meal nearby",
+       "evening": "Saadiyat coast or rest",
+       "morning": "Louvre galleries",
+       "title": "Day 1 — Saadiyat"
+      },
+      {
+       "afternoon": "Qasr Al Watan visit",
+       "evening": "A short Corniche walk",
+       "morning": "Grand Mosque at your registered time",
+       "title": "Day 2 — Architecture and coast"
+      }
+     ],
+     "lede": "Abu Dhabi rewards a slower pace: watching the light beneath the Louvre dome, taking in the Grand Mosque courtyard, then heading to the Corniche for some sea air. A day trip from Dubai is possible, but a couple of nights lets you enjoy the city between its major landmarks.",
+     "places": [
+      {
+       "area": "Al Maqta area",
+       "known": "Marble architecture and courtyard",
+       "name": "Sheikh Zayed Grand Mosque",
+       "tip": "Read official visitor registration and dress rules.",
+       "why": "For an unhurried look at architecture and light."
+      },
+      {
+       "area": "Saadiyat Island",
+       "known": "Art collection and the dome",
+       "name": "Louvre Abu Dhabi",
+       "tip": "Check gallery and outdoor-area hours separately.",
+       "why": "For the collection and waterfront museum architecture."
+      },
+      {
+       "area": "Western Corniche area",
+       "known": "Palace visit and coastal walks",
+       "name": "Qasr Al Watan and the Corniche",
+       "tip": "Check the palace’s current visitor calendar.",
+       "why": "For a palace visit followed by a coastal break."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Practical tips for Abu Dhabi",
+     "practicalTips": [
+      {
+       "body": "Do not treat Saadiyat and Yas as one small area simply because both are islands; account for the transfer.",
+       "title": "Group distant sights"
+      },
+      {
+       "body": "Confirm registration, visitor entrance and clothing rules through the official source before your visit.",
+       "title": "Mosque registration"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Recommended stay",
+       "value": "2–3 full days"
+      },
+      {
+       "label": "Best time to visit",
+       "value": "November–March"
+      },
+      {
+       "label": "Getting around",
+       "value": "Area-based taxi and bus trips"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Dubai Travel Guide: Things to Do and a 3-Day Itinerary",
+       "city": "Dubai",
+       "description": "Explore Dubai Creek, Al Fahidi, Downtown and the Marina, connecting the historic port with the modern city."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "With two full days, devote one to the Louvre and Saadiyat, and the other to the Grand Mosque and a central waterfront walk. If Qasr Al Watan is a priority, decide which visit deserves more time rather than simply adding a third major stop. The wide roads make distances look straightforward, but repeated transfers still eat into the day.",
+        "Leave time for the galleries before heading outside to enjoy the dome and the water. Even if art is not your main interest, a few rooms explored thoughtfully can be more rewarding than racing through the whole collection. Plan a relaxed meal nearby afterwards, rather than spending the museum afternoon crossing the city for another appointment.",
+        "If Yas Island’s theme parks are on your wish list, give them a separate day. A museum morning, mosque visit and park evening make a fragmented itinerary for adults and children alike. On a culture-and-rest trip, skipping a park can create the time you actually want for a beach break or a quiet stroll."
+       ],
+       "heading": "Planning Abu Dhabi around museums, architecture and the sea",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Zayed International Airport (AUH) needs its own transfer plan. Saadiyat, Yas and Corniche hotels involve different journeys; arriving from Dubai also requires a final connection from the bus terminal.",
+        "The main sights do not form one walkable loop. Combine a museum and meal in one area before moving on by taxi or bus. Check Abu Dhabi Mobility’s current payment arrangements rather than assuming Dubai nol rules apply."
+       ],
+       "heading": "Getting to and around Abu Dhabi",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Dedicate one day to Saadiyat and another to the mosque and Corniche–palace area. If you want a Yas Island theme park, make it a separate third day."
+       ],
+       "heading": "Things to do in Abu Dhabi",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Allow more than a quick photo stop. Check the visitor entrance, registration and access around prayer times on the official site. Prepare clothing before arrival rather than spending your visit resolving entry requirements."
+         ],
+         "heading": "Sheikh Zayed Grand Mosque"
+        },
+        {
+         "body": [
+          "Leave time for the galleries as well as the dome. If adding another Saadiyat museum, compare visit lengths and current ticket coverage; gallery opening times and outdoor access can differ."
+         ],
+         "heading": "Louvre Abu Dhabi"
+        },
+        {
+         "body": [
+          "Qasr Al Watan is a visitor-accessible palace whose availability can change for events. Check the calendar, then walk a manageable stretch of the Corniche rather than attempting the entire waterfront in heat."
+         ],
+         "heading": "Qasr Al Watan and the Corniche"
+        }
+       ]
+      },
+      {
+       "body": [
+        "You do not need to cover the whole Corniche. Choose a stretch near your hotel or your final visit and combine a stroll with a pause by the sea. The waterfront gives a monument-heavy itinerary a glimpse of everyday city life. On hot days, a short enjoyable walk is better than an ambitious distance target.",
+        "For another side of Abu Dhabi, Qasr Al Hosn adds a historical perspective beyond the towers and island resorts. Consider it alongside the Corniche on a central city day. Let the museums, waterfront and older landmarks shape your visit instead of expecting a smaller version of Dubai."
+       ],
+       "heading": "Get a feel for the city around the Corniche and Qasr Al Hosn",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Corniche suits city hotels and waterfront walks, Saadiyat beaches and museums, and Yas theme parks. Check actual beach access, transfers and dining options; an island hotel is not close to every city attraction.",
+        "For a two-night extension from Dubai, choose the base around what you want to do. A Saadiyat beach hotel can suit a restorative break, while a central hotel may balance a short culture trip more easily. One base in each city keeps the holiday simpler than changing hotels every night.",
+        "A hotel near the Corniche prioritises city walks, while a Saadiyat stay places beach time and the Louvre closer to your daily plan. Choose according to the experience you want most, allowing separate vehicle connections for the mosque and Yas."
+       ],
+       "heading": "Where to stay in Abu Dhabi",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Machboos, harees and seafood introduce local cooking, alongside extensive Levantine, Indian and international dining. Check hotel meal packages and total prices; keep museum-day dining nearby rather than booking another distant transfer.",
+        "After a substantial hotel breakfast, a lighter lunch leaves room for a local dinner. Sharing a rice dish such as machboos with a few smaller plates can be a comfortable introduction to the cuisine. Look for variety as well as a view; there is no need for a long transfer in search of one supposedly essential dining district."
+       ],
+       "heading": "What to eat in Abu Dhabi",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "November to March is easier for outdoor days. In summer, Saadiyat museums offer an indoor backbone with shorter mosque and Corniche outings; adjust swimming plans to current conditions.",
+        "Saadiyat beach hotels and Yas activities increase costs. Budget museum admissions together with taxis; a cheap bus from Dubai does not include your onward city connections."
+       ],
+       "heading": "Abu Dhabi: weather and budget planning",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Continue to Dubai as a separate stay. For a mangrove outing in Abu Dhabi, confirm guiding, equipment, tides and access with the operator and keep it separate from a crowded museum programme."
+       ],
+       "heading": "Trips beyond Abu Dhabi",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Visit Abu Dhabi’s Grand Mosque, Louvre, Qasr Al Watan and Corniche with practical transport tips, areas to stay and a balanced cultural itinerary.",
+     "seoTitle": "Abu Dhabi Travel Guide: Mosque, Museums and Where to Stay",
+     "sources": [
+      {
+       "name": "Experience Abu Dhabi — official tourism",
+       "url": "https://visitabudhabi.ae/en"
+      },
+      {
+       "name": "Sheikh Zayed Grand Mosque — visitor information",
+       "url": "https://www.szgmc.gov.ae/en/"
+      },
+      {
+       "name": "Louvre Abu Dhabi — official museum",
+       "url": "https://www.louvreabudhabi.ae/"
+      },
+      {
+       "name": "Qasr Al Watan — official visits",
+       "url": "https://visitabudhabi.ae/en/things-to-do/culture/landmarks-and-architecture/qasr-al-watan"
+      },
+      {
+       "name": "Experience Abu Dhabi — Qasr Al Hosn and cultural visits",
+       "url": "https://visitabudhabi.ae/en/plan-your-trip/article-hub/summer-friendly-places-to-visit-in-abu-dhabi"
+      }
+     ],
+     "volatileNote": "Admission prices, services and opening hours can change. Check the official sources below before booking."
+    },
+    "es": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Al Muneera / Al Raha Beach",
+        "category": "halal",
+        "cuisine": "Cocina casera emiratí",
+        "description": "Acogedor restaurante emiratí impulsado por mujeres locales, con panes khameer recién horneados, machboos de cordero y recetas caseras del Golfo.",
+        "lastVerified": "2026-10-06",
+        "name": "Meylas",
+        "price": "Orta",
+        "verification": {
+         "note": "Todas las carnes tienen certificación halal; local familiar sin alcohol.",
+         "sourceName": "Experience Abu Dhabi — portal oficial de turismo",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://visitabudhabi.ae/en/where-to-eat/meylas",
+         "status": "certified-halal"
+        },
+        "why": "Ideal para disfrutar de la auténtica cocina casera del Golfo en un ambiente familiar y junto al mar."
+       }
+      ],
+      "researchNote": "Los arroces y carnes en Abu Dabi siguen pautas halal; para platos veganos, confirma que no lleven caldo de carne ni mantequilla.",
+      "vegan": [
+       {
+        "area": "Zona cultural de Qasr Al Hosn",
+        "category": "vegan",
+        "cuisine": "Cafetería vegana ecológica",
+        "description": "Cafetería vegana 100% orgánica junto al histórico Qasr Al Hosn, con zumos prensados en frío, boles de açai y platos saludables.",
+        "lastVerified": "2026-10-06",
+        "name": "Wild & The Moon",
+        "price": "Orta",
+        "verification": {
+         "note": "Ingredientes ecológicos verificados, 100% vegetales, sin refinar y sin lácteos.",
+         "sourceName": "Directorio actualizado de restaurantes veganos de HappyCow",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/wild-and-the-moon-cultural-foundation-abu-dhabi-209252",
+         "status": "fully-vegan"
+        },
+        "why": "Una de las mejores opciones en Abu Dabi para una comida ligera, fresca y vegetal mientras se visita la zona cultural."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Dos días completos para las visitas culturales; tres o cuatro si añades Yas o playa.",
+       "q": "¿Cuántos días dedicar a Abu Dabi?"
+      },
+      {
+       "a": "Sí, pero elige dos visitas principales contando traslados. Para combinar museo, mezquita y palacio conviene dormir allí.",
+       "q": "¿Se puede visitar Abu Dabi en un día desde Dubái?"
+      },
+      {
+       "a": "Corniche para ciudad, Saadiyat para playa y museos, Yas para parques; compara el coste total de desplazamientos.",
+       "q": "¿Dónde alojarse en Abu Dabi?"
+      },
+      {
+       "a": "Zayed International Airport (AUH) exige planificar el traslado según hotel: Saadiyat, Yas y Corniche implican recorridos distintos. Desde Dubái, añade el último tramo desde la terminal de autobuses.",
+       "q": "¿Cómo llegar a Abu Dabi?"
+      }
+     ],
+     "h1": "Qué ver en Abu Dabi: mezquita, museos y alojamiento",
+     "itinerary": [
+      {
+       "afternoon": "Cúpula y comida cercana",
+       "evening": "Costa de Saadiyat o descanso",
+       "morning": "Galerías del Louvre",
+       "title": "Día 1 — Saadiyat"
+      },
+      {
+       "afternoon": "Visita a Qasr Al Watan",
+       "evening": "Paseo breve por Corniche",
+       "morning": "Gran mezquita según tu registro",
+       "title": "Día 2 — Arquitectura y costa"
+      }
+     ],
+     "lede": "Abu Dabi se disfruta bajando el ritmo: la luz bajo la cúpula del Louvre, una pausa en el patio de la gran mezquita y el aire del mar en la Corniche. Puedes venir desde Dubái en un día, pero dormir dos noches permite conocer algo más que sus grandes edificios.",
+     "places": [
+      {
+       "area": "Zona de Al Maqta",
+       "known": "Arquitectura de mármol y patio",
+       "name": "Gran Mezquita Sheikh Zayed",
+       "tip": "Consulta registro y vestimenta en la web oficial.",
+       "why": "Para observar arquitectura y luz sin prisas."
+      },
+      {
+       "area": "Isla de Saadiyat",
+       "known": "Colección de arte y cúpula",
+       "name": "Louvre Abu Dhabi",
+       "tip": "Comprueba por separado horarios de galerías y exteriores.",
+       "why": "Para combinar colección y arquitectura junto al mar."
+      },
+      {
+       "area": "Extremo occidental de Corniche",
+       "known": "Visita al palacio y paseo costero",
+       "name": "Qasr Al Watan y Corniche",
+       "tip": "Consulta el calendario actual de visitas al palacio.",
+       "why": "Para terminar la visita cultural con un paseo junto al mar."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Consejos para visitar Abu Dabi",
+     "practicalTips": [
+      {
+       "body": "Saadiyat y Yas no forman una misma zona pequeña por ser islas; calcula el traslado.",
+       "title": "Agrupa las visitas"
+      },
+      {
+       "body": "Confirma registro, acceso y vestimenta en la fuente oficial antes de la visita.",
+       "title": "Registro de la mezquita"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Duración recomendada",
+       "value": "2–3 días completos"
+      },
+      {
+       "label": "Mejor época",
+       "value": "Noviembre–marzo"
+      },
+      {
+       "label": "Cómo moverse",
+       "value": "Visitas por zonas en taxi y autobús"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Qué ver en Dubái: ruta de 3 días y dónde alojarse",
+       "city": "Dubai",
+       "description": "Descubre Dubai Creek, Al Fahidi, Downtown y Marina, entre el puerto histórico y la ciudad moderna."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "Con dos días completos, dedica uno al Louvre y Saadiyat, y otro a la gran mezquita y un paseo por la costa urbana. Si quieres visitar Qasr Al Watan, decide qué monumento te interesa más en lugar de sumar otra gran visita. Las avenidas parecen sencillas en el mapa, pero tantos traslados terminan cansando.",
+        "Reserva tiempo para las salas antes de salir a contemplar la cúpula y el agua. Aunque el arte no sea tu principal afición, unas pocas salas recorridas con calma pueden resultar más interesantes que toda la colección a toda prisa. Después deja espacio para comer cerca sin cruzar de nuevo la ciudad.",
+        "Si quieres ir a los parques de Yas Island, dales una jornada independiente. Museo por la mañana, mezquita después y parque por la noche dejan un día demasiado fragmentado. En un viaje de cultura y descanso, renunciar a un parque puede regalarte precisamente el paseo o la playa que estabas buscando."
+       ],
+       "heading": "Organizar Abu Dabi: museo, mezquita y costa",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Zayed International Airport (AUH) exige planificar el traslado según hotel: Saadiyat, Yas y Corniche implican recorridos distintos. Desde Dubái, añade el último tramo desde la terminal de autobuses.",
+        "Las visitas principales no forman un circuito a pie. Agrupa museo y comida antes de cambiar de zona en taxi o autobús. Consulta Abu Dhabi Mobility; no presupongas que funciona el sistema nol de Dubái."
+       ],
+       "heading": "Cómo llegar a Abu Dabi y moverse",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Dedica un día a Saadiyat y otro a mezquita y eje Corniche–palacio. Si quieres un parque de Yas, reserva una tercera jornada."
+       ],
+       "heading": "Qué ver en Abu Dabi",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "No lo reduzcas a una foto. Consulta acceso de visitantes, registro y franjas de oración en la web oficial. Lleva la vestimenta requerida para evitar perder tiempo resolviéndola al llegar."
+         ],
+         "heading": "Gran Mezquita Sheikh Zayed"
+        },
+        {
+         "body": [
+          "Reserva tiempo para las galerías además de la cúpula. Si añades otro museo de Saadiyat, compara duración y entradas; el horario de galerías puede diferir del acceso exterior."
+         ],
+         "heading": "Louvre Abu Dhabi"
+        },
+        {
+         "body": [
+          "Qasr Al Watan permite visitas, pero los eventos pueden alterar el acceso. Revisa el calendario y después pasea por un tramo cómodo de Corniche, sin intentar recorrerla entera con calor."
+         ],
+         "heading": "Qasr Al Watan y Corniche"
+        }
+       ]
+      },
+      {
+       "body": [
+        "No hace falta recorrer toda la Corniche. Elige un tramo cercano al hotel o a tu última visita y combina el paseo con una pausa frente al mar. La costa aporta vida cotidiana a un programa de grandes monumentos. Con calor, un paseo corto y agradable suele ser mejor que una distancia ambiciosa.",
+        "Qasr Al Hosn ofrece una perspectiva histórica distinta a los rascacielos y hoteles de las islas. Puedes combinarlo con la Corniche en una jornada por el centro. Deja que los museos, el mar y estos edificios definan la visita, en lugar de buscar una versión reducida de Dubái."
+       ],
+       "heading": "Acércate a la ciudad en la Corniche y Qasr Al Hosn",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Corniche funciona para hotel urbano y paseos; Saadiyat para playa y museos; Yas para parques. Comprueba acceso real a playa, traslados y cenas: un hotel insular no queda cerca de todo.",
+        "Para añadir dos noches desde Dubái, elige la base según tus planes. Un hotel de playa en Saadiyat puede ser ideal para descansar; uno céntrico facilita una visita cultural breve. Mantener una base en cada ciudad resulta más cómodo que cambiar de alojamiento todas las noches.",
+        "Un hotel junto a la Corniche favorece paseos urbanos; alojarte en Saadiyat acerca playa y Louvre a tu programa diario. Elige según la experiencia que prefieras, contando conexiones en vehículo para la mezquita y Yas."
+       ],
+       "heading": "Dónde alojarse en Abu Dabi",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Machboos, harees y pescado acercan a la cocina local, junto a muchas opciones levantinas, indias e internacionales. Comprueba paquetes y precio final; el día de museo conviene comer en la misma zona.",
+        "Después de un desayuno abundante, un almuerzo ligero deja espacio para una cena local. Compartir un plato de arroz como machboos y añadir pequeñas raciones permite probar más sabores. Busca variedad además de vistas: no necesitas un largo traslado para llegar a un supuesto único barrio imprescindible para comer."
+       ],
+       "heading": "Qué comer en Abu Dabi",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "De noviembre a marzo resultan más cómodos los exteriores. En verano, los museos de Saadiyat pueden estructurar el día con salidas más cortas a mezquita y Corniche.",
+        "Hoteles de playa en Saadiyat y actividades de Yas elevan el presupuesto. Suma entradas y taxis; el autobús barato desde Dubái no cubre los desplazamientos posteriores."
+       ],
+       "heading": "Abu Dabi: cuándo ir y presupuesto",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Continúa a Dubái como estancia independiente. Para visitar manglares confirma guía, equipo, mareas y acceso, y evita añadirlos a una jornada de museos ya llena."
+       ],
+       "heading": "Excursiones desde Abu Dabi",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Qué ver en Abu Dabi: gran mezquita, Louvre, Qasr Al Watan y Corniche, con consejos de transporte, zonas para dormir y una ruta cultural equilibrada.",
+     "seoTitle": "Qué ver en Abu Dabi: mezquita, museos y alojamiento",
+     "sources": [
+      {
+       "name": "Experience Abu Dhabi — turismo oficial",
+       "url": "https://visitabudhabi.ae/en"
+      },
+      {
+       "name": "Gran Mezquita Sheikh Zayed — información de visita",
+       "url": "https://www.szgmc.gov.ae/en/"
+      },
+      {
+       "name": "Louvre Abu Dhabi — museo oficial",
+       "url": "https://www.louvreabudhabi.ae/"
+      },
+      {
+       "name": "Qasr Al Watan — visitas oficiales",
+       "url": "https://visitabudhabi.ae/en/things-to-do/culture/landmarks-and-architecture/qasr-al-watan"
+      },
+      {
+       "name": "Experience Abu Dhabi — Qasr Al Hosn y visitas culturales",
+       "url": "https://visitabudhabi.ae/en/plan-your-trip/article-hub/summer-friendly-places-to-visit-in-abu-dhabi"
+      }
+     ],
+     "volatileNote": "Los precios, los servicios y los horarios pueden cambiar. Consulta las fuentes oficiales indicadas antes de reservar."
+    },
+    "tr": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Al Muneera / Al Raha Beach",
+        "category": "halal",
+        "cuisine": "Emirlik ev yemekleri",
+        "description": "Emirlik kadınları tarafından işletilen, deniz kenarında taze fırın ekmekleri, kuzu machboos ve ev yapımı yerel lezzetler sunan tescilli helal durak.",
+        "lastVerified": "2026-10-06",
+        "name": "Meylas",
+        "price": "Orta",
+        "verification": {
+         "note": "Tüm etler helal sertifikalıdır; alkolsüz aile dostu işletmedir.",
+         "sourceName": "Experience Abu Dhabi — resmî turizm portalı",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://visitabudhabi.ae/en/where-to-eat/meylas",
+         "status": "certified-halal"
+        },
+        "why": "Körfez mutfağının geleneksel lezzetlerini ticari olmayan samimi bir aile mutfağı dokusuyla deneyimlemek için idealdir."
+       }
+      ],
+      "researchNote": "Abu Dabi'de pilav ve et yemekleri helal kurallara uygundur; vegan tercihlerde et suyu veya tereyağı kullanılmadığını sipariş anında teyit edin.",
+      "vegan": [
+       {
+        "area": "Qasr Al Hosn Kültür Bölgesi",
+        "category": "vegan",
+        "cuisine": "Organik vegan kafe",
+        "description": "Tarihi Qasr Al Hosn kalesi yanında %100 organik, soğuk sıkım sular, acai kaseleri ve katkısız bitki bazlı yemekler sunan çağdaş vegan kafe.",
+        "lastVerified": "2026-10-06",
+        "name": "Wild & The Moon",
+        "price": "Orta",
+        "verification": {
+         "note": "Tamamen bitki bazlı, katkısız ve süt ürünü içermeyen organik içerik doğrulanmıştır.",
+         "sourceName": "HappyCow güncel vegan restoran dizini",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/wild-and-the-moon-cultural-foundation-abu-dhabi-209252",
+         "status": "fully-vegan"
+        },
+        "why": "Müze ve kültür gezisi sırasında hafif, taze ve tamamen bitkisel beslenmek isteyenler için Abu Dabi'deki en kaliteli vahalardan biridir."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Temel kültür durakları için iki tam gün; Yas veya plaj eklemek için üç ya da dört gün önerilir.",
+       "q": "Abu Dabi kaç günde gezilir?"
+      },
+      {
+       "a": "Evet; ancak transferlerle birlikte yalnız iki ana durak seçin. Müze, cami ve sarayın tümünü rahat gezmek için gecelemek daha uygundur.",
+       "q": "Dubai’den Abu Dabi’ye günübirlik gidilir mi?"
+      },
+      {
+       "a": "Şehir gezisi için Corniche, plaj ve müze için Saadiyat, tema parkı için Yas; toplam transfer maliyetini karşılaştırın.",
+       "q": "Abu Dabi’de nerede kalmalı?"
+      },
+      {
+       "a": "Zayed International Airport (AUH) şehir merkezinden ayrı bir ulaşım ayağıdır. Oteliniz Saadiyat, Yas veya Corniche’deyse aynı “merkez transferi” farklı süreler yaratır. Dubai’den geliyorsanız otobüs terminalinden son bağlantıyı ve bagajı da planlayın.",
+       "q": "Abu Dabi'ye nasıl gidilir?"
+      }
+     ],
+     "h1": "Abu Dabi Gezi Rehberi: Gezilecek Yerler ve Müze Rotası",
+     "itinerary": [
+      {
+       "afternoon": "Kubbe ve yakın çevrede yemek",
+       "evening": "Saadiyat’ta kıyı veya dinlenme",
+       "morning": "Louvre galerileri",
+       "title": "1. Gün — Saadiyat"
+      },
+      {
+       "afternoon": "Qasr Al Watan ziyareti",
+       "evening": "Corniche’de kısa yürüyüş",
+       "morning": "Kayıt saatine göre büyük cami",
+       "title": "2. Gün — Mimari ve kıyı"
+      }
+     ],
+     "lede": "Abu Dabi’nin tadı biraz yavaşlayınca çıkıyor: Louvre’un kubbesinin altında ışığı izlemek, caminin avlusunda durup etrafa bakmak, sonra Corniche’de deniz havası almak. Dubai’den günübirlik kaçamak mümkün olsa da burada iki gece kalmak, şehri yalnız büyük yapılarıyla değil günlük ritmiyle de tanımaya alan açıyor.",
+     "places": [
+      {
+       "area": "Al Maqta çevresi",
+       "known": "Mermer mimari ve büyük avlu",
+       "name": "Şeyh Zayed Camii",
+       "tip": "Ziyaret kaydı ve kıyafet koşulunu resmî siteden okuyun.",
+       "why": "Mimari ayrıntıları ve ışığı sakin tempoda incelemek için."
+      },
+      {
+       "area": "Saadiyat Adası",
+       "known": "Sanat koleksiyonu ve kubbe",
+       "name": "Louvre Abu Dhabi",
+       "tip": "Galeri ve dış alan saatlerini ayrı kontrol edin.",
+       "why": "Eserler ile deniz kıyısındaki müze mimarisini birlikte görmek için."
+      },
+      {
+       "area": "Corniche’nin batı ucu",
+       "known": "Saray ziyareti ve kıyı yürüyüşü",
+       "name": "Qasr Al Watan ve Corniche",
+       "tip": "Sarayın güncel ziyaret takvimini kontrol edin.",
+       "why": "Kültür gününü açık hava kıyı molasıyla tamamlamak için."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Abu Dabi için pratik ipuçları",
+     "practicalTips": [
+      {
+       "body": "Saadiyat ve Yas’ı sırf ada oldukları için aynı küçük bölge sanmayın; transferi ayrıca hesaplayın.",
+       "title": "Uzak noktaları kümelendirin"
+      },
+      {
+       "body": "Ziyaret kaydı, giriş noktası ve kıyafet koşullarını rezervasyon öncesinde resmî kaynaktan doğrulayın.",
+       "title": "Cami kaydı"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Önerilen süre",
+       "value": "2–3 tam gün"
+      },
+      {
+       "label": "En uygun dönem",
+       "value": "Kasım–Mart"
+      },
+      {
+       "label": "Ulaşım yaklaşımı",
+       "value": "Taksi ve otobüsle bölge bazlı gezi"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Dubai Gezi Rehberi: Gezilecek Yerler ve 3 Günlük Rota",
+       "city": "Dubai",
+       "description": "Dubai Creek, Al Fahidi, Downtown ve Marina arasında eski limanla modern şehri birlikte keşfedin."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "İki tam gününüz varsa birini Louvre ve Saadiyat çevresine, diğerini büyük cami ile merkezdeki bir yürüyüşe ayırabilirsiniz. Qasr Al Watan’ı da görmek istiyorsanız aynı güne üçüncü büyük ziyaret diye eklemek yerine hangi yapıya daha fazla zaman istediğinize karar verin. Şehrin geniş yolları haritada kolay görünse de ziyaretler arasında sürekli araçla yer değiştirmek yoruyor.",
+        "Louvre’da yalnız kubbenin fotoğrafını çekip dönmek yazık olur. Sergi salonlarına vakit ayırıp sonra dışarıdaki ışık ve deniz ilişkisini izlemek müzeyi daha anlamlı kılıyor. Sanatla aranız çok yakın olmasa bile birkaç salonu dikkatle gezmek, bütün koleksiyonu hızlıca dolaşmaktan daha keyifli bir başlangıç. Müze sonrasına yakınlarda rahat bir öğün bırakın.",
+        "Yas Adası’nı programa ekleyecekseniz tema parkı gününü ayrı tutun. Sabah müze, öğlen cami, akşam park şeklinde bir gün çocuklar için de yetişkinler için de fazla parçalı kalıyor. Tatilin amacı kültür ve dinlenmeyse bir parkı elemek kayıp değil; otelden çıkıp bir sahil yürüyüşüne zaman bulmak bazen daha iyi bir tercih."
+       ],
+       "heading": "Abu Dabi planı: müze, cami ve denize ayrı zaman",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Zayed International Airport (AUH) şehir merkezinden ayrı bir ulaşım ayağıdır. Oteliniz Saadiyat, Yas veya Corniche’deyse aynı “merkez transferi” farklı süreler yaratır. Dubai’den geliyorsanız otobüs terminalinden son bağlantıyı ve bagajı da planlayın.",
+        "Şehrin ana ziyaretleri tek yürüyüş halkası oluşturmaz. Aynı bölgede müze ve yemek molası kurup taksi veya otobüsle diğer kümeye geçin. Abu Dabi toplu taşıma biletiyle Dubai nol sistemini karıştırmayın; güncel ödeme koşullarını Abu Dhabi Mobility’den kontrol edin."
+       ],
+       "heading": "Abu Dabi ulaşım rehberi",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Bir günü Saadiyat’a, bir günü cami ve Corniche–saray eksenine ayırmak ilk geziyi dengeler. Yas Adası’nda tema parkı istiyorsanız bunu üçüncü gün olarak planlayın."
+       ],
+       "heading": "Abu Dabi gezilecek yerler",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Camiyi bir fotoğraf durağından daha uzun planlayın. Ziyaretçi girişini, kayıt uygulamasını ve ibadet saatlerine bağlı erişimi resmî siteden kontrol edin. Omuz, diz ve saç örtüsü gibi koşulları girişte çözmeye bırakmak ziyaret süresini azaltır."
+         ],
+         "heading": "Şeyh Zayed Camii"
+        },
+        {
+         "body": [
+          "Louvre’u yalnız kubbe altında yürüyüş olarak görmeyin; galerilere geniş zaman bırakın. Saadiyat’taki başka bir müzeyi aynı güne eklerseniz ziyaret sürelerini ve güncel bilet kapsamını karşılaştırın. Kapalı galeri saatiyle dış alan erişimi aynı olmayabilir."
+         ],
+         "heading": "Louvre Abu Dhabi"
+        },
+        {
+         "body": [
+          "Qasr Al Watan ziyaret edilebilen bir saraydır; etkinlik nedeniyle erişim değişebilir. Bileti takvimle eşleştirin, ardından Corniche’de kısa yürüyüş planlayın. Corniche’nin tamamını sıcak havada yürümek yerine otelinize yakın veya seçtiğiniz plaja bağlı bölümü kullanın."
+         ],
+         "heading": "Qasr Al Watan ve Corniche"
+        }
+       ]
+      },
+      {
+       "body": [
+        "Corniche’yi bir uçtan diğerine bitirilecek rota gibi düşünmeyin. Otelinize veya günün son durağına yakın bir bölüm seçip yürüyüşü deniz molasıyla birleştirmek yeterli. Akşam ışığında kıyıda durmak, büyük yapılardan oluşan programın arasına şehrin gündelik hayatını katıyor. Özellikle sıcak günlerde kısa ve keyifli bir yürüyüş uzun bir mesafe hedefinden daha iyi.",
+        "Şehrin daha eski katmanını merak ediyorsanız Qasr Al Hosn, gökdelen ve ada otellerinden farklı bir hikâye sunuyor. Bu ziyaretle Corniche çevresini aynı merkez günü içinde değerlendirebilirsiniz. Abu Dabi’yi Dubai’nin daha küçük bir kopyası gibi gezmek yerine denize, müzelere ve bu tarihî duraklara verdiği alan üzerinden okumak daha güzel bir yol."
+       ],
+       "heading": "Corniche ve Qasr Al Hosn ile şehre biraz yaklaşın",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Corniche çevresi şehir oteli ve kıyı yürüyüşü, Saadiyat plaj ve müzeler, Yas ise tema parkı odağı için uygundur. Her otelde gerçek plaj erişimi, transfer maliyeti ve akşam yemeği seçeneklerini kontrol edin; bir ada oteli bütün şehre yakın değildir.",
+        "Dubai’den iki gecelik ek yapıyorsanız konaklamayı günübirlik yapmak istediğiniz yerlere göre seçin. Saadiyat’ta bir plaj oteli dinlenme için güzel olabilir; müze ve şehir yürüyüşü ağırlıklı kısa ziyarette merkez daha dengeli kalabilir. İki şehirde de her gece otel değiştirmek yerine birer üs kurmak valiz ve transfer yükünü azaltır.",
+        "Corniche çevresindeki bir otel kent yürüyüşünü, Saadiyat konaklaması ise plaj ve Louvre gününü öne çıkarır. İkisini aynı şey sanmadan hangi deneyime daha çok zaman ayıracağınızı seçin; cami ve Yas ziyaretlerinde ayrıca araç bağlantısı gerekir."
+       ],
+       "heading": "Abu Dabi nerede kalınır?",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Machboos, harees ve deniz ürünleri yerel mutfağa giriş sağlar; şehirde Levant, Hint ve uluslararası seçenekler de geniştir. Otel restoranında paket kapsamını ve toplam fiyatı kontrol edin. Müze gününde uzak bir yemek rezervasyonu eklemek yerine aynı bölgedeki öğünü seçin.",
+        "Otel kahvaltısı doyurucuysa öğle yemeğini daha hafif tutup akşama yerel bir yemek ayırabilirsiniz. Machboos gibi pirinçli bir ana yemeği paylaşmak, yanına küçük tabaklar eklemek mutfağı tanımayı kolaylaştırır. Menüde yalnız manzarayı değil yemek çeşitliliğini de arayın; şehirde tek bir “doğru” yemek bölgesine gitmek için uzun transfer yapmak şart değil."
+       ],
+       "heading": "Abu Dabi ne yenir?",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "Kasım–mart kıyı ve açık hava günleri için daha rahattır. Yazın Saadiyat müzeleri iyi bir kapalı mekân omurgasıdır; cami ve Corniche’de kısa açık hava blokları kullanın. Deniz ve havuz planını güncel hava koşuluna göre ayarlayın.",
+        "Saadiyat plaj otelleri ve Yas etkinlikleri maliyeti yükseltir. Müze girişleriyle taksi toplamını birlikte hesaplayın; Dubai’den günübirlik gelişte ucuz otobüs bileti, şehir içi son bağlantıları kapsamaz."
+       ],
+       "heading": "Abu Dabi için mevsim ve bütçe planı",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Dubai’ye devam edecekseniz ayrı konaklama ayağı kurun. Abu Dabi’de doğa için mangrov gezisini müze programından ayrı değerlendirin; rehber, ekipman, gelgit ve erişim koşullarını işletmeden teyit edin."
+       ],
+       "heading": "Abu Dabi çevresinde rota önerileri",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Abu Dabi gezi rehberi: Şeyh Zayed Camii, Louvre Abu Dhabi, Qasr Al Watan ve Corniche için gezilecek yerler, ulaşım, otel bölgeleri ve rota.",
+     "seoTitle": "Abu Dabi Gezi Rehberi: Gezilecek Yerler ve Müze Rotası",
+     "sources": [
+      {
+       "name": "Experience Abu Dhabi — resmî turizm",
+       "url": "https://visitabudhabi.ae/en"
+      },
+      {
+       "name": "Şeyh Zayed Camii — ziyaret bilgileri",
+       "url": "https://www.szgmc.gov.ae/en/"
+      },
+      {
+       "name": "Louvre Abu Dhabi — resmî müze",
+       "url": "https://www.louvreabudhabi.ae/"
+      },
+      {
+       "name": "Qasr Al Watan — resmî ziyaret",
+       "url": "https://visitabudhabi.ae/en/things-to-do/culture/landmarks-and-architecture/qasr-al-watan"
+      },
+      {
+       "name": "Experience Abu Dhabi — Qasr Al Hosn ve kültür durakları",
+       "url": "https://visitabudhabi.ae/en/plan-your-trip/article-hub/summer-friendly-places-to-visit-in-abu-dhabi"
+      }
+     ],
+     "volatileNote": "Bilet ücretleri, seferler ve ziyaret saatleri değişebilir. Rezervasyon öncesinde aşağıdaki resmî kaynaklardan güncel bilgiyi kontrol edin."
+    }
+   }
+  }
+ ]
+}

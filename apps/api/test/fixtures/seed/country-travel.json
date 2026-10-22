@@ -1,0 +1,134 @@
+[
+ {
+  "accent": "#d4795a",
+  "budget": "moderate",
+  "completeLangs": [
+   "en"
+  ],
+  "countryCode": "FR",
+  "iata": "CDG",
+  "image": "/images/fixture-france-1a2b3c4d.avif",
+  "position": 0,
+  "translations": {
+   "en": {
+    "bestSeason": "April–June",
+    "budget": "Moderate",
+    "capital": "Paris",
+    "description": "Test France description.",
+    "flightTime": "3h 30m",
+    "gateway": "Paris",
+    "hub": {
+     "cityGridIntro": "Test city summary.",
+     "essentials": [
+      {
+       "body": "Test body.",
+       "title": "Test"
+      }
+     ],
+     "intro": [
+      "Test intro paragraph."
+     ],
+     "planningHeading": "France planning",
+     "routeIdeas": [
+      {
+       "cities": [
+        "Paris",
+        "Nice"
+       ],
+       "description": "Description",
+       "duration": "3 days",
+       "title": "Route"
+      }
+     ],
+     "seoDescription": "France description",
+     "seoTitle": "France title"
+    },
+    "signature": "Test France sentence."
+   },
+   "tr": {
+    "bestSeason": "Nisan–Haziran",
+    "budget": "Orta",
+    "capital": "Paris",
+    "description": "Test Fransa açıklaması.",
+    "flightTime": "3sa 30dk",
+    "gateway": "Paris",
+    "hub": {
+     "cityGridIntro": "Test şehir özeti.",
+     "essentials": [
+      {
+       "body": "Test gövdesi.",
+       "title": "Test"
+      }
+     ],
+     "intro": [
+      "Test giriş paragrafı."
+     ],
+     "planningHeading": "Fransa planı",
+     "routeIdeas": [
+      {
+       "cities": [
+        "Paris",
+        "Nice"
+       ],
+       "description": "Açıklama",
+       "duration": "3 gün",
+       "title": "Rota"
+      }
+     ],
+     "seoDescription": "Fransa açıklama",
+     "seoTitle": "Fransa başlık"
+    },
+    "signature": "Test Fransa cümlesi."
+   }
+  }
+ },
+ {
+  "accent": "#4b7fd4",
+  "budget": "budget",
+  "completeLangs": [],
+  "countryCode": "TR",
+  "iata": "IST",
+  "image": "/images/fixture-turkiye-5e6f7a8b.avif",
+  "position": 1,
+  "translations": {
+   "es": {
+    "description": "Descripción parcial de prueba."
+   },
+   "tr": {
+    "bestSeason": "Mayıs–Eylül",
+    "budget": "Ekonomik",
+    "capital": "Ankara",
+    "description": "Test Türkiye açıklaması.",
+    "flightTime": "Başlangıç noktası",
+    "gateway": "İstanbul",
+    "hub": {
+     "cityGridIntro": "Test şehir özeti.",
+     "essentials": [
+      {
+       "body": "Test gövdesi.",
+       "title": "Test"
+      }
+     ],
+     "intro": [
+      "Test giriş paragrafı."
+     ],
+     "planningHeading": "Türkiye planı",
+     "routeIdeas": [
+      {
+       "cities": [
+        "İstanbul",
+        "İzmir"
+       ],
+       "description": "Açıklama",
+       "duration": "3 gün",
+       "title": "Rota"
+      }
+     ],
+     "seoDescription": "Türkiye açıklama",
+     "seoTitle": "Türkiye başlık"
+    },
+    "signature": "Test Türkiye cümlesi."
+   }
+  }
+ }
+]

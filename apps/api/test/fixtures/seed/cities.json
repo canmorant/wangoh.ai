@@ -1,0 +1,66 @@
+[
+ {
+  "completeLangs": [
+   "en"
+  ],
+  "countryCode": "FR",
+  "image": "/images/fixture-paris-11223344.avif",
+  "position": 0,
+  "slug": "paris",
+  "translations": {
+   "en": {
+    "description": "Test Paris description.",
+    "name": "Paris"
+   },
+   "tr": {
+    "description": "Test Paris açıklaması.",
+    "name": "Paris"
+   }
+  }
+ },
+ {
+  "completeLangs": [],
+  "countryCode": "FR",
+  "image": "https://example.com/nice.jpg",
+  "position": 1,
+  "slug": "nice",
+  "translations": {
+   "tr": {
+    "description": "Test Nice açıklaması.",
+    "name": "Nice"
+   }
+  }
+ },
+ {
+  "completeLangs": [
+   "en"
+  ],
+  "countryCode": "TR",
+  "image": "/images/fixture-istanbul-55667788.avif",
+  "position": 0,
+  "slug": "istanbul",
+  "translations": {
+   "en": {
+    "description": "Test Istanbul description.",
+    "name": "Istanbul"
+   },
+   "tr": {
+    "description": "Test İstanbul açıklaması.",
+    "name": "İstanbul"
+   }
+  }
+ },
+ {
+  "completeLangs": [],
+  "countryCode": "TR",
+  "image": null,
+  "position": 1,
+  "slug": "izmir",
+  "translations": {
+   "tr": {
+    "description": "Test İzmir açıklaması.",
+    "name": "İzmir"
+   }
+  }
+ }
+]

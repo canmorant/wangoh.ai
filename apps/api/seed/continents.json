@@ -1,0 +1,77 @@
+[
+ {
+  "position": 0,
+  "slug": "europe",
+  "translations": {
+   "en": {
+    "name": "Europe"
+   },
+   "es": {
+    "name": "Europa"
+   },
+   "tr": {
+    "name": "Avrupa"
+   }
+  }
+ },
+ {
+  "position": 1,
+  "slug": "asia",
+  "translations": {
+   "en": {
+    "name": "Asia"
+   },
+   "es": {
+    "name": "Asia"
+   },
+   "tr": {
+    "name": "Asya"
+   }
+  }
+ },
+ {
+  "position": 2,
+  "slug": "americas",
+  "translations": {
+   "en": {
+    "name": "Americas"
+   },
+   "es": {
+    "name": "América"
+   },
+   "tr": {
+    "name": "Amerika"
+   }
+  }
+ },
+ {
+  "position": 3,
+  "slug": "africa",
+  "translations": {
+   "en": {
+    "name": "Africa"
+   },
+   "es": {
+    "name": "África"
+   },
+   "tr": {
+    "name": "Afrika"
+   }
+  }
+ },
+ {
+  "position": 4,
+  "slug": "oceania",
+  "translations": {
+   "en": {
+    "name": "Oceania"
+   },
+   "es": {
+    "name": "Oceanía"
+   },
+   "tr": {
+    "name": "Okyanusya"
+   }
+  }
+ }
+]

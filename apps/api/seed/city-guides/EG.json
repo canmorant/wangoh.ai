@@ -1,0 +1,3039 @@
+{
+ "countryCode": "EG",
+ "guides": [
+  {
+   "citySlug": "kahire",
+   "completeLangs": [
+    "en",
+    "es"
+   ],
+   "reviewed": true,
+   "translations": {
+    "en": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Al-Azhar / Khan el-Khalili",
+        "category": "halal",
+        "cuisine": "Egyptian grills and stuffed squab",
+        "description": "Celebrated historic eatery in the Khan el-Khalili bazaar, renowned for traditional halal stuffed squab (hamam mahshi) and charcoal-grilled lamb.",
+        "lastVerified": "2026-10-06",
+        "name": "Farahat",
+        "price": "Orta",
+        "verification": {
+         "note": "Serves halal meats in accordance with traditional Islamic standards; no alcohol is served.",
+         "sourceName": "Egyptian Tourism Authority — heritage dining",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://www.egypt.travel/",
+         "status": "restaurant-confirmed"
+        },
+        "why": "The most established stop in the alleys of Khan el-Khalili to taste traditional Egyptian halal grilled meats and squab."
+       }
+      ],
+      "researchNote": "Cairo street foods like koshary and taameya (fava falafel) are naturally plant-based; meat preparations follow local halal standards.",
+      "vegan": [
+       {
+        "area": "Downtown / Champollion St",
+        "category": "vegan",
+        "cuisine": "Traditional Egyptian koshary",
+        "description": "Cairo's legendary multi-storey koshary landmark since 1950, serving Egypt's naturally vegan national dish of lentils, rice, pasta and crispy fried onions.",
+        "lastVerified": "2026-10-06",
+        "name": "Koshary Abou Tarek",
+        "price": "Ekonomik",
+        "verification": {
+         "note": "Traditional koshary is made entirely with plant-based ingredients; tomato sauce and garlic vinegar are vegan friendly.",
+         "sourceName": "HappyCow's current vegan restaurant directory",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/koshary-abou-tarek-cairo-13233",
+         "status": "vegan-focused"
+        },
+        "why": "Undisputed Cairo institution to enjoy Egypt's most celebrated dish in its most authentic, fast-paced setting."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Three full days cover Giza, the museum and historic centre; allow four or five for Saqqara and slower neighbourhood visits.",
+       "q": "How many days do you need in Cairo?"
+      },
+      {
+       "a": "Giza suits a pyramid-and-museum visit; Downtown or Zamalek balance a broader city stay. Compare your planned transfers.",
+       "q": "Should you stay in Giza or central Cairo?"
+      },
+      {
+       "a": "The pyramids are in Giza, within the wider metropolis but not walking distance from the historic centre. Allow separate transport and traffic time.",
+       "q": "Are Cairo and the pyramids in the same area?"
+      },
+      {
+       "a": "Cairo International (CAI) and Sphinx International (SPX) are different airports. Transfers vary between Giza and the east bank of the Nile. Confirm the terminal, meeting point and price, and leave traffic buffer before any booked arrival-day visit.",
+       "q": "How do you get to Cairo?"
+      }
+     ],
+     "h1": "Cairo Travel Guide: Pyramids, Museums and a 3-Day Route",
+     "itinerary": [
+      {
+       "afternoon": "Meal and rest in Giza",
+       "evening": "Return to the hotel for a quiet evening",
+       "morning": "Pyramids and the Sphinx",
+       "title": "Day 1 — Giza"
+      },
+      {
+       "afternoon": "Galleries and transfer",
+       "evening": "Dinner in Zamalek or by the Nile",
+       "morning": "Grand Egyptian Museum",
+       "title": "Day 2 — Museum and Nile"
+      },
+      {
+       "afternoon": "Khan el-Khalili and one monument",
+       "evening": "Dinner break in Downtown",
+       "morning": "Al-Muizz area walk",
+       "title": "Day 3 — Historic centre"
+      }
+     ],
+     "lede": "Cairo can be overwhelming at first: traffic, noise, crowds and streets that change character around every corner. Then a tea break gives you a chance to settle into it. See the pyramids, but leave time afterwards for the Nile, the old bazaars and the everyday food that makes the city worth staying for.",
+     "places": [
+      {
+       "area": "Giza Plateau",
+       "known": "Pyramid complex",
+       "name": "Giza Pyramids and the Sphinx",
+       "tip": "Do not assume pyramid interiors are included in general admission.",
+       "why": "To explore the monuments as a whole landscape."
+      },
+      {
+       "area": "Giza",
+       "known": "Museum collections and spacious galleries",
+       "name": "Grand Egyptian Museum",
+       "tip": "Check current gallery coverage and ticket categories.",
+       "why": "To explore antiquities with their context."
+      },
+      {
+       "area": "Historic Cairo",
+       "known": "Bazaar and monument-lined lanes",
+       "name": "Khan el-Khalili and Al-Muizz",
+       "tip": "Check visitor access and clothing at religious sites.",
+       "why": "For a walk through the living historic city."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Practical tips for Cairo",
+     "practicalTips": [
+      {
+       "body": "Mark your hotel and museum locations before the Giza day, allowing for Nile bridge traffic.",
+       "title": "Giza is a separate area"
+      },
+      {
+       "body": "Do not assume general admission includes guiding, monument interiors or transport.",
+       "title": "Clarify extras beforehand"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Recommended stay",
+       "value": "3–4 full days"
+      },
+      {
+       "label": "Best time to visit",
+       "value": "October–April"
+      },
+      {
+       "label": "Getting around",
+       "value": "Metro and area-based car transfers"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Luxor Travel Guide: Karnak and Valley of the Kings",
+       "city": "Luksor",
+       "description": "Karnak, Luxor Temple, the Valley of the Kings and Hatshepsut form a monument route on both Nile banks."
+      },
+      {
+       "anchor": "Hurghada Travel Guide: Giftun, Beaches and Where to Stay",
+       "city": "Hurgada",
+       "description": "Giftun boat trips, the marina, El Dahar and choosing the right Red Sea hotel coastline."
+      },
+      {
+       "anchor": "Sharm el-Sheikh Guide: Reefs, Ras Muhammad and Hotels",
+       "city": "Şarm el-Şeyh",
+       "description": "Ras Muhammad, Naama Bay, the Old Market and Sinai hotels chosen around reef access."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "Three full days can cover Giza, historic Cairo and the Nile-side neighbourhoods without constant rushing. The pyramids and Grand Egyptian Museum can share a day, but give them separate generous blocks if you want to explore both properly. Keep the first morning after a late flight gentle rather than starting with your most demanding booking.",
+        "Going inside a pyramid is a different experience from walking around the site. Narrow, sloping passages will not appeal to everyone, and you need not enter simply because you are there. At the museum, pick a few areas that genuinely interest you. Time left for the city may be more memorable than one more gallery.",
+        "Avoid scattering three distant districts across one day. The journey from your hotel to Giza and back into central Cairo involves more than the distance on a map. One main morning visit, a nearby afternoon and dinner within easy reach of your hotel make a calmer rhythm, with fewer transfers interrupting the experience."
+       ],
+       "heading": "Your first Cairo visit: separate Giza from the city",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Cairo International (CAI) and Sphinx International (SPX) are different airports. Transfers vary between Giza and the east bank of the Nile. Confirm the terminal, meeting point and price, and leave traffic buffer before any booked arrival-day visit.",
+        "The metro helps with some central journeys, but Giza’s plateau and scattered monuments need onward transfers. Keeping one day west of the Nile and another in the historic centre reduces repeated bridge crossings. Verify your vehicle and pickup point."
+       ],
+       "heading": "Getting to and around Cairo",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Visit Giza early and leave a generous separate block for the museum. Pair Khan el-Khalili with an Al-Muizz walk, then use the Nile neighbourhoods for a different evening."
+       ],
+       "heading": "Things to do in Cairo",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "The plateau is extensive and exposed: start early and plan water and shade breaks. Interior admission, transport and guiding are separate considerations. Agree route, duration and total price before taking a camel ride or private tour."
+         ],
+         "heading": "Giza Pyramids and the Sphinx"
+        },
+        {
+         "body": [
+          "Do not reduce the museum to a brief add-on after Giza. Check currently accessible galleries, ticket coverage and transport through official channels, and reserve a long half-day. Read visitor guidance for bags, photography and food."
+         ],
+         "heading": "Grand Egyptian Museum"
+        },
+        {
+         "body": [
+          "Connect the bazaar with Al-Muizz’s monuments, whose admissions can be separate. Agree material and price when shopping, then balance the busy lanes with a quieter meal by the Nile."
+         ],
+         "heading": "Khan el-Khalili and Al-Muizz"
+        }
+       ]
+      },
+      {
+       "body": [
+        "Khan el-Khalili deserves more than a souvenir stop. Combine the bazaar with the streets around Al Muizz and leave room for a seated break. Browsing does not oblige you to buy. When photographing a person or a working shop, asking first can turn a hurried snapshot into a much nicer encounter.",
+        "An afternoon in Zamalek or Downtown brings present-day Cairo into the trip. Not every street makes an easy long walk, so choose a manageable neighbourhood route and stop at a café. A Nile boat outing works best as its own leisurely activity. Some quiet time on the water can balance an intense day among monuments."
+       ],
+       "heading": "From Khan el-Khalili to the Nile: leave time to linger",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Downtown suits central walks and metro access, Zamalek offers an island base, and Giza suits pyramid and museum priorities. For a “pyramid-view” room, verify the actual view, walkability and cost of daily transfers into Cairo.",
+        "One hotel for several nights usually makes a first visit easier. Alternating between Giza and Downtown gives you different views but costs time in packing and check-ins. Choose Giza if the archaeological sites are your priority; a central base or Zamalek makes more sense when city life and varied neighbourhoods matter most."
+       ],
+       "heading": "Where to stay in Cairo",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Koshary, ful medames and taameya are approachable everyday dishes. Ask about stock and ingredients in molokhia and grilled meals. Pair early monuments with an indoor midday break and a more leisurely dinner.",
+        "Koshari combines rice, pasta and pulses into a filling bowl: start small and try the sauces separately. Taameya and ful offer another way into everyday Egyptian cooking. You do not need an expensive dinner every night to enjoy it; a straightforward meal near your sightseeing and a tea afterwards can be a highlight of the day."
+       ],
+       "heading": "What to eat in Cairo",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "October to April is easier for exposed sites. In summer, visit pyramids early and museums in hotter hours. Traffic and crowds vary year-round; limit each day to one or two main geographical areas.",
+        "Separate site admission, special interiors, guides and transfers in your budget. Local meals and tourist packages have different price structures; compare currency, group size and inclusions together."
+       ],
+       "heading": "Cairo: weather and budget planning",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "For Luxor, compare flights and trains using actual schedules; a travel day is not a full sightseeing day. If adding Saqqara, give it more time than a brief detour between Giza and the museum."
+       ],
+       "heading": "Trips beyond Cairo",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Explore Cairo and Giza: pyramids, the Grand Egyptian Museum, Khan el-Khalili and Nile neighbourhoods, with transport, stays and a 3-day route.",
+     "seoTitle": "Cairo Travel Guide: Pyramids, Museums and a 3-Day Route",
+     "sources": [
+      {
+       "name": "Experience Egypt — official tourism",
+       "url": "https://www.experienceegypt.eg/en/city/1/cairo-e-giza"
+      },
+      {
+       "name": "Grand Egyptian Museum — plan your visit",
+       "url": "https://visit-gem.com/"
+      },
+      {
+       "name": "UNESCO — Historic Cairo",
+       "url": "https://whc.unesco.org/en/list/89/"
+      },
+      {
+       "name": "UNESCO — Memphis and its Necropolis",
+       "url": "https://whc.unesco.org/en/list/86/"
+      }
+     ],
+     "volatileNote": "Admission prices, services and opening hours can change. Check the official sources below before booking."
+    },
+    "es": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Al-Azhar / Khan el-Khalili",
+        "category": "halal",
+        "cuisine": "Parrilla egipcia y paloma rellena",
+        "description": "Restaurante histórico en el bazar de Khan el-Khalili, famoso por sus palomas rellenas halal (hamam mahshi) y cordero a la brasa.",
+        "lastVerified": "2026-10-06",
+        "name": "Farahat",
+        "price": "Orta",
+        "verification": {
+         "note": "Sirve carnes halal según las pautas islámicas tradicionales; no se sirve alcohol.",
+         "sourceName": "Autoridad de Turismo de Egipto — gastronomía tradicional",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://www.egypt.travel/",
+         "status": "restaurant-confirmed"
+        },
+        "why": "La parada más clásica en los callejones de Khan el-Khalili para degustar carnes a la brasa halal y paloma rellena egipcia."
+       }
+      ],
+      "researchNote": "La comida callejera de El Cairo como el koshary y la taameya es naturalmente vegetal; las carnes siguen los estándares halal locales.",
+      "vegan": [
+       {
+        "area": "Downtown / Champollion St",
+        "category": "vegan",
+        "cuisine": "Koshary egipcio tradicional",
+        "description": "Emblema cairota de koshary desde 1950, que sirve el plato nacional naturalmente vegano a base de lentejas, arroz, pasta y cebolla crujiente.",
+        "lastVerified": "2026-10-06",
+        "name": "Koshary Abou Tarek",
+        "price": "Ekonomik",
+        "verification": {
+         "note": "El koshary tradicional se elabora únicamente con ingredientes vegetales; salsa de tomate y vinagre de ajo son aptos.",
+         "sourceName": "Directorio actualizado de restaurantes veganos de HappyCow",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/koshary-abou-tarek-cairo-13233",
+         "status": "vegan-focused"
+        },
+        "why": "Institución indiscutible en El Cairo para probar el plato más famoso de Egipto en su ambiente más auténtico."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Tres días completos para Guiza, museo y centro histórico; cuatro o cinco con Saqqara y barrios sin prisas.",
+       "q": "¿Cuántos días hacen falta en El Cairo?"
+      },
+      {
+       "a": "Guiza funciona para pirámides y museo; Downtown o Zamalek equilibran una visita urbana más amplia. Compara los traslados previstos.",
+       "q": "¿Dormir en Guiza o en el centro de El Cairo?"
+      },
+      {
+       "a": "Están en Guiza, dentro de la gran área metropolitana, pero no a pie del centro histórico. Reserva tiempo de transporte y tráfico.",
+       "q": "¿El Cairo y las pirámides están en la misma zona?"
+      },
+      {
+       "a": "Cairo International (CAI) y Sphinx International (SPX) son distintos. Los traslados cambian entre Guiza y la orilla oriental del Nilo. Confirma terminal, encuentro y precio, y deja margen por tráfico antes de visitas reservadas.",
+       "q": "¿Cómo llegar a El Cairo?"
+      }
+     ],
+     "h1": "Qué ver en El Cairo: pirámides, museos y ruta de 3 días",
+     "itinerary": [
+      {
+       "afternoon": "Comida y descanso en Guiza",
+       "evening": "Regreso al hotel y tarde tranquila",
+       "morning": "Pirámides y Esfinge",
+       "title": "Día 1 — Guiza"
+      },
+      {
+       "afternoon": "Galerías y traslado",
+       "evening": "Cena en Zamalek o junto al Nilo",
+       "morning": "Gran Museo Egipcio",
+       "title": "Día 2 — Museo y Nilo"
+      },
+      {
+       "afternoon": "Jan el-Jalili y un monumento",
+       "evening": "Cena en Downtown",
+       "morning": "Paseo por Al-Muizz",
+       "title": "Día 3 — Centro histórico"
+      }
+     ],
+     "lede": "El Cairo puede abrumar al principio: tráfico, ruido, gente y calles que cambian de carácter en cada esquina. Una pausa para tomar té ayuda a encontrarle el ritmo. Ve a las pirámides, pero guarda tiempo para el Nilo, los bazares y la comida cotidiana que también dan sentido al viaje.",
+     "places": [
+      {
+       "area": "Meseta de Guiza",
+       "known": "Complejo de pirámides",
+       "name": "Pirámides de Guiza y la Esfinge",
+       "tip": "No presupongas que la entrada general incluye interiores.",
+       "why": "Para recorrer los monumentos como un conjunto."
+      },
+      {
+       "area": "Guiza",
+       "known": "Colecciones y grandes salas",
+       "name": "Gran Museo Egipcio",
+       "tip": "Consulta salas incluidas y tipos de entrada actuales.",
+       "why": "Para conocer las piezas en su contexto."
+      },
+      {
+       "area": "El Cairo histórico",
+       "known": "Zoco y calles monumentales",
+       "name": "Jan el-Jalili y Al-Muizz",
+       "tip": "Consulta acceso y vestimenta en lugares de culto.",
+       "why": "Para pasear por el centro histórico vivo."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Consejos para visitar El Cairo",
+     "practicalTips": [
+      {
+       "body": "Localiza hotel y museo antes del día de Guiza y deja margen por tráfico en los puentes del Nilo.",
+       "title": "Guiza es una zona propia"
+      },
+      {
+       "body": "No presupongas que la entrada incluye guía, interiores o transporte.",
+       "title": "Aclara extras antes"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Duración recomendada",
+       "value": "3–4 días completos"
+      },
+      {
+       "label": "Mejor época",
+       "value": "Octubre–abril"
+      },
+      {
+       "label": "Cómo moverse",
+       "value": "Metro y traslados por zonas"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Qué ver en Luxor: Karnak, tumbas y ruta de 2 días",
+       "city": "Luksor",
+       "description": "Karnak, templo de Luxor, Valle de los Reyes y Hatshepsut en una ruta por ambas orillas del Nilo."
+      },
+      {
+       "anchor": "Qué hacer en Hurghada: Giftun, playas y dónde dormir",
+       "city": "Hurgada",
+       "description": "Barcos a Giftun, marina, El Dahar y consejos para elegir la costa adecuada del hotel."
+      },
+      {
+       "anchor": "Sharm el-Sheij: arrecifes, Ras Muhammad y alojamiento",
+       "city": "Şarm el-Şeyh",
+       "description": "Ras Muhammad, Naama Bay, Mercado Viejo y hoteles del Sinaí elegidos por acceso al arrecife."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "Tres días completos permiten combinar Guiza, el centro histórico y los barrios junto al Nilo. Las pirámides y el Gran Museo Egipcio pueden compartir jornada, pero necesitan bloques amplios si quieres disfrutarlos. Tras un vuelo tardío, deja una primera mañana tranquila en vez de empezar por la reserva más exigente.",
+        "Entrar en una pirámide y recorrer el recinto son experiencias distintas. Los pasadizos estrechos e inclinados no atraen a todo el mundo; no tienes que entrar solo por estar allí. En el museo, céntrate en algunas colecciones que te interesen. El tiempo que guardes para la ciudad puede valer más que otra sala.",
+        "Evita repartir tres zonas lejanas en una misma jornada. Ir del hotel a Guiza y volver al centro supone más que los kilómetros del mapa. Una visita principal por la mañana, una tarde cercana y una cena a distancia razonable del alojamiento reducen cansancio y desplazamientos continuos."
+       ],
+       "heading": "Primera visita a El Cairo: separa Guiza del centro",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Cairo International (CAI) y Sphinx International (SPX) son distintos. Los traslados cambian entre Guiza y la orilla oriental del Nilo. Confirma terminal, encuentro y precio, y deja margen por tráfico antes de visitas reservadas.",
+        "El metro ayuda en conexiones céntricas, pero la meseta de Guiza y monumentos dispersos necesitan otro tramo. Separa una jornada al oeste del Nilo y otra al centro histórico para evitar cruces repetidos."
+       ],
+       "heading": "Cómo llegar a El Cairo y moverse",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Visita Guiza temprano y reserva un bloque amplio para el museo. Combina Jan el-Jalili con Al-Muizz y dedica otra tarde a los barrios del Nilo."
+       ],
+       "heading": "Qué ver en El Cairo",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "La meseta es amplia y expuesta: empieza temprano y prevé agua y sombra. Interiores, transporte y guía son conceptos distintos. Acuerda recorrido, duración y precio total antes de aceptar paseo en camello o visita privada."
+         ],
+         "heading": "Pirámides de Guiza y la Esfinge"
+        },
+        {
+         "body": [
+          "No lo conviertas en una parada breve después de Guiza. Consulta galerías accesibles, entrada y transporte en canales oficiales, y reserva medio día largo. Revisa normas sobre bolsas, fotografía y comida."
+         ],
+         "heading": "Gran Museo Egipcio"
+        },
+        {
+         "body": [
+          "Enlaza el zoco con los monumentos de Al-Muizz, que pueden tener entradas independientes. Aclara material y precio al comprar y compensa las calles concurridas con una comida tranquila junto al Nilo."
+         ],
+         "heading": "Jan el-Jalili y Al-Muizz"
+        }
+       ]
+      },
+      {
+       "body": [
+        "Jan el-Jalili merece más que una parada para comprar recuerdos. Combina el bazar con las calles de Al Muizz y una pausa sentado. Mirar escaparates no te obliga a comprar. Si quieres fotografiar a alguien o su taller, pedir permiso suele crear un encuentro más agradable que sacar la cámara y marcharte.",
+        "Una tarde en Zamalek o Downtown muestra el Cairo actual. No todas las calles invitan a caminar mucho: elige un recorrido breve y descansa en una cafetería. Un paseo en barco por el Nilo funciona mejor como actividad independiente. Un rato tranquilo sobre el agua equilibra una jornada intensa de monumentos."
+       ],
+       "heading": "De Jan el-Jalili al Nilo: dale tiempo a El Cairo",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Downtown conviene para centro y metro; Zamalek para una base en la isla del Nilo; Guiza para pirámides y museo. Comprueba vistas reales, entorno y traslados diarios de una habitación “con vistas a las pirámides”.",
+        "Para una primera visita suele resultar más cómodo mantener el mismo hotel. Alternar Guiza y Downtown cambia las vistas, pero resta tiempo entre maletas y entradas al alojamiento. Guiza tiene sentido si priorizas la arqueología; el centro o Zamalek encajan mejor si buscas barrios y vida urbana."
+       ],
+       "heading": "Dónde alojarse en El Cairo",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Koshari, ful medames y taameya son buenas introducciones cotidianas. Pregunta por caldo e ingredientes en molokhiya y platos de parrilla. Combina monumentos temprano, descanso al mediodía y cena tranquila.",
+        "El koshari reúne arroz, pasta y legumbres en un plato contundente: empieza con una ración pequeña y prueba las salsas aparte. Taameya y ful acercan a la cocina cotidiana. No necesitas una cena cara cada noche; una comida sencilla cerca de tu recorrido y un té después pueden ser de lo mejor del día."
+       ],
+       "heading": "Qué comer en El Cairo",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "De octubre a abril resultan más cómodos los exteriores. En verano, pirámides temprano y museos en las horas cálidas. Tráfico y afluencia varían; limita cada jornada a una o dos zonas.",
+        "Presupuesta aparte entradas, interiores especiales, guías y traslados. Comida local y paquetes turísticos tienen precios distintos: compara moneda, número de personas y servicios incluidos."
+       ],
+       "heading": "El Cairo: cuándo ir y presupuesto",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Para continuar a Luxor compara horarios reales de avión y tren. Un traslado no es un día completo de visitas. Si añades Saqqara, no la comprimas entre Guiza y el gran museo."
+       ],
+       "heading": "Excursiones desde El Cairo",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Qué ver en El Cairo y Guiza: pirámides, Gran Museo Egipcio, Jan el-Jalili y barrios del Nilo, con transporte, alojamiento y una ruta de 3 días.",
+     "seoTitle": "Qué ver en El Cairo: pirámides, museos y ruta de 3 días",
+     "sources": [
+      {
+       "name": "Experience Egypt — turismo oficial",
+       "url": "https://www.experienceegypt.eg/en/city/1/cairo-e-giza"
+      },
+      {
+       "name": "Gran Museo Egipcio — planifica tu visita",
+       "url": "https://visit-gem.com/"
+      },
+      {
+       "name": "UNESCO — El Cairo histórico",
+       "url": "https://whc.unesco.org/en/list/89/"
+      },
+      {
+       "name": "UNESCO — Menfis y su necrópolis",
+       "url": "https://whc.unesco.org/en/list/86/"
+      }
+     ],
+     "volatileNote": "Los precios, los servicios y los horarios pueden cambiar. Consulta las fuentes oficiales indicadas antes de reservar."
+    },
+    "tr": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Al-Azhar / Khan el-Khalili",
+        "category": "halal",
+        "cuisine": "Mısır ızgara ve güvercin dolması",
+        "description": "Tarihi çarşı meydanında odun kömüründe pişen helal güvercin dolması (hamam mahshi), kuzu pirzola ve taze fırın lavaşlarıyla asırlık Kahire klasiği.",
+        "lastVerified": "2026-10-06",
+        "name": "Farahat",
+        "price": "Orta",
+        "verification": {
+         "note": "Geleneksel İslami usullere göre helal et servisi yapılır; mekânda alkol servisi yoktur.",
+         "sourceName": "Mısır Turizm Otoritesi — geleneksel restoranlar",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://www.egypt.travel/",
+         "status": "restaurant-confirmed"
+        },
+        "why": "Khan el-Khalili sokaklarında gezerken Mısır usulü geleneksel helal et ve güvercin lezzetini tatmak için en köklü duraktır."
+       }
+      ],
+      "researchNote": "Kahire'de sokak lezzetlerinden koşeri ve taameya (bakla falafeli) doğası gereği bitkiseldir; et yemeklerinin tamamı yerel helal standartlara uygundur.",
+      "vegan": [
+       {
+        "area": "Downtown / Champollion St",
+        "category": "vegan",
+        "cuisine": "Geleneksel Mısır koşerisi",
+        "description": "1950'den beri Mısır'ın milli sokak lezzeti olan mercimek, pirinç, nohut, makarna ve çıtır soğanlı geleneksel koşeriyi doğası gereği %100 vegan sunan ikonik başkent tapınağı.",
+        "lastVerified": "2026-10-06",
+        "name": "Koshary Abou Tarek",
+        "price": "Ekonomik",
+        "verification": {
+         "note": "Geleneksel koşeri tamamen bitkisel malzemelerle pişirilir; domates sosu ve sarımsaklı sirke vegan uyumludur.",
+         "sourceName": "HappyCow güncel vegan restoran dizini",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/koshary-abou-tarek-cairo-13233",
+         "status": "vegan-focused"
+        },
+        "why": "Mısır'ın en ünlü yemeğini en otantik ve hızlı haliyle tatmak için Kahire'nin tartışmasız 1 numaralı halk lokantasıdır."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Giza, müze ve tarihî merkez için üç tam gün; Saqqara ve daha sakin mahalle gezileri için dört veya beş gün.",
+       "q": "Kahire kaç günde gezilir?"
+      },
+      {
+       "a": "Piramit ve müze ağırlıklı kısa gezide Giza, farklı şehir günleri için Downtown veya Zamalek daha dengelidir; transferleri karşılaştırın.",
+       "q": "Kahire’de Giza’da mı merkezde mi kalmalı?"
+      },
+      {
+       "a": "Piramitler Giza’dadır; büyük metropolün parçasıdır ama tarihî merkeze yürüyüş mesafesinde değildir. Ulaşım ve trafik için ayrı zaman gerekir.",
+       "q": "Kahire ve piramitler aynı yerde mi?"
+      },
+      {
+       "a": "Cairo International (CAI) ile Sphinx International (SPX) farklı havalimanlarıdır. Oteliniz Giza’da veya Nil’in doğusunda olduğunda transfer süreleri değişir. Terminal, karşılama noktası ve fiyatı yazılı teyit edin; trafik payını varış gününün biletli programına ekleyin.",
+       "q": "Kahire'ye nasıl gidilir?"
+      }
+     ],
+     "h1": "Kahire Gezi Rehberi: Piramitler, Müzeler ve 3 Günlük Rota",
+     "itinerary": [
+      {
+       "afternoon": "Giza’da yemek ve dinlenme",
+       "evening": "Otele dönüş ve sakin akşam",
+       "morning": "Piramitler ve Sfenks",
+       "title": "1. Gün — Giza"
+      },
+      {
+       "afternoon": "Galeri ziyareti ve transfer",
+       "evening": "Zamalek veya Nil kıyısında yemek",
+       "morning": "Büyük Mısır Müzesi",
+       "title": "2. Gün — Müze ve Nil"
+      },
+      {
+       "afternoon": "Han el-Halili ve bir anıt ziyareti",
+       "evening": "Downtown’da yemek molası",
+       "morning": "El Muizz çevresinde yürüyüş",
+       "title": "3. Gün — Tarihî merkez"
+      }
+     ],
+     "lede": "Kahire ilk anda biraz yorabilir: trafik, sesler, kalabalık ve bir köşeden diğerine değişen sokaklar… Sonra bir çay molasında şehirle aranız düzelir. Piramitlere zaman ayırın ama dönüş biletini hemen sonrasına koymayın; Nil kıyısı, eski çarşılar ve gündelik yemekler de bu yolculuğun güzel tarafı.",
+     "places": [
+      {
+       "area": "Giza platosu",
+       "known": "Piramit kompleksi",
+       "name": "Giza Piramitleri ve Sfenks",
+       "tip": "Piramit içi girişin genel bilete dahil olduğunu varsaymayın.",
+       "why": "Anıtları tek kare yerine bütün bir alan olarak görmek için."
+      },
+      {
+       "area": "Giza",
+       "known": "Müze koleksiyonları ve büyük sergi alanları",
+       "name": "Büyük Mısır Müzesi",
+       "tip": "Güncel galeri kapsamını ve bilet türünü kontrol edin.",
+       "why": "Antik eserleri bağlamıyla incelemek için."
+      },
+      {
+       "area": "Tarihî Kahire",
+       "known": "Çarşı ve anıt sokakları",
+       "name": "Han el-Halili ve El Muizz",
+       "tip": "İbadet yerlerinde ziyaretçi girişini ve kıyafeti kontrol edin.",
+       "why": "Yaşayan şehir dokusunu yürüyerek görmek için."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Kahire için pratik ipuçları",
+     "practicalTips": [
+      {
+       "body": "Giza gününden önce otel ve müze konumlarını haritada işaretleyin; Nil köprülerinde trafik payı bırakın.",
+       "title": "Giza ayrı bölgedir"
+      },
+      {
+       "body": "Genel biletin rehber, anıt içi veya araç hizmetini kapsadığını varsaymayın.",
+       "title": "Ek hizmeti baştan sorun"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Önerilen süre",
+       "value": "3–4 tam gün"
+      },
+      {
+       "label": "En uygun dönem",
+       "value": "Ekim–Nisan"
+      },
+      {
+       "label": "Ulaşım yaklaşımı",
+       "value": "Metro ve bölge bazlı araç bağlantısı"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Luksor Gezi Rehberi: Karnak ve Krallar Vadisi Rotası",
+       "city": "Luksor",
+       "description": "Karnak, Luksor Tapınağı, Krallar Vadisi ve Hatşepsut arasında Nil’in iki yakasında anıt rotası."
+      },
+      {
+       "anchor": "Hurgada Gezi Rehberi: Giftun, Plajlar ve Nerede Kalınır",
+       "city": "Hurgada",
+       "description": "Giftun tekne gezileri, marina, El Dahar ve Kızıldeniz’de doğru otel kıyısını seçme rehberi."
+      },
+      {
+       "anchor": "Şarm el-Şeyh Gezi Rehberi: Resifler ve Otel Bölgeleri",
+       "city": "Şarm el-Şeyh",
+       "description": "Ras Muhammad, Naama Bay, Eski Çarşı ve resif erişimine göre konaklama seçilen Sina kıyısı."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "Üç tam günlük bir gezide Giza, tarihî merkez ve Nil çevresi iyi bir omurga oluşturur. Piramitlerle Büyük Mısır Müzesi’ni aynı güne koyabilirsiniz; ancak ikisini de ayrıntılı gezmek istiyorsanız iki ayrı zaman bloğu daha rahat. Uçuş sonrası ilk sabaha çok erken bir bilet koymak yerine şehre alışacak hafif bir başlangıç bırakın.",
+        "Giza’da piramidin içini görmekle dışarıdan alanı gezmek farklı deneyimler. İçeride dar ve eğimli geçitler olabilir; yalnız “gitmişken girelim” diye karar vermek zorunda değilsiniz. Müze gününde ise koleksiyonun tamamını bitirme hedefi koymadan ilgilendiğiniz birkaç bölüme odaklanın. Şehirde kazanacağınız boş zaman, fazladan bir salondan daha değerli olabilir.",
+        "Kahire’de en büyük planlama hatası aynı güne birbirinden uzak üç bölge eklemek. Otelden Giza’ya geçişi, sonra merkeze dönüşü yalnız haritadaki kilometrelerle hesaplamayın. Geziyi sabah bir ana ziyaret, öğleden sonra yakın çevre, akşam da otelinize makul mesafede yemek şeklinde kurmak hem yorgunluğu hem de sürekli pazarlık ve transfer ihtiyacını azaltır."
+       ],
+       "heading": "Kahire’ye ilk gelişte: piramit gününü şehir gününden ayırın",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Cairo International (CAI) ile Sphinx International (SPX) farklı havalimanlarıdır. Oteliniz Giza’da veya Nil’in doğusunda olduğunda transfer süreleri değişir. Terminal, karşılama noktası ve fiyatı yazılı teyit edin; trafik payını varış gününün biletli programına ekleyin.",
+        "Metro bazı merkez bağlantılarında işe yarar; Giza platosu ve dağınık anıtlar için son bağlantı gerekir. Bir günü Nil’in batısına, diğerini tarihî merkeze ayırmak köprü trafiğini azaltır. Uygulamalı araçta plaka ve buluşma noktasını doğrulayın."
+       ],
+       "heading": "Kahire ulaşım rehberi",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Giza’yı sabah, büyük müzeyi ayrı bir geniş zaman bloğunda görün. Tarihî Kahire’de Han el-Halili ile El Muizz çevresini yürüyüşe bağlayın; Nil mahallelerini farklı bir akşam molası yapın."
+       ],
+       "heading": "Kahire gezilecek yerler",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Plato geniş ve açık alandır; sabah başlayıp su ve gölge molasını planlayın. Anıt içi erişim, taşıma ve rehberlik genel alan biletiyle aynı hizmet değildir. Deveyi veya özel turu kabul etmeden güzergâh, süre ve toplam bedeli netleştirin."
+         ],
+         "heading": "Giza Piramitleri ve Sfenks"
+        },
+        {
+         "body": [
+          "Müzeyi Giza ziyaretinin kısa son durağına çevirmeyin. Güncel açık galerileri, saatli bilet kapsamını ve ulaşımı resmî kanaldan kontrol ederek en az bir uzun yarım gün bırakın. Fotoğraf, çanta ve yiyecek koşulları için ziyaretçi bilgisini okuyun."
+         ],
+         "heading": "Büyük Mısır Müzesi"
+        },
+        {
+         "body": [
+          "Çarşıyı El Muizz’in anıtlarıyla bir yürüyüş eksenine bağlayın; bütün yapılar aynı giriş biletiyle ziyaret edilmez. Alışverişte malzeme ve fiyatı baştan konuşun. Dar sokaklardan sonra Nil kıyısındaki sakin bir yemek molası günün temposunu dengeler."
+         ],
+         "heading": "Han el-Halili ve El Muizz"
+        }
+       ]
+      },
+      {
+       "body": [
+        "Han el-Halili çevresini yalnız hediyelik eşya alınacak bir durak saymayın. Çarşı gezisini El Muizz çevresindeki sokaklarla birleştirip araya oturarak verilen bir mola ekleyin. Dükkânlara bakmak alışveriş yapmak zorunda olduğunuz anlamına gelmiyor. Fotoğraf için bir kişinin veya iş yerinin karşısında durduğunuzda izin istemek, aceleyle çekip geçmekten daha hoş bir karşılaşma yaratır.",
+        "Zamalek veya Downtown’a ayıracağınız bir öğleden sonra şehrin bugünkü yüzünü gösterir. Her cadde uzun yürüyüş için aynı rahatlıkta değil; kısa bir mahalle rotası seçip bir kafede dinlenmek yeterli. Nil teknesi düşünüyorsanız bunu ulaşım çözümünden çok ayrı bir keyif molası sayın. Suda geçirilen sakin bir saat, yoğun bir anıt gününün ardından iyi geliyor."
+       ],
+       "heading": "Han el-Halili’den Nil kıyısına: Kahire’ye zaman tanıyın",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Downtown merkez yürüyüşleri ve metro, Zamalek Nil adasında daha sakin bir üs, Giza ise piramit ve müze önceliği için uygundur. “Piramit manzaralı” odanın gerçek pencere yönünü, çevre yürünebilirliğini ve şehir merkezine günlük transferini kontrol edin.",
+        "İlk gelişte birkaç geceyi tek otelde geçirmek genellikle daha rahat. Bir gece Giza, bir gece Downtown şeklinde bölmek farklı manzaralar sunsa da valiz ve check-in işleri gezi zamanını azaltır. Piramitler tatilin ana sebebiyse Giza; şehir yürüyüşleri ve farklı mahalleler ağır basıyorsa merkez veya Zamalek daha anlaşılır bir başlangıç."
+       ],
+       "heading": "Kahire nerede kalınır?",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Koşeri, ful medames ve taameya gündelik mutfağa iyi girişlerdir; molokhiya ve ızgaralarda tarif ile et suyunu sorun. Yoğun ziyarette gün boyu ağır öğünler yerine sabah anıt, öğlen kapalı mekân ve akşam yemek ritmi daha rahattır.",
+        "Koşeri, pirinç, makarna ve bakliyatın birleştiği doyurucu bir tabak; küçük porsiyonla başlayıp sosları ayrı denemek iyi fikir. Taameya ve ful ise daha sade bir öğüne alan açıyor. Şehrin mutfağını tanımak için her akşam pahalı bir masa gerekmiyor: gezi bölgenizde düzgün bir öğün ve ardından çay molası, günün en güzel anlarından biri olabilir."
+       ],
+       "heading": "Kahire ne yenir?",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "Ekim–nisan açık alanlar için daha rahattır. Yazın piramitleri erken, müzeleri sıcak saatlerde planlayın. Trafik ve ziyaretçi yoğunluğu yıl boyunca değişir; kısa takvimde her güne iki ana bölgeden fazlasını koymayın.",
+        "Anıt biletleri, özel mezar veya piramit girişleri, rehber ve transferi ayrı kalem sayın. Kahire’nin yerel yemek maliyeti turistik paketle aynı değildir. Fiyatı para birimi, kişi sayısı ve dahil hizmetlerle birlikte karşılaştırın."
+       ],
+       "heading": "Kahire için mevsim ve bütçe planı",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Luksor’a devam ediyorsanız uçuş veya tren seçeneğini gerçek saatleriyle kontrol edin; transfer günü bir tam gezi günü değildir. Saqqara’yı eklemek istiyorsanız Giza platosu ve büyük müzeyle aynı kısa güne sıkıştırmayın."
+       ],
+       "heading": "Kahire çevresinde rota önerileri",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Kahire gezi rehberi: Giza Piramitleri, Büyük Mısır Müzesi, Han el-Halili ve Nil mahalleleri; ulaşım, nerede kalınır ve 3 günlük rota planı.",
+     "seoTitle": "Kahire Gezi Rehberi: Piramitler, Müzeler ve 3 Günlük Rota",
+     "sources": [
+      {
+       "name": "Experience Egypt — resmî turizm",
+       "url": "https://www.experienceegypt.eg/en/city/1/cairo-e-giza"
+      },
+      {
+       "name": "Büyük Mısır Müzesi — ziyaret planı",
+       "url": "https://visit-gem.com/"
+      },
+      {
+       "name": "UNESCO — Tarihî Kahire",
+       "url": "https://whc.unesco.org/en/list/89/"
+      },
+      {
+       "name": "UNESCO — Memphis ve nekropolü",
+       "url": "https://whc.unesco.org/en/list/86/"
+      }
+     ],
+     "volatileNote": "Bilet ücretleri, seferler ve ziyaret saatleri değişebilir. Rezervasyon öncesinde aşağıdaki resmî kaynaklardan güncel bilgiyi kontrol edin."
+    }
+   }
+  },
+  {
+   "citySlug": "luksor",
+   "completeLangs": [
+    "en",
+    "es"
+   ],
+   "reviewed": true,
+   "translations": {
+    "en": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Luxor Souk / Nefertiti Hotel Rooftop",
+        "category": "halal",
+        "cuisine": "Egyptian tagines and grills",
+        "description": "Rooftop restaurant overlooking Luxor Temple and the Nile, serving halal lamb tagines, camel meat specialties and fresh Egyptian flatbreads.",
+        "lastVerified": "2026-10-06",
+        "name": "Al-Sahaby Lane Restaurant",
+        "price": "Orta",
+        "verification": {
+         "note": "Meats sourced from local halal certified suppliers; alcohol-free dining areas available.",
+         "sourceName": "Egyptian Tourism Authority — Luxor guide",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://www.egypt.travel/en/regions/nile-valley/luxor",
+         "status": "restaurant-confirmed"
+        },
+        "why": "Luxor's most popular panoramic terrace to enjoy quality halal meat dishes and oven-fresh breads facing the temple skyline."
+       }
+      ],
+      "researchNote": "Check stocks in tour-group restaurants in Luxor; confirm plant-based preferences when ordering vegetable dishes.",
+      "vegan": [
+       {
+        "area": "East Bank / Mohamed Farid St",
+        "category": "vegan",
+        "cuisine": "Traditional Egyptian and mezze",
+        "description": "Atmospheric 1930s Egyptian townhouse offering rich plant-based mezze, okra tagines, tahini dips and seasonal Nile valley vegetables.",
+        "lastVerified": "2026-10-06",
+        "name": "Sofra Restaurant & Cafe",
+        "price": "Orta",
+        "verification": {
+         "note": "Olive oil mezze and vegetable stews are prepared without butter or meat stock.",
+         "sourceName": "HappyCow's current vegan restaurant directory",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/sofra-luxor-20387",
+         "status": "vegan-focused"
+        },
+        "why": "The most atmospheric dining address in Luxor for a vegetable-focused traditional meal in a peaceful courtyard after visiting temples."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Allow two full days for the two banks, or three with museums and a slower pace.",
+       "q": "How many days do you need in Luxor?"
+      },
+      {
+       "a": "It is an option with limited time, but the long road journey and heat are tiring. Two nights in Luxor suit a history-focused trip better.",
+       "q": "Is a Luxor day trip from Hurghada worthwhile?"
+      },
+      {
+       "a": "No. Check current general-ticket coverage, open tombs and separately charged entries through official ticket information.",
+       "q": "Does a Valley of the Kings ticket cover every tomb?"
+      }
+     ],
+     "h1": "Luxor Travel Guide: Karnak and Valley of the Kings",
+     "itinerary": [
+      {
+       "afternoon": "Hatshepsut and midday rest",
+       "evening": "A quiet meal beside the Nile",
+       "morning": "Early Valley of the Kings visit",
+       "title": "Day 1 — West bank"
+      },
+      {
+       "afternoon": "Luxor Museum or rest",
+       "evening": "Luxor Temple if opening hours allow",
+       "morning": "Karnak Temple Complex",
+       "title": "Day 2 — East bank"
+      }
+     ],
+     "lede": "A morning among temple columns and an evening beside the Nile feel like two different worlds in Luxor. The aim is not to collect as many tomb visits as possible. Choose a few you can really appreciate, and leave space between them to rest and take in where you are.",
+     "places": [
+      {
+       "area": "East bank",
+       "known": "Columned halls and temple courts",
+       "name": "Karnak Temple Complex",
+       "tip": "Carry water and allow time for the extensive site.",
+       "why": "For the scale of a major temple complex."
+      },
+      {
+       "area": "West bank",
+       "known": "Royal tombs",
+       "name": "Valley of the Kings",
+       "tip": "Distinguish general admission from special tomb tickets.",
+       "why": "For tomb architecture and wall paintings."
+      },
+      {
+       "area": "Opposite Nile banks",
+       "known": "Terraced temple and city sanctuary",
+       "name": "Hatshepsut Temple and Luxor Temple",
+       "tip": "These are not neighbouring stops.",
+       "why": "To compare two distinct temple settings."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Practical tips for Luxor",
+     "practicalTips": [
+      {
+       "body": "Check how many tombs and which ones your admission includes before buying.",
+       "title": "Tomb coverage"
+      },
+      {
+       "body": "Plan transport from the ferry landing to the sites and back.",
+       "title": "A river crossing is only the start"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Recommended stay",
+       "value": "2–3 full days"
+      },
+      {
+       "label": "Best time to visit",
+       "value": "October–April"
+      },
+      {
+       "label": "Getting around",
+       "value": "Walking and car transfers by riverbank"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Cairo Travel Guide: Pyramids, Museums and a 3-Day Route",
+       "city": "Kahire",
+       "description": "Giza’s pyramids, historic lanes, museums and Nile neighbourhoods make a layered city and archaeology trip."
+      },
+      {
+       "anchor": "Hurghada Travel Guide: Giftun, Beaches and Where to Stay",
+       "city": "Hurgada",
+       "description": "Giftun boat trips, the marina, El Dahar and choosing the right Red Sea hotel coastline."
+      },
+      {
+       "anchor": "Sharm el-Sheikh Guide: Reefs, Ras Muhammad and Hotels",
+       "city": "Şarm el-Şeyh",
+       "description": "Ras Muhammad, Naama Bay, the Old Market and Sinai hotels chosen around reef access."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "Two full days provide a useful introduction to the east and west banks; a third creates a gentler pace. Start with Karnak and Luxor Temple in the east, and the Valley of the Kings and Hatshepsut Temple in the west. Group visits on the same bank rather than repeatedly crossing the river.",
+        "Admission at the Valley of the Kings can vary between tombs. Once you know what your ticket includes, give your chosen visits time rather than chasing every open entrance. Paintings and inscriptions become more memorable with some context from a guide or the interpretation panels. Do not let taking pictures replace looking closely.",
+        "On hot days, an early archaeological visit and a midday hotel break are sensible planning. Head out again for a riverside walk or a central dinner in the evening. If you want a balloon outing, allow for the very early start; following it with a long west-bank circuit may not be the comfortable day you imagined."
+       ],
+       "heading": "How long in Luxor? Give each bank its own day",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Match your Luxor International (LXR) transfer to your hotel’s riverbank. Compare current trains or flights from Cairo and road transfers from Hurghada, avoiding a packed tomb itinerary immediately after overnight travel.",
+        "Some east-bank central sights are walkable; Karnak and the west bank need onward transport. A ferry crossing does not take you all the way to the tombs. Confirm stop order, waiting time, return and inclusions for private transfers."
+       ],
+       "heading": "Getting to and around Luxor",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Start the west bank early and leave the eastern temples for another day. Choose tombs by your interests and ticket coverage, with a museum break instead of rushing into every chamber."
+       ],
+       "heading": "Things to do in Luxor",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Karnak is a complex of courts and sacred spaces, not a single building. Continue beyond the main hypostyle hall into quieter sections. Its exposed scale makes an early start and shade breaks worthwhile."
+         ],
+         "heading": "Karnak Temple Complex"
+        },
+        {
+         "body": [
+          "Accessible tombs and general-ticket coverage can change. Read the current list and budget special admissions separately. Heat, queues and narrow chambers favour a thoughtful choice of a few tombs rather than a numbers race."
+         ],
+         "heading": "Valley of the Kings"
+        },
+        {
+         "body": [
+          "Pair Hatshepsut’s terraced temple with your Valley of the Kings day. Luxor Temple is in the east-bank centre and can offer evening light if current hours allow. Group the two visits by riverbank, not by name association."
+         ],
+         "heading": "Hatshepsut Temple and Luxor Temple"
+        }
+       ]
+      },
+      {
+       "body": [
+        "At Karnak, pause along the main axis and let the columns establish the scale of the place. If you prefer details, concentrate on one area rather than trying to memorise the whole complex. Luxor Temple has a closer relationship with the surrounding city, giving it a different atmosphere. The two visits need not feel like repetitions.",
+        "Unscheduled time beside the Nile keeps Luxor from becoming one long museum visit. If you choose a boat outing, agree on departure, duration and return beforehand and give it its own place in the day. Simply sitting by the river can be enough after a long morning in the tombs."
+       ],
+       "heading": "Make room for the Nile between temple visits",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "The east-bank centre suits hotels, dining and temple access; the west bank offers quieter stays near the tomb circuit. Check street noise, ferry access and evening returns rather than judging solely by a Nile view.",
+        "On a solo or car-free trip, walking out to dinner on the east bank can be a real advantage. A quiet west-bank guesthouse may suit a slower holiday. Think beyond the pool photograph: leaving for an early visit and getting back in the evening will affect everyday comfort more than the promotional view."
+       ],
+       "heading": "Where to stay in Luxor",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Ful, taameya, vegetable dishes and grills are accessible options. For included tour lunches, ask about restaurant, drinks and dietary adaptation. Arrange an early breakfast or packed meal with the hotel the day before your monument visit.",
+        "Match meals to the sightseeing rhythm. Breakfast, water and a small packed meal help on an early west-bank morning; soup, vegetables and a grilled dish can make an easier dinner. A lengthy organised lunch is not automatically the best use of your break: consider how much time you would rather spend resting in the shade."
+       ],
+       "heading": "What to eat in Luxor",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "October to April is more comfortable for exposed monuments. In summer, start the west bank very early and take a long midday break. Balloon flights and river outings depend on weather; avoid tight onward connections.",
+        "Budget separately for main sites, special tombs, guides, riverbank transfers and boats. Treat a balloon ride as an extra and verify the final total and cancellation terms."
+       ],
+       "heading": "Luxor: weather and budget planning",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Hurghada is a Red Sea extension reachable by road; do not book a boat outing on transfer day. Leave a third day for another monument such as Dendera instead of compressing both banks into one."
+       ],
+       "heading": "Trips beyond Luxor",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Visit Luxor’s Karnak, Luxor Temple, Valley of the Kings and Hatshepsut with two-bank transport advice, ticket tips and a focused 2-day itinerary.",
+     "seoTitle": "Luxor Travel Guide: Karnak and Valley of the Kings",
+     "sources": [
+      {
+       "name": "Experience Egypt — official tourism",
+       "url": "https://www.experienceegypt.eg/en/city/22/luxor-"
+      },
+      {
+       "name": "Experience Egypt — east bank",
+       "url": "https://www.experienceegypt.eg/en/Attraction-Details/299/east-bank"
+      },
+      {
+       "name": "UNESCO — Ancient Thebes with its Necropolis",
+       "url": "https://whc.unesco.org/en/list/87/"
+      }
+     ],
+     "volatileNote": "Admission prices, services and opening hours can change. Check the official sources below before booking."
+    },
+    "es": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Zoco de Luxor / Azotea del Nefertiti Hotel",
+        "category": "halal",
+        "cuisine": "Tajines egipcios y parrilla",
+        "description": "Terraza con vistas al templo de Luxor y al Nilo, con tajines de cordero halal, especialidades de carne y panes egipcios recién horneados.",
+        "lastVerified": "2026-10-06",
+        "name": "Al-Sahaby Lane Restaurant",
+        "price": "Orta",
+        "verification": {
+         "note": "Carnes procedentes de proveedores locales con certificación halal; zonas sin alcohol disponibles.",
+         "sourceName": "Autoridad de Turismo de Egipto — guía de Luxor",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://www.egypt.travel/en/regions/nile-valley/luxor",
+         "status": "restaurant-confirmed"
+        },
+        "why": "La terraza panorámica más popular de Luxor para saborear platos halal de calidad y panes recién horneados frente al templo."
+       }
+      ],
+      "researchNote": "Comprueba caldos en restaurantes de grupos turísticos en Luxor; confirma platos vegetales al pedir.",
+      "vegan": [
+       {
+        "area": "Orilla este / Mohamed Farid St",
+        "category": "vegan",
+        "cuisine": "Cocina egipcia tradicional y mezes",
+        "description": "Casona egipcia de los años 30 con ricos mezes vegetales, tajines de quimbombó, salsas de sésamo y verduras frescas del valle del Nilo.",
+        "lastVerified": "2026-10-06",
+        "name": "Sofra Restaurant & Cafe",
+        "price": "Orta",
+        "verification": {
+         "note": "Los mezes con aceite de oliva y guisos de verduras se elaboran sin mantequilla ni caldo de carne.",
+         "sourceName": "Directorio actualizado de restaurantes veganos de HappyCow",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/sofra-luxor-20387",
+         "status": "vegan-focused"
+        },
+        "why": "La dirección más acogedora de Luxor para una comida tradicional centrada en verduras en un patio tranquilo tras visitar los templos."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Dos días completos para ambas orillas; tres con museos y un ritmo más tranquilo.",
+       "q": "¿Cuántos días dedicar a Luxor?"
+      },
+      {
+       "a": "Es una opción con poco tiempo, pero carretera y calor cansan. Si priorizas historia, dos noches en Luxor funcionan mejor.",
+       "q": "¿Conviene visitar Luxor en un día desde Hurghada?"
+      },
+      {
+       "a": "No. Consulta tumbas abiertas, cobertura general y accesos de pago adicional en la información oficial vigente.",
+       "q": "¿La entrada del Valle de los Reyes incluye todas las tumbas?"
+      }
+     ],
+     "h1": "Qué ver en Luxor: Karnak, tumbas y ruta de 2 días",
+     "itinerary": [
+      {
+       "afternoon": "Hatshepsut y descanso al mediodía",
+       "evening": "Cena tranquila junto al Nilo",
+       "morning": "Valle de los Reyes temprano",
+       "title": "Día 1 — Orilla oeste"
+      },
+      {
+       "afternoon": "Museo de Luxor o descanso",
+       "evening": "Templo de Luxor si el horario lo permite",
+       "morning": "Complejo de templos de Karnak",
+       "title": "Día 2 — Orilla este"
+      }
+     ],
+     "lede": "En Lúxor, una mañana entre columnas y una tarde junto al Nilo parecen dos mundos distintos. No se trata de visitar todas las tumbas posibles: elige algunas para disfrutarlas de verdad y deja tiempo entre ellas para descansar y asimilar lo que estás viendo.",
+     "places": [
+      {
+       "area": "Orilla oriental",
+       "known": "Salas de columnas y patios",
+       "name": "Complejo de templos de Karnak",
+       "tip": "Lleva agua y tiempo para un recinto amplio.",
+       "why": "Para comprender la escala del gran complejo."
+      },
+      {
+       "area": "Orilla occidental",
+       "known": "Tumbas reales",
+       "name": "Valle de los Reyes",
+       "tip": "Distingue entrada general y tumbas especiales.",
+       "why": "Para conocer arquitectura funeraria y pinturas."
+      },
+      {
+       "area": "Orillas distintas del Nilo",
+       "known": "Templo aterrazado y santuario urbano",
+       "name": "Templo de Hatshepsut y templo de Luxor",
+       "tip": "No son paradas contiguas.",
+       "why": "Para comparar dos emplazamientos diferentes."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Consejos para visitar Luxor",
+     "practicalTips": [
+      {
+       "body": "Comprueba cuántas tumbas y cuáles incluye la entrada antes de comprarla.",
+       "title": "Tumbas incluidas"
+      },
+      {
+       "body": "Planifica el trayecto desde el embarcadero a los recintos y el regreso.",
+       "title": "Cruzar el río es solo el inicio"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Duración recomendada",
+       "value": "2–3 días completos"
+      },
+      {
+       "label": "Mejor época",
+       "value": "Octubre–abril"
+      },
+      {
+       "label": "Cómo moverse",
+       "value": "Paseos y vehículo por orillas"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Qué ver en El Cairo: pirámides, museos y ruta de 3 días",
+       "city": "Kahire",
+       "description": "Pirámides de Guiza, calles históricas, museos y barrios del Nilo para combinar ciudad y arqueología."
+      },
+      {
+       "anchor": "Qué hacer en Hurghada: Giftun, playas y dónde dormir",
+       "city": "Hurgada",
+       "description": "Barcos a Giftun, marina, El Dahar y consejos para elegir la costa adecuada del hotel."
+      },
+      {
+       "anchor": "Sharm el-Sheij: arrecifes, Ras Muhammad y alojamiento",
+       "city": "Şarm el-Şeyh",
+       "description": "Ras Muhammad, Naama Bay, Mercado Viejo y hoteles del Sinaí elegidos por acceso al arrecife."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "Dos días completos permiten conocer ambas orillas; un tercero da margen para bajar el ritmo. En la oriental, empieza por Karnak y el templo de Lúxor; en la occidental, por el Valle de los Reyes y Hatshepsut. Agrupar visitas en una misma orilla evita cruzar el río continuamente.",
+        "Las entradas del Valle de los Reyes pueden incluir tumbas distintas. Cuando sepas qué cubre tu billete, dedica tiempo a las elegidas sin intentar entrar en todas. Las pinturas y los textos se disfrutan más con las explicaciones de un guía o los paneles. Que las fotos no sustituyan a mirar con calma.",
+        "Con calor, visitar los yacimientos temprano y volver al hotel al mediodía es organizarse bien. Por la tarde puedes salir de nuevo junto al río o cenar en el centro. Si quieres volar en globo, cuenta con madrugar mucho; añadir después una ruta extensa por la orilla occidental puede resultar agotador."
+       ],
+       "heading": "Cuántos días en Lúxor: una jornada para cada orilla",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Organiza el traslado desde Luxor International (LXR) según la orilla de tu hotel. Compara tren o vuelo desde El Cairo y carretera desde Hurghada; evita un intenso día de tumbas tras viajar de noche.",
+        "Algunas visitas del centro oriental se hacen a pie, pero Karnak y la orilla oeste necesitan transporte adicional. Cruzar en ferry no te deja en las tumbas. Acuerda paradas, esperas, regreso y precio."
+       ],
+       "heading": "Cómo llegar a Luxor y moverse",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Empieza temprano en la orilla oeste y deja los templos orientales para otro día. Elige tumbas según interés y entrada; añade descanso de museo en vez de entrar en todas."
+       ],
+       "heading": "Qué ver en Luxor",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Karnak reúne patios y espacios sagrados, no un solo edificio. Sigue más allá de la gran sala hipóstila hacia zonas tranquilas. Su extensión expuesta aconseja empezar temprano y buscar descansos con sombra."
+         ],
+         "heading": "Complejo de templos de Karnak"
+        },
+        {
+         "body": [
+          "Las tumbas accesibles y la entrada general pueden cambiar. Consulta la lista y presupuesta accesos especiales aparte. Calor, colas y pasos estrechos favorecen visitar pocas tumbas con atención."
+         ],
+         "heading": "Valle de los Reyes"
+        },
+        {
+         "body": [
+          "Combina las terrazas de Hatshepsut con el día del Valle de los Reyes. El templo de Luxor está en el centro oriental y permite apreciar otra luz si su horario actual ofrece visita nocturna."
+         ],
+         "heading": "Templo de Hatshepsut y templo de Luxor"
+        }
+       ]
+      },
+      {
+       "body": [
+        "En Karnak, detente en el eje principal para apreciar la escala de las columnas. Si prefieres los detalles, concéntrate en una zona sin intentar abarcar todo el complejo. El templo de Lúxor se relaciona más con la ciudad que lo rodea y ofrece otro ambiente. No son dos versiones de la misma visita.",
+        "El tiempo libre junto al Nilo evita que Lúxor se convierta en una visita interminable a un museo. Si eliges un paseo en barco, acuerda salida, duración y regreso y resérvale su espacio. Después de una mañana larga entre tumbas, sentarte frente al río también puede ser suficiente."
+       ],
+       "heading": "Una pausa junto al Nilo entre templos",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "El centro oriental facilita hoteles, comidas y templos; la orilla oeste ofrece calma y proximidad a tumbas. Revisa ruido, ferry y regreso nocturno además de las vistas al Nilo.",
+        "Si viajas sin coche o por tu cuenta, salir a cenar caminando desde la orilla oriental es una ventaja. Una casa de huéspedes tranquila al oeste puede encajar en unas vacaciones lentas. Más que la foto de la piscina, importan la salida a primera hora y el regreso por la noche."
+       ],
+       "heading": "Dónde alojarse en Luxor",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Ful, taameya, verduras y parrillas son opciones sencillas. Si el tour incluye comida, pregunta por restaurante, bebidas y adaptación de dieta. Acuerda el desayuno temprano con el hotel el día anterior.",
+        "Adapta las comidas al recorrido. Desayuno, agua y algo para llevar facilitan una mañana temprana en la orilla occidental; sopa, verduras y un plato a la parrilla pueden servir para cenar. Un almuerzo largo incluido en una excursión no siempre es la mejor pausa si prefieres descansar a la sombra."
+       ],
+       "heading": "Qué comer en Luxor",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "De octubre a abril se visitan mejor los monumentos expuestos. En verano empieza muy temprano y descansa al mediodía. Globos y barcos dependen del tiempo; evita enlaces ajustados con tren o avión.",
+        "Separa monumentos, tumbas especiales, guía, traslados y barcos. Considera el globo un extra y confirma precio final y condiciones de cancelación."
+       ],
+       "heading": "Luxor: cuándo ir y presupuesto",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Hurghada permite continuar por carretera al mar Rojo; no reserves barco el día del traslado. Para otro monumento, como Dendera, deja una tercera jornada sin comprimir las dos orillas."
+       ],
+       "heading": "Excursiones desde Luxor",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Qué ver en Luxor: Karnak, templo de Luxor, Valle de los Reyes y Hatshepsut, con transporte entre orillas, entradas y una ruta práctica de 2 días.",
+     "seoTitle": "Qué ver en Luxor: Karnak, tumbas y ruta de 2 días",
+     "sources": [
+      {
+       "name": "Experience Egypt — turismo oficial",
+       "url": "https://www.experienceegypt.eg/en/city/22/luxor-"
+      },
+      {
+       "name": "Experience Egypt — orilla este",
+       "url": "https://www.experienceegypt.eg/en/Attraction-Details/299/east-bank"
+      },
+      {
+       "name": "UNESCO — Antigua Tebas y su necrópolis",
+       "url": "https://whc.unesco.org/en/list/87/"
+      }
+     ],
+     "volatileNote": "Los precios, los servicios y los horarios pueden cambiar. Consulta las fuentes oficiales indicadas antes de reservar."
+    },
+    "tr": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Luksor Çarşısı / Nefertiti Hotel Çatısı",
+        "category": "halal",
+        "cuisine": "Mısır güveçleri ve ızgaralar",
+        "description": "Nil Nehri ve Luksor Tapınağı manzaralı terasta taze helal kuzu tajin, deve burger ve fırından sıcak çıkan Mısır fırın ekmekleri.",
+        "lastVerified": "2026-10-06",
+        "name": "Al-Sahaby Lane Restaurant",
+        "price": "Orta",
+        "verification": {
+         "note": "Etler yerel helal sertifikalı kasaplardan temin edilir; alkolsüz yemek bölümü bulunur.",
+         "sourceName": "Mısır Turizm Otoritesi — Luksor rehberi",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://www.egypt.travel/en/regions/nile-valley/luxor",
+         "status": "restaurant-confirmed"
+        },
+        "why": "Tapınak silüetine karşı kaliteli helal et yemekleri ve taze fırın ürünleri tatmak için kentin en popüler seyir terasıdır."
+       }
+      ],
+      "researchNote": "Luksor'da tur restoranlarında et sularına dikkat edin; sebze yemeklerinde vegan tercihinizi masada belirtin.",
+      "vegan": [
+       {
+        "area": "Doğu Yakası / Mohamed Farid St",
+        "category": "vegan",
+        "cuisine": "Geleneksel Mısır ve zeytinyağlılar",
+        "description": "1930'lar Mısır konağında taze tahinli babaganuş, domatesli bamya güveci ve yerel sebzelerle hazırlanan zengin vegan meze tabakları.",
+        "lastVerified": "2026-10-06",
+        "name": "Sofra Restaurant & Cafe",
+        "price": "Orta",
+        "verification": {
+         "note": "Zeytinyağlı mezeler ve sebze güveçleri tereyağsız ve et suyu katılmadan hazırlanır.",
+         "sourceName": "HappyCow güncel vegan restoran dizini",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/sofra-luxor-20387",
+         "status": "vegan-focused"
+        },
+        "why": "Tapınak gezileri sonrasında sakin bir avluda sebze ağırlıklı geleneksel Nil mutfağını deneyimlemek için Luksor'daki en zarif adrestir."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "İki yakaya iki tam gün; müze ve daha sakin tempo için üç gün bırakın.",
+       "q": "Luksor kaç günde gezilir?"
+      },
+      {
+       "a": "Az zamanı olanlar için seçenek; uzun yol ve sıcaklık yorar. Tarih önceliğinde Luksor’da iki gece daha rahat olur.",
+       "q": "Hurgada’dan Luksor günübirlik mantıklı mı?"
+      },
+      {
+       "a": "Hayır. Genel kapsamı, açık mezarları ve özel girişleri güncel resmî bilet bilgisinden kontrol edin.",
+       "q": "Krallar Vadisi bileti her mezarı kapsar mı?"
+      }
+     ],
+     "h1": "Luksor Gezi Rehberi: Karnak ve Krallar Vadisi Rotası",
+     "itinerary": [
+      {
+       "afternoon": "Hatşepsut ve öğle dinlenmesi",
+       "evening": "Nil kıyısında sakin yemek",
+       "morning": "Erken Krallar Vadisi ziyareti",
+       "title": "1. Gün — Batı yaka"
+      },
+      {
+       "afternoon": "Luxor Museum veya dinlenme",
+       "evening": "Saatler uygunsa Luksor Tapınağı",
+       "morning": "Karnak Tapınak Kompleksi",
+       "title": "2. Gün — Doğu yaka"
+      }
+     ],
+     "lede": "Luksor’da sabah tapınak sütunlarının arasında dolaşıp akşam Nil kıyısında dinlenmek, aynı gün içinde iki ayrı dünyaya geçmek gibi. Burada mesele mümkün olduğunca çok mezar görmek değil; birkaçını gerçekten anlayarak gezmek ve sıcağın arasında nefes alacak zaman bulmak.",
+     "places": [
+      {
+       "area": "Doğu yaka",
+       "known": "Sütunlu salonlar ve tapınak avluları",
+       "name": "Karnak Tapınak Kompleksi",
+       "tip": "Su taşıyın ve geniş alana yeterli süre bırakın.",
+       "why": "Büyük tapınak ölçeğini anlamak için."
+      },
+      {
+       "area": "Batı yaka",
+       "known": "Kraliyet mezarları",
+       "name": "Krallar Vadisi",
+       "tip": "Genel bilet ve özel mezar girişlerini ayırın.",
+       "why": "Duvar resimlerini ve mezar mimarisini görmek için."
+      },
+      {
+       "area": "İki ayrı Nil yakası",
+       "known": "Teraslı tapınak ve şehir tapınağı",
+       "name": "Hatşepsut Tapınağı ve Luksor Tapınağı",
+       "tip": "Bu iki durağı yakın komşu sanmayın.",
+       "why": "İki farklı tapınak yerleşimini karşılaştırmak için."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Luksor için pratik ipuçları",
+     "practicalTips": [
+      {
+       "body": "Bilette kaç ve hangi mezarın dahil olduğunu satın almadan kontrol edin.",
+       "title": "Mezar kapsamı"
+      },
+      {
+       "body": "Feribot sonrasında anıta giden ulaşımı ve dönüşü ayrıca planlayın.",
+       "title": "Nehri geçmek başlangıçtır"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Önerilen süre",
+       "value": "2–3 tam gün"
+      },
+      {
+       "label": "En uygun dönem",
+       "value": "Ekim–Nisan"
+      },
+      {
+       "label": "Ulaşım yaklaşımı",
+       "value": "Yaka bazlı yürüyüş ve araç"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Kahire Gezi Rehberi: Piramitler, Müzeler ve 3 Günlük Rota",
+       "city": "Kahire",
+       "description": "Giza Piramitleri, tarihî merkez, müzeler ve Nil mahalleleriyle büyük bir şehir ve arkeoloji gezisi."
+      },
+      {
+       "anchor": "Hurgada Gezi Rehberi: Giftun, Plajlar ve Nerede Kalınır",
+       "city": "Hurgada",
+       "description": "Giftun tekne gezileri, marina, El Dahar ve Kızıldeniz’de doğru otel kıyısını seçme rehberi."
+      },
+      {
+       "anchor": "Şarm el-Şeyh Gezi Rehberi: Resifler ve Otel Bölgeleri",
+       "city": "Şarm el-Şeyh",
+       "description": "Ras Muhammad, Naama Bay, Eski Çarşı ve resif erişimine göre konaklama seçilen Sina kıyısı."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "İki tam gün doğu ve batı yakasını tanımak için iyi başlangıç; üçüncü gün daha sakin bir geziye alan açar. Doğuda Karnak ve Luksor Tapınağı, batıda Krallar Vadisi ve Hatşepsut Tapınağı temel çerçeve olabilir. Nehrin iki tarafını sürekli değiştirmek yerine aynı yakadaki durakları bir araya toplamak gününüzü daha anlaşılır ve rahat yapar.",
+        "Krallar Vadisi’nde farklı mezarlar için farklı giriş kapsamları bulunabilir. Biletinizi aldıktan sonra her açık mezarı yetiştirme baskısına girmek yerine seçtiklerinize zaman verin. Duvar resimleri ve yazıtları bir rehberin bağlamıyla okumak, adlarını bilmeden hızlıca girip çıkmaktan daha akılda kalıcı. Fotoğraf peşinde gezerken açıklama panolarını kaçırmayın.",
+        "Sıcak günlerde arkeolojik geziyi erkene almak ve öğlen otele dönmek tembellik değil, iyi planlama. Akşam yeniden dışarı çıkıp kıyıda yürüyebilir veya merkeze yakın bir yemek yiyebilirsiniz. Balon turu düşünüyorsanız çok erken başlangıcı hesaba katın; o sabahın üzerine uzun bir batı yaka programı eklemek herkes için rahat bir seçim olmayabilir."
+       ],
+       "heading": "Luksor’da kaç gün? İki yaka, iki ayrı gezi günü",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Luxor International (LXR) transferini otelinizin Nil’in hangi yakasında olduğuna göre ayarlayın. Kahire’den tren veya uçuş, Hurgada’dan karayolu seçeneklerini gerçek seferle karşılaştırın; gece yolculuğundan sonra yoğun mezar günü planlamayın.",
+        "Doğu merkezinde bazı duraklar yürünebilir; Karnak ve batı yaka için araç planı gerekir. Nil’i feribotla geçmek anıtlara kadar tüm ulaşımı çözmez. Özel araçta ziyaret sırası, bekleme, dönüş ve ücret kapsamını baştan yazılı netleştirin."
+       ],
+       "heading": "Luksor ulaşım rehberi",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Batı yakasına erken başlayın, doğu tapınaklarını başka güne alın. Her mezara girmek yerine bilet kapsamındaki seçenekleri ilgilerinize göre seçmek ve bir müze molası bırakmak daha dengeli olur."
+       ],
+       "heading": "Luksor gezilecek yerler",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Karnak bir tek yapı değil, avlu ve kutsal alanlardan oluşan geniş komplekstir. Büyük sütunlu salonu gördükten sonra daha sakin bölümlere ilerleyin; yalnız ana fotoğraf noktasında durmayın. Alanın açıklığı nedeniyle erken saat ve gölge molası önemlidir."
+         ],
+         "heading": "Karnak Tapınak Kompleksi"
+        },
+        {
+         "body": [
+          "Açık mezarlar ve genel bilete dahil seçenekler değişebilir; girişte güncel kapsamı okuyun. Özel mezarı ayrıca bütçeleyin. İçeride sıcaklık, kalabalık ve dar geçitler nedeniyle az sayıda mezarı dikkatle görmek hızlı bir sayı yarışından daha değerlidir."
+         ],
+         "heading": "Krallar Vadisi"
+        },
+        {
+         "body": [
+          "Hatşepsut’un teraslı tapınağını Krallar Vadisi günüyle birleştirin. Luksor Tapınağı doğu merkezindedir; güncel akşam ziyareti varsa ışık değişimini izleyebilirsiniz. Aynı kartta anılmaları aynı alanda oldukları anlamına gelmez; ulaşımı yaka bazında kurun."
+         ],
+         "heading": "Hatşepsut Tapınağı ve Luksor Tapınağı"
+        }
+       ]
+      },
+      {
+       "body": [
+        "Karnak’ın ölçeğini hissetmek için ana eksende durup sütunlara bakacak zaman bırakın. Daha küçük ayrıntıları görmek isteyenler bir köşeye odaklanabilir; bütün kompleksi tek seferde ezberlemek gerekmiyor. Luksor Tapınağı merkezle daha yakın ilişki kurduğu için çevresindeki şehir hayatıyla birlikte düşünüldüğünde farklı bir his veriyor. İki tapınağı aynı deneyimin tekrarı saymayın.",
+        "Nil kıyısında geçirilen boş zaman Luksor’un yalnız müze gibi hissedilmesini önler. Bir tekne gezisi seçerseniz kalkış yeri, süre ve dönüşü baştan konuşup onu ayrı bir etkinlik olarak planlayın. Sadece oturup nehre bakmak da yeterli olabilir. Özellikle uzun bir mezar sabahından sonra akşamı yeni bir turla doldurmak zorunda değilsiniz."
+       ],
+       "heading": "Tapınak aralarında Nil molası",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Doğu yaka merkez otel, restoran ve tapınak erişimi için; batı yaka daha sakin konaklama ve erken mezar ziyareti için uygundur. Sessizlik isteyenler odanın nehre bakması kadar cadde sesini, feribot ve gece dönüşünü de kontrol etmeli.",
+        "Tek başınıza veya araçsız geziyorsanız doğu yakada yürüyerek akşam yemeğine çıkabilmek değerli. Batı yakada sakin bir misafirhane ise daha yavaş bir tatil isteyenlere uyabilir. Kararı yalnız havuz fotoğrafıyla vermeyin; erken gezi sabahında nasıl çıkacağınız ve akşam nehre nasıl döneceğiniz günlük konforu daha fazla etkiliyor."
+       ],
+       "heading": "Luksor nerede kalınır?",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Ful, taameya, sebze yemekleri ve ızgaralar Nil gezisinde kolay seçeneklerdir. Turun öğle yemeği dahilse restoranı, içeceği ve özel beslenme uyarlamasını sorun. Erken ziyaret öncesi kahvaltı veya paket öğün için otelle bir gün önce anlaşın.",
+        "Yemek planını geziye uydurun: çok erken çıkan bir batı yaka sabahında kahvaltı, su ve küçük bir öğün işi kolaylaştırır. Akşam çorba, sebze ve ızgarayla daha rahat bir sofra kurabilirsiniz. Sırf tur programında olduğu için uzun bir öğle yemeğine bağlanmak yerine, günün ne kadarını gölgede dinlenerek geçirmek istediğinizi düşünün."
+       ],
+       "heading": "Luksor ne yenir?",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "Ekim–nisan açık anıtlar için daha rahattır. Yazın batı yakasına çok erken başlayıp uzun öğle molası verin. Balon uçuşu ve Nil teknesi hava koşuluna bağlıdır; sabit saatli uçuş veya trenle dar bağlantı kurmayın.",
+        "Ana anıtlar, özel mezarlar, rehber, yaka transferi ve tekne ayrı masraflardır. Balonu temel ziyaret yerine bütçe eklemesi sayın; reklam fiyatıyla son toplamın aynı olduğundan ve iptal koşulundan emin olun."
+       ],
+       "heading": "Luksor için mevsim ve bütçe planı",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Hurgada karadan devam edilebilen Kızıldeniz ayağıdır; transfer gününe tekne turu koymayın. Dendera gibi başka anıtı eklemek için üçüncü gün bırakın; iki yakayı bir günde bitirmeye çalışarak boş gün üretmeyin."
+       ],
+       "heading": "Luksor çevresinde rota önerileri",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Luksor gezi rehberi: Karnak, Luksor Tapınağı, Krallar Vadisi ve Hatşepsut; Nil’in iki yakası için ulaşım, bilet ipuçları ve 2 günlük rota.",
+     "seoTitle": "Luksor Gezi Rehberi: Karnak ve Krallar Vadisi Rotası",
+     "sources": [
+      {
+       "name": "Experience Egypt — resmî turizm",
+       "url": "https://www.experienceegypt.eg/en/city/22/luxor-"
+      },
+      {
+       "name": "Experience Egypt — doğu yaka",
+       "url": "https://www.experienceegypt.eg/en/Attraction-Details/299/east-bank"
+      },
+      {
+       "name": "UNESCO — Antik Teb ve nekropolü",
+       "url": "https://whc.unesco.org/en/list/87/"
+      }
+     ],
+     "volatileNote": "Bilet ücretleri, seferler ve ziyaret saatleri değişebilir. Rezervasyon öncesinde aşağıdaki resmî kaynaklardan güncel bilgiyi kontrol edin."
+    }
+   }
+  },
+  {
+   "citySlug": "hurgada",
+   "completeLangs": [
+    "en",
+    "es"
+   ],
+   "reviewed": true,
+   "translations": {
+    "en": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Beside El Mina Mosque",
+        "category": "halal",
+        "cuisine": "Fresh Red Sea seafood",
+        "description": "Famous waterfront seafood restaurant next to El Mina Mosque, serving fresh daily Red Sea catches prepared to halal standards.",
+        "lastVerified": "2026-10-06",
+        "name": "Al Halaka Fish Market Restaurant",
+        "price": "Orta",
+        "verification": {
+         "note": "Muslim-friendly halal establishment; no alcohol served.",
+         "sourceName": "Red Sea Governorate Tourism Guide",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://www.egypt.travel/en/regions/red-sea/hurghada",
+         "status": "restaurant-confirmed"
+        },
+        "why": "The most authentic place in Hurghada to enjoy freshly caught seafood alongside locals with verified halal kitchen practices."
+       }
+      ],
+      "researchNote": "Seafood venues in Hurghada suit halal dining well; in resort buffets, verify dish labels and utensils.",
+      "vegan": [
+       {
+        "area": "Hurghada Marina area",
+        "category": "vegan",
+        "cuisine": "Mediterranean and healthy bowls",
+        "description": "Relaxed Red Sea cafe offering fresh Mediterranean bowls, falafel salads, plant-based smoothies and speciality coffee near the marina.",
+        "lastVerified": "2026-10-06",
+        "name": "Gelo Vegan Restaurant",
+        "price": "Orta",
+        "verification": {
+         "note": "Entire menu is plant-based; gluten-free and refined-sugar-free choices available.",
+         "sourceName": "HappyCow's current vegan restaurant directory",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/gelo-vegan-hurghada-321150",
+         "status": "fully-vegan"
+        },
+        "why": "A refreshing coastal break for travelers seeking fresh, creative plant-based dishes away from resort buffets."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Three or four nights suit one boat day and rest; allow longer for diving or a Luxor extension.",
+       "q": "How long should you stay in Hurghada?"
+      },
+      {
+       "a": "Beach, boat capacity, snorkel stops, equipment, meals, protected-area fees and hotel pickup.",
+       "q": "What should you compare in a Giftun trip?"
+      },
+      {
+       "a": "Hurghada pairs with Luxor by road; Sharm suits Sinai and Ras Muhammad. Check the individual hotel’s beach and reef access in either.",
+       "q": "Hurghada or Sharm el-Sheikh?"
+      }
+     ],
+     "h1": "Hurghada Travel Guide: Giftun, Beaches and Where to Stay",
+     "itinerary": [
+      {
+       "afternoon": "A short El Dahar visit",
+       "evening": "Marina dinner and return to the hotel",
+       "morning": "Explore your hotel beach and access",
+       "title": "Day 1 — Coast and town"
+      },
+      {
+       "afternoon": "Beach time according to your package",
+       "evening": "Rest without another long transfer",
+       "morning": "Boat departure for island and snorkel visits",
+       "title": "Day 2 — Giftun"
+      },
+      {
+       "afternoon": "Free time and a shaded break",
+       "evening": "Local meal or a quiet hotel evening",
+       "morning": "Beach or diving as conditions allow",
+       "title": "Day 3 — Flexible water day"
+      }
+     ],
+     "lede": "A good Hurghada holiday can start with a simple plan: a beach you enjoy swimming from, a long breakfast and a day out on the water. Your hotel’s stretch of coast matters more than a long sightseeing list. Get that right and balancing town visits with genuine rest becomes much easier.",
+     "places": [
+      {
+       "area": "Off Hurghada",
+       "known": "Boats, beaches and snorkelling",
+       "name": "Giftun Islands",
+       "tip": "Distinguish the island, beach package and protected-area fees.",
+       "why": "For a Red Sea day beyond the hotel beach."
+      },
+      {
+       "area": "Sakkala waterfront",
+       "known": "Harbour walks and restaurants",
+       "name": "Hurghada Marina",
+       "tip": "Arrange the return transfer to your hotel.",
+       "why": "For a short town evening after a day at sea."
+      },
+      {
+       "area": "Old town centre",
+       "known": "Local markets and everyday streets",
+       "name": "El Dahar",
+       "tip": "Clarify price and currency when shopping.",
+       "why": "For everyday town life beyond the resorts."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Practical tips for Hurghada",
+     "practicalTips": [
+      {
+       "body": "A sandy beach photo does not establish easy reef entry; ask about actual access.",
+       "title": "Read the beach details"
+      },
+      {
+       "body": "Avoid excursions that feed or crowd marine wildlife.",
+       "title": "Keep wildlife space"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Recommended stay",
+       "value": "3–5 nights"
+      },
+      {
+       "label": "Best time to visit",
+       "value": "Spring and autumn"
+      },
+      {
+       "label": "Getting around",
+       "value": "Hotel transfers and short town walks"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Cairo Travel Guide: Pyramids, Museums and a 3-Day Route",
+       "city": "Kahire",
+       "description": "Giza’s pyramids, historic lanes, museums and Nile neighbourhoods make a layered city and archaeology trip."
+      },
+      {
+       "anchor": "Luxor Travel Guide: Karnak and Valley of the Kings",
+       "city": "Luksor",
+       "description": "Karnak, Luxor Temple, the Valley of the Kings and Hatshepsut form a monument route on both Nile banks."
+      },
+      {
+       "anchor": "Sharm el-Sheikh Guide: Reefs, Ras Muhammad and Hotels",
+       "city": "Şarm el-Şeyh",
+       "description": "Ras Muhammad, Naama Bay, the Old Market and Sinai hotels chosen around reef access."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "Start by choosing between a town-based stay and a resort holiday. A base near restaurants and the marina makes evenings out easier. At a more distant resort, the hotel beach, room and daily routine will shape most of the trip. Either can work well as long as it matches the holiday you actually want.",
+        "For four days, one boat outing, a short town visit and plenty of free time make a balanced starting point. Booking a different excursion every morning can crowd out the seaside rest you came for. Leave some flexibility around the boat day so that a weather-related change does not collide with your flight home.",
+        "Trips marketed around Giftun do not necessarily follow the same programme. Read the beach time, snorkelling stops and sailing duration separately. A relaxed shore stop may suit a family or less confident swimmer, while someone keen on marine life will care more about time in the water. Choose the day’s contents rather than the tour name."
+       ],
+       "heading": "Plan Hurghada around the sea you want",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Book your Hurghada International (HRG) transfer with the hotel’s exact location. El Gouna, Makadi Bay and Soma Bay are not the same short central journey. From Luxor, leave travel and rest time rather than booking a same-afternoon boat.",
+        "The marina and some market streets are walkable, but coastal resorts need transport. Ask whether a tour’s pickup zone includes your hotel and if extra transfer fees apply. Agree a private car’s total price, waiting and return before departure."
+       ],
+       "heading": "Getting to and around Hurghada",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "A town walk, a Giftun day and flexible beach time suit a first stay. Keep an alternative day for weather-dependent trips rather than using the final hours of your holiday."
+       ],
+       "heading": "Things to do in Hurghada",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Giftun packages differ by beach, boat time, snorkel stops and meals. Confirm protected-area fees and equipment. Avoid standing on coral and discuss flotation and your swimming ability with the operator."
+         ],
+         "heading": "Giftun Islands"
+        },
+        {
+         "body": [
+          "The marina is a managed, restaurant-led waterfront rather than a portrait of all Hurghada. Compare final meal totals, including fish weight, preparation and drinks, and weigh the transfer cost if your hotel is far away."
+         ],
+         "heading": "Hurghada Marina"
+        },
+        {
+         "body": [
+          "Plan a short market walk and local meal in El Dahar. Shopping need not become a compulsory tour stop; decline unwanted offers politely. Ask about clothing and photography when entering religious landmarks."
+         ],
+         "heading": "El Dahar"
+        }
+       ]
+      },
+      {
+       "body": [
+        "The marina works well for dinner and a short evening walk, rather than a full day of sightseeing. El Dahar offers a different, more everyday setting beyond the resorts. Decide what you want from the outing: a relaxed waterfront evening or a brief look at markets and street life. Neither needs an overcomplicated schedule.",
+        "A Luxor excursion from Hurghada deserves careful thought about road time. A long day tour can introduce the temples, but it is a substantial commitment. If archaeology is a main reason for visiting Egypt, nights in Luxor may be more rewarding. You do not need to combine a restful beach holiday with seeing the entire country."
+       ],
+       "heading": "Beyond the beach: the marina and El Dahar",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Sakkala suits marina access, El Dahar everyday town life, and coastal resorts beach-focused stays. “Private beach” does not guarantee sandy entry or a house reef: inspect beach photos, jetties, shallows and suitability for children.",
+        "When booking, examine the actual beach as carefully as the distance from town. A shallow shore for children and deeper water reached by a long jetty are different choices. If most of the holiday will be spent at the hotel, researching swimming access and meal arrangements may matter more than a room upgrade."
+       ],
+       "heading": "Where to stay in Hurghada",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Seafood features strongly, with ful, taameya and koshary as everyday alternatives. At all-inclusive hotels, check restaurant hours, à-la-carte bookings and dietary arrangements. For fresh fish, distinguish a per-kilo quote from a portion price.",
+        "Even on an all-inclusive stay, one dinner outside the hotel can change the holiday’s rhythm. Make room for everyday dishes such as ful or koshari alongside seafood. A marina-view dinner and a simple town meal offer different pleasures; choose according to your budget and energy rather than treating one as compulsory."
+       ],
+       "heading": "What to eat in Hurghada",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "Spring and autumn balance water activities and town visits. Winter sunshine does not remove wind or cooler-water considerations. Reduce exposed midday walking in summer and check sea conditions for boat days.",
+        "Add transfers, boat trips, diving equipment, protected-area fees and special meals to the room package. For cheaper boats, compare capacity, beach time and cancellation terms rather than price alone."
+       ],
+       "heading": "Hurghada: weather and budget planning",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Luxor makes a strong history extension, ideally with two nights for both Nile banks. El Gouna is a separate coastal base to the north. Hurghada and Sharm are not neighbours on one continuous coastal road."
+       ],
+       "heading": "Trips beyond Hurghada",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Plan Hurghada with Giftun boat trips, marina walks and El Dahar, plus beach hotel choices, snorkelling, transfers, food and a Luxor extension.",
+     "seoTitle": "Hurghada Travel Guide: Giftun, Beaches and Where to Stay",
+     "sources": [
+      {
+       "name": "Experience Egypt — official tourism",
+       "url": "https://www.experienceegypt.eg/en/city/23/hurghada-"
+      },
+      {
+       "name": "Experience Egypt — Giftun island trips",
+       "url": "https://www.experienceegypt.eg/en/attraction-details/152/island-life"
+      },
+      {
+       "name": "Experience Egypt — Red Sea coast",
+       "url": "https://www.experienceegypt.eg/en/attraction/19/sun-sea"
+      }
+     ],
+     "volatileNote": "Admission prices, services and opening hours can change. Check the official sources below before booking."
+    },
+    "es": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Junto a la mezquita El Mina",
+        "category": "halal",
+        "cuisine": "Pescado fresco del mar Rojo",
+        "description": "Reconocido restaurante junto a la mezquita El Mina, con pescado fresco del mar Rojo preparado según las pautas halal.",
+        "lastVerified": "2026-10-06",
+        "name": "Al Halaka Fish Market Restaurant",
+        "price": "Orta",
+        "verification": {
+         "note": "Establecimiento halal orientado a la comunidad musulmana; no sirve alcohol.",
+         "sourceName": "Guía Turística de la Gobernación del Mar Rojo",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://www.egypt.travel/en/regions/red-sea/hurghada",
+         "status": "restaurant-confirmed"
+        },
+        "why": "El lugar más auténtico de Hurgada para comer pescado recién capturado junto a los lugareños con garantías halal."
+       }
+      ],
+      "researchNote": "Las marisquerías de Hurgada son muy adecuadas para dieta halal; en bufés de hotel, comprueba etiquetas y cubiertos.",
+      "vegan": [
+       {
+        "area": "Zona del puerto deportivo de Hurgada",
+        "category": "vegan",
+        "cuisine": "Boles mediterráneos saludables",
+        "description": "Cafetería tranquila junto al mar Rojo con boles mediterráneos, ensaladas con falafel, batidos vegetales y café de especialidad.",
+        "lastVerified": "2026-10-06",
+        "name": "Gelo Vegan Restaurant",
+        "price": "Orta",
+        "verification": {
+         "note": "Toda la carta es vegetal; dispone de opciones sin gluten y sin azúcares refinados.",
+         "sourceName": "Directorio actualizado de restaurantes veganos de HappyCow",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/gelo-vegan-hurghada-321150",
+         "status": "fully-vegan"
+        },
+        "why": "Un descanso refrescante para quienes buscan opciones vegetales frescas y creativas fuera de los bufés de hotel."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Tres o cuatro noches para barco y descanso; más si añades buceo o Luxor.",
+       "q": "¿Cuánto tiempo quedarse en Hurghada?"
+      },
+      {
+       "a": "Playa, capacidad, paradas de esnórquel, equipo, comida, tasas y recogida en hotel.",
+       "q": "¿Qué comparar al reservar Giftun?"
+      },
+      {
+       "a": "Hurghada combina por carretera con Luxor; Sharm, con Sinaí y Ras Muhammad. En ambos revisa playa y arrecife del hotel.",
+       "q": "¿Hurghada o Sharm el-Sheij?"
+      }
+     ],
+     "h1": "Qué hacer en Hurghada: Giftun, playas y dónde dormir",
+     "itinerary": [
+      {
+       "afternoon": "Visita breve a El Dahar",
+       "evening": "Cena en marina y regreso al hotel",
+       "morning": "Conoce la playa y acceso del hotel",
+       "title": "Día 1 — Costa y ciudad"
+      },
+      {
+       "afternoon": "Playa según el paquete contratado",
+       "evening": "Descanso sin añadir otro traslado largo",
+       "morning": "Barco para isla y esnórquel",
+       "title": "Día 2 — Giftun"
+      },
+      {
+       "afternoon": "Tiempo libre y descanso a la sombra",
+       "evening": "Comida local o tarde tranquila en hotel",
+       "morning": "Playa o buceo según condiciones",
+       "title": "Día 3 — Mar flexible"
+      }
+     ],
+     "lede": "Un buen viaje a Hurghada puede empezar con poco: una playa cómoda para bañarte, un desayuno sin prisa y un día en barco. Aquí la costa del hotel importa más que una lista larga de visitas. Elegirla bien facilita combinar paseos por la ciudad con descanso de verdad.",
+     "places": [
+      {
+       "area": "Frente a Hurghada",
+       "known": "Barcos, playas y esnórquel",
+       "name": "Islas Giftun",
+       "tip": "Distingue isla, paquete de playa y tasas de protección.",
+       "why": "Para conocer el mar Rojo más allá del hotel."
+      },
+      {
+       "area": "Costa de Sakkala",
+       "known": "Paseo portuario y restaurantes",
+       "name": "Marina de Hurghada",
+       "tip": "Organiza el regreso al hotel.",
+       "why": "Para una tarde urbana breve tras el mar."
+      },
+      {
+       "area": "Centro antiguo",
+       "known": "Mercados y calles cotidianas",
+       "name": "El Dahar",
+       "tip": "Aclara precio y moneda al comprar.",
+       "why": "Para conocer la vida urbana fuera de los resorts."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Consejos para visitar Hurghada",
+     "practicalTips": [
+      {
+       "body": "Una foto de arena no demuestra acceso fácil al arrecife; pregunta por la entrada real.",
+       "title": "Revisa el acceso a la playa"
+      },
+      {
+       "body": "Evita excursiones que alimenten o acorralen fauna marina.",
+       "title": "Respeta a la fauna"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Duración recomendada",
+       "value": "3–5 noches"
+      },
+      {
+       "label": "Mejor época",
+       "value": "Primavera y otoño"
+      },
+      {
+       "label": "Cómo moverse",
+       "value": "Traslados de hotel y paseos urbanos cortos"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Qué ver en El Cairo: pirámides, museos y ruta de 3 días",
+       "city": "Kahire",
+       "description": "Pirámides de Guiza, calles históricas, museos y barrios del Nilo para combinar ciudad y arqueología."
+      },
+      {
+       "anchor": "Qué ver en Luxor: Karnak, tumbas y ruta de 2 días",
+       "city": "Luksor",
+       "description": "Karnak, templo de Luxor, Valle de los Reyes y Hatshepsut en una ruta por ambas orillas del Nilo."
+      },
+      {
+       "anchor": "Sharm el-Sheij: arrecifes, Ras Muhammad y alojamiento",
+       "city": "Şarm el-Şeyh",
+       "description": "Ras Muhammad, Naama Bay, Mercado Viejo y hoteles del Sinaí elegidos por acceso al arrecife."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "Decide primero entre alojarte cerca de la ciudad o descansar en un resort. Una base junto a restaurantes y marina facilita salir por la noche. En un hotel alejado, su playa, habitación y rutina marcarán buena parte del viaje. Ambos planes pueden funcionar si encajan con tus expectativas.",
+        "Para cuatro días, una salida en barco, un paseo urbano breve y bastante tiempo libre forman una buena base. Reservar una excursión cada mañana puede quitarte el descanso que buscabas junto al mar. Deja margen para mover el día de barco si el tiempo obliga a cambiar el programa.",
+        "Las excursiones anunciadas como Giftun no siempre siguen el mismo programa. Compara la playa, las paradas de esnórquel y el tiempo a bordo. Una pausa tranquila en tierra puede encajar con familias; para observar vida marina importa más el tiempo real en el agua. Elige el contenido del día, no solo el nombre."
+       ],
+       "heading": "Organiza Hurghada según el mar que quieres disfrutar",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Reserva desde Hurghada International (HRG) con la ubicación exacta del hotel. El Gouna, Makadi Bay y Soma Bay no equivalen al centro. Desde Luxor, deja tiempo de carretera y descanso antes de una salida en barco.",
+        "Marina y algunas calles comerciales se recorren a pie; entre resorts hace falta transporte. Comprueba si el tour recoge en tu hotel y cobra suplemento. Acuerda precio total, esperas y regreso del coche privado."
+       ],
+       "heading": "Cómo llegar a Hurghada y moverse",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Un paseo urbano, un día en Giftun y playa flexible equilibran la primera estancia. Deja un día alternativo para salidas sujetas al mar, sin apurarlas al final."
+       ],
+       "heading": "Qué ver en Hurghada",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Los paquetes de Giftun varían en playa, horas de barco, paradas y comida. Confirma tasas y equipo. No pises coral y comunica al operador tu nivel de natación y necesidades de flotación."
+         ],
+         "heading": "Islas Giftun"
+        },
+        {
+         "body": [
+          "Marina es un paseo acondicionado con restaurantes, no toda Hurghada. Compara precio final, peso del pescado, preparación y bebidas; valora el traslado si el hotel queda lejos."
+         ],
+         "heading": "Marina de Hurghada"
+        },
+        {
+         "body": [
+          "Planea un paseo por el mercado y una comida local en El Dahar. Comprar no tiene que convertirse en parada obligatoria; rechaza ofertas con cortesía. Consulta vestimenta y fotos en espacios religiosos."
+         ],
+         "heading": "El Dahar"
+        }
+       ]
+      },
+      {
+       "body": [
+        "La marina se disfruta con una cena y un paseo breve, sin convertirla en una jornada completa de visitas. El Dahar ofrece un entorno más cotidiano fuera de los resorts. Elige si buscas una tarde junto al agua o un vistazo a mercados y calles; ninguno necesita un programa complicado.",
+        "Una excursión a Lúxor exige valorar bien las horas por carretera. Puede servir para conocer los templos, pero ocupa una jornada exigente. Si la arqueología es uno de tus principales motivos para viajar, quizá prefieras dormir allí. No tienes que descansar en la playa y ver todo Egipto en las mismas vacaciones."
+       ],
+       "heading": "Más allá de la playa: marina y El Dahar",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Sakkala facilita marina; El Dahar, vida local; resorts costeros, playa. “Playa privada” no garantiza entrada de arena ni arrecife: revisa fotos, muelles, profundidad y acceso para niños.",
+        "Al reservar, mira cómo es la playa y no solo la distancia al centro. Una orilla poco profunda para niños y agua honda al final de un muelle son opciones distintas. Si vas a pasar mucho tiempo en el hotel, investigar el baño y las comidas puede importar más que mejorar la habitación."
+       ],
+       "heading": "Dónde alojarse en Hurghada",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "El pescado destaca, con ful, taameya y koshari como alternativas cotidianas. En todo incluido revisa horarios, reservas a la carta y adaptación de dieta. Distingue precio por kilo y por ración.",
+        "Aunque viajes con todo incluido, una cena fuera del hotel cambia el ritmo. Además de pescado, prueba platos cotidianos como ful o koshari. Una mesa con vistas a la marina y una comida sencilla en la ciudad ofrecen placeres distintos: elige según presupuesto y ganas, sin convertir ninguna en obligación."
+       ],
+       "heading": "Qué comer en Hurghada",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "Primavera y otoño equilibran mar y ciudad. Sol en invierno no elimina viento ni agua fresca. Reduce paseos expuestos al mediodía en verano y consulta el estado del mar para los barcos.",
+        "Añade traslados, barcos, equipo, tasas y comidas especiales al paquete de hotel. En un barco barato compara capacidad, tiempo de playa y cancelación, además del precio."
+       ],
+       "heading": "Hurghada: cuándo ir y presupuesto",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Luxor amplía el viaje con historia, mejor dos noches para ambas orillas. El Gouna es otra base al norte. Hurghada y Sharm no son vecinos en una misma carretera costera."
+       ],
+       "heading": "Excursiones desde Hurghada",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Qué hacer en Hurghada: islas Giftun, marina y El Dahar, con hoteles de playa, excursiones de esnórquel, traslados, comida y conexión con Luxor.",
+     "seoTitle": "Qué hacer en Hurghada: Giftun, playas y dónde dormir",
+     "sources": [
+      {
+       "name": "Experience Egypt — turismo oficial",
+       "url": "https://www.experienceegypt.eg/en/city/23/hurghada-"
+      },
+      {
+       "name": "Experience Egypt — excursiones a Giftun",
+       "url": "https://www.experienceegypt.eg/en/attraction-details/152/island-life"
+      },
+      {
+       "name": "Experience Egypt — costa del mar Rojo",
+       "url": "https://www.experienceegypt.eg/en/attraction/19/sun-sea"
+      }
+     ],
+     "volatileNote": "Los precios, los servicios y los horarios pueden cambiar. Consulta las fuentes oficiales indicadas antes de reservar."
+    },
+    "tr": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "El Mina Camii yanı",
+        "category": "halal",
+        "cuisine": "Kızıldeniz taze balık ve deniz ürünleri",
+        "description": "Tarihi cami ve balık hali yanında günlük tutulan taze Kızıldeniz balıklarını İslami usullere uygun helal ızgara ve fırında hazırlayan ünlü liman lokantası.",
+        "lastVerified": "2026-10-06",
+        "name": "Al Halaka Fish Market Restaurant",
+        "price": "Orta",
+        "verification": {
+         "note": "Müslüman topluluk odaklı helal işletmedir; alkol servisi bulunmaz.",
+         "sourceName": "Kızıldeniz Valiliği Turizm Rehberi",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://www.egypt.travel/en/regions/red-sea/hurghada",
+         "status": "restaurant-confirmed"
+        },
+        "why": "Hurgada'da taze deniz mahsullerini yerel halkla iç içe ve helal mutfak güvencesiyle yemek için en otantik adrestir."
+       }
+      ],
+      "researchNote": "Hurgada'da balık restoranları helal beslenmeye çok uygundur; otel büfelerinde etiketleri ve ortak kaşıkları kontrol edin.",
+      "vegan": [
+       {
+        "area": "Hurgada Marina çevresi",
+        "category": "vegan",
+        "cuisine": "Akdeniz ve sağlıklı kaseler",
+        "description": "Kızıldeniz sahilinde taze Akdeniz sebzeleri, falafel kaseleri, kinoa salataları ve bitkisel sütlü kahveler sunan huzurlu vegan kafe.",
+        "lastVerified": "2026-10-06",
+        "name": "Gelo Vegan Restaurant",
+        "price": "Orta",
+        "verification": {
+         "note": "Tüm menü bitki bazlıdır; glütensiz ve şekersiz seçenekler mevcuttur.",
+         "sourceName": "HappyCow güncel vegan restoran dizini",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/gelo-vegan-hurghada-321150",
+         "status": "fully-vegan"
+        },
+        "why": "Her şey dahil otel büfelerinden uzakta, taze ve yaratıcı bitki bazlı lezzetler arayan gezginler için harika bir sahil molasıdır."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Bir tekne günü ve dinlenme için üç veya dört gece; dalış ya da Luksor eklemek için daha uzun süre.",
+       "q": "Hurgada kaç gün için uygun?"
+      },
+      {
+       "a": "Kullanılan plaj, tekne kapasitesi, şnorkel durakları, ekipman, öğün, alan ücreti ve otel transferi.",
+       "q": "Giftun turu seçerken neye bakmalı?"
+      },
+      {
+       "a": "Luksor’la karadan bağlanan tatil için Hurgada; Sina kıyısı ve Ras Muhammad odağı için Şarm. Otelin resif ve plaj erişimini iki yerde de kontrol edin.",
+       "q": "Hurgada mı Şarm el-Şeyh mi?"
+      }
+     ],
+     "h1": "Hurgada Gezi Rehberi: Giftun, Plajlar ve Nerede Kalınır",
+     "itinerary": [
+      {
+       "afternoon": "El Dahar’da kısa gezi",
+       "evening": "Marinada yemek ve otele dönüş",
+       "morning": "Otel plajını ve giriş koşulunu tanıyın",
+       "title": "1. Gün — Kıyı ve merkez"
+      },
+      {
+       "afternoon": "Paket kapsamına göre plaj molası",
+       "evening": "Dinlenme; başka uzun transfer eklemeyin",
+       "morning": "Tekneyle ada ve şnorkel programı",
+       "title": "2. Gün — Giftun"
+      },
+      {
+       "afternoon": "Serbest zaman ve gölgede mola",
+       "evening": "Yerel yemek veya otelde sakin akşam",
+       "morning": "Havaya göre plaj veya dalış",
+       "title": "3. Gün — Esnek deniz günü"
+      }
+     ],
+     "lede": "Hurgada’da iyi bir tatil bazen çok az planla başlıyor: denize rahat girebildiğiniz bir kıyı, uzun bir kahvaltı ve bir gün tekneyle açılmak. Otel seçimi burada görülecek yerler listesinden daha belirleyici; doğru plajı bulduğunuzda şehir gezisi ile dinlenmenin dengesini kurmak kolaylaşıyor.",
+     "places": [
+      {
+       "area": "Hurgada açıkları",
+       "known": "Tekne, plaj ve şnorkel",
+       "name": "Giftun Adaları",
+       "tip": "Ada, plaj paketi ve koruma alanı ücretini ayırın.",
+       "why": "Kızıldeniz’i kıyı otelinin ötesinde görmek için."
+      },
+      {
+       "area": "Sakkala kıyısı",
+       "known": "Liman yürüyüşü ve restoranlar",
+       "name": "Hurgada Marina",
+       "tip": "Otelle dönüş transferini önceden belirleyin.",
+       "why": "Deniz gününden sonra merkezde kısa bir akşam için."
+      },
+      {
+       "area": "Eski merkez",
+       "known": "Yerel pazar ve gündelik sokaklar",
+       "name": "El Dahar",
+       "tip": "Alışverişte fiyatı ve para birimini netleştirin.",
+       "why": "Resort dışındaki şehir yaşamını tanımak için."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Hurgada için pratik ipuçları",
+     "practicalTips": [
+      {
+       "body": "Kum fotoğrafı resife kolay erişim demek değildir; otelin gerçek deniz girişini sorun.",
+       "title": "Plaj erişimini okuyun"
+      },
+      {
+       "body": "Teknede deniz canlılarını besleyen veya takip ederek sıkıştıran uygulamayı tercih etmeyin.",
+       "title": "Canlılara mesafe"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Önerilen süre",
+       "value": "3–5 gece"
+      },
+      {
+       "label": "En uygun dönem",
+       "value": "İlkbahar ve sonbahar"
+      },
+      {
+       "label": "Ulaşım yaklaşımı",
+       "value": "Otel transferi ve sınırlı merkez yürüyüşü"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Kahire Gezi Rehberi: Piramitler, Müzeler ve 3 Günlük Rota",
+       "city": "Kahire",
+       "description": "Giza Piramitleri, tarihî merkez, müzeler ve Nil mahalleleriyle büyük bir şehir ve arkeoloji gezisi."
+      },
+      {
+       "anchor": "Luksor Gezi Rehberi: Karnak ve Krallar Vadisi Rotası",
+       "city": "Luksor",
+       "description": "Karnak, Luksor Tapınağı, Krallar Vadisi ve Hatşepsut arasında Nil’in iki yakasında anıt rotası."
+      },
+      {
+       "anchor": "Şarm el-Şeyh Gezi Rehberi: Resifler ve Otel Bölgeleri",
+       "city": "Şarm el-Şeyh",
+       "description": "Ras Muhammad, Naama Bay, Eski Çarşı ve resif erişimine göre konaklama seçilen Sina kıyısı."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "İlk kararınız merkezde kalıp dışarı çıkmak mı, sahil otelinde dinlenmek mi olmalı. Marina ve yemek seçeneklerine yakın bir üs şehir akşamlarını kolaylaştırır. Daha uzaktaki resortta ise otelin plajı, odası ve günlük düzeni tatilin büyük bölümüne dönüşür. İki seçenek de güzel olabilir; birinden diğerinin deneyimini beklememek önemli.",
+        "Dört günlük bir tatilde bir tekne günü, bir kısa şehir gezisi ve bol serbest zaman dengeli bir başlangıç. Her sabah yeni bir tur eklemek deniz için geldiğiniz yerde dinlenme ihtimalini azaltıyor. Tekne gününü mümkünse uçuşun hemen öncesine sıkıştırmayın; programın hava nedeniyle değişmesi durumunda başka bir güne kaydıracak alanınız olsun.",
+        "Giftun adı geçen turların hepsi aynı durakları sunmayabilir. Plaj molası, şnorkel durağı ve teknede geçen süreyi ayrı ayrı okuyun. Yüzmeyi yeni öğrenen veya çocukla gezen biri için sakin bir kıyı molası daha uygun olabilir; deniz yaşamını görmek isteyen biri için suya gerçekten ayrılan zaman daha önemli. Turun adı yerine günün nasıl geçeceğine bakın."
+       ],
+       "heading": "Hurgada tatili: oteli seçmeden önce nasıl bir deniz istediğinize karar verin",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Hurghada International (HRG) transferini otelin tam konumuyla ayırın. El Gouna, Makadi Bay ve Soma Bay merkez Hurgada ile aynı kısa yol değildir. Luksor’dan gelişte yol süresi ve dinlenme payını ekleyin; aynı öğleden sonraya tekne rezervasyonu koymayın.",
+        "Merkezde marina ve bazı çarşı sokakları yürünebilir; kıyı otelleri arasında araç gerekir. Turun otelden alma alanını ve ek transfer ücretini sorun. Özel araçta toplam fiyat, bekleme ve dönüşü netleştirin; uzak resort gününü şehir merkezine gidip gelerek bölmeyin."
+       ],
+       "heading": "Hurgada ulaşım rehberi",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Bir merkez yürüyüşü, bir Giftun günü ve esnek plaj zamanı çoğu ilk geziyi dengeler. Deniz durumuna bağlı turu tatilin son saatine koymadan alternatif gün bırakın."
+       ],
+       "heading": "Hurgada gezilecek yerler",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Giftun paketleri aynı gezi değildir: kullanılan plaj, teknede süre, şnorkel durakları ve öğün değişir. Koruma alanı ücretinin ve ekipmanın dahil olduğunu teyit edin. Mercana basmayın; can yeleği ve yüzme düzeyinizi operatörle paylaşın."
+         ],
+         "heading": "Giftun Adaları"
+        },
+        {
+         "body": [
+          "Marina kontrollü ve restoran ağırlıklı bir yürüyüş alanıdır; bütün Hurgada’yı temsil etmez. Yemekte balık ağırlığı, hazırlama ücreti ve içecekleri son toplam üzerinden karşılaştırın. Uzaktaki otelden gelecekseniz kısa yürüyüş için uzun dönüş maliyetini değerlendirin."
+         ],
+         "heading": "Hurgada Marina"
+        },
+        {
+         "body": [
+          "El Dahar’da kısa pazar yürüyüşü ve yerel yemek molası planlayın. Alışverişi tek başına zorunlu bir tur durağına çevirmeyin; ilgilenmediğiniz satış teklifini nazikçe reddedin. Merkezdeki anıt ziyaretinde kıyafet ve fotoğraf kurallarını sorun."
+         ],
+         "heading": "El Dahar"
+        }
+       ]
+      },
+      {
+       "body": [
+        "Marina akşamını bir yemek ve kısa yürüyüşle bırakmak yeterli; bunu tam günlük bir tarihî şehir turu gibi planlamayın. El Dahar’da ise sahil otelinden farklı gündelik bir çevre görürsünüz. Her ikisine de aynı uzun geziyi yüklemek yerine ne aradığınızı seçin: deniz kenarında rahat bir akşam mı, çarşı ve sokak hayatına kısa bir bakış mı?",
+        "Luksor’u Hurgada’dan görmek isteyenler karayolunda geçen zamanı ciddiye almalı. Uzun bir günübirlik tur, tapınakları görmek için işe yarayabilir ama sakin bir plaj tatilinin küçük molası değildir. Tarih yolculuğunuzun ana sebeplerinden biriyse Luksor’da gecelemek daha doyurucu olabilir. Aynı tatilde hem iyi dinlenmek hem bütün Mısır’ı görmek zorunda değilsiniz."
+       ],
+       "heading": "Marina ve El Dahar: plajın dışında kısa bir Hurgada",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Sakkala merkez ve marina, El Dahar yerel şehir dokusu, kıyı resortları plaj önceliği içindir. Otelin “özel plaj” ifadesi kumdan kolay giriş veya resif garantisi değildir. Güncel plaj fotoğrafı, iskele, sığlık, rüzgâr ve çocuklar için giriş koşulunu kontrol edin.",
+        "Rezervasyonda merkeze kaç kilometre olduğu kadar, plajın gerçekten nasıl göründüğüyle ilgilenin. Çocukla gireceğiniz sığ bir kıyı ile uzun bir iskeleden ulaşılan derin su aynı seçim değil. Tatil boyunca otelde kalacaksanız oda yükseltmesinden önce plaj ve yemek düzenini araştırmak daha büyük fark yaratabilir."
+       ],
+       "heading": "Hurgada nerede kalınır?",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Deniz ürünleri kıyı gezisinde öne çıkar; ful, taameya ve koşeri daha gündelik alternatiflerdir. Her şey dahil otelde restoran saatlerini, alakart rezervasyonunu ve özel beslenme koşulunu okuyun. Taze balık siparişinde kilo ile porsiyon fiyatını karıştırmayın.",
+        "Her şey dahil kalıyorsanız bir akşam otelin dışına çıkmak tatilin ritmini değiştirebilir. Deniz ürünleri dışında ful veya koşeri gibi gündelik yemeklere de yer verin. Marina manzarasıyla yemek yemenin keyfi ayrı, sade bir şehir öğününün keyfi ayrı; bütçeniz ve o günkü enerjiniz hangisine uygunsa onu seçin."
+       ],
+       "heading": "Hurgada ne yenir?",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "İlkbahar ve sonbahar deniz ile şehir gezisini birleştirmek için dengelidir. Kışın hava güneşli olsa da rüzgâr ve su sıcaklığı deneyimi değiştirir. Yaz sıcağında korumasız öğle yürüyüşünü azaltın; tekne günü için güncel deniz koşulunu izleyin.",
+        "Oda paketine transfer, deniz turu, dalış ekipmanı, koruma alanı ücreti ve özel öğünleri ekleyin. Ucuz tekne fiyatında teknenin kapasitesi, plajda kalan süre ve iptal şartı daha önemli olabilir."
+       ],
+       "heading": "Hurgada için mevsim ve bütçe planı",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Luksor güçlü tarih devamıdır; mümkünse iki geceyle iki Nil yakasını görün. El Gouna ise kuzeyde ayrı bir kıyı yerleşimidir. Hurgada ve Şarm el-Şeyh’i aynı sahil yolunun komşuları sanmayın; aralarındaki geçişi ayrıca planlayın."
+       ],
+       "heading": "Hurgada çevresinde rota önerileri",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Hurgada gezi rehberi: Giftun Adaları, marina ve El Dahar; plaj oteli seçimi, tekne ve şnorkel turları, ulaşım, yemek ve Luksor bağlantısı.",
+     "seoTitle": "Hurgada Gezi Rehberi: Giftun, Plajlar ve Nerede Kalınır",
+     "sources": [
+      {
+       "name": "Experience Egypt — resmî turizm",
+       "url": "https://www.experienceegypt.eg/en/city/23/hurghada-"
+      },
+      {
+       "name": "Experience Egypt — Giftun ada gezileri",
+       "url": "https://www.experienceegypt.eg/en/attraction-details/152/island-life"
+      },
+      {
+       "name": "Experience Egypt — Kızıldeniz kıyısı",
+       "url": "https://www.experienceegypt.eg/en/attraction/19/sun-sea"
+      }
+     ],
+     "volatileNote": "Bilet ücretleri, seferler ve ziyaret saatleri değişebilir. Rezervasyon öncesinde aşağıdaki resmî kaynaklardan güncel bilgiyi kontrol edin."
+    }
+   }
+  },
+  {
+   "citySlug": "sarm-el-seyh",
+   "completeLangs": [
+    "en",
+    "es"
+   ],
+   "reviewed": true,
+   "translations": {
+    "en": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Old City / Old Market Square",
+        "category": "halal",
+        "cuisine": "Seafood and Egyptian cuisine",
+        "description": "Iconic seafood institution opposite the Al Sahaba Mosque, famous for fragrant seafood chowder, grilled prawns and halal fresh fish.",
+        "lastVerified": "2026-10-06",
+        "name": "Fares Seafood",
+        "price": "Orta",
+        "verification": {
+         "note": "Serves halal-certified seafood and meats; alcohol-free casual dining venue.",
+         "sourceName": "Egyptian Tourism Authority — Sinai Peninsula",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://www.egypt.travel/en/regions/red-sea/sharm-el-sheikh",
+         "status": "restaurant-confirmed"
+        },
+        "why": "The undisputed top halal seafood stop in Sharm, perfect after exploring the Old Market with its famous soup and fish."
+       }
+      ],
+      "researchNote": "Restaurants in Sharm el-Sheikh's Old Market follow halal standards; in resort buffets, confirm vegan-friendly dressings.",
+      "vegan": [
+       {
+        "area": "Naama Bay",
+        "category": "vegan",
+        "cuisine": "Lebanese and Mediterranean mezze",
+        "description": "Welcoming Levantine restaurant in Naama Bay, serving authentic hummus, crispy falafel, tabbouleh and extensive olive oil vegetable mezze.",
+        "lastVerified": "2026-10-06",
+        "name": "Fairuz Restaurant",
+        "price": "Orta",
+        "verification": {
+         "note": "Offers a separate olive oil cold mezze selection; dairy-free dishes can be requested directly.",
+         "sourceName": "HappyCow's current vegan restaurant directory",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/fairuz-sharm-el-sheikh-25801",
+         "status": "vegan-options"
+        },
+        "why": "Ideal in Naama Bay for a wholesome, satisfying vegan dinner featuring fresh vegetables and pulse-based dishes."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Four or five nights allow a marine excursion and rest; stay longer for multiple diving days.",
+       "q": "How long should you stay in Sharm el-Sheikh?"
+      },
+      {
+       "a": "Naama for evening walks, Nabq for a resort-focused stay. Check beach, wind and reef access at the individual hotel.",
+       "q": "Naama Bay or Nabq?"
+      },
+      {
+       "a": "No: land and snorkelling programmes are also available. Choose a licensed operator’s trip suited to your swimming ability and access needs.",
+       "q": "Do you need diving skills for Ras Muhammad?"
+      }
+     ],
+     "h1": "Sharm el-Sheikh Guide: Reefs, Ras Muhammad and Hotels",
+     "itinerary": [
+      {
+       "afternoon": "Rest and confirm excursion details",
+       "evening": "Naama Bay walk",
+       "morning": "Check the hotel beach and water access",
+       "title": "Day 1 — Explore your bay"
+      },
+      {
+       "afternoon": "Marine visit following conservation rules",
+       "evening": "A quiet hotel evening",
+       "morning": "Your chosen land or boat excursion",
+       "title": "Day 2 — Ras Muhammad"
+      },
+      {
+       "afternoon": "Rest and free time",
+       "evening": "Short Old Market visit and meal",
+       "morning": "Reef or beach as weather allows",
+       "title": "Day 3 — Flexible coastal day"
+      }
+     ],
+     "lede": "If the colour of the sea is bringing you to Sharm el-Sheikh, choosing the right bay is the important first step. A morning swim, an afternoon break and a short evening walk can make a lovely day here. Reef explorers and families looking for an easy beach need not choose the same hotel.",
+     "places": [
+      {
+       "area": "Tip of the Sinai Peninsula",
+       "known": "Protected area and reefs",
+       "name": "Ras Muhammad",
+       "tip": "Check whether the trip is by land or boat, with fees and equipment.",
+       "why": "For marine life within a protected-area visit."
+      },
+      {
+       "area": "Naama bay area",
+       "known": "Beach and evening walks",
+       "name": "Naama Bay",
+       "tip": "Check the hotel’s actual distance to the walking area.",
+       "why": "For a walkable evening area alongside a resort stay."
+      },
+      {
+       "area": "Sharm El Maya area",
+       "known": "Market streets and evening dining",
+       "name": "The Old Bazaar",
+       "tip": "Agree shopping and return transport prices clearly.",
+       "why": "For a brief town visit beyond the resort."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Practical tips for Sharm el-Sheikh",
+     "practicalTips": [
+      {
+       "body": "Before booking a reef hotel, check water entry against children’s needs, swimming ability and wave conditions.",
+       "title": "Jetty or sandy entry?"
+      },
+      {
+       "body": "Leave a backup day for weather changes before your final day.",
+       "title": "Keep a flexible sea day"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Recommended stay",
+       "value": "4–5 nights"
+      },
+      {
+       "label": "Best time to visit",
+       "value": "Spring and autumn"
+      },
+      {
+       "label": "Getting around",
+       "value": "Hotel and excursion transfers"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Cairo Travel Guide: Pyramids, Museums and a 3-Day Route",
+       "city": "Kahire",
+       "description": "Giza’s pyramids, historic lanes, museums and Nile neighbourhoods make a layered city and archaeology trip."
+      },
+      {
+       "anchor": "Luxor Travel Guide: Karnak and Valley of the Kings",
+       "city": "Luksor",
+       "description": "Karnak, Luxor Temple, the Valley of the Kings and Hatshepsut form a monument route on both Nile banks."
+      },
+      {
+       "anchor": "Hurghada Travel Guide: Giftun, Beaches and Where to Stay",
+       "city": "Hurgada",
+       "description": "Giftun boat trips, the marina, El Dahar and choosing the right Red Sea hotel coastline."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "Naama Bay makes it easier to keep beach time and evening walks in the same area. A resort around Sharks Bay or Nabq can make the hotel the centre of the holiday. That can be exactly what you want, but do not expect every location to offer a walk into town after dinner. Choose around the bay’s daily rhythm.",
+        "A boat trip to Ras Muhammad and a land-based visit make different days. One centres on swimming stops and time aboard; the other on locations reached overland. Decide how much time you want in the water rather than buying the longest list of stops. Families and less confident swimmers should choose a programme that suits their pace.",
+        "On a short holiday, daily boat trips, desert outings and evening activities can eliminate the rest you hoped for. Start with one main marine excursion and leave other days for your bay. A longer mountain or nature trip needs its own day: an early departure and late return change what you can comfortably do around it."
+       ],
+       "heading": "Planning Sharm el-Sheikh: choose the bay first",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "For Sharm el-Sheikh International (SSH), specify whether the hotel is in Naama Bay, Sharks Bay or Nabq. Confirm that your entry permission covers every planned excursion rather than assuming a coastal-stay arrangement applies elsewhere.",
+        "Distances separate the hotel bays; a walkable Naama stay does not make the whole destination walkable. Confirm pier, departure time and hotel pickup coverage for excursions, and agree return transport for an Old Market evening."
+       ],
+       "heading": "Getting to and around Sharm el-Sheikh",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Separate a marine excursion from town walking. Schedule Ras Muhammad with a spare weather day and use Naama and the Old Market for two shorter evening outings."
+       ],
+       "heading": "Things to do in Sharm el-Sheikh",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "A land visit to Ras Muhammad differs from a boat diving or snorkel day. Tell the operator your swimming ability and desired stops; check guiding, equipment and protected-area fees. Observe without touching coral or feeding animals."
+         ],
+         "heading": "Ras Muhammad"
+        },
+        {
+         "body": [
+          "Naama offers a busier restaurant and seafront evening. Hotels differ in beach access and noise; check room location, access to the water and excursion pickup timing rather than judging solely by the bay name."
+         ],
+         "heading": "Naama Bay"
+        },
+        {
+         "body": [
+          "Leave room for a meal as well as browsing. Respect access and photography rules around Al Sahaba Mosque. From a distant bay, clarify round-trip cost and waiting arrangements in the same agreement."
+         ],
+         "heading": "The Old Bazaar"
+        }
+       ]
+      },
+      {
+       "body": [
+        "Naama Bay does not need an elaborate evening programme. A waterfront walk and a table for dinner may be enough after a day in the sea. Give the Old Market some time for its streets and food as well as shopping. From a distant bay, treating these as separate outings reduces unnecessary travelling.",
+        "A seaside day is not measured by how many fish you spot. Leave room for shade, a book and an unhurried meal between swims. Fewer activities do not make a lesser holiday in Sharm. After an intensive city trip, the deliberately empty day can become the part you remember most fondly."
+       ],
+       "heading": "An evening in Naama and a pause in the Old Market",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Naama suits evening walks, Sharks Bay reef-focused hotels, and Nabq larger resort settings. These are broad pointers: inspect each hotel’s jetty, deep-water entry, wind exposure and suitability for children.",
+        "Turquoise-water photographs do not show how easily you can swim from shore. Look at actual access and where shade is available during the day. For families these details can matter more than room size; for a snorkelling holiday, consider how you reach the water and how comfortable a full hotel day will feel."
+       ],
+       "heading": "Where to stay in Sharm el-Sheikh",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Alongside fish and grills, look for ful, taameya and vegetable dishes. Resorts are not the only dining option, but add transfer costs from distant bays. Ask about fish weight, preparation and sides before ordering.",
+        "For a break from the hotel buffet, combine dinner around Naama or the Old Market with your evening outing. Fish, a salad and a few small plates can make an easy meal after a hot day. From a distant resort, include the return journey in your choice; a nearby relaxed dinner may beat travelling for a famous name."
+       ],
+       "heading": "What to eat in Sharm el-Sheikh",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "Spring and autumn offer a balanced temperature window. Winter wind and cooler water, or summer heat, can shape the day. Check current sea conditions rather than relying on sunny promotional photos.",
+        "Add diving, snorkel equipment, protected-area access and airport or bay transfers to the hotel price. Certified dives and introductory dives are different products: compare training, guide ratios and included dives."
+       ],
+       "heading": "Sharm el-Sheikh: weather and budget planning",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Cairo works better as a separate flight-based cultural leg. If adding Dahab, give it its own time rather than following a long boat day. Confirm each excursion’s compatibility with your documents and current operator conditions."
+       ],
+       "heading": "Trips beyond Sharm el-Sheikh",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Plan Sharm el-Sheikh with Ras Muhammad, Naama Bay and the Old Market, plus reef access, hotel areas, diving, snorkelling and practical transfers.",
+     "seoTitle": "Sharm el-Sheikh Guide: Reefs, Ras Muhammad and Hotels",
+     "sources": [
+      {
+       "name": "Experience Egypt — official tourism",
+       "url": "https://www.experienceegypt.eg/en/city/16/sharm-al-sheikh"
+      },
+      {
+       "name": "Experience Egypt — reefs and diving",
+       "url": "https://www.experienceegypt.eg/en/Attraction-Details/186/beaches-snorkeling-diving"
+      },
+      {
+       "name": "Experience Egypt — natural protectorates",
+       "url": "https://www.experienceegypt.eg/en/attraction-details/436/natural-protectorates"
+      }
+     ],
+     "volatileNote": "Admission prices, services and opening hours can change. Check the official sources below before booking."
+    },
+    "es": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Casco antiguo / Plaza del Old Market",
+        "category": "halal",
+        "cuisine": "Marisco y cocina egipcia",
+        "description": "Emblemático restaurante marinero frente a la mezquita Al Sahaba, famoso por su sopa de marisco, langostinos a la plancha y pescado fresco halal.",
+        "lastVerified": "2026-10-06",
+        "name": "Fares Seafood",
+        "price": "Orta",
+        "verification": {
+         "note": "Sirve marisco y carnes con certificación halal; restaurante informal sin alcohol.",
+         "sourceName": "Autoridad de Turismo de Egipto — Península del Sinaí",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://www.egypt.travel/en/regions/red-sea/sharm-el-sheikh",
+         "status": "restaurant-confirmed"
+        },
+        "why": "La marisquería halal más destacada de Sharm, ideal tras recorrer el Old Market con su famosa sopa y pescado fresco."
+       }
+      ],
+      "researchNote": "Los restaurantes del Old Market en Sharm siguen pautas halal; en los bufés de hotel, confirma los aliños veganos.",
+      "vegan": [
+       {
+        "area": "Naama Bay",
+        "category": "vegan",
+        "cuisine": "Cocina libanesa y mezes mediterráneos",
+        "description": "Acogedor restaurante levantino en Naama Bay con hummus auténtico, falafel crujiente, tabulé y ricos platos vegetarianos en aceite de oliva.",
+        "lastVerified": "2026-10-06",
+        "name": "Fairuz Restaurant",
+        "price": "Orta",
+        "verification": {
+         "note": "Dispone de carta de mezes fríos en aceite de oliva; se pueden solicitar platos sin lácteos.",
+         "sourceName": "Directorio actualizado de restaurantes veganos de HappyCow",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/fairuz-sharm-el-sheikh-25801",
+         "status": "vegan-options"
+        },
+        "why": "Ideal en Naama Bay para una cena vegana completa a base de verduras frescas y legumbres."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Cuatro o cinco noches para excursión marina y descanso; más para varios días de buceo.",
+       "q": "¿Cuánto quedarse en Sharm el-Sheij?"
+      },
+      {
+       "a": "Naama para paseos; Nabq para estancia de resort. Revisa playa, viento y acceso al arrecife de cada hotel.",
+       "q": "¿Naama Bay o Nabq?"
+      },
+      {
+       "a": "No; hay visitas terrestres y esnórquel. Elige con un operador autorizado la opción adecuada a tu natación y necesidades de acceso.",
+       "q": "¿Hay que saber bucear para visitar Ras Muhammad?"
+      }
+     ],
+     "h1": "Sharm el-Sheij: arrecifes, Ras Muhammad y alojamiento",
+     "itinerary": [
+      {
+       "afternoon": "Descanso y confirmación de excursión",
+       "evening": "Paseo por Naama Bay",
+       "morning": "Comprueba playa y acceso al agua",
+       "title": "Día 1 — Conoce tu bahía"
+      },
+      {
+       "afternoon": "Visita marina respetando conservación",
+       "evening": "Tarde tranquila en el hotel",
+       "morning": "Excursión terrestre o en barco elegida",
+       "title": "Día 2 — Ras Muhammad"
+      },
+      {
+       "afternoon": "Descanso y tiempo libre",
+       "evening": "Visita breve y cena en Mercado Viejo",
+       "morning": "Arrecife o playa según el tiempo",
+       "title": "Día 3 — Costa flexible"
+      }
+     ],
+     "lede": "Si vienes a Sharm el-Sheij por el color del mar, empieza eligiendo bien la bahía. Bañarte por la mañana, descansar después y dar un paseo al atardecer ya forman un buen día. Quien busca arrecifes y quien quiere una playa familiar no tienen por qué elegir el mismo hotel.",
+     "places": [
+      {
+       "area": "Extremo de la península del Sinaí",
+       "known": "Espacio protegido y arrecifes",
+       "name": "Ras Muhammad",
+       "tip": "Distingue excursión terrestre o en barco, tasas y equipo.",
+       "why": "Para observar vida marina en un espacio protegido."
+      },
+      {
+       "area": "Bahía de Naama",
+       "known": "Playa y paseos al atardecer",
+       "name": "Naama Bay",
+       "tip": "Comprueba la distancia real del hotel al paseo.",
+       "why": "Para añadir una zona de tarde paseable al resort."
+      },
+      {
+       "area": "Zona de Sharm El Maya",
+       "known": "Mercado y cenas locales",
+       "name": "El bazar antiguo",
+       "tip": "Aclara compras y transporte de vuelta.",
+       "why": "Para una visita urbana breve fuera del resort."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Consejos para visitar Sharm el-Sheij",
+     "practicalTips": [
+      {
+       "body": "Antes de reservar hotel de arrecife, revisa entrada al agua según niños, nivel de natación y oleaje.",
+       "title": "¿Muelle o entrada de arena?"
+      },
+      {
+       "body": "Deja una jornada alternativa por cambios de tiempo antes del último día.",
+       "title": "Deja flexible el día de mar"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Duración recomendada",
+       "value": "4–5 noches"
+      },
+      {
+       "label": "Mejor época",
+       "value": "Primavera y otoño"
+      },
+      {
+       "label": "Cómo moverse",
+       "value": "Traslados de hotel y excursión"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Qué ver en El Cairo: pirámides, museos y ruta de 3 días",
+       "city": "Kahire",
+       "description": "Pirámides de Guiza, calles históricas, museos y barrios del Nilo para combinar ciudad y arqueología."
+      },
+      {
+       "anchor": "Qué ver en Luxor: Karnak, tumbas y ruta de 2 días",
+       "city": "Luksor",
+       "description": "Karnak, templo de Luxor, Valle de los Reyes y Hatshepsut en una ruta por ambas orillas del Nilo."
+      },
+      {
+       "anchor": "Qué hacer en Hurghada: Giftun, playas y dónde dormir",
+       "city": "Hurgada",
+       "description": "Barcos a Giftun, marina, El Dahar y consejos para elegir la costa adecuada del hotel."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "Naama Bay permite combinar playa y paseo nocturno en una misma zona. Un resort en Sharks Bay o Nabq puede convertirse en el centro de las vacaciones. Es una opción válida, pero no todas las ubicaciones permiten salir caminando después de cenar. Reserva pensando en la vida diaria de la bahía.",
+        "Visitar Ras Muhammad en barco o por tierra da lugar a días distintos. Uno gira alrededor del agua y la navegación; el otro, de paradas terrestres. Piensa cuánto quieres nadar en vez de elegir la lista más larga de lugares. Con niños o poca confianza al nadar, busca un programa adecuado a vuestro ritmo.",
+        "En unas vacaciones breves, encadenar barco, desierto y actividades nocturnas puede eliminar el descanso. Empieza con una excursión marina principal y disfruta tu bahía los otros días. Una salida más larga a la montaña o la naturaleza necesita su propia jornada, con margen para madrugar y regresar tarde."
+       ],
+       "heading": "Organizar Sharm el-Sheij: primero la bahía",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "En el traslado desde Sharm el-Sheikh International (SSH), indica Naama Bay, Sharks Bay o Nabq. Comprueba oficialmente que tu permiso de entrada cubra todas las excursiones; no extrapoles condiciones de una estancia costera.",
+        "Los hoteles de distintas bahías están separados. Que Naama sea paseable no vuelve caminable todo el destino. Confirma muelle, salida y recogida del tour, y acuerda regreso para la visita al Mercado Viejo."
+       ],
+       "heading": "Cómo llegar a Sharm el-Sheij y moverse",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Separa la excursión marina de los paseos urbanos. Deja un día alternativo para Ras Muhammad y dedica tardes breves a Naama y Mercado Viejo."
+       ],
+       "heading": "Qué ver en Sharm el-Sheij",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Una visita terrestre a Ras Muhammad difiere del barco de buceo o esnórquel. Comunica nivel de natación y paradas deseadas; revisa guía, equipo y tasas. Observa sin tocar coral ni alimentar animales."
+         ],
+         "heading": "Ras Muhammad"
+        },
+        {
+         "body": [
+          "Naama ofrece más movimiento de restaurantes y paseo marítimo. Hoteles y ruido varían: revisa habitación, acceso al agua y hora de recogida de excursiones, no solo el nombre de la bahía."
+         ],
+         "heading": "Naama Bay"
+        },
+        {
+         "body": [
+          "Deja tiempo para comer además de comprar. Respeta acceso y fotos en torno a la mezquita Al Sahaba. Desde una bahía distante, acuerda coste de ida y vuelta y esperas en el mismo contrato."
+         ],
+         "heading": "El bazar antiguo"
+        }
+       ]
+      },
+      {
+       "body": [
+        "Naama Bay no necesita un programa nocturno elaborado: un paseo junto al agua y una cena pueden bastar después del mar. En el Mercado Viejo, dedica tiempo a calles y comida además de compras. Si te alojas en una bahía alejada, piensa en estas salidas como tardes independientes.",
+        "Un día de mar no se mide por cuántos peces ves. Entre baños, deja sitio para sombra, lectura y una comida tranquila. Elegir menos actividades no significa disfrutar menos Sharm. Después de un viaje urbano intenso, un día sin agenda puede acabar siendo tu favorito."
+       ],
+       "heading": "Una tarde en Naama y una pausa en el Mercado Viejo",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Naama favorece paseos, Sharks Bay hoteles orientados al arrecife y Nabq resorts amplios. Son pautas generales: revisa muelle, profundidad, viento y acceso infantil de cada hotel.",
+        "Una foto de agua turquesa no explica cómo se entra al mar. Mira el acceso real y dónde encontrarás sombra durante el día. Con niños puede importar más que el tamaño de la habitación; si buscas esnórquel, valora cómo llegarás al agua y cómo será pasar un día entero en el hotel."
+       ],
+       "heading": "Dónde alojarse en Sharm el-Sheij",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Además de pescado y parrilla, busca ful, taameya y verduras. Hay vida fuera del bufé, pero suma el traslado desde bahías lejanas. Pregunta por peso del pescado, preparación y guarniciones.",
+        "Para cambiar del bufé, combina una cena en Naama o el Mercado Viejo con el paseo. Pescado, ensalada y pequeños platos pueden formar una comida ligera después del calor. Desde un resort lejano, cuenta también el regreso: una cena cercana y tranquila puede compensar más que perseguir un nombre famoso."
+       ],
+       "heading": "Qué comer en Sharm el-Sheij",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "Primavera y otoño ofrecen temperaturas más equilibradas. Viento y agua fresca en invierno, o calor en verano, modifican el programa. Consulta el mar actual; una foto soleada no garantiza acceso diario.",
+        "Añade buceo, equipo, tasas y traslados al hotel. Buceo certificado y bautismo son productos distintos: compara formación, proporción de guías e inmersiones incluidas."
+       ],
+       "heading": "Sharm el-Sheij: cuándo ir y presupuesto",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "El Cairo funciona mejor como etapa cultural con vuelo. Si añades Dahab, dale tiempo propio. Confirma que cada excursión encaja con tus documentos, ruta actual y condiciones del operador."
+       ],
+       "heading": "Excursiones desde Sharm el-Sheij",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Organiza Sharm el-Sheij con Ras Muhammad, Naama Bay y el Mercado Viejo: arrecifes, zonas de hotel, buceo, esnórquel y consejos de transporte.",
+     "seoTitle": "Sharm el-Sheij: arrecifes, Ras Muhammad y alojamiento",
+     "sources": [
+      {
+       "name": "Experience Egypt — turismo oficial",
+       "url": "https://www.experienceegypt.eg/en/city/16/sharm-al-sheikh"
+      },
+      {
+       "name": "Experience Egypt — arrecifes y buceo",
+       "url": "https://www.experienceegypt.eg/en/Attraction-Details/186/beaches-snorkeling-diving"
+      },
+      {
+       "name": "Experience Egypt — espacios naturales protegidos",
+       "url": "https://www.experienceegypt.eg/en/attraction-details/436/natural-protectorates"
+      }
+     ],
+     "volatileNote": "Los precios, los servicios y los horarios pueden cambiar. Consulta las fuentes oficiales indicadas antes de reservar."
+    },
+    "tr": {
+     "countryInfoOnHub": true,
+     "dietary": {
+      "halal": [
+       {
+        "area": "Eski Şehir / Old Market Meydanı",
+        "category": "halal",
+        "cuisine": "Deniz mahsulleri ve Mısır mutfağı",
+        "description": "Sahaba Camii meydanında zengin deniz mahsulleri çorbası, ızgara karides ve taze balık tava sunan Mısır'ın en popüler tescilli helal deniz ürünleri zinciri.",
+        "lastVerified": "2026-10-06",
+        "name": "Fares Seafood",
+        "price": "Orta",
+        "verification": {
+         "note": "Helal sertifikalı deniz ürünleri ve etler servis edilir; alkolsüz halk restoranıdır.",
+         "sourceName": "Mısır Turizm Otoritesi — Sina Yarımadası",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://www.egypt.travel/en/regions/red-sea/sharm-el-sheikh",
+         "status": "restaurant-confirmed"
+        },
+        "why": "Eski Pazar gezisi sonrasında muazzam çorbası ve taze balıklarıyla kentin tartışmasız en ünlü helal lezzet durağıdır."
+       }
+      ],
+      "researchNote": "Şarm el-Şeyh'te Old Market bölgesindeki restoranlar İslami usullere tam uygundur; otel büfelerinde vegan sosları teyit edin.",
+      "vegan": [
+       {
+        "area": "Naama Bay",
+        "category": "vegan",
+        "cuisine": "Lübnan ve Akdeniz mezeleri",
+        "description": "Taze humus, çıtır falafel, tabbouleh ve zengin Lübnan zeytinyağlı mezeleriyle tatilciler için güvenilir bitki bazlı Akdeniz durağı.",
+        "lastVerified": "2026-10-06",
+        "name": "Fairuz Restaurant",
+        "price": "Orta",
+        "verification": {
+         "note": "Ayrı zeytinyağlı soğuk meze menüsü bulunur; yoğurtsuz tabaklar açıkça konuşulabilir.",
+         "sourceName": "HappyCow güncel vegan restoran dizini",
+         "sourceType": "vegan-directory",
+         "sourceUrl": "https://www.happycow.net/reviews/fairuz-sharm-el-sheikh-25801",
+         "status": "vegan-options"
+        },
+        "why": "Naama Bay sahilinde taze sebze ve bakliyat tabaklarıyla sağlıklı ve doyurucu bir vegan akşam yemeği için idealdir."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Bir deniz turu ve dinlenme için dört veya beş gece; çok sayıda dalış için daha uzun süre.",
+       "q": "Şarm el-Şeyh kaç gün için uygun?"
+      },
+      {
+       "a": "Akşam yürüyüşü için Naama; resort odağı için Nabq. Her otelde gerçek plaj, rüzgâr ve resif erişimi ayrı değerlendirilmelidir.",
+       "q": "Naama Bay mi Nabq mı?"
+      },
+      {
+       "a": "Hayır; kara ve şnorkel programları da bulunur. Yüzme düzeyi ve erişim koşuluna uygun ürünü yetkili işletmeden seçin.",
+       "q": "Ras Muhammad için dalış bilmek şart mı?"
+      }
+     ],
+     "h1": "Şarm el-Şeyh Gezi Rehberi: Resifler ve Otel Bölgeleri",
+     "itinerary": [
+      {
+       "afternoon": "Dinlenme ve tur koşullarını netleştirme",
+       "evening": "Naama Bay’de yürüyüş",
+       "morning": "Otel plajı ve deniz girişini kontrol edin",
+       "title": "1. Gün — Koyunuzu tanıyın"
+      },
+      {
+       "afternoon": "Koruma kurallarıyla deniz gezisi",
+       "evening": "Otelde sakin akşam",
+       "morning": "Seçtiğiniz kara veya tekne programı",
+       "title": "2. Gün — Ras Muhammad"
+      },
+      {
+       "afternoon": "Dinlenme ve serbest zaman",
+       "evening": "Eski Çarşı’da kısa gezi ve yemek",
+       "morning": "Havaya göre resif veya plaj",
+       "title": "3. Gün — Esnek kıyı günü"
+      }
+     ],
+     "lede": "Şarm el-Şeyh’e denizin rengini görmek için geliyorsanız işin en önemli kısmı doğru koyu seçmek. Sabah suya girip öğleden sonra dinlenmek, akşam kısa bir sahil yürüyüşüne çıkmak burada gayet güzel bir gün. Resifleri keşfetmek isteyenlerle sakin bir aile plajı arayanların aynı oteli seçmesi gerekmiyor.",
+     "places": [
+      {
+       "area": "Sina yarımadasının ucu",
+       "known": "Koruma alanı ve resifler",
+       "name": "Ras Muhammad",
+       "tip": "Kara veya tekne programını, alan ücretini ve ekipmanı ayırın.",
+       "why": "Deniz yaşamını koruma kuralları içinde görmek için."
+      },
+      {
+       "area": "Naama koyu",
+       "known": "Sahil ve akşam yürüyüşü",
+       "name": "Naama Bay",
+       "tip": "Otelin gerçekten yürüyüş alanına yakınlığını kontrol edin.",
+       "why": "Otel tatiline yürünebilir akşam bölgesi eklemek için."
+      },
+      {
+       "area": "Sharm El Maya çevresi",
+       "known": "Çarşı ve yerel akşam",
+       "name": "Eski Çarşı",
+       "tip": "Alışveriş ve araç dönüş fiyatını önceden konuşun.",
+       "why": "Resort dışında kısa şehir molası için."
+      }
+     ],
+     "placesKind": "sights",
+     "practicalHeading": "Şarm el-Şeyh için pratik ipuçları",
+     "practicalTips": [
+      {
+       "body": "Resif otelini seçmeden çocuk, yüzme seviyesi ve dalga koşuluna uygun deniz girişini öğrenin.",
+       "title": "İskele mi kum girişi mi?"
+      },
+      {
+       "body": "Hava nedeniyle değişen tur için son güne kalmadan yedek gün bırakın.",
+       "title": "Deniz günü esnek kalsın"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Önerilen süre",
+       "value": "4–5 gece"
+      },
+      {
+       "label": "En uygun dönem",
+       "value": "İlkbahar ve sonbahar"
+      },
+      {
+       "label": "Ulaşım yaklaşımı",
+       "value": "Otel ve tur transferleri"
+      }
+     ],
+     "relatedGuides": [
+      {
+       "anchor": "Kahire Gezi Rehberi: Piramitler, Müzeler ve 3 Günlük Rota",
+       "city": "Kahire",
+       "description": "Giza Piramitleri, tarihî merkez, müzeler ve Nil mahalleleriyle büyük bir şehir ve arkeoloji gezisi."
+      },
+      {
+       "anchor": "Luksor Gezi Rehberi: Karnak ve Krallar Vadisi Rotası",
+       "city": "Luksor",
+       "description": "Karnak, Luksor Tapınağı, Krallar Vadisi ve Hatşepsut arasında Nil’in iki yakasında anıt rotası."
+      },
+      {
+       "anchor": "Hurgada Gezi Rehberi: Giftun, Plajlar ve Nerede Kalınır",
+       "city": "Hurgada",
+       "description": "Giftun tekne gezileri, marina, El Dahar ve Kızıldeniz’de doğru otel kıyısını seçme rehberi."
+      }
+     ],
+     "reviewedAt": "2026-10-06",
+     "sections": [
+      {
+       "body": [
+        "Naama Bay’de kıyı ve akşam yürüyüşünü aynı çevrede tutmak daha kolay. Sharks Bay veya Nabq tarafında bir resort seçtiğinizde tatilin merkezi büyük ölçüde otelinize kayabilir. Bu, kötü bir tercih değil; yalnız her akşam şehir içine yürüyerek çıkmayı beklememek gerekiyor. Rezervasyonu şehir adına değil kalacağınız koyun günlük düzenine göre düşünün.",
+        "Ras Muhammad gezisinde tekne programı ile karadan yapılan ziyaret aynı gün hissini vermez. Biri suya giriş ve teknede zaman, diğeri kara durakları etrafında şekillenir. Sadece en fazla durağı vaat eden paketi seçmek yerine ne kadar yüzmek, ne kadar kıyıda kalmak istediğinizi düşünün. Çocukla veya yüzmeye daha az güvenerek geziyorsanız programın buna uygun olmasına özellikle bakın.",
+        "Kısa bir tatilde her güne deniz turu, çöl turu ve gece etkinliği koymak dinlenme zamanını silebilir. Bir ana deniz gezisi seçip kalan günleri koyunuzda geçirmek çoğu ilk ziyaret için daha rahat bir başlangıç. Daha uzun bir doğa veya dağ gezisi eklemek istiyorsanız onu ayrı gün olarak planlayın; resorttan erken çıkış ve geç dönüş aynı günün enerjisini değiştirir."
+       ],
+       "heading": "Şarm el-Şeyh planı: önce koy, sonra otel",
+       "id": "gezi-planlama"
+      },
+      {
+       "body": [
+        "Sharm el-Sheikh International (SSH) transferinde otelin Naama Bay, Sharks Bay veya Nabq konumunu belirtin. Varış izninin planladığınız tüm gezileri kapsadığını uçuş öncesinde resmî kanaldan doğrulayın; yalnız kıyı tatiline ait koşulu başka şehre taşımayın.",
+        "Otel koyları arasında mesafe vardır; Naama’da yürüyüş yapılabilmesi bütün destinasyonun yürünebilir olduğu anlamına gelmez. Tur transferinde iskele, kalkış saati ve otelden alma kapsamını kontrol edin. Akşam çarşı gezisinde dönüşü de içeren fiyatı baştan netleştirin."
+       ],
+       "heading": "Şarm el-Şeyh ulaşım rehberi",
+       "id": "ulasim"
+      },
+      {
+       "body": [
+        "Deniz gününü kıyı yürüyüşünden ayırın. Ras Muhammad gezisini hava için yedek günü olacak şekilde planlayıp Naama ve Eski Çarşı’yı iki kısa akşam programına dönüştürebilirsiniz."
+       ],
+       "heading": "Şarm el-Şeyh gezilecek yerler",
+       "id": "gezilecek-yerler",
+       "subsections": [
+        {
+         "body": [
+          "Ras Muhammad kara ziyareti ve tekne dalış/şnorkel günü farklı programlardır. Yüzme düzeyinizi ve beklediğiniz durakları operatöre söyleyin; rehber, ekipman ve koruma alanı ücretini kontrol edin. Resife dokunmadan ve canlıları beslemeden gözlem yapın."
+         ],
+         "heading": "Ras Muhammad"
+        },
+        {
+         "body": [
+          "Naama’da restoran ve sahil yürüyüşü daha yoğun bir akşam ritmi sunar. Koydaki her otelin plajı ve gürültü düzeyi aynı değildir. Merkezde kalmak isteyenler oda konumunu, sahile geçişi ve tekne turu toplama saatini birlikte değerlendirmeli."
+         ],
+         "heading": "Naama Bay"
+        },
+        {
+         "body": [
+          "Eski Çarşı’da alışveriş kadar yemek molasına da zaman bırakın. Al Sahaba Camii çevresinde ziyaret ve fotoğraf kuralına uyun. Uzak koydaki otelden gelirken gidiş-dönüş maliyetini ve bekleme şartını tek paketin içinde netleştirin."
+         ],
+         "heading": "Eski Çarşı"
+        }
+       ]
+      },
+      {
+       "body": [
+        "Naama Bay’in akşam hareketi için bütün geceyi dolduran bir program gerekmiyor. Kıyıda yürüyüp bir masaya oturmak, gün boyu denizde geçen zamanın ardından yeterli olabilir. Eski Çarşı’yı da yalnız alışveriş turu gibi görmeden sokaklarına ve yemek seçeneklerine vakit verin. Farklı koylarda kalıyorsanız bu iki akşamı ayrı düşünmek gereksiz gidip gelmeyi azaltır.",
+        "Deniz gününün keyfi yalnız gördüğünüz balık sayısıyla ölçülmüyor. Suya girmediğiniz zamanlarda kıyının gölgesini, kitap molasını ve yavaş bir öğünü de plana katın. Şarm’da daha az etkinlik seçmek daha eksik bir tatil anlamına gelmez. Özellikle bir şehir gezisinin ardından buraya geliyorsanız boş bırakılan bir gün seyahatin en iyi kısmına dönüşebilir."
+       ],
+       "heading": "Naama akşamı ve Eski Çarşı molası",
+       "id": "mahalle-yasami"
+      },
+      {
+       "body": [
+        "Naama yürüyüş ve akşam hareketi, Sharks Bay resif odaklı oteller, Nabq daha geniş resort alanları sunar. Bunlar genel yönlendirmedir: gerçek otel plajında iskele, derin su, rüzgâr, yüzme alanı ve çocuk erişimini ayrı kontrol edin.",
+        "Otel fotoğraflarında turkuaz su görmek, kıyıdan rahatça yüzülebildiğini göstermiyor. Gerçek plaj girişini ve gün içinde nerede gölge bulacağınızı anlamaya çalışın. Çocukla tatilde bunlar oda büyüklüğünden daha önemli olabilir; şnorkel odaklı geziyorsanız suya ulaşma biçimi ve otelden çıkmadan geçireceğiniz günlerin rahatlığı öne çıkar."
+       ],
+       "heading": "Şarm el-Şeyh nerede kalınır?",
+       "id": "konaklama"
+      },
+      {
+       "body": [
+        "Balık ve ızgara yanında ful, taameya ve sebze tabakları bulunur. Resort büfesini tek seçenek saymayın, fakat uzak koydan akşam yemeği için transfer bedelini ekleyin. Balıkta kilo fiyatı, hazırlama ve yan tabakları siparişten önce sorun.",
+        "Oteldeki büfeden bir akşam çıkmak isterseniz Naama veya Eski Çarşı çevresini geziyle birleştirebilirsiniz. Balık yanında basit bir salata ve küçük tabaklarla hafif bir öğün kurmak sıcak günlerde daha rahat. Uzak bir resortta kalıyorsanız yemek için gidiş dönüşü de düşünün; bazen yakında sakin bir akşam, sırf adı duyulmuş bir masaya gitmekten daha iyi."
+       ],
+       "heading": "Şarm el-Şeyh ne yenir?",
+       "id": "yeme-icme"
+      },
+      {
+       "body": [
+        "İlkbahar ve sonbahar sıcaklık açısından dengelidir. Kışın rüzgâr ve serin su, yazın çok sıcak açık hava saatleri planı etkiler. Dalış veya şnorkel için deniz koşulunu güncel kontrol edin; iyi hava fotoğrafı her gün aynı erişimi garanti etmez.",
+        "Otel fiyatına dalış, şnorkel ekipmanı, koruma alanı, havaalanı ve koylar arası transferi ekleyin. Sertifikalı dalış ile tanıtım dalışı aynı ürün değildir; eğitim, rehber oranı ve dahil dalış sayısını karşılaştırın."
+       ],
+       "heading": "Şarm el-Şeyh için mevsim ve bütçe planı",
+       "id": "mevsim-butce"
+      },
+      {
+       "body": [
+        "Kahire ayrı uçuşlu kültür ayağı olarak daha rahat işler. Dahab’ı eklemek istiyorsanız onu uzun bir tekne gününün devamına sıkıştırmayın. Her şehir dışı gezinin giriş belgenize, operatör koşullarına ve güncel rotaya uygunluğunu doğrulayın."
+       ],
+       "heading": "Şarm el-Şeyh çevresinde rota önerileri",
+       "id": "yakin-rotalar"
+      }
+     ],
+     "seoDescription": "Şarm el-Şeyh gezi rehberi: Ras Muhammad, Naama Bay ve Eski Çarşı; resif erişimi, otel bölgesi seçimi, dalış, şnorkel ve ulaşım önerileri.",
+     "seoTitle": "Şarm el-Şeyh Gezi Rehberi: Resifler ve Otel Bölgeleri",
+     "sources": [
+      {
+       "name": "Experience Egypt — resmî turizm",
+       "url": "https://www.experienceegypt.eg/en/city/16/sharm-al-sheikh"
+      },
+      {
+       "name": "Experience Egypt — resif ve dalış",
+       "url": "https://www.experienceegypt.eg/en/Attraction-Details/186/beaches-snorkeling-diving"
+      },
+      {
+       "name": "Experience Egypt — doğal koruma alanları",
+       "url": "https://www.experienceegypt.eg/en/attraction-details/436/natural-protectorates"
+      }
+     ],
+     "volatileNote": "Bilet ücretleri, seferler ve ziyaret saatleri değişebilir. Rezervasyon öncesinde aşağıdaki resmî kaynaklardan güncel bilgiyi kontrol edin."
+    }
+   }
+  }
+ ]
+}

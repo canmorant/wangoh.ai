@@ -1,0 +1,8632 @@
+[
+ {
+  "aliases": [
+   "Principality of Andorra",
+   "Andorra Prensliği",
+   "AD",
+   "Principat d'Andorra",
+   "AND"
+  ],
+  "borders": [
+   "FRA",
+   "ESP"
+  ],
+  "capital": [
+   "Andorra la Vella"
+  ],
+  "code": "AD",
+  "continentSlug": "europe",
+  "flag": "🇦🇩",
+  "hasTravel": false,
+  "iso3": "AND",
+  "landlocked": true,
+  "latitude": 42.5,
+  "longitude": 1.5,
+  "subregion": "Southern Europe",
+  "translations": {
+   "en": {
+    "name": "Andorra",
+    "officialName": "Principality of Andorra",
+    "subregion": "Southern Europe"
+   },
+   "es": {
+    "name": "Andorra",
+    "officialName": "Principado de Andorra",
+    "subregion": "Europa del Sur"
+   },
+   "tr": {
+    "name": "Andorra",
+    "officialName": "Andorra Prensliği",
+    "subregion": "Güney Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "United Arab Emirates",
+   "AE",
+   "UAE",
+   "Emirates",
+   "ARE"
+  ],
+  "borders": [
+   "OMN",
+   "SAU"
+  ],
+  "capital": [
+   "Abu Dhabi"
+  ],
+  "code": "AE",
+  "continentSlug": "asia",
+  "flag": "🇦🇪",
+  "hasTravel": true,
+  "iso3": "ARE",
+  "landlocked": false,
+  "latitude": 24,
+  "longitude": 54,
+  "subregion": "Western Asia",
+  "translations": {
+   "en": {
+    "name": "United Arab Emirates",
+    "officialName": "United Arab Emirates",
+    "subregion": "Western Asia"
+   },
+   "es": {
+    "name": "Emiratos Árabes Unidos",
+    "officialName": "Emiratos Árabes Unidos",
+    "subregion": "Asia Occidental"
+   },
+   "tr": {
+    "name": "Birleşik Arap Emirlikleri",
+    "officialName": "Birleşik Arap Emirlikleri",
+    "subregion": "Batı Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Afghanistan",
+   "Islamic Republic of Afghanistan",
+   "Afganistan İslam Cumhuriyeti",
+   "AF",
+   "Afġānistān",
+   "AFG"
+  ],
+  "borders": [
+   "IRN",
+   "PAK",
+   "TKM",
+   "UZB",
+   "TJK",
+   "CHN"
+  ],
+  "capital": [
+   "Kabul"
+  ],
+  "code": "AF",
+  "continentSlug": "asia",
+  "flag": "🇦🇫",
+  "hasTravel": false,
+  "iso3": "AFG",
+  "landlocked": true,
+  "latitude": 33,
+  "longitude": 65,
+  "subregion": "Southern Asia",
+  "translations": {
+   "en": {
+    "name": "Afghanistan",
+    "officialName": "Islamic Republic of Afghanistan",
+    "subregion": "South Asia"
+   },
+   "es": {
+    "name": "Afganistán",
+    "officialName": "República Islámica de Afganistán",
+    "subregion": "Asia del Sur"
+   },
+   "tr": {
+    "name": "Afganistan",
+    "officialName": "Afganistan İslam Cumhuriyeti",
+    "subregion": "Güney Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Antigua and Barbuda",
+   "AG",
+   "ATG"
+  ],
+  "borders": [],
+  "capital": [
+   "Saint John's"
+  ],
+  "code": "AG",
+  "continentSlug": "americas",
+  "flag": "🇦🇬",
+  "hasTravel": false,
+  "iso3": "ATG",
+  "landlocked": false,
+  "latitude": 17.05,
+  "longitude": -61.8,
+  "subregion": "Caribbean",
+  "translations": {
+   "en": {
+    "name": "Antigua and Barbuda",
+    "officialName": "Antigua and Barbuda",
+    "subregion": "Caribbean"
+   },
+   "es": {
+    "name": "Antigua y Barbuda",
+    "officialName": "Antigua y Barbuda",
+    "subregion": "Caribe"
+   },
+   "tr": {
+    "name": "Antigua ve Barbuda",
+    "officialName": "Antigua ve Barbuda",
+    "subregion": "Karayipler"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Albania",
+   "Republic of Albania",
+   "Arnavutluk Cumhuriyeti",
+   "AL",
+   "Shqipëri",
+   "Shqipëria",
+   "Shqipnia",
+   "ALB"
+  ],
+  "borders": [
+   "MNE",
+   "GRC",
+   "MKD"
+  ],
+  "capital": [
+   "Tirana"
+  ],
+  "code": "AL",
+  "continentSlug": "europe",
+  "flag": "🇦🇱",
+  "hasTravel": true,
+  "iso3": "ALB",
+  "landlocked": false,
+  "latitude": 41,
+  "longitude": 20,
+  "subregion": "Southeast Europe",
+  "translations": {
+   "en": {
+    "name": "Albania",
+    "officialName": "Republic of Albania",
+    "subregion": "Southeast Europe"
+   },
+   "es": {
+    "name": "Albania",
+    "officialName": "República de Albania",
+    "subregion": "Sudeste de Europa"
+   },
+   "tr": {
+    "name": "Arnavutluk",
+    "officialName": "Arnavutluk Cumhuriyeti",
+    "subregion": "Güneydoğu Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Armenia",
+   "Republic of Armenia",
+   "Ermenistan Cumhuriyeti",
+   "AM",
+   "Hayastan",
+   "Հայաստանի Հանրապետություն",
+   "ARM"
+  ],
+  "borders": [
+   "AZE",
+   "GEO",
+   "IRN",
+   "TUR"
+  ],
+  "capital": [
+   "Yerevan"
+  ],
+  "code": "AM",
+  "continentSlug": "asia",
+  "flag": "🇦🇲",
+  "hasTravel": false,
+  "iso3": "ARM",
+  "landlocked": true,
+  "latitude": 40,
+  "longitude": 45,
+  "subregion": "Western Asia",
+  "translations": {
+   "en": {
+    "name": "Armenia",
+    "officialName": "Republic of Armenia",
+    "subregion": "Western Asia"
+   },
+   "es": {
+    "name": "Armenia",
+    "officialName": "República de Armenia",
+    "subregion": "Asia Occidental"
+   },
+   "tr": {
+    "name": "Ermenistan",
+    "officialName": "Ermenistan Cumhuriyeti",
+    "subregion": "Batı Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Republic of Angola",
+   "Angola Cumhuriyeti",
+   "AO",
+   "República de Angola",
+   "ʁɛpublika de an'ɡɔla",
+   "AGO"
+  ],
+  "borders": [
+   "COG",
+   "COD",
+   "ZMB",
+   "NAM"
+  ],
+  "capital": [
+   "Luanda"
+  ],
+  "code": "AO",
+  "continentSlug": "africa",
+  "flag": "🇦🇴",
+  "hasTravel": false,
+  "iso3": "AGO",
+  "landlocked": false,
+  "latitude": -12.5,
+  "longitude": 18.5,
+  "subregion": "Middle Africa",
+  "translations": {
+   "en": {
+    "name": "Angola",
+    "officialName": "Republic of Angola",
+    "subregion": "Central Africa"
+   },
+   "es": {
+    "name": "Angola",
+    "officialName": "República de Angola",
+    "subregion": "África Central"
+   },
+   "tr": {
+    "name": "Angola",
+    "officialName": "Angola Cumhuriyeti",
+    "subregion": "Orta Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Argentina",
+   "Argentine Republic",
+   "Arjantin Cumhuriyeti",
+   "AR",
+   "República Argentina",
+   "ARG"
+  ],
+  "borders": [
+   "BOL",
+   "BRA",
+   "CHL",
+   "PRY",
+   "URY"
+  ],
+  "capital": [
+   "Buenos Aires"
+  ],
+  "code": "AR",
+  "continentSlug": "americas",
+  "flag": "🇦🇷",
+  "hasTravel": true,
+  "iso3": "ARG",
+  "landlocked": false,
+  "latitude": -34,
+  "longitude": -64,
+  "subregion": "South America",
+  "translations": {
+   "en": {
+    "name": "Argentina",
+    "officialName": "Argentine Republic",
+    "subregion": "South America"
+   },
+   "es": {
+    "name": "Argentina",
+    "officialName": "República Argentina",
+    "subregion": "Sudamérica"
+   },
+   "tr": {
+    "name": "Arjantin",
+    "officialName": "Arjantin Cumhuriyeti",
+    "subregion": "Güney Amerika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Austria",
+   "Republic of Austria",
+   "Avusturya Cumhuriyeti",
+   "AT",
+   "Osterreich",
+   "Oesterreich",
+   "AUT"
+  ],
+  "borders": [
+   "CZE",
+   "DEU",
+   "HUN",
+   "ITA",
+   "LIE",
+   "SVK",
+   "SVN",
+   "CHE"
+  ],
+  "capital": [
+   "Vienna"
+  ],
+  "code": "AT",
+  "continentSlug": "europe",
+  "flag": "🇦🇹",
+  "hasTravel": true,
+  "iso3": "AUT",
+  "landlocked": true,
+  "latitude": 47.33333333,
+  "longitude": 13.33333333,
+  "subregion": "Central Europe",
+  "translations": {
+   "en": {
+    "name": "Austria",
+    "officialName": "Republic of Austria",
+    "subregion": "Central Europe"
+   },
+   "es": {
+    "name": "Austria",
+    "officialName": "República de Austria",
+    "subregion": "Europa Central"
+   },
+   "tr": {
+    "name": "Avusturya",
+    "officialName": "Avusturya Cumhuriyeti",
+    "subregion": "Orta Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Australia",
+   "Commonwealth of Australia",
+   "Avustralya Federal Devleti",
+   "AU",
+   "AUS"
+  ],
+  "borders": [],
+  "capital": [
+   "Canberra"
+  ],
+  "code": "AU",
+  "continentSlug": "oceania",
+  "flag": "🇦🇺",
+  "hasTravel": false,
+  "iso3": "AUS",
+  "landlocked": false,
+  "latitude": -27,
+  "longitude": 133,
+  "subregion": "Australia and New Zealand",
+  "translations": {
+   "en": {
+    "name": "Australia",
+    "officialName": "Commonwealth of Australia",
+    "subregion": "Australia and New Zealand"
+   },
+   "es": {
+    "name": "Australia",
+    "officialName": "Mancomunidad de Australia",
+    "subregion": "Australia y Nueva Zelanda"
+   },
+   "tr": {
+    "name": "Avustralya",
+    "officialName": "Avustralya Federal Devleti",
+    "subregion": "Avustralya ve Yeni Zelanda"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Azerbaijan",
+   "Republic of Azerbaijan",
+   "Azerbaycan Cumhuriyeti",
+   "AZ",
+   "Azərbaycan Respublikası",
+   "AZE"
+  ],
+  "borders": [
+   "ARM",
+   "GEO",
+   "IRN",
+   "RUS",
+   "TUR"
+  ],
+  "capital": [
+   "Baku"
+  ],
+  "code": "AZ",
+  "continentSlug": "asia",
+  "flag": "🇦🇿",
+  "hasTravel": false,
+  "iso3": "AZE",
+  "landlocked": true,
+  "latitude": 40.5,
+  "longitude": 47.5,
+  "subregion": "Western Asia",
+  "translations": {
+   "en": {
+    "name": "Azerbaijan",
+    "officialName": "Republic of Azerbaijan",
+    "subregion": "Western Asia"
+   },
+   "es": {
+    "name": "Azerbaiyán",
+    "officialName": "República de Azerbaiyán",
+    "subregion": "Asia Occidental"
+   },
+   "tr": {
+    "name": "Azerbaycan",
+    "officialName": "Azerbaycan Cumhuriyeti",
+    "subregion": "Batı Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Bosnia and Herzegovina",
+   "Bosna ve Hersek",
+   "BA",
+   "Bosnia-Herzegovina",
+   "Босна и Херцеговина",
+   "BIH"
+  ],
+  "borders": [
+   "HRV",
+   "MNE",
+   "SRB"
+  ],
+  "capital": [
+   "Sarajevo"
+  ],
+  "code": "BA",
+  "continentSlug": "europe",
+  "flag": "🇧🇦",
+  "hasTravel": true,
+  "iso3": "BIH",
+  "landlocked": false,
+  "latitude": 44,
+  "longitude": 18,
+  "subregion": "Southeast Europe",
+  "translations": {
+   "en": {
+    "name": "Bosnia and Herzegovina",
+    "officialName": "Bosnia and Herzegovina",
+    "subregion": "Southeast Europe"
+   },
+   "es": {
+    "name": "Bosnia y Herzegovina",
+    "officialName": "Bosnia y Herzegovina",
+    "subregion": "Sudeste de Europa"
+   },
+   "tr": {
+    "name": "Bosna-Hersek",
+    "officialName": "Bosna ve Hersek",
+    "subregion": "Güneydoğu Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "BB",
+   "BRB"
+  ],
+  "borders": [],
+  "capital": [
+   "Bridgetown"
+  ],
+  "code": "BB",
+  "continentSlug": "americas",
+  "flag": "🇧🇧",
+  "hasTravel": false,
+  "iso3": "BRB",
+  "landlocked": false,
+  "latitude": 13.16666666,
+  "longitude": -59.53333333,
+  "subregion": "Caribbean",
+  "translations": {
+   "en": {
+    "name": "Barbados",
+    "officialName": "Barbados",
+    "subregion": "Caribbean"
+   },
+   "es": {
+    "name": "Barbados",
+    "officialName": "Barbados",
+    "subregion": "Caribe"
+   },
+   "tr": {
+    "name": "Barbados",
+    "officialName": "Barbados",
+    "subregion": "Karayipler"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Bangladesh",
+   "People's Republic of Bangladesh",
+   "Bangladeş Halk Cumhuriyeti",
+   "BD",
+   "Gônôprôjatôntri Bangladesh",
+   "BGD"
+  ],
+  "borders": [
+   "MMR",
+   "IND"
+  ],
+  "capital": [
+   "Dhaka"
+  ],
+  "code": "BD",
+  "continentSlug": "asia",
+  "flag": "🇧🇩",
+  "hasTravel": false,
+  "iso3": "BGD",
+  "landlocked": false,
+  "latitude": 24,
+  "longitude": 90,
+  "subregion": "Southern Asia",
+  "translations": {
+   "en": {
+    "name": "Bangladesh",
+    "officialName": "People's Republic of Bangladesh",
+    "subregion": "South Asia"
+   },
+   "es": {
+    "name": "Bangladesh",
+    "officialName": "República Popular de Bangladesh",
+    "subregion": "Asia del Sur"
+   },
+   "tr": {
+    "name": "Bangladeş",
+    "officialName": "Bangladeş Halk Cumhuriyeti",
+    "subregion": "Güney Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Belgium",
+   "Kingdom of Belgium",
+   "Belçika Krallığı",
+   "BE",
+   "België",
+   "Belgie",
+   "Belgien",
+   "Belgique",
+   "Koninkrijk België",
+   "Royaume de Belgique",
+   "Königreich Belgien",
+   "BEL"
+  ],
+  "borders": [
+   "FRA",
+   "DEU",
+   "LUX",
+   "NLD"
+  ],
+  "capital": [
+   "Brussels"
+  ],
+  "code": "BE",
+  "continentSlug": "europe",
+  "flag": "🇧🇪",
+  "hasTravel": true,
+  "iso3": "BEL",
+  "landlocked": false,
+  "latitude": 50.83333333,
+  "longitude": 4,
+  "subregion": "Western Europe",
+  "translations": {
+   "en": {
+    "name": "Belgium",
+    "officialName": "Kingdom of Belgium",
+    "subregion": "Western Europe"
+   },
+   "es": {
+    "name": "Bélgica",
+    "officialName": "Reino de Bélgica",
+    "subregion": "Europa Occidental"
+   },
+   "tr": {
+    "name": "Belçika",
+    "officialName": "Belçika Krallığı",
+    "subregion": "Batı Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "BF",
+   "BFA"
+  ],
+  "borders": [
+   "BEN",
+   "CIV",
+   "GHA",
+   "MLI",
+   "NER",
+   "TGO"
+  ],
+  "capital": [
+   "Ouagadougou"
+  ],
+  "code": "BF",
+  "continentSlug": "africa",
+  "flag": "🇧🇫",
+  "hasTravel": false,
+  "iso3": "BFA",
+  "landlocked": true,
+  "latitude": 13,
+  "longitude": -2,
+  "subregion": "Western Africa",
+  "translations": {
+   "en": {
+    "name": "Burkina Faso",
+    "officialName": "Burkina Faso",
+    "subregion": "West Africa"
+   },
+   "es": {
+    "name": "Burkina Faso",
+    "officialName": "Burkina Faso",
+    "subregion": "África Occidental"
+   },
+   "tr": {
+    "name": "Burkina Faso",
+    "officialName": "Burkina Faso",
+    "subregion": "Batı Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Bulgaria",
+   "Republic of Bulgaria",
+   "Bulgaristan Cumhuriyeti",
+   "BG",
+   "Република България",
+   "BGR"
+  ],
+  "borders": [
+   "GRC",
+   "MKD",
+   "ROU",
+   "SRB",
+   "TUR"
+  ],
+  "capital": [
+   "Sofia"
+  ],
+  "code": "BG",
+  "continentSlug": "europe",
+  "flag": "🇧🇬",
+  "hasTravel": true,
+  "iso3": "BGR",
+  "landlocked": false,
+  "latitude": 43,
+  "longitude": 25,
+  "subregion": "Southeast Europe",
+  "translations": {
+   "en": {
+    "name": "Bulgaria",
+    "officialName": "Republic of Bulgaria",
+    "subregion": "Southeast Europe"
+   },
+   "es": {
+    "name": "Bulgaria",
+    "officialName": "República de Bulgaria",
+    "subregion": "Sudeste de Europa"
+   },
+   "tr": {
+    "name": "Bulgaristan",
+    "officialName": "Bulgaristan Cumhuriyeti",
+    "subregion": "Güneydoğu Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Bahrain",
+   "Kingdom of Bahrain",
+   "Bahreyn Krallığı",
+   "BH",
+   "Mamlakat al-Baḥrayn",
+   "BHR"
+  ],
+  "borders": [],
+  "capital": [
+   "Manama"
+  ],
+  "code": "BH",
+  "continentSlug": "asia",
+  "flag": "🇧🇭",
+  "hasTravel": false,
+  "iso3": "BHR",
+  "landlocked": false,
+  "latitude": 26,
+  "longitude": 50.55,
+  "subregion": "Western Asia",
+  "translations": {
+   "en": {
+    "name": "Bahrain",
+    "officialName": "Kingdom of Bahrain",
+    "subregion": "Western Asia"
+   },
+   "es": {
+    "name": "Bahrein",
+    "officialName": "Reino de Bahrein",
+    "subregion": "Asia Occidental"
+   },
+   "tr": {
+    "name": "Bahreyn",
+    "officialName": "Bahreyn Krallığı",
+    "subregion": "Batı Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Republic of Burundi",
+   "Burundi Cumhuriyeti",
+   "BI",
+   "Republika y'Uburundi",
+   "République du Burundi",
+   "BDI"
+  ],
+  "borders": [
+   "COD",
+   "RWA",
+   "TZA"
+  ],
+  "capital": [
+   "Gitega"
+  ],
+  "code": "BI",
+  "continentSlug": "africa",
+  "flag": "🇧🇮",
+  "hasTravel": false,
+  "iso3": "BDI",
+  "landlocked": true,
+  "latitude": -3.5,
+  "longitude": 30,
+  "subregion": "Eastern Africa",
+  "translations": {
+   "en": {
+    "name": "Burundi",
+    "officialName": "Republic of Burundi",
+    "subregion": "East Africa"
+   },
+   "es": {
+    "name": "Burundi",
+    "officialName": "República de Burundi",
+    "subregion": "África Oriental"
+   },
+   "tr": {
+    "name": "Burundi",
+    "officialName": "Burundi Cumhuriyeti",
+    "subregion": "Doğu Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Republic of Benin",
+   "Benin Cumhuriyeti",
+   "BJ",
+   "République du Bénin",
+   "BEN"
+  ],
+  "borders": [
+   "BFA",
+   "NER",
+   "NGA",
+   "TGO"
+  ],
+  "capital": [
+   "Porto-Novo"
+  ],
+  "code": "BJ",
+  "continentSlug": "africa",
+  "flag": "🇧🇯",
+  "hasTravel": false,
+  "iso3": "BEN",
+  "landlocked": false,
+  "latitude": 9.5,
+  "longitude": 2.25,
+  "subregion": "Western Africa",
+  "translations": {
+   "en": {
+    "name": "Benin",
+    "officialName": "Republic of Benin",
+    "subregion": "West Africa"
+   },
+   "es": {
+    "name": "Benín",
+    "officialName": "República de Benin",
+    "subregion": "África Occidental"
+   },
+   "tr": {
+    "name": "Benin",
+    "officialName": "Benin Cumhuriyeti",
+    "subregion": "Batı Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Nation of Brunei, Abode of Peace",
+   "Brunei Barış ülkesi Devleti (Darü's-Selam)",
+   "BN",
+   "Brunei Darussalam",
+   "Nation of Brunei",
+   "the Abode of Peace",
+   "BRN"
+  ],
+  "borders": [
+   "MYS"
+  ],
+  "capital": [
+   "Bandar Seri Begawan"
+  ],
+  "code": "BN",
+  "continentSlug": "asia",
+  "flag": "🇧🇳",
+  "hasTravel": false,
+  "iso3": "BRN",
+  "landlocked": false,
+  "latitude": 4.5,
+  "longitude": 114.66666666,
+  "subregion": "South-Eastern Asia",
+  "translations": {
+   "en": {
+    "name": "Brunei",
+    "officialName": "Nation of Brunei, Abode of Peace",
+    "subregion": "Southeast Asia"
+   },
+   "es": {
+    "name": "Brunei",
+    "officialName": "Nación de Brunei, Morada de la Paz",
+    "subregion": "Sudeste Asiático"
+   },
+   "tr": {
+    "name": "Brunei",
+    "officialName": "Brunei Barış ülkesi Devleti (Darü's-Selam)",
+    "subregion": "Güneydoğu Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Bolivia",
+   "Plurinational State of Bolivia",
+   "Bolivya çokuluslu Devleti",
+   "BO",
+   "Buliwya",
+   "Wuliwya",
+   "Bolivia, Plurinational State of",
+   "Estado Plurinacional de Bolivia",
+   "Buliwya Mamallaqta",
+   "Wuliwya Suyu",
+   "Tetã Volívia",
+   "BOL"
+  ],
+  "borders": [
+   "ARG",
+   "BRA",
+   "CHL",
+   "PRY",
+   "PER"
+  ],
+  "capital": [
+   "Sucre"
+  ],
+  "code": "BO",
+  "continentSlug": "americas",
+  "flag": "🇧🇴",
+  "hasTravel": false,
+  "iso3": "BOL",
+  "landlocked": true,
+  "latitude": -17,
+  "longitude": -65,
+  "subregion": "South America",
+  "translations": {
+   "en": {
+    "name": "Bolivia",
+    "officialName": "Plurinational State of Bolivia",
+    "subregion": "South America"
+   },
+   "es": {
+    "name": "Bolivia",
+    "officialName": "Estado Plurinacional de Bolivia",
+    "subregion": "Sudamérica"
+   },
+   "tr": {
+    "name": "Bolivya",
+    "officialName": "Bolivya çokuluslu Devleti",
+    "subregion": "Güney Amerika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Brazil",
+   "Federative Republic of Brazil",
+   "Brezilya Federal Cumhuriyeti",
+   "BR",
+   "Brasil",
+   "República Federativa do Brasil",
+   "BRA"
+  ],
+  "borders": [
+   "ARG",
+   "BOL",
+   "COL",
+   "GUY",
+   "PRY",
+   "PER",
+   "SUR",
+   "URY",
+   "VEN"
+  ],
+  "capital": [
+   "Brasília"
+  ],
+  "code": "BR",
+  "continentSlug": "americas",
+  "flag": "🇧🇷",
+  "hasTravel": true,
+  "iso3": "BRA",
+  "landlocked": false,
+  "latitude": -10,
+  "longitude": -55,
+  "subregion": "South America",
+  "translations": {
+   "en": {
+    "name": "Brazil",
+    "officialName": "Federative Republic of Brazil",
+    "subregion": "South America"
+   },
+   "es": {
+    "name": "Brasil",
+    "officialName": "República Federativa del Brasil",
+    "subregion": "Sudamérica"
+   },
+   "tr": {
+    "name": "Brezilya",
+    "officialName": "Brezilya Federal Cumhuriyeti",
+    "subregion": "Güney Amerika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Bahamas",
+   "Commonwealth of the Bahamas",
+   "Bahama Milletler Topluluğu",
+   "BS",
+   "BHS"
+  ],
+  "borders": [],
+  "capital": [
+   "Nassau"
+  ],
+  "code": "BS",
+  "continentSlug": "americas",
+  "flag": "🇧🇸",
+  "hasTravel": false,
+  "iso3": "BHS",
+  "landlocked": false,
+  "latitude": 24.25,
+  "longitude": -76,
+  "subregion": "Caribbean",
+  "translations": {
+   "en": {
+    "name": "Bahamas",
+    "officialName": "Commonwealth of the Bahamas",
+    "subregion": "Caribbean"
+   },
+   "es": {
+    "name": "Bahamas",
+    "officialName": "Commonwealth de las Bahamas",
+    "subregion": "Caribe"
+   },
+   "tr": {
+    "name": "Bahamalar",
+    "officialName": "Bahama Milletler Topluluğu",
+    "subregion": "Karayipler"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Bhutan",
+   "Kingdom of Bhutan",
+   "Butan Krallığı",
+   "BT",
+   "BTN"
+  ],
+  "borders": [
+   "CHN",
+   "IND"
+  ],
+  "capital": [
+   "Thimphu"
+  ],
+  "code": "BT",
+  "continentSlug": "asia",
+  "flag": "🇧🇹",
+  "hasTravel": false,
+  "iso3": "BTN",
+  "landlocked": true,
+  "latitude": 27.5,
+  "longitude": 90.5,
+  "subregion": "Southern Asia",
+  "translations": {
+   "en": {
+    "name": "Bhutan",
+    "officialName": "Kingdom of Bhutan",
+    "subregion": "South Asia"
+   },
+   "es": {
+    "name": "Bután",
+    "officialName": "Reino de Bután",
+    "subregion": "Asia del Sur"
+   },
+   "tr": {
+    "name": "Butan",
+    "officialName": "Butan Krallığı",
+    "subregion": "Güney Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Botswana",
+   "Republic of Botswana",
+   "Botsvana Cumhuriyeti",
+   "BW",
+   "Lefatshe la Botswana",
+   "BWA"
+  ],
+  "borders": [
+   "NAM",
+   "ZAF",
+   "ZMB",
+   "ZWE"
+  ],
+  "capital": [
+   "Gaborone"
+  ],
+  "code": "BW",
+  "continentSlug": "africa",
+  "flag": "🇧🇼",
+  "hasTravel": false,
+  "iso3": "BWA",
+  "landlocked": true,
+  "latitude": -22,
+  "longitude": 24,
+  "subregion": "Southern Africa",
+  "translations": {
+   "en": {
+    "name": "Botswana",
+    "officialName": "Republic of Botswana",
+    "subregion": "Southern Africa"
+   },
+   "es": {
+    "name": "Botswana",
+    "officialName": "República de Botswana",
+    "subregion": "África Austral"
+   },
+   "tr": {
+    "name": "Botsvana",
+    "officialName": "Botsvana Cumhuriyeti",
+    "subregion": "Güney Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Republic of Belarus",
+   "Belarus Cumhuriyeti",
+   "BY",
+   "Bielaruś",
+   "Белоруссия",
+   "Республика Белоруссия",
+   "BLR"
+  ],
+  "borders": [
+   "LVA",
+   "LTU",
+   "POL",
+   "RUS",
+   "UKR"
+  ],
+  "capital": [
+   "Minsk"
+  ],
+  "code": "BY",
+  "continentSlug": "europe",
+  "flag": "🇧🇾",
+  "hasTravel": false,
+  "iso3": "BLR",
+  "landlocked": true,
+  "latitude": 53,
+  "longitude": 28,
+  "subregion": "Eastern Europe",
+  "translations": {
+   "en": {
+    "name": "Belarus",
+    "officialName": "Republic of Belarus",
+    "subregion": "Eastern Europe"
+   },
+   "es": {
+    "name": "Bielorrusia",
+    "officialName": "República de Belarús",
+    "subregion": "Europa del Este"
+   },
+   "tr": {
+    "name": "Belarus",
+    "officialName": "Belarus Cumhuriyeti",
+    "subregion": "Doğu Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "BZ",
+   "BLZ"
+  ],
+  "borders": [
+   "GTM",
+   "MEX"
+  ],
+  "capital": [
+   "Belmopan"
+  ],
+  "code": "BZ",
+  "continentSlug": "americas",
+  "flag": "🇧🇿",
+  "hasTravel": false,
+  "iso3": "BLZ",
+  "landlocked": false,
+  "latitude": 17.25,
+  "longitude": -88.75,
+  "subregion": "Central America",
+  "translations": {
+   "en": {
+    "name": "Belize",
+    "officialName": "Belize",
+    "subregion": "Central America"
+   },
+   "es": {
+    "name": "Belice",
+    "officialName": "Belice",
+    "subregion": "Centroamérica"
+   },
+   "tr": {
+    "name": "Belize",
+    "officialName": "Belize",
+    "subregion": "Orta Amerika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Canada",
+   "CA",
+   "CAN"
+  ],
+  "borders": [
+   "USA"
+  ],
+  "capital": [
+   "Ottawa"
+  ],
+  "code": "CA",
+  "continentSlug": "americas",
+  "flag": "🇨🇦",
+  "hasTravel": true,
+  "iso3": "CAN",
+  "landlocked": false,
+  "latitude": 60,
+  "longitude": -95,
+  "subregion": "North America",
+  "translations": {
+   "en": {
+    "name": "Canada",
+    "officialName": "Canada",
+    "subregion": "North America"
+   },
+   "es": {
+    "name": "Canadá",
+    "officialName": "Canadá",
+    "subregion": "Norteamérica"
+   },
+   "tr": {
+    "name": "Kanada",
+    "officialName": "Kanada",
+    "subregion": "Kuzey Amerika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "DR Congo",
+   "Democratic Republic of the Congo",
+   "CD",
+   "Congo-Kinshasa",
+   "Congo, the Democratic Republic of the",
+   "Democratic Republic of Congo",
+   "DRC",
+   "COD"
+  ],
+  "borders": [
+   "AGO",
+   "BDI",
+   "CAF",
+   "COG",
+   "RWA",
+   "SSD",
+   "TZA",
+   "UGA",
+   "ZMB"
+  ],
+  "capital": [
+   "Kinshasa"
+  ],
+  "code": "CD",
+  "continentSlug": "africa",
+  "flag": "🇨🇩",
+  "hasTravel": false,
+  "iso3": "COD",
+  "landlocked": false,
+  "latitude": 0,
+  "longitude": 25,
+  "subregion": "Middle Africa",
+  "translations": {
+   "en": {
+    "name": "DR Congo",
+    "officialName": "Democratic Republic of the Congo",
+    "subregion": "Central Africa"
+   },
+   "es": {
+    "name": "Congo (Rep. Dem.)",
+    "officialName": "República Democrática del Congo",
+    "subregion": "África Central"
+   },
+   "tr": {
+    "name": "Kongo Demokratik Cumhuriyeti",
+    "officialName": "Kongo Demokratik Cumhuriyeti",
+    "subregion": "Orta Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Central African Republic",
+   "CF",
+   "République centrafricaine",
+   "CAF"
+  ],
+  "borders": [
+   "CMR",
+   "TCD",
+   "COD",
+   "COG",
+   "SSD",
+   "SDN"
+  ],
+  "capital": [
+   "Bangui"
+  ],
+  "code": "CF",
+  "continentSlug": "africa",
+  "flag": "🇨🇫",
+  "hasTravel": false,
+  "iso3": "CAF",
+  "landlocked": true,
+  "latitude": 7,
+  "longitude": 21,
+  "subregion": "Middle Africa",
+  "translations": {
+   "en": {
+    "name": "Central African Republic",
+    "officialName": "Central African Republic",
+    "subregion": "Central Africa"
+   },
+   "es": {
+    "name": "República Centroafricana",
+    "officialName": "República Centroafricana",
+    "subregion": "África Central"
+   },
+   "tr": {
+    "name": "Orta Afrika Cumhuriyeti",
+    "officialName": "Orta Afrika Cumhuriyeti",
+    "subregion": "Orta Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Republic of the Congo",
+   "CG",
+   "Congo",
+   "Congo-Brazzaville",
+   "COG"
+  ],
+  "borders": [
+   "AGO",
+   "CMR",
+   "CAF",
+   "COD",
+   "GAB"
+  ],
+  "capital": [
+   "Brazzaville"
+  ],
+  "code": "CG",
+  "continentSlug": "africa",
+  "flag": "🇨🇬",
+  "hasTravel": false,
+  "iso3": "COG",
+  "landlocked": false,
+  "latitude": -1,
+  "longitude": 15,
+  "subregion": "Middle Africa",
+  "translations": {
+   "en": {
+    "name": "Republic of the Congo",
+    "officialName": "Republic of the Congo",
+    "subregion": "Central Africa"
+   },
+   "es": {
+    "name": "Congo",
+    "officialName": "República del Congo",
+    "subregion": "África Central"
+   },
+   "tr": {
+    "name": "Kongo Cumhuriyeti",
+    "officialName": "Kongo Cumhuriyeti",
+    "subregion": "Orta Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Switzerland",
+   "Swiss Confederation",
+   "İsviçre Konfederasyonu",
+   "CH",
+   "Schweiz",
+   "Suisse",
+   "Svizzera",
+   "Svizra",
+   "CHE"
+  ],
+  "borders": [
+   "AUT",
+   "FRA",
+   "ITA",
+   "LIE",
+   "DEU"
+  ],
+  "capital": [
+   "Bern"
+  ],
+  "code": "CH",
+  "continentSlug": "europe",
+  "flag": "🇨🇭",
+  "hasTravel": true,
+  "iso3": "CHE",
+  "landlocked": true,
+  "latitude": 47,
+  "longitude": 8,
+  "subregion": "Western Europe",
+  "translations": {
+   "en": {
+    "name": "Switzerland",
+    "officialName": "Swiss Confederation",
+    "subregion": "Western Europe"
+   },
+   "es": {
+    "name": "Suiza",
+    "officialName": "Confederación Suiza",
+    "subregion": "Europa Occidental"
+   },
+   "tr": {
+    "name": "İsviçre",
+    "officialName": "İsviçre Konfederasyonu",
+    "subregion": "Batı Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Ivory Coast",
+   "Republic of Côte d'Ivoire",
+   "CI",
+   "Côte d'Ivoire",
+   "Cote d'Ivoire",
+   "République de Côte d'Ivoire",
+   "CIV"
+  ],
+  "borders": [
+   "BFA",
+   "GHA",
+   "GIN",
+   "LBR",
+   "MLI"
+  ],
+  "capital": [
+   "Yamoussoukro"
+  ],
+  "code": "CI",
+  "continentSlug": "africa",
+  "flag": "🇨🇮",
+  "hasTravel": false,
+  "iso3": "CIV",
+  "landlocked": false,
+  "latitude": 8,
+  "longitude": -5,
+  "subregion": "Western Africa",
+  "translations": {
+   "en": {
+    "name": "Ivory Coast",
+    "officialName": "Republic of Côte d'Ivoire",
+    "subregion": "West Africa"
+   },
+   "es": {
+    "name": "Costa de Marfil",
+    "officialName": "República de Côte d'Ivoire",
+    "subregion": "África Occidental"
+   },
+   "tr": {
+    "name": "Fildişi Sahili",
+    "officialName": "Fildişi Sahili",
+    "subregion": "Batı Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Chile",
+   "Republic of Chile",
+   "şili Cumhuriyeti",
+   "CL",
+   "República de Chile",
+   "CHL"
+  ],
+  "borders": [
+   "ARG",
+   "BOL",
+   "PER"
+  ],
+  "capital": [
+   "Santiago"
+  ],
+  "code": "CL",
+  "continentSlug": "americas",
+  "flag": "🇨🇱",
+  "hasTravel": false,
+  "iso3": "CHL",
+  "landlocked": false,
+  "latitude": -30,
+  "longitude": -71,
+  "subregion": "South America",
+  "translations": {
+   "en": {
+    "name": "Chile",
+    "officialName": "Republic of Chile",
+    "subregion": "South America"
+   },
+   "es": {
+    "name": "Chile",
+    "officialName": "República de Chile",
+    "subregion": "Sudamérica"
+   },
+   "tr": {
+    "name": "Şili",
+    "officialName": "Şili Cumhuriyeti",
+    "subregion": "Güney Amerika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Cameroon",
+   "Republic of Cameroon",
+   "Kamerun Cumhuriyeti",
+   "CM",
+   "République du Cameroun",
+   "CMR"
+  ],
+  "borders": [
+   "CAF",
+   "TCD",
+   "COG",
+   "GNQ",
+   "GAB",
+   "NGA"
+  ],
+  "capital": [
+   "Yaoundé"
+  ],
+  "code": "CM",
+  "continentSlug": "africa",
+  "flag": "🇨🇲",
+  "hasTravel": false,
+  "iso3": "CMR",
+  "landlocked": false,
+  "latitude": 6,
+  "longitude": 12,
+  "subregion": "Middle Africa",
+  "translations": {
+   "en": {
+    "name": "Cameroon",
+    "officialName": "Republic of Cameroon",
+    "subregion": "Central Africa"
+   },
+   "es": {
+    "name": "Camerún",
+    "officialName": "República de Camerún",
+    "subregion": "África Central"
+   },
+   "tr": {
+    "name": "Kamerun",
+    "officialName": "Kamerun Cumhuriyeti",
+    "subregion": "Orta Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "China",
+   "People's Republic of China",
+   "çin Halk Cumhuriyeti",
+   "CN",
+   "Zhōngguó",
+   "Zhongguo",
+   "Zhonghua",
+   "中华人民共和国",
+   "Zhōnghuá Rénmín Gònghéguó",
+   "CHN"
+  ],
+  "borders": [
+   "AFG",
+   "BTN",
+   "MMR",
+   "IND",
+   "KAZ",
+   "NPL",
+   "PRK",
+   "KGZ",
+   "LAO",
+   "MNG",
+   "PAK",
+   "RUS",
+   "TJK",
+   "VNM"
+  ],
+  "capital": [
+   "Beijing"
+  ],
+  "code": "CN",
+  "continentSlug": "asia",
+  "flag": "🇨🇳",
+  "hasTravel": true,
+  "iso3": "CHN",
+  "landlocked": false,
+  "latitude": 35,
+  "longitude": 105,
+  "subregion": "Eastern Asia",
+  "translations": {
+   "en": {
+    "name": "China",
+    "officialName": "People's Republic of China",
+    "subregion": "East Asia"
+   },
+   "es": {
+    "name": "China",
+    "officialName": "República Popular de China",
+    "subregion": "Asia Oriental"
+   },
+   "tr": {
+    "name": "Çin",
+    "officialName": "Çin Halk Cumhuriyeti",
+    "subregion": "Doğu Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Colombia",
+   "Republic of Colombia",
+   "Kolombiya Cumhuriyeti",
+   "CO",
+   "República de Colombia",
+   "COL"
+  ],
+  "borders": [
+   "BRA",
+   "ECU",
+   "PAN",
+   "PER",
+   "VEN"
+  ],
+  "capital": [
+   "Bogotá"
+  ],
+  "code": "CO",
+  "continentSlug": "americas",
+  "flag": "🇨🇴",
+  "hasTravel": false,
+  "iso3": "COL",
+  "landlocked": false,
+  "latitude": 4,
+  "longitude": -72,
+  "subregion": "South America",
+  "translations": {
+   "en": {
+    "name": "Colombia",
+    "officialName": "Republic of Colombia",
+    "subregion": "South America"
+   },
+   "es": {
+    "name": "Colombia",
+    "officialName": "República de Colombia",
+    "subregion": "Sudamérica"
+   },
+   "tr": {
+    "name": "Kolombiya",
+    "officialName": "Kolombiya Cumhuriyeti",
+    "subregion": "Güney Amerika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Costa Rica",
+   "Republic of Costa Rica",
+   "Kosta Rika Cumhuriyeti",
+   "CR",
+   "República de Costa Rica",
+   "CRI"
+  ],
+  "borders": [
+   "NIC",
+   "PAN"
+  ],
+  "capital": [
+   "San José"
+  ],
+  "code": "CR",
+  "continentSlug": "americas",
+  "flag": "🇨🇷",
+  "hasTravel": false,
+  "iso3": "CRI",
+  "landlocked": false,
+  "latitude": 10,
+  "longitude": -84,
+  "subregion": "Central America",
+  "translations": {
+   "en": {
+    "name": "Costa Rica",
+    "officialName": "Republic of Costa Rica",
+    "subregion": "Central America"
+   },
+   "es": {
+    "name": "Costa Rica",
+    "officialName": "República de Costa Rica",
+    "subregion": "Centroamérica"
+   },
+   "tr": {
+    "name": "Kosta Rika",
+    "officialName": "Kosta Rika Cumhuriyeti",
+    "subregion": "Orta Amerika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Cuba",
+   "Republic of Cuba",
+   "Küba Cumhuriyeti",
+   "CU",
+   "República de Cuba",
+   "CUB"
+  ],
+  "borders": [],
+  "capital": [
+   "Havana"
+  ],
+  "code": "CU",
+  "continentSlug": "americas",
+  "flag": "🇨🇺",
+  "hasTravel": false,
+  "iso3": "CUB",
+  "landlocked": false,
+  "latitude": 21.5,
+  "longitude": -80,
+  "subregion": "Caribbean",
+  "translations": {
+   "en": {
+    "name": "Cuba",
+    "officialName": "Republic of Cuba",
+    "subregion": "Caribbean"
+   },
+   "es": {
+    "name": "Cuba",
+    "officialName": "República de Cuba",
+    "subregion": "Caribe"
+   },
+   "tr": {
+    "name": "Küba",
+    "officialName": "Küba Cumhuriyeti",
+    "subregion": "Karayipler"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Cape Verde",
+   "Republic of Cabo Verde",
+   "Yeşil Burun Cumhuriyeti",
+   "CV",
+   "República de Cabo Verde",
+   "CPV"
+  ],
+  "borders": [],
+  "capital": [
+   "Praia"
+  ],
+  "code": "CV",
+  "continentSlug": "africa",
+  "flag": "🇨🇻",
+  "hasTravel": false,
+  "iso3": "CPV",
+  "landlocked": false,
+  "latitude": 16,
+  "longitude": -24,
+  "subregion": "Western Africa",
+  "translations": {
+   "en": {
+    "name": "Cape Verde",
+    "officialName": "Republic of Cabo Verde",
+    "subregion": "West Africa"
+   },
+   "es": {
+    "name": "Cabo Verde",
+    "officialName": "República de Cabo Verde",
+    "subregion": "África Occidental"
+   },
+   "tr": {
+    "name": "Yeşil Burun",
+    "officialName": "Yeşil Burun Cumhuriyeti",
+    "subregion": "Batı Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Cyprus",
+   "Republic of Cyprus",
+   "Kıbrıs Cumhuriyeti",
+   "CY",
+   "Kýpros",
+   "Κυπριακή Δημοκρατία",
+   "CYP"
+  ],
+  "borders": [],
+  "capital": [
+   "Nicosia"
+  ],
+  "code": "CY",
+  "continentSlug": "europe",
+  "flag": "🇨🇾",
+  "hasTravel": true,
+  "iso3": "CYP",
+  "landlocked": false,
+  "latitude": 35,
+  "longitude": 33,
+  "subregion": "Southern Europe",
+  "translations": {
+   "en": {
+    "name": "Cyprus",
+    "officialName": "Republic of Cyprus",
+    "subregion": "Southern Europe"
+   },
+   "es": {
+    "name": "Chipre",
+    "officialName": "República de Chipre",
+    "subregion": "Europa del Sur"
+   },
+   "tr": {
+    "name": "Kıbrıs",
+    "officialName": "Kıbrıs Cumhuriyeti",
+    "subregion": "Güney Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Czechia",
+   "Czech Republic",
+   "çek Cumhuriyeti",
+   "CZ",
+   "Česká republika",
+   "Česko",
+   "CZE"
+  ],
+  "borders": [
+   "AUT",
+   "DEU",
+   "POL",
+   "SVK"
+  ],
+  "capital": [
+   "Prague"
+  ],
+  "code": "CZ",
+  "continentSlug": "europe",
+  "flag": "🇨🇿",
+  "hasTravel": true,
+  "iso3": "CZE",
+  "landlocked": true,
+  "latitude": 49.75,
+  "longitude": 15.5,
+  "subregion": "Central Europe",
+  "translations": {
+   "en": {
+    "name": "Czechia",
+    "officialName": "Czech Republic",
+    "subregion": "Central Europe"
+   },
+   "es": {
+    "name": "Chequia",
+    "officialName": "República Checa",
+    "subregion": "Europa Central"
+   },
+   "tr": {
+    "name": "Çekya",
+    "officialName": "Çek Cumhuriyeti",
+    "subregion": "Orta Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Germany",
+   "Federal Republic of Germany",
+   "Almanya Federal Cumhuriyeti",
+   "DE",
+   "Bundesrepublik Deutschland",
+   "DEU"
+  ],
+  "borders": [
+   "AUT",
+   "BEL",
+   "CZE",
+   "DNK",
+   "FRA",
+   "LUX",
+   "NLD",
+   "POL",
+   "CHE"
+  ],
+  "capital": [
+   "Berlin"
+  ],
+  "code": "DE",
+  "continentSlug": "europe",
+  "flag": "🇩🇪",
+  "hasTravel": true,
+  "iso3": "DEU",
+  "landlocked": false,
+  "latitude": 51,
+  "longitude": 9,
+  "subregion": "Western Europe",
+  "translations": {
+   "en": {
+    "name": "Germany",
+    "officialName": "Federal Republic of Germany",
+    "subregion": "Western Europe"
+   },
+   "es": {
+    "name": "Alemania",
+    "officialName": "República Federal de Alemania",
+    "subregion": "Europa Occidental"
+   },
+   "tr": {
+    "name": "Almanya",
+    "officialName": "Almanya Federal Cumhuriyeti",
+    "subregion": "Batı Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Djibouti",
+   "Republic of Djibouti",
+   "Cibuti Cumhuriyeti",
+   "DJ",
+   "Jabuuti",
+   "Gabuuti",
+   "République de Djibouti",
+   "Gabuutih Ummuuno",
+   "Jamhuuriyadda Jabuuti",
+   "DJI"
+  ],
+  "borders": [
+   "ERI",
+   "ETH",
+   "SOM"
+  ],
+  "capital": [
+   "Djibouti"
+  ],
+  "code": "DJ",
+  "continentSlug": "africa",
+  "flag": "🇩🇯",
+  "hasTravel": false,
+  "iso3": "DJI",
+  "landlocked": false,
+  "latitude": 11.5,
+  "longitude": 43,
+  "subregion": "Eastern Africa",
+  "translations": {
+   "en": {
+    "name": "Djibouti",
+    "officialName": "Republic of Djibouti",
+    "subregion": "East Africa"
+   },
+   "es": {
+    "name": "Djibouti",
+    "officialName": "República de Djibouti",
+    "subregion": "África Oriental"
+   },
+   "tr": {
+    "name": "Cibuti",
+    "officialName": "Cibuti Cumhuriyeti",
+    "subregion": "Doğu Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Denmark",
+   "Kingdom of Denmark",
+   "Danimarka Krallığı",
+   "DK",
+   "Danmark",
+   "Kongeriget Danmark",
+   "DNK"
+  ],
+  "borders": [
+   "DEU"
+  ],
+  "capital": [
+   "Copenhagen"
+  ],
+  "code": "DK",
+  "continentSlug": "europe",
+  "flag": "🇩🇰",
+  "hasTravel": true,
+  "iso3": "DNK",
+  "landlocked": false,
+  "latitude": 56,
+  "longitude": 10,
+  "subregion": "Northern Europe",
+  "translations": {
+   "en": {
+    "name": "Denmark",
+    "officialName": "Kingdom of Denmark",
+    "subregion": "Northern Europe"
+   },
+   "es": {
+    "name": "Dinamarca",
+    "officialName": "Reino de Dinamarca",
+    "subregion": "Europa del Norte"
+   },
+   "tr": {
+    "name": "Danimarka",
+    "officialName": "Danimarka Krallığı",
+    "subregion": "Kuzey Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Dominica",
+   "Commonwealth of Dominica",
+   "Dominika Topluluğu",
+   "DM",
+   "Dominique",
+   "Wai‘tu kubuli",
+   "DMA"
+  ],
+  "borders": [],
+  "capital": [
+   "Roseau"
+  ],
+  "code": "DM",
+  "continentSlug": "americas",
+  "flag": "🇩🇲",
+  "hasTravel": false,
+  "iso3": "DMA",
+  "landlocked": false,
+  "latitude": 15.41666666,
+  "longitude": -61.33333333,
+  "subregion": "Caribbean",
+  "translations": {
+   "en": {
+    "name": "Dominica",
+    "officialName": "Commonwealth of Dominica",
+    "subregion": "Caribbean"
+   },
+   "es": {
+    "name": "Dominica",
+    "officialName": "Mancomunidad de Dominica",
+    "subregion": "Caribe"
+   },
+   "tr": {
+    "name": "Dominika",
+    "officialName": "Dominika Topluluğu",
+    "subregion": "Karayipler"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Dominican Republic",
+   "DO",
+   "DOM"
+  ],
+  "borders": [
+   "HTI"
+  ],
+  "capital": [
+   "Santo Domingo"
+  ],
+  "code": "DO",
+  "continentSlug": "americas",
+  "flag": "🇩🇴",
+  "hasTravel": false,
+  "iso3": "DOM",
+  "landlocked": false,
+  "latitude": 19,
+  "longitude": -70.66666666,
+  "subregion": "Caribbean",
+  "translations": {
+   "en": {
+    "name": "Dominican Republic",
+    "officialName": "Dominican Republic",
+    "subregion": "Caribbean"
+   },
+   "es": {
+    "name": "República Dominicana",
+    "officialName": "República Dominicana",
+    "subregion": "Caribe"
+   },
+   "tr": {
+    "name": "Dominik Cumhuriyeti",
+    "officialName": "Dominik Cumhuriyeti",
+    "subregion": "Karayipler"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Algeria",
+   "People's Democratic Republic of Algeria",
+   "Cezayir Demokratik Halk Cumhuriyeti",
+   "DZ",
+   "Dzayer",
+   "Algérie",
+   "DZA"
+  ],
+  "borders": [
+   "TUN",
+   "LBY",
+   "NER",
+   "MRT",
+   "MLI",
+   "MAR"
+  ],
+  "capital": [
+   "Algiers"
+  ],
+  "code": "DZ",
+  "continentSlug": "africa",
+  "flag": "🇩🇿",
+  "hasTravel": false,
+  "iso3": "DZA",
+  "landlocked": false,
+  "latitude": 28,
+  "longitude": 3,
+  "subregion": "Northern Africa",
+  "translations": {
+   "en": {
+    "name": "Algeria",
+    "officialName": "People's Democratic Republic of Algeria",
+    "subregion": "North Africa"
+   },
+   "es": {
+    "name": "Argelia",
+    "officialName": "República Argelina Democrática y Popular",
+    "subregion": "Norte de África"
+   },
+   "tr": {
+    "name": "Cezayir",
+    "officialName": "Cezayir Demokratik Halk Cumhuriyeti",
+    "subregion": "Kuzey Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Ecuador",
+   "Republic of Ecuador",
+   "Ekvador Cumhuriyeti",
+   "EC",
+   "República del Ecuador",
+   "ECU"
+  ],
+  "borders": [
+   "COL",
+   "PER"
+  ],
+  "capital": [
+   "Quito"
+  ],
+  "code": "EC",
+  "continentSlug": "americas",
+  "flag": "🇪🇨",
+  "hasTravel": false,
+  "iso3": "ECU",
+  "landlocked": false,
+  "latitude": -2,
+  "longitude": -77.5,
+  "subregion": "South America",
+  "translations": {
+   "en": {
+    "name": "Ecuador",
+    "officialName": "Republic of Ecuador",
+    "subregion": "South America"
+   },
+   "es": {
+    "name": "Ecuador",
+    "officialName": "República del Ecuador",
+    "subregion": "Sudamérica"
+   },
+   "tr": {
+    "name": "Ekvador",
+    "officialName": "Ekvador Cumhuriyeti",
+    "subregion": "Güney Amerika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Estonia",
+   "Republic of Estonia",
+   "Estonya Cumhuriyeti",
+   "EE",
+   "Eesti",
+   "Eesti Vabariik",
+   "EST"
+  ],
+  "borders": [
+   "LVA",
+   "RUS"
+  ],
+  "capital": [
+   "Tallinn"
+  ],
+  "code": "EE",
+  "continentSlug": "europe",
+  "flag": "🇪🇪",
+  "hasTravel": false,
+  "iso3": "EST",
+  "landlocked": false,
+  "latitude": 59,
+  "longitude": 26,
+  "subregion": "Northern Europe",
+  "translations": {
+   "en": {
+    "name": "Estonia",
+    "officialName": "Republic of Estonia",
+    "subregion": "Northern Europe"
+   },
+   "es": {
+    "name": "Estonia",
+    "officialName": "República de Estonia",
+    "subregion": "Europa del Norte"
+   },
+   "tr": {
+    "name": "Estonya",
+    "officialName": "Estonya Cumhuriyeti",
+    "subregion": "Kuzey Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Egypt",
+   "Arab Republic of Egypt",
+   "Mısır Arap Cumhuriyeti",
+   "EG",
+   "EGY"
+  ],
+  "borders": [
+   "ISR",
+   "LBY",
+   "PSE",
+   "SDN"
+  ],
+  "capital": [
+   "Cairo"
+  ],
+  "code": "EG",
+  "continentSlug": "africa",
+  "flag": "🇪🇬",
+  "hasTravel": true,
+  "iso3": "EGY",
+  "landlocked": false,
+  "latitude": 27,
+  "longitude": 30,
+  "subregion": "Northern Africa",
+  "translations": {
+   "en": {
+    "name": "Egypt",
+    "officialName": "Arab Republic of Egypt",
+    "subregion": "North Africa"
+   },
+   "es": {
+    "name": "Egipto",
+    "officialName": "República Árabe de Egipto",
+    "subregion": "Norte de África"
+   },
+   "tr": {
+    "name": "Mısır",
+    "officialName": "Mısır Arap Cumhuriyeti",
+    "subregion": "Kuzey Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Eritrea",
+   "State of Eritrea",
+   "Eritre Devleti",
+   "ER",
+   "ሃገረ ኤርትራ",
+   "Dawlat Iritriyá",
+   "ʾErtrā",
+   "Iritriyā",
+   "ERI"
+  ],
+  "borders": [
+   "DJI",
+   "ETH",
+   "SDN"
+  ],
+  "capital": [
+   "Asmara"
+  ],
+  "code": "ER",
+  "continentSlug": "africa",
+  "flag": "🇪🇷",
+  "hasTravel": false,
+  "iso3": "ERI",
+  "landlocked": false,
+  "latitude": 15,
+  "longitude": 39,
+  "subregion": "Eastern Africa",
+  "translations": {
+   "en": {
+    "name": "Eritrea",
+    "officialName": "State of Eritrea",
+    "subregion": "East Africa"
+   },
+   "es": {
+    "name": "Eritrea",
+    "officialName": "Estado de Eritrea",
+    "subregion": "África Oriental"
+   },
+   "tr": {
+    "name": "Eritre",
+    "officialName": "Eritre Devleti",
+    "subregion": "Doğu Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Spain",
+   "Kingdom of Spain",
+   "İspanya Krallığı",
+   "ES",
+   "Reino de España",
+   "ESP"
+  ],
+  "borders": [
+   "AND",
+   "FRA",
+   "PRT",
+   "MAR"
+  ],
+  "capital": [
+   "Madrid"
+  ],
+  "code": "ES",
+  "continentSlug": "europe",
+  "flag": "🇪🇸",
+  "hasTravel": true,
+  "iso3": "ESP",
+  "landlocked": false,
+  "latitude": 40,
+  "longitude": -4,
+  "subregion": "Southern Europe",
+  "translations": {
+   "en": {
+    "name": "Spain",
+    "officialName": "Kingdom of Spain",
+    "subregion": "Southern Europe"
+   },
+   "es": {
+    "name": "España",
+    "officialName": "Reino de España",
+    "subregion": "Europa del Sur"
+   },
+   "tr": {
+    "name": "İspanya",
+    "officialName": "İspanya Krallığı",
+    "subregion": "Güney Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Ethiopia",
+   "Federal Democratic Republic of Ethiopia",
+   "Etiyopya Federal Demokratik Cumhuriyeti",
+   "ET",
+   "ʾĪtyōṗṗyā",
+   "የኢትዮጵያ ፌዴራላዊ ዲሞክራሲያዊ ሪፐብሊክ",
+   "ETH"
+  ],
+  "borders": [
+   "DJI",
+   "ERI",
+   "KEN",
+   "SOM",
+   "SSD",
+   "SDN"
+  ],
+  "capital": [
+   "Addis Ababa"
+  ],
+  "code": "ET",
+  "continentSlug": "africa",
+  "flag": "🇪🇹",
+  "hasTravel": false,
+  "iso3": "ETH",
+  "landlocked": true,
+  "latitude": 8,
+  "longitude": 38,
+  "subregion": "Eastern Africa",
+  "translations": {
+   "en": {
+    "name": "Ethiopia",
+    "officialName": "Federal Democratic Republic of Ethiopia",
+    "subregion": "East Africa"
+   },
+   "es": {
+    "name": "Etiopía",
+    "officialName": "República Democrática Federal de Etiopía",
+    "subregion": "África Oriental"
+   },
+   "tr": {
+    "name": "Etiyopya",
+    "officialName": "Etiyopya Federal Demokratik Cumhuriyeti",
+    "subregion": "Doğu Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Finland",
+   "Republic of Finland",
+   "Finlandiya Cumhuriyeti",
+   "FI",
+   "Suomi",
+   "Suomen tasavalta",
+   "Republiken Finland",
+   "FIN"
+  ],
+  "borders": [
+   "NOR",
+   "SWE",
+   "RUS"
+  ],
+  "capital": [
+   "Helsinki"
+  ],
+  "code": "FI",
+  "continentSlug": "europe",
+  "flag": "🇫🇮",
+  "hasTravel": true,
+  "iso3": "FIN",
+  "landlocked": false,
+  "latitude": 64,
+  "longitude": 26,
+  "subregion": "Northern Europe",
+  "translations": {
+   "en": {
+    "name": "Finland",
+    "officialName": "Republic of Finland",
+    "subregion": "Northern Europe"
+   },
+   "es": {
+    "name": "Finlandia",
+    "officialName": "República de Finlandia",
+    "subregion": "Europa del Norte"
+   },
+   "tr": {
+    "name": "Finlandiya",
+    "officialName": "Finlandiya Cumhuriyeti",
+    "subregion": "Kuzey Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Republic of Fiji",
+   "Fiji Cumhuriyeti",
+   "FJ",
+   "Viti",
+   "Matanitu ko Viti",
+   "Fijī Gaṇarājya",
+   "FJI"
+  ],
+  "borders": [],
+  "capital": [
+   "Suva"
+  ],
+  "code": "FJ",
+  "continentSlug": "oceania",
+  "flag": "🇫🇯",
+  "hasTravel": false,
+  "iso3": "FJI",
+  "landlocked": false,
+  "latitude": -18,
+  "longitude": 175,
+  "subregion": "Melanesia",
+  "translations": {
+   "en": {
+    "name": "Fiji",
+    "officialName": "Republic of Fiji",
+    "subregion": "Melanesia"
+   },
+   "es": {
+    "name": "Fiyi",
+    "officialName": "República de Fiji",
+    "subregion": "Melanesia"
+   },
+   "tr": {
+    "name": "Fiji",
+    "officialName": "Fiji Cumhuriyeti",
+    "subregion": "Melanezya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Micronesia",
+   "Federated States of Micronesia",
+   "Mikronezya Federal Devletleri",
+   "FM",
+   "Micronesia, Federated States of",
+   "FSM"
+  ],
+  "borders": [],
+  "capital": [
+   "Palikir"
+  ],
+  "code": "FM",
+  "continentSlug": "oceania",
+  "flag": "🇫🇲",
+  "hasTravel": false,
+  "iso3": "FSM",
+  "landlocked": false,
+  "latitude": 6.91666666,
+  "longitude": 158.25,
+  "subregion": "Micronesia",
+  "translations": {
+   "en": {
+    "name": "Micronesia",
+    "officialName": "Federated States of Micronesia",
+    "subregion": "Micronesia"
+   },
+   "es": {
+    "name": "Micronesia",
+    "officialName": "Estados Federados de Micronesia",
+    "subregion": "Micronesia"
+   },
+   "tr": {
+    "name": "Mikronezya",
+    "officialName": "Mikronezya Federal Devletleri",
+    "subregion": "Mikronezya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "France",
+   "French Republic",
+   "Fransa Cumhuriyeti",
+   "FR",
+   "République française",
+   "FRA"
+  ],
+  "borders": [
+   "AND",
+   "BEL",
+   "DEU",
+   "ITA",
+   "LUX",
+   "MCO",
+   "ESP",
+   "CHE"
+  ],
+  "capital": [
+   "Paris"
+  ],
+  "code": "FR",
+  "continentSlug": "europe",
+  "flag": "🇫🇷",
+  "hasTravel": true,
+  "iso3": "FRA",
+  "landlocked": false,
+  "latitude": 46,
+  "longitude": 2,
+  "subregion": "Western Europe",
+  "translations": {
+   "en": {
+    "name": "France",
+    "officialName": "French Republic",
+    "subregion": "Western Europe"
+   },
+   "es": {
+    "name": "Francia",
+    "officialName": "República francés",
+    "subregion": "Europa Occidental"
+   },
+   "tr": {
+    "name": "Fransa",
+    "officialName": "Fransa Cumhuriyeti",
+    "subregion": "Batı Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Gabonese Republic",
+   "Gabon Cumhuriyeti",
+   "GA",
+   "République Gabonaise",
+   "GAB"
+  ],
+  "borders": [
+   "CMR",
+   "COG",
+   "GNQ"
+  ],
+  "capital": [
+   "Libreville"
+  ],
+  "code": "GA",
+  "continentSlug": "africa",
+  "flag": "🇬🇦",
+  "hasTravel": false,
+  "iso3": "GAB",
+  "landlocked": false,
+  "latitude": -1,
+  "longitude": 11.75,
+  "subregion": "Middle Africa",
+  "translations": {
+   "en": {
+    "name": "Gabon",
+    "officialName": "Gabonese Republic",
+    "subregion": "Central Africa"
+   },
+   "es": {
+    "name": "Gabón",
+    "officialName": "República de Gabón",
+    "subregion": "África Central"
+   },
+   "tr": {
+    "name": "Gabon",
+    "officialName": "Gabon Cumhuriyeti",
+    "subregion": "Orta Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "United Kingdom",
+   "United Kingdom of Great Britain and Northern Ireland",
+   "Büyük Britanya ve Kuzey İrlanda Birleşik Krallığı",
+   "GB",
+   "UK",
+   "Great Britain",
+   "GBR"
+  ],
+  "borders": [
+   "IRL"
+  ],
+  "capital": [
+   "London"
+  ],
+  "code": "GB",
+  "continentSlug": "europe",
+  "flag": "🇬🇧",
+  "hasTravel": true,
+  "iso3": "GBR",
+  "landlocked": false,
+  "latitude": 54,
+  "longitude": -2,
+  "subregion": "Northern Europe",
+  "translations": {
+   "en": {
+    "name": "United Kingdom",
+    "officialName": "United Kingdom of Great Britain and Northern Ireland",
+    "subregion": "Northern Europe"
+   },
+   "es": {
+    "name": "Reino Unido",
+    "officialName": "Reino Unido de Gran Bretaña e Irlanda del Norte",
+    "subregion": "Europa del Norte"
+   },
+   "tr": {
+    "name": "Birleşik Krallık",
+    "officialName": "Büyük Britanya ve Kuzey İrlanda Birleşik Krallığı",
+    "subregion": "Kuzey Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "GD",
+   "GRD"
+  ],
+  "borders": [],
+  "capital": [
+   "St. George's"
+  ],
+  "code": "GD",
+  "continentSlug": "americas",
+  "flag": "🇬🇩",
+  "hasTravel": false,
+  "iso3": "GRD",
+  "landlocked": false,
+  "latitude": 12.11666666,
+  "longitude": -61.66666666,
+  "subregion": "Caribbean",
+  "translations": {
+   "en": {
+    "name": "Grenada",
+    "officialName": "Grenada",
+    "subregion": "Caribbean"
+   },
+   "es": {
+    "name": "Grenada",
+    "officialName": "Granada",
+    "subregion": "Caribe"
+   },
+   "tr": {
+    "name": "Grenada",
+    "officialName": "Grenada",
+    "subregion": "Karayipler"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Georgia",
+   "GE",
+   "Sakartvelo",
+   "GEO"
+  ],
+  "borders": [
+   "ARM",
+   "AZE",
+   "RUS",
+   "TUR"
+  ],
+  "capital": [
+   "Tbilisi"
+  ],
+  "code": "GE",
+  "continentSlug": "asia",
+  "flag": "🇬🇪",
+  "hasTravel": true,
+  "iso3": "GEO",
+  "landlocked": false,
+  "latitude": 42,
+  "longitude": 43.5,
+  "subregion": "Western Asia",
+  "translations": {
+   "en": {
+    "name": "Georgia",
+    "officialName": "Georgia",
+    "subregion": "Western Asia"
+   },
+   "es": {
+    "name": "Georgia",
+    "officialName": "Georgia",
+    "subregion": "Asia Occidental"
+   },
+   "tr": {
+    "name": "Gürcistan",
+    "officialName": "Gürcistan",
+    "subregion": "Batı Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Ghana",
+   "Republic of Ghana",
+   "Gana Cumhuriyeti",
+   "GH",
+   "GHA"
+  ],
+  "borders": [
+   "BFA",
+   "CIV",
+   "TGO"
+  ],
+  "capital": [
+   "Accra"
+  ],
+  "code": "GH",
+  "continentSlug": "africa",
+  "flag": "🇬🇭",
+  "hasTravel": false,
+  "iso3": "GHA",
+  "landlocked": false,
+  "latitude": 8,
+  "longitude": -2,
+  "subregion": "Western Africa",
+  "translations": {
+   "en": {
+    "name": "Ghana",
+    "officialName": "Republic of Ghana",
+    "subregion": "West Africa"
+   },
+   "es": {
+    "name": "Ghana",
+    "officialName": "República de Ghana",
+    "subregion": "África Occidental"
+   },
+   "tr": {
+    "name": "Gana",
+    "officialName": "Gana Cumhuriyeti",
+    "subregion": "Batı Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Gambia",
+   "Republic of the Gambia",
+   "Gambiya Cumhuriyeti",
+   "GM",
+   "GMB"
+  ],
+  "borders": [
+   "SEN"
+  ],
+  "capital": [
+   "Banjul"
+  ],
+  "code": "GM",
+  "continentSlug": "africa",
+  "flag": "🇬🇲",
+  "hasTravel": false,
+  "iso3": "GMB",
+  "landlocked": false,
+  "latitude": 13.46666666,
+  "longitude": -16.56666666,
+  "subregion": "Western Africa",
+  "translations": {
+   "en": {
+    "name": "Gambia",
+    "officialName": "Republic of the Gambia",
+    "subregion": "West Africa"
+   },
+   "es": {
+    "name": "Gambia",
+    "officialName": "República de Gambia",
+    "subregion": "África Occidental"
+   },
+   "tr": {
+    "name": "Gambiya",
+    "officialName": "Gambiya Cumhuriyeti",
+    "subregion": "Batı Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Guinea",
+   "Republic of Guinea",
+   "Gine Cumhuriyeti",
+   "GN",
+   "République de Guinée",
+   "GIN"
+  ],
+  "borders": [
+   "CIV",
+   "GNB",
+   "LBR",
+   "MLI",
+   "SEN",
+   "SLE"
+  ],
+  "capital": [
+   "Conakry"
+  ],
+  "code": "GN",
+  "continentSlug": "africa",
+  "flag": "🇬🇳",
+  "hasTravel": false,
+  "iso3": "GIN",
+  "landlocked": false,
+  "latitude": 11,
+  "longitude": -10,
+  "subregion": "Western Africa",
+  "translations": {
+   "en": {
+    "name": "Guinea",
+    "officialName": "Republic of Guinea",
+    "subregion": "West Africa"
+   },
+   "es": {
+    "name": "Guinea",
+    "officialName": "República de Guinea",
+    "subregion": "África Occidental"
+   },
+   "tr": {
+    "name": "Gine",
+    "officialName": "Gine Cumhuriyeti",
+    "subregion": "Batı Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Equatorial Guinea",
+   "Republic of Equatorial Guinea",
+   "Ekvator Ginesi Cumhuriyeti",
+   "GQ",
+   "República de Guinea Ecuatorial",
+   "République de Guinée équatoriale",
+   "República da Guiné Equatorial",
+   "GNQ"
+  ],
+  "borders": [
+   "CMR",
+   "GAB"
+  ],
+  "capital": [
+   "Malabo"
+  ],
+  "code": "GQ",
+  "continentSlug": "africa",
+  "flag": "🇬🇶",
+  "hasTravel": false,
+  "iso3": "GNQ",
+  "landlocked": false,
+  "latitude": 2,
+  "longitude": 10,
+  "subregion": "Middle Africa",
+  "translations": {
+   "en": {
+    "name": "Equatorial Guinea",
+    "officialName": "Republic of Equatorial Guinea",
+    "subregion": "Central Africa"
+   },
+   "es": {
+    "name": "Guinea Ecuatorial",
+    "officialName": "República de Guinea Ecuatorial",
+    "subregion": "África Central"
+   },
+   "tr": {
+    "name": "Ekvator Ginesi",
+    "officialName": "Ekvator Ginesi Cumhuriyeti",
+    "subregion": "Orta Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Greece",
+   "Hellenic Republic",
+   "Helen Cumhuriyeti",
+   "GR",
+   "Elláda",
+   "Ελληνική Δημοκρατία",
+   "GRC"
+  ],
+  "borders": [
+   "ALB",
+   "BGR",
+   "TUR",
+   "MKD"
+  ],
+  "capital": [
+   "Athens"
+  ],
+  "code": "GR",
+  "continentSlug": "europe",
+  "flag": "🇬🇷",
+  "hasTravel": true,
+  "iso3": "GRC",
+  "landlocked": false,
+  "latitude": 39,
+  "longitude": 22,
+  "subregion": "Southern Europe",
+  "translations": {
+   "en": {
+    "name": "Greece",
+    "officialName": "Hellenic Republic",
+    "subregion": "Southern Europe"
+   },
+   "es": {
+    "name": "Grecia",
+    "officialName": "República Helénica",
+    "subregion": "Europa del Sur"
+   },
+   "tr": {
+    "name": "Yunanistan",
+    "officialName": "Helen Cumhuriyeti",
+    "subregion": "Güney Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Republic of Guatemala",
+   "Guatemala Cumhuriyeti",
+   "GT",
+   "GTM"
+  ],
+  "borders": [
+   "BLZ",
+   "SLV",
+   "HND",
+   "MEX"
+  ],
+  "capital": [
+   "Guatemala City"
+  ],
+  "code": "GT",
+  "continentSlug": "americas",
+  "flag": "🇬🇹",
+  "hasTravel": false,
+  "iso3": "GTM",
+  "landlocked": false,
+  "latitude": 15.5,
+  "longitude": -90.25,
+  "subregion": "Central America",
+  "translations": {
+   "en": {
+    "name": "Guatemala",
+    "officialName": "Republic of Guatemala",
+    "subregion": "Central America"
+   },
+   "es": {
+    "name": "Guatemala",
+    "officialName": "República de Guatemala",
+    "subregion": "Centroamérica"
+   },
+   "tr": {
+    "name": "Guatemala",
+    "officialName": "Guatemala Cumhuriyeti",
+    "subregion": "Orta Amerika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Guinea-Bissau",
+   "Republic of Guinea-Bissau",
+   "Gine-Bissau Cumhuriyeti",
+   "GW",
+   "República da Guiné-Bissau",
+   "GNB"
+  ],
+  "borders": [
+   "GIN",
+   "SEN"
+  ],
+  "capital": [
+   "Bissau"
+  ],
+  "code": "GW",
+  "continentSlug": "africa",
+  "flag": "🇬🇼",
+  "hasTravel": false,
+  "iso3": "GNB",
+  "landlocked": false,
+  "latitude": 12,
+  "longitude": -15,
+  "subregion": "Western Africa",
+  "translations": {
+   "en": {
+    "name": "Guinea-Bissau",
+    "officialName": "Republic of Guinea-Bissau",
+    "subregion": "West Africa"
+   },
+   "es": {
+    "name": "Guinea-Bisáu",
+    "officialName": "República de Guinea-Bissau",
+    "subregion": "África Occidental"
+   },
+   "tr": {
+    "name": "Gine-Bissau",
+    "officialName": "Gine-Bissau Cumhuriyeti",
+    "subregion": "Batı Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Co-operative Republic of Guyana",
+   "Guyana Kooperatif Cumhuriyeti",
+   "GY",
+   "GUY"
+  ],
+  "borders": [
+   "BRA",
+   "SUR",
+   "VEN"
+  ],
+  "capital": [
+   "Georgetown"
+  ],
+  "code": "GY",
+  "continentSlug": "americas",
+  "flag": "🇬🇾",
+  "hasTravel": false,
+  "iso3": "GUY",
+  "landlocked": false,
+  "latitude": 5,
+  "longitude": -59,
+  "subregion": "South America",
+  "translations": {
+   "en": {
+    "name": "Guyana",
+    "officialName": "Co-operative Republic of Guyana",
+    "subregion": "South America"
+   },
+   "es": {
+    "name": "Guyana",
+    "officialName": "República Cooperativa de Guyana",
+    "subregion": "Sudamérica"
+   },
+   "tr": {
+    "name": "Guyana",
+    "officialName": "Guyana Kooperatif Cumhuriyeti",
+    "subregion": "Güney Amerika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Republic of Honduras",
+   "Honduras Cumhuriyeti",
+   "HN",
+   "República de Honduras",
+   "HND"
+  ],
+  "borders": [
+   "GTM",
+   "SLV",
+   "NIC"
+  ],
+  "capital": [
+   "Tegucigalpa"
+  ],
+  "code": "HN",
+  "continentSlug": "americas",
+  "flag": "🇭🇳",
+  "hasTravel": false,
+  "iso3": "HND",
+  "landlocked": false,
+  "latitude": 15,
+  "longitude": -86.5,
+  "subregion": "Central America",
+  "translations": {
+   "en": {
+    "name": "Honduras",
+    "officialName": "Republic of Honduras",
+    "subregion": "Central America"
+   },
+   "es": {
+    "name": "Honduras",
+    "officialName": "República de Honduras",
+    "subregion": "Centroamérica"
+   },
+   "tr": {
+    "name": "Honduras",
+    "officialName": "Honduras Cumhuriyeti",
+    "subregion": "Orta Amerika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Croatia",
+   "Republic of Croatia",
+   "Hırvatistan Cumhuriyeti",
+   "HR",
+   "Hrvatska",
+   "Republika Hrvatska",
+   "HRV"
+  ],
+  "borders": [
+   "BIH",
+   "HUN",
+   "MNE",
+   "SRB",
+   "SVN"
+  ],
+  "capital": [
+   "Zagreb"
+  ],
+  "code": "HR",
+  "continentSlug": "europe",
+  "flag": "🇭🇷",
+  "hasTravel": true,
+  "iso3": "HRV",
+  "landlocked": false,
+  "latitude": 45.16666666,
+  "longitude": 15.5,
+  "subregion": "Southeast Europe",
+  "translations": {
+   "en": {
+    "name": "Croatia",
+    "officialName": "Republic of Croatia",
+    "subregion": "Southeast Europe"
+   },
+   "es": {
+    "name": "Croacia",
+    "officialName": "República de Croacia",
+    "subregion": "Sudeste de Europa"
+   },
+   "tr": {
+    "name": "Hırvatistan",
+    "officialName": "Hırvatistan Cumhuriyeti",
+    "subregion": "Güneydoğu Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Republic of Haiti",
+   "Haiti Cumhuriyeti",
+   "HT",
+   "République d'Haïti",
+   "Repiblik Ayiti",
+   "HTI"
+  ],
+  "borders": [
+   "DOM"
+  ],
+  "capital": [
+   "Port-au-Prince"
+  ],
+  "code": "HT",
+  "continentSlug": "americas",
+  "flag": "🇭🇹",
+  "hasTravel": false,
+  "iso3": "HTI",
+  "landlocked": false,
+  "latitude": 19,
+  "longitude": -72.41666666,
+  "subregion": "Caribbean",
+  "translations": {
+   "en": {
+    "name": "Haiti",
+    "officialName": "Republic of Haiti",
+    "subregion": "Caribbean"
+   },
+   "es": {
+    "name": "Haití",
+    "officialName": "República de Haití",
+    "subregion": "Caribe"
+   },
+   "tr": {
+    "name": "Haiti",
+    "officialName": "Haiti Cumhuriyeti",
+    "subregion": "Karayipler"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Hungary",
+   "HU",
+   "HUN"
+  ],
+  "borders": [
+   "AUT",
+   "HRV",
+   "ROU",
+   "SRB",
+   "SVK",
+   "SVN",
+   "UKR"
+  ],
+  "capital": [
+   "Budapest"
+  ],
+  "code": "HU",
+  "continentSlug": "europe",
+  "flag": "🇭🇺",
+  "hasTravel": true,
+  "iso3": "HUN",
+  "landlocked": true,
+  "latitude": 47,
+  "longitude": 20,
+  "subregion": "Central Europe",
+  "translations": {
+   "en": {
+    "name": "Hungary",
+    "officialName": "Hungary",
+    "subregion": "Central Europe"
+   },
+   "es": {
+    "name": "Hungría",
+    "officialName": "Hungría",
+    "subregion": "Europa Central"
+   },
+   "tr": {
+    "name": "Macaristan",
+    "officialName": "Macaristan",
+    "subregion": "Orta Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Indonesia",
+   "Republic of Indonesia",
+   "Endonezya Cumhuriyeti",
+   "ID",
+   "Republik Indonesia",
+   "IDN"
+  ],
+  "borders": [
+   "TLS",
+   "MYS",
+   "PNG"
+  ],
+  "capital": [
+   "Jakarta"
+  ],
+  "code": "ID",
+  "continentSlug": "asia",
+  "flag": "🇮🇩",
+  "hasTravel": true,
+  "iso3": "IDN",
+  "landlocked": false,
+  "latitude": -5,
+  "longitude": 120,
+  "subregion": "South-Eastern Asia",
+  "translations": {
+   "en": {
+    "name": "Indonesia",
+    "officialName": "Republic of Indonesia",
+    "subregion": "Southeast Asia"
+   },
+   "es": {
+    "name": "Indonesia",
+    "officialName": "República de Indonesia",
+    "subregion": "Sudeste Asiático"
+   },
+   "tr": {
+    "name": "Endonezya",
+    "officialName": "Endonezya Cumhuriyeti",
+    "subregion": "Güneydoğu Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Ireland",
+   "Republic of Ireland",
+   "İrlanda Cumhuriyeti",
+   "IE",
+   "Éire",
+   "Poblacht na hÉireann",
+   "IRL"
+  ],
+  "borders": [
+   "GBR"
+  ],
+  "capital": [
+   "Dublin"
+  ],
+  "code": "IE",
+  "continentSlug": "europe",
+  "flag": "🇮🇪",
+  "hasTravel": false,
+  "iso3": "IRL",
+  "landlocked": false,
+  "latitude": 53,
+  "longitude": -8,
+  "subregion": "Northern Europe",
+  "translations": {
+   "en": {
+    "name": "Ireland",
+    "officialName": "Republic of Ireland",
+    "subregion": "Northern Europe"
+   },
+   "es": {
+    "name": "Irlanda",
+    "officialName": "República de Irlanda",
+    "subregion": "Europa del Norte"
+   },
+   "tr": {
+    "name": "İrlanda",
+    "officialName": "İrlanda Cumhuriyeti",
+    "subregion": "Kuzey Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Israel",
+   "State of Israel",
+   "İsrail Devleti",
+   "IL",
+   "Medīnat Yisrā'el",
+   "ISR"
+  ],
+  "borders": [
+   "EGY",
+   "JOR",
+   "LBN",
+   "PSE",
+   "SYR"
+  ],
+  "capital": [
+   "Jerusalem"
+  ],
+  "code": "IL",
+  "continentSlug": "asia",
+  "flag": "🇮🇱",
+  "hasTravel": false,
+  "iso3": "ISR",
+  "landlocked": false,
+  "latitude": 31.47,
+  "longitude": 35.13,
+  "subregion": "Western Asia",
+  "translations": {
+   "en": {
+    "name": "Israel",
+    "officialName": "State of Israel",
+    "subregion": "Western Asia"
+   },
+   "es": {
+    "name": "Israel",
+    "officialName": "Estado de Israel",
+    "subregion": "Asia Occidental"
+   },
+   "tr": {
+    "name": "İsrail",
+    "officialName": "İsrail Devleti",
+    "subregion": "Batı Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "India",
+   "Republic of India",
+   "Hindistan Cumhuriyeti",
+   "IN",
+   "Bhārat",
+   "Bharat Ganrajya",
+   "இந்தியா",
+   "IND"
+  ],
+  "borders": [
+   "BGD",
+   "BTN",
+   "MMR",
+   "CHN",
+   "NPL",
+   "PAK"
+  ],
+  "capital": [
+   "New Delhi"
+  ],
+  "code": "IN",
+  "continentSlug": "asia",
+  "flag": "🇮🇳",
+  "hasTravel": false,
+  "iso3": "IND",
+  "landlocked": false,
+  "latitude": 20,
+  "longitude": 77,
+  "subregion": "Southern Asia",
+  "translations": {
+   "en": {
+    "name": "India",
+    "officialName": "Republic of India",
+    "subregion": "South Asia"
+   },
+   "es": {
+    "name": "India",
+    "officialName": "República de la India",
+    "subregion": "Asia del Sur"
+   },
+   "tr": {
+    "name": "Hindistan",
+    "officialName": "Hindistan Cumhuriyeti",
+    "subregion": "Güney Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Iraq",
+   "Republic of Iraq",
+   "Irak Cumhuriyeti",
+   "IQ",
+   "Jumhūriyyat al-‘Irāq",
+   "IRQ"
+  ],
+  "borders": [
+   "IRN",
+   "JOR",
+   "KWT",
+   "SAU",
+   "SYR",
+   "TUR"
+  ],
+  "capital": [
+   "Baghdad"
+  ],
+  "code": "IQ",
+  "continentSlug": "asia",
+  "flag": "🇮🇶",
+  "hasTravel": false,
+  "iso3": "IRQ",
+  "landlocked": false,
+  "latitude": 33,
+  "longitude": 44,
+  "subregion": "Western Asia",
+  "translations": {
+   "en": {
+    "name": "Iraq",
+    "officialName": "Republic of Iraq",
+    "subregion": "Western Asia"
+   },
+   "es": {
+    "name": "Irak",
+    "officialName": "República de Irak",
+    "subregion": "Asia Occidental"
+   },
+   "tr": {
+    "name": "Irak",
+    "officialName": "Irak Cumhuriyeti",
+    "subregion": "Batı Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Iran",
+   "Islamic Republic of Iran",
+   "İran İslam Cumhuriyeti",
+   "IR",
+   "Iran, Islamic Republic of",
+   "Jomhuri-ye Eslāmi-ye Irān",
+   "IRN"
+  ],
+  "borders": [
+   "AFG",
+   "ARM",
+   "AZE",
+   "IRQ",
+   "PAK",
+   "TUR",
+   "TKM"
+  ],
+  "capital": [
+   "Tehran"
+  ],
+  "code": "IR",
+  "continentSlug": "asia",
+  "flag": "🇮🇷",
+  "hasTravel": false,
+  "iso3": "IRN",
+  "landlocked": false,
+  "latitude": 32,
+  "longitude": 53,
+  "subregion": "Southern Asia",
+  "translations": {
+   "en": {
+    "name": "Iran",
+    "officialName": "Islamic Republic of Iran",
+    "subregion": "South Asia"
+   },
+   "es": {
+    "name": "Iran",
+    "officialName": "República Islámica de Irán",
+    "subregion": "Asia del Sur"
+   },
+   "tr": {
+    "name": "İran",
+    "officialName": "İran İslam Cumhuriyeti",
+    "subregion": "Güney Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Iceland",
+   "IS",
+   "Island",
+   "Republic of Iceland",
+   "Lýðveldið Ísland",
+   "ISL"
+  ],
+  "borders": [],
+  "capital": [
+   "Reykjavik"
+  ],
+  "code": "IS",
+  "continentSlug": "europe",
+  "flag": "🇮🇸",
+  "hasTravel": false,
+  "iso3": "ISL",
+  "landlocked": false,
+  "latitude": 65,
+  "longitude": -18,
+  "subregion": "Northern Europe",
+  "translations": {
+   "en": {
+    "name": "Iceland",
+    "officialName": "Iceland",
+    "subregion": "Northern Europe"
+   },
+   "es": {
+    "name": "Islandia",
+    "officialName": "Islandia",
+    "subregion": "Europa del Norte"
+   },
+   "tr": {
+    "name": "İzlanda",
+    "officialName": "İzlanda",
+    "subregion": "Kuzey Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Italy",
+   "Italian Republic",
+   "İtalya Cumhuriyeti",
+   "IT",
+   "Repubblica italiana",
+   "ITA"
+  ],
+  "borders": [
+   "AUT",
+   "FRA",
+   "SMR",
+   "SVN",
+   "CHE",
+   "VAT"
+  ],
+  "capital": [
+   "Rome"
+  ],
+  "code": "IT",
+  "continentSlug": "europe",
+  "flag": "🇮🇹",
+  "hasTravel": true,
+  "iso3": "ITA",
+  "landlocked": false,
+  "latitude": 42.83333333,
+  "longitude": 12.83333333,
+  "subregion": "Southern Europe",
+  "translations": {
+   "en": {
+    "name": "Italy",
+    "officialName": "Italian Republic",
+    "subregion": "Southern Europe"
+   },
+   "es": {
+    "name": "Italia",
+    "officialName": "República Italiana",
+    "subregion": "Europa del Sur"
+   },
+   "tr": {
+    "name": "İtalya",
+    "officialName": "İtalya Cumhuriyeti",
+    "subregion": "Güney Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Jamaica",
+   "JM",
+   "JAM"
+  ],
+  "borders": [],
+  "capital": [
+   "Kingston"
+  ],
+  "code": "JM",
+  "continentSlug": "americas",
+  "flag": "🇯🇲",
+  "hasTravel": false,
+  "iso3": "JAM",
+  "landlocked": false,
+  "latitude": 18.25,
+  "longitude": -77.5,
+  "subregion": "Caribbean",
+  "translations": {
+   "en": {
+    "name": "Jamaica",
+    "officialName": "Jamaica",
+    "subregion": "Caribbean"
+   },
+   "es": {
+    "name": "Jamaica",
+    "officialName": "Jamaica",
+    "subregion": "Caribe"
+   },
+   "tr": {
+    "name": "Jamaika",
+    "officialName": "Jamaika",
+    "subregion": "Karayipler"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Jordan",
+   "Hashemite Kingdom of Jordan",
+   "ürdün Hâşimi Krallığı",
+   "JO",
+   "al-Mamlakah al-Urdunīyah al-Hāshimīyah",
+   "JOR"
+  ],
+  "borders": [
+   "IRQ",
+   "ISR",
+   "PSE",
+   "SAU",
+   "SYR"
+  ],
+  "capital": [
+   "Amman"
+  ],
+  "code": "JO",
+  "continentSlug": "asia",
+  "flag": "🇯🇴",
+  "hasTravel": false,
+  "iso3": "JOR",
+  "landlocked": false,
+  "latitude": 31,
+  "longitude": 36,
+  "subregion": "Western Asia",
+  "translations": {
+   "en": {
+    "name": "Jordan",
+    "officialName": "Hashemite Kingdom of Jordan",
+    "subregion": "Western Asia"
+   },
+   "es": {
+    "name": "Jordania",
+    "officialName": "Reino Hachemita de Jordania",
+    "subregion": "Asia Occidental"
+   },
+   "tr": {
+    "name": "Ürdün",
+    "officialName": "Ürdün Hâşimi Krallığı",
+    "subregion": "Batı Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Japan",
+   "JP",
+   "Nippon",
+   "Nihon",
+   "JPN"
+  ],
+  "borders": [],
+  "capital": [
+   "Tokyo"
+  ],
+  "code": "JP",
+  "continentSlug": "asia",
+  "flag": "🇯🇵",
+  "hasTravel": true,
+  "iso3": "JPN",
+  "landlocked": false,
+  "latitude": 36,
+  "longitude": 138,
+  "subregion": "Eastern Asia",
+  "translations": {
+   "en": {
+    "name": "Japan",
+    "officialName": "Japan",
+    "subregion": "East Asia"
+   },
+   "es": {
+    "name": "Japón",
+    "officialName": "Japón",
+    "subregion": "Asia Oriental"
+   },
+   "tr": {
+    "name": "Japonya",
+    "officialName": "Japonya",
+    "subregion": "Doğu Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Republic of Kenya",
+   "Kenya Cumhuriyeti",
+   "KE",
+   "Jamhuri ya Kenya",
+   "KEN"
+  ],
+  "borders": [
+   "ETH",
+   "SOM",
+   "SSD",
+   "TZA",
+   "UGA"
+  ],
+  "capital": [
+   "Nairobi"
+  ],
+  "code": "KE",
+  "continentSlug": "africa",
+  "flag": "🇰🇪",
+  "hasTravel": false,
+  "iso3": "KEN",
+  "landlocked": false,
+  "latitude": 1,
+  "longitude": 38,
+  "subregion": "Eastern Africa",
+  "translations": {
+   "en": {
+    "name": "Kenya",
+    "officialName": "Republic of Kenya",
+    "subregion": "East Africa"
+   },
+   "es": {
+    "name": "Kenia",
+    "officialName": "República de Kenya",
+    "subregion": "África Oriental"
+   },
+   "tr": {
+    "name": "Kenya",
+    "officialName": "Kenya Cumhuriyeti",
+    "subregion": "Doğu Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Kyrgyzstan",
+   "Kyrgyz Republic",
+   "Kırgız Cumhuriyeti",
+   "KG",
+   "Киргизия",
+   "Кыргыз Республикасы",
+   "Kyrgyz Respublikasy",
+   "KGZ"
+  ],
+  "borders": [
+   "CHN",
+   "KAZ",
+   "TJK",
+   "UZB"
+  ],
+  "capital": [
+   "Bishkek"
+  ],
+  "code": "KG",
+  "continentSlug": "asia",
+  "flag": "🇰🇬",
+  "hasTravel": false,
+  "iso3": "KGZ",
+  "landlocked": true,
+  "latitude": 41,
+  "longitude": 75,
+  "subregion": "Central Asia",
+  "translations": {
+   "en": {
+    "name": "Kyrgyzstan",
+    "officialName": "Kyrgyz Republic",
+    "subregion": "Central Asia"
+   },
+   "es": {
+    "name": "Kirguizistán",
+    "officialName": "República Kirguisa",
+    "subregion": "Asia Central"
+   },
+   "tr": {
+    "name": "Kırgızistan",
+    "officialName": "Kırgız Cumhuriyeti",
+    "subregion": "Orta Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Cambodia",
+   "Kingdom of Cambodia",
+   "Kamboçya Krallığı",
+   "KH",
+   "KHM"
+  ],
+  "borders": [
+   "LAO",
+   "THA",
+   "VNM"
+  ],
+  "capital": [
+   "Phnom Penh"
+  ],
+  "code": "KH",
+  "continentSlug": "asia",
+  "flag": "🇰🇭",
+  "hasTravel": false,
+  "iso3": "KHM",
+  "landlocked": false,
+  "latitude": 13,
+  "longitude": 105,
+  "subregion": "South-Eastern Asia",
+  "translations": {
+   "en": {
+    "name": "Cambodia",
+    "officialName": "Kingdom of Cambodia",
+    "subregion": "Southeast Asia"
+   },
+   "es": {
+    "name": "Camboya",
+    "officialName": "Reino de Camboya",
+    "subregion": "Sudeste Asiático"
+   },
+   "tr": {
+    "name": "Kamboçya",
+    "officialName": "Kamboçya Krallığı",
+    "subregion": "Güneydoğu Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Independent and Sovereign Republic of Kiribati",
+   "Kiribati Cumhuriyeti",
+   "KI",
+   "Republic of Kiribati",
+   "Ribaberiki Kiribati",
+   "KIR"
+  ],
+  "borders": [],
+  "capital": [
+   "South Tarawa"
+  ],
+  "code": "KI",
+  "continentSlug": "oceania",
+  "flag": "🇰🇮",
+  "hasTravel": false,
+  "iso3": "KIR",
+  "landlocked": false,
+  "latitude": 1.41666666,
+  "longitude": 173,
+  "subregion": "Micronesia",
+  "translations": {
+   "en": {
+    "name": "Kiribati",
+    "officialName": "Independent and Sovereign Republic of Kiribati",
+    "subregion": "Micronesia"
+   },
+   "es": {
+    "name": "Kiribati",
+    "officialName": "República Independiente y Soberano de Kiribati",
+    "subregion": "Micronesia"
+   },
+   "tr": {
+    "name": "Kiribati",
+    "officialName": "Kiribati Cumhuriyeti",
+    "subregion": "Mikronezya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Comoros",
+   "Union of the Comoros",
+   "Komorlar Birliği",
+   "KM",
+   "Union des Comores",
+   "Udzima wa Komori",
+   "al-Ittiḥād al-Qumurī",
+   "COM"
+  ],
+  "borders": [],
+  "capital": [
+   "Moroni"
+  ],
+  "code": "KM",
+  "continentSlug": "africa",
+  "flag": "🇰🇲",
+  "hasTravel": false,
+  "iso3": "COM",
+  "landlocked": false,
+  "latitude": -12.16666666,
+  "longitude": 44.25,
+  "subregion": "Eastern Africa",
+  "translations": {
+   "en": {
+    "name": "Comoros",
+    "officialName": "Union of the Comoros",
+    "subregion": "East Africa"
+   },
+   "es": {
+    "name": "Comoras",
+    "officialName": "Unión de las Comoras",
+    "subregion": "África Oriental"
+   },
+   "tr": {
+    "name": "Komorlar",
+    "officialName": "Komorlar Birliği",
+    "subregion": "Doğu Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Saint Kitts and Nevis",
+   "Federation of Saint Christopher and Nevis",
+   "Saint Kitts ve Nevis Federasyonu",
+   "KN",
+   "KNA"
+  ],
+  "borders": [],
+  "capital": [
+   "Basseterre"
+  ],
+  "code": "KN",
+  "continentSlug": "americas",
+  "flag": "🇰🇳",
+  "hasTravel": false,
+  "iso3": "KNA",
+  "landlocked": false,
+  "latitude": 17.33333333,
+  "longitude": -62.75,
+  "subregion": "Caribbean",
+  "translations": {
+   "en": {
+    "name": "Saint Kitts and Nevis",
+    "officialName": "Federation of Saint Christopher and Nevis",
+    "subregion": "Caribbean"
+   },
+   "es": {
+    "name": "San Cristóbal y Nieves",
+    "officialName": "Federación de San Cristóbal y Nevis",
+    "subregion": "Caribe"
+   },
+   "tr": {
+    "name": "Saint Kitts ve Nevis",
+    "officialName": "Saint Kitts ve Nevis Federasyonu",
+    "subregion": "Karayipler"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "North Korea",
+   "Democratic People's Republic of Korea",
+   "Kore Demokratik Halk Cumhuriyeti",
+   "KP",
+   "DPRK",
+   "조선민주주의인민공화국",
+   "Chosŏn Minjujuŭi Inmin Konghwaguk",
+   "Korea, Democratic People's Republic of",
+   "북한",
+   "북조선",
+   "PRK"
+  ],
+  "borders": [
+   "CHN",
+   "KOR",
+   "RUS"
+  ],
+  "capital": [
+   "Pyongyang"
+  ],
+  "code": "KP",
+  "continentSlug": "asia",
+  "flag": "🇰🇵",
+  "hasTravel": false,
+  "iso3": "PRK",
+  "landlocked": false,
+  "latitude": 40,
+  "longitude": 127,
+  "subregion": "Eastern Asia",
+  "translations": {
+   "en": {
+    "name": "North Korea",
+    "officialName": "Democratic People's Republic of Korea",
+    "subregion": "East Asia"
+   },
+   "es": {
+    "name": "Corea del Norte",
+    "officialName": "República Popular Democrática de Corea",
+    "subregion": "Asia Oriental"
+   },
+   "tr": {
+    "name": "Kuzey Kore",
+    "officialName": "Kore Demokratik Halk Cumhuriyeti",
+    "subregion": "Doğu Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "South Korea",
+   "Republic of Korea",
+   "Kore Cumhuriyeti",
+   "KR",
+   "Korea, Republic of",
+   "남한",
+   "남조선",
+   "KOR"
+  ],
+  "borders": [
+   "PRK"
+  ],
+  "capital": [
+   "Seoul"
+  ],
+  "code": "KR",
+  "continentSlug": "asia",
+  "flag": "🇰🇷",
+  "hasTravel": true,
+  "iso3": "KOR",
+  "landlocked": false,
+  "latitude": 37,
+  "longitude": 127.5,
+  "subregion": "Eastern Asia",
+  "translations": {
+   "en": {
+    "name": "South Korea",
+    "officialName": "Republic of Korea",
+    "subregion": "East Asia"
+   },
+   "es": {
+    "name": "Corea del Sur",
+    "officialName": "República de Corea",
+    "subregion": "Asia Oriental"
+   },
+   "tr": {
+    "name": "Güney Kore",
+    "officialName": "Kore Cumhuriyeti",
+    "subregion": "Doğu Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Kuwait",
+   "State of Kuwait",
+   "Kuveyt Devleti",
+   "KW",
+   "Dawlat al-Kuwait",
+   "KWT"
+  ],
+  "borders": [
+   "IRQ",
+   "SAU"
+  ],
+  "capital": [
+   "Kuwait City"
+  ],
+  "code": "KW",
+  "continentSlug": "asia",
+  "flag": "🇰🇼",
+  "hasTravel": false,
+  "iso3": "KWT",
+  "landlocked": false,
+  "latitude": 29.5,
+  "longitude": 45.75,
+  "subregion": "Western Asia",
+  "translations": {
+   "en": {
+    "name": "Kuwait",
+    "officialName": "State of Kuwait",
+    "subregion": "Western Asia"
+   },
+   "es": {
+    "name": "Kuwait",
+    "officialName": "Estado de Kuwait",
+    "subregion": "Asia Occidental"
+   },
+   "tr": {
+    "name": "Kuveyt",
+    "officialName": "Kuveyt Devleti",
+    "subregion": "Batı Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Kazakhstan",
+   "Republic of Kazakhstan",
+   "Kazakistan Cumhuriyeti",
+   "KZ",
+   "Qazaqstan",
+   "Казахстан",
+   "Қазақстан Республикасы",
+   "Qazaqstan Respublïkası",
+   "Республика Казахстан",
+   "Respublika Kazakhstan",
+   "KAZ"
+  ],
+  "borders": [
+   "CHN",
+   "KGZ",
+   "RUS",
+   "TKM",
+   "UZB"
+  ],
+  "capital": [
+   "Astana"
+  ],
+  "code": "KZ",
+  "continentSlug": "asia",
+  "flag": "🇰🇿",
+  "hasTravel": false,
+  "iso3": "KAZ",
+  "landlocked": true,
+  "latitude": 48,
+  "longitude": 68,
+  "subregion": "Central Asia",
+  "translations": {
+   "en": {
+    "name": "Kazakhstan",
+    "officialName": "Republic of Kazakhstan",
+    "subregion": "Central Asia"
+   },
+   "es": {
+    "name": "Kazajistán",
+    "officialName": "República de Kazajstán",
+    "subregion": "Asia Central"
+   },
+   "tr": {
+    "name": "Kazakistan",
+    "officialName": "Kazakistan Cumhuriyeti",
+    "subregion": "Orta Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Lao People's Democratic Republic",
+   "Laos Demokratik Halk Cumhuriyeti",
+   "LA",
+   "Lao",
+   "Sathalanalat Paxathipatai Paxaxon Lao",
+   "LAO"
+  ],
+  "borders": [
+   "MMR",
+   "KHM",
+   "CHN",
+   "THA",
+   "VNM"
+  ],
+  "capital": [
+   "Vientiane"
+  ],
+  "code": "LA",
+  "continentSlug": "asia",
+  "flag": "🇱🇦",
+  "hasTravel": false,
+  "iso3": "LAO",
+  "landlocked": true,
+  "latitude": 18,
+  "longitude": 105,
+  "subregion": "South-Eastern Asia",
+  "translations": {
+   "en": {
+    "name": "Laos",
+    "officialName": "Lao People's Democratic Republic",
+    "subregion": "Southeast Asia"
+   },
+   "es": {
+    "name": "Laos",
+    "officialName": "República Democrática Popular Lao",
+    "subregion": "Sudeste Asiático"
+   },
+   "tr": {
+    "name": "Laos",
+    "officialName": "Laos Demokratik Halk Cumhuriyeti",
+    "subregion": "Güneydoğu Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Lebanon",
+   "Lebanese Republic",
+   "Lübnan Cumhuriyeti",
+   "LB",
+   "Al-Jumhūrīyah Al-Libnānīyah",
+   "LBN"
+  ],
+  "borders": [
+   "ISR",
+   "SYR"
+  ],
+  "capital": [
+   "Beirut"
+  ],
+  "code": "LB",
+  "continentSlug": "asia",
+  "flag": "🇱🇧",
+  "hasTravel": false,
+  "iso3": "LBN",
+  "landlocked": false,
+  "latitude": 33.83333333,
+  "longitude": 35.83333333,
+  "subregion": "Western Asia",
+  "translations": {
+   "en": {
+    "name": "Lebanon",
+    "officialName": "Lebanese Republic",
+    "subregion": "Western Asia"
+   },
+   "es": {
+    "name": "Líbano",
+    "officialName": "República Libanesa",
+    "subregion": "Asia Occidental"
+   },
+   "tr": {
+    "name": "Lübnan",
+    "officialName": "Lübnan Cumhuriyeti",
+    "subregion": "Batı Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "LC",
+   "LCA"
+  ],
+  "borders": [],
+  "capital": [
+   "Castries"
+  ],
+  "code": "LC",
+  "continentSlug": "americas",
+  "flag": "🇱🇨",
+  "hasTravel": false,
+  "iso3": "LCA",
+  "landlocked": false,
+  "latitude": 13.88333333,
+  "longitude": -60.96666666,
+  "subregion": "Caribbean",
+  "translations": {
+   "en": {
+    "name": "Saint Lucia",
+    "officialName": "Saint Lucia",
+    "subregion": "Caribbean"
+   },
+   "es": {
+    "name": "Santa Lucía",
+    "officialName": "Santa Lucía",
+    "subregion": "Caribe"
+   },
+   "tr": {
+    "name": "Saint Lucia",
+    "officialName": "Saint Lucia",
+    "subregion": "Karayipler"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Liechtenstein",
+   "Principality of Liechtenstein",
+   "Lihtenştayn Prensliği",
+   "LI",
+   "Fürstentum Liechtenstein",
+   "LIE"
+  ],
+  "borders": [
+   "AUT",
+   "CHE"
+  ],
+  "capital": [
+   "Vaduz"
+  ],
+  "code": "LI",
+  "continentSlug": "europe",
+  "flag": "🇱🇮",
+  "hasTravel": false,
+  "iso3": "LIE",
+  "landlocked": true,
+  "latitude": 47.26666666,
+  "longitude": 9.53333333,
+  "subregion": "Western Europe",
+  "translations": {
+   "en": {
+    "name": "Liechtenstein",
+    "officialName": "Principality of Liechtenstein",
+    "subregion": "Western Europe"
+   },
+   "es": {
+    "name": "Liechtenstein",
+    "officialName": "Principado de Liechtenstein",
+    "subregion": "Europa Occidental"
+   },
+   "tr": {
+    "name": "Lihtenştayn",
+    "officialName": "Lihtenştayn Prensliği",
+    "subregion": "Batı Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Democratic Socialist Republic of Sri Lanka",
+   "Sri Lanka Demokratik Sosyalist Cumhuriyeti",
+   "LK",
+   "ilaṅkai",
+   "LKA"
+  ],
+  "borders": [],
+  "capital": [
+   "Colombo"
+  ],
+  "code": "LK",
+  "continentSlug": "asia",
+  "flag": "🇱🇰",
+  "hasTravel": false,
+  "iso3": "LKA",
+  "landlocked": false,
+  "latitude": 7,
+  "longitude": 81,
+  "subregion": "Southern Asia",
+  "translations": {
+   "en": {
+    "name": "Sri Lanka",
+    "officialName": "Democratic Socialist Republic of Sri Lanka",
+    "subregion": "South Asia"
+   },
+   "es": {
+    "name": "Sri Lanka",
+    "officialName": "República Democrática Socialista de Sri Lanka",
+    "subregion": "Asia del Sur"
+   },
+   "tr": {
+    "name": "Sri Lanka",
+    "officialName": "Sri Lanka Demokratik Sosyalist Cumhuriyeti",
+    "subregion": "Güney Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Liberia",
+   "Republic of Liberia",
+   "Liberya Cumhuriyeti",
+   "LR",
+   "LBR"
+  ],
+  "borders": [
+   "GIN",
+   "CIV",
+   "SLE"
+  ],
+  "capital": [
+   "Monrovia"
+  ],
+  "code": "LR",
+  "continentSlug": "africa",
+  "flag": "🇱🇷",
+  "hasTravel": false,
+  "iso3": "LBR",
+  "landlocked": false,
+  "latitude": 6.5,
+  "longitude": -9.5,
+  "subregion": "Western Africa",
+  "translations": {
+   "en": {
+    "name": "Liberia",
+    "officialName": "Republic of Liberia",
+    "subregion": "West Africa"
+   },
+   "es": {
+    "name": "Liberia",
+    "officialName": "República de Liberia",
+    "subregion": "África Occidental"
+   },
+   "tr": {
+    "name": "Liberya",
+    "officialName": "Liberya Cumhuriyeti",
+    "subregion": "Batı Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Kingdom of Lesotho",
+   "Lesotho Krallığı",
+   "LS",
+   "Muso oa Lesotho",
+   "LSO"
+  ],
+  "borders": [
+   "ZAF"
+  ],
+  "capital": [
+   "Maseru"
+  ],
+  "code": "LS",
+  "continentSlug": "africa",
+  "flag": "🇱🇸",
+  "hasTravel": false,
+  "iso3": "LSO",
+  "landlocked": true,
+  "latitude": -29.5,
+  "longitude": 28.5,
+  "subregion": "Southern Africa",
+  "translations": {
+   "en": {
+    "name": "Lesotho",
+    "officialName": "Kingdom of Lesotho",
+    "subregion": "Southern Africa"
+   },
+   "es": {
+    "name": "Lesotho",
+    "officialName": "Reino de Lesotho",
+    "subregion": "África Austral"
+   },
+   "tr": {
+    "name": "Lesotho",
+    "officialName": "Lesotho Krallığı",
+    "subregion": "Güney Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Lithuania",
+   "Republic of Lithuania",
+   "Litvanya Cumhuriyeti",
+   "LT",
+   "Lietuvos Respublika",
+   "LTU"
+  ],
+  "borders": [
+   "BLR",
+   "LVA",
+   "POL",
+   "RUS"
+  ],
+  "capital": [
+   "Vilnius"
+  ],
+  "code": "LT",
+  "continentSlug": "europe",
+  "flag": "🇱🇹",
+  "hasTravel": false,
+  "iso3": "LTU",
+  "landlocked": false,
+  "latitude": 56,
+  "longitude": 24,
+  "subregion": "Northern Europe",
+  "translations": {
+   "en": {
+    "name": "Lithuania",
+    "officialName": "Republic of Lithuania",
+    "subregion": "Northern Europe"
+   },
+   "es": {
+    "name": "Lituania",
+    "officialName": "República de Lituania",
+    "subregion": "Europa del Norte"
+   },
+   "tr": {
+    "name": "Litvanya",
+    "officialName": "Litvanya Cumhuriyeti",
+    "subregion": "Kuzey Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Luxembourg",
+   "Grand Duchy of Luxembourg",
+   "Lüksemburg Büyük Dükalığı",
+   "LU",
+   "Grand-Duché de Luxembourg",
+   "Großherzogtum Luxemburg",
+   "Groussherzogtum Lëtzebuerg",
+   "LUX"
+  ],
+  "borders": [
+   "BEL",
+   "FRA",
+   "DEU"
+  ],
+  "capital": [
+   "Luxembourg"
+  ],
+  "code": "LU",
+  "continentSlug": "europe",
+  "flag": "🇱🇺",
+  "hasTravel": false,
+  "iso3": "LUX",
+  "landlocked": true,
+  "latitude": 49.75,
+  "longitude": 6.16666666,
+  "subregion": "Western Europe",
+  "translations": {
+   "en": {
+    "name": "Luxembourg",
+    "officialName": "Grand Duchy of Luxembourg",
+    "subregion": "Western Europe"
+   },
+   "es": {
+    "name": "Luxemburgo",
+    "officialName": "Gran Ducado de Luxemburgo",
+    "subregion": "Europa Occidental"
+   },
+   "tr": {
+    "name": "Lüksemburg",
+    "officialName": "Lüksemburg Büyük Dükalığı",
+    "subregion": "Batı Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Latvia",
+   "Republic of Latvia",
+   "Letonya Cumhuriyeti",
+   "LV",
+   "Latvijas Republika",
+   "LVA"
+  ],
+  "borders": [
+   "BLR",
+   "EST",
+   "LTU",
+   "RUS"
+  ],
+  "capital": [
+   "Riga"
+  ],
+  "code": "LV",
+  "continentSlug": "europe",
+  "flag": "🇱🇻",
+  "hasTravel": false,
+  "iso3": "LVA",
+  "landlocked": false,
+  "latitude": 57,
+  "longitude": 25,
+  "subregion": "Northern Europe",
+  "translations": {
+   "en": {
+    "name": "Latvia",
+    "officialName": "Republic of Latvia",
+    "subregion": "Northern Europe"
+   },
+   "es": {
+    "name": "Letonia",
+    "officialName": "República de Letonia",
+    "subregion": "Europa del Norte"
+   },
+   "tr": {
+    "name": "Letonya",
+    "officialName": "Letonya Cumhuriyeti",
+    "subregion": "Kuzey Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "State of Libya",
+   "Libya Devleti",
+   "LY",
+   "Dawlat Libya",
+   "LBY"
+  ],
+  "borders": [
+   "DZA",
+   "TCD",
+   "EGY",
+   "NER",
+   "SDN",
+   "TUN"
+  ],
+  "capital": [
+   "Tripoli"
+  ],
+  "code": "LY",
+  "continentSlug": "africa",
+  "flag": "🇱🇾",
+  "hasTravel": false,
+  "iso3": "LBY",
+  "landlocked": false,
+  "latitude": 25,
+  "longitude": 17,
+  "subregion": "Northern Africa",
+  "translations": {
+   "en": {
+    "name": "Libya",
+    "officialName": "State of Libya",
+    "subregion": "North Africa"
+   },
+   "es": {
+    "name": "Libia",
+    "officialName": "Estado de Libia",
+    "subregion": "Norte de África"
+   },
+   "tr": {
+    "name": "Libya",
+    "officialName": "Libya Devleti",
+    "subregion": "Kuzey Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Morocco",
+   "Kingdom of Morocco",
+   "Fas Krallığı",
+   "MA",
+   "Al-Mamlakah al-Maġribiyah",
+   "MAR"
+  ],
+  "borders": [
+   "DZA",
+   "ESP"
+  ],
+  "capital": [
+   "Rabat"
+  ],
+  "code": "MA",
+  "continentSlug": "africa",
+  "flag": "🇲🇦",
+  "hasTravel": true,
+  "iso3": "MAR",
+  "landlocked": false,
+  "latitude": 32,
+  "longitude": -5,
+  "subregion": "Northern Africa",
+  "translations": {
+   "en": {
+    "name": "Morocco",
+    "officialName": "Kingdom of Morocco",
+    "subregion": "North Africa"
+   },
+   "es": {
+    "name": "Marruecos",
+    "officialName": "Reino de Marruecos",
+    "subregion": "Norte de África"
+   },
+   "tr": {
+    "name": "Fas",
+    "officialName": "Fas Krallığı",
+    "subregion": "Kuzey Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Monaco",
+   "Principality of Monaco",
+   "Monako Prensliği",
+   "MC",
+   "Principauté de Monaco",
+   "MCO"
+  ],
+  "borders": [
+   "FRA"
+  ],
+  "capital": [
+   "Monaco"
+  ],
+  "code": "MC",
+  "continentSlug": "europe",
+  "flag": "🇲🇨",
+  "hasTravel": false,
+  "iso3": "MCO",
+  "landlocked": false,
+  "latitude": 43.73333333,
+  "longitude": 7.4,
+  "subregion": "Western Europe",
+  "translations": {
+   "en": {
+    "name": "Monaco",
+    "officialName": "Principality of Monaco",
+    "subregion": "Western Europe"
+   },
+   "es": {
+    "name": "Mónaco",
+    "officialName": "Principado de Mónaco",
+    "subregion": "Europa Occidental"
+   },
+   "tr": {
+    "name": "Monako",
+    "officialName": "Monako Prensliği",
+    "subregion": "Batı Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Republic of Moldova",
+   "Moldova Cumhuriyeti",
+   "MD",
+   "Moldova, Republic of",
+   "Republica Moldova",
+   "MDA"
+  ],
+  "borders": [
+   "ROU",
+   "UKR"
+  ],
+  "capital": [
+   "Chișinău"
+  ],
+  "code": "MD",
+  "continentSlug": "europe",
+  "flag": "🇲🇩",
+  "hasTravel": false,
+  "iso3": "MDA",
+  "landlocked": true,
+  "latitude": 47,
+  "longitude": 29,
+  "subregion": "Eastern Europe",
+  "translations": {
+   "en": {
+    "name": "Moldova",
+    "officialName": "Republic of Moldova",
+    "subregion": "Eastern Europe"
+   },
+   "es": {
+    "name": "Moldavia",
+    "officialName": "República de Moldova",
+    "subregion": "Europa del Este"
+   },
+   "tr": {
+    "name": "Moldova",
+    "officialName": "Moldova Cumhuriyeti",
+    "subregion": "Doğu Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Montenegro",
+   "ME",
+   "Crna Gora",
+   "MNE"
+  ],
+  "borders": [
+   "ALB",
+   "BIH",
+   "HRV",
+   "SRB"
+  ],
+  "capital": [
+   "Podgorica"
+  ],
+  "code": "ME",
+  "continentSlug": "europe",
+  "flag": "🇲🇪",
+  "hasTravel": true,
+  "iso3": "MNE",
+  "landlocked": false,
+  "latitude": 42.5,
+  "longitude": 19.3,
+  "subregion": "Southeast Europe",
+  "translations": {
+   "en": {
+    "name": "Montenegro",
+    "officialName": "Montenegro",
+    "subregion": "Southeast Europe"
+   },
+   "es": {
+    "name": "Montenegro",
+    "officialName": "Montenegro",
+    "subregion": "Sudeste de Europa"
+   },
+   "tr": {
+    "name": "Karadağ",
+    "officialName": "Karadağ",
+    "subregion": "Güneydoğu Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Madagascar",
+   "Republic of Madagascar",
+   "Madagaskar Cumhuriyeti",
+   "MG",
+   "Repoblikan'i Madagasikara",
+   "République de Madagascar",
+   "MDG"
+  ],
+  "borders": [],
+  "capital": [
+   "Antananarivo"
+  ],
+  "code": "MG",
+  "continentSlug": "africa",
+  "flag": "🇲🇬",
+  "hasTravel": false,
+  "iso3": "MDG",
+  "landlocked": false,
+  "latitude": -20,
+  "longitude": 47,
+  "subregion": "Eastern Africa",
+  "translations": {
+   "en": {
+    "name": "Madagascar",
+    "officialName": "Republic of Madagascar",
+    "subregion": "East Africa"
+   },
+   "es": {
+    "name": "Madagascar",
+    "officialName": "República de Madagascar",
+    "subregion": "África Oriental"
+   },
+   "tr": {
+    "name": "Madagaskar",
+    "officialName": "Madagaskar Cumhuriyeti",
+    "subregion": "Doğu Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Marshall Islands",
+   "Republic of the Marshall Islands",
+   "Marshall Adaları Cumhuriyeti",
+   "MH",
+   "Aolepān Aorōkin M̧ajeļ",
+   "MHL"
+  ],
+  "borders": [],
+  "capital": [
+   "Majuro"
+  ],
+  "code": "MH",
+  "continentSlug": "oceania",
+  "flag": "🇲🇭",
+  "hasTravel": false,
+  "iso3": "MHL",
+  "landlocked": false,
+  "latitude": 9,
+  "longitude": 168,
+  "subregion": "Micronesia",
+  "translations": {
+   "en": {
+    "name": "Marshall Islands",
+    "officialName": "Republic of the Marshall Islands",
+    "subregion": "Micronesia"
+   },
+   "es": {
+    "name": "Islas Marshall",
+    "officialName": "República de las Islas Marshall",
+    "subregion": "Micronesia"
+   },
+   "tr": {
+    "name": "Marshall Adaları",
+    "officialName": "Marshall Adaları Cumhuriyeti",
+    "subregion": "Mikronezya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "North Macedonia",
+   "Republic of North Macedonia",
+   "Kuzey Makedonya Cumhuriyeti",
+   "MK",
+   "The former Yugoslav Republic of Macedonia",
+   "Macedonia, The Former Yugoslav Republic of",
+   "Република Северна Македонија",
+   "Macedonia",
+   "MKD"
+  ],
+  "borders": [
+   "ALB",
+   "BGR",
+   "GRC",
+   "SRB"
+  ],
+  "capital": [
+   "Skopje"
+  ],
+  "code": "MK",
+  "continentSlug": "europe",
+  "flag": "🇲🇰",
+  "hasTravel": false,
+  "iso3": "MKD",
+  "landlocked": true,
+  "latitude": 41.83333333,
+  "longitude": 22,
+  "subregion": "Southeast Europe",
+  "translations": {
+   "en": {
+    "name": "North Macedonia",
+    "officialName": "Republic of North Macedonia",
+    "subregion": "Southeast Europe"
+   },
+   "es": {
+    "name": "Macedonia del Norte",
+    "officialName": "República de Macedonia del Norte",
+    "subregion": "Sudeste de Europa"
+   },
+   "tr": {
+    "name": "Kuzey Makedonya",
+    "officialName": "Kuzey Makedonya Cumhuriyeti",
+    "subregion": "Güneydoğu Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Republic of Mali",
+   "Mali Cumhuriyeti",
+   "ML",
+   "République du Mali",
+   "MLI"
+  ],
+  "borders": [
+   "DZA",
+   "BFA",
+   "GIN",
+   "CIV",
+   "MRT",
+   "NER",
+   "SEN"
+  ],
+  "capital": [
+   "Bamako"
+  ],
+  "code": "ML",
+  "continentSlug": "africa",
+  "flag": "🇲🇱",
+  "hasTravel": false,
+  "iso3": "MLI",
+  "landlocked": true,
+  "latitude": 17,
+  "longitude": -4,
+  "subregion": "Western Africa",
+  "translations": {
+   "en": {
+    "name": "Mali",
+    "officialName": "Republic of Mali",
+    "subregion": "West Africa"
+   },
+   "es": {
+    "name": "Mali",
+    "officialName": "República de Malí",
+    "subregion": "África Occidental"
+   },
+   "tr": {
+    "name": "Mali",
+    "officialName": "Mali Cumhuriyeti",
+    "subregion": "Batı Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Republic of the Union of Myanmar",
+   "Myanmar Birliği Cumhuriyeti",
+   "MM",
+   "Burma",
+   "Pyidaunzu Thanmăda Myăma Nainngandaw",
+   "MMR"
+  ],
+  "borders": [
+   "BGD",
+   "CHN",
+   "IND",
+   "LAO",
+   "THA"
+  ],
+  "capital": [
+   "Naypyidaw"
+  ],
+  "code": "MM",
+  "continentSlug": "asia",
+  "flag": "🇲🇲",
+  "hasTravel": false,
+  "iso3": "MMR",
+  "landlocked": false,
+  "latitude": 22,
+  "longitude": 98,
+  "subregion": "South-Eastern Asia",
+  "translations": {
+   "en": {
+    "name": "Myanmar",
+    "officialName": "Republic of the Union of Myanmar",
+    "subregion": "Southeast Asia"
+   },
+   "es": {
+    "name": "Myanmar",
+    "officialName": "República de la Unión de Myanmar",
+    "subregion": "Sudeste Asiático"
+   },
+   "tr": {
+    "name": "Myanmar",
+    "officialName": "Myanmar Birliği Cumhuriyeti",
+    "subregion": "Güneydoğu Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Mongolia",
+   "MN",
+   "MNG"
+  ],
+  "borders": [
+   "CHN",
+   "RUS"
+  ],
+  "capital": [
+   "Ulan Bator"
+  ],
+  "code": "MN",
+  "continentSlug": "asia",
+  "flag": "🇲🇳",
+  "hasTravel": false,
+  "iso3": "MNG",
+  "landlocked": true,
+  "latitude": 46,
+  "longitude": 105,
+  "subregion": "Eastern Asia",
+  "translations": {
+   "en": {
+    "name": "Mongolia",
+    "officialName": "Mongolia",
+    "subregion": "East Asia"
+   },
+   "es": {
+    "name": "Mongolia",
+    "officialName": "Mongolia",
+    "subregion": "Asia Oriental"
+   },
+   "tr": {
+    "name": "Moğolistan",
+    "officialName": "Moğolistan",
+    "subregion": "Doğu Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Mauritania",
+   "Islamic Republic of Mauritania",
+   "Moritanya İslam Cumhuriyeti",
+   "MR",
+   "al-Jumhūriyyah al-ʾIslāmiyyah al-Mūrītāniyyah",
+   "MRT"
+  ],
+  "borders": [
+   "DZA",
+   "MLI",
+   "SEN"
+  ],
+  "capital": [
+   "Nouakchott"
+  ],
+  "code": "MR",
+  "continentSlug": "africa",
+  "flag": "🇲🇷",
+  "hasTravel": false,
+  "iso3": "MRT",
+  "landlocked": false,
+  "latitude": 20,
+  "longitude": -12,
+  "subregion": "Western Africa",
+  "translations": {
+   "en": {
+    "name": "Mauritania",
+    "officialName": "Islamic Republic of Mauritania",
+    "subregion": "West Africa"
+   },
+   "es": {
+    "name": "Mauritania",
+    "officialName": "República Islámica de Mauritania",
+    "subregion": "África Occidental"
+   },
+   "tr": {
+    "name": "Moritanya",
+    "officialName": "Moritanya İslam Cumhuriyeti",
+    "subregion": "Batı Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Republic of Malta",
+   "Malta Cumhuriyeti",
+   "MT",
+   "Repubblika ta' Malta",
+   "MLT"
+  ],
+  "borders": [],
+  "capital": [
+   "Valletta"
+  ],
+  "code": "MT",
+  "continentSlug": "europe",
+  "flag": "🇲🇹",
+  "hasTravel": true,
+  "iso3": "MLT",
+  "landlocked": false,
+  "latitude": 35.83333333,
+  "longitude": 14.58333333,
+  "subregion": "Southern Europe",
+  "translations": {
+   "en": {
+    "name": "Malta",
+    "officialName": "Republic of Malta",
+    "subregion": "Southern Europe"
+   },
+   "es": {
+    "name": "Malta",
+    "officialName": "República de Malta",
+    "subregion": "Europa del Sur"
+   },
+   "tr": {
+    "name": "Malta",
+    "officialName": "Malta Cumhuriyeti",
+    "subregion": "Güney Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Republic of Mauritius",
+   "Mauritius Cumhuriyeti",
+   "MU",
+   "République de Maurice",
+   "MUS"
+  ],
+  "borders": [],
+  "capital": [
+   "Port Louis"
+  ],
+  "code": "MU",
+  "continentSlug": "africa",
+  "flag": "🇲🇺",
+  "hasTravel": false,
+  "iso3": "MUS",
+  "landlocked": false,
+  "latitude": -20.28333333,
+  "longitude": 57.55,
+  "subregion": "Eastern Africa",
+  "translations": {
+   "en": {
+    "name": "Mauritius",
+    "officialName": "Republic of Mauritius",
+    "subregion": "East Africa"
+   },
+   "es": {
+    "name": "Mauricio",
+    "officialName": "República de Mauricio",
+    "subregion": "África Oriental"
+   },
+   "tr": {
+    "name": "Mauritius",
+    "officialName": "Mauritius Cumhuriyeti",
+    "subregion": "Doğu Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Maldives",
+   "Republic of the Maldives",
+   "Maldivler Cumhuriyeti",
+   "MV",
+   "Maldive Islands",
+   "Dhivehi Raajjeyge Jumhooriyya",
+   "MDV"
+  ],
+  "borders": [],
+  "capital": [
+   "Malé"
+  ],
+  "code": "MV",
+  "continentSlug": "asia",
+  "flag": "🇲🇻",
+  "hasTravel": false,
+  "iso3": "MDV",
+  "landlocked": false,
+  "latitude": 3.25,
+  "longitude": 73,
+  "subregion": "Southern Asia",
+  "translations": {
+   "en": {
+    "name": "Maldives",
+    "officialName": "Republic of the Maldives",
+    "subregion": "South Asia"
+   },
+   "es": {
+    "name": "Maldivas",
+    "officialName": "República de las Maldivas",
+    "subregion": "Asia del Sur"
+   },
+   "tr": {
+    "name": "Maldivler",
+    "officialName": "Maldivler Cumhuriyeti",
+    "subregion": "Güney Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Malawi",
+   "Republic of Malawi",
+   "Malavi Cumhuriyeti",
+   "MW",
+   "MWI"
+  ],
+  "borders": [
+   "MOZ",
+   "TZA",
+   "ZMB"
+  ],
+  "capital": [
+   "Lilongwe"
+  ],
+  "code": "MW",
+  "continentSlug": "africa",
+  "flag": "🇲🇼",
+  "hasTravel": false,
+  "iso3": "MWI",
+  "landlocked": true,
+  "latitude": -13.5,
+  "longitude": 34,
+  "subregion": "Eastern Africa",
+  "translations": {
+   "en": {
+    "name": "Malawi",
+    "officialName": "Republic of Malawi",
+    "subregion": "East Africa"
+   },
+   "es": {
+    "name": "Malawi",
+    "officialName": "República de Malawi",
+    "subregion": "África Oriental"
+   },
+   "tr": {
+    "name": "Malavi",
+    "officialName": "Malavi Cumhuriyeti",
+    "subregion": "Doğu Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Mexico",
+   "United Mexican States",
+   "Birleşik Meksika Devletleri",
+   "MX",
+   "Mexicanos",
+   "Estados Unidos Mexicanos",
+   "MEX"
+  ],
+  "borders": [
+   "BLZ",
+   "GTM",
+   "USA"
+  ],
+  "capital": [
+   "Mexico City"
+  ],
+  "code": "MX",
+  "continentSlug": "americas",
+  "flag": "🇲🇽",
+  "hasTravel": true,
+  "iso3": "MEX",
+  "landlocked": false,
+  "latitude": 23,
+  "longitude": -102,
+  "subregion": "North America",
+  "translations": {
+   "en": {
+    "name": "Mexico",
+    "officialName": "United Mexican States",
+    "subregion": "North America"
+   },
+   "es": {
+    "name": "México",
+    "officialName": "Estados Unidos Mexicanos",
+    "subregion": "Norteamérica"
+   },
+   "tr": {
+    "name": "Meksika",
+    "officialName": "Birleşik Meksika Devletleri",
+    "subregion": "Kuzey Amerika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Malaysia",
+   "MY",
+   "MYS"
+  ],
+  "borders": [
+   "BRN",
+   "IDN",
+   "THA"
+  ],
+  "capital": [
+   "Kuala Lumpur"
+  ],
+  "code": "MY",
+  "continentSlug": "asia",
+  "flag": "🇲🇾",
+  "hasTravel": false,
+  "iso3": "MYS",
+  "landlocked": false,
+  "latitude": 2.5,
+  "longitude": 112.5,
+  "subregion": "South-Eastern Asia",
+  "translations": {
+   "en": {
+    "name": "Malaysia",
+    "officialName": "Malaysia",
+    "subregion": "Southeast Asia"
+   },
+   "es": {
+    "name": "Malasia",
+    "officialName": "Malasia",
+    "subregion": "Sudeste Asiático"
+   },
+   "tr": {
+    "name": "Malezya",
+    "officialName": "Malezya",
+    "subregion": "Güneydoğu Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Mozambique",
+   "Republic of Mozambique",
+   "Mozambik Cumhuriyeti",
+   "MZ",
+   "República de Moçambique",
+   "MOZ"
+  ],
+  "borders": [
+   "MWI",
+   "ZAF",
+   "SWZ",
+   "TZA",
+   "ZMB",
+   "ZWE"
+  ],
+  "capital": [
+   "Maputo"
+  ],
+  "code": "MZ",
+  "continentSlug": "africa",
+  "flag": "🇲🇿",
+  "hasTravel": false,
+  "iso3": "MOZ",
+  "landlocked": false,
+  "latitude": -18.25,
+  "longitude": 35,
+  "subregion": "Eastern Africa",
+  "translations": {
+   "en": {
+    "name": "Mozambique",
+    "officialName": "Republic of Mozambique",
+    "subregion": "East Africa"
+   },
+   "es": {
+    "name": "Mozambique",
+    "officialName": "República de Mozambique",
+    "subregion": "África Oriental"
+   },
+   "tr": {
+    "name": "Mozambik",
+    "officialName": "Mozambik Cumhuriyeti",
+    "subregion": "Doğu Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Namibia",
+   "Republic of Namibia",
+   "Namibya Cumhuriyeti",
+   "NA",
+   "Namibië",
+   "NAM"
+  ],
+  "borders": [
+   "AGO",
+   "BWA",
+   "ZAF",
+   "ZMB"
+  ],
+  "capital": [
+   "Windhoek"
+  ],
+  "code": "NA",
+  "continentSlug": "africa",
+  "flag": "🇳🇦",
+  "hasTravel": false,
+  "iso3": "NAM",
+  "landlocked": false,
+  "latitude": -22,
+  "longitude": 17,
+  "subregion": "Southern Africa",
+  "translations": {
+   "en": {
+    "name": "Namibia",
+    "officialName": "Republic of Namibia",
+    "subregion": "Southern Africa"
+   },
+   "es": {
+    "name": "Namibia",
+    "officialName": "República de Namibia",
+    "subregion": "África Austral"
+   },
+   "tr": {
+    "name": "Namibya",
+    "officialName": "Namibya Cumhuriyeti",
+    "subregion": "Güney Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Niger",
+   "Republic of Niger",
+   "Nijer Cumhuriyeti",
+   "NE",
+   "Nijar",
+   "NER"
+  ],
+  "borders": [
+   "DZA",
+   "BEN",
+   "BFA",
+   "TCD",
+   "LBY",
+   "MLI",
+   "NGA"
+  ],
+  "capital": [
+   "Niamey"
+  ],
+  "code": "NE",
+  "continentSlug": "africa",
+  "flag": "🇳🇪",
+  "hasTravel": false,
+  "iso3": "NER",
+  "landlocked": true,
+  "latitude": 16,
+  "longitude": 8,
+  "subregion": "Western Africa",
+  "translations": {
+   "en": {
+    "name": "Niger",
+    "officialName": "Republic of Niger",
+    "subregion": "West Africa"
+   },
+   "es": {
+    "name": "Níger",
+    "officialName": "República de Níger",
+    "subregion": "África Occidental"
+   },
+   "tr": {
+    "name": "Nijer",
+    "officialName": "Nijer Cumhuriyeti",
+    "subregion": "Batı Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Nigeria",
+   "Federal Republic of Nigeria",
+   "Nijerya Federal Cumhuriyeti",
+   "NG",
+   "Nijeriya",
+   "Naíjíríà",
+   "NGA"
+  ],
+  "borders": [
+   "BEN",
+   "CMR",
+   "TCD",
+   "NER"
+  ],
+  "capital": [
+   "Abuja"
+  ],
+  "code": "NG",
+  "continentSlug": "africa",
+  "flag": "🇳🇬",
+  "hasTravel": false,
+  "iso3": "NGA",
+  "landlocked": false,
+  "latitude": 10,
+  "longitude": 8,
+  "subregion": "Western Africa",
+  "translations": {
+   "en": {
+    "name": "Nigeria",
+    "officialName": "Federal Republic of Nigeria",
+    "subregion": "West Africa"
+   },
+   "es": {
+    "name": "Nigeria",
+    "officialName": "República Federal de Nigeria",
+    "subregion": "África Occidental"
+   },
+   "tr": {
+    "name": "Nijerya",
+    "officialName": "Nijerya Federal Cumhuriyeti",
+    "subregion": "Batı Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Nicaragua",
+   "Republic of Nicaragua",
+   "Nikaragua Cumhuriyeti",
+   "NI",
+   "República de Nicaragua",
+   "NIC"
+  ],
+  "borders": [
+   "CRI",
+   "HND"
+  ],
+  "capital": [
+   "Managua"
+  ],
+  "code": "NI",
+  "continentSlug": "americas",
+  "flag": "🇳🇮",
+  "hasTravel": false,
+  "iso3": "NIC",
+  "landlocked": false,
+  "latitude": 13,
+  "longitude": -85,
+  "subregion": "Central America",
+  "translations": {
+   "en": {
+    "name": "Nicaragua",
+    "officialName": "Republic of Nicaragua",
+    "subregion": "Central America"
+   },
+   "es": {
+    "name": "Nicaragua",
+    "officialName": "República de Nicaragua",
+    "subregion": "Centroamérica"
+   },
+   "tr": {
+    "name": "Nikaragua",
+    "officialName": "Nikaragua Cumhuriyeti",
+    "subregion": "Orta Amerika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Netherlands",
+   "Kingdom of the Netherlands",
+   "Hollanda Krallığı",
+   "NL",
+   "Holland",
+   "Nederland",
+   "The Netherlands",
+   "NLD"
+  ],
+  "borders": [
+   "BEL",
+   "DEU"
+  ],
+  "capital": [
+   "Amsterdam"
+  ],
+  "code": "NL",
+  "continentSlug": "europe",
+  "flag": "🇳🇱",
+  "hasTravel": true,
+  "iso3": "NLD",
+  "landlocked": false,
+  "latitude": 52.5,
+  "longitude": 5.75,
+  "subregion": "Western Europe",
+  "translations": {
+   "en": {
+    "name": "Netherlands",
+    "officialName": "Kingdom of the Netherlands",
+    "subregion": "Western Europe"
+   },
+   "es": {
+    "name": "Países Bajos",
+    "officialName": "Países Bajos",
+    "subregion": "Europa Occidental"
+   },
+   "tr": {
+    "name": "Hollanda",
+    "officialName": "Hollanda Krallığı",
+    "subregion": "Batı Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Norway",
+   "Kingdom of Norway",
+   "Norveç Krallığı",
+   "NO",
+   "Norge",
+   "Noreg",
+   "Kongeriket Norge",
+   "Kongeriket Noreg",
+   "NOR"
+  ],
+  "borders": [
+   "FIN",
+   "SWE",
+   "RUS"
+  ],
+  "capital": [
+   "Oslo"
+  ],
+  "code": "NO",
+  "continentSlug": "europe",
+  "flag": "🇳🇴",
+  "hasTravel": true,
+  "iso3": "NOR",
+  "landlocked": false,
+  "latitude": 62,
+  "longitude": 10,
+  "subregion": "Northern Europe",
+  "translations": {
+   "en": {
+    "name": "Norway",
+    "officialName": "Kingdom of Norway",
+    "subregion": "Northern Europe"
+   },
+   "es": {
+    "name": "Noruega",
+    "officialName": "Reino de Noruega",
+    "subregion": "Europa del Norte"
+   },
+   "tr": {
+    "name": "Norveç",
+    "officialName": "Norveç Krallığı",
+    "subregion": "Kuzey Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Federal Democratic Republic of Nepal",
+   "Nepal Federal Demokratik Cumhuriyeti",
+   "NP",
+   "Loktāntrik Ganatantra Nepāl",
+   "NPL"
+  ],
+  "borders": [
+   "CHN",
+   "IND"
+  ],
+  "capital": [
+   "Kathmandu"
+  ],
+  "code": "NP",
+  "continentSlug": "asia",
+  "flag": "🇳🇵",
+  "hasTravel": false,
+  "iso3": "NPL",
+  "landlocked": true,
+  "latitude": 28,
+  "longitude": 84,
+  "subregion": "Southern Asia",
+  "translations": {
+   "en": {
+    "name": "Nepal",
+    "officialName": "Federal Democratic Republic of Nepal",
+    "subregion": "South Asia"
+   },
+   "es": {
+    "name": "Nepal",
+    "officialName": "República Democrática Federal de Nepal",
+    "subregion": "Asia del Sur"
+   },
+   "tr": {
+    "name": "Nepal",
+    "officialName": "Nepal Federal Demokratik Cumhuriyeti",
+    "subregion": "Güney Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Republic of Nauru",
+   "Nauru Cumhuriyeti",
+   "NR",
+   "Naoero",
+   "Pleasant Island",
+   "Ripublik Naoero",
+   "NRU"
+  ],
+  "borders": [],
+  "capital": [
+   "Yaren"
+  ],
+  "code": "NR",
+  "continentSlug": "oceania",
+  "flag": "🇳🇷",
+  "hasTravel": false,
+  "iso3": "NRU",
+  "landlocked": false,
+  "latitude": -0.53333333,
+  "longitude": 166.91666666,
+  "subregion": "Micronesia",
+  "translations": {
+   "en": {
+    "name": "Nauru",
+    "officialName": "Republic of Nauru",
+    "subregion": "Micronesia"
+   },
+   "es": {
+    "name": "Nauru",
+    "officialName": "República de Nauru",
+    "subregion": "Micronesia"
+   },
+   "tr": {
+    "name": "Nauru",
+    "officialName": "Nauru Cumhuriyeti",
+    "subregion": "Mikronezya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "New Zealand",
+   "NZ",
+   "Aotearoa",
+   "NZL"
+  ],
+  "borders": [],
+  "capital": [
+   "Wellington"
+  ],
+  "code": "NZ",
+  "continentSlug": "oceania",
+  "flag": "🇳🇿",
+  "hasTravel": false,
+  "iso3": "NZL",
+  "landlocked": false,
+  "latitude": -41,
+  "longitude": 174,
+  "subregion": "Australia and New Zealand",
+  "translations": {
+   "en": {
+    "name": "New Zealand",
+    "officialName": "New Zealand",
+    "subregion": "Australia and New Zealand"
+   },
+   "es": {
+    "name": "Nueva Zelanda",
+    "officialName": "nueva Zelanda",
+    "subregion": "Australia y Nueva Zelanda"
+   },
+   "tr": {
+    "name": "Yeni Zelanda",
+    "officialName": "Yeni Zelanda",
+    "subregion": "Avustralya ve Yeni Zelanda"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Oman",
+   "Sultanate of Oman",
+   "Umman Sultanlığı",
+   "OM",
+   "Salṭanat ʻUmān",
+   "OMN"
+  ],
+  "borders": [
+   "SAU",
+   "ARE",
+   "YEM"
+  ],
+  "capital": [
+   "Muscat"
+  ],
+  "code": "OM",
+  "continentSlug": "asia",
+  "flag": "🇴🇲",
+  "hasTravel": false,
+  "iso3": "OMN",
+  "landlocked": false,
+  "latitude": 21,
+  "longitude": 57,
+  "subregion": "Western Asia",
+  "translations": {
+   "en": {
+    "name": "Oman",
+    "officialName": "Sultanate of Oman",
+    "subregion": "Western Asia"
+   },
+   "es": {
+    "name": "Omán",
+    "officialName": "Sultanato de Omán",
+    "subregion": "Asia Occidental"
+   },
+   "tr": {
+    "name": "Umman",
+    "officialName": "Umman Sultanlığı",
+    "subregion": "Batı Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Republic of Panama",
+   "Panama Cumhuriyeti",
+   "PA",
+   "República de Panamá",
+   "PAN"
+  ],
+  "borders": [
+   "COL",
+   "CRI"
+  ],
+  "capital": [
+   "Panama City"
+  ],
+  "code": "PA",
+  "continentSlug": "americas",
+  "flag": "🇵🇦",
+  "hasTravel": false,
+  "iso3": "PAN",
+  "landlocked": false,
+  "latitude": 9,
+  "longitude": -80,
+  "subregion": "Central America",
+  "translations": {
+   "en": {
+    "name": "Panama",
+    "officialName": "Republic of Panama",
+    "subregion": "Central America"
+   },
+   "es": {
+    "name": "Panamá",
+    "officialName": "República de Panamá",
+    "subregion": "Centroamérica"
+   },
+   "tr": {
+    "name": "Panama",
+    "officialName": "Panama Cumhuriyeti",
+    "subregion": "Orta Amerika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Republic of Peru",
+   "Peru Cumhuriyeti",
+   "PE",
+   "República del Perú",
+   "PER"
+  ],
+  "borders": [
+   "BOL",
+   "BRA",
+   "CHL",
+   "COL",
+   "ECU"
+  ],
+  "capital": [
+   "Lima"
+  ],
+  "code": "PE",
+  "continentSlug": "americas",
+  "flag": "🇵🇪",
+  "hasTravel": false,
+  "iso3": "PER",
+  "landlocked": false,
+  "latitude": -10,
+  "longitude": -76,
+  "subregion": "South America",
+  "translations": {
+   "en": {
+    "name": "Peru",
+    "officialName": "Republic of Peru",
+    "subregion": "South America"
+   },
+   "es": {
+    "name": "Perú",
+    "officialName": "República de Perú",
+    "subregion": "Sudamérica"
+   },
+   "tr": {
+    "name": "Peru",
+    "officialName": "Peru Cumhuriyeti",
+    "subregion": "Güney Amerika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Papua New Guinea",
+   "Independent State of Papua New Guinea",
+   "Papua Yeni Gine Bağımsız Devleti",
+   "PG",
+   "Independen Stet bilong Papua Niugini",
+   "PNG"
+  ],
+  "borders": [
+   "IDN"
+  ],
+  "capital": [
+   "Port Moresby"
+  ],
+  "code": "PG",
+  "continentSlug": "oceania",
+  "flag": "🇵🇬",
+  "hasTravel": false,
+  "iso3": "PNG",
+  "landlocked": false,
+  "latitude": -6,
+  "longitude": 147,
+  "subregion": "Melanesia",
+  "translations": {
+   "en": {
+    "name": "Papua New Guinea",
+    "officialName": "Independent State of Papua New Guinea",
+    "subregion": "Melanesia"
+   },
+   "es": {
+    "name": "Papúa Nueva Guinea",
+    "officialName": "Estado Independiente de Papúa Nueva Guinea",
+    "subregion": "Melanesia"
+   },
+   "tr": {
+    "name": "Papua Yeni Gine",
+    "officialName": "Papua Yeni Gine Bağımsız Devleti",
+    "subregion": "Melanezya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Philippines",
+   "Republic of the Philippines",
+   "Filipinler Cumhuriyeti",
+   "PH",
+   "Repúblika ng Pilipinas",
+   "PHL"
+  ],
+  "borders": [],
+  "capital": [
+   "Manila"
+  ],
+  "code": "PH",
+  "continentSlug": "asia",
+  "flag": "🇵🇭",
+  "hasTravel": false,
+  "iso3": "PHL",
+  "landlocked": false,
+  "latitude": 13,
+  "longitude": 122,
+  "subregion": "South-Eastern Asia",
+  "translations": {
+   "en": {
+    "name": "Philippines",
+    "officialName": "Republic of the Philippines",
+    "subregion": "Southeast Asia"
+   },
+   "es": {
+    "name": "Filipinas",
+    "officialName": "República de las Filipinas",
+    "subregion": "Sudeste Asiático"
+   },
+   "tr": {
+    "name": "Filipinler",
+    "officialName": "Filipinler Cumhuriyeti",
+    "subregion": "Güneydoğu Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Islamic Republic of Pakistan",
+   "Pakistan İslam Cumhuriyeti",
+   "PK",
+   "Pākistān",
+   "Islāmī Jumhūriya'eh Pākistān",
+   "PAK"
+  ],
+  "borders": [
+   "AFG",
+   "CHN",
+   "IND",
+   "IRN"
+  ],
+  "capital": [
+   "Islamabad"
+  ],
+  "code": "PK",
+  "continentSlug": "asia",
+  "flag": "🇵🇰",
+  "hasTravel": false,
+  "iso3": "PAK",
+  "landlocked": false,
+  "latitude": 30,
+  "longitude": 70,
+  "subregion": "Southern Asia",
+  "translations": {
+   "en": {
+    "name": "Pakistan",
+    "officialName": "Islamic Republic of Pakistan",
+    "subregion": "South Asia"
+   },
+   "es": {
+    "name": "Pakistán",
+    "officialName": "República Islámica de Pakistán",
+    "subregion": "Asia del Sur"
+   },
+   "tr": {
+    "name": "Pakistan",
+    "officialName": "Pakistan İslam Cumhuriyeti",
+    "subregion": "Güney Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Poland",
+   "Republic of Poland",
+   "Polonya Cumhuriyeti",
+   "PL",
+   "Rzeczpospolita Polska",
+   "POL"
+  ],
+  "borders": [
+   "BLR",
+   "CZE",
+   "DEU",
+   "LTU",
+   "RUS",
+   "SVK",
+   "UKR"
+  ],
+  "capital": [
+   "Warsaw"
+  ],
+  "code": "PL",
+  "continentSlug": "europe",
+  "flag": "🇵🇱",
+  "hasTravel": true,
+  "iso3": "POL",
+  "landlocked": false,
+  "latitude": 52,
+  "longitude": 20,
+  "subregion": "Central Europe",
+  "translations": {
+   "en": {
+    "name": "Poland",
+    "officialName": "Republic of Poland",
+    "subregion": "Central Europe"
+   },
+   "es": {
+    "name": "Polonia",
+    "officialName": "República de Polonia",
+    "subregion": "Europa Central"
+   },
+   "tr": {
+    "name": "Polonya",
+    "officialName": "Polonya Cumhuriyeti",
+    "subregion": "Orta Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Palestine",
+   "State of Palestine",
+   "Filistin Devleti",
+   "PS",
+   "Palestine, State of",
+   "Dawlat Filasṭin",
+   "PSE"
+  ],
+  "borders": [
+   "ISR",
+   "EGY",
+   "JOR"
+  ],
+  "capital": [
+   "Ramallah"
+  ],
+  "code": "PS",
+  "continentSlug": "asia",
+  "flag": "🇵🇸",
+  "hasTravel": false,
+  "iso3": "PSE",
+  "landlocked": false,
+  "latitude": 31.9,
+  "longitude": 35.2,
+  "subregion": "Western Asia",
+  "translations": {
+   "en": {
+    "name": "Palestine",
+    "officialName": "State of Palestine",
+    "subregion": "Western Asia"
+   },
+   "es": {
+    "name": "Palestina",
+    "officialName": "Estado de Palestina",
+    "subregion": "Asia Occidental"
+   },
+   "tr": {
+    "name": "Filistin",
+    "officialName": "Filistin Devleti",
+    "subregion": "Batı Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Portugal",
+   "Portuguese Republic",
+   "Portekiz Cumhuriyeti",
+   "PT",
+   "Portuguesa",
+   "República Portuguesa",
+   "PRT"
+  ],
+  "borders": [
+   "ESP"
+  ],
+  "capital": [
+   "Lisbon"
+  ],
+  "code": "PT",
+  "continentSlug": "europe",
+  "flag": "🇵🇹",
+  "hasTravel": true,
+  "iso3": "PRT",
+  "landlocked": false,
+  "latitude": 39.5,
+  "longitude": -8,
+  "subregion": "Southern Europe",
+  "translations": {
+   "en": {
+    "name": "Portugal",
+    "officialName": "Portuguese Republic",
+    "subregion": "Southern Europe"
+   },
+   "es": {
+    "name": "Portugal",
+    "officialName": "República Portuguesa",
+    "subregion": "Europa del Sur"
+   },
+   "tr": {
+    "name": "Portekiz",
+    "officialName": "Portekiz Cumhuriyeti",
+    "subregion": "Güney Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Republic of Palau",
+   "Palau Cumhuriyeti",
+   "PW",
+   "Beluu er a Belau",
+   "PLW"
+  ],
+  "borders": [],
+  "capital": [
+   "Ngerulmud"
+  ],
+  "code": "PW",
+  "continentSlug": "oceania",
+  "flag": "🇵🇼",
+  "hasTravel": false,
+  "iso3": "PLW",
+  "landlocked": false,
+  "latitude": 7.5,
+  "longitude": 134.5,
+  "subregion": "Micronesia",
+  "translations": {
+   "en": {
+    "name": "Palau",
+    "officialName": "Republic of Palau",
+    "subregion": "Micronesia"
+   },
+   "es": {
+    "name": "Palau",
+    "officialName": "República de Palau",
+    "subregion": "Micronesia"
+   },
+   "tr": {
+    "name": "Palau",
+    "officialName": "Palau Cumhuriyeti",
+    "subregion": "Mikronezya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Republic of Paraguay",
+   "Paraguay Cumhuriyeti",
+   "PY",
+   "República del Paraguay",
+   "Tetã Paraguái",
+   "PRY"
+  ],
+  "borders": [
+   "ARG",
+   "BOL",
+   "BRA"
+  ],
+  "capital": [
+   "Asunción"
+  ],
+  "code": "PY",
+  "continentSlug": "americas",
+  "flag": "🇵🇾",
+  "hasTravel": false,
+  "iso3": "PRY",
+  "landlocked": true,
+  "latitude": -23,
+  "longitude": -58,
+  "subregion": "South America",
+  "translations": {
+   "en": {
+    "name": "Paraguay",
+    "officialName": "Republic of Paraguay",
+    "subregion": "South America"
+   },
+   "es": {
+    "name": "Paraguay",
+    "officialName": "República de Paraguay",
+    "subregion": "Sudamérica"
+   },
+   "tr": {
+    "name": "Paraguay",
+    "officialName": "Paraguay Cumhuriyeti",
+    "subregion": "Güney Amerika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Qatar",
+   "State of Qatar",
+   "Katar Devleti",
+   "QA",
+   "Dawlat Qaṭar",
+   "QAT"
+  ],
+  "borders": [
+   "SAU"
+  ],
+  "capital": [
+   "Doha"
+  ],
+  "code": "QA",
+  "continentSlug": "asia",
+  "flag": "🇶🇦",
+  "hasTravel": false,
+  "iso3": "QAT",
+  "landlocked": false,
+  "latitude": 25.5,
+  "longitude": 51.25,
+  "subregion": "Western Asia",
+  "translations": {
+   "en": {
+    "name": "Qatar",
+    "officialName": "State of Qatar",
+    "subregion": "Western Asia"
+   },
+   "es": {
+    "name": "Catar",
+    "officialName": "Estado de Qatar",
+    "subregion": "Asia Occidental"
+   },
+   "tr": {
+    "name": "Katar",
+    "officialName": "Katar Devleti",
+    "subregion": "Batı Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Romania",
+   "RO",
+   "Rumania",
+   "Roumania",
+   "România",
+   "ROU"
+  ],
+  "borders": [
+   "BGR",
+   "HUN",
+   "MDA",
+   "SRB",
+   "UKR"
+  ],
+  "capital": [
+   "Bucharest"
+  ],
+  "code": "RO",
+  "continentSlug": "europe",
+  "flag": "🇷🇴",
+  "hasTravel": false,
+  "iso3": "ROU",
+  "landlocked": false,
+  "latitude": 46,
+  "longitude": 25,
+  "subregion": "Southeast Europe",
+  "translations": {
+   "en": {
+    "name": "Romania",
+    "officialName": "Romania",
+    "subregion": "Southeast Europe"
+   },
+   "es": {
+    "name": "Rumania",
+    "officialName": "Rumania",
+    "subregion": "Sudeste de Europa"
+   },
+   "tr": {
+    "name": "Romanya",
+    "officialName": "Romanya",
+    "subregion": "Güneydoğu Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Serbia",
+   "Republic of Serbia",
+   "Sırbistan Cumhuriyeti",
+   "RS",
+   "Srbija",
+   "Republika Srbija",
+   "Србија",
+   "Република Србија",
+   "SRB"
+  ],
+  "borders": [
+   "BIH",
+   "BGR",
+   "HRV",
+   "HUN",
+   "MKD",
+   "MNE",
+   "ROU"
+  ],
+  "capital": [
+   "Belgrade"
+  ],
+  "code": "RS",
+  "continentSlug": "europe",
+  "flag": "🇷🇸",
+  "hasTravel": true,
+  "iso3": "SRB",
+  "landlocked": true,
+  "latitude": 44,
+  "longitude": 21,
+  "subregion": "Southeast Europe",
+  "translations": {
+   "en": {
+    "name": "Serbia",
+    "officialName": "Republic of Serbia",
+    "subregion": "Southeast Europe"
+   },
+   "es": {
+    "name": "Serbia",
+    "officialName": "República de Serbia",
+    "subregion": "Sudeste de Europa"
+   },
+   "tr": {
+    "name": "Sırbistan",
+    "officialName": "Sırbistan Cumhuriyeti",
+    "subregion": "Güneydoğu Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Russia",
+   "Russian Federation",
+   "Rusya Federasyonu",
+   "RU",
+   "Российская Федерация",
+   "RUS"
+  ],
+  "borders": [
+   "AZE",
+   "BLR",
+   "CHN",
+   "EST",
+   "FIN",
+   "GEO",
+   "KAZ",
+   "PRK",
+   "LVA",
+   "LTU",
+   "MNG",
+   "NOR",
+   "POL",
+   "UKR"
+  ],
+  "capital": [
+   "Moscow"
+  ],
+  "code": "RU",
+  "continentSlug": "europe",
+  "flag": "🇷🇺",
+  "hasTravel": true,
+  "iso3": "RUS",
+  "landlocked": false,
+  "latitude": 60,
+  "longitude": 100,
+  "subregion": "Eastern Europe",
+  "translations": {
+   "en": {
+    "name": "Russia",
+    "officialName": "Russian Federation",
+    "subregion": "Eastern Europe"
+   },
+   "es": {
+    "name": "Rusia",
+    "officialName": "Federación de Rusia",
+    "subregion": "Europa del Este"
+   },
+   "tr": {
+    "name": "Rusya",
+    "officialName": "Rusya Federasyonu",
+    "subregion": "Doğu Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Rwanda",
+   "Republic of Rwanda",
+   "Ruanda Cumhuriyeti",
+   "RW",
+   "Repubulika y'u Rwanda",
+   "République du Rwanda",
+   "RWA"
+  ],
+  "borders": [
+   "BDI",
+   "COD",
+   "TZA",
+   "UGA"
+  ],
+  "capital": [
+   "Kigali"
+  ],
+  "code": "RW",
+  "continentSlug": "africa",
+  "flag": "🇷🇼",
+  "hasTravel": false,
+  "iso3": "RWA",
+  "landlocked": true,
+  "latitude": -2,
+  "longitude": 30,
+  "subregion": "Eastern Africa",
+  "translations": {
+   "en": {
+    "name": "Rwanda",
+    "officialName": "Republic of Rwanda",
+    "subregion": "East Africa"
+   },
+   "es": {
+    "name": "Ruanda",
+    "officialName": "República de Rwanda",
+    "subregion": "África Oriental"
+   },
+   "tr": {
+    "name": "Ruanda",
+    "officialName": "Ruanda Cumhuriyeti",
+    "subregion": "Doğu Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Saudi Arabia",
+   "Kingdom of Saudi Arabia",
+   "Suudi Arabistan Krallığı",
+   "Saudi",
+   "SA",
+   "Al-Mamlakah al-‘Arabiyyah as-Su‘ūdiyyah",
+   "SAU"
+  ],
+  "borders": [
+   "IRQ",
+   "JOR",
+   "KWT",
+   "OMN",
+   "QAT",
+   "ARE",
+   "YEM"
+  ],
+  "capital": [
+   "Riyadh"
+  ],
+  "code": "SA",
+  "continentSlug": "asia",
+  "flag": "🇸🇦",
+  "hasTravel": false,
+  "iso3": "SAU",
+  "landlocked": false,
+  "latitude": 25,
+  "longitude": 45,
+  "subregion": "Western Asia",
+  "translations": {
+   "en": {
+    "name": "Saudi Arabia",
+    "officialName": "Kingdom of Saudi Arabia",
+    "subregion": "Western Asia"
+   },
+   "es": {
+    "name": "Arabia Saudí",
+    "officialName": "Reino de Arabia Saudita",
+    "subregion": "Asia Occidental"
+   },
+   "tr": {
+    "name": "Suudi Arabistan",
+    "officialName": "Suudi Arabistan Krallığı",
+    "subregion": "Batı Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Solomon Islands",
+   "SB",
+   "SLB"
+  ],
+  "borders": [],
+  "capital": [
+   "Honiara"
+  ],
+  "code": "SB",
+  "continentSlug": "oceania",
+  "flag": "🇸🇧",
+  "hasTravel": false,
+  "iso3": "SLB",
+  "landlocked": false,
+  "latitude": -8,
+  "longitude": 159,
+  "subregion": "Melanesia",
+  "translations": {
+   "en": {
+    "name": "Solomon Islands",
+    "officialName": "Solomon Islands",
+    "subregion": "Melanesia"
+   },
+   "es": {
+    "name": "Islas Salomón",
+    "officialName": "islas Salomón",
+    "subregion": "Melanesia"
+   },
+   "tr": {
+    "name": "Solomon Adaları",
+    "officialName": "Solomon Adaları",
+    "subregion": "Melanezya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Seychelles",
+   "Republic of Seychelles",
+   "Seyşeller Cumhuriyeti",
+   "SC",
+   "Repiblik Sesel",
+   "République des Seychelles",
+   "SYC"
+  ],
+  "borders": [],
+  "capital": [
+   "Victoria"
+  ],
+  "code": "SC",
+  "continentSlug": "africa",
+  "flag": "🇸🇨",
+  "hasTravel": false,
+  "iso3": "SYC",
+  "landlocked": false,
+  "latitude": -4.58333333,
+  "longitude": 55.66666666,
+  "subregion": "Eastern Africa",
+  "translations": {
+   "en": {
+    "name": "Seychelles",
+    "officialName": "Republic of Seychelles",
+    "subregion": "East Africa"
+   },
+   "es": {
+    "name": "Seychelles",
+    "officialName": "República de las Seychelles",
+    "subregion": "África Oriental"
+   },
+   "tr": {
+    "name": "Seyşeller",
+    "officialName": "Seyşeller Cumhuriyeti",
+    "subregion": "Doğu Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Republic of the Sudan",
+   "Sudan Cumhuriyeti",
+   "SD",
+   "Jumhūrīyat as-Sūdān",
+   "SDN"
+  ],
+  "borders": [
+   "CAF",
+   "TCD",
+   "EGY",
+   "ERI",
+   "ETH",
+   "LBY",
+   "SSD"
+  ],
+  "capital": [
+   "Khartoum"
+  ],
+  "code": "SD",
+  "continentSlug": "africa",
+  "flag": "🇸🇩",
+  "hasTravel": false,
+  "iso3": "SDN",
+  "landlocked": false,
+  "latitude": 15,
+  "longitude": 30,
+  "subregion": "Northern Africa",
+  "translations": {
+   "en": {
+    "name": "Sudan",
+    "officialName": "Republic of the Sudan",
+    "subregion": "North Africa"
+   },
+   "es": {
+    "name": "Sudán",
+    "officialName": "República de Sudán",
+    "subregion": "Norte de África"
+   },
+   "tr": {
+    "name": "Sudan",
+    "officialName": "Sudan Cumhuriyeti",
+    "subregion": "Kuzey Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Sweden",
+   "Kingdom of Sweden",
+   "İsveç Krallığı",
+   "SE",
+   "Konungariket Sverige",
+   "SWE"
+  ],
+  "borders": [
+   "FIN",
+   "NOR"
+  ],
+  "capital": [
+   "Stockholm"
+  ],
+  "code": "SE",
+  "continentSlug": "europe",
+  "flag": "🇸🇪",
+  "hasTravel": true,
+  "iso3": "SWE",
+  "landlocked": false,
+  "latitude": 62,
+  "longitude": 15,
+  "subregion": "Northern Europe",
+  "translations": {
+   "en": {
+    "name": "Sweden",
+    "officialName": "Kingdom of Sweden",
+    "subregion": "Northern Europe"
+   },
+   "es": {
+    "name": "Suecia",
+    "officialName": "Reino de Suecia",
+    "subregion": "Europa del Norte"
+   },
+   "tr": {
+    "name": "İsveç",
+    "officialName": "İsveç Krallığı",
+    "subregion": "Kuzey Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Singapore",
+   "Republic of Singapore",
+   "Singapur Cumhuriyeti",
+   "SG",
+   "Singapura",
+   "Republik Singapura",
+   "新加坡共和国",
+   "SGP"
+  ],
+  "borders": [],
+  "capital": [
+   "Singapore"
+  ],
+  "code": "SG",
+  "continentSlug": "asia",
+  "flag": "🇸🇬",
+  "hasTravel": false,
+  "iso3": "SGP",
+  "landlocked": false,
+  "latitude": 1.36666666,
+  "longitude": 103.8,
+  "subregion": "South-Eastern Asia",
+  "translations": {
+   "en": {
+    "name": "Singapore",
+    "officialName": "Republic of Singapore",
+    "subregion": "Southeast Asia"
+   },
+   "es": {
+    "name": "Singapur",
+    "officialName": "República de Singapur",
+    "subregion": "Sudeste Asiático"
+   },
+   "tr": {
+    "name": "Singapur",
+    "officialName": "Singapur Cumhuriyeti",
+    "subregion": "Güneydoğu Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Slovenia",
+   "Republic of Slovenia",
+   "Slovenya Cumhuriyeti",
+   "SI",
+   "Republika Slovenija",
+   "SVN"
+  ],
+  "borders": [
+   "AUT",
+   "HRV",
+   "ITA",
+   "HUN"
+  ],
+  "capital": [
+   "Ljubljana"
+  ],
+  "code": "SI",
+  "continentSlug": "europe",
+  "flag": "🇸🇮",
+  "hasTravel": true,
+  "iso3": "SVN",
+  "landlocked": false,
+  "latitude": 46.11666666,
+  "longitude": 14.81666666,
+  "subregion": "Central Europe",
+  "translations": {
+   "en": {
+    "name": "Slovenia",
+    "officialName": "Republic of Slovenia",
+    "subregion": "Central Europe"
+   },
+   "es": {
+    "name": "Eslovenia",
+    "officialName": "República de Eslovenia",
+    "subregion": "Europa Central"
+   },
+   "tr": {
+    "name": "Slovenya",
+    "officialName": "Slovenya Cumhuriyeti",
+    "subregion": "Orta Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Svalbard and Jan Mayen",
+   "Svalbard og Jan Mayen",
+   "Svalbard ve Jan Mayen",
+   "SJ",
+   "Svalbard and Jan Mayen Islands",
+   "SJM"
+  ],
+  "borders": [],
+  "capital": [
+   "Longyearbyen"
+  ],
+  "code": "SJ",
+  "continentSlug": "europe",
+  "flag": "🇸🇯",
+  "hasTravel": true,
+  "iso3": "SJM",
+  "landlocked": false,
+  "latitude": 78,
+  "longitude": 20,
+  "subregion": "Northern Europe",
+  "translations": {
+   "en": {
+    "name": "Svalbard",
+    "officialName": "Svalbard og Jan Mayen",
+    "subregion": "Northern Europe"
+   },
+   "es": {
+    "name": "Svalbard",
+    "officialName": "Svalbard og Jan Mayen",
+    "subregion": "Europa del Norte"
+   },
+   "tr": {
+    "name": "Svalbard",
+    "officialName": "Svalbard ve Jan Mayen",
+    "subregion": "Kuzey Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Slovakia",
+   "Slovak Republic",
+   "Slovak Cumhuriyeti",
+   "SK",
+   "Slovenská republika",
+   "SVK"
+  ],
+  "borders": [
+   "AUT",
+   "CZE",
+   "HUN",
+   "POL",
+   "UKR"
+  ],
+  "capital": [
+   "Bratislava"
+  ],
+  "code": "SK",
+  "continentSlug": "europe",
+  "flag": "🇸🇰",
+  "hasTravel": false,
+  "iso3": "SVK",
+  "landlocked": true,
+  "latitude": 48.66666666,
+  "longitude": 19.5,
+  "subregion": "Central Europe",
+  "translations": {
+   "en": {
+    "name": "Slovakia",
+    "officialName": "Slovak Republic",
+    "subregion": "Central Europe"
+   },
+   "es": {
+    "name": "Eslovaquia",
+    "officialName": "República Eslovaca",
+    "subregion": "Europa Central"
+   },
+   "tr": {
+    "name": "Slovakya",
+    "officialName": "Slovak Cumhuriyeti",
+    "subregion": "Orta Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Republic of Sierra Leone",
+   "Sierra Leone Cumhuriyeti",
+   "SL",
+   "SLE"
+  ],
+  "borders": [
+   "GIN",
+   "LBR"
+  ],
+  "capital": [
+   "Freetown"
+  ],
+  "code": "SL",
+  "continentSlug": "africa",
+  "flag": "🇸🇱",
+  "hasTravel": false,
+  "iso3": "SLE",
+  "landlocked": false,
+  "latitude": 8.5,
+  "longitude": -11.5,
+  "subregion": "Western Africa",
+  "translations": {
+   "en": {
+    "name": "Sierra Leone",
+    "officialName": "Republic of Sierra Leone",
+    "subregion": "West Africa"
+   },
+   "es": {
+    "name": "Sierra Leone",
+    "officialName": "República de Sierra Leona",
+    "subregion": "África Occidental"
+   },
+   "tr": {
+    "name": "Sierra Leone",
+    "officialName": "Sierra Leone Cumhuriyeti",
+    "subregion": "Batı Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Most Serene Republic of San Marino",
+   "San Marino Cumhuriyeti",
+   "SM",
+   "Republic of San Marino",
+   "Repubblica di San Marino",
+   "SMR"
+  ],
+  "borders": [
+   "ITA"
+  ],
+  "capital": [
+   "City of San Marino"
+  ],
+  "code": "SM",
+  "continentSlug": "europe",
+  "flag": "🇸🇲",
+  "hasTravel": false,
+  "iso3": "SMR",
+  "landlocked": true,
+  "latitude": 43.76666666,
+  "longitude": 12.41666666,
+  "subregion": "Southern Europe",
+  "translations": {
+   "en": {
+    "name": "San Marino",
+    "officialName": "Most Serene Republic of San Marino",
+    "subregion": "Southern Europe"
+   },
+   "es": {
+    "name": "San Marino",
+    "officialName": "Serenísima República de San Marino",
+    "subregion": "Europa del Sur"
+   },
+   "tr": {
+    "name": "San Marino",
+    "officialName": "San Marino Cumhuriyeti",
+    "subregion": "Güney Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Republic of Senegal",
+   "Senegal Cumhuriyeti",
+   "SN",
+   "République du Sénégal",
+   "SEN"
+  ],
+  "borders": [
+   "GMB",
+   "GIN",
+   "GNB",
+   "MLI",
+   "MRT"
+  ],
+  "capital": [
+   "Dakar"
+  ],
+  "code": "SN",
+  "continentSlug": "africa",
+  "flag": "🇸🇳",
+  "hasTravel": false,
+  "iso3": "SEN",
+  "landlocked": false,
+  "latitude": 14,
+  "longitude": -14,
+  "subregion": "Western Africa",
+  "translations": {
+   "en": {
+    "name": "Senegal",
+    "officialName": "Republic of Senegal",
+    "subregion": "West Africa"
+   },
+   "es": {
+    "name": "Senegal",
+    "officialName": "República de Senegal",
+    "subregion": "África Occidental"
+   },
+   "tr": {
+    "name": "Senegal",
+    "officialName": "Senegal Cumhuriyeti",
+    "subregion": "Batı Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Somalia",
+   "Federal Republic of Somalia",
+   "Somali Federal Cumhuriyeti",
+   "SO",
+   "aṣ-Ṣūmāl",
+   "Jamhuuriyadda Federaalka Soomaaliya",
+   "Jumhūriyyat aṣ-Ṣūmāl al-Fiderāliyya",
+   "SOM"
+  ],
+  "borders": [
+   "DJI",
+   "ETH",
+   "KEN"
+  ],
+  "capital": [
+   "Mogadishu"
+  ],
+  "code": "SO",
+  "continentSlug": "africa",
+  "flag": "🇸🇴",
+  "hasTravel": false,
+  "iso3": "SOM",
+  "landlocked": false,
+  "latitude": 10,
+  "longitude": 49,
+  "subregion": "Eastern Africa",
+  "translations": {
+   "en": {
+    "name": "Somalia",
+    "officialName": "Federal Republic of Somalia",
+    "subregion": "East Africa"
+   },
+   "es": {
+    "name": "Somalia",
+    "officialName": "República Federal de Somalia",
+    "subregion": "África Oriental"
+   },
+   "tr": {
+    "name": "Somali",
+    "officialName": "Somali Federal Cumhuriyeti",
+    "subregion": "Doğu Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Suriname",
+   "Republic of Suriname",
+   "Surinam Cumhuriyeti",
+   "SR",
+   "Sarnam",
+   "Sranangron",
+   "Republiek Suriname",
+   "SUR"
+  ],
+  "borders": [
+   "BRA",
+   "GUY"
+  ],
+  "capital": [
+   "Paramaribo"
+  ],
+  "code": "SR",
+  "continentSlug": "americas",
+  "flag": "🇸🇷",
+  "hasTravel": false,
+  "iso3": "SUR",
+  "landlocked": false,
+  "latitude": 4,
+  "longitude": -56,
+  "subregion": "South America",
+  "translations": {
+   "en": {
+    "name": "Suriname",
+    "officialName": "Republic of Suriname",
+    "subregion": "South America"
+   },
+   "es": {
+    "name": "Surinam",
+    "officialName": "República de Suriname",
+    "subregion": "Sudamérica"
+   },
+   "tr": {
+    "name": "Surinam",
+    "officialName": "Surinam Cumhuriyeti",
+    "subregion": "Güney Amerika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "South Sudan",
+   "Republic of South Sudan",
+   "Güney Sudan Cumhuriyeti",
+   "SS",
+   "SSD"
+  ],
+  "borders": [
+   "CAF",
+   "COD",
+   "ETH",
+   "KEN",
+   "SDN",
+   "UGA"
+  ],
+  "capital": [
+   "Juba"
+  ],
+  "code": "SS",
+  "continentSlug": "africa",
+  "flag": "🇸🇸",
+  "hasTravel": false,
+  "iso3": "SSD",
+  "landlocked": true,
+  "latitude": 7,
+  "longitude": 30,
+  "subregion": "Middle Africa",
+  "translations": {
+   "en": {
+    "name": "South Sudan",
+    "officialName": "Republic of South Sudan",
+    "subregion": "Central Africa"
+   },
+   "es": {
+    "name": "Sudán del Sur",
+    "officialName": "República de Sudán del Sur",
+    "subregion": "África Central"
+   },
+   "tr": {
+    "name": "Güney Sudan",
+    "officialName": "Güney Sudan Cumhuriyeti",
+    "subregion": "Orta Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "São Tomé and Príncipe",
+   "Democratic Republic of São Tomé and Príncipe",
+   "São Tomé ve Príncipe Demokratik Cumhuriyeti",
+   "ST",
+   "Sao Tome and Principe",
+   "República Democrática de São Tomé e Príncipe",
+   "STP"
+  ],
+  "borders": [],
+  "capital": [
+   "São Tomé"
+  ],
+  "code": "ST",
+  "continentSlug": "africa",
+  "flag": "🇸🇹",
+  "hasTravel": false,
+  "iso3": "STP",
+  "landlocked": false,
+  "latitude": 1,
+  "longitude": 7,
+  "subregion": "Middle Africa",
+  "translations": {
+   "en": {
+    "name": "São Tomé and Príncipe",
+    "officialName": "Democratic Republic of São Tomé and Príncipe",
+    "subregion": "Central Africa"
+   },
+   "es": {
+    "name": "Santo Tomé y Príncipe",
+    "officialName": "República Democrática de Santo Tomé y Príncipe",
+    "subregion": "África Central"
+   },
+   "tr": {
+    "name": "São Tomé ve Príncipe",
+    "officialName": "São Tomé ve Príncipe Demokratik Cumhuriyeti",
+    "subregion": "Orta Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Republic of El Salvador",
+   "El Salvador Cumhuriyeti",
+   "SV",
+   "República de El Salvador",
+   "SLV"
+  ],
+  "borders": [
+   "GTM",
+   "HND"
+  ],
+  "capital": [
+   "San Salvador"
+  ],
+  "code": "SV",
+  "continentSlug": "americas",
+  "flag": "🇸🇻",
+  "hasTravel": false,
+  "iso3": "SLV",
+  "landlocked": false,
+  "latitude": 13.83333333,
+  "longitude": -88.91666666,
+  "subregion": "Central America",
+  "translations": {
+   "en": {
+    "name": "El Salvador",
+    "officialName": "Republic of El Salvador",
+    "subregion": "Central America"
+   },
+   "es": {
+    "name": "El Salvador",
+    "officialName": "República de El Salvador",
+    "subregion": "Centroamérica"
+   },
+   "tr": {
+    "name": "El Salvador",
+    "officialName": "El Salvador Cumhuriyeti",
+    "subregion": "Orta Amerika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Syria",
+   "Syrian Arab Republic",
+   "Suriye Arap Cumhuriyeti",
+   "SY",
+   "Al-Jumhūrīyah Al-ʻArabīyah As-Sūrīyah",
+   "SYR"
+  ],
+  "borders": [
+   "IRQ",
+   "ISR",
+   "JOR",
+   "LBN",
+   "TUR"
+  ],
+  "capital": [
+   "Damascus"
+  ],
+  "code": "SY",
+  "continentSlug": "asia",
+  "flag": "🇸🇾",
+  "hasTravel": false,
+  "iso3": "SYR",
+  "landlocked": false,
+  "latitude": 35,
+  "longitude": 38,
+  "subregion": "Western Asia",
+  "translations": {
+   "en": {
+    "name": "Syria",
+    "officialName": "Syrian Arab Republic",
+    "subregion": "Western Asia"
+   },
+   "es": {
+    "name": "Siria",
+    "officialName": "República Árabe Siria",
+    "subregion": "Asia Occidental"
+   },
+   "tr": {
+    "name": "Suriye",
+    "officialName": "Suriye Arap Cumhuriyeti",
+    "subregion": "Batı Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Eswatini",
+   "Kingdom of Eswatini",
+   "Esvatini Krallığı",
+   "SZ",
+   "Swaziland",
+   "weSwatini",
+   "Swatini",
+   "Ngwane",
+   "Umbuso weSwatini",
+   "SWZ"
+  ],
+  "borders": [
+   "MOZ",
+   "ZAF"
+  ],
+  "capital": [
+   "Lobamba"
+  ],
+  "code": "SZ",
+  "continentSlug": "africa",
+  "flag": "🇸🇿",
+  "hasTravel": false,
+  "iso3": "SWZ",
+  "landlocked": true,
+  "latitude": -26.5,
+  "longitude": 31.5,
+  "subregion": "Southern Africa",
+  "translations": {
+   "en": {
+    "name": "Eswatini",
+    "officialName": "Kingdom of Eswatini",
+    "subregion": "Southern Africa"
+   },
+   "es": {
+    "name": "Suazilandia",
+    "officialName": "Reino de eSwatini",
+    "subregion": "África Austral"
+   },
+   "tr": {
+    "name": "Esvatini",
+    "officialName": "Esvatini Krallığı",
+    "subregion": "Güney Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Chad",
+   "Republic of Chad",
+   "çad Cumhuriyeti",
+   "TD",
+   "Tchad",
+   "République du Tchad",
+   "TCD"
+  ],
+  "borders": [
+   "CMR",
+   "CAF",
+   "LBY",
+   "NER",
+   "NGA",
+   "SDN"
+  ],
+  "capital": [
+   "N'Djamena"
+  ],
+  "code": "TD",
+  "continentSlug": "africa",
+  "flag": "🇹🇩",
+  "hasTravel": false,
+  "iso3": "TCD",
+  "landlocked": true,
+  "latitude": 15,
+  "longitude": 19,
+  "subregion": "Middle Africa",
+  "translations": {
+   "en": {
+    "name": "Chad",
+    "officialName": "Republic of Chad",
+    "subregion": "Central Africa"
+   },
+   "es": {
+    "name": "Chad",
+    "officialName": "República de Chad",
+    "subregion": "África Central"
+   },
+   "tr": {
+    "name": "Çad",
+    "officialName": "Çad Cumhuriyeti",
+    "subregion": "Orta Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Togolese Republic",
+   "Togo Cumhuriyeti",
+   "TG",
+   "Togolese",
+   "République Togolaise",
+   "TGO"
+  ],
+  "borders": [
+   "BEN",
+   "BFA",
+   "GHA"
+  ],
+  "capital": [
+   "Lomé"
+  ],
+  "code": "TG",
+  "continentSlug": "africa",
+  "flag": "🇹🇬",
+  "hasTravel": false,
+  "iso3": "TGO",
+  "landlocked": false,
+  "latitude": 8,
+  "longitude": 1.16666666,
+  "subregion": "Western Africa",
+  "translations": {
+   "en": {
+    "name": "Togo",
+    "officialName": "Togolese Republic",
+    "subregion": "West Africa"
+   },
+   "es": {
+    "name": "Togo",
+    "officialName": "República de Togo",
+    "subregion": "África Occidental"
+   },
+   "tr": {
+    "name": "Togo",
+    "officialName": "Togo Cumhuriyeti",
+    "subregion": "Batı Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Thailand",
+   "Kingdom of Thailand",
+   "Tayland Krallığı",
+   "TH",
+   "Prathet",
+   "Thai",
+   "ราชอาณาจักรไทย",
+   "Ratcha Anachak Thai",
+   "THA"
+  ],
+  "borders": [
+   "MMR",
+   "KHM",
+   "LAO",
+   "MYS"
+  ],
+  "capital": [
+   "Bangkok"
+  ],
+  "code": "TH",
+  "continentSlug": "asia",
+  "flag": "🇹🇭",
+  "hasTravel": true,
+  "iso3": "THA",
+  "landlocked": false,
+  "latitude": 15,
+  "longitude": 100,
+  "subregion": "South-Eastern Asia",
+  "translations": {
+   "en": {
+    "name": "Thailand",
+    "officialName": "Kingdom of Thailand",
+    "subregion": "Southeast Asia"
+   },
+   "es": {
+    "name": "Tailandia",
+    "officialName": "Reino de Tailandia",
+    "subregion": "Sudeste Asiático"
+   },
+   "tr": {
+    "name": "Tayland",
+    "officialName": "Tayland Krallığı",
+    "subregion": "Güneydoğu Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Tajikistan",
+   "Republic of Tajikistan",
+   "Tacikistan Cumhuriyeti",
+   "TJ",
+   "Toçikiston",
+   "Ҷумҳурии Тоҷикистон",
+   "Çumhuriyi Toçikiston",
+   "TJK"
+  ],
+  "borders": [
+   "AFG",
+   "CHN",
+   "KGZ",
+   "UZB"
+  ],
+  "capital": [
+   "Dushanbe"
+  ],
+  "code": "TJ",
+  "continentSlug": "asia",
+  "flag": "🇹🇯",
+  "hasTravel": false,
+  "iso3": "TJK",
+  "landlocked": true,
+  "latitude": 39,
+  "longitude": 71,
+  "subregion": "Central Asia",
+  "translations": {
+   "en": {
+    "name": "Tajikistan",
+    "officialName": "Republic of Tajikistan",
+    "subregion": "Central Asia"
+   },
+   "es": {
+    "name": "Tayikistán",
+    "officialName": "República de Tayikistán",
+    "subregion": "Asia Central"
+   },
+   "tr": {
+    "name": "Tacikistan",
+    "officialName": "Tacikistan Cumhuriyeti",
+    "subregion": "Orta Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Timor-Leste",
+   "Democratic Republic of Timor-Leste",
+   "Doğu Timor Demokratik Cumhuriyeti",
+   "TL",
+   "East Timor",
+   "Timor",
+   "República Democrática de Timor-Leste",
+   "Repúblika Demokrátika Timór-Leste",
+   "Timór Lorosa'e",
+   "Timor Lorosae",
+   "TLS"
+  ],
+  "borders": [
+   "IDN"
+  ],
+  "capital": [
+   "Dili"
+  ],
+  "code": "TL",
+  "continentSlug": "asia",
+  "flag": "🇹🇱",
+  "hasTravel": false,
+  "iso3": "TLS",
+  "landlocked": false,
+  "latitude": -8.83333333,
+  "longitude": 125.91666666,
+  "subregion": "South-Eastern Asia",
+  "translations": {
+   "en": {
+    "name": "Timor-Leste",
+    "officialName": "Democratic Republic of Timor-Leste",
+    "subregion": "Southeast Asia"
+   },
+   "es": {
+    "name": "Timor Oriental",
+    "officialName": "República Democrática de Timor-Leste",
+    "subregion": "Sudeste Asiático"
+   },
+   "tr": {
+    "name": "Doğu Timor",
+    "officialName": "Doğu Timor Demokratik Cumhuriyeti",
+    "subregion": "Güneydoğu Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Turkmenistan",
+   "TM",
+   "TKM"
+  ],
+  "borders": [
+   "AFG",
+   "IRN",
+   "KAZ",
+   "UZB"
+  ],
+  "capital": [
+   "Ashgabat"
+  ],
+  "code": "TM",
+  "continentSlug": "asia",
+  "flag": "🇹🇲",
+  "hasTravel": false,
+  "iso3": "TKM",
+  "landlocked": true,
+  "latitude": 40,
+  "longitude": 60,
+  "subregion": "Central Asia",
+  "translations": {
+   "en": {
+    "name": "Turkmenistan",
+    "officialName": "Turkmenistan",
+    "subregion": "Central Asia"
+   },
+   "es": {
+    "name": "Turkmenistán",
+    "officialName": "Turkmenistán",
+    "subregion": "Asia Central"
+   },
+   "tr": {
+    "name": "Türkmenistan",
+    "officialName": "Türkmenistan",
+    "subregion": "Orta Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Tunisia",
+   "Tunisian Republic",
+   "Tunus Cumhuriyeti",
+   "TN",
+   "Republic of Tunisia",
+   "al-Jumhūriyyah at-Tūnisiyyah",
+   "TUN"
+  ],
+  "borders": [
+   "DZA",
+   "LBY"
+  ],
+  "capital": [
+   "Tunis"
+  ],
+  "code": "TN",
+  "continentSlug": "africa",
+  "flag": "🇹🇳",
+  "hasTravel": false,
+  "iso3": "TUN",
+  "landlocked": false,
+  "latitude": 34,
+  "longitude": 9,
+  "subregion": "Northern Africa",
+  "translations": {
+   "en": {
+    "name": "Tunisia",
+    "officialName": "Tunisian Republic",
+    "subregion": "North Africa"
+   },
+   "es": {
+    "name": "Túnez",
+    "officialName": "República de Túnez",
+    "subregion": "Norte de África"
+   },
+   "tr": {
+    "name": "Tunus",
+    "officialName": "Tunus Cumhuriyeti",
+    "subregion": "Kuzey Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Kingdom of Tonga",
+   "Tonga Krallığı",
+   "TO",
+   "TON"
+  ],
+  "borders": [],
+  "capital": [
+   "Nuku'alofa"
+  ],
+  "code": "TO",
+  "continentSlug": "oceania",
+  "flag": "🇹🇴",
+  "hasTravel": false,
+  "iso3": "TON",
+  "landlocked": false,
+  "latitude": -20,
+  "longitude": -175,
+  "subregion": "Polynesia",
+  "translations": {
+   "en": {
+    "name": "Tonga",
+    "officialName": "Kingdom of Tonga",
+    "subregion": "Polynesia"
+   },
+   "es": {
+    "name": "Tonga",
+    "officialName": "Reino de Tonga",
+    "subregion": "Polinesia"
+   },
+   "tr": {
+    "name": "Tonga",
+    "officialName": "Tonga Krallığı",
+    "subregion": "Polinezya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Republic of Türkiye",
+   "Türkiye Cumhuriyeti",
+   "TR",
+   "Turkiye",
+   "Republic of Turkey",
+   "TUR"
+  ],
+  "borders": [
+   "ARM",
+   "AZE",
+   "BGR",
+   "GEO",
+   "GRC",
+   "IRN",
+   "IRQ",
+   "SYR"
+  ],
+  "capital": [
+   "Ankara"
+  ],
+  "code": "TR",
+  "continentSlug": "europe",
+  "flag": "🇹🇷",
+  "hasTravel": true,
+  "iso3": "TUR",
+  "landlocked": false,
+  "latitude": 39,
+  "longitude": 35,
+  "subregion": "Western Asia",
+  "translations": {
+   "en": {
+    "name": "Türkiye",
+    "officialName": "Republic of Türkiye",
+    "subregion": "Western Asia"
+   },
+   "es": {
+    "name": "Turquía",
+    "officialName": "República de Turquía",
+    "subregion": "Asia Occidental"
+   },
+   "tr": {
+    "name": "Türkiye",
+    "officialName": "Türkiye Cumhuriyeti",
+    "subregion": "Batı Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Trinidad and Tobago",
+   "Republic of Trinidad and Tobago",
+   "Trinidad ve Tobago Cumhuriyeti",
+   "TT",
+   "TTO"
+  ],
+  "borders": [],
+  "capital": [
+   "Port of Spain"
+  ],
+  "code": "TT",
+  "continentSlug": "americas",
+  "flag": "🇹🇹",
+  "hasTravel": false,
+  "iso3": "TTO",
+  "landlocked": false,
+  "latitude": 11,
+  "longitude": -61,
+  "subregion": "Caribbean",
+  "translations": {
+   "en": {
+    "name": "Trinidad and Tobago",
+    "officialName": "Republic of Trinidad and Tobago",
+    "subregion": "Caribbean"
+   },
+   "es": {
+    "name": "Trinidad y Tobago",
+    "officialName": "República de Trinidad y Tobago",
+    "subregion": "Caribe"
+   },
+   "tr": {
+    "name": "Trinidad ve Tobago",
+    "officialName": "Trinidad ve Tobago Cumhuriyeti",
+    "subregion": "Karayipler"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "TV",
+   "TUV"
+  ],
+  "borders": [],
+  "capital": [
+   "Funafuti"
+  ],
+  "code": "TV",
+  "continentSlug": "oceania",
+  "flag": "🇹🇻",
+  "hasTravel": false,
+  "iso3": "TUV",
+  "landlocked": false,
+  "latitude": -8,
+  "longitude": 178,
+  "subregion": "Polynesia",
+  "translations": {
+   "en": {
+    "name": "Tuvalu",
+    "officialName": "Tuvalu",
+    "subregion": "Polynesia"
+   },
+   "es": {
+    "name": "Tuvalu",
+    "officialName": "Tuvalu",
+    "subregion": "Polinesia"
+   },
+   "tr": {
+    "name": "Tuvalu",
+    "officialName": "Tuvalu",
+    "subregion": "Polinezya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Tanzania",
+   "United Republic of Tanzania",
+   "Tanzanya Birleşik Cumhuriyeti",
+   "TZ",
+   "Tanzania, United Republic of",
+   "Jamhuri ya Muungano wa Tanzania",
+   "TZA"
+  ],
+  "borders": [
+   "BDI",
+   "COD",
+   "KEN",
+   "MWI",
+   "MOZ",
+   "RWA",
+   "UGA",
+   "ZMB"
+  ],
+  "capital": [
+   "Dodoma"
+  ],
+  "code": "TZ",
+  "continentSlug": "africa",
+  "flag": "🇹🇿",
+  "hasTravel": false,
+  "iso3": "TZA",
+  "landlocked": false,
+  "latitude": -6,
+  "longitude": 35,
+  "subregion": "Eastern Africa",
+  "translations": {
+   "en": {
+    "name": "Tanzania",
+    "officialName": "United Republic of Tanzania",
+    "subregion": "East Africa"
+   },
+   "es": {
+    "name": "Tanzania",
+    "officialName": "República Unida de Tanzania",
+    "subregion": "África Oriental"
+   },
+   "tr": {
+    "name": "Tanzanya",
+    "officialName": "Tanzanya Birleşik Cumhuriyeti",
+    "subregion": "Doğu Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Ukraine",
+   "UA",
+   "Ukrayina",
+   "UKR"
+  ],
+  "borders": [
+   "BLR",
+   "HUN",
+   "MDA",
+   "POL",
+   "ROU",
+   "RUS",
+   "SVK"
+  ],
+  "capital": [
+   "Kyiv"
+  ],
+  "code": "UA",
+  "continentSlug": "europe",
+  "flag": "🇺🇦",
+  "hasTravel": false,
+  "iso3": "UKR",
+  "landlocked": false,
+  "latitude": 49,
+  "longitude": 32,
+  "subregion": "Eastern Europe",
+  "translations": {
+   "en": {
+    "name": "Ukraine",
+    "officialName": "Ukraine",
+    "subregion": "Eastern Europe"
+   },
+   "es": {
+    "name": "Ucrania",
+    "officialName": "Ucrania",
+    "subregion": "Europa del Este"
+   },
+   "tr": {
+    "name": "Ukrayna",
+    "officialName": "Ukrayna",
+    "subregion": "Doğu Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Republic of Uganda",
+   "Uganda Cumhuriyeti",
+   "UG",
+   "Jamhuri ya Uganda",
+   "UGA"
+  ],
+  "borders": [
+   "COD",
+   "KEN",
+   "RWA",
+   "SSD",
+   "TZA"
+  ],
+  "capital": [
+   "Kampala"
+  ],
+  "code": "UG",
+  "continentSlug": "africa",
+  "flag": "🇺🇬",
+  "hasTravel": false,
+  "iso3": "UGA",
+  "landlocked": true,
+  "latitude": 1,
+  "longitude": 32,
+  "subregion": "Eastern Africa",
+  "translations": {
+   "en": {
+    "name": "Uganda",
+    "officialName": "Republic of Uganda",
+    "subregion": "East Africa"
+   },
+   "es": {
+    "name": "Uganda",
+    "officialName": "República de Uganda",
+    "subregion": "África Oriental"
+   },
+   "tr": {
+    "name": "Uganda",
+    "officialName": "Uganda Cumhuriyeti",
+    "subregion": "Doğu Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "United States",
+   "United States of America",
+   "US",
+   "USA"
+  ],
+  "borders": [
+   "CAN",
+   "MEX"
+  ],
+  "capital": [
+   "Washington D.C."
+  ],
+  "code": "US",
+  "continentSlug": "americas",
+  "flag": "🇺🇸",
+  "hasTravel": true,
+  "iso3": "USA",
+  "landlocked": false,
+  "latitude": 38,
+  "longitude": -97,
+  "subregion": "North America",
+  "translations": {
+   "en": {
+    "name": "United States",
+    "officialName": "United States of America",
+    "subregion": "North America"
+   },
+   "es": {
+    "name": "Estados Unidos",
+    "officialName": "Estados Unidos de América",
+    "subregion": "Norteamérica"
+   },
+   "tr": {
+    "name": "Amerika Birleşik Devletleri",
+    "officialName": "Amerika Birleşik Devletleri",
+    "subregion": "Kuzey Amerika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Oriental Republic of Uruguay",
+   "Uruguay Doğu Cumhuriyeti",
+   "UY",
+   "República Oriental del Uruguay",
+   "URY"
+  ],
+  "borders": [
+   "ARG",
+   "BRA"
+  ],
+  "capital": [
+   "Montevideo"
+  ],
+  "code": "UY",
+  "continentSlug": "americas",
+  "flag": "🇺🇾",
+  "hasTravel": false,
+  "iso3": "URY",
+  "landlocked": false,
+  "latitude": -33,
+  "longitude": -56,
+  "subregion": "South America",
+  "translations": {
+   "en": {
+    "name": "Uruguay",
+    "officialName": "Oriental Republic of Uruguay",
+    "subregion": "South America"
+   },
+   "es": {
+    "name": "Uruguay",
+    "officialName": "República Oriental del Uruguay",
+    "subregion": "Sudamérica"
+   },
+   "tr": {
+    "name": "Uruguay",
+    "officialName": "Uruguay Doğu Cumhuriyeti",
+    "subregion": "Güney Amerika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Uzbekistan",
+   "Republic of Uzbekistan",
+   "özbekistan Cumhuriyeti",
+   "UZ",
+   "O‘zbekiston Respublikasi",
+   "Ўзбекистон Республикаси",
+   "UZB"
+  ],
+  "borders": [
+   "AFG",
+   "KAZ",
+   "KGZ",
+   "TJK",
+   "TKM"
+  ],
+  "capital": [
+   "Tashkent"
+  ],
+  "code": "UZ",
+  "continentSlug": "asia",
+  "flag": "🇺🇿",
+  "hasTravel": false,
+  "iso3": "UZB",
+  "landlocked": true,
+  "latitude": 41,
+  "longitude": 64,
+  "subregion": "Central Asia",
+  "translations": {
+   "en": {
+    "name": "Uzbekistan",
+    "officialName": "Republic of Uzbekistan",
+    "subregion": "Central Asia"
+   },
+   "es": {
+    "name": "Uzbekistán",
+    "officialName": "República de Uzbekistán",
+    "subregion": "Asia Central"
+   },
+   "tr": {
+    "name": "Özbekistan",
+    "officialName": "Özbekistan Cumhuriyeti",
+    "subregion": "Orta Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Vatican City",
+   "Vatican City State",
+   "Vatikan şehir Devleti",
+   "VA",
+   "Holy See (Vatican City State)",
+   "Vatican",
+   "Stato della Città del Vaticano",
+   "VAT"
+  ],
+  "borders": [
+   "ITA"
+  ],
+  "capital": [
+   "Vatican City"
+  ],
+  "code": "VA",
+  "continentSlug": "europe",
+  "flag": "🇻🇦",
+  "hasTravel": false,
+  "iso3": "VAT",
+  "landlocked": true,
+  "latitude": 41.9,
+  "longitude": 12.45,
+  "subregion": "Southern Europe",
+  "translations": {
+   "en": {
+    "name": "Vatican City",
+    "officialName": "Vatican City State",
+    "subregion": "Southern Europe"
+   },
+   "es": {
+    "name": "Ciudad del Vaticano",
+    "officialName": "Ciudad del Vaticano",
+    "subregion": "Europa del Sur"
+   },
+   "tr": {
+    "name": "Vatikan",
+    "officialName": "Vatikan şehir Devleti",
+    "subregion": "Güney Avrupa"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Saint Vincent and the Grenadines",
+   "VC",
+   "VCT"
+  ],
+  "borders": [],
+  "capital": [
+   "Kingstown"
+  ],
+  "code": "VC",
+  "continentSlug": "americas",
+  "flag": "🇻🇨",
+  "hasTravel": false,
+  "iso3": "VCT",
+  "landlocked": false,
+  "latitude": 13.25,
+  "longitude": -61.2,
+  "subregion": "Caribbean",
+  "translations": {
+   "en": {
+    "name": "Saint Vincent and the Grenadines",
+    "officialName": "Saint Vincent and the Grenadines",
+    "subregion": "Caribbean"
+   },
+   "es": {
+    "name": "San Vicente y Granadinas",
+    "officialName": "San Vicente y las Granadinas",
+    "subregion": "Caribe"
+   },
+   "tr": {
+    "name": "Saint Vincent ve Grenadinler",
+    "officialName": "Saint Vincent ve Grenadinler",
+    "subregion": "Karayipler"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Bolivarian Republic of Venezuela",
+   "Bolivarcı Venezuela Cumhuriyeti",
+   "VE",
+   "Venezuela, Bolivarian Republic of",
+   "República Bolivariana de Venezuela",
+   "VEN"
+  ],
+  "borders": [
+   "BRA",
+   "COL",
+   "GUY"
+  ],
+  "capital": [
+   "Caracas"
+  ],
+  "code": "VE",
+  "continentSlug": "americas",
+  "flag": "🇻🇪",
+  "hasTravel": false,
+  "iso3": "VEN",
+  "landlocked": false,
+  "latitude": 8,
+  "longitude": -66,
+  "subregion": "South America",
+  "translations": {
+   "en": {
+    "name": "Venezuela",
+    "officialName": "Bolivarian Republic of Venezuela",
+    "subregion": "South America"
+   },
+   "es": {
+    "name": "Venezuela",
+    "officialName": "República Bolivariana de Venezuela",
+    "subregion": "Sudamérica"
+   },
+   "tr": {
+    "name": "Venezuela",
+    "officialName": "Bolivarcı Venezuela Cumhuriyeti",
+    "subregion": "Güney Amerika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Socialist Republic of Vietnam",
+   "Vietnam Sosyalist Cumhuriyeti",
+   "VN",
+   "Cộng hòa Xã hội chủ nghĩa Việt Nam",
+   "Viet Nam",
+   "VNM"
+  ],
+  "borders": [
+   "KHM",
+   "CHN",
+   "LAO"
+  ],
+  "capital": [
+   "Hanoi"
+  ],
+  "code": "VN",
+  "continentSlug": "asia",
+  "flag": "🇻🇳",
+  "hasTravel": true,
+  "iso3": "VNM",
+  "landlocked": false,
+  "latitude": 16.16666666,
+  "longitude": 107.83333333,
+  "subregion": "South-Eastern Asia",
+  "translations": {
+   "en": {
+    "name": "Vietnam",
+    "officialName": "Socialist Republic of Vietnam",
+    "subregion": "Southeast Asia"
+   },
+   "es": {
+    "name": "Vietnam",
+    "officialName": "República Socialista de Vietnam",
+    "subregion": "Sudeste Asiático"
+   },
+   "tr": {
+    "name": "Vietnam",
+    "officialName": "Vietnam Sosyalist Cumhuriyeti",
+    "subregion": "Güneydoğu Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Republic of Vanuatu",
+   "Vanuatu Cumhuriyeti",
+   "VU",
+   "Ripablik blong Vanuatu",
+   "République de Vanuatu",
+   "VUT"
+  ],
+  "borders": [],
+  "capital": [
+   "Port Vila"
+  ],
+  "code": "VU",
+  "continentSlug": "oceania",
+  "flag": "🇻🇺",
+  "hasTravel": false,
+  "iso3": "VUT",
+  "landlocked": false,
+  "latitude": -16,
+  "longitude": 167,
+  "subregion": "Melanesia",
+  "translations": {
+   "en": {
+    "name": "Vanuatu",
+    "officialName": "Republic of Vanuatu",
+    "subregion": "Melanesia"
+   },
+   "es": {
+    "name": "Vanuatu",
+    "officialName": "República de Vanuatu",
+    "subregion": "Melanesia"
+   },
+   "tr": {
+    "name": "Vanuatu",
+    "officialName": "Vanuatu Cumhuriyeti",
+    "subregion": "Melanezya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Samoa",
+   "Independent State of Samoa",
+   "WS",
+   "Malo Saʻoloto Tutoʻatasi o Sāmoa",
+   "WSM"
+  ],
+  "borders": [],
+  "capital": [
+   "Apia"
+  ],
+  "code": "WS",
+  "continentSlug": "oceania",
+  "flag": "🇼🇸",
+  "hasTravel": false,
+  "iso3": "WSM",
+  "landlocked": false,
+  "latitude": -13.58333333,
+  "longitude": -172.33333333,
+  "subregion": "Polynesia",
+  "translations": {
+   "en": {
+    "name": "Samoa",
+    "officialName": "Independent State of Samoa",
+    "subregion": "Polynesia"
+   },
+   "es": {
+    "name": "Samoa",
+    "officialName": "Estado Independiente de Samoa",
+    "subregion": "Polinesia"
+   },
+   "tr": {
+    "name": "Bağımsız Samoa Devleti",
+    "officialName": "Bağımsız Samoa Devleti",
+    "subregion": "Polinezya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Republic of Yemen",
+   "Yemen Cumhuriyeti",
+   "YE",
+   "Yemeni Republic",
+   "al-Jumhūriyyah al-Yamaniyyah",
+   "YEM"
+  ],
+  "borders": [
+   "OMN",
+   "SAU"
+  ],
+  "capital": [
+   "Sana'a"
+  ],
+  "code": "YE",
+  "continentSlug": "asia",
+  "flag": "🇾🇪",
+  "hasTravel": false,
+  "iso3": "YEM",
+  "landlocked": false,
+  "latitude": 15,
+  "longitude": 48,
+  "subregion": "Western Asia",
+  "translations": {
+   "en": {
+    "name": "Yemen",
+    "officialName": "Republic of Yemen",
+    "subregion": "Western Asia"
+   },
+   "es": {
+    "name": "Yemen",
+    "officialName": "República de Yemen",
+    "subregion": "Asia Occidental"
+   },
+   "tr": {
+    "name": "Yemen",
+    "officialName": "Yemen Cumhuriyeti",
+    "subregion": "Batı Asya"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "South Africa",
+   "Republic of South Africa",
+   "Güney Afrika Cumhuriyeti",
+   "ZA",
+   "RSA",
+   "Suid-Afrika",
+   "ZAF"
+  ],
+  "borders": [
+   "BWA",
+   "LSO",
+   "MOZ",
+   "NAM",
+   "SWZ",
+   "ZWE"
+  ],
+  "capital": [
+   "Pretoria",
+   "Bloemfontein",
+   "Cape Town"
+  ],
+  "code": "ZA",
+  "continentSlug": "africa",
+  "flag": "🇿🇦",
+  "hasTravel": false,
+  "iso3": "ZAF",
+  "landlocked": false,
+  "latitude": -29,
+  "longitude": 24,
+  "subregion": "Southern Africa",
+  "translations": {
+   "en": {
+    "name": "South Africa",
+    "officialName": "Republic of South Africa",
+    "subregion": "Southern Africa"
+   },
+   "es": {
+    "name": "Sudáfrica",
+    "officialName": "República de Sudáfrica",
+    "subregion": "África Austral"
+   },
+   "tr": {
+    "name": "Güney Afrika",
+    "officialName": "Güney Afrika Cumhuriyeti",
+    "subregion": "Güney Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Zambia",
+   "Republic of Zambia",
+   "Zambiya Cumhuriyeti",
+   "ZM",
+   "ZMB"
+  ],
+  "borders": [
+   "AGO",
+   "BWA",
+   "COD",
+   "MWI",
+   "MOZ",
+   "NAM",
+   "TZA",
+   "ZWE"
+  ],
+  "capital": [
+   "Lusaka"
+  ],
+  "code": "ZM",
+  "continentSlug": "africa",
+  "flag": "🇿🇲",
+  "hasTravel": false,
+  "iso3": "ZMB",
+  "landlocked": true,
+  "latitude": -15,
+  "longitude": 30,
+  "subregion": "Eastern Africa",
+  "translations": {
+   "en": {
+    "name": "Zambia",
+    "officialName": "Republic of Zambia",
+    "subregion": "East Africa"
+   },
+   "es": {
+    "name": "Zambia",
+    "officialName": "República de Zambia",
+    "subregion": "África Oriental"
+   },
+   "tr": {
+    "name": "Zambiya",
+    "officialName": "Zambiya Cumhuriyeti",
+    "subregion": "Doğu Afrika"
+   }
+  }
+ },
+ {
+  "aliases": [
+   "Zimbabwe",
+   "Republic of Zimbabwe",
+   "Zimbabve Cumhuriyeti",
+   "ZW",
+   "ZWE"
+  ],
+  "borders": [
+   "BWA",
+   "MOZ",
+   "ZAF",
+   "ZMB"
+  ],
+  "capital": [
+   "Harare"
+  ],
+  "code": "ZW",
+  "continentSlug": "africa",
+  "flag": "🇿🇼",
+  "hasTravel": false,
+  "iso3": "ZWE",
+  "landlocked": true,
+  "latitude": -20,
+  "longitude": 30,
+  "subregion": "Eastern Africa",
+  "translations": {
+   "en": {
+    "name": "Zimbabwe",
+    "officialName": "Republic of Zimbabwe",
+    "subregion": "East Africa"
+   },
+   "es": {
+    "name": "Zimbabue",
+    "officialName": "República de Zimbabue",
+    "subregion": "África Oriental"
+   },
+   "tr": {
+    "name": "Zimbabve",
+    "officialName": "Zimbabve Cumhuriyeti",
+    "subregion": "Doğu Afrika"
+   }
+  }
+ }
+]

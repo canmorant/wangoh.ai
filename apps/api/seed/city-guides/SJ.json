@@ -1,0 +1,889 @@
+{
+ "countryCode": "SJ",
+ "guides": [
+  {
+   "citySlug": "longyearbyen",
+   "completeLangs": [
+    "en",
+    "es"
+   ],
+   "reviewed": true,
+   "translations": {
+    "en": {
+     "dietary": {
+      "halal": [
+       {
+        "area": "Svalbard Hotell",
+        "category": "halal",
+        "cuisine": "Nordic and international",
+        "description": "A hotel restaurant you can plan around with fish and plant-based dishes discussed in advance.",
+        "lastVerified": "2026-08-12",
+        "name": "Restaurant Polfareren",
+        "verification": {
+         "note": "No halal certificate or halal meat verification was found; alcohol is served. Consider it only by confirming plain fish or vegan ingredients, sauces and the shared kitchen in writing.",
+         "sourceName": "HalalTrip guide for Muslim travellers in Longyearbyen",
+         "sourceType": "specialist-directory",
+         "sourceUrl": "https://www.halaltrip.com/city-guide-details/614/longyearbyen/",
+         "status": "verification-recommended"
+        },
+        "why": "As there is no certified halal restaurant on the island, only as a meal-planning alternative where ingredients can be confirmed in writing in advance."
+       }
+      ],
+      "researchNote": "No verified halal restaurant was found in Longyearbyen; for strict halal needs, the safest plan is to bring certified packaged food and self-cater.",
+      "vegan": [
+       {
+        "area": "Lompensenteret",
+        "category": "vegan",
+        "cuisine": "Café and bakery",
+        "description": "A central café whose official description says it offers food and cake options without egg, meat or dairy.",
+        "lastVerified": "2026-08-12",
+        "name": "Fruene",
+        "verification": {
+         "note": "The venue's plant-based coverage was checked in the directory; reconfirm the menu and opening days before booking.",
+         "sourceName": "Fruene's official statement on vegan options",
+         "sourceType": "restaurant",
+         "sourceUrl": "https://fruene.no/en/contact/",
+         "status": "vegan-options"
+        },
+        "why": "On Longyearbyen's limited scene, it offers vegan options that can be verified on the business's own page."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Svalbard is a visa-free zone, but as flights connect through mainland Norway, travellers whose nationality requires a Schengen visa need a valid one.",
+       "q": "Do you need a visa to go to Svalbard?"
+      }
+     ],
+     "h1": "Longyearbyen Travel Guide",
+     "itinerary": [
+      {
+       "afternoon": "A visit to the Svalbard Museum and preparing your polar gear.",
+       "evening": "An Arctic dinner at a local restaurant and an aurora hunt.",
+       "morning": "Arrival on a flight from Oslo/Tromsø, checking into your hotel and a walk along the main street.",
+       "title": "Day 1 — The town and the museum"
+      }
+     ],
+     "lede": "Longyearbyen, the world's northernmost civilian settlement, is an extraordinary Arctic oasis with painted wooden houses, endless snowy valleys and a sky that glows beneath the polar night.",
+     "places": [
+      {
+       "area": "Town centre",
+       "known": "Polar history and nature",
+       "name": "Svalbard Museum",
+       "price": "Orta",
+       "why": "An award-winning museum covering the archipelago's fauna and its mining and exploration history."
+      },
+      {
+       "area": "Platåberget, outer area",
+       "known": "The 'Doomsday Vault'",
+       "name": "Svalbard Global Seed Vault",
+       "price": "Ekonomik",
+       "tip": "The interior is closed to visitors; tours stop outside for photos.",
+       "why": "The global seed vault protecting the world's plant diversity (seen from the outside)."
+      }
+     ],
+     "practicalTips": [
+      {
+       "body": "Taking off your shoes when entering hotels, restaurants and museums is a local tradition left over from the mining days.",
+       "title": "The tradition of removing shoes"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Latitude",
+       "value": "78.2232° N"
+      },
+      {
+       "label": "Population",
+       "value": "~2,400"
+      },
+      {
+       "label": "Currency",
+       "value": "Norwegian krone (NOK)"
+      },
+      {
+       "label": "Airport",
+       "value": "Svalbard Airport (LYR)"
+      },
+      {
+       "label": "Polar night",
+       "value": "26 October – 15 February"
+      }
+     ],
+     "reviewedAt": "2026-08-13",
+     "sections": [
+      {
+       "body": [
+        "Longyearbyen is the administrative centre and main gateway of the Svalbard archipelago, which belongs to Norway. Svalbard Airport (LYR) is easily reached on SAS and Norwegian flights via Tromsø or Oslo.",
+        "There is a passport check (Svalbard is not in the Schengen area). Svalbard itself has no visa requirement, but because you transit through mainland Norway, travellers whose nationality requires a Schengen visa need a valid one."
+       ],
+       "heading": "Where is Longyearbyen and how do you get there?",
+       "id": "nedir-ve-ulasim"
+      },
+      {
+       "body": [
+        "From mid-November to mid-February, Longyearbyen experiences 24-hour darkness (the polar night). During this period the Northern Lights (Aurora Borealis) can be seen even in the daytime.",
+        "From mid-April to the end of August, the sun doesn't set for 24 hours (the midnight sun). Spring and summer are the ideal seasons for nature walks, fjord tours and ice climbing."
+       ],
+       "heading": "Polar night and the midnight sun",
+       "id": "iklim-ve-isik"
+      }
+     ],
+     "seoDescription": "How to get to Longyearbyen, polar night and the midnight sun, the Svalbard Museum, the Global Seed Vault, local customs like removing your shoes, and tours.",
+     "seoTitle": "Longyearbyen Travel Guide: Svalbard's Northernmost Town"
+    },
+    "es": {
+     "dietary": {
+      "halal": [
+       {
+        "area": "Svalbard Hotell",
+        "category": "halal",
+        "cuisine": "Nórdica e internacional",
+        "description": "Restaurante de hotel con el que se puede planificar con pescado y platos vegetales acordados de antemano.",
+        "lastVerified": "2026-08-12",
+        "name": "Restaurant Polfareren",
+        "verification": {
+         "note": "No se encontró ningún certificado halal ni verificación de carne halal; se sirve alcohol. Considéralo solo confirmando por escrito los ingredientes de un plato de pescado sencillo o vegano, las salsas y si la cocina es compartida.",
+         "sourceName": "HalalTrip, guía de Longyearbyen para viajeros musulmanes",
+         "sourceType": "specialist-directory",
+         "sourceUrl": "https://www.halaltrip.com/city-guide-details/614/longyearbyen/",
+         "status": "verification-recommended"
+        },
+        "why": "Como alternativa para planificar las comidas en la que se pueden confirmar antes los ingredientes por escrito, ya que en la isla no hay restaurantes con certificado halal."
+       }
+      ],
+      "researchNote": "No se encontró ningún restaurante halal verificado en Longyearbyen; si necesitas halal estricto, lo más seguro es llevar comida certificada envasada y cocinar tú mismo.",
+      "vegan": [
+       {
+        "area": "Lompensenteret",
+        "category": "vegan",
+        "cuisine": "Café y pastelería",
+        "description": "Café céntrico que indica en su descripción oficial que ofrece comida y pasteles sin huevo, carne ni lácteos.",
+        "lastVerified": "2026-08-12",
+        "name": "Fruene",
+        "verification": {
+         "note": "La oferta vegetal del local se comprobó en el directorio; vuelve a confirmar el menú y los días de apertura antes de reservar.",
+         "sourceName": "Descripción oficial de las opciones veganas de Fruene",
+         "sourceType": "restaurant",
+         "sourceUrl": "https://fruene.no/en/contact/",
+         "status": "vegan-options"
+        },
+        "why": "Porque ofrece opciones veganas que se pueden verificar en la propia página del local, dentro de la limitada escena de Longyearbyen."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Svalbard es una zona sin visado, pero como los vuelos hacen escala en Noruega, quienes por su nacionalidad necesiten visado Schengen deben llevar uno válido.",
+       "q": "¿Hace falta visado para ir a Svalbard?"
+      }
+     ],
+     "h1": "Guía de viaje de Longyearbyen",
+     "itinerary": [
+      {
+       "afternoon": "Visita al Museo de Svalbard y preparación del equipo polar.",
+       "evening": "Cena ártica en un restaurante local y caza de auroras.",
+       "morning": "Llegada en vuelo desde Oslo/Tromsø, registro en el hotel y paseo por la calle principal.",
+       "title": "Día 1 — El pueblo y el museo"
+      }
+     ],
+     "lede": "Longyearbyen, el asentamiento civil más septentrional del mundo, es un oasis ártico fuera de lo común, con sus casas de madera pintadas, sus inmensos valles nevados y su cielo resplandeciente bajo la noche polar.",
+     "places": [
+      {
+       "area": "Centro del pueblo",
+       "known": "Historia y naturaleza polar",
+       "name": "Museo de Svalbard",
+       "price": "Orta",
+       "why": "Un museo premiado que cuenta la fauna, la minería y la historia de la exploración del archipiélago."
+      },
+      {
+       "area": "Zona exterior de Platåberget",
+       "known": "La bóveda del fin del mundo",
+       "name": "Banco Mundial de Semillas de Svalbard",
+       "price": "Ekonomik",
+       "tip": "El interior no se puede visitar; las excursiones hacen una parada para fotos en el exterior.",
+       "why": "La bóveda mundial de semillas que protege la diversidad vegetal del planeta (se ve desde fuera)."
+      }
+     ],
+     "practicalTips": [
+      {
+       "body": "Quitarse los zapatos al entrar en hoteles, restaurantes y museos es una tradición local heredada de la antigua minería.",
+       "title": "La tradición de quitarse los zapatos"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Latitud",
+       "value": "78.2232° N"
+      },
+      {
+       "label": "Población",
+       "value": "~2,400"
+      },
+      {
+       "label": "Moneda",
+       "value": "Corona noruega (NOK)"
+      },
+      {
+       "label": "Aeropuerto",
+       "value": "Aeropuerto de Svalbard (LYR)"
+      },
+      {
+       "label": "Noche polar",
+       "value": "26 de octubre – 15 de febrero"
+      }
+     ],
+     "reviewedAt": "2026-08-13",
+     "sections": [
+      {
+       "body": [
+        "Longyearbyen es el centro administrativo y la principal puerta de entrada del archipiélago noruego de Svalbard. Se llega fácilmente al aeropuerto de Svalbard (LYR) con vuelos de SAS y Norwegian vía Tromsø u Oslo.",
+        "Hay control de pasaportes (Svalbard no está en el espacio Schengen). Svalbard en sí no exige visado, pero como se hace escala en la Noruega continental, los viajeros cuya nacionalidad requiera visado Schengen necesitan uno válido."
+       ],
+       "heading": "¿Dónde está Longyearbyen y cómo se llega?",
+       "id": "nedir-ve-ulasim"
+      },
+      {
+       "body": [
+        "De mediados de noviembre a mediados de febrero, en Longyearbyen hay oscuridad total las 24 horas (noche polar). En esta época se pueden ver auroras boreales (Aurora Borealis) incluso de día.",
+        "De mediados de abril a finales de agosto, en cambio, el sol no se pone en las 24 horas (sol de medianoche). La primavera y el verano son la época ideal para senderismo, excursiones por los fiordos y escalada en hielo."
+       ],
+       "heading": "La noche polar y el sol de medianoche",
+       "id": "iklim-ve-isik"
+      }
+     ],
+     "seoDescription": "Cómo llegar a Longyearbyen, la noche polar y el sol de medianoche, el Svalbard Museum, la Bóveda Global de Semillas y la costumbre de quitarse los zapatos.",
+     "seoTitle": "Longyearbyen: cómo viajar a la ciudad más al norte"
+    },
+    "tr": {
+     "dietary": {
+      "halal": [
+       {
+        "area": "Svalbard Hotell",
+        "category": "halal",
+        "cuisine": "Nordik ve uluslararası",
+        "description": "Balık ve önceden konuşulabilen bitki bazlı tabaklarla plan yapılabilecek otel restoranı.",
+        "lastVerified": "2026-08-12",
+        "name": "Restaurant Polfareren",
+        "verification": {
+         "note": "Helal sertifikası veya helal et doğrulaması bulunamadı; alkol servis edilir. Yalnızca sade balık ya da vegan içerikleri, sosları ve ortak mutfağı yazılı teyit ederek değerlendirin.",
+         "sourceName": "HalalTrip Longyearbyen Müslüman gezgin rehberi",
+         "sourceType": "specialist-directory",
+         "sourceUrl": "https://www.halaltrip.com/city-guide-details/614/longyearbyen/",
+         "status": "verification-recommended"
+        },
+        "why": "Adada sertifikalı helal restoran bulunmadığı için yalnızca içerikleri önceden yazılı teyit edilebilecek bir yemek planlama alternatifi olarak."
+       }
+      ],
+      "researchNote": "Longyearbyen'de doğrulanmış helal restoran bulunamadı; katı helal gereksiniminde sertifikalı paketli gıda getirmek ve öz hazırlık yapmak en güvenli plandır.",
+      "vegan": [
+       {
+        "area": "Lompensenteret",
+        "category": "vegan",
+        "cuisine": "Kafe ve pastane",
+        "description": "Resmî açıklamasında yumurta, et ve süt ürünü içermeyen yiyecek ve kek seçenekleri sunduğunu belirten merkezî kafe.",
+        "lastVerified": "2026-08-12",
+        "name": "Fruene",
+        "verification": {
+         "note": "Mekânın bitki bazlı kapsamı dizinde kontrol edildi; menü ve çalışma gününü rezervasyon öncesi yeniden doğrulayın.",
+         "sourceName": "Fruene resmî vegan seçenek açıklaması",
+         "sourceType": "restaurant",
+         "sourceUrl": "https://fruene.no/en/contact/",
+         "status": "vegan-options"
+        },
+        "why": "Longyearbyen'in sınırlı sahnesinde işletmenin kendi sayfasından doğrulanabilen vegan seçenekler sunduğu için."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Svalbard vizesiz bir bölgedir ancak uçuşlar Norveç aktarmalı olduğu için geçerli bir Schengen vizesi gereklidir.",
+       "q": "Svalbard'a gitmek için vize gerekli mi?"
+      }
+     ],
+     "h1": "Longyearbyen Gezi Rehberi",
+     "itinerary": [
+      {
+       "afternoon": "Svalbard Müzesi gezisi ve kutup ekipmanı hazırlığı.",
+       "evening": "Yerel restoranda arktik akşam yemeği ve Aurora avı.",
+       "morning": "Oslo/Tromsø uçuşuyla varış, otele yerleşme ve ana caddede yürüyüş.",
+       "title": "1. Gün — Kasaba ve Müze"
+      }
+     ],
+     "lede": "Dünyanın en kuzeydeki sivil yerleşimi Longyearbyen; boyalı ahşap evleri, uçsuz bucaksız karlı vadileri ve kutup gecesinin altında ışıldayan gökyüzüyle sıradışı bir arktik vaha.",
+     "places": [
+      {
+       "area": "Kasaba Merkezi",
+       "known": "Kutup Tarihi ve Doğası",
+       "name": "Svalbard Müzesi",
+       "price": "Orta",
+       "why": "Takımadaların fauna, madencilik ve keşif tarihini anlatan ödüllü müze."
+      },
+      {
+       "area": "Platåberget Dış Bölge",
+       "known": "Kıyamet Deposu",
+       "name": "Svalbard Küresel Tohum Deposu",
+       "price": "Ekonomik",
+       "tip": "İçerisi ziyarete kapalıdır, turlar dış fotoğraf molası verir.",
+       "why": "Dünya bitki çeşitliliğini koruyan küresel tohum kasası (Dışarıdan görülür)."
+      }
+     ],
+     "practicalTips": [
+      {
+       "body": "Oteller, restoranlar ve müzelere girerken ayakkabı çıkarmak eski madencilikten kalan yerel bir gelenektir.",
+       "title": "Ayakkabı Çıkarma Geleneği"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Enlem",
+       "value": "78.2232° K"
+      },
+      {
+       "label": "Nüfus",
+       "value": "~2,400"
+      },
+      {
+       "label": "Para Birimi",
+       "value": "Norveç Kronu (NOK)"
+      },
+      {
+       "label": "Havalimanı",
+       "value": "Svalbard Havalimanı (LYR)"
+      },
+      {
+       "label": "Kutupsal Gece",
+       "value": "26 Ekim – 15 Şubat"
+      }
+     ],
+     "reviewedAt": "2026-08-13",
+     "sections": [
+      {
+       "body": [
+        "Longyearbyen, Norveç'e bağlı Svalbard takımadasının idari merkezi ve ana giriş kapısıdır. Tromsø veya Oslo üzerinden SAS ve Norwegian uçuşlarıyla Svalbard Havalimanı'na (LYR) kolayca ulaşılır.",
+        "Kasabada pasaport kontrolü yapılır (Svalbard Schengen bölgesinde değildir). Vize muafiyeti olmakla birlikte Norveç aktarması nedeniyle geçerli Schengen vizesi gereklidir."
+       ],
+       "heading": "Longyearbyen neresidir ve buraya nasıl gidilir?",
+       "id": "nedir-ve-ulasim"
+      },
+      {
+       "body": [
+        "Kasım ortasından şubat ortasına kadar Longyearbyen'de 24 saat zifiri karanlık (Kutup Gecesi) yaşanır. Bu dönemde gündüz bile gökyüzünde Kuzey Işıkları (Aurora Borealis) izlenebilir.",
+        "Nisan ortasından ağustos sonuna kadar ise güneş 24 saat batmaz (Gece Yarısı Güneşi). Doğa yürüyüşleri, fiyort turları ve buz tırmanışları için ideal dönem bahar ve yaz aylarıdır."
+       ],
+       "heading": "Kutupsal Gece ve Gece Yarısı Güneşi",
+       "id": "iklim-ve-isik"
+      }
+     ],
+     "seoDescription": "78. enlemdeki Longyearbyen gezi rehberi: Kuzey ışıkları, buz mağaraları, Svalbard Küresel Tohum Deposu, bütçe ve pratik ipuçları.",
+     "seoTitle": "Longyearbyen Gezi Rehberi: Dünyanın En Kuzeyindeki Kasaba"
+    }
+   }
+  },
+  {
+   "citySlug": "ny-alesund",
+   "completeLangs": [
+    "en",
+    "es"
+   ],
+   "reviewed": true,
+   "translations": {
+    "en": {
+     "dietary": {
+      "halal": [
+       {
+        "area": "Central Ny-Ålesund",
+        "category": "halal",
+        "cuisine": "Kiosk and self-catering",
+        "description": "The settlement shop offering limited snacks and basics; it is not a restaurant or halal outlet.",
+        "lastVerified": "2026-08-12",
+        "name": "Kongsfjordbutikken",
+        "verification": {
+         "note": "There is no halal-certified restaurant or product guarantee. Access and stock are limited; bring certified packaged food from Longyearbyen and make a written plan with Kings Bay in advance.",
+         "sourceName": "Kings Bay Ny-Ålesund accommodation and dining information",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://kingsbay.no/accommodations-meals-and-shop/",
+         "status": "verification-recommended"
+        },
+        "why": "Without a halal food service, it's the only retail outlet where you can make a backup plan by checking labelled packaged products."
+       }
+      ],
+      "researchNote": "There is no public restaurant in Ny-Ålesund. The canteen serves registered researchers and staying visitors; vegan or halal needs must be planned with Kings Bay before booking.",
+      "vegan": [
+       {
+        "area": "Servicebygget",
+        "category": "vegan",
+        "cuisine": "Research station canteen",
+        "description": "The only food service, offering set-time communal meals to researchers and registered visitors staying in the settlement.",
+        "lastVerified": "2026-08-12",
+        "name": "Kings Bay Service Building Mess",
+        "verification": {
+         "note": "The venue's plant-based coverage was checked in the directory; reconfirm the menu and opening days before booking.",
+         "sourceName": "Kings Bay Ny-Ålesund accommodation and dining information",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://kingsbay.no/accommodations-meals-and-shop/",
+         "status": "vegan-options"
+        },
+        "why": "In Ny-Ålesund, which has no public restaurant, vegan needs can only be planned with the kitchen in advance during accommodation registration."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Ny-Ålesund is in the north-west of the Svalbard archipelago, which belongs to Norway. Its population mostly consists of scientists and staff of the Kings Bay company that operates the settlement.",
+       "q": "Where is Ny-Ålesund and who lives there?"
+      },
+      {
+       "a": "No. Because of sensitive scientific measurements, Wi-Fi, Bluetooth and cellular transmissions are banned. Communication is provided over wired lines.",
+       "q": "Is there internet or mobile phone signal in Ny-Ålesund?"
+      },
+      {
+       "a": "Yes, you can visit the town with a guide on day-trip tour boats departing from Longyearbyen or on organised charter services.",
+       "q": "Can you visit Ny-Ålesund as a tourist?"
+      }
+     ],
+     "h1": "Ny-Ålesund Travel Guide",
+     "itinerary": [
+      {
+       "afternoon": "A visit to the Amundsen Airship Mast, the Kings Bay Museum and the historic wooden miners' houses.",
+       "evening": "Sending a postcard from the world's northernmost post office and returning through the fjord scenery.",
+       "morning": "Arrival by plane or boat from Longyearbyen, a welcome and a radio-silence briefing.",
+       "title": "Ny-Ålesund discovery day"
+      }
+     ],
+     "lede": "At the seventy-ninth parallel, deep within the Arctic Circle, Ny-Ålesund is a legendary settlement that has transformed from an old coal-mining town into the world's most important centre for polar research.",
+     "places": [
+      {
+       "area": "Town centre",
+       "known": "The 1926 North Pole flight",
+       "name": "Amundsen Airship Mast",
+       "price": "Ekonomik",
+       "tip": "The historic monument is protected; climbing or touching it is prohibited.",
+       "why": "The original steel mast where Roald Amundsen moored the airship Norge."
+      },
+      {
+       "area": "Kings Bay harbour",
+       "known": "Polar postmark",
+       "name": "The World's Northernmost Post Office",
+       "price": "Ekonomik",
+       "tip": "Open in summer when a tour ship arrives; cash or credit card accepted.",
+       "why": "A unique stop for sending postcards with Ny-Ålesund's special postmark."
+      },
+      {
+       "area": "Main street",
+       "known": "Mining and exploration history",
+       "name": "Kings Bay Museum",
+       "price": "Ekonomik",
+       "why": "Exhibitions telling the story of Ny-Ålesund's transformation from a mining town into a science centre."
+      }
+     ],
+     "practicalTips": [
+      {
+       "body": "Before entering the town, turn off your phone's Wi-Fi and Bluetooth or switch it to aeroplane mode.",
+       "title": "Wi-Fi & Bluetooth off"
+      },
+      {
+       "body": "At the 79th parallel, the wind-chill effect is strong. A windproof layer and thermal base layers are essential.",
+       "title": "Clothing layers"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Latitude",
+       "value": "78.9250° N"
+      },
+      {
+       "label": "Population",
+       "value": "~120 in summer / ~35 in winter"
+      },
+      {
+       "label": "Currency",
+       "value": "Norwegian krone (NOK)"
+      },
+      {
+       "label": "Radio / Wi-Fi",
+       "value": "Radio silence zone (Wi-Fi & Bluetooth banned)"
+      },
+      {
+       "label": "Transport",
+       "value": "Flight or boat from Longyearbyen"
+      }
+     ],
+     "reviewedAt": "2026-08-13",
+     "sections": [
+      {
+       "body": [
+        "Ny-Ålesund, on the shore of Kongsfjorden in the Svalbard archipelago, is the world's northernmost permanently inhabited settlement. Run by the company Kings Bay AS, the town hosts international polar research stations from 10 countries.",
+        "There are two ways to reach the town: special charter flights departing from Longyearbyen and landing at Ny-Ålesund Airport (Hamnerabben), or scientific/tourist boat trips along the fjord in the summer months. Independent travel is restricted; visitors must strictly comply with local regulations and conservation rules."
+       ],
+       "heading": "What is Ny-Ålesund and how do you get there?",
+       "id": "nedir-ve-ulasim"
+      },
+      {
+       "body": [
+        "In Ny-Ålesund, a strictly enforced 'Radio Silent Zone' rule applies within a 20-kilometre radius. To avoid disrupting sensitive atmospheric and astrophysical measurements, Wi-Fi, Bluetooth and radio signals are strictly prohibited. Mobile phones must be kept in aeroplane mode.",
+        "When going beyond the town limits, an armed guide escort is mandatory because of the risk of polar bears. Leaving designated paths, disturbing local bird nesting areas and touching historical remains are prohibited by law."
+       ],
+       "heading": "Radio silence and polar rules",
+       "id": "radyo-sessizligi-kurallar",
+       "subsections": [
+        {
+         "body": [
+          "More polar bears than people live in and around Ny-Ålesund. Safe walking areas are marked within the town; never cross beyond these lines unarmed."
+         ],
+         "heading": "Polar bear safety"
+        },
+        {
+         "body": [
+          "Ny-Ålesund has the world's northernmost post office. Sending a postmarked postcard from here and visiting the Kings Bay Museum are the town's most popular activities."
+         ],
+         "heading": "Post office and museum"
+        }
+       ]
+      },
+      {
+       "body": [
+        "In 1926, Roald Amundsen, Umberto Nobile and Lincoln Ellsworth began their historic flight across the North Pole in the airship 'Norge' from Ny-Ålesund. The steel airship mooring mast (Airship Mast) still standing in the town is one of the most valuable monuments of polar aviation history.",
+        "The wooden buildings left from the old coal-mining era have been carefully preserved and today converted into accommodation and laboratory space for international researchers."
+       ],
+       "heading": "History and Amundsen's airship mast",
+       "id": "tarih-ve-amundsen"
+      }
+     ],
+     "seoDescription": "What Ny-Ålesund is and how to visit by boat, radio silence and polar rules, Amundsen's airship mast, the northernmost post office and Kings Bay Museum.",
+     "seoTitle": "Ny-Ålesund Travel Guide: Svalbard's Arctic Research Town"
+    },
+    "es": {
+     "dietary": {
+      "halal": [
+       {
+        "area": "Centro de Ny-Ålesund",
+        "category": "halal",
+        "cuisine": "Quiosco y autoabastecimiento",
+        "description": "Tienda del asentamiento con tentempiés y productos básicos limitados; no es un restaurante ni un punto de venta halal.",
+        "lastVerified": "2026-08-12",
+        "name": "Kongsfjordbutikken",
+        "verification": {
+         "note": "No hay restaurantes ni productos con certificado halal garantizados. El acceso y las existencias son limitados; lleva desde Longyearbyen comida certificada envasada y planifica por escrito con Kings Bay de antemano.",
+         "sourceName": "Información de alojamiento y comidas de Kings Bay Ny-Ålesund",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://kingsbay.no/accommodations-meals-and-shop/",
+         "status": "verification-recommended"
+        },
+        "why": "Porque, si no hay servicio de comida halal, es el único punto de venta donde se puede preparar un plan de reserva comprobando productos envasados etiquetados."
+       }
+      ],
+      "researchNote": "En Ny-Ålesund no hay restaurantes abiertos al público. El comedor atiende a investigadores registrados y a visitantes alojados; las necesidades veganas o halal deben planificarse con Kings Bay antes de reservar.",
+      "vegan": [
+       {
+        "area": "Servicebygget",
+        "category": "vegan",
+        "cuisine": "Comedor de la estación de investigación",
+        "description": "El único servicio de comidas, que ofrece comidas colectivas en horario fijo a los investigadores alojados en el asentamiento y a los visitantes registrados.",
+        "lastVerified": "2026-08-12",
+        "name": "Kings Bay Service Building Mess",
+        "verification": {
+         "note": "La oferta vegetal del local se comprobó en el directorio; vuelve a confirmar el menú y los días de apertura antes de reservar.",
+         "sourceName": "Información de alojamiento y comidas de Kings Bay Ny-Ålesund",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://kingsbay.no/accommodations-meals-and-shop/",
+         "status": "vegan-options"
+        },
+        "why": "Porque en Ny-Ålesund, sin restaurantes abiertos al público, las necesidades veganas solo pueden planificarse con antelación con la cocina al registrar el alojamiento."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Ny-Ålesund está en el noroeste del archipiélago noruego de Svalbard. Su población está formada sobre todo por científicos y personal de la empresa Kings Bay, que gestiona las instalaciones.",
+       "q": "¿Dónde está Ny-Ålesund y quién vive allí?"
+      },
+      {
+       "a": "No. Por las mediciones científicas sensibles, están prohibidas las emisiones de wifi, Bluetooth y telefonía móvil. La comunicación se hace por líneas con cable.",
+       "q": "¿Hay internet o cobertura móvil en Ny-Ålesund?"
+      },
+      {
+       "a": "Sí, el pueblo se puede visitar acompañado de guía en barcos turísticos de un día que salen de Longyearbyen o en vuelos chárter organizados.",
+       "q": "¿Se puede ir a Ny-Ålesund como turista?"
+      }
+     ],
+     "h1": "Guía de viaje de Ny-Ålesund",
+     "itinerary": [
+      {
+       "afternoon": "Visita al mástil del dirigible de Amundsen, el Museo de Kings Bay y las históricas casas de madera de los mineros.",
+       "evening": "Envío de postales desde la oficina de correos más septentrional del mundo y vuelta con vistas al fiordo.",
+       "morning": "Llegada en avión o barco desde Longyearbyen, recibimiento e información sobre el silencio radioeléctrico.",
+       "title": "Día de descubrimiento en Ny-Ålesund"
+      }
+     ],
+     "lede": "Ny-Ålesund, en el paralelo setenta y nueve, en lo más profundo del círculo polar, es un asentamiento legendario que pasó de antiguo pueblo minero del carbón a uno de los centros de investigación polar más importantes del mundo.",
+     "places": [
+      {
+       "area": "Centro del pueblo",
+       "known": "Vuelo al Polo Norte de 1926",
+       "name": "Mástil del dirigible de Amundsen",
+       "price": "Ekonomik",
+       "tip": "El monumento histórico está protegido; está prohibido escalarlo o tocarlo.",
+       "why": "El mástil de acero original en el que Roald Amundsen amarró el dirigible Norge."
+      },
+      {
+       "area": "Puerto de Kings Bay",
+       "known": "Matasellos polar",
+       "name": "La oficina de correos más septentrional del mundo",
+       "price": "Ekonomik",
+       "tip": "Abre en verano cuando llega un barco turístico; se acepta efectivo o tarjeta de crédito.",
+       "why": "Una parada única para enviar postales con el matasellos especial de Ny-Ålesund."
+      },
+      {
+       "area": "Calle central",
+       "known": "Historia de la minería y la exploración",
+       "name": "Museo de Kings Bay",
+       "price": "Ekonomik",
+       "why": "Exposiciones que cuentan la transformación de Ny-Ålesund de pueblo minero a centro científico."
+      }
+     ],
+     "practicalTips": [
+      {
+       "body": "Antes de entrar en el pueblo, apaga el wifi y el Bluetooth del teléfono o ponlo en modo avión.",
+       "title": "Wifi y Bluetooth apagados"
+      },
+      {
+       "body": "En la latitud 79, la sensación térmica por el viento es muy baja. Son imprescindibles una capa cortavientos y ropa interior térmica.",
+       "title": "Capas de ropa"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Latitud",
+       "value": "78.9250° N"
+      },
+      {
+       "label": "Población",
+       "value": "~120 en verano / ~35 en invierno"
+      },
+      {
+       "label": "Moneda",
+       "value": "Corona noruega (NOK)"
+      },
+      {
+       "label": "Radio / wifi",
+       "value": "Zona de silencio radioeléctrico (wifi y BT prohibidos)"
+      },
+      {
+       "label": "Transporte",
+       "value": "Vuelo o barco desde Longyearbyen"
+      }
+     ],
+     "reviewedAt": "2026-08-13",
+     "sections": [
+      {
+       "body": [
+        "Ny-Ålesund, a orillas del Kongsfjorden en el archipiélago de Svalbard, es el asentamiento habitado de forma permanente más septentrional del mundo. El pueblo, gestionado por la empresa Kings Bay AS, alberga estaciones internacionales de investigación polar de 10 países.",
+        "Se puede llegar de dos maneras: en vuelos chárter privados que salen de Longyearbyen y aterrizan en el aeropuerto de Ny-Ålesund (Hamnerabben), o en los trayectos en barco científicos o turísticos que se organizan a lo largo del fiordo en verano. El viaje libre individual está restringido; los visitantes deben cumplir estrictamente la normativa local y las normas de protección."
+       ],
+       "heading": "¿Qué es Ny-Ålesund y cómo se llega?",
+       "id": "nedir-ve-ulasim"
+      },
+      {
+       "body": [
+        "En Ny-Ålesund rige estrictamente la norma de la 'Radio Silent Zone' en un radio de 20 kilómetros. Para no alterar mediciones atmosféricas y astrofísicas sensibles, las señales de wifi, Bluetooth y radio están terminantemente prohibidas. Los teléfonos móviles deben estar en modo avión.",
+        "Al salir de los límites del pueblo, por el riesgo de osos polares, es obligatorio ir escoltado por un guía armado. La ley prohíbe salir de los senderos señalizados, molestar las zonas de cría de aves locales y tocar los restos históricos."
+       ],
+       "heading": "Silencio radioeléctrico y normas polares",
+       "id": "radyo-sessizligi-kurallar",
+       "subsections": [
+        {
+         "body": [
+          "En Ny-Ålesund y sus alrededores viven más osos polares que personas. Dentro del pueblo hay zonas señalizadas para caminar con seguridad; más allá de esas líneas no se pasa nunca sin arma."
+         ],
+         "heading": "Seguridad frente a los osos polares"
+        },
+        {
+         "body": [
+          "En Ny-Ålesund está la oficina de correos más septentrional del mundo. Enviar desde aquí una postal con matasellos y visitar el Museo de Kings Bay es la actividad más popular del pueblo."
+         ],
+         "heading": "Oficina de correos y museo"
+        }
+       ]
+      },
+      {
+       "body": [
+        "En 1926, Roald Amundsen, Umberto Nobile y Lincoln Ellsworth iniciaron desde Ny-Ålesund el histórico vuelo en el que cruzaron el Polo Norte en el dirigible 'Norge'. El mástil de amarre de acero del dirigible (Airship Mast), que sigue en pie en el pueblo, es uno de los monumentos más valiosos de la historia de la aviación polar.",
+        "Los edificios de madera de la antigua época minera del carbón se han conservado con esmero y hoy se han convertido en alojamientos y laboratorios para investigadores internacionales."
+       ],
+       "heading": "Historia y el mástil del dirigible de Amundsen",
+       "id": "tarih-ve-amundsen"
+      }
+     ],
+     "seoDescription": "Qué es Ny-Ålesund y cómo visitarlo en barco, el silencio radioeléctrico y las normas polares, el mástil del dirigible de Amundsen y la oficina de correos.",
+     "seoTitle": "Ny-Ålesund: el pueblo de investigación del Ártico"
+    },
+    "tr": {
+     "dietary": {
+      "halal": [
+       {
+        "area": "Ny-Ålesund merkezi",
+        "category": "halal",
+        "cuisine": "Kiosk ve öz hazırlık",
+        "description": "Kısıtlı atıştırmalık ve temel ürün sunan yerleşim dükkânı; restoran veya helal satış noktası değildir.",
+        "lastVerified": "2026-08-12",
+        "name": "Kongsfjordbutikken",
+        "verification": {
+         "note": "Helal sertifikalı restoran ya da ürün garantisi yoktur. Erişim ve stok sınırlıdır; Longyearbyen'den sertifikalı paketli gıda getirin ve Kings Bay ile önceden yazılı plan yapın.",
+         "sourceName": "Kings Bay Ny-Ålesund konaklama ve yemek bilgileri",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://kingsbay.no/accommodations-meals-and-shop/",
+         "status": "verification-recommended"
+        },
+        "why": "Helal yemek hizmeti bulunmadığında yalnızca etiketli paketli ürünleri kontrol ederek yedek plan yapılabilecek tek perakende noktası olduğu için."
+       }
+      ],
+      "researchNote": "Ny-Ålesund'da halka açık restoran yoktur. Yemekhane kayıtlı araştırmacı ve konaklayan ziyaretçilere hizmet verir; vegan veya helal gereksinimi rezervasyondan önce Kings Bay ile planlanmalıdır.",
+      "vegan": [
+       {
+        "area": "Servicebygget",
+        "category": "vegan",
+        "cuisine": "Araştırma istasyonu yemekhanesi",
+        "description": "Yerleşimde kalan araştırmacı ve kayıtlı ziyaretçilere sabit saatlerde toplu öğün sunan tek yemek hizmeti.",
+        "lastVerified": "2026-08-12",
+        "name": "Kings Bay Service Building Mess",
+        "verification": {
+         "note": "Mekânın bitki bazlı kapsamı dizinde kontrol edildi; menü ve çalışma gününü rezervasyon öncesi yeniden doğrulayın.",
+         "sourceName": "Kings Bay Ny-Ålesund konaklama ve yemek bilgileri",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://kingsbay.no/accommodations-meals-and-shop/",
+         "status": "vegan-options"
+        },
+        "why": "Halka açık restoran bulunmayan Ny-Ålesund'da vegan gereksinimi ancak konaklama kaydı sırasında mutfakla önceden planlanabildiği için."
+       }
+      ]
+     },
+     "faqs": [
+      {
+       "a": "Ny-Ålesund, Norveç'e bağlı Svalbard takımadasının kuzeybatısında yer alır. Nüfusu çoğunlukla bilim insanları ve tesisi işleten Kings Bay şirket personellerinden oluşur.",
+       "q": "Ny-Ålesund nerede ve kimler yaşıyor?"
+      },
+      {
+       "a": "Hayır. Hassas bilimsel ölçümler nedeniyle Wi-Fi, Bluetooth ve hücresel yayınlar yasaktır. İletişim kablolu hatlar üzerinden sağlanır.",
+       "q": "Ny-Ålesund'da internet veya cep telefonu çekiyor mu?"
+      },
+      {
+       "a": "Evet, Longyearbyen kalkışlı günübirlik tur tekneleri veya organize charter seferleriyle kasaba rehber eşliğinde gezilebilir.",
+       "q": "Ny-Ålesund'a turist olarak gidilebilir mi?"
+      }
+     ],
+     "h1": "Ny-Ålesund Gezi Rehberi",
+     "itinerary": [
+      {
+       "afternoon": "Amundsen Zeplin Direği, Kings Bay Müzesi ve tarihi ahşap madenci evlerinin ziyareti.",
+       "evening": "Dünyanın en kuzeydeki postaneden kartpostal gönderimi ve fiyort manzarasında dönüş.",
+       "morning": "Longyearbyen'den uçuş veya tekneyle varış, karşılama ve radyo sessizliği bilgilendirmesi.",
+       "title": "Ny-Ålesund Keşif Günü"
+      }
+     ],
+     "lede": "Yetmiş dokuzuncu enlemde, kutup dairesinin derinliklerinde yer alan Ny-Ålesund; eski bir kömür madeni kasabasından dünyanın en önemli kutup araştırmaları merkezine dönüşmüş efsanevi bir yerleşim.",
+     "places": [
+      {
+       "area": "Kasaba Merkezi",
+       "known": "1926 Kuzey Kutbu Uçuşu",
+       "name": "Amundsen Zeplin Direği",
+       "price": "Ekonomik",
+       "tip": "Tarihi anıt koruma altındadır, tırmanmak veya dokunmak yasaktır.",
+       "why": "Roald Amundsen'in Norge zeplinini bağladığı orijinal çelik direk."
+      },
+      {
+       "area": "Kings Bay Limanı",
+       "known": "Kutup Posta Damgası",
+       "name": "Dünyanın En Kuzey Postanesi",
+       "price": "Ekonomik",
+       "tip": "Yazın tur gemisi geldiğinde açıktır, Nakit veya Kredi Kartı geçerlidir.",
+       "why": "Ny-Ålesund özel damgalı kartpostallar göndermek için benzersiz bir durak."
+      },
+      {
+       "area": "Merkez Sokak",
+       "known": "Maden ve Keşif Tarihi",
+       "name": "Kings Bay Müzesi",
+       "price": "Ekonomik",
+       "why": "Ny-Ålesund'un maden kasabasından bilim merkezine dönüşümünü anlatan sergiler."
+      }
+     ],
+     "practicalTips": [
+      {
+       "body": "Kasabaya girmeden önce telefonunuzun Wi-Fi ve Bluetooth özelliklerini kapatın veya uçak moduna alın.",
+       "title": "Wi-Fi & Bluetooth Kapalı"
+      },
+      {
+       "body": "79. enlemde rüzgar soğutma etkisi yüksektir. Rüzgar geçirmez katman ve termal içlik şarttır.",
+       "title": "Kıyafet Katmanları"
+      }
+     ],
+     "quickFacts": [
+      {
+       "label": "Enlem",
+       "value": "78.9250° K"
+      },
+      {
+       "label": "Nüfus",
+       "value": "Yazın ~120 / Kışın ~35"
+      },
+      {
+       "label": "Para Birimi",
+       "value": "Norveç Kronu (NOK)"
+      },
+      {
+       "label": "Telsiz / Wi-Fi",
+       "value": "Radyo sessizlik bölgesi (Wi-Fi & BT yasak)"
+      },
+      {
+       "label": "Ulaşım",
+       "value": "Longyearbyen'den uçuş veya tekne"
+      }
+     ],
+     "reviewedAt": "2026-08-13",
+     "sections": [
+      {
+       "body": [
+        "Ny-Ålesund, Svalbard takımadalarının Kongsfjorden kıyısında yer alan ve sürekli yaşanılan dünyanın en kuzeydeki yerleşimidir. Kings Bay AS şirketi tarafından yönetilen kasaba, 10 ülkeden uluslararası kutup araştırma istasyonlarına ev sahipliği yapar.",
+        "Kasabaya ulaşım iki şekilde mümkündür: Longyearbyen'den kalkıp Ny-Ålesund Havalimanı'na (Hamnerabben) inen özel charter uçuşlar veya yaz aylarında fiyort boyunca düzenlenen bilimsel/turistik tekne seferleri. Bireysel serbest seyahat kısıtlıdır; ziyaretçilerin yerel yönetmeliklere ve koruma kurallarına harfiyen uyması gerekir."
+       ],
+       "heading": "Ny-Ålesund nedir ve buraya nasıl gidilir?",
+       "id": "nedir-ve-ulasim"
+      },
+      {
+       "body": [
+        "Ny-Ålesund'da 20 kilometre yarıçapında strictly enjekte edilen 'Radio Silent Zone' kuralı geçerlidir. Duyarlı atmosferik ve astrofiziksel ölçümlerin bozulmaması için Wi-Fi, Bluetooth ve telsiz sinyalleri kesinlikle yasaktır. Cep telefonları uçak modunda tutulmalıdır.",
+        "Kasaba sınırları dışına çıkarken kutup ayısı riski sebebiyle silahlı rehber eskortu zorunludur. Belirlenen patikaların dışına çıkmak, yerel kuş kuluçka alanlarını rahatsız etmek ve tarihi kalıntılara dokunmak yasayla engellenmiştir."
+       ],
+       "heading": "Radyo Sessizliği ve Kutup Kuralları",
+       "id": "radyo-sessizligi-kurallar",
+       "subsections": [
+        {
+         "body": [
+          "Ny-Ålesund ve çevresinde insandan çok kutup ayısı yaşar. Kasaba içinde güvenli yürüyüş alanları işaretlenmiştir; bu hatların ötesine silahsız geçiş kesinlikle yapılmaz."
+         ],
+         "heading": "Kutup Ayısı Güvenliği"
+        },
+        {
+         "body": [
+          "Ny-Ålesund'da dünyanın en kuzeydeki postanelesi bulunur. Buradan damgalı kartpostal göndermek ve Kings Bay Müzesi'ni ziyaret etmek kasabanın en popüler etkinliğidir."
+         ],
+         "heading": "Postane ve Müze"
+        }
+       ]
+      },
+      {
+       "body": [
+        "1926 yılında Roald Amundsen, Umberto Nobile ve Lincoln Ellsworth, 'Norge' adlı zeplinle Kuzey Kutbu'nu geçtikleri tarihi uçuşa Ny-Ålesund'dan başladılar. Kasabada hâlâ ayakta duran çelik zeplin bağlama direği (Airship Mast), kutup havacılık tarihinin en değerli anıtlarından biridir.",
+        "Eski kömür madenciliği döneminden kalan ahşap binalar özenle korunmuş ve günümüzde uluslararası araştırmacıların konaklama ve laboratuvar alanlarına dönüştürülmüştür."
+       ],
+       "heading": "Tarih ve Amundsen'in Hava Gemisi Direği",
+       "id": "tarih-ve-amundsen"
+      }
+     ],
+     "seoDescription": "79. Kuzey enleminde yer alan Ny-Ålesund gezi rehberi: Ulaşım, kutup bilim istasyonları, Amundsen hava gemisi direği, pratik kurallar ve bütçe.",
+     "seoTitle": "Ny-Ålesund Gezi Rehberi: Dünyanın En Kuzeyindeki Araştırma Kasabası"
+    }
+   }
+  }
+ ]
+}
