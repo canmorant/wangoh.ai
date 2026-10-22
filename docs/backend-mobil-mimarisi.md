@@ -181,6 +181,16 @@ Uç noktalar (GET'ler public, yazma admin):
   `POST /v1/countries/:code/cities`, `DELETE /v1/countries/:code/cities/:slug` (çeviri alanlarını
   birleştirerek günceller; doğrulanmış şemayla).
 
+Notlar:
+
+- Öne çıkan (seyahat) ülkelerin kıtası web'in `content/regions.ts` gruplamasını izler; bu yüzden Türkiye
+  Avrupa'da görünür. Seyahat bilgisi olmayan ülkelerde kıta dünya veri setinden gelir.
+- Şehrin Türkçe adı ülke içinde benzersizdir (`409 CITY_NAME_TAKEN`). Ad değişince aynı ülkenin hub rotaları
+  ve rehber başvuruları (tüm dillerde) aynı işlemde taşınır; web içeriğinde şehirler ada göre bağlandığı için.
+- Rehber paragraflarındaki `**kalın**` işareti web'deki kaynaktan aynen gelir; istemci isterse çözer.
+- Tohum varsayılan olarak yalnız eksik satırları ekler (yönetici düzenlemesi ezilmez); `db:seed --force`
+  hepsini yeniden yazar. Arama Türkçe katlama kullanır ve UTF8 veritabanı varsayar.
+
 ## 7. Blog
 
 - `blog_posts`: `id` uuid, `slug` unique, `status` (`draft|published`), `author_id` (nullable fk, silinince null),
@@ -205,7 +215,12 @@ hesaplar, süreyi **sunucu** ölçer (istemcinin bildirdiği süre kullanılmaz)
 Oyun türleri (`gameType`): `flag-quiz` (bayraktan ülke), `capital-quiz` (ülkeden başkent), `map-guess`
 (ülkeyi haritada işaretle). Her oyun 10 tur (`map-guess` 5 tur). Havuz: `countries` tablosu;
 `capital-quiz` yalnız başkenti olan ülkeler; `map-guess` ülke merkez koordinatı (`latitude`/`longitude`).
-Çoktan seçmeli oyunlarda 4 seçenek, yanlış seçenekler aynı kıtadan öncelikli.
+Çoktan seçmeli oyunlarda 4 seçenek (seçenek kimliği = ülke kodu), yanlış seçenekler aynı kıtadan öncelikli
+(yetmezse diğer kıtalardan), seçenekler tekrarsız (aynı ad/başkent iki seçenekte olmaz), doğru cevap rastgele
+konumda. Havuzda 10'dan az uygun ülke varsa oyun başlamaz (409 `GAME_POOL_TOO_SMALL`). Rastgelelik `crypto`
+tabanlıdır; motorda enjekte edilebilir (testte deterministik). `flag-quiz` etiketi ülke adı (`lang`, çevirisi
+yoksa Türkçe), `capital-quiz` etiketi başkenttir (kaynak biçimiyle, çeviri uydurulmaz; birden çok başkent
+" / " ile).
 
 Tablolar:
 
@@ -217,34 +232,79 @@ Tablolar:
   `correct_count`, `rounds_total`, `duration_ms`, `created_at`; dizinler (`game_type`, `score desc`),
   (`user_id`, `game_type`).
 
-Akış:
+Akış (`?lang=tr|en|es` başlatma, geri yükleme ve cevap uçlarında etiketleri seçer):
 
-1. `POST /v1/games/:gameType/sessions` → `{sessionId, gameType, roundsTotal, expiresAt, round}` (ilk tur;
-   aynı türde önceki aktif oturum `abandoned` olur).
-2. `POST /v1/games/sessions/:id/answers` `{roundIndex, answer}` (`answer`: ülke kodu ya da `{lat,lng}`) →
-   `{correct, correctAnswer, points, score, nextRound | null}`. Sırası bozuk `roundIndex` → 409; zaman aşımı
-   (tur başına 20 sn + 3 sn ağ payı) → 0 puan, `correct:false`.
-3. `POST /v1/games/sessions/:id/finish` (tüm turlar cevaplanınca; yoksa 409) → `{score, correctCount,
-   roundsTotal, rank, personalBest, isPersonalBest}`; `scores`a tek satır yazar. İdempotent.
-4. `GET /v1/games/sessions/:id` (yalnız sahibi; devam eden oturumu geri yükler).
+1. `POST /v1/games/:gameType/sessions` → 201 `{sessionId, gameType, roundsTotal, expiresAt, round}`. `round` =
+   `{index, question, options, timeLimitMs: 20000, startedAt, deadlineAt}`; `question` = `{flag, flagUrl,
+   countryName}` (türe göre dolu olanlar), `options` = `[{id, label}]` (`map-guess`te `null`). Aynı türde
+   önceki aktif oturum `abandoned` (süresi dolmuşsa `expired`) olur: kullanıcı başına tür başına tek aktif
+   oturum, kullanıcı satırı kilidiyle (`users` → `game_sessions` → `scores` kilit sırası) garanti edilir.
+2. `POST /v1/games/sessions/:id/answers` `{roundIndex, answer}` (`answer`: seçenek kimliği/ülke kodu ya da
+   `{lat,lng}`; lat −90..90, lng −180..180, sonlu sayı; `null` = cevap yok: pas ya da süre doldu, 0 puan, seri
+   sıfırlanır, `timedOut` yalnız 20 sn aşıldıysa true; alan hiç gönderilmezse 400) → 200 `{correct, correctAnswer: {code, label, lat, lng},
+   points, score, timedOut, speedBonus, streakBonus, streak, distanceKm, nextRound | null}`. Doğru cevap
+   yalnız cevaplanan turun yanıtında döner. Sırası bozuk ya da yinelenen `roundIndex` → 409
+   (`GAME_ROUND_OUT_OF_ORDER`, `GAME_ROUND_ALREADY_ANSWERED`, `GAME_NO_ROUND_LEFT`); seçenek dışı cevap ya da
+   geçersiz koordinat → 400 (tur tüketilmez). Zaman aşımı (tur başına 20 sn + 3 sn ağ payı, ikisi de dahil)
+   aşılırsa → 0 puan, `correct:false`, `timedOut:true`, seri sıfırlanır, oyun sonraki tura geçer. Aynı tura
+   eşzamanlı iki cevapta yalnız biri puan alır, öbürü 409.
+3. `POST /v1/games/sessions/:id/finish` (tüm turlar cevaplanınca; yoksa 409 `GAME_NOT_FINISHED`) → 200
+   `{sessionId, scoreId, gameType, score, correctCount, roundsTotal, durationMs, rank, personalBest,
+   isPersonalBest}`; `scores`a tek satır yazar. İdempotent: yinelenen ve eşzamanlı çağrılar aynı satırı ve
+   aynı gövdeyi döner. `durationMs` = tur sürelerinin toplamı (sunucu ölçümü). `rank` = tüm zamanlar
+   liderliğinde kullanıcının sırası (en iyisine göre), `isPersonalBest` = bu puan önceki hepsinden KESİN
+   yüksek (ilk oyun da true). Puanı yönetici sildiyse 410 `GAME_SCORE_REMOVED` (yeniden yazılmaz).
+4. `GET /v1/games/sessions/:id` (yalnız sahibi; devam eden oturumu geri yükler) → `{sessionId, gameType,
+   status, roundsTotal, currentRound, score, correctCount, startedAt, expiresAt, finishedAt, round | null,
+   results: [{index, correct, points, timedOut}]}`. Doğru cevap hiçbir alanda dönmez.
+
+Oturum ömrü ve durumlar: `expires_at` (dahil) geçince oturum **tembel** olarak, ilk isteğinde `expired`
+işaretlenir (GET 200 `status:"expired"`; cevap ve finish 410 `GAME_SESSION_EXPIRED`). Bitmiş/terk edilmiş
+oturuma cevap 409 `GAME_SESSION_NOT_ACTIVE`. Başkasının oturumu ve olmayan oturum aynı 404'tür (varlığı sızmaz).
+Temizlik, kullanıcının her yeni oyun başlatışında kendi kayıtlarına uygulanır: 7 günden eski bitmemiş oturumlar silinir ve
+terk edilmiş/süresi dolmuş kayıtlardan yalnız en yeni 20'si tutulur (art arda başlatmayla satır sayısı şişirilemez); puanlı
+`finished` oturumlar ve puanları hiçbir zaman bu yolla silinmez.
+Sırlar (hedef, koordinat, gelecek turların seçenekleri) yalnız `game_sessions.rounds` içinde durur; hata
+gövdeleri de sır içermez. Bayrak sorusunda bayrağın kendisi sorudur: `flagUrl`/`flag` ülke kodunu zaten
+taşır, bu soru türünün doğası gereğidir.
 
 Puan:
 
 - Çoktan seçmeli: doğruysa `100 + hız bonusu`, hız bonusu = `round(50 * max(0, 1 - ms / 15000))`; art arda
   doğrularda seri bonusu `min(50, 10 * (seri - 1))` (seri bu turu da sayar). Yanlış: 0 ve seri sıfırlanır.
-- `map-guess`: mesafe haversine ile km; `points = round(1000 * exp(-km / 2000))` (en fazla 1000/tur).
-  Web'deki harita oyununun formülü (`apps/web` altında `distance` testi/kodu) farklıysa o formül
-  esas alınır ve belgelenir.
+  Kusursuz oyun 1850, tavan 2000.
+- `map-guess`: mesafe haversine ile km (tam sayıya yuvarlanır, puan yuvarlanmış km'den hesaplanır); web'deki
+  "Haritada Bul" formülü esas alınır (`apps/web/src/features/map-game/scoring.ts`): `d ≤ 50 km` → 1000, aksi
+  halde `round(1000 * exp(-(d - 50) / 1200))` (300 km → 812, 1000 km → 453, 2000 km → 197, 5000 km → 16).
+  İlk taslaktaki `1000 * exp(-km / 2000)` formülü bırakıldı: web ile aynı mesafede farklı puan verirdi.
+  Hız ve seri puanı etkilemez; ipucu yoktur. `correct` = tur puanı ≥ 500 (≈ 880 km içi), `correctCount` bunları sayar.
+  Hedef, ülkenin merkez koordinatıdır (sınır verisi yok): büyük ülkelerde ülke içindeki bir nokta bile uzak sayılabilir.
 - Toplam puanlar tek oturumda sınırlıdır (çoktan seçmeli ≤ 2000, `map-guess` ≤ 5000).
 
 Liderlik ve istatistik:
 
-- `GET /v1/leaderboards/:gameType?period=all|week|day&limit=` (public; kullanıcı başına **en iyi** tek
-  oyun puanı; yalnız `displayName`, e-posta asla) ve `gameType=overall` (kullanıcının oyun türü başına en
-  iyilerinin toplamı). `GET /v1/leaderboards/:gameType/me` → sıram ve en iyim.
-- `GET /v1/users/me/stats` (oyun türü başına oynama, en iyi, toplam, ortalama, son oynama),
-  `GET /v1/users/me/scores` (sayfalı geçmiş).
-- Admin: `DELETE /v1/scores/:id` (hileli puanı sil).
+- `GET /v1/leaderboards/:gameType?period=all|week|day&limit=` (herkese açık, oturum varsa `isMe` işaretlenir;
+  `limit` 1–100, varsayılan 20; kullanıcı başına **en iyi** tek oyun puanı; yalnız `displayName`, e-posta ve
+  kimlik asla) ve `gameType=overall` (kullanıcının oyun türü başına en iyilerinin toplamı). `period` kayan
+  penceredir (UTC): `week` son 7 gün, `day` son 24 saat (başlangıç dahil); en iyi puan pencere içinden seçilir.
+  Yanıt `{gameType, period, totalPlayers, entries: [{rank, displayName, score, achievedAt, isMe}]}`. Eşit puan
+  aynı sırayı paylaşır (`rank()`: 1, 2, 2, 4); listede eşitlik bozucu puana ilk ulaşma anıdır (`overall`te son
+  tamamlanan türün anı). `GET /v1/leaderboards/:gameType/me?period=` → `{gameType, period, rank, personalBest,
+  totalPlayers}` (puanı yoksa `rank` ve `personalBest` null).
+  Devre dışı bırakılan (`disabled`) kullanıcıların puanları liste, sıra ve `totalPlayers`ta yer almaz; puanlar silinmez, hesap
+  yeniden etkinleştirilince geri döner.
+- `GET /v1/users/me/stats` → `{items: [{gameType, gamesPlayed, bestScore, totalScore, averageScore,
+  lastPlayedAt}] (her tür için bir kayıt), gamesPlayed, totalScore, overallBest}`; `GET /v1/users/me/scores`
+  (sayfalı, yeniden eskiye, `gameType` süzgeci) → `{items: [{id, gameType, score, correctCount, roundsTotal,
+  durationMs, createdAt}], page, pageSize, total}`. `users/me/...` yolları `UsersController`'a dokunmadan oyun
+  modülündeki ayrı bir denetleyicide durur (operationId `usersMeStats`, `usersMeScores`).
+- Admin: `GET /v1/scores` (sayfalı, yeniden eskiye; süzgeçler `userId`, `sessionId`, `gameType`, `maxDurationMs`; öğe =
+  `{id, sessionId, userId, displayName, userDisabled, gameType, score, correctCount, roundsTotal, durationMs, createdAt}`) hile
+  incelemesi içindir: liderlik yalnız görünen ad gösterdiğinden puan kimliği buradan alınır, `maxDurationMs` insanın ulaşamayacağı
+  hızdaki oyunları bulur. `DELETE /v1/scores/:id` (204; hileli puanı sil; liderlik ve istatistikler anında değişir).
+- Bilinen sınır: doğru cevaplar herkese açık içerik uçlarından (`GET /v1/countries`: ad, başkent, koordinat, bayrak) türetilebilir;
+  sunucu süre/puan hesabı bunu engellemez. Önlem, hileyi bulup kaldırmaktır (yukarıdaki yönetici uçları + devre dışı bırakma).
+- Oyun yanıtları `Cache-Control: no-store`; anonim liderlik listesi 15 sn herkese açık (`Vary: Authorization`).
 
 ## 9. API istemcisi (`@wangoh/api-client`)
 

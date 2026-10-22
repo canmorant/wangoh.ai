@@ -11,6 +11,8 @@ import { runSeed } from "./index.js";
  * (DATABASE_URL varsa o veritabanına, yoksa PGlite dosyasına). Üretimde `SEED_ON_BOOT=false`
  * olduğundan tohum yalnız bu komutla yüklenir. Sunucu gibi `apps/api/.env` dosyasını okur (yoksa
  * sessizce yanlış veritabanına yazardı) ve belirteç imzalamadığı için `JWT_ACCESS_SECRET` istemez.
+ * `--force`: içerik tohumu mevcut satırları ezer (varsayılan: yalnız eksikler eklenir, yönetici
+ * düzenlemeleri korunur).
  */
 async function main(): Promise<void> {
   loadDotEnv();
@@ -19,7 +21,7 @@ async function main(): Promise<void> {
   const handle = await createDatabase(config);
   try {
     await runMigrations(handle);
-    await runSeed(handle.db, { dir: config.seedDir });
+    await runSeed(handle.db, { dir: config.seedDir, force: process.argv.includes("--force") });
     logger.log("Tohum yüklendi.");
   } finally {
     await handle.close();

@@ -1,6 +1,100 @@
 {
   "components": {
     "schemas": {
+      "AdminScoreDto": {
+        "properties": {
+          "correctCount": {
+            "type": "integer"
+          },
+          "createdAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "displayName": {
+            "description": "Liderlikte görünen ad.",
+            "example": "Ayşe",
+            "type": "string"
+          },
+          "durationMs": {
+            "description": "Sunucunun ölçtüğü toplam oyun süresi (ms).",
+            "type": "integer"
+          },
+          "gameType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GameType"
+              }
+            ]
+          },
+          "id": {
+            "description": "Puan kimliği: `DELETE /v1/scores/{id}` bunu ister.",
+            "format": "uuid",
+            "type": "string"
+          },
+          "roundsTotal": {
+            "type": "integer"
+          },
+          "score": {
+            "type": "integer"
+          },
+          "sessionId": {
+            "format": "uuid",
+            "type": "string"
+          },
+          "userDisabled": {
+            "description": "Kullanıcı devre dışı bırakılmışsa true: puanı liderlikte, sırada ve oyuncu sayısında yer almaz.",
+            "type": "boolean"
+          },
+          "userId": {
+            "format": "uuid",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "sessionId",
+          "userId",
+          "displayName",
+          "userDisabled",
+          "gameType",
+          "score",
+          "correctCount",
+          "roundsTotal",
+          "durationMs",
+          "createdAt"
+        ],
+        "type": "object"
+      },
+      "AdminScorePageDto": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/AdminScoreDto"
+            },
+            "type": "array"
+          },
+          "page": {
+            "example": 1,
+            "type": "integer"
+          },
+          "pageSize": {
+            "example": 20,
+            "type": "integer"
+          },
+          "total": {
+            "description": "Filtreyle eşleşen toplam kayıt sayısı.",
+            "example": 0,
+            "type": "integer"
+          }
+        },
+        "required": [
+          "items",
+          "page",
+          "pageSize",
+          "total"
+        ],
+        "type": "object"
+      },
       "AdminUpdateUserDto": {
         "properties": {
           "disabled": {
@@ -19,6 +113,74 @@
             "type": "string"
           }
         },
+        "type": "object"
+      },
+      "AnswerResponseDto": {
+        "properties": {
+          "correct": {
+            "description": "`map-guess`te tur puanı ≥ 500 ise (≈ 880 km içi) doğru sayılır.",
+            "type": "boolean"
+          },
+          "correctAnswer": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CorrectAnswerDto"
+              }
+            ],
+            "description": "Cevaplanan turun doğru cevabı (yalnız bu turunki; sonraki turlar sır kalır)."
+          },
+          "distanceKm": {
+            "description": "Yalnız `map-guess`: tahmin ile hedef arasındaki uzaklık (km, tam sayıya yuvarlanmış).",
+            "nullable": true,
+            "type": "integer"
+          },
+          "nextRound": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GameRoundDto"
+              }
+            ],
+            "description": "Sonraki tur; son turdan sonra null (oyunu `finish` ile bitirin).",
+            "nullable": true,
+            "type": "object"
+          },
+          "points": {
+            "description": "Bu turun puanı.",
+            "type": "integer"
+          },
+          "score": {
+            "description": "Oturumun şimdiye kadarki toplam puanı.",
+            "type": "integer"
+          },
+          "speedBonus": {
+            "description": "Çoktan seçmeli: hız bonusu (0-50). `map-guess`te 0.",
+            "type": "integer"
+          },
+          "streak": {
+            "description": "Bu turdan sonraki art arda doğru sayısı (çoktan seçmeli).",
+            "type": "integer"
+          },
+          "streakBonus": {
+            "description": "Çoktan seçmeli: seri bonusu (0-50). `map-guess`te 0.",
+            "type": "integer"
+          },
+          "timedOut": {
+            "description": "Süre (20 sn + 3 sn ağ payı) aşıldı: 0 puan, `correct: false`.",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "correct",
+          "correctAnswer",
+          "points",
+          "score",
+          "timedOut",
+          "speedBonus",
+          "streakBonus",
+          "streak",
+          "distanceKm",
+          "nextRound"
+        ],
         "type": "object"
       },
       "AuthResponseDto": {
@@ -48,6 +210,364 @@
         ],
         "type": "object"
       },
+      "BlogAuthorDto": {
+        "properties": {
+          "displayName": {
+            "example": "Ayşe",
+            "type": "string"
+          }
+        },
+        "required": [
+          "displayName"
+        ],
+        "type": "object"
+      },
+      "BlogPostDto": {
+        "properties": {
+          "author": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/BlogAuthorDto"
+              }
+            ],
+            "description": "Yazar silinmişse ya da yoksa null.",
+            "nullable": true,
+            "type": "object"
+          },
+          "availableLangs": {
+            "description": "Yazının çevirisi bulunan diller.",
+            "items": {
+              "enum": [
+                "tr",
+                "en",
+                "es"
+              ],
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "body": {
+            "description": "Düz blok dizisi (HTML/Markdown yok). Bilinmeyen tür, aşırı uzun metin, kontrol karakteri ve https dışı görsel adresi reddedilir.",
+            "items": {
+              "discriminator": {
+                "mapping": {
+                  "heading": "#/components/schemas/HeadingBlockDto",
+                  "image": "#/components/schemas/ImageBlockDto",
+                  "list": "#/components/schemas/ListBlockDto",
+                  "paragraph": "#/components/schemas/ParagraphBlockDto",
+                  "quote": "#/components/schemas/QuoteBlockDto"
+                },
+                "propertyName": "type"
+              },
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/HeadingBlockDto"
+                },
+                {
+                  "$ref": "#/components/schemas/ParagraphBlockDto"
+                },
+                {
+                  "$ref": "#/components/schemas/ListBlockDto"
+                },
+                {
+                  "$ref": "#/components/schemas/QuoteBlockDto"
+                },
+                {
+                  "$ref": "#/components/schemas/ImageBlockDto"
+                }
+              ]
+            },
+            "maxItems": 300,
+            "type": "array"
+          },
+          "complete": {
+            "description": "İstenen dil tam sunuldu mu? `false` ise başlık, özet ve gövde Türkçeye düşmüştür.",
+            "type": "boolean"
+          },
+          "countryCode": {
+            "description": "Bağlı ülkenin ISO 3166-1 alpha-2 kodu.",
+            "example": "JP",
+            "nullable": true,
+            "type": "string"
+          },
+          "coverImage": {
+            "description": "Kapak görselinin mutlak https adresi.",
+            "format": "uri",
+            "nullable": true,
+            "type": "string"
+          },
+          "createdAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "excerpt": {
+            "description": "Kısa özet (kart metni).",
+            "type": "string"
+          },
+          "id": {
+            "format": "uuid",
+            "type": "string"
+          },
+          "lang": {
+            "description": "Gerçekte sunulan dil.",
+            "enum": [
+              "tr",
+              "en",
+              "es"
+            ],
+            "type": "string"
+          },
+          "publishedAt": {
+            "description": "İlk yayın zamanı; hiç yayınlanmamış taslaklarda null. Taslağa geri almak değeri silmez.",
+            "format": "date-time",
+            "nullable": true,
+            "type": "string"
+          },
+          "slug": {
+            "description": "Benzersiz adres parçası (küçük harf, rakam ve tire).",
+            "example": "japonya-gezi-rehberi",
+            "type": "string"
+          },
+          "status": {
+            "description": "Herkese açık uçlarda her zaman `published`; taslaklar yalnız yöneticiye döner.",
+            "enum": [
+              "draft",
+              "published"
+            ],
+            "type": "string"
+          },
+          "tags": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "title": {
+            "type": "string"
+          },
+          "updatedAt": {
+            "format": "date-time",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "slug",
+          "status",
+          "lang",
+          "complete",
+          "availableLangs",
+          "title",
+          "excerpt",
+          "coverImage",
+          "tags",
+          "countryCode",
+          "author",
+          "publishedAt",
+          "createdAt",
+          "updatedAt",
+          "body"
+        ],
+        "type": "object"
+      },
+      "BlogPostPageDto": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/BlogPostSummaryDto"
+            },
+            "type": "array"
+          },
+          "page": {
+            "example": 1,
+            "type": "integer"
+          },
+          "pageSize": {
+            "example": 20,
+            "type": "integer"
+          },
+          "total": {
+            "description": "Filtreyle eşleşen toplam kayıt sayısı.",
+            "example": 0,
+            "type": "integer"
+          }
+        },
+        "required": [
+          "items",
+          "page",
+          "pageSize",
+          "total"
+        ],
+        "type": "object"
+      },
+      "BlogPostSummaryDto": {
+        "properties": {
+          "author": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/BlogAuthorDto"
+              }
+            ],
+            "description": "Yazar silinmişse ya da yoksa null.",
+            "nullable": true,
+            "type": "object"
+          },
+          "availableLangs": {
+            "description": "Yazının çevirisi bulunan diller.",
+            "items": {
+              "enum": [
+                "tr",
+                "en",
+                "es"
+              ],
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "complete": {
+            "description": "İstenen dil tam sunuldu mu? `false` ise başlık, özet ve gövde Türkçeye düşmüştür.",
+            "type": "boolean"
+          },
+          "countryCode": {
+            "description": "Bağlı ülkenin ISO 3166-1 alpha-2 kodu.",
+            "example": "JP",
+            "nullable": true,
+            "type": "string"
+          },
+          "coverImage": {
+            "description": "Kapak görselinin mutlak https adresi.",
+            "format": "uri",
+            "nullable": true,
+            "type": "string"
+          },
+          "createdAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "excerpt": {
+            "description": "Kısa özet (kart metni).",
+            "type": "string"
+          },
+          "id": {
+            "format": "uuid",
+            "type": "string"
+          },
+          "lang": {
+            "description": "Gerçekte sunulan dil.",
+            "enum": [
+              "tr",
+              "en",
+              "es"
+            ],
+            "type": "string"
+          },
+          "publishedAt": {
+            "description": "İlk yayın zamanı; hiç yayınlanmamış taslaklarda null. Taslağa geri almak değeri silmez.",
+            "format": "date-time",
+            "nullable": true,
+            "type": "string"
+          },
+          "slug": {
+            "description": "Benzersiz adres parçası (küçük harf, rakam ve tire).",
+            "example": "japonya-gezi-rehberi",
+            "type": "string"
+          },
+          "status": {
+            "description": "Herkese açık uçlarda her zaman `published`; taslaklar yalnız yöneticiye döner.",
+            "enum": [
+              "draft",
+              "published"
+            ],
+            "type": "string"
+          },
+          "tags": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "title": {
+            "type": "string"
+          },
+          "updatedAt": {
+            "format": "date-time",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "slug",
+          "status",
+          "lang",
+          "complete",
+          "availableLangs",
+          "title",
+          "excerpt",
+          "coverImage",
+          "tags",
+          "countryCode",
+          "author",
+          "publishedAt",
+          "createdAt",
+          "updatedAt"
+        ],
+        "type": "object"
+      },
+      "BlogTranslationDto": {
+        "properties": {
+          "body": {
+            "description": "Düz blok dizisi (HTML/Markdown yok). Bilinmeyen tür, aşırı uzun metin, kontrol karakteri ve https dışı görsel adresi reddedilir.",
+            "items": {
+              "discriminator": {
+                "mapping": {
+                  "heading": "#/components/schemas/HeadingBlockDto",
+                  "image": "#/components/schemas/ImageBlockDto",
+                  "list": "#/components/schemas/ListBlockDto",
+                  "paragraph": "#/components/schemas/ParagraphBlockDto",
+                  "quote": "#/components/schemas/QuoteBlockDto"
+                },
+                "propertyName": "type"
+              },
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/HeadingBlockDto"
+                },
+                {
+                  "$ref": "#/components/schemas/ParagraphBlockDto"
+                },
+                {
+                  "$ref": "#/components/schemas/ListBlockDto"
+                },
+                {
+                  "$ref": "#/components/schemas/QuoteBlockDto"
+                },
+                {
+                  "$ref": "#/components/schemas/ImageBlockDto"
+                }
+              ]
+            },
+            "maxItems": 300,
+            "type": "array"
+          },
+          "excerpt": {
+            "description": "Liste kartında görünen kısa özet.",
+            "maxLength": 1000,
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": {
+            "maxLength": 200,
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "title",
+          "excerpt",
+          "body"
+        ],
+        "type": "object"
+      },
       "ChangePasswordDto": {
         "properties": {
           "currentPassword": {
@@ -68,6 +588,1189 @@
         ],
         "type": "object"
       },
+      "CityCountryDto": {
+        "properties": {
+          "code": {
+            "example": "JP",
+            "type": "string"
+          },
+          "flag": {
+            "nullable": true,
+            "type": "string"
+          },
+          "flagUrl": {
+            "type": "string"
+          },
+          "name": {
+            "description": "Ülke adı (istenen dilde, yoksa Türkçe).",
+            "example": "Japonya",
+            "type": "string"
+          }
+        },
+        "required": [
+          "code",
+          "name",
+          "flag",
+          "flagUrl"
+        ],
+        "type": "object"
+      },
+      "CityDetailDto": {
+        "properties": {
+          "complete": {
+            "description": "İstenen dil tam olarak sunuldu mu? `false` ise Türkçeye düşülmüştür.",
+            "type": "boolean"
+          },
+          "country": {
+            "$ref": "#/components/schemas/CityCountryDto"
+          },
+          "countryCode": {
+            "example": "JP",
+            "type": "string"
+          },
+          "description": {
+            "nullable": true,
+            "type": "string"
+          },
+          "guide": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CityGuideDto"
+              }
+            ],
+            "description": "Rehber gövdesi; `lang`/`complete` rehberin kendi durumudur (şehir kartından farklı olabilir).",
+            "nullable": true,
+            "type": "object"
+          },
+          "hasGuide": {
+            "description": "Şehir rehberi (`GET .../cities/:slug` içinde `guide`) var mı?",
+            "type": "boolean"
+          },
+          "imageUrl": {
+            "description": "Mutlak görsel adresi (JPEG).",
+            "example": "https://wangoh.com/og/photo-1540959733332-eab4deabeeaf-a87af73a.jpg",
+            "nullable": true,
+            "type": "string"
+          },
+          "lang": {
+            "description": "`name` ve `description`ın gerçekte sunulan dili. İstenen dil yok ya da tam değilse `tr`.",
+            "enum": [
+              "tr",
+              "en",
+              "es"
+            ],
+            "type": "string"
+          },
+          "name": {
+            "example": "Tokyo",
+            "type": "string"
+          },
+          "position": {
+            "description": "Ülke içindeki sıra.",
+            "type": "integer"
+          },
+          "slug": {
+            "description": "Web adresindeki şehir parçası (`/japonya/tokyo`).",
+            "example": "tokyo",
+            "type": "string"
+          }
+        },
+        "required": [
+          "slug",
+          "countryCode",
+          "position",
+          "name",
+          "description",
+          "imageUrl",
+          "hasGuide",
+          "lang",
+          "complete",
+          "country",
+          "guide"
+        ],
+        "type": "object"
+      },
+      "CityFieldsDto": {
+        "properties": {
+          "description": {
+            "maxLength": 800,
+            "minLength": 1,
+            "type": "string"
+          },
+          "name": {
+            "maxLength": 120,
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "description"
+        ],
+        "type": "object"
+      },
+      "CityFieldsPatchDto": {
+        "properties": {
+          "description": {
+            "maxLength": 800,
+            "minLength": 1,
+            "type": "string"
+          },
+          "name": {
+            "maxLength": 120,
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "CityGuideDto": {
+        "properties": {
+          "complete": {
+            "description": "İstenen dil tam olarak sunuldu mu? `false` ise Türkçeye düşülmüştür.",
+            "type": "boolean"
+          },
+          "countryInfoOnHub": {
+            "type": "boolean"
+          },
+          "dietary": {
+            "$ref": "#/components/schemas/DietaryGuideDto"
+          },
+          "faqs": {
+            "items": {
+              "$ref": "#/components/schemas/GuideFaqDto"
+            },
+            "type": "array"
+          },
+          "h1": {
+            "type": "string"
+          },
+          "itinerary": {
+            "items": {
+              "$ref": "#/components/schemas/GuideItineraryDayDto"
+            },
+            "type": "array"
+          },
+          "lang": {
+            "description": "Gerçekte sunulan dil. İstenen dil yok ya da tam değilse `tr`.",
+            "enum": [
+              "tr",
+              "en",
+              "es"
+            ],
+            "type": "string"
+          },
+          "lede": {
+            "type": "string"
+          },
+          "places": {
+            "items": {
+              "$ref": "#/components/schemas/GuidePlaceDto"
+            },
+            "type": "array"
+          },
+          "placesKind": {
+            "enum": [
+              "food",
+              "sights"
+            ],
+            "type": "string"
+          },
+          "practicalHeading": {
+            "type": "string"
+          },
+          "practicalTips": {
+            "items": {
+              "$ref": "#/components/schemas/GuidePracticalTipDto"
+            },
+            "type": "array"
+          },
+          "quickFacts": {
+            "items": {
+              "$ref": "#/components/schemas/GuideQuickFactDto"
+            },
+            "type": "array"
+          },
+          "relatedGuides": {
+            "items": {
+              "$ref": "#/components/schemas/GuideRelatedDto"
+            },
+            "type": "array"
+          },
+          "reviewed": {
+            "description": "Editoryal olarak gözden geçirildi mi (son tarih: `reviewedAt`).",
+            "type": "boolean"
+          },
+          "reviewedAt": {
+            "description": "Son gözden geçirme tarihi (YYYY-AA-GG; takvimde var olan bir gün).",
+            "example": "2026-01-31",
+            "type": "string"
+          },
+          "sections": {
+            "items": {
+              "$ref": "#/components/schemas/GuideSectionDto"
+            },
+            "type": "array"
+          },
+          "seoDescription": {
+            "type": "string"
+          },
+          "seoTitle": {
+            "type": "string"
+          },
+          "sources": {
+            "items": {
+              "$ref": "#/components/schemas/GuideSourceDto"
+            },
+            "type": "array"
+          },
+          "volatileNote": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "lang",
+          "complete",
+          "reviewed",
+          "seoTitle",
+          "seoDescription",
+          "h1",
+          "lede",
+          "quickFacts",
+          "sections",
+          "places",
+          "itinerary",
+          "faqs",
+          "reviewedAt"
+        ],
+        "type": "object"
+      },
+      "CityGuidePatchDto": {
+        "properties": {
+          "completeLangs": {
+            "description": "Tam çevrilmiş diller (`en`, `es`). Verilmezse mevcut liste korunur (çevirisi silinen dil düşer). Listelenen dilin tüm zorunlu alanları dolu olmalı.",
+            "items": {
+              "enum": [
+                "en",
+                "es"
+              ],
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "reviewed": {
+            "description": "Editoryal olarak gözden geçirildi mi.",
+            "type": "boolean"
+          },
+          "translations": {
+            "$ref": "#/components/schemas/GuideTranslationsPatchDto"
+          }
+        },
+        "type": "object"
+      },
+      "CityPageDto": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/CitySummaryDto"
+            },
+            "type": "array"
+          },
+          "page": {
+            "example": 1,
+            "type": "integer"
+          },
+          "pageSize": {
+            "example": 20,
+            "type": "integer"
+          },
+          "total": {
+            "description": "Filtreyle eşleşen toplam kayıt sayısı.",
+            "example": 0,
+            "type": "integer"
+          }
+        },
+        "required": [
+          "items",
+          "page",
+          "pageSize",
+          "total"
+        ],
+        "type": "object"
+      },
+      "CitySummaryDto": {
+        "properties": {
+          "complete": {
+            "description": "İstenen dil tam olarak sunuldu mu? `false` ise Türkçeye düşülmüştür.",
+            "type": "boolean"
+          },
+          "countryCode": {
+            "example": "JP",
+            "type": "string"
+          },
+          "description": {
+            "nullable": true,
+            "type": "string"
+          },
+          "hasGuide": {
+            "description": "Şehir rehberi (`GET .../cities/:slug` içinde `guide`) var mı?",
+            "type": "boolean"
+          },
+          "imageUrl": {
+            "description": "Mutlak görsel adresi (JPEG).",
+            "example": "https://wangoh.com/og/photo-1540959733332-eab4deabeeaf-a87af73a.jpg",
+            "nullable": true,
+            "type": "string"
+          },
+          "lang": {
+            "description": "`name` ve `description`ın gerçekte sunulan dili. İstenen dil yok ya da tam değilse `tr`.",
+            "enum": [
+              "tr",
+              "en",
+              "es"
+            ],
+            "type": "string"
+          },
+          "name": {
+            "example": "Tokyo",
+            "type": "string"
+          },
+          "position": {
+            "description": "Ülke içindeki sıra.",
+            "type": "integer"
+          },
+          "slug": {
+            "description": "Web adresindeki şehir parçası (`/japonya/tokyo`).",
+            "example": "tokyo",
+            "type": "string"
+          }
+        },
+        "required": [
+          "slug",
+          "countryCode",
+          "position",
+          "name",
+          "description",
+          "imageUrl",
+          "hasGuide",
+          "lang",
+          "complete"
+        ],
+        "type": "object"
+      },
+      "CityTranslationsPatchDto": {
+        "properties": {
+          "en": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CityFieldsPatchDto"
+              }
+            ],
+            "description": "İngilizce alanlar; `null` dili siler.",
+            "nullable": true,
+            "type": "object"
+          },
+          "es": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CityFieldsPatchDto"
+              }
+            ],
+            "description": "İspanyolca alanlar; `null` dili siler.",
+            "nullable": true,
+            "type": "object"
+          },
+          "tr": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CityFieldsPatchDto"
+              }
+            ],
+            "description": "Türkçe (kaynak) alanlar; silinemez."
+          }
+        },
+        "type": "object"
+      },
+      "ContinentDto": {
+        "properties": {
+          "complete": {
+            "description": "İstenen dil tam olarak sunuldu mu? `false` ise Türkçeye düşülmüştür.",
+            "type": "boolean"
+          },
+          "countryCount": {
+            "description": "Kıtadaki ülke sayısı.",
+            "type": "integer"
+          },
+          "lang": {
+            "description": "Gerçekte sunulan dil. İstenen dil yok ya da tam değilse `tr`.",
+            "enum": [
+              "tr",
+              "en",
+              "es"
+            ],
+            "type": "string"
+          },
+          "name": {
+            "example": "Avrupa",
+            "type": "string"
+          },
+          "position": {
+            "description": "Gösterim sırası (0'dan).",
+            "type": "integer"
+          },
+          "slug": {
+            "enum": [
+              "africa",
+              "americas",
+              "asia",
+              "europe",
+              "oceania"
+            ],
+            "example": "europe",
+            "type": "string"
+          },
+          "travelCountryCount": {
+            "description": "Seyahat içeriği (`hasTravel`) olan ülke sayısı.",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "slug",
+          "position",
+          "name",
+          "lang",
+          "complete",
+          "countryCount",
+          "travelCountryCount"
+        ],
+        "type": "object"
+      },
+      "CorrectAnswerDto": {
+        "properties": {
+          "code": {
+            "description": "Doğru ülkenin kodu.",
+            "example": "FR",
+            "type": "string"
+          },
+          "label": {
+            "description": "Gösterim metni: ülke adı (`flag-quiz`, `map-guess`) ya da başkent (`capital-quiz`).",
+            "example": "Paris",
+            "type": "string"
+          },
+          "lat": {
+            "description": "Yalnız `map-guess`: hedef enlem.",
+            "nullable": true,
+            "type": "number"
+          },
+          "lng": {
+            "description": "Yalnız `map-guess`: hedef boylam.",
+            "nullable": true,
+            "type": "number"
+          }
+        },
+        "required": [
+          "code",
+          "label",
+          "lat",
+          "lng"
+        ],
+        "type": "object"
+      },
+      "CountryDetailDto": {
+        "properties": {
+          "borders": {
+            "description": "Kara sınırı olan komşuların ISO3 kodları.",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "capital": {
+            "description": "Başkent(ler), kaynak biçimiyle (çevrilmemiş).",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "cities": {
+            "description": "Ülkenin şehirleri (sıralı).",
+            "items": {
+              "$ref": "#/components/schemas/CitySummaryDto"
+            },
+            "type": "array"
+          },
+          "code": {
+            "description": "ISO 3166-1 alpha-2.",
+            "example": "FR",
+            "type": "string"
+          },
+          "complete": {
+            "description": "İstenen dil tam olarak sunuldu mu? `false` ise Türkçeye düşülmüştür.",
+            "type": "boolean"
+          },
+          "continent": {
+            "enum": [
+              "africa",
+              "americas",
+              "asia",
+              "europe",
+              "oceania"
+            ],
+            "type": "string"
+          },
+          "flag": {
+            "description": "Emoji bayrak.",
+            "example": "🇫🇷",
+            "nullable": true,
+            "type": "string"
+          },
+          "flagUrl": {
+            "example": "https://wangoh.com/flags/fr.svg",
+            "type": "string"
+          },
+          "hasTravel": {
+            "description": "Seyahat içeriği (öne çıkan ülke) var mı?",
+            "type": "boolean"
+          },
+          "imageUrl": {
+            "description": "Öne çıkan ülkelerin mutlak görsel adresi (JPEG); diğerlerinde `null`.",
+            "nullable": true,
+            "type": "string"
+          },
+          "iso3": {
+            "example": "FRA",
+            "type": "string"
+          },
+          "landlocked": {
+            "type": "boolean"
+          },
+          "lang": {
+            "description": "`name`, `officialName` ve `subregion`un gerçekte sunulan dili. İstenen dil yok ya da tam değilse `tr`.",
+            "enum": [
+              "tr",
+              "en",
+              "es"
+            ],
+            "type": "string"
+          },
+          "latitude": {
+            "nullable": true,
+            "type": "number"
+          },
+          "longitude": {
+            "nullable": true,
+            "type": "number"
+          },
+          "name": {
+            "example": "Fransa",
+            "type": "string"
+          },
+          "officialName": {
+            "description": "Resmî ad, `lang` dilinde; sunulan dilde yoksa `null` (Türkçe değer karıştırılmaz).",
+            "example": "Fransa Cumhuriyeti",
+            "nullable": true,
+            "type": "string"
+          },
+          "subregion": {
+            "description": "Alt bölge, `lang` dilinde. Ülke çevirisinde dil başına yalnız ad zorunludur: sunulan dilde alt bölge yoksa `null` döner (Türkçe değer karıştırılmaz).",
+            "example": "Batı Avrupa",
+            "nullable": true,
+            "type": "string"
+          },
+          "travel": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CountryTravelDto"
+              }
+            ],
+            "description": "Seyahat bilgisi; yalnız öne çıkan ülkelerde.",
+            "nullable": true,
+            "type": "object"
+          }
+        },
+        "required": [
+          "code",
+          "iso3",
+          "continent",
+          "subregion",
+          "flag",
+          "flagUrl",
+          "latitude",
+          "longitude",
+          "landlocked",
+          "capital",
+          "hasTravel",
+          "imageUrl",
+          "name",
+          "officialName",
+          "lang",
+          "complete",
+          "borders",
+          "travel",
+          "cities"
+        ],
+        "type": "object"
+      },
+      "CountryFieldsPatchDto": {
+        "properties": {
+          "name": {
+            "maxLength": 120,
+            "minLength": 1,
+            "type": "string"
+          },
+          "officialName": {
+            "maxLength": 250,
+            "minLength": 1,
+            "type": "string"
+          },
+          "subregion": {
+            "maxLength": 120,
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "CountryHubDto": {
+        "properties": {
+          "citiesHeading": {
+            "maxLength": 300,
+            "minLength": 1,
+            "type": "string"
+          },
+          "cityGridIntro": {
+            "description": "Şehir kartlarının üstündeki kısa ülke özeti.",
+            "maxLength": 3000,
+            "minLength": 1,
+            "type": "string"
+          },
+          "essentials": {
+            "items": {
+              "$ref": "#/components/schemas/HubEssentialDto"
+            },
+            "maxItems": 30,
+            "type": "array"
+          },
+          "essentialsHeading": {
+            "maxLength": 300,
+            "minLength": 1,
+            "type": "string"
+          },
+          "intro": {
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 10,
+            "minItems": 1,
+            "type": "array"
+          },
+          "planningHeading": {
+            "maxLength": 300,
+            "minLength": 1,
+            "type": "string"
+          },
+          "routeIdeas": {
+            "items": {
+              "$ref": "#/components/schemas/HubRouteIdeaDto"
+            },
+            "maxItems": 20,
+            "type": "array"
+          },
+          "seoDescription": {
+            "maxLength": 500,
+            "minLength": 1,
+            "type": "string"
+          },
+          "seoTitle": {
+            "maxLength": 200,
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "seoTitle",
+          "seoDescription",
+          "planningHeading",
+          "cityGridIntro",
+          "intro",
+          "routeIdeas"
+        ],
+        "type": "object"
+      },
+      "CountryPageDto": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/CountrySummaryDto"
+            },
+            "type": "array"
+          },
+          "page": {
+            "example": 1,
+            "type": "integer"
+          },
+          "pageSize": {
+            "example": 20,
+            "type": "integer"
+          },
+          "total": {
+            "description": "Filtreyle eşleşen toplam kayıt sayısı.",
+            "example": 0,
+            "type": "integer"
+          }
+        },
+        "required": [
+          "items",
+          "page",
+          "pageSize",
+          "total"
+        ],
+        "type": "object"
+      },
+      "CountrySummaryDto": {
+        "properties": {
+          "capital": {
+            "description": "Başkent(ler), kaynak biçimiyle (çevrilmemiş).",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "code": {
+            "description": "ISO 3166-1 alpha-2.",
+            "example": "FR",
+            "type": "string"
+          },
+          "complete": {
+            "description": "İstenen dil tam olarak sunuldu mu? `false` ise Türkçeye düşülmüştür.",
+            "type": "boolean"
+          },
+          "continent": {
+            "enum": [
+              "africa",
+              "americas",
+              "asia",
+              "europe",
+              "oceania"
+            ],
+            "type": "string"
+          },
+          "flag": {
+            "description": "Emoji bayrak.",
+            "example": "🇫🇷",
+            "nullable": true,
+            "type": "string"
+          },
+          "flagUrl": {
+            "example": "https://wangoh.com/flags/fr.svg",
+            "type": "string"
+          },
+          "hasTravel": {
+            "description": "Seyahat içeriği (öne çıkan ülke) var mı?",
+            "type": "boolean"
+          },
+          "imageUrl": {
+            "description": "Öne çıkan ülkelerin mutlak görsel adresi (JPEG); diğerlerinde `null`.",
+            "nullable": true,
+            "type": "string"
+          },
+          "iso3": {
+            "example": "FRA",
+            "type": "string"
+          },
+          "landlocked": {
+            "type": "boolean"
+          },
+          "lang": {
+            "description": "`name`, `officialName` ve `subregion`un gerçekte sunulan dili. İstenen dil yok ya da tam değilse `tr`.",
+            "enum": [
+              "tr",
+              "en",
+              "es"
+            ],
+            "type": "string"
+          },
+          "latitude": {
+            "nullable": true,
+            "type": "number"
+          },
+          "longitude": {
+            "nullable": true,
+            "type": "number"
+          },
+          "name": {
+            "example": "Fransa",
+            "type": "string"
+          },
+          "officialName": {
+            "description": "Resmî ad, `lang` dilinde; sunulan dilde yoksa `null` (Türkçe değer karıştırılmaz).",
+            "example": "Fransa Cumhuriyeti",
+            "nullable": true,
+            "type": "string"
+          },
+          "subregion": {
+            "description": "Alt bölge, `lang` dilinde. Ülke çevirisinde dil başına yalnız ad zorunludur: sunulan dilde alt bölge yoksa `null` döner (Türkçe değer karıştırılmaz).",
+            "example": "Batı Avrupa",
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "required": [
+          "code",
+          "iso3",
+          "continent",
+          "subregion",
+          "flag",
+          "flagUrl",
+          "latitude",
+          "longitude",
+          "landlocked",
+          "capital",
+          "hasTravel",
+          "imageUrl",
+          "name",
+          "officialName",
+          "lang",
+          "complete"
+        ],
+        "type": "object"
+      },
+      "CountryTranslationsPatchDto": {
+        "properties": {
+          "en": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CountryFieldsPatchDto"
+              }
+            ],
+            "description": "İngilizce alanlar; `null` dili siler.",
+            "nullable": true,
+            "type": "object"
+          },
+          "es": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CountryFieldsPatchDto"
+              }
+            ],
+            "description": "İspanyolca alanlar; `null` dili siler.",
+            "nullable": true,
+            "type": "object"
+          },
+          "tr": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CountryFieldsPatchDto"
+              }
+            ],
+            "description": "Türkçe (kaynak) alanlar; silinemez."
+          }
+        },
+        "type": "object"
+      },
+      "CountryTravelDto": {
+        "properties": {
+          "accent": {
+            "description": "Biniş kartı vurgu rengi.",
+            "example": "#e0537a",
+            "nullable": true,
+            "type": "string"
+          },
+          "bestSeason": {
+            "example": "Mart–Mayıs · Ekim–Kasım",
+            "nullable": true,
+            "type": "string"
+          },
+          "budget": {
+            "description": "Bütçe düzeyi (dilden bağımsız anahtar); görünen ad `budgetLabel`.",
+            "enum": [
+              "budget",
+              "moderate",
+              "high"
+            ],
+            "nullable": true,
+            "type": "string"
+          },
+          "budgetLabel": {
+            "example": "Yüksek",
+            "nullable": true,
+            "type": "string"
+          },
+          "capital": {
+            "description": "Başkent (seyahat metni).",
+            "nullable": true,
+            "type": "string"
+          },
+          "complete": {
+            "description": "İstenen dil tam olarak sunuldu mu? `false` ise Türkçeye düşülmüştür.",
+            "type": "boolean"
+          },
+          "description": {
+            "nullable": true,
+            "type": "string"
+          },
+          "flightTime": {
+            "description": "İstanbul kalkışlı yaklaşık uçuş süresi.",
+            "example": "11sa 30dk",
+            "nullable": true,
+            "type": "string"
+          },
+          "gateway": {
+            "description": "Varış şehri.",
+            "nullable": true,
+            "type": "string"
+          },
+          "hub": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CountryHubDto"
+              }
+            ],
+            "description": "Ülke sayfası içeriği.",
+            "nullable": true,
+            "type": "object"
+          },
+          "iata": {
+            "description": "Ana varış havalimanı IATA kodu.",
+            "example": "HND",
+            "nullable": true,
+            "type": "string"
+          },
+          "imageUrl": {
+            "description": "Mutlak görsel adresi (JPEG).",
+            "example": "https://wangoh.com/og/photo-1493976040374-85c8e12f0c0e-9fc55608.jpg",
+            "nullable": true,
+            "type": "string"
+          },
+          "lang": {
+            "description": "Gerçekte sunulan dil. İstenen dil yok ya da tam değilse `tr`.",
+            "enum": [
+              "tr",
+              "en",
+              "es"
+            ],
+            "type": "string"
+          },
+          "position": {
+            "description": "Öne çıkan ülkeler arasındaki sıra.",
+            "type": "integer"
+          },
+          "signature": {
+            "description": "Ülkeyi anlatan tek cümle.",
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "required": [
+          "lang",
+          "complete",
+          "position",
+          "imageUrl",
+          "accent",
+          "budget",
+          "budgetLabel",
+          "iata",
+          "description",
+          "signature",
+          "gateway",
+          "capital",
+          "bestSeason",
+          "flightTime",
+          "hub"
+        ],
+        "type": "object"
+      },
+      "CountryTravelPatchDto": {
+        "properties": {
+          "accent": {
+            "example": "#e0537a",
+            "maxLength": 7,
+            "minLength": 7,
+            "pattern": "^#[0-9a-fA-F]{6}$",
+            "type": "string"
+          },
+          "budget": {
+            "enum": [
+              "budget",
+              "moderate",
+              "high"
+            ],
+            "type": "string"
+          },
+          "completeLangs": {
+            "description": "Tam çevrilmiş diller (`en`, `es`). Verilmezse mevcut liste korunur (çevirisi silinen dil düşer). Listelenen dilin tüm zorunlu alanları dolu olmalı.",
+            "items": {
+              "enum": [
+                "en",
+                "es"
+              ],
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "iata": {
+            "description": "IATA havalimanı kodu.",
+            "example": "HND",
+            "maxLength": 3,
+            "minLength": 3,
+            "pattern": "^[A-Z]{3}$",
+            "type": "string"
+          },
+          "image": {
+            "description": "Web yolu (`/images/<ad>.avif`) ya da https adresi. Yanıtta mutlak `imageUrl` üretilir.",
+            "example": "/images/ornek-gorsel-1a2b3c4d.avif",
+            "maxLength": 2048,
+            "type": "string"
+          },
+          "translations": {
+            "$ref": "#/components/schemas/TravelTranslationsPatchDto"
+          }
+        },
+        "type": "object"
+      },
+      "CreateBlogPostDto": {
+        "properties": {
+          "countryCode": {
+            "description": "Bağlı ülke (ISO 3166-1 alpha-2). Var olmayan ülke 400.",
+            "example": "JP",
+            "nullable": true,
+            "type": "string"
+          },
+          "coverImage": {
+            "description": "Yalnız https adresi.",
+            "format": "uri",
+            "maxLength": 2048,
+            "nullable": true,
+            "type": "string"
+          },
+          "slug": {
+            "description": "Benzersiz; küçük harf, rakam ve tire. Çakışırsa 409 `BLOG_SLUG_TAKEN`.",
+            "example": "japonya-gezi-rehberi",
+            "maxLength": 120,
+            "minLength": 3,
+            "type": "string"
+          },
+          "status": {
+            "default": "draft",
+            "description": "`published` ilk yayında `publishedAt` atar.",
+            "enum": [
+              "draft",
+              "published"
+            ],
+            "type": "string"
+          },
+          "tags": {
+            "description": "Küçük harfe çevrilir, tekrarlar atılır.",
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 20,
+            "type": "array"
+          },
+          "translations": {
+            "$ref": "#/components/schemas/CreateBlogTranslationsDto"
+          }
+        },
+        "required": [
+          "slug",
+          "translations"
+        ],
+        "type": "object"
+      },
+      "CreateBlogTranslationsDto": {
+        "properties": {
+          "en": {
+            "$ref": "#/components/schemas/BlogTranslationDto"
+          },
+          "es": {
+            "$ref": "#/components/schemas/BlogTranslationDto"
+          },
+          "tr": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/BlogTranslationDto"
+              }
+            ],
+            "description": "Türkçe zorunludur; diğer diller yoksa Türkçeye düşülür."
+          }
+        },
+        "required": [
+          "tr"
+        ],
+        "type": "object"
+      },
+      "CreateCityDto": {
+        "properties": {
+          "completeLangs": {
+            "description": "Tam çevrilmiş diller (`en`, `es`). Verilmezse gönderilen yabancı dillerin hepsi tam sayılır (her birinde ad ve açıklama zorunludur).",
+            "items": {
+              "enum": [
+                "en",
+                "es"
+              ],
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "guide": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CityGuidePatchDto"
+              }
+            ],
+            "description": "İsteğe bağlı rehber (Türkçe gövdede zorunlu alanlar bulunmalı)."
+          },
+          "image": {
+            "description": "Web yolu (`/images/<ad>.avif`) ya da https adresi. Yanıtta mutlak `imageUrl` üretilir.",
+            "example": "/images/ornek-gorsel-1a2b3c4d.avif",
+            "maxLength": 2048,
+            "type": "string"
+          },
+          "position": {
+            "description": "Verilmezse ülkenin son sırasına eklenir.",
+            "maximum": 10000,
+            "minimum": 0,
+            "type": "integer"
+          },
+          "slug": {
+            "description": "Web adresi parçası. Verilmezse Türkçe addan web'in `slugify` kuralıyla türetilir. Ülkede benzersiz olmalı (409).",
+            "example": "yeni-sehir",
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+            "type": "string"
+          },
+          "translations": {
+            "$ref": "#/components/schemas/CreateCityTranslationsDto"
+          }
+        },
+        "required": [
+          "translations"
+        ],
+        "type": "object"
+      },
+      "CreateCityTranslationsDto": {
+        "properties": {
+          "en": {
+            "$ref": "#/components/schemas/CityFieldsDto"
+          },
+          "es": {
+            "$ref": "#/components/schemas/CityFieldsDto"
+          },
+          "tr": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CityFieldsDto"
+              }
+            ],
+            "description": "Türkçe (kaynak) ad ve açıklama; zorunlu."
+          }
+        },
+        "required": [
+          "tr"
+        ],
+        "type": "object"
+      },
       "DeleteAccountDto": {
         "properties": {
           "password": {
@@ -79,6 +1782,171 @@
         },
         "required": [
           "password"
+        ],
+        "type": "object"
+      },
+      "DietaryGuideDto": {
+        "properties": {
+          "halal": {
+            "items": {
+              "$ref": "#/components/schemas/DietaryRestaurantDto"
+            },
+            "maxItems": 50,
+            "type": "array"
+          },
+          "researchNote": {
+            "description": "Güçlü kanıt bulunamadığında boş kart yerine açık araştırma notu.",
+            "maxLength": 3000,
+            "minLength": 1,
+            "type": "string"
+          },
+          "vegan": {
+            "items": {
+              "$ref": "#/components/schemas/DietaryRestaurantDto"
+            },
+            "maxItems": 50,
+            "type": "array"
+          }
+        },
+        "required": [
+          "vegan",
+          "halal"
+        ],
+        "type": "object"
+      },
+      "DietaryRestaurantDto": {
+        "properties": {
+          "address": {
+            "maxLength": 400,
+            "minLength": 1,
+            "type": "string"
+          },
+          "area": {
+            "maxLength": 200,
+            "minLength": 1,
+            "type": "string"
+          },
+          "category": {
+            "enum": [
+              "vegan",
+              "halal"
+            ],
+            "type": "string"
+          },
+          "city": {
+            "description": "Kaynak verideki şehir adı (Türkçe).",
+            "maxLength": 120,
+            "minLength": 1,
+            "type": "string"
+          },
+          "cuisine": {
+            "maxLength": 200,
+            "minLength": 1,
+            "type": "string"
+          },
+          "description": {
+            "maxLength": 1500,
+            "minLength": 1,
+            "type": "string"
+          },
+          "lastVerified": {
+            "description": "Son editoryal kontrol (YYYY-AA-GG; takvimde var olan bir gün).",
+            "example": "2026-01-31",
+            "maxLength": 10,
+            "minLength": 10,
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+            "type": "string"
+          },
+          "name": {
+            "description": "Özel isim: çevrilmez.",
+            "maxLength": 200,
+            "minLength": 1,
+            "type": "string"
+          },
+          "officialUrl": {
+            "example": "https://example.com/kaynak",
+            "format": "uri",
+            "maxLength": 2048,
+            "type": "string"
+          },
+          "price": {
+            "enum": [
+              "Ekonomik",
+              "Orta",
+              "Yüksek"
+            ],
+            "type": "string"
+          },
+          "verification": {
+            "$ref": "#/components/schemas/DietaryVerificationDto"
+          },
+          "why": {
+            "maxLength": 1500,
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "category",
+          "cuisine",
+          "area",
+          "description",
+          "why",
+          "verification",
+          "lastVerified"
+        ],
+        "type": "object"
+      },
+      "DietaryVerificationDto": {
+        "properties": {
+          "note": {
+            "description": "Etiketin sınırları: alkol, ortak mutfak ya da yeniden teyit ihtiyacı.",
+            "maxLength": 1500,
+            "minLength": 1,
+            "type": "string"
+          },
+          "sourceName": {
+            "maxLength": 300,
+            "minLength": 1,
+            "type": "string"
+          },
+          "sourceType": {
+            "enum": [
+              "certifier",
+              "official-tourism",
+              "restaurant",
+              "specialist-directory",
+              "vegan-directory"
+            ],
+            "type": "string"
+          },
+          "sourceUrl": {
+            "example": "https://example.com/kaynak",
+            "format": "uri",
+            "maxLength": 2048,
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "fully-vegan",
+              "vegan-focused",
+              "vegan-options",
+              "certified-halal",
+              "restaurant-confirmed",
+              "halal-options",
+              "muslim-friendly",
+              "verification-recommended"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "sourceName",
+          "sourceUrl",
+          "sourceType",
+          "note"
         ],
         "type": "object"
       },
@@ -138,6 +2006,739 @@
         ],
         "type": "object"
       },
+      "FinishResponseDto": {
+        "properties": {
+          "correctCount": {
+            "type": "integer"
+          },
+          "durationMs": {
+            "description": "Sunucunun ölçtüğü toplam oyun süresi (ms).",
+            "type": "integer"
+          },
+          "gameType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GameType"
+              }
+            ]
+          },
+          "isPersonalBest": {
+            "description": "Bu oyun, öncekilerin hepsinden yüksek mi (ilk oyun da true).",
+            "type": "boolean"
+          },
+          "personalBest": {
+            "description": "Bu oyun türündeki en iyi puanınız.",
+            "type": "integer"
+          },
+          "rank": {
+            "description": "Tüm zamanlar liderliğinde sıranız (en iyi puanınıza göre; eşit puan aynı sıra).",
+            "minimum": 1,
+            "type": "integer"
+          },
+          "roundsTotal": {
+            "type": "integer"
+          },
+          "score": {
+            "type": "integer"
+          },
+          "scoreId": {
+            "description": "Kaydedilen puan satırının kimliği.",
+            "format": "uuid",
+            "type": "string"
+          },
+          "sessionId": {
+            "format": "uuid",
+            "type": "string"
+          }
+        },
+        "required": [
+          "sessionId",
+          "scoreId",
+          "gameType",
+          "score",
+          "correctCount",
+          "roundsTotal",
+          "durationMs",
+          "rank",
+          "personalBest",
+          "isPersonalBest"
+        ],
+        "type": "object"
+      },
+      "GameOptionDto": {
+        "properties": {
+          "id": {
+            "description": "Seçenek kimliği = ülke kodu. Cevap olarak bu değer gönderilir.",
+            "example": "FR",
+            "type": "string"
+          },
+          "label": {
+            "description": "Gösterilecek metin: `flag-quiz` için ülke adı, `capital-quiz` için başkent.",
+            "example": "Paris",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "label"
+        ],
+        "type": "object"
+      },
+      "GameQuestionDto": {
+        "properties": {
+          "countryName": {
+            "description": "Sorulan ülkenin adı (`capital-quiz` ve `map-guess`), istenen dilde.",
+            "example": "Fransa",
+            "nullable": true,
+            "type": "string"
+          },
+          "flag": {
+            "description": "Emoji bayrak. Yalnız `flag-quiz` sorusunda dolu.",
+            "example": "🇫🇷",
+            "nullable": true,
+            "type": "string"
+          },
+          "flagUrl": {
+            "description": "Bayrak görseli (SVG). Yalnız `flag-quiz` sorusunda dolu.",
+            "example": "https://wangoh.com/flags/fr.svg",
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "required": [
+          "flag",
+          "flagUrl",
+          "countryName"
+        ],
+        "type": "object"
+      },
+      "GameRoundDto": {
+        "properties": {
+          "deadlineAt": {
+            "description": "`startedAt + timeLimitMs`. Bu andan sonra gelen cevap yine 3 sn'ye kadar kabul edilir ama hız bonusu almaz.",
+            "format": "date-time",
+            "type": "string"
+          },
+          "index": {
+            "description": "0 tabanlı tur numarası. Cevap gönderirken `roundIndex` olarak aynen yollanır.",
+            "minimum": 0,
+            "type": "integer"
+          },
+          "options": {
+            "description": "Çoktan seçmeli oyunlarda 4 seçenek; `map-guess`te null (haritada nokta işaretlenir).",
+            "items": {
+              "$ref": "#/components/schemas/GameOptionDto"
+            },
+            "nullable": true,
+            "type": "array"
+          },
+          "question": {
+            "$ref": "#/components/schemas/GameQuestionDto"
+          },
+          "startedAt": {
+            "description": "Turun başladığı an (sunucu saati).",
+            "format": "date-time",
+            "type": "string"
+          },
+          "timeLimitMs": {
+            "description": "Tur süresi (ms). Sunucu süreyi kendi ölçer; bu süre ve 3 sn ağ payı aşılırsa cevap 0 puan sayılır.",
+            "example": 20000,
+            "type": "integer"
+          }
+        },
+        "required": [
+          "index",
+          "question",
+          "options",
+          "timeLimitMs",
+          "startedAt",
+          "deadlineAt"
+        ],
+        "type": "object"
+      },
+      "GameSessionDto": {
+        "properties": {
+          "correctCount": {
+            "type": "integer"
+          },
+          "currentRound": {
+            "description": "Cevap bekleyen turun numarası; tüm turlar cevaplandıysa `roundsTotal`.",
+            "minimum": 0,
+            "type": "integer"
+          },
+          "expiresAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "finishedAt": {
+            "format": "date-time",
+            "nullable": true,
+            "type": "string"
+          },
+          "gameType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GameType"
+              }
+            ]
+          },
+          "results": {
+            "description": "Cevaplanmış turların özeti (doğru cevap içermez).",
+            "items": {
+              "$ref": "#/components/schemas/RoundResultDto"
+            },
+            "type": "array"
+          },
+          "round": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GameRoundDto"
+              }
+            ],
+            "description": "Devam eden oturumda cevap bekleyen tur; aksi halde null. Doğru cevap hiçbir zaman dönmez.",
+            "nullable": true,
+            "type": "object"
+          },
+          "roundsTotal": {
+            "type": "integer"
+          },
+          "score": {
+            "description": "Şimdiye kadarki toplam puan.",
+            "type": "integer"
+          },
+          "sessionId": {
+            "format": "uuid",
+            "type": "string"
+          },
+          "startedAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "status": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GameStatus"
+              }
+            ],
+            "description": "Süresi dolmuş oturum bu istekte `expired` olarak işaretlenir."
+          }
+        },
+        "required": [
+          "sessionId",
+          "gameType",
+          "status",
+          "roundsTotal",
+          "currentRound",
+          "score",
+          "correctCount",
+          "startedAt",
+          "expiresAt",
+          "finishedAt",
+          "round",
+          "results"
+        ],
+        "type": "object"
+      },
+      "GameStatus": {
+        "description": "Süresi dolmuş oturum bu istekte `expired` olarak işaretlenir.",
+        "enum": [
+          "active",
+          "finished",
+          "abandoned",
+          "expired"
+        ],
+        "type": "string"
+      },
+      "GameType": {
+        "enum": [
+          "flag-quiz",
+          "capital-quiz",
+          "map-guess"
+        ],
+        "type": "string"
+      },
+      "GameTypeStatsDto": {
+        "properties": {
+          "averageScore": {
+            "description": "Ortalama puan (bir ondalık); hiç oynanmadıysa null.",
+            "nullable": true,
+            "type": "number"
+          },
+          "bestScore": {
+            "description": "En iyi puan; hiç oynanmadıysa null.",
+            "nullable": true,
+            "type": "integer"
+          },
+          "gameType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GameType"
+              }
+            ]
+          },
+          "gamesPlayed": {
+            "description": "Bitirilip puanı kaydedilen oyun sayısı.",
+            "type": "integer"
+          },
+          "lastPlayedAt": {
+            "description": "Son oyunun bitiş anı.",
+            "format": "date-time",
+            "nullable": true,
+            "type": "string"
+          },
+          "totalScore": {
+            "description": "Tüm oyunların puan toplamı.",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "gameType",
+          "gamesPlayed",
+          "bestScore",
+          "totalScore",
+          "averageScore",
+          "lastPlayedAt"
+        ],
+        "type": "object"
+      },
+      "GuideBodyInputDto": {
+        "properties": {
+          "countryInfoOnHub": {
+            "description": "Ülke düzeyindeki pratik bilgiler ülke sayfasında.",
+            "type": "boolean"
+          },
+          "dietary": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/DietaryGuideDto"
+              }
+            ],
+            "description": "Vegan ve helal öneriler."
+          },
+          "faqs": {
+            "items": {
+              "$ref": "#/components/schemas/GuideFaqDto"
+            },
+            "maxItems": 40,
+            "type": "array"
+          },
+          "h1": {
+            "description": "Sayfadaki tek H1.",
+            "maxLength": 300,
+            "minLength": 1,
+            "type": "string"
+          },
+          "itinerary": {
+            "items": {
+              "$ref": "#/components/schemas/GuideItineraryDayDto"
+            },
+            "maxItems": 30,
+            "type": "array"
+          },
+          "lede": {
+            "description": "Hero altındaki giriş cümlesi.",
+            "maxLength": 1500,
+            "minLength": 1,
+            "type": "string"
+          },
+          "places": {
+            "items": {
+              "$ref": "#/components/schemas/GuidePlaceDto"
+            },
+            "maxItems": 40,
+            "type": "array"
+          },
+          "placesKind": {
+            "description": "`food` (varsayılan): yeme-içme kartları; `sights`: gezi durakları.",
+            "enum": [
+              "food",
+              "sights"
+            ],
+            "type": "string"
+          },
+          "practicalHeading": {
+            "maxLength": 300,
+            "minLength": 1,
+            "type": "string"
+          },
+          "practicalTips": {
+            "items": {
+              "$ref": "#/components/schemas/GuidePracticalTipDto"
+            },
+            "maxItems": 40,
+            "type": "array"
+          },
+          "quickFacts": {
+            "items": {
+              "$ref": "#/components/schemas/GuideQuickFactDto"
+            },
+            "maxItems": 30,
+            "type": "array"
+          },
+          "relatedGuides": {
+            "items": {
+              "$ref": "#/components/schemas/GuideRelatedDto"
+            },
+            "maxItems": 30,
+            "type": "array"
+          },
+          "reviewedAt": {
+            "description": "Son gözden geçirme tarihi (YYYY-AA-GG; takvimde var olan bir gün).",
+            "example": "2026-01-31",
+            "maxLength": 10,
+            "minLength": 10,
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+            "type": "string"
+          },
+          "sections": {
+            "items": {
+              "$ref": "#/components/schemas/GuideSectionDto"
+            },
+            "maxItems": 40,
+            "type": "array"
+          },
+          "seoDescription": {
+            "maxLength": 400,
+            "minLength": 1,
+            "type": "string"
+          },
+          "seoTitle": {
+            "maxLength": 200,
+            "minLength": 1,
+            "type": "string"
+          },
+          "sources": {
+            "items": {
+              "$ref": "#/components/schemas/GuideSourceDto"
+            },
+            "maxItems": 60,
+            "type": "array"
+          },
+          "volatileNote": {
+            "description": "Zamanla değişebilecek bilgiler için not.",
+            "maxLength": 1500,
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "GuideFaqDto": {
+        "properties": {
+          "a": {
+            "maxLength": 3000,
+            "minLength": 1,
+            "type": "string"
+          },
+          "q": {
+            "maxLength": 400,
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "q",
+          "a"
+        ],
+        "type": "object"
+      },
+      "GuideItineraryDayDto": {
+        "properties": {
+          "afternoon": {
+            "maxLength": 1500,
+            "minLength": 1,
+            "type": "string"
+          },
+          "evening": {
+            "maxLength": 1500,
+            "minLength": 1,
+            "type": "string"
+          },
+          "morning": {
+            "maxLength": 1500,
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": {
+            "maxLength": 300,
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "title",
+          "morning",
+          "afternoon",
+          "evening"
+        ],
+        "type": "object"
+      },
+      "GuidePlaceDto": {
+        "properties": {
+          "area": {
+            "description": "Semt / bölge.",
+            "maxLength": 200,
+            "minLength": 1,
+            "type": "string"
+          },
+          "known": {
+            "description": "Ne ile bilinir.",
+            "maxLength": 600,
+            "minLength": 1,
+            "type": "string"
+          },
+          "name": {
+            "maxLength": 200,
+            "minLength": 1,
+            "type": "string"
+          },
+          "price": {
+            "description": "Kaba kategori (Türkçe): kesin fiyat yoktur.",
+            "enum": [
+              "Ekonomik",
+              "Orta",
+              "Yüksek"
+            ],
+            "type": "string"
+          },
+          "tip": {
+            "description": "Rezervasyon / sıra beklentisi gibi pratik not.",
+            "maxLength": 800,
+            "minLength": 1,
+            "type": "string"
+          },
+          "why": {
+            "description": "Neden gidilir.",
+            "maxLength": 1500,
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "area",
+          "known",
+          "why"
+        ],
+        "type": "object"
+      },
+      "GuidePracticalTipDto": {
+        "properties": {
+          "body": {
+            "maxLength": 1500,
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": {
+            "maxLength": 300,
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "title",
+          "body"
+        ],
+        "type": "object"
+      },
+      "GuideQuickFactDto": {
+        "properties": {
+          "label": {
+            "example": "Para birimi",
+            "maxLength": 120,
+            "minLength": 1,
+            "type": "string"
+          },
+          "value": {
+            "maxLength": 800,
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "label",
+          "value"
+        ],
+        "type": "object"
+      },
+      "GuideRelatedDto": {
+        "properties": {
+          "anchor": {
+            "description": "Bağlantı metni.",
+            "maxLength": 300,
+            "minLength": 1,
+            "type": "string"
+          },
+          "city": {
+            "description": "Aynı ülkedeki şehrin Türkçe adı (anahtar; çevrilmez).",
+            "maxLength": 120,
+            "minLength": 1,
+            "type": "string"
+          },
+          "description": {
+            "maxLength": 800,
+            "minLength": 1,
+            "type": "string"
+          },
+          "slug": {
+            "description": "Yalnız yanıtta: şehrin slug'ı (`/v1/countries/:code/cities/:slug`). Yazarken kabul edilir ama yok sayılır.",
+            "nullable": true,
+            "readOnly": true,
+            "type": "string"
+          }
+        },
+        "required": [
+          "city",
+          "anchor",
+          "description"
+        ],
+        "type": "object"
+      },
+      "GuideSectionDto": {
+        "properties": {
+          "body": {
+            "description": "Paragraflar. `**kalın**` satır içi işaretlemesi içerebilir (web `<strong>` çizer); düz metin çizen istemci `**` ayraçlarını ayıklamalıdır. Başka işaretleme işlenmez.",
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 30,
+            "minItems": 0,
+            "type": "array"
+          },
+          "heading": {
+            "description": "H2 başlığı.",
+            "maxLength": 300,
+            "minLength": 1,
+            "type": "string"
+          },
+          "id": {
+            "description": "URL parçası / içindekiler kimliği.",
+            "example": "ulasim",
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+            "type": "string"
+          },
+          "subsections": {
+            "description": "İsteğe bağlı H3 alt bölümleri.",
+            "items": {
+              "$ref": "#/components/schemas/GuideSubsectionDto"
+            },
+            "maxItems": 20,
+            "type": "array"
+          }
+        },
+        "required": [
+          "heading",
+          "id",
+          "body"
+        ],
+        "type": "object"
+      },
+      "GuideSourceDto": {
+        "properties": {
+          "name": {
+            "maxLength": 300,
+            "minLength": 1,
+            "type": "string"
+          },
+          "url": {
+            "example": "https://example.com/kaynak",
+            "format": "uri",
+            "maxLength": 2048,
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "url"
+        ],
+        "type": "object"
+      },
+      "GuideSubsectionDto": {
+        "properties": {
+          "body": {
+            "description": "Paragraflar. `**kalın**` satır içi işaretlemesi içerebilir (web `<strong>` çizer); düz metin çizen istemci `**` ayraçlarını ayıklamalıdır. Başka işaretleme işlenmez.",
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 30,
+            "minItems": 1,
+            "type": "array"
+          },
+          "heading": {
+            "maxLength": 300,
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "heading",
+          "body"
+        ],
+        "type": "object"
+      },
+      "GuideTranslationsPatchDto": {
+        "properties": {
+          "en": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GuideBodyInputDto"
+              }
+            ],
+            "description": "İngilizce alanlar; `null` dili siler.",
+            "nullable": true,
+            "type": "object"
+          },
+          "es": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GuideBodyInputDto"
+              }
+            ],
+            "description": "İspanyolca alanlar; `null` dili siler.",
+            "nullable": true,
+            "type": "object"
+          },
+          "tr": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GuideBodyInputDto"
+              }
+            ],
+            "description": "Türkçe (kaynak) alanlar; silinemez."
+          }
+        },
+        "type": "object"
+      },
+      "HeadingBlockDto": {
+        "properties": {
+          "level": {
+            "description": "Başlık düzeyi (h2 ya da h3).",
+            "enum": [
+              2,
+              3
+            ],
+            "type": "integer"
+          },
+          "text": {
+            "maxLength": 200,
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "heading"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "type",
+          "level",
+          "text"
+        ],
+        "type": "object"
+      },
       "HealthDto": {
         "properties": {
           "status": {
@@ -147,6 +2748,277 @@
         },
         "required": [
           "status"
+        ],
+        "type": "object"
+      },
+      "HubCityLinkDto": {
+        "properties": {
+          "name": {
+            "description": "Şehir adı (istenen dilde, yoksa Türkçe).",
+            "maxLength": 120,
+            "minLength": 1,
+            "type": "string"
+          },
+          "slug": {
+            "description": "Şehir slug'ı.",
+            "maxLength": 80,
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "slug",
+          "name"
+        ],
+        "type": "object"
+      },
+      "HubEssentialDto": {
+        "properties": {
+          "body": {
+            "maxLength": 2500,
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": {
+            "maxLength": 300,
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "title",
+          "body"
+        ],
+        "type": "object"
+      },
+      "HubRouteIdeaDto": {
+        "properties": {
+          "cities": {
+            "description": "Rotadaki şehirler: Türkçe şehir adları (anahtar; çevrilmez). Görüntü adı ve slug için `cityLinks`.",
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 12,
+            "minItems": 0,
+            "type": "array"
+          },
+          "cityLinks": {
+            "description": "Yalnız yanıtta: `cities` için slug ve görünen ad. Yazarken kabul edilir ama yok sayılır.",
+            "items": {
+              "$ref": "#/components/schemas/HubCityLinkDto"
+            },
+            "maxItems": 12,
+            "type": "array"
+          },
+          "description": {
+            "maxLength": 1500,
+            "minLength": 1,
+            "type": "string"
+          },
+          "duration": {
+            "example": "9–11 gün",
+            "maxLength": 80,
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": {
+            "maxLength": 200,
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "title",
+          "duration",
+          "cities",
+          "description"
+        ],
+        "type": "object"
+      },
+      "ImageBlockDto": {
+        "properties": {
+          "alt": {
+            "description": "Erişilebilirlik için görsel açıklaması.",
+            "maxLength": 300,
+            "type": "string"
+          },
+          "caption": {
+            "maxLength": 500,
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "image"
+            ],
+            "type": "string"
+          },
+          "url": {
+            "description": "Yalnız https adresi.",
+            "format": "uri",
+            "maxLength": 2048,
+            "type": "string"
+          }
+        },
+        "required": [
+          "type",
+          "url",
+          "alt"
+        ],
+        "type": "object"
+      },
+      "LeaderboardDto": {
+        "properties": {
+          "entries": {
+            "description": "Puana göre azalan; eşitlikte puana önce ulaşan üstte.",
+            "items": {
+              "$ref": "#/components/schemas/LeaderboardEntryDto"
+            },
+            "type": "array"
+          },
+          "gameType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/LeaderboardType"
+              }
+            ]
+          },
+          "period": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/LeaderboardPeriod"
+              }
+            ]
+          },
+          "totalPlayers": {
+            "description": "Dönemde en az bir puanı olan toplam oyuncu sayısı.",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "gameType",
+          "period",
+          "totalPlayers",
+          "entries"
+        ],
+        "type": "object"
+      },
+      "LeaderboardEntryDto": {
+        "properties": {
+          "achievedAt": {
+            "description": "Bu puana ilk ulaşıldığı an (eşitlik bozucu: erken olan üstte). `overall`te son tamamlanan türün anı.",
+            "format": "date-time",
+            "type": "string"
+          },
+          "displayName": {
+            "example": "Ayşe",
+            "type": "string"
+          },
+          "isMe": {
+            "description": "Satır, isteği yapan oturumun sahibi mi? Oturum yoksa her zaman false.",
+            "type": "boolean"
+          },
+          "rank": {
+            "description": "Sıra. Eşit puanlar aynı sırayı paylaşır (1, 2, 2, 4).",
+            "minimum": 1,
+            "type": "integer"
+          },
+          "score": {
+            "description": "Kullanıcının dönemdeki en iyi tek oyun puanı (`overall`te oyun türü başına en iyilerin toplamı).",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "rank",
+          "displayName",
+          "score",
+          "achievedAt",
+          "isMe"
+        ],
+        "type": "object"
+      },
+      "LeaderboardMeDto": {
+        "properties": {
+          "gameType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/LeaderboardType"
+              }
+            ]
+          },
+          "period": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/LeaderboardPeriod"
+              }
+            ]
+          },
+          "personalBest": {
+            "description": "Dönemdeki en iyi puanınız (`overall`te toplam); yoksa null.",
+            "nullable": true,
+            "type": "integer"
+          },
+          "rank": {
+            "description": "Sıranız; dönemde puanınız yoksa null.",
+            "minimum": 1,
+            "nullable": true,
+            "type": "integer"
+          },
+          "totalPlayers": {
+            "description": "Dönemde en az bir puanı olan toplam oyuncu sayısı.",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "gameType",
+          "period",
+          "rank",
+          "personalBest",
+          "totalPlayers"
+        ],
+        "type": "object"
+      },
+      "LeaderboardPeriod": {
+        "enum": [
+          "all",
+          "week",
+          "day"
+        ],
+        "type": "string"
+      },
+      "LeaderboardType": {
+        "enum": [
+          "flag-quiz",
+          "capital-quiz",
+          "map-guess",
+          "overall"
+        ],
+        "type": "string"
+      },
+      "ListBlockDto": {
+        "properties": {
+          "items": {
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 100,
+            "minItems": 1,
+            "type": "array"
+          },
+          "ordered": {
+            "description": "true: numaralı liste, false: madde işaretli liste.",
+            "type": "boolean"
+          },
+          "type": {
+            "enum": [
+              "list"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "type",
+          "ordered",
+          "items"
         ],
         "type": "object"
       },
@@ -167,6 +3039,69 @@
         "required": [
           "email",
           "password"
+        ],
+        "type": "object"
+      },
+      "MapPointDto": {
+        "properties": {
+          "lat": {
+            "maximum": 90,
+            "minimum": -90,
+            "type": "number"
+          },
+          "lng": {
+            "maximum": 180,
+            "minimum": -180,
+            "type": "number"
+          }
+        },
+        "required": [
+          "lat",
+          "lng"
+        ],
+        "type": "object"
+      },
+      "ParagraphBlockDto": {
+        "properties": {
+          "text": {
+            "description": "Düz metin; satır sonu içerebilir.",
+            "maxLength": 10000,
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "paragraph"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "type",
+          "text"
+        ],
+        "type": "object"
+      },
+      "QuoteBlockDto": {
+        "properties": {
+          "cite": {
+            "description": "Alıntının kaynağı.",
+            "maxLength": 200,
+            "type": "string"
+          },
+          "text": {
+            "maxLength": 2000,
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "quote"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "type",
+          "text"
         ],
         "type": "object"
       },
@@ -211,6 +3146,388 @@
           "password",
           "displayName"
         ],
+        "type": "object"
+      },
+      "RoundResultDto": {
+        "properties": {
+          "correct": {
+            "type": "boolean"
+          },
+          "index": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "points": {
+            "type": "integer"
+          },
+          "timedOut": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "index",
+          "correct",
+          "points",
+          "timedOut"
+        ],
+        "type": "object"
+      },
+      "ScoreDto": {
+        "properties": {
+          "correctCount": {
+            "type": "integer"
+          },
+          "createdAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "durationMs": {
+            "description": "Sunucunun ölçtüğü toplam oyun süresi (ms).",
+            "type": "integer"
+          },
+          "gameType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GameType"
+              }
+            ]
+          },
+          "id": {
+            "format": "uuid",
+            "type": "string"
+          },
+          "roundsTotal": {
+            "type": "integer"
+          },
+          "score": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "id",
+          "gameType",
+          "score",
+          "correctCount",
+          "roundsTotal",
+          "durationMs",
+          "createdAt"
+        ],
+        "type": "object"
+      },
+      "ScorePageDto": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/ScoreDto"
+            },
+            "type": "array"
+          },
+          "page": {
+            "example": 1,
+            "type": "integer"
+          },
+          "pageSize": {
+            "example": 20,
+            "type": "integer"
+          },
+          "total": {
+            "description": "Filtreyle eşleşen toplam kayıt sayısı.",
+            "example": 0,
+            "type": "integer"
+          }
+        },
+        "required": [
+          "items",
+          "page",
+          "pageSize",
+          "total"
+        ],
+        "type": "object"
+      },
+      "StartSessionResponseDto": {
+        "properties": {
+          "expiresAt": {
+            "description": "Oturumun son geçerlilik anı (başlangıç + 30 dk).",
+            "format": "date-time",
+            "type": "string"
+          },
+          "gameType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GameType"
+              }
+            ]
+          },
+          "round": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GameRoundDto"
+              }
+            ],
+            "description": "İlk tur."
+          },
+          "roundsTotal": {
+            "example": 10,
+            "type": "integer"
+          },
+          "sessionId": {
+            "format": "uuid",
+            "type": "string"
+          }
+        },
+        "required": [
+          "sessionId",
+          "gameType",
+          "roundsTotal",
+          "expiresAt",
+          "round"
+        ],
+        "type": "object"
+      },
+      "SubmitAnswerDto": {
+        "properties": {
+          "answer": {
+            "description": "Çoktan seçmeli oyunlarda seçenek kimliği (ülke kodu), `map-guess`te `{ lat, lng }` (lat -90..90, lng -180..180, sonlu sayı). `null`: cevap yok (süre doldu ya da pas): 0 puan, seri sıfırlanır, oyun sonraki tura geçer; `timedOut` yalnız süre (20 sn) aşıldıysa true. Alan hiç gönderilmezse 400. Biçim oyun türüne göre sunucuda doğrulanır.",
+            "nullable": true,
+            "oneOf": [
+              {
+                "description": "Çoktan seçmeli: seçilen seçeneğin kimliği (ülke kodu).",
+                "example": "FR",
+                "type": "string"
+              },
+              {
+                "$ref": "#/components/schemas/MapPointDto"
+              }
+            ]
+          },
+          "roundIndex": {
+            "description": "Cevaplanan turun numarası (`round.index`). Sırası bozuk ya da yinelenen cevap 409 döner.",
+            "maximum": 100,
+            "minimum": 0,
+            "type": "integer"
+          }
+        },
+        "required": [
+          "roundIndex",
+          "answer"
+        ],
+        "type": "object"
+      },
+      "TravelFieldsPatchDto": {
+        "properties": {
+          "bestSeason": {
+            "maxLength": 200,
+            "minLength": 1,
+            "type": "string"
+          },
+          "budget": {
+            "description": "Bütçe düzeyinin görünen adı (ör. `Yüksek`, `High`).",
+            "maxLength": 60,
+            "minLength": 1,
+            "type": "string"
+          },
+          "capital": {
+            "maxLength": 120,
+            "minLength": 1,
+            "type": "string"
+          },
+          "description": {
+            "maxLength": 800,
+            "minLength": 1,
+            "type": "string"
+          },
+          "flightTime": {
+            "maxLength": 80,
+            "minLength": 1,
+            "type": "string"
+          },
+          "gateway": {
+            "maxLength": 120,
+            "minLength": 1,
+            "type": "string"
+          },
+          "hub": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CountryHubDto"
+              }
+            ],
+            "description": "Ülke sayfası içeriği; verilirse o dildeki hub'ın tümüyle yerine geçer."
+          },
+          "signature": {
+            "maxLength": 400,
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "TravelTranslationsPatchDto": {
+        "properties": {
+          "en": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TravelFieldsPatchDto"
+              }
+            ],
+            "description": "İngilizce alanlar; `null` dili siler.",
+            "nullable": true,
+            "type": "object"
+          },
+          "es": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TravelFieldsPatchDto"
+              }
+            ],
+            "description": "İspanyolca alanlar; `null` dili siler.",
+            "nullable": true,
+            "type": "object"
+          },
+          "tr": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TravelFieldsPatchDto"
+              }
+            ],
+            "description": "Türkçe (kaynak) alanlar; silinemez."
+          }
+        },
+        "type": "object"
+      },
+      "UpdateBlogPostDto": {
+        "properties": {
+          "countryCode": {
+            "description": "`null` ülke bağını kaldırır.",
+            "example": "JP",
+            "nullable": true,
+            "type": "string"
+          },
+          "coverImage": {
+            "description": "Yalnız https adresi; `null` kapak görselini kaldırır.",
+            "format": "uri",
+            "maxLength": 2048,
+            "nullable": true,
+            "type": "string"
+          },
+          "slug": {
+            "maxLength": 120,
+            "minLength": 3,
+            "type": "string"
+          },
+          "status": {
+            "description": "`published`: ilk yayında `publishedAt` atanır. `draft`: yayın zamanı korunur.",
+            "enum": [
+              "draft",
+              "published"
+            ],
+            "type": "string"
+          },
+          "tags": {
+            "description": "Verilirse etiket listesinin tamamı değiştirilir.",
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 20,
+            "type": "array"
+          },
+          "translations": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/UpdateBlogTranslationsDto"
+              }
+            ],
+            "description": "Yalnız gönderilen diller değişir; diğerleri korunur."
+          }
+        },
+        "type": "object"
+      },
+      "UpdateBlogTranslationsDto": {
+        "properties": {
+          "en": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/BlogTranslationDto"
+              }
+            ],
+            "description": "Bütün olarak değiştirir; `null` bu dildeki çeviriyi siler.",
+            "nullable": true,
+            "type": "object"
+          },
+          "es": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/BlogTranslationDto"
+              }
+            ],
+            "description": "Bütün olarak değiştirir; `null` bu dildeki çeviriyi siler.",
+            "nullable": true,
+            "type": "object"
+          },
+          "tr": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/BlogTranslationDto"
+              }
+            ],
+            "description": "Türkçe içeriği bütün olarak değiştirir. Silinemez."
+          }
+        },
+        "type": "object"
+      },
+      "UpdateCityDto": {
+        "properties": {
+          "completeLangs": {
+            "description": "Tam çevrilmiş diller (`en`, `es`). Verilmezse mevcut liste korunur (çevirisi silinen dil düşer). Listelenen dilin tüm zorunlu alanları dolu olmalı.",
+            "items": {
+              "enum": [
+                "en",
+                "es"
+              ],
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "guide": {
+            "$ref": "#/components/schemas/CityGuidePatchDto"
+          },
+          "image": {
+            "description": "`null` görseli kaldırır.",
+            "example": "/images/ornek-gorsel-1a2b3c4d.avif",
+            "maxLength": 2048,
+            "nullable": true,
+            "type": "string"
+          },
+          "position": {
+            "maximum": 10000,
+            "minimum": 0,
+            "type": "integer"
+          },
+          "translations": {
+            "$ref": "#/components/schemas/CityTranslationsPatchDto"
+          }
+        },
+        "type": "object"
+      },
+      "UpdateCountryDto": {
+        "properties": {
+          "translations": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CountryTranslationsPatchDto"
+              }
+            ],
+            "description": "Ülke adı, resmî ad ve alt bölge çevirileri."
+          },
+          "travel": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CountryTravelPatchDto"
+              }
+            ],
+            "description": "Seyahat bilgisi (öne çıkan ülkeler)."
+          }
+        },
         "type": "object"
       },
       "UpdateMeDto": {
@@ -300,6 +3617,35 @@
           "page",
           "pageSize",
           "total"
+        ],
+        "type": "object"
+      },
+      "UserStatsDto": {
+        "properties": {
+          "gamesPlayed": {
+            "type": "integer"
+          },
+          "items": {
+            "description": "Her oyun türü için bir kayıt (hiç oynanmamışlar sıfır/null).",
+            "items": {
+              "$ref": "#/components/schemas/GameTypeStatsDto"
+            },
+            "type": "array"
+          },
+          "overallBest": {
+            "description": "Oyun türü başına en iyi puanların toplamı (liderlikteki `overall` ile aynı ölçüt).",
+            "type": "integer"
+          },
+          "totalScore": {
+            "description": "Tüm oyunların puan toplamı.",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "items",
+          "gamesPlayed",
+          "totalScore",
+          "overallBest"
         ],
         "type": "object"
       }
@@ -611,6 +3957,1974 @@
         ]
       }
     },
+    "/v1/blog/posts": {
+      "get": {
+        "description": "Varsayılan olarak yalnız yayındaki yazılar, yayın tarihine göre yeniden eskiye. Yanıtta gövde yoktur; ayrıntı için `GET /blog/posts/{slug}`. `status=draft|all` yalnız yöneticiye açıktır: oturumsuz istek 401, yönetici olmayan kullanıcı 403 alır (parametre sessizce yok sayılmaz). İstenen dilde çeviri yoksa başlık ve özet Türkçeye düşer (`lang`, `complete`). Oturum açmak gerekmez. `Authorization` başlığı gönderilirse geçerli olmalıdır (aksi 401). Başlık taşıyan yanıtlar `Cache-Control: private, no-store` ile döner.",
+        "operationId": "blogListPosts",
+        "parameters": [
+          {
+            "description": "Ülke kodu (ISO 3166-1 alpha-2); büyük/küçük harf fark etmez.",
+            "in": "query",
+            "name": "country",
+            "required": false,
+            "schema": {
+              "example": "JP",
+              "type": "string"
+            }
+          },
+          {
+            "description": "İçerik dili. Çeviri tam değilse Türkçeye düşülür.",
+            "in": "query",
+            "name": "lang",
+            "required": false,
+            "schema": {
+              "default": "tr",
+              "enum": [
+                "tr",
+                "en",
+                "es"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "description": "Sayfa numarası (1'den başlar).",
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "default": 1,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          {
+            "description": "Sayfa boyutu (en fazla 100).",
+            "in": "query",
+            "name": "pageSize",
+            "required": false,
+            "schema": {
+              "default": 20,
+              "maximum": 100,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          {
+            "description": "Slug, başlık ve özette arama (başlık/özet için Türkçe ile istenen dil; büyük/küçük harf duyarsız, joker karakterler kaçırılır).",
+            "in": "query",
+            "name": "q",
+            "required": false,
+            "schema": {
+              "maxLength": 100,
+              "type": "string"
+            }
+          },
+          {
+            "description": "Hangi yazılar: `published` (varsayılan), `draft` ya da `all`. `draft` ve `all` yalnız yöneticiye açıktır: oturumsuz istek 401, yönetici olmayan kullanıcı 403 alır (parametre sessizce yok sayılmaz).",
+            "in": "query",
+            "name": "status",
+            "required": false,
+            "schema": {
+              "default": "published",
+              "enum": [
+                "published",
+                "draft",
+                "all"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "description": "Etikete göre süz (tam eşleşme, küçük harf).",
+            "in": "query",
+            "name": "tag",
+            "required": false,
+            "schema": {
+              "example": "ülke-rehberi",
+              "maxLength": 50,
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BlogPostPageDto"
+                }
+              }
+            },
+            "description": "Sayfalı yazı kartları."
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Geçersiz istek ya da doğrulama hatası."
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kimlik doğrulama gerekli ya da belirteç geçersiz."
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Bu işlem için yetki yok."
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çok fazla istek (hız sınırı)."
+          }
+        },
+        "security": [
+          {},
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Blog yazılarını listeler (gövdesiz kartlar)",
+        "tags": [
+          "blog"
+        ]
+      },
+      "post": {
+        "description": "`status` verilmezse `draft`. `published` ilk yayında `publishedAt` atar ve Türkçe gövde boş olamaz. Gövde blokları doğrulanır (bilinmeyen tür, aşırı uzunluk, kontrol karakteri, https dışı görsel adresi 400). Gövde sınırı diğer uçlardan yüksektir (`BODY_LIMIT_LARGE`).",
+        "operationId": "blogCreatePost",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateBlogPostDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BlogPostDto"
+                }
+              }
+            },
+            "description": "Oluşturulan yazı (Türkçe)."
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Geçersiz istek ya da doğrulama hatası."
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kimlik doğrulama gerekli ya da belirteç geçersiz."
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Bu işlem için yetki yok."
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çakışma (ör. e-posta kayıtlı, sıra bozuk)."
+          },
+          "413": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "İstek gövdesi çok büyük."
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çok fazla istek (hız sınırı)."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Blog yazısı oluşturur (yönetici)",
+        "tags": [
+          "blog"
+        ]
+      }
+    },
+    "/v1/blog/posts/{id}": {
+      "delete": {
+        "operationId": "blogDeletePost",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Yazı silindi."
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Geçersiz istek ya da doğrulama hatası."
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kimlik doğrulama gerekli ya da belirteç geçersiz."
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Bu işlem için yetki yok."
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kayıt bulunamadı."
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çok fazla istek (hız sınırı)."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Blog yazısını siler (yönetici)",
+        "tags": [
+          "blog"
+        ]
+      },
+      "patch": {
+        "description": "Yalnız gönderilen alanlar değişir. `translations` içinde gönderilen her dil bütün olarak değişir, diğer diller korunur; `en`/`es` için `null` çeviriyi siler. `status: published` ilk yayında `publishedAt` atar; taslağa geri almak ve yeniden yayınlamak özgün `publishedAt` değerini korur. `coverImage`/`countryCode` için `null` alanı temizler.",
+        "operationId": "blogUpdatePost",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateBlogPostDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BlogPostDto"
+                }
+              }
+            },
+            "description": "Güncellenmiş yazı (Türkçe)."
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Geçersiz istek ya da doğrulama hatası."
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kimlik doğrulama gerekli ya da belirteç geçersiz."
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Bu işlem için yetki yok."
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kayıt bulunamadı."
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çakışma (ör. e-posta kayıtlı, sıra bozuk)."
+          },
+          "413": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "İstek gövdesi çok büyük."
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çok fazla istek (hız sınırı)."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Blog yazısını günceller / yayınlar / taslağa alır (yönetici)",
+        "tags": [
+          "blog"
+        ]
+      }
+    },
+    "/v1/blog/posts/{slug}": {
+      "get": {
+        "description": "Taslak anonim ya da yönetici olmayan çağıran için hiç yokmuş gibi 404 döner (varlığı sızmaz). Yönetici taslakları da görür; `status` verilirse yalnız o durumdaki yazı döner (`draft`/`all` yalnız yöneticiye: oturumsuz 401, kullanıcı 403). İstenen dilde çeviri yoksa başlık, özet ve gövde Türkçeye düşer. Oturum açmak gerekmez. `Authorization` başlığı gönderilirse geçerli olmalıdır (aksi 401). Başlık taşıyan yanıtlar `Cache-Control: private, no-store` ile döner.",
+        "operationId": "blogGetPost",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "slug",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "İçerik dili. Çeviri tam değilse Türkçeye düşülür.",
+            "in": "query",
+            "name": "lang",
+            "required": false,
+            "schema": {
+              "default": "tr",
+              "enum": [
+                "tr",
+                "en",
+                "es"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "description": "Hangi yazılar: `published` (varsayılan), `draft` ya da `all`. `draft` ve `all` yalnız yöneticiye açıktır: oturumsuz istek 401, yönetici olmayan kullanıcı 403 alır (parametre sessizce yok sayılmaz). Verilmezse yönetici her durumdaki yazıyı görür, diğerleri yalnız yayındakini.",
+            "in": "query",
+            "name": "status",
+            "required": false,
+            "schema": {
+              "enum": [
+                "published",
+                "draft",
+                "all"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BlogPostDto"
+                }
+              }
+            },
+            "description": "Yazı ve gövde blokları."
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Geçersiz istek ya da doğrulama hatası."
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kimlik doğrulama gerekli ya da belirteç geçersiz."
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Bu işlem için yetki yok."
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kayıt bulunamadı."
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çok fazla istek (hız sınırı)."
+          }
+        },
+        "security": [
+          {},
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Blog yazısı ayrıntısı (tam gövde)",
+        "tags": [
+          "blog"
+        ]
+      }
+    },
+    "/v1/continents": {
+      "get": {
+        "description": "Beş kıta, gösterim sırasıyla; ülke sayıları dahil.",
+        "operationId": "contentListContinents",
+        "parameters": [
+          {
+            "description": "İçerik dili. Çeviri tam değilse Türkçeye düşülür.",
+            "in": "query",
+            "name": "lang",
+            "required": false,
+            "schema": {
+              "default": "tr",
+              "enum": [
+                "tr",
+                "en",
+                "es"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/ContinentDto"
+                  },
+                  "type": "array"
+                }
+              }
+            },
+            "description": ""
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Geçersiz istek ya da doğrulama hatası."
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çok fazla istek (hız sınırı)."
+          }
+        },
+        "summary": "Kıtaları listeler",
+        "tags": [
+          "content"
+        ]
+      }
+    },
+    "/v1/continents/{slug}": {
+      "get": {
+        "operationId": "contentGetContinent",
+        "parameters": [
+          {
+            "description": "Kıta adresi.",
+            "in": "path",
+            "name": "slug",
+            "required": true,
+            "schema": {
+              "enum": [
+                "africa",
+                "americas",
+                "asia",
+                "europe",
+                "oceania"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "description": "İçerik dili. Çeviri tam değilse Türkçeye düşülür.",
+            "in": "query",
+            "name": "lang",
+            "required": false,
+            "schema": {
+              "default": "tr",
+              "enum": [
+                "tr",
+                "en",
+                "es"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ContinentDto"
+                }
+              }
+            },
+            "description": ""
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Geçersiz istek ya da doğrulama hatası."
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kayıt bulunamadı."
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çok fazla istek (hız sınırı)."
+          }
+        },
+        "summary": "Kıta ayrıntısı",
+        "tags": [
+          "content"
+        ]
+      }
+    },
+    "/v1/countries": {
+      "get": {
+        "description": "Tüm dünya ülkeleri. Süzgeçler: `continent`, `hasTravel` (öne çıkan ülkeler), `q` (ad/resmî ad/başkent; Türkçe `İ/ı` duyarlı, büyük/küçük harf duyarsız). Sıra: `hasTravel=true` ise destinasyon sırası, aksi halde istenen dildeki ad. Liste seyahat metinlerini ve hub'ı taşımaz; ayrıntı için `GET /v1/countries/{code}`.",
+        "operationId": "contentListCountries",
+        "parameters": [
+          {
+            "description": "Kıta filtresi.",
+            "in": "query",
+            "name": "continent",
+            "required": false,
+            "schema": {
+              "enum": [
+                "africa",
+                "americas",
+                "asia",
+                "europe",
+                "oceania"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "description": "`true`: yalnız seyahat içeriği olan (öne çıkan) ülkeler, destinasyon sırasıyla. `false`: yalnız diğerleri. Verilmezse hepsi, ada göre.",
+            "in": "query",
+            "name": "hasTravel",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "description": "İçerik dili. Çeviri tam değilse Türkçeye düşülür.",
+            "in": "query",
+            "name": "lang",
+            "required": false,
+            "schema": {
+              "default": "tr",
+              "enum": [
+                "tr",
+                "en",
+                "es"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "description": "Sayfa numarası (1'den başlar).",
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "default": 1,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          {
+            "description": "Sayfa boyutu (en fazla 100).",
+            "in": "query",
+            "name": "pageSize",
+            "required": false,
+            "schema": {
+              "default": 20,
+              "maximum": 100,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          {
+            "description": "Arama (büyük/küçük harf ve aksan duyarsız; Türkçe `i/ı/İ/I` aynı sayılır, `%` `_` `\\` düz karakterdir). Ülke adı (tr/en/es), resmî ad ve başkentte aranır.",
+            "in": "query",
+            "name": "q",
+            "required": false,
+            "schema": {
+              "maxLength": 100,
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountryPageDto"
+                }
+              }
+            },
+            "description": ""
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Geçersiz istek ya da doğrulama hatası."
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çok fazla istek (hız sınırı)."
+          }
+        },
+        "summary": "Ülkeleri listeler (sayfalı)",
+        "tags": [
+          "content"
+        ]
+      }
+    },
+    "/v1/countries/{code}": {
+      "get": {
+        "description": "Ülke + varsa seyahat bilgisi (hub dahil) + şehir özetleri.",
+        "operationId": "contentGetCountry",
+        "parameters": [
+          {
+            "description": "ISO 3166-1 alpha-2 ülke kodu (büyük/küçük harf fark etmez).",
+            "in": "path",
+            "name": "code",
+            "required": true,
+            "schema": {
+              "example": "FR",
+              "type": "string"
+            }
+          },
+          {
+            "description": "İçerik dili. Çeviri tam değilse Türkçeye düşülür.",
+            "in": "query",
+            "name": "lang",
+            "required": false,
+            "schema": {
+              "default": "tr",
+              "enum": [
+                "tr",
+                "en",
+                "es"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountryDetailDto"
+                }
+              }
+            },
+            "description": ""
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Geçersiz istek ya da doğrulama hatası."
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kayıt bulunamadı."
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çok fazla istek (hız sınırı)."
+          }
+        },
+        "summary": "Ülke ayrıntısı",
+        "tags": [
+          "content"
+        ]
+      },
+      "patch": {
+        "description": "Çeviri alanları dil başına BİRLEŞTİRİLİR (gönderilmeyen alan korunur; `en`/`es` için `null` dili siler). Bilinmeyen alan 400. Yanıt, `lang` sorgusundaki dilde güncel ayrıntıdır.",
+        "operationId": "contentUpdateCountry",
+        "parameters": [
+          {
+            "description": "ISO 3166-1 alpha-2 ülke kodu (büyük/küçük harf fark etmez).",
+            "in": "path",
+            "name": "code",
+            "required": true,
+            "schema": {
+              "example": "FR",
+              "type": "string"
+            }
+          },
+          {
+            "description": "İçerik dili. Çeviri tam değilse Türkçeye düşülür.",
+            "in": "query",
+            "name": "lang",
+            "required": false,
+            "schema": {
+              "default": "tr",
+              "enum": [
+                "tr",
+                "en",
+                "es"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCountryDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountryDetailDto"
+                }
+              }
+            },
+            "description": ""
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Geçersiz istek ya da doğrulama hatası."
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kimlik doğrulama gerekli ya da belirteç geçersiz."
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Bu işlem için yetki yok."
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kayıt bulunamadı."
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çok fazla istek (hız sınırı)."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Ülke çevirilerini ve seyahat bilgisini günceller (yönetici)",
+        "tags": [
+          "content"
+        ]
+      }
+    },
+    "/v1/countries/{code}/cities": {
+      "get": {
+        "description": "Şehir özetleri `position` sırasıyla; rehber gövdesi taşımaz.",
+        "operationId": "contentListCountryCities",
+        "parameters": [
+          {
+            "description": "ISO 3166-1 alpha-2 ülke kodu (büyük/küçük harf fark etmez).",
+            "in": "path",
+            "name": "code",
+            "required": true,
+            "schema": {
+              "example": "FR",
+              "type": "string"
+            }
+          },
+          {
+            "description": "İçerik dili. Çeviri tam değilse Türkçeye düşülür.",
+            "in": "query",
+            "name": "lang",
+            "required": false,
+            "schema": {
+              "default": "tr",
+              "enum": [
+                "tr",
+                "en",
+                "es"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "description": "Sayfa numarası (1'den başlar).",
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "default": 1,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          {
+            "description": "Sayfa boyutu (en fazla 100).",
+            "in": "query",
+            "name": "pageSize",
+            "required": false,
+            "schema": {
+              "default": 20,
+              "maximum": 100,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          {
+            "description": "Arama (büyük/küçük harf ve aksan duyarsız; Türkçe `i/ı/İ/I` aynı sayılır, `%` `_` `\\` düz karakterdir). Şehir adında (tr/en/es) ve adreste (slug) aranır.",
+            "in": "query",
+            "name": "q",
+            "required": false,
+            "schema": {
+              "maxLength": 100,
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CityPageDto"
+                }
+              }
+            },
+            "description": ""
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Geçersiz istek ya da doğrulama hatası."
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kayıt bulunamadı."
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çok fazla istek (hız sınırı)."
+          }
+        },
+        "summary": "Ülkenin şehirleri (sayfalı)",
+        "tags": [
+          "content"
+        ]
+      },
+      "post": {
+        "description": "Adres (`slug`) verilmezse Türkçe addan türetilir; ülkede benzersiz olmalı (409 `SLUG_TAKEN`). Türkçe ad de ülkede benzersizdir (409 `CITY_NAME_TAKEN`): hub rotaları ve ilgili rehberler şehre bu adla bağlanır. Rehber isteğe bağlıdır.",
+        "operationId": "contentCreateCity",
+        "parameters": [
+          {
+            "description": "ISO 3166-1 alpha-2 ülke kodu (büyük/küçük harf fark etmez).",
+            "in": "path",
+            "name": "code",
+            "required": true,
+            "schema": {
+              "example": "FR",
+              "type": "string"
+            }
+          },
+          {
+            "description": "İçerik dili. Çeviri tam değilse Türkçeye düşülür.",
+            "in": "query",
+            "name": "lang",
+            "required": false,
+            "schema": {
+              "default": "tr",
+              "enum": [
+                "tr",
+                "en",
+                "es"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCityDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CityDetailDto"
+                }
+              }
+            },
+            "description": ""
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Geçersiz istek ya da doğrulama hatası."
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kimlik doğrulama gerekli ya da belirteç geçersiz."
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Bu işlem için yetki yok."
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kayıt bulunamadı."
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çakışma (ör. e-posta kayıtlı, sıra bozuk)."
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çok fazla istek (hız sınırı)."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Şehir ekler (yönetici)",
+        "tags": [
+          "content"
+        ]
+      }
+    },
+    "/v1/countries/{code}/cities/{slug}": {
+      "delete": {
+        "description": "Şehrin rehberi de silinir. Tohum yeniden çalışırsa (`--force` olmadan bile) silinen tohum şehirleri yeniden eklenir.",
+        "operationId": "contentDeleteCity",
+        "parameters": [
+          {
+            "description": "ISO 3166-1 alpha-2 ülke kodu (büyük/küçük harf fark etmez).",
+            "in": "path",
+            "name": "code",
+            "required": true,
+            "schema": {
+              "example": "FR",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Şehir adresi (web adresindeki parça).",
+            "in": "path",
+            "name": "slug",
+            "required": true,
+            "schema": {
+              "example": "paris",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Şehir ve rehberi silindi."
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Geçersiz istek ya da doğrulama hatası."
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kimlik doğrulama gerekli ya da belirteç geçersiz."
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Bu işlem için yetki yok."
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kayıt bulunamadı."
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çok fazla istek (hız sınırı)."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Şehri siler (yönetici)",
+        "tags": [
+          "content"
+        ]
+      },
+      "get": {
+        "description": "Şehir kartı + rehber gövdesi (varsa). Rehberin `lang`/`complete` alanları kendi durumudur.",
+        "operationId": "contentGetCity",
+        "parameters": [
+          {
+            "description": "ISO 3166-1 alpha-2 ülke kodu (büyük/küçük harf fark etmez).",
+            "in": "path",
+            "name": "code",
+            "required": true,
+            "schema": {
+              "example": "FR",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Şehir adresi (web adresindeki parça).",
+            "in": "path",
+            "name": "slug",
+            "required": true,
+            "schema": {
+              "example": "paris",
+              "type": "string"
+            }
+          },
+          {
+            "description": "İçerik dili. Çeviri tam değilse Türkçeye düşülür.",
+            "in": "query",
+            "name": "lang",
+            "required": false,
+            "schema": {
+              "default": "tr",
+              "enum": [
+                "tr",
+                "en",
+                "es"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CityDetailDto"
+                }
+              }
+            },
+            "description": ""
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Geçersiz istek ya da doğrulama hatası."
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kayıt bulunamadı."
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çok fazla istek (hız sınırı)."
+          }
+        },
+        "summary": "Şehir ayrıntısı ve rehberi",
+        "tags": [
+          "content"
+        ]
+      },
+      "patch": {
+        "description": "Çeviri alanları dil başına BİRLEŞTİRİLİR. Rehber yoksa `guide` ile oluşturulur. Adres (`slug`) değişmez. Türkçe ad değişirse ülkenin hub rotalarındaki ve rehberlerindeki başvurular (tüm dillerde) aynı işlemde yeni ada taşınır; ad ülkede başka bir şehirde varsa 409 `CITY_NAME_TAKEN`.",
+        "operationId": "contentUpdateCity",
+        "parameters": [
+          {
+            "description": "ISO 3166-1 alpha-2 ülke kodu (büyük/küçük harf fark etmez).",
+            "in": "path",
+            "name": "code",
+            "required": true,
+            "schema": {
+              "example": "FR",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Şehir adresi (web adresindeki parça).",
+            "in": "path",
+            "name": "slug",
+            "required": true,
+            "schema": {
+              "example": "paris",
+              "type": "string"
+            }
+          },
+          {
+            "description": "İçerik dili. Çeviri tam değilse Türkçeye düşülür.",
+            "in": "query",
+            "name": "lang",
+            "required": false,
+            "schema": {
+              "default": "tr",
+              "enum": [
+                "tr",
+                "en",
+                "es"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCityDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CityDetailDto"
+                }
+              }
+            },
+            "description": ""
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Geçersiz istek ya da doğrulama hatası."
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kimlik doğrulama gerekli ya da belirteç geçersiz."
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Bu işlem için yetki yok."
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kayıt bulunamadı."
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çakışma (ör. e-posta kayıtlı, sıra bozuk)."
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çok fazla istek (hız sınırı)."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Şehri ve rehberini günceller (yönetici)",
+        "tags": [
+          "content"
+        ]
+      }
+    },
+    "/v1/games/sessions/{id}": {
+      "get": {
+        "description": "Devam eden oturumun cevap bekleyen turunu, puanını ve cevaplanmış turların özetini döner. Doğru cevap dönmez. Süresi dolmuş oturum bu istekte `expired` olarak işaretlenir ve `round` null gelir. Başkasının ya da olmayan oturum: 404.",
+        "operationId": "gamesGetSession",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "İçerik dili. Çeviri tam değilse Türkçeye düşülür.",
+            "in": "query",
+            "name": "lang",
+            "required": false,
+            "schema": {
+              "default": "tr",
+              "enum": [
+                "tr",
+                "en",
+                "es"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GameSessionDto"
+                }
+              }
+            },
+            "description": ""
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Geçersiz istek ya da doğrulama hatası."
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kimlik doğrulama gerekli ya da belirteç geçersiz."
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kayıt bulunamadı."
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çok fazla istek (hız sınırı)."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Oturumu geri yükler (yalnız sahibi)",
+        "tags": [
+          "games"
+        ]
+      }
+    },
+    "/v1/games/sessions/{id}/answers": {
+      "post": {
+        "description": "Turlar sırayla cevaplanır: `roundIndex` bekleyen turla aynı olmalı (yinelenen ya da erken cevap 409 `GAME_ROUND_ALREADY_ANSWERED` / `GAME_ROUND_OUT_OF_ORDER`). Süreyi sunucu ölçer; tur süresi (20 sn) ve 3 sn ağ payı aşılırsa cevap 0 puan, `correct: false`, `timedOut: true` sayılır ve oyun sonraki tura geçer. Süresi dolan ya da pas geçilen tur için `answer: null` gönderilir (0 puan, seri sıfırlanır). Çoktan seçmeli: `100 + hız bonusu (≤ 50) + seri bonusu (≤ 50)`; `map-guess`: haversine uzaklığına göre en çok 1000. Süresi dolmuş oturum 410 `GAME_SESSION_EXPIRED`; bitmiş/terk edilmiş oturum 409 `GAME_SESSION_NOT_ACTIVE`; seçenek dışı cevap ya da geçersiz koordinat 400.",
+        "operationId": "gamesSubmitAnswer",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "İçerik dili. Çeviri tam değilse Türkçeye düşülür.",
+            "in": "query",
+            "name": "lang",
+            "required": false,
+            "schema": {
+              "default": "tr",
+              "enum": [
+                "tr",
+                "en",
+                "es"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubmitAnswerDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnswerResponseDto"
+                }
+              }
+            },
+            "description": ""
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Geçersiz istek ya da doğrulama hatası."
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kimlik doğrulama gerekli ya da belirteç geçersiz."
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kayıt bulunamadı."
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çakışma (ör. e-posta kayıtlı, sıra bozuk)."
+          },
+          "410": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Oturumun süresi doldu (`GAME_SESSION_EXPIRED`)."
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çok fazla istek (hız sınırı)."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Turu cevaplar",
+        "tags": [
+          "games"
+        ]
+      }
+    },
+    "/v1/games/sessions/{id}/finish": {
+      "post": {
+        "description": "Tüm turlar cevaplanmadıysa 409 `GAME_NOT_FINISHED`. İdempotent: yinelenen ve eşzamanlı çağrılar tek puan satırı yazar ve aynı sonucu döner. Süresi dolmuş oturum 410 `GAME_SESSION_EXPIRED`; puanı yönetici sildiyse 410 `GAME_SCORE_REMOVED`.",
+        "operationId": "gamesFinishSession",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FinishResponseDto"
+                }
+              }
+            },
+            "description": ""
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Geçersiz istek ya da doğrulama hatası."
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kimlik doğrulama gerekli ya da belirteç geçersiz."
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kayıt bulunamadı."
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çakışma (ör. e-posta kayıtlı, sıra bozuk)."
+          },
+          "410": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Oturumun süresi doldu (`GAME_SESSION_EXPIRED`) ya da puan yönetici tarafından silindi (`GAME_SCORE_REMOVED`)."
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çok fazla istek (hız sınırı)."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Oyunu bitirir ve puanı kaydeder",
+        "tags": [
+          "games"
+        ]
+      }
+    },
+    "/v1/games/{gameType}/sessions": {
+      "post": {
+        "description": "İlk turu döner. Aynı türde önceki etkin oturum `abandoned` olur (kullanıcı başına tür başına tek etkin oturum). Havuzda yeterli ülke yoksa 409 `GAME_POOL_TOO_SMALL`. Oturum 30 dk geçerlidir. `flag-quiz` ve `capital-quiz` 10 tur, 4 seçenek; `map-guess` 5 tur.",
+        "operationId": "gamesStartSession",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "gameType",
+            "required": true,
+            "schema": {
+              "enum": [
+                "flag-quiz",
+                "capital-quiz",
+                "map-guess"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "description": "İçerik dili. Çeviri tam değilse Türkçeye düşülür.",
+            "in": "query",
+            "name": "lang",
+            "required": false,
+            "schema": {
+              "default": "tr",
+              "enum": [
+                "tr",
+                "en",
+                "es"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StartSessionResponseDto"
+                }
+              }
+            },
+            "description": ""
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Geçersiz istek ya da doğrulama hatası."
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kimlik doğrulama gerekli ya da belirteç geçersiz."
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çakışma (ör. e-posta kayıtlı, sıra bozuk)."
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çok fazla istek (hız sınırı)."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Yeni oyun oturumu başlatır",
+        "tags": [
+          "games"
+        ]
+      }
+    },
     "/v1/health": {
       "get": {
         "operationId": "healthCheck",
@@ -640,6 +5954,396 @@
         "summary": "Sağlık denetimi (veritabanı bağlantısını da sınar)",
         "tags": [
           "health"
+        ]
+      }
+    },
+    "/v1/leaderboards/{gameType}": {
+      "get": {
+        "description": "Herkese açık. Kullanıcı başına en iyi tek oyun puanı; eşit puan aynı sırayı paylaşır, listede puana önce ulaşan üstte. `period`: `all`, `week` (son 7 gün), `day` (son 24 saat). Yalnız görünen ad döner (e-posta ve kimlik asla); oturum açıksa kendi satırınızda `isMe: true`. Authorization başlığı VARSA geçerli olmalıdır.",
+        "operationId": "leaderboardsGet",
+        "parameters": [
+          {
+            "description": "Oyun türü ya da `overall` (oyun türü başına en iyilerin toplamı).",
+            "in": "path",
+            "name": "gameType",
+            "required": true,
+            "schema": {
+              "enum": [
+                "flag-quiz",
+                "capital-quiz",
+                "map-guess",
+                "overall"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "description": "Listelenecek en fazla oyuncu sayısı.",
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "default": 20,
+              "maximum": 100,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          {
+            "description": "`all`: tüm zamanlar; `week`: son 7 gün; `day`: son 24 saat (kayan pencere, UTC).",
+            "in": "query",
+            "name": "period",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/LeaderboardPeriod"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LeaderboardDto"
+                }
+              }
+            },
+            "description": ""
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Geçersiz istek ya da doğrulama hatası."
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kimlik doğrulama gerekli ya da belirteç geçersiz."
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çok fazla istek (hız sınırı)."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Liderlik tablosu",
+        "tags": [
+          "leaderboards"
+        ]
+      }
+    },
+    "/v1/leaderboards/{gameType}/me": {
+      "get": {
+        "description": "Sıram, en iyi puanım ve toplam oyuncu sayısı. Dönemde puanım yoksa `rank` ve `personalBest` null.",
+        "operationId": "leaderboardsMe",
+        "parameters": [
+          {
+            "description": "Oyun türü ya da `overall` (oyun türü başına en iyilerin toplamı).",
+            "in": "path",
+            "name": "gameType",
+            "required": true,
+            "schema": {
+              "enum": [
+                "flag-quiz",
+                "capital-quiz",
+                "map-guess",
+                "overall"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "description": "`all`: tüm zamanlar; `week`: son 7 gün; `day`: son 24 saat (kayan pencere, UTC).",
+            "in": "query",
+            "name": "period",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/LeaderboardPeriod"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LeaderboardMeDto"
+                }
+              }
+            },
+            "description": ""
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Geçersiz istek ya da doğrulama hatası."
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kimlik doğrulama gerekli ya da belirteç geçersiz."
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çok fazla istek (hız sınırı)."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Liderlikteki sıram",
+        "tags": [
+          "leaderboards"
+        ]
+      }
+    },
+    "/v1/scores": {
+      "get": {
+        "description": "Hile incelemesi için: liderlik yalnız görünen ad gösterdiğinden puan kimliği (`DELETE /v1/scores/{id}` için) buradan alınır. Yeniden eskiye; `userId`, `sessionId`, `gameType` ve `maxDurationMs` (insanın ulaşamayacağı hızdaki oyunları bulmak için) ile süzülür. Devre dışı kullanıcıların puanları da listelenir (`userDisabled`).",
+        "operationId": "scoresList",
+        "parameters": [
+          {
+            "description": "Yalnız bu oyun türünün puanları.",
+            "in": "query",
+            "name": "gameType",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/GameType"
+            }
+          },
+          {
+            "description": "Yalnız toplam süresi bu değere (ms, dahil) eşit ya da daha kısa olan oyunlar: insanın ulaşamayacağı hızdaki (bot) oyunları bulmak için.",
+            "in": "query",
+            "name": "maxDurationMs",
+            "required": false,
+            "schema": {
+              "maximum": 2147483647,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          {
+            "description": "Sayfa numarası (1'den başlar).",
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "default": 1,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          {
+            "description": "Sayfa boyutu (en fazla 100).",
+            "in": "query",
+            "name": "pageSize",
+            "required": false,
+            "schema": {
+              "default": 20,
+              "maximum": 100,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          {
+            "description": "Yalnız bu oyun oturumunun puanı (oyuncunun `finish` yanıtındaki `sessionId`).",
+            "in": "query",
+            "name": "sessionId",
+            "required": false,
+            "schema": {
+              "format": "uuid",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Yalnız bu kullanıcının puanları (kullanıcıyı görünen adla `GET /v1/users?q=` bulur).",
+            "in": "query",
+            "name": "userId",
+            "required": false,
+            "schema": {
+              "format": "uuid",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminScorePageDto"
+                }
+              }
+            },
+            "description": ""
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Geçersiz istek ya da doğrulama hatası."
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kimlik doğrulama gerekli ya da belirteç geçersiz."
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Bu işlem için yetki yok."
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çok fazla istek (hız sınırı)."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Puanları listeler (yönetici)",
+        "tags": [
+          "scores"
+        ]
+      }
+    },
+    "/v1/scores/{id}": {
+      "delete": {
+        "description": "Hileli puanı kaldırır; liderlik ve istatistikler anında değişir. Oturum kaydı kalır, aynı oturum yeniden puan yazamaz.",
+        "operationId": "scoresDelete",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Puan silindi."
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Geçersiz istek ya da doğrulama hatası."
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kimlik doğrulama gerekli ya da belirteç geçersiz."
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Bu işlem için yetki yok."
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kayıt bulunamadı."
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çok fazla istek (hız sınırı)."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Puanı siler (yönetici)",
+        "tags": [
+          "scores"
         ]
       }
     },
@@ -979,6 +6683,145 @@
           }
         ],
         "summary": "Parolayı değiştirir",
+        "tags": [
+          "users"
+        ]
+      }
+    },
+    "/v1/users/me/scores": {
+      "get": {
+        "description": "Yeniden eskiye. `gameType` ile süzülebilir.",
+        "operationId": "usersMeScores",
+        "parameters": [
+          {
+            "description": "Yalnız bu oyun türünün puanları.",
+            "in": "query",
+            "name": "gameType",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/GameType"
+            }
+          },
+          {
+            "description": "Sayfa numarası (1'den başlar).",
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "default": 1,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          {
+            "description": "Sayfa boyutu (en fazla 100).",
+            "in": "query",
+            "name": "pageSize",
+            "required": false,
+            "schema": {
+              "default": 20,
+              "maximum": 100,
+              "minimum": 1,
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScorePageDto"
+                }
+              }
+            },
+            "description": ""
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Geçersiz istek ya da doğrulama hatası."
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kimlik doğrulama gerekli ya da belirteç geçersiz."
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çok fazla istek (hız sınırı)."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Puan geçmişim (sayfalı)",
+        "tags": [
+          "users"
+        ]
+      }
+    },
+    "/v1/users/me/stats": {
+      "get": {
+        "description": "Oyun türü başına oynama sayısı, en iyi, toplam, ortalama ve son oynama; hiç oynanmayan türler sıfır/null.",
+        "operationId": "usersMeStats",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserStatsDto"
+                }
+              }
+            },
+            "description": ""
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Kimlik doğrulama gerekli ya da belirteç geçersiz."
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseDto"
+                }
+              }
+            },
+            "description": "Çok fazla istek (hız sınırı)."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Oyun istatistiklerim",
         "tags": [
           "users"
         ]
