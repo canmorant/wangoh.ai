@@ -6,27 +6,18 @@ import { StatusBar } from "expo-status-bar";
 import { useEffect, useState } from "react";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
-import { createQueryClient, setupApi, setupQueryFocusManager } from "@/api/setup";
-import { useAuth } from "@/auth";
-import { tokenStorage } from "@/auth/tokenStorage";
+import { createQueryClient, setupQueryFocusManager } from "@/api/setup";
+import { AuthProvider, useAuth } from "@/auth";
 import { ErrorState, Screen, navigationTheme, stackScreenOptions } from "@/ui";
 
 // Açılış ekranı, yazı tipleri ve oturum geri yüklemesi bitene kadar açık kalır (SplashGate).
 SplashScreen.preventAutoHideAsync().catch(() => undefined);
 
-// API istemcisi uygulama açılışında bir kez kurulur (belge bölüm 10). Keşfet ve Blog herkese açık
-// olduğundan bu kurulum oturumdan bağımsız çalışır.
-// YAPILACAK(AuthProvider): oturum durumunu da güncelleyen onAuthFailure ile bu çağrı AuthProvider'a taşınacak.
-setupApi({
-  getTokens: () => tokenStorage.read(),
-  saveTokens: async (tokens) => {
-    await tokenStorage.write(tokens);
-  },
-  onAuthFailure: () => {
-    void tokenStorage.clear();
-  },
-});
+// API istemcisi AuthProvider içinde kurulur (belirteç deposu ve oturum kapatma işleyicisi orada bağlanır).
 setupQueryFocusManager();
+
+/** Açılış ekranı, yazı tipi ya da oturum geri yüklemesi ne olursa olsun bu süreden sonra kapanır. */
+const SPLASH_TIMEOUT_MS = 10_000;
 
 /** Beklenmeyen çizim hataları için yedek ekran. Ayrıntı yalnız geliştirmede gösterilir. */
 export function ErrorBoundary({ error, retry }: ErrorBoundaryProps) {
@@ -43,10 +34,19 @@ export function ErrorBoundary({ error, retry }: ErrorBoundaryProps) {
   );
 }
 
-/** Hazır olunca açılış ekranını kapatır: simge yazı tipi yüklendi ve oturum geri yüklemesi bitti. */
+/**
+ * Hazır olunca açılış ekranını kapatır: simge yazı tipi yüklendi ve oturum geri yüklemesi bitti.
+ * Takılma güvenliği: bunlardan biri yanıt vermezse de `SPLASH_TIMEOUT_MS` sonra kapanır.
+ */
 function SplashGate({ fontsReady }: { fontsReady: boolean }) {
   const { status } = useAuth();
-  const ready = fontsReady && status !== "restoring";
+  const [timedOut, setTimedOut] = useState(false);
+  const ready = timedOut || (fontsReady && status !== "restoring");
+
+  useEffect(() => {
+    const timer = setTimeout(() => setTimedOut(true), SPLASH_TIMEOUT_MS);
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     if (ready) SplashScreen.hideAsync().catch(() => undefined);
@@ -64,16 +64,17 @@ export default function RootLayout() {
   return (
     <SafeAreaProvider>
       <QueryClientProvider client={queryClient}>
-        {/* YAPILACAK(AuthProvider): <AuthProvider> burada, QueryClientProvider'ın içinde sarmalayacak. */}
-        <ThemeProvider value={navigationTheme}>
-          <StatusBar style="light" />
-          <SplashGate fontsReady={fontsLoaded || fontError !== null} />
-          <Stack screenOptions={stackScreenOptions}>
-            <Stack.Screen name="(tabs)" />
-            <Stack.Screen name="(auth)" options={{ presentation: "modal" }} />
-            <Stack.Screen name="ui-kit" />
-          </Stack>
-        </ThemeProvider>
+        <AuthProvider>
+          <ThemeProvider value={navigationTheme}>
+            <StatusBar style="light" />
+            <SplashGate fontsReady={fontsLoaded || fontError !== null} />
+            <Stack screenOptions={stackScreenOptions}>
+              <Stack.Screen name="(tabs)" />
+              <Stack.Screen name="(auth)" options={{ presentation: "modal" }} />
+              <Stack.Screen name="ui-kit" />
+            </Stack>
+          </ThemeProvider>
+        </AuthProvider>
       </QueryClientProvider>
     </SafeAreaProvider>
   );

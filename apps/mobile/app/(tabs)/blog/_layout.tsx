@@ -2,7 +2,10 @@ import { Stack } from "expo-router";
 
 import { stackScreenOptions } from "@/ui";
 
-/** Bu sekmenin kendi yığını: ayrıntı ekranları buraya eklenir (src/features/blog). */
+/** Derin bağlantıyla (ör. `/blog/japonya-gezi-rehberi`) açılan ekranın altında blog listesi bulunur. */
+export const unstable_settings = { initialRouteName: "index" };
+
+/** Bu sekmenin kendi yığını: liste ve yazı ayrıntısı (src/features/blog). */
 export default function BlogLayout() {
   return <Stack screenOptions={stackScreenOptions} />;
 }
