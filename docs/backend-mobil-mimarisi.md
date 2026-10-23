@@ -363,6 +363,11 @@ export function apiFetch<T>(url: string, init?: RequestInit): Promise<T>;  // Or
 - Boş/yükleniyor/hata durumları her ekranda ele alınır. Güvenli alan (safe area), klavye, erişilebilirlik
   etiketleri, 44 pt dokunma hedefi.
 - İçerik verisi, ülke listesi, başkent, bayrak gibi bilgiler mobil kodda **yazılmaz**.
+- Görsel atıfları (CC BY / CC BY-SA) ülke, şehir ve blog ekranlarının sonunda, katlanmamış gösterilir
+  (`src/features/credits`); bağlantılar yalnız http/https açar.
+- Oyun geri sayımı aygıt saatinden bağımsızdır: tur görünümündeki `serverNow` ile kalan süre hesaplanır ve
+  yanıtın alındığı andan itibaren yerel monotonik zamanlayıcıyla ilerletilir (`src/features/games/model/countdown.ts`).
+  Süre kararını her zaman sunucu verir.
 
 ## 11. Çalışma kuralları (ajanlar için)
 

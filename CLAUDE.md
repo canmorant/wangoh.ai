@@ -3,7 +3,7 @@
 # Wangoh çalışma notları
 
 - Kullanıcı Türkçe yazar; Türkçe yanıt ver. Onay sorma: commit, push ve yayın dahil işi bitir, sonra raporla. Yine de push'tan önce derle ve testleri çalıştır, çünkü `main` doğrudan canlıya gider.
-- Depo bir Turborepo monorepo (pnpm workspaces): `apps/web` Next.js web sitesi, `apps/mobile` bağımsız React Native + Expo uygulaması. Web arayüzü Expo'ya gömülmez; WebView ve Capacitor kullanılmaz. Web işlerinde `apps/mobile`a dokunma. Sunucuya özel route'lar `route.web.ts`.
+- Depo bir Turborepo monorepo (pnpm workspaces): `apps/web` Next.js web sitesi, `apps/api` NestJS REST API (kimlik doğrulama, içerik, blog, oyunlar), `apps/mobile` bağımsız React Native + Expo uygulaması, `packages/api-client` Orval ile üretilen ortak TanStack Query istemcisi. Web arayüzü Expo'ya gömülmez; WebView ve Capacitor kullanılmaz. Web işlerinde `apps/mobile` ve `apps/api`ye dokunma. Sunucuya özel route'lar `route.web.ts`. API, istemci ve mobil sözleşmesi: `docs/backend-mobil-mimarisi.md`.
 - Restoran, puan, adres, fiyat, saat gibi bilgileri asla uydurma. Çerez ve yasal metinlerde hata olmasın.
 - Aşağıdaki yollar, aksi belirtilmedikçe `apps/web` köküne göredir.
 
@@ -27,7 +27,8 @@
 - Web (`apps/web` içinde, ya da kökten `pnpm --filter web <betik>`): `npx tsc --noEmit -p .`, `npx eslint .`
 - `npx tsx scripts/i18n.test.ts`, `npx tsx scripts/paths.test.ts`, `npx tsx scripts/seo-copy.test.ts`, `npx tsx scripts/distance.test.ts`, `npx tsx scripts/map.test.ts`, `npx tsx scripts/turkish.test.ts` (`apps/web` içinden)
 - Derleme sonrası yerel sunucuya karşı (`apps/web` içinde, `pnpm start -p 3200` ile): `VALIDATION_BASE_URL=http://127.0.0.1:3200 pnpm test:seo` ve `pnpm test:guides`
-- Mobil (`apps/mobile`): bağımlılık eklerken `npx expo install <paket>`; `pnpm typecheck`.
+- Mobil (`apps/mobile`): bağımlılık eklerken `npx expo install <paket>`; `pnpm typecheck`, `pnpm test`.
+- API (`apps/api`): `pnpm --filter api test|typecheck|lint|build`; API şeması değişince `pnpm generate:api` ve `apps/api/openapi.json` ile `packages/api-client/src/generated` birlikte commit'lenir. Mobil içerik verisi tutmaz: kıta/ülke/şehir/blog/oyun yalnız API'den gelir. Tohum üretimi: `apps/web/scripts/export-api-seed.ts`, `export-blog-seed.ts` (`apps/web` içinden, `--check` ile güncellik).
 
 ## Google Maps listeleri
 
