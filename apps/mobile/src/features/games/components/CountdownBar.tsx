@@ -1,78 +1,52 @@
-import { useEffect, useRef, useState } from "react";
 import { StyleSheet, View } from "react-native";
 
 import { Text } from "@/ui";
 import { colors, radius, spacing } from "@/theme";
 
-import { countdownLabel, isUrgent, remainingFraction, remainingMs, remainingSeconds } from "../model/countdown";
+import { useRoundProgress } from "../hooks/useRoundProgress";
+import { countdownLabel, isUrgent, remainingSeconds, type RoundTiming } from "../model/countdown";
 
 export interface CountdownBarProps {
-  /** Yerel saat (Date.now) bitişi. */
-  deadline: number;
+  /** Turun sunucu saatine göre kurulmuş saati (yanıtın alındığı anda sabitlenir). */
+  timing: RoundTiming;
   /** Çubuğun tam dolu olduğu süre (sunucunun bildirdiği tur süresi). */
   durationMs: number;
-  /** Süre dolunca BİR kez çağrılır (yeni `deadline` sayacı yeniler). Süre kararını sunucu verir. */
+  /** Süre dolunca BİR kez çağrılır (yeni `timing` sayacı yeniler). Süre kararını sunucu verir. */
   onExpire?: () => void;
   /** Çubuğun solundaki etiket. */
   label?: string;
+  /** Tur henüz başlamadıysa (geri bildirim payı) etiket yerine gösterilir; çubuk o sırada tam doludur ve süre işlemez. */
+  waitingLabel?: string;
   testID?: string;
 }
 
 /**
  * Geri sayım GÖSTERGESİ. Yalnız kendisi yeniden çizilir (100 ms), ekranın geri kalanı etkilenmez.
- * Zamanlayıcı yereldir; puan ya da zaman aşımı kararı vermez, süre dolunca yalnız `onExpire` bildirir.
+ * Tur başlamadan önce çubuk %100'de bekler; başlayınca sunucunun bitiş anına göre azalır. Puan ya da zaman aşımı kararı vermez.
  */
-export function CountdownBar({ deadline, durationMs, onExpire, label = "Süre", testID }: CountdownBarProps) {
-  const [now, setNow] = useState(() => Date.now());
-  const expireRef = useRef(onExpire);
-  expireRef.current = onExpire;
-  const firedFor = useRef<number | null>(null);
-
-  useEffect(() => {
-    let id: ReturnType<typeof setInterval> | undefined;
-    const tick = () => {
-      const current = Date.now();
-      setNow(current);
-      if (current >= deadline) {
-        if (id !== undefined) clearInterval(id);
-        if (firedFor.current !== deadline) {
-          firedFor.current = deadline;
-          expireRef.current?.();
-        }
-      }
-    };
-    tick();
-    id = setInterval(tick, 100);
-    return () => {
-      if (id !== undefined) clearInterval(id);
-    };
-  }, [deadline]);
-
-  const remaining = remainingMs(deadline, now);
-  const urgent = isUrgent(remaining);
+export function CountdownBar({ timing, durationMs, onExpire, label = "Süre", waitingLabel, testID }: CountdownBarProps) {
+  const progress = useRoundProgress(timing, durationMs, onExpire);
+  const { remainingMs: remaining, waiting } = progress;
+  const urgent = !waiting && isUrgent(remaining);
   const seconds = remainingSeconds(remaining);
+  const dangerous = urgent || (!waiting && remaining === 0);
 
   return (
     <View
       style={styles.row}
       accessible
       accessibilityRole="timer"
-      accessibilityLabel={countdownLabel(remaining)}
+      accessibilityLabel={countdownLabel(remaining, progress.msToStart)}
       accessibilityValue={{ min: 0, max: Math.round(durationMs / 1000), now: seconds }}
       testID={testID}
     >
       <Text variant="caption" color="textSecondary" style={styles.label} numberOfLines={1}>
-        {label}
+        {waiting && waitingLabel ? waitingLabel : label}
       </Text>
       <View style={styles.track}>
-        <View
-          style={[
-            styles.fill,
-            { width: `${remainingFraction(remaining, durationMs) * 100}%`, backgroundColor: urgent || remaining === 0 ? colors.danger : colors.gold },
-          ]}
-        />
+        <View style={[styles.fill, { width: `${progress.fraction * 100}%`, backgroundColor: dangerous ? colors.danger : colors.gold }]} />
       </View>
-      <Text variant="bodyStrong" color={urgent || remaining === 0 ? "danger" : "text"} style={styles.seconds} testID={testID ? `${testID}-seconds` : undefined}>
+      <Text variant="bodyStrong" color={dangerous ? "danger" : "text"} style={styles.seconds} testID={testID ? `${testID}-seconds` : undefined}>
         {seconds} sn
       </Text>
     </View>

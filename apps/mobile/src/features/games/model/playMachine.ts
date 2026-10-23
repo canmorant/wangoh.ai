@@ -15,7 +15,7 @@
 
 import type { AnswerResponseDto, GameRoundDto, GameSessionDto, StartSessionResponseDto } from "@wangoh/api-client";
 
-import { deadlineForFreshRound, deadlineForRestoredRound } from "./countdown";
+import { roundTimingOf, type RoundTiming } from "./countdown";
 import type { EndReason } from "./gameErrors";
 import type { PlayableGameType } from "./gameTypes";
 
@@ -34,10 +34,13 @@ export interface SessionMeta {
   expiresAt: string;
 }
 
-/** Cevap bekleyen tur ve onun yerel saat bitişi (yalnız geri sayım göstergesi için). */
+/**
+ * Cevap bekleyen tur ve yanıtın alındığı anda dondurulan saati (yalnız geri sayım göstergesi için).
+ * Saat sunucu saatine göre kurulur (`serverNow`), yerel monotonik zamanla işler; aygıt saati kullanılmaz (bkz. `countdown.ts`).
+ */
 export interface RoundClock {
   round: GameRoundDto;
-  deadline: number;
+  timing: RoundTiming;
 }
 
 /** Cevaplanmış turun sunucu özeti (ilerleme şeridi için). */
@@ -78,6 +81,7 @@ export type PlayState =
   | { phase: "ended"; reason: EndReason; sessionId: string | null }
   | { phase: "failed"; action: FailedAction; error: unknown; sessionId: string | null; session: SessionMeta | null; score: number };
 
+/** Olaylardaki `now`: yanıtın alındığı yerel MONOTONİK an (`monotonicNow()`), duvar saati değil. */
 export type PlayEvent =
   | { type: "START" }
   | { type: "STARTED"; response: StartSessionResponseDto; now: number }
@@ -100,6 +104,10 @@ function metaOf(source: { sessionId: string; gameType: PlayableGameType; roundsT
   return { sessionId: source.sessionId, gameType: source.gameType, roundsTotal: source.roundsTotal, expiresAt: source.expiresAt };
 }
 
+function clockOf(round: GameRoundDto, receivedAt: number): RoundClock {
+  return { round, timing: roundTimingOf(round, receivedAt) };
+}
+
 function questionState(
   session: SessionMeta,
   current: RoundClock,
@@ -117,7 +125,7 @@ function stateFromSnapshot(snapshot: GameSessionDto, now: number, notice: string
     case "active": {
       if (snapshot.round) {
         const history = snapshot.results.map((r) => ({ index: r.index, correct: r.correct, timedOut: r.timedOut, points: r.points }));
-        const current: RoundClock = { round: snapshot.round, deadline: deadlineForRestoredRound(snapshot.round, now) };
+        const current = clockOf(snapshot.round, now);
         return questionState(session, current, snapshot.score, history, notice);
       }
       // Tüm turlar cevaplanmış ama oyun bitirilmemiş: bitirme çağrısı idempotenttir.
@@ -141,7 +149,7 @@ export function playReducer(state: PlayState, event: PlayEvent): PlayState {
     case "STARTED": {
       if (state.phase !== "starting") return state;
       const { response } = event;
-      const current: RoundClock = { round: response.round, deadline: deadlineForFreshRound(event.now, response.round.timeLimitMs) };
+      const current = clockOf(response.round, event.now);
       return questionState(metaOf(response), current, 0, []);
     }
 
@@ -196,9 +204,8 @@ export function playReducer(state: PlayState, event: PlayEvent): PlayState {
         timedOut: response.timedOut,
         points: response.points,
       };
-      const next: RoundClock | null = response.nextRound
-        ? { round: response.nextRound, deadline: deadlineForFreshRound(event.now, response.nextRound.timeLimitMs) }
-        : null;
+      // Sonraki turun sayacı geri bildirim payının sonunda başlar (startedAt gelecekte); saat bu yanıttan itibaren işler.
+      const next: RoundClock | null = response.nextRound ? clockOf(response.nextRound, event.now) : null;
       return {
         phase: "feedback",
         answer: state.answer,

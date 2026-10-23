@@ -3,6 +3,7 @@ import { useLocalSearchParams, useRouter } from "expo-router";
 import { useCallback, useMemo } from "react";
 import { FlatList, StyleSheet, View } from "react-native";
 
+import { ImageCredits } from "@/features/credits";
 import { colors, radius, screenPadding, spacing } from "@/theme";
 import { Button, ErrorState, Header, Icon, RemoteImage, Screen, Text, ThemedRefreshControl } from "@/ui";
 
@@ -156,9 +157,11 @@ export function CountryScreen() {
     </View>
   );
 
+  // Görsel atıfları (CC BY / CC BY-SA koşulu) kaydırmanın en sonunda: ülke ve şehir kartı görselleri için.
   const footer = (
     <View>
       <Neighbors countries={neighbors} loading={hasBorders && !index.complete && !index.isError} onOpen={openCountry} />
+      <ImageCredits credits={data.imageCredits} />
     </View>
   );
 

@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { describe, it } from "node:test";
+import { describe, it, mock } from "node:test";
 
 import type { AnswerResponseDto, GameRoundDto, GameSessionDto, StartSessionResponseDto } from "@wangoh/api-client";
 
@@ -14,7 +14,10 @@ import {
   type PlayState,
 } from "./playMachine";
 
+/** Yerel MONOTONİK an (monotonicNow ekseni). Sunucu saatiyle ilgisi yoktur: duvar saati ayrıca WALL ile verilir. */
 const NOW = 1_000_000;
+/** Sunucu saati (duvar). Aygıt saatinden farklı olabilir: hesap yalnız serverNow farklarına dayanır. */
+const WALL = Date.parse("2026-01-01T00:00:00.000Z");
 
 function round(index: number, extra: Partial<GameRoundDto> = {}): GameRoundDto {
   return {
@@ -27,8 +30,9 @@ function round(index: number, extra: Partial<GameRoundDto> = {}): GameRoundDto {
       { id: "DD", label: "D" },
     ],
     timeLimitMs: 20_000,
-    startedAt: new Date(NOW).toISOString(),
-    deadlineAt: new Date(NOW + 20_000).toISOString(),
+    startedAt: new Date(WALL).toISOString(),
+    deadlineAt: new Date(WALL + 20_000).toISOString(),
+    serverNow: new Date(WALL).toISOString(),
     ...extra,
   };
 }
@@ -89,8 +93,8 @@ describe("oyun durum makinesi: başlatma", () => {
     assert.equal(state.score, 0);
     assert.equal(state.selection, null);
     assert.equal(state.error, null);
-    // Yeni turun yerel bitişi yanıtın ulaştığı andan işler.
-    assert.equal(state.current.deadline, NOW + 20_000);
+    // İlk tur: sayaç oturum açılınca başlamıştır (startedAt = serverNow); saat yanıtın alındığı monotonik andan işler.
+    assert.deepEqual(state.current.timing, { receivedAt: NOW, msToStart: 0, msToDeadline: 20_000 });
     assert.equal(roundNumberOf(state), 1);
   });
 
@@ -114,14 +118,20 @@ describe("oyun durum makinesi: tur akışı", () => {
     assert.equal(submitting.phase, "submitting");
     assert.equal(isBusy(submitting), true);
 
-    const feedback = playReducer(submitting, { type: "ANSWERED", response: answer(), now: NOW + 3000 });
+    // Sonraki tur: sayaç cevap anı + 2 sn payda başlar (startedAt gelecekte), bitiş 22 sn sonra.
+    const nextRound = round(1, {
+      startedAt: new Date(WALL + 3000 + 2000).toISOString(),
+      deadlineAt: new Date(WALL + 3000 + 2000 + 20_000).toISOString(),
+      serverNow: new Date(WALL + 3000).toISOString(),
+    });
+    const feedback = playReducer(submitting, { type: "ANSWERED", response: answer({ nextRound }), now: NOW + 3000 });
     assert.equal(feedback.phase, "feedback");
     if (feedback.phase !== "feedback") return;
     assert.equal(feedback.score, 140);
     assert.deepEqual(feedback.history, [{ index: 0, correct: true, timedOut: false, points: 140 }]);
     assert.equal(feedback.next?.round.index, 1);
-    // Sonraki turun yerel bitişi yanıtın ulaştığı andan işler.
-    assert.equal(feedback.next?.deadline, NOW + 3000 + 20_000);
+    // Geri bildirim payı: sonraki turun başlamasına 2 sn, bitişe 22 sn var; saat bu yanıtın alındığı andan işler.
+    assert.deepEqual(feedback.next?.timing, { receivedAt: NOW + 3000, msToStart: 2000, msToDeadline: 22_000 });
     assert.equal(correctCountOf(feedback.history), 1);
   });
 
@@ -218,7 +228,7 @@ describe("oyun durum makinesi: bitirme", () => {
 });
 
 describe("oyun durum makinesi: geri yükleme ve oturum durumu -> ekran", () => {
-  it("etkin oturum + tur -> question (geçmiş ve puan sunucudan; bitiş saati deadlineAt'tan)", () => {
+  it("etkin oturum + tur -> question (geçmiş ve puan sunucudan; kalan süre deadlineAt − serverNow'dan)", () => {
     const snap = snapshot({
       currentRound: 3,
       score: 420,
@@ -227,7 +237,11 @@ describe("oyun durum makinesi: geri yükleme ve oturum durumu -> ekran", () => {
         { index: 1, correct: false, points: 0, timedOut: true },
         { index: 2, correct: true, points: 270, timedOut: false },
       ],
-      round: round(3, { deadlineAt: new Date(NOW + 12_000).toISOString() }),
+      // Turun sayacı 8 sn önce başlamış: sunucu "şimdi"si başlangıçtan 8 sn sonra.
+      round: round(3, {
+        startedAt: new Date(WALL - 8000).toISOString(),
+        deadlineAt: new Date(WALL + 12_000).toISOString(),
+      }),
     });
     const state = run([{ type: "RESTORE", sessionId: "s1" }, { type: "RESTORED", snapshot: snap, now: NOW }]);
     assert.equal(state.phase, "question");
@@ -236,7 +250,7 @@ describe("oyun durum makinesi: geri yükleme ve oturum durumu -> ekran", () => {
     assert.equal(roundNumberOf(state), 4);
     assert.equal(state.history.length, 3);
     assert.equal(correctCountOf(state.history), 2);
-    assert.equal(state.current.deadline, NOW + 12_000);
+    assert.deepEqual(state.current.timing, { receivedAt: NOW, msToStart: 0, msToDeadline: 12_000 });
   });
 
   it("etkin ama tüm turlar cevaplanmış (round null) -> finishing", () => {
@@ -297,12 +311,35 @@ describe("oyun durum makinesi: geri yükleme ve oturum durumu -> ekran", () => {
     assert.equal(roundNumberOf(synced), 9);
   });
 
-  it("geri yüklemede aygıt saati sunucudan geriyse gösterge tur süresini aşmaz", () => {
-    // deadlineAt çok ileride (aygıt saati geride): üst sınır tur süresidir.
-    const snap = snapshot({ round: round(0, { deadlineAt: new Date(NOW + 10 * 60_000).toISOString() }) });
+  it("geri yükleme geri bildirim payındayken: tur henüz başlamamıştır (msToStart > 0), bitiş startedAt + süre", () => {
+    const snap = snapshot({
+      round: round(1, {
+        startedAt: new Date(WALL + 1500).toISOString(),
+        deadlineAt: new Date(WALL + 21_500).toISOString(),
+      }),
+    });
     const state = run([{ type: "RESTORE", sessionId: "s1" }, { type: "RESTORED", snapshot: snap, now: NOW }]);
     if (state.phase !== "question") throw new Error("question bekleniyordu");
-    assert.equal(state.current.deadline, NOW + 20_000);
+    assert.deepEqual(state.current.timing, { receivedAt: NOW, msToStart: 1500, msToDeadline: 21_500 });
+  });
+
+  it("saat aygıt saatine bakmaz: serverNow aygıt saatinden 10 dk farklı olsa da aynı sonuç", () => {
+    const skew = 10 * 60_000;
+    const fake = mock.method(Date, "now", () => WALL + skew);
+    try {
+      const snap = snapshot({
+        round: round(2, {
+          startedAt: new Date(WALL - 5000).toISOString(),
+          deadlineAt: new Date(WALL + 15_000).toISOString(),
+        }),
+      });
+      const state = run([{ type: "RESTORE", sessionId: "s1" }, { type: "RESTORED", snapshot: snap, now: NOW }]);
+      if (state.phase !== "question") throw new Error("question bekleniyordu");
+      assert.deepEqual(state.current.timing, { receivedAt: NOW, msToStart: 0, msToDeadline: 15_000 });
+      assert.equal(fake.mock.callCount(), 0, "Date.now hiç çağrılmamalı");
+    } finally {
+      fake.mock.restore();
+    }
   });
 });
 

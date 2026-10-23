@@ -11,6 +11,7 @@ import { Badge, Button, EmptyState, Header, Icon, LoadingView, Screen, Text } fr
 import { ConfirmDialog } from "./components/ConfirmDialog";
 import { CountdownBar } from "./components/CountdownBar";
 import { FeedbackPanel } from "./components/FeedbackPanel";
+import { NextRoundNotice } from "./components/NextRoundNotice";
 import { OptionButton } from "./components/OptionButton";
 import { ProgressSteps } from "./components/ProgressSteps";
 import { QuestionCard } from "./components/QuestionCard";
@@ -18,16 +19,22 @@ import { StatusView } from "./components/StatusView";
 import { useExitGuard, type ExitGuard } from "./hooks/useExitGuard";
 import { usePlayGame, type PlayGame } from "./hooks/usePlayGame";
 import { useScreenReaderEnabled } from "./hooks/useScreenReaderEnabled";
+import { autoAdvanceDelay } from "./model/countdown";
 import { feedbackCopy } from "./model/feedbackCopy";
 import { endCopy, gameErrorMessage, isRetryable } from "./model/gameErrors";
 import { GAME_INFO, firstParam, formatNumber, gameKindOf, isPlayableGameType, type PlayableGameType } from "./model/gameTypes";
+import { monotonicNow } from "./model/monotonic";
 import { isInProgress, type PlayState } from "./model/playMachine";
 import { loadingMessage, optionViewFor, pointOf } from "./model/viewModel";
 import { gamesRoutes, goBackOrHub } from "./routes";
 
-/** Geri bildirimden sonra otomatik ilerleme gecikmesi (ms); doğruda kısa, yanlışta cevabı okumaya yetecek kadar. */
+/**
+ * Geri bildirimden sonra otomatik ilerleme gecikmesi (ms); doğruda kısa, yanlışta cevabı okumaya yetecek kadar.
+ * Sonraki turun sayacı sunucuda cevaptan 2 sn sonra (geri bildirim payı) başlar; gerçek gecikme `autoAdvanceDelay` ile bu payı
+ * aşmayacak biçimde sınırlanır, yani oyuncu soruya geldiğinde süresi harcanmamış olur.
+ */
 const AUTO_ADVANCE_CORRECT_MS = 1400;
-const AUTO_ADVANCE_WRONG_MS = 2400;
+const AUTO_ADVANCE_WRONG_MS = 2000;
 const MAP_HEIGHT = 300;
 
 type RoundState = Extract<PlayState, { phase: "question" | "submitting" | "feedback" }>;
@@ -170,15 +177,16 @@ function RoundView({ state, game, guard }: { state: RoundState; game: PlayGame; 
     if (inFeedback || hasSubmitError) scrollRef.current?.scrollToEnd({ animated: true });
   }, [inFeedback, hasSubmitError]);
 
-  // Çoktan seçmelide kısa gecikmeyle otomatik ilerle; ekran okuyucu açıksa kullanıcı "Devam" der.
+  // Çoktan seçmelide kısa gecikmeyle otomatik ilerle (sonraki turun sayacı başlamadan); ekran okuyucu açıksa kullanıcı "Devam" der.
   // Haritada otomatik ilerleme yok: oyuncu hedefi ve çizgiyi incelesin.
   const autoAdvanceMs = feedback ? (feedback.result.correct ? AUTO_ADVANCE_CORRECT_MS : AUTO_ADVANCE_WRONG_MS) : null;
+  const nextTiming = feedback?.next?.timing ?? null;
   const { next } = game;
   useEffect(() => {
     if (!inFeedback || kind !== "choice" || screenReader || autoAdvanceMs === null) return;
-    const timer = setTimeout(next, autoAdvanceMs);
+    const timer = setTimeout(next, autoAdvanceDelay(autoAdvanceMs, nextTiming, monotonicNow()));
     return () => clearTimeout(timer);
-  }, [inFeedback, kind, screenReader, autoAdvanceMs, round.index, next]);
+  }, [inFeedback, kind, screenReader, autoAdvanceMs, nextTiming, round.index, next]);
 
   const answerPoint = state.phase === "question" ? pointOf(state.selection) : pointOf(state.answer);
   const targetPoint =
@@ -235,10 +243,10 @@ function RoundView({ state, game, guard }: { state: RoundState; game: PlayGame; 
 
         {feedback ? (
           feedback.next ? (
-            // Sonraki turun süresi cevap anında başlar (sunucu saati); geri bildirim sürerken de işlediğini göster.
+            // Sonraki turun sayacı geri bildirim payının (sunucu saati) sonunda başlar: o âna kadar çubuk dolu bekler, sonra azalır.
             <CountdownBar
               key={`next-${feedback.next.round.index}`}
-              deadline={feedback.next.deadline}
+              timing={feedback.next.timing}
               durationMs={feedback.next.round.timeLimitMs}
               label="Sonraki"
               testID="countdown-next"
@@ -247,7 +255,14 @@ function RoundView({ state, game, guard }: { state: RoundState; game: PlayGame; 
             <View style={styles.countdownSpacer} />
           )
         ) : (
-          <CountdownBar key={round.index} deadline={current.deadline} durationMs={round.timeLimitMs} onExpire={game.timeUp} testID="countdown" />
+          <CountdownBar
+            key={round.index}
+            timing={current.timing}
+            durationMs={round.timeLimitMs}
+            onExpire={game.timeUp}
+            waitingLabel="Hazır"
+            testID="countdown"
+          />
         )}
 
         {state.phase === "question" && state.notice ? (
@@ -316,6 +331,10 @@ function RoundView({ state, game, guard }: { state: RoundState; game: PlayGame; 
         ) : null}
 
         {copy && feedback ? <FeedbackPanel copy={copy} timedOut={feedback.result.timedOut} testID="feedback" /> : null}
+
+        {feedback && feedback.next && kind === "map" ? (
+          <NextRoundNotice key={`notice-${feedback.next.round.index}`} timing={feedback.next.timing} durationMs={feedback.next.round.timeLimitMs} testID="next-round-notice" />
+        ) : null}
       </ScrollView>
 
       {footer ? <View style={styles.footer}>{footer}</View> : null}

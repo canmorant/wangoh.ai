@@ -4,6 +4,7 @@ import { useMemo } from "react";
 import { StyleSheet, View } from "react-native";
 
 import { getErrorStatus } from "@/api/errors";
+import { ImageCredits } from "@/features/credits";
 import { spacing } from "@/theme";
 import { Badge, Button, Chip, Divider, EmptyState, ErrorState, Header, RemoteImage, Screen, Skeleton, Text } from "@/ui";
 
@@ -130,6 +131,9 @@ export function BlogPostScreen() {
           ) : null}
           <Button title="Tüm yazılar" variant="secondary" fullWidth onPress={() => router.dismissTo("/blog")} />
         </View>
+
+        {/* Görsel atıfları (CC BY / CC BY-SA koşulu): kaydırmanın en sonu, kapak görseli için. */}
+        <ImageCredits credits={data.imageCredits} />
       </View>
     </Screen>
   );

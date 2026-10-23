@@ -3,6 +3,7 @@ import { useLocalSearchParams, useRouter } from "expo-router";
 import { useCallback, useMemo, useRef, useState, type ReactNode } from "react";
 import { ScrollView, StyleSheet, View, type LayoutChangeEvent } from "react-native";
 
+import { ImageCredits } from "@/features/credits";
 import { colors, radius, screenPadding, spacing } from "@/theme";
 import { Button, ErrorState, Header, Icon, RemoteImage, Screen, Text, ThemedRefreshControl } from "@/ui";
 
@@ -191,6 +192,9 @@ function CityContent({ data, code, refreshing, onRefresh }: ContentProps) {
         accessibilityHint="Ülke ayrıntısını ve diğer şehirleri açar"
         style={styles.countryButton}
       />
+
+      {/* Görsel atıfları (CC BY / CC BY-SA koşulu): kaydırmanın en sonu, şehir görseli için. */}
+      <ImageCredits credits={data.imageCredits} />
     </ScrollView>
   );
 }

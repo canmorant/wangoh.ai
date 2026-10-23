@@ -33,6 +33,7 @@ function post(overrides: Partial<BlogPostDto> = {}): BlogPostDto {
     title: "Japonya Gezi Rehberi",
     excerpt: "Kısa özet.",
     coverImage: "https://wangoh.com/og/a.jpg",
+    imageCredits: [],
     tags: ["ülke-rehberi", "asia"],
     countryCode: "JP",
     author: null,

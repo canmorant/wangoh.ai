@@ -10,6 +10,7 @@ import { useCallback, useEffect, useReducer, useRef } from "react";
 
 import { answerFailureAction, finishFailureAction, restoreFailureAction } from "../model/gameErrors";
 import { GAME_LANG, type PlayableGameType } from "../model/gameTypes";
+import { monotonicNow } from "../model/monotonic";
 import { initialPlayState, liveOf, playReducer, type PlayEvent, type PlayState, type Point } from "../model/playMachine";
 import { resultCache } from "../model/resultCache";
 import { activeSessionStore } from "../storage";
@@ -91,8 +92,10 @@ export function usePlayGame(gameType: PlayableGameType, userId: string): PlayGam
     void (async () => {
       try {
         const response = await startSession({ gameType, params: { lang: GAME_LANG } });
+        // Saat, yanıtın alındığı anda sabitlenir (depolama beklemesi turun süresinden yemesin).
+        const receivedAt = monotonicNow();
         await activeSessionStore.set(userId, gameType, response.sessionId);
-        emit({ type: "STARTED", response, now: Date.now() });
+        emit({ type: "STARTED", response, now: receivedAt });
       } catch (error) {
         emit({ type: "LOAD_FAILED", action: "start", error });
       }
@@ -106,7 +109,7 @@ export function usePlayGame(gameType: PlayableGameType, userId: string): PlayGam
     void (async () => {
       try {
         const snapshot = await fetchSnapshot(restoringId);
-        emit({ type: "RESTORED", snapshot, now: Date.now() });
+        emit({ type: "RESTORED", snapshot, now: monotonicNow() });
       } catch (error) {
         const action = restoreFailureAction(error);
         if (action.type === "end") {
@@ -139,7 +142,7 @@ export function usePlayGame(gameType: PlayableGameType, userId: string): PlayGam
             const snapshot = await fetchSnapshot(finishing.sessionId);
             // Hâlâ "tüm turlar cevaplandı" diyorsa eşitleme bir şey değiştirmez; hatayı göster.
             if (snapshot.round === null && snapshot.status === "active") emit({ type: "FINISH_FAILED", error });
-            else emit({ type: "RESTORED", snapshot, now: Date.now(), notice: SYNC_NOTICE });
+            else emit({ type: "RESTORED", snapshot, now: monotonicNow(), notice: SYNC_NOTICE });
           } catch (syncError) {
             emit({ type: "FINISH_FAILED", error: syncError });
           }
@@ -179,14 +182,14 @@ export function usePlayGame(gameType: PlayableGameType, userId: string): PlayGam
           data: { roundIndex: clock.round.index, answer },
           params: { lang: GAME_LANG },
         });
-        emit({ type: "ANSWERED", response, now: Date.now() });
+        emit({ type: "ANSWERED", response, now: monotonicNow() });
       } catch (error) {
         const action = answerFailureAction(error);
         if (action.type === "resync") {
           // Cevap idempotent değildir: 409, turun sunucuda zaten işlendiği anlamına gelir. Durumu yeniden çek.
           try {
             const snapshot = await fetchSnapshot(session.sessionId);
-            emit({ type: "RESTORED", snapshot, now: Date.now(), notice: SYNC_NOTICE });
+            emit({ type: "RESTORED", snapshot, now: monotonicNow(), notice: SYNC_NOTICE });
           } catch (syncError) {
             emit({ type: "SUBMIT_FAILED", error: syncError });
           }

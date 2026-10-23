@@ -20,6 +20,7 @@ const round: GameRoundDto = {
   timeLimitMs: 20_000,
   startedAt: new Date(NOW).toISOString(),
   deadlineAt: new Date(NOW + 20_000).toISOString(),
+  serverNow: new Date(NOW).toISOString(),
 };
 
 const started: StartSessionResponseDto = {
