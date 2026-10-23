@@ -69,6 +69,25 @@ export const cities = pgTable(
   (t) => [unique("cities_country_slug_unique").on(t.countryCode, t.slug), index("cities_country_idx").on(t.countryCode)],
 );
 
+/**
+ * Görsel atıfları (Wikimedia Commons CC BY / CC BY-SA: yazar, lisans, kaynak bağlantısı). Dilden bağımsızdır.
+ * Anahtar web görsel yoludur (`/images/<ad>.avif`): `cities.image` ve `country_travel.image` ile aynı değer, API'nin
+ * `imageUrl` üretiminde kullandığı ad (`/og/<ad>.jpg`) de buradan çıkar. Kaynak: `apps/web/src/data/imageCredits.ts`.
+ * Yabancı anahtar yok: görsel ile atfı bağımsız yönetilir (görseli olmayan atıf zararsızdır, atfı olmayan görsel boş dizi verir).
+ */
+export const imageCredits = pgTable("image_credits", {
+  image: text("image").primaryKey(),
+  /** Yazar / telif sahibi, kaynaktaki haliyle (web `artist`). */
+  author: text("author"),
+  /** Lisansın görünen adı (ör. `CC BY-SA 4.0`). */
+  licenseName: text("license_name"),
+  licenseUrl: text("license_url"),
+  /** Kaynak sayfa (Wikimedia Commons dosya sayfası). */
+  sourceUrl: text("source_url").notNull(),
+  /** CC0 ve kamu malı dışındaki her şey için true; yalnız true olanlar yanıta girer (web `ImageCredits` ile aynı kural). */
+  attributionRequired: boolean("attribution_required").notNull().default(true),
+});
+
 /** Şehir rehberi gövdesi (isteğe bağlı `dietary` dahil). */
 export const cityGuides = pgTable("city_guides", {
   cityId: uuid("city_id")

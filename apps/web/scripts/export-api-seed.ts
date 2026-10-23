@@ -6,7 +6,7 @@
  *   npx tsx scripts/export-api-seed.ts --out DIR  başka bir klasöre yaz
  *
  * Çıktı (apps/api/seed/):
- *   continents.json, countries.json, country-travel.json, cities.json, city-guides/<ULKEKODU>.json
+ *   continents.json, countries.json, country-travel.json, cities.json, city-guides/<ULKEKODU>.json, image-credits.json
  *
  * KURALLAR
  *  - Hiçbir metin uydurulmaz ya da çevrilmez: Türkçe, web verisinin kendisidir; en/es ise web'in zaten
@@ -15,6 +15,10 @@
  *  - Bir dil, YALNIZCA o içerik o dilde TAM (complete) çevrilmişse yazılır; tamamlananlar `completeLangs`
  *    dizisindedir. Eksik dil hiç yazılmaz, API Türkçeye düşer. Türkçe her zaman tamdır.
  *  - Şehir slug'ı web adresleriyle birebir aynıdır: slugify(şehir adı).
+ *  - Görsel atıfları (image-credits.json): web'in data/imageCredits.ts verisi (+ addedImageCredits.json) AYNEN, `creditFor`
+ *    ile tekilleştirilmiş (aynı görsel iki kez geçerse web'deki gibi sonuncusu); yazar/lisans/bağlantı hiçbir biçimde
+ *    değiştirilmez, uydurulmaz. `attributionRequired: false` (CC0, kamu malı, Unsplash) kayıtları da yazılır; API yanıtı yalnız
+ *    `true` olanları taşır (web `ImageCredits` bileşeninin kuralı). `lqip` (bulanık önizleme) atıf değildir, aktarılmaz.
  *  - Seyahat içeriği olan ülkenin kıtası web'in rehber bölgesidir (content/regions.ts; ör. Türkiye Avrupa'da). Dünya
  *    listesindeki öteki ülkelerde kıta, dünya verisinin kıtasıdır (data/countries.ts).
  *  - Çıktı deterministiktir: anahtarlar sıralı, dosya sonunda satırsonu. Toplam boyut 25 MB'ı aşarsa
@@ -34,6 +38,7 @@ import { regionOf } from "@/content/regions";
 import { dietaryGuideFor } from "@/content/dietary";
 import type { DestinationDietaryGuide } from "@/content/dietary/types";
 import { contentTranslator, localizedDietary, localizedGuide, localizedHub } from "@/content/localized";
+import { IMAGE_CREDITS, creditFor } from "@/data/imageCredits";
 import { COUNTRY_OFFICIAL_NAMES } from "@/lib/countryOfficialNames.gen";
 import { countryName } from "@/lib/countryNames";
 import { continentLabel, subregionLabel } from "@/lib/geo";
@@ -120,6 +125,18 @@ export interface CityGuideFileSeed {
   guides: CityGuideSeed[];
 }
 
+/** Bir görselin atfı (web `ImageCredit`; `file` → `image`, `artist` → `author`, `lqip` yok). */
+export interface ImageCreditSeed {
+  /** Web görsel yolu (`/images/<ad>.avif`): `cities.image` / `country_travel.image` ile aynı değer. */
+  image: string;
+  author: string | null;
+  licenseName: string | null;
+  licenseUrl: string | null;
+  sourceUrl: string;
+  /** CC0 ve kamu malı dışındaki her şey için true (web `ImageCredits` yalnız bunları gösterir). */
+  attributionRequired: boolean;
+}
+
 export interface SeedFiles {
   continents: ContinentSeed[];
   countries: CountrySeed[];
@@ -127,6 +144,7 @@ export interface SeedFiles {
   cities: CitySeed[];
   /** Ülke kodu → o ülkenin rehberleri. */
   cityGuides: Record<string, CityGuideFileSeed>;
+  imageCredits: ImageCreditSeed[];
 }
 
 export interface SeedReport {
@@ -500,6 +518,29 @@ function buildCityGuides(cities: CitySeed[], report: SeedReport): Record<string,
   return files;
 }
 
+/* -------------------------------- görsel atıfları ------------------------------- */
+
+/**
+ * Web'in atıf verisi olduğu gibi (bkz. dosya başı). Tekilleştirme web'in aramasıyla aynıdır: `creditFor(file)` aynı dosya
+ * için birden çok kayıt varsa sonuncusunu verir. Çıktı yola göre sıralıdır (yerel ayardan bağımsız, kod birimi sırası).
+ */
+function buildImageCredits(): ImageCreditSeed[] {
+  return [...new Set(IMAGE_CREDITS.map((credit) => credit.file))]
+    .sort((a, b) => (a < b ? -1 : a > b ? 1 : 0))
+    .map((file) => {
+      const credit = creditFor(file);
+      if (!credit) throw new Error(`${file}: atıf kaydı bulunamadı`);
+      return {
+        image: credit.file,
+        author: credit.artist,
+        licenseName: credit.licenseName,
+        licenseUrl: credit.licenseUrl,
+        sourceUrl: credit.sourceUrl,
+        attributionRequired: credit.attributionRequired,
+      };
+    });
+}
+
 /* ----------------------------------- derleme ---------------------------------- */
 
 export function buildSeed(): { files: SeedFiles; report: SeedReport } {
@@ -516,6 +557,7 @@ export function buildSeed(): { files: SeedFiles; report: SeedReport } {
     countryTravel: buildTravel(report),
     cities,
     cityGuides: buildCityGuides(cities, report),
+    imageCredits: buildImageCredits(),
   };
   return { files, report };
 }
@@ -545,6 +587,7 @@ export function renderSeed(files: SeedFiles, pretty: boolean): Map<string, strin
   out.set("countries.json", render(files.countries, pretty));
   out.set("country-travel.json", render(files.countryTravel, pretty));
   out.set("cities.json", render(files.cities, pretty));
+  out.set("image-credits.json", render(files.imageCredits, pretty));
   for (const code of Object.keys(files.cityGuides).sort()) out.set(`city-guides/${code}.json`, render(files.cityGuides[code], pretty));
   return out;
 }
@@ -562,7 +605,7 @@ export function renderSeedAuto(files: SeedFiles): { rendered: Map<string, string
 
 function listSeedFiles(dir: string): string[] {
   const out: string[] = [];
-  for (const name of ["continents.json", "countries.json", "country-travel.json", "cities.json"]) if (existsSync(join(dir, name))) out.push(name);
+  for (const name of ["continents.json", "countries.json", "country-travel.json", "cities.json", "image-credits.json"]) if (existsSync(join(dir, name))) out.push(name);
   const guideDir = join(dir, "city-guides");
   if (existsSync(guideDir)) for (const name of readdirSync(guideDir).sort()) if (name.endsWith(".json")) out.push(`city-guides/${name}`);
   return out;
@@ -603,6 +646,7 @@ function main(): void {
     `ülke: ${files.countries.length} (seyahat bilgisi olan: ${files.countryTravel.length})`,
     `şehir: ${files.cities.length}`,
     `rehber: ${guideCount} (${Object.keys(files.cityGuides).length} dosya)`,
+    `görsel atfı: ${files.imageCredits.length} (atıf gerektiren: ${files.imageCredits.filter((c) => c.attributionRequired).length})`,
     ...FOREIGN_LANGS.map(
       (lang) =>
         `${lang}: seyahat ${files.countryTravel.filter((t) => t.completeLangs.includes(lang)).length}/${files.countryTravel.length}, ` +

@@ -20,6 +20,39 @@ export function imageUrl(base: string, image: string | null | undefined): string
   return `${base}${image.startsWith("/") ? "" : "/"}${image}`;
 }
 
+/** Web'in kendi görsel yolu mu (`/images/<ad>.avif`)? Atıf kaydı yalnız bu adlar için tutulur. */
+export function isWebImagePath(value: string): boolean {
+  return WEB_IMAGE.test(value);
+}
+
+/**
+ * Tohum blog yazılarının kapak adresleri `export-blog-seed.ts` içinde bu kaynağa sabittir (ortam değişkenine bağlı değil);
+ * `ASSETS_BASE_URL` başka bir değere ayarlansa da bu kaynağın web görselleri çözülür.
+ */
+export const CANONICAL_ASSETS_ORIGIN = "https://wangoh.com";
+
+const OG_PATH = /^\/og\/([a-z0-9][a-z0-9-]{0,180})\.jpg$/;
+
+/**
+ * Mutlak bir görsel adresini web görsel yoluna (`/images/<ad>.avif`) çevirir; atıf kaydı bu yolla aranır. Tanınan biçimler:
+ * `imageUrl`ın ürettiği `<kaynak>/og/<ad>.jpg` ve `<kaynak>/images/<ad>.avif`. `origins` dışındaki adresler (harici siteler)
+ * çözülmez: aynı ada sahip başka bir sitenin görseline yanlış atıf bağlanmasın. Çözülemezse `null`.
+ */
+export function webImagePathOf(value: string | null | undefined, origins: readonly string[]): string | null {
+  if (!value) return null;
+  if (WEB_IMAGE.test(value)) return value;
+  let url: URL;
+  try {
+    url = new URL(value);
+  } catch {
+    return null;
+  }
+  if (url.username !== "" || url.password !== "" || !origins.includes(url.origin)) return null;
+  const og = OG_PATH.exec(url.pathname);
+  if (og) return `/images/${og[1]}.avif`;
+  return WEB_IMAGE.test(url.pathname) ? url.pathname : null;
+}
+
 /** Bayrak SVG'si: `${base}/flags/<iso2 küçük harf>.svg` (apps/web/public/flags). */
 export function flagUrl(base: string, countryCode: string): string {
   return `${base}/flags/${countryCode.toLowerCase()}.svg`;

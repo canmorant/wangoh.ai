@@ -8,6 +8,9 @@
  *  - her şehirde/ülkede Türkçe çeviri var; `completeLangs` ile `translations` anahtarları tutarlı
  *  - kıta: seyahat ülkesinde web'in rehber bölgesi (content/regions.ts), öteki ülkelerde dünya verisinin kıtası
  *  - yabancı anahtarlar: kıta, ülke, şehir, rehber, sınır (ISO3) ve görsel dosyaları
+ *  - görsel atıfları (image-credits.json): web'in atıf verisiyle (data/imageCredits.ts + addedImageCredits.json) alan alan aynı,
+ *    web'de atıfı olan HER görsel tohumda, tohumda web'de olmayan kayıt yok, yola göre sıralı; ülke/şehir sayfalarında
+ *    gösterilecek atıflar (web `ImageCredits` kuralı) tohum verisinden web'deki sonuçla birebir yeniden kurulabilir
  *  - biçim: anahtarlar sıralı, dosya sonu satırsonu, boyut kuralı (>25 MB ise girintisiz)
  *  - güncellik: diskteki tohum, web verisinden şimdi üretilenle bayt bayt aynı (aksi halde
  *    `npx tsx scripts/export-api-seed.ts` çalıştırın) ve üretim deterministik
@@ -17,6 +20,7 @@ import { join, resolve } from "node:path";
 import { allCountries as DESTINATIONS, GUIDES } from "@/content/guides";
 import { countriesByRegion, regionOf } from "@/content/regions";
 import { countries as WORLD } from "@/data/countries";
+import { IMAGE_CREDITS, creditFor } from "@/data/imageCredits";
 import { slugify } from "@/lib/slug";
 import {
   FOREIGN_LANGS,
@@ -29,6 +33,7 @@ import {
   type ContinentSeed,
   type CountrySeed,
   type CountryTravelSeed,
+  type ImageCreditSeed,
 } from "./export-api-seed";
 
 let pass = 0;
@@ -48,6 +53,7 @@ const continents = read<ContinentSeed[]>("continents.json");
 const countries = read<CountrySeed[]>("countries.json");
 const travel = read<CountryTravelSeed[]>("country-travel.json");
 const cities = read<CitySeed[]>("cities.json");
+const credits = read<ImageCreditSeed[]>("image-credits.json");
 const guideFiles = readdirSync(join(SEED_DIR, "city-guides"))
   .filter((name) => name.endsWith(".json"))
   .sort()
@@ -56,6 +62,9 @@ const guides = guideFiles.flatMap((f) => f.data.guides.map((g) => ({ ...g, count
 
 const LANG_SET = new Set<string>(FOREIGN_LANGS);
 const nonEmpty = (v: unknown): boolean => typeof v === "string" && v.trim().length > 0;
+
+/** Atıf testleri şehir bölümünden önce çalışır; aynı (ülke, slug) araması. */
+const cityByKeyEarly = (code: string, slug: string): CitySeed | undefined => cities.find((c) => c.countryCode === code && c.slug === slug);
 
 /* ----------------------------------- sayılar ----------------------------------- */
 
@@ -70,6 +79,65 @@ ok("seyahat ülkesi sayısı = destinasyon sayısı (45)", travel.length === DES
 ok("şehir sayısı 360", cities.length === 360 && cities.length === webCityCount, String(cities.length));
 ok("rehber sayısı 358", guides.length === 358 && guides.length === GUIDES.length, String(guides.length));
 ok("rehber dosyası, rehberi olan ülke başına bir tane", guideFiles.length === new Set(GUIDES.map((g) => g.countryCode)).size && guideFiles.every((f) => f.name === `${f.data.countryCode}.json`));
+
+/* ------------------------------- görsel atıfları ------------------------------- */
+
+const IMAGE_PATH = /^\/images\/[a-z0-9][a-z0-9-]{0,180}\.avif$/;
+const creditByImage = new Map(credits.map((c) => [c.image, c]));
+const webFiles = [...new Set(IMAGE_CREDITS.map((c) => c.file))];
+const webRequired = webFiles.filter((file) => creditFor(file)?.attributionRequired);
+
+ok("atıf: anahtarlar benzersiz ve /images/<ad>.avif biçiminde", creditByImage.size === credits.length && credits.every((c) => IMAGE_PATH.test(c.image)), sample(credits.filter((c) => !IMAGE_PATH.test(c.image)).map((c) => c.image)));
+ok("atıf: web'deki her benzersiz görselin kaydı var, fazladan kayıt yok", credits.length === webFiles.length && webFiles.every((f) => creditByImage.has(f)), `${credits.length} vs ${webFiles.length}`);
+ok("atıf: web'de atıfı olan (attributionRequired) HER görsel tohumda ve atıf gerektiriyor olarak işaretli", webRequired.length > 0 && webRequired.every((f) => creditByImage.get(f)?.attributionRequired === true), sample(webRequired.filter((f) => creditByImage.get(f)?.attributionRequired !== true)));
+ok(
+  "atıf: alanlar web verisiyle birebir (yazar, lisans adı, lisans bağlantısı, kaynak, bayrak); uydurma ya da düzeltme yok",
+  webFiles.every((file) => {
+    const web = creditFor(file)!;
+    const seed = creditByImage.get(file);
+    return seed !== undefined && seed.author === web.artist && seed.licenseName === web.licenseName && seed.licenseUrl === web.licenseUrl && seed.sourceUrl === web.sourceUrl && seed.attributionRequired === web.attributionRequired;
+  }),
+);
+ok("atıf: kayıtta yalnız bilinen alanlar var (lqip gibi atıf olmayan veri aktarılmaz)", credits.every((c) => Object.keys(c).sort().join() === "attributionRequired,author,image,licenseName,licenseUrl,sourceUrl"));
+ok("atıf: atıf gerektiren her kayıtta lisans adı ve kaynak bağlantısı dolu (yasal asgari)", credits.filter((c) => c.attributionRequired).every((c) => nonEmpty(c.licenseName) && nonEmpty(c.sourceUrl)), sample(credits.filter((c) => c.attributionRequired && !(nonEmpty(c.licenseName) && nonEmpty(c.sourceUrl))).map((c) => c.image)));
+ok("atıf: kaynak bağlantısı https, lisans bağlantısı yok ya da http(s)", credits.every((c) => /^https:\/\/\S+$/.test(c.sourceUrl) && (c.licenseUrl === null || /^https?:\/\/\S+$/.test(c.licenseUrl))));
+ok("atıf: yola göre sıralı (kod birimi sırası, yerel ayardan bağımsız)", credits.every((c, i) => i === 0 || credits[i - 1]!.image < c.image));
+
+const localImages = [...travel.map((t) => t.image), ...cities.map((c) => c.image)].filter((i): i is string => i !== null && !/^https:\/\//.test(i));
+ok("atıf: ülke ve şehir görsellerinin (yerel) hepsinin atıf kaydı var, web'de de var", localImages.length > 0 && localImages.every((i) => creditByImage.has(i) && creditFor(i) !== null), sample(localImages.filter((i) => !creditByImage.has(i))));
+
+// Web `ImageCredits` kuralı: görsel yolları tekilleştir (ilk geçiş sırası), kaydı olanların yalnız attributionRequired olanları.
+const webRule = (images: string[]): string[] =>
+  Array.from(new Set(images)).flatMap((image) => {
+    const c = creditFor(image);
+    return c && c.attributionRequired ? [c.file] : [];
+  });
+// API'nin kuralı: aynı süzme, ama yalnız tohum verisinden (travel/cities/image-credits.json).
+const apiRule = (images: (string | null)[]): string[] =>
+  Array.from(new Set(images.filter((i): i is string => i !== null && i !== ""))).flatMap((image) => {
+    const c = creditByImage.get(image);
+    return c && c.attributionRequired ? [c.image] : [];
+  });
+const seedCitiesOf = (code: string) => cities.filter((c) => c.countryCode === code).sort((a, b) => a.position - b.position);
+ok(
+  "atıf: ülke sayfası (ülke + şehir görselleri) atıfları tohumdan web'deki sonuçla aynı sırada yeniden kurulur",
+  DESTINATIONS.every((d) => {
+    const web = webRule([d.image, ...d.cities.map((c) => c.image)].filter(Boolean));
+    const seed = apiRule([travel.find((t) => t.countryCode === d.code)?.image ?? null, ...seedCitiesOf(d.code).map((c) => c.image)]);
+    return web.join("|") === seed.join("|");
+  }),
+);
+ok(
+  "atıf: şehir sayfası (yalnız şehir görseli) atıfları tohumdan web'deki sonuçla aynı",
+  DESTINATIONS.every((d) =>
+    d.cities.every((city) => {
+      const seedCity = cityByKeyEarly(d.code, slugify(city.name));
+      return seedCity !== undefined && webRule([city.image].filter(Boolean)).join("|") === apiRule([seedCity.image]).join("|");
+    }),
+  ),
+);
+const pagesWithCredits = DESTINATIONS.filter((d) => apiRule([travel.find((t) => t.countryCode === d.code)?.image ?? null, ...seedCitiesOf(d.code).map((c) => c.image)]).length > 0).length;
+ok("atıf: atıf gösteren ülke sayfası var (veri boş değil)", pagesWithCredits > 0, String(pagesWithCredits));
 
 /* ----------------------------------- kıtalar ----------------------------------- */
 
@@ -185,6 +253,7 @@ const files = [
   "countries.json",
   "country-travel.json",
   "cities.json",
+  "image-credits.json",
   ...guideFiles.map((f) => `city-guides/${f.name}`),
 ];
 const texts = files.map((name) => ({ name, text: readFileSync(join(SEED_DIR, name), "utf8") }));
@@ -208,7 +277,7 @@ const stale = diffSeed(SEED_DIR, renderedFirst.rendered);
 ok("diskteki tohum web verisinden üretilenle aynı (güncel)", stale.length === 0, `${sample(stale)} — npx tsx scripts/export-api-seed.ts`);
 ok("web çevirisi tam olmayan dil yazılmadı (rapor ile dosyalar tutarlı)", FOREIGN_LANGS.every((l) => travel.filter((t) => !t.completeLangs.includes(l)).length === first.report.incompleteTravel[l].length && cities.filter((c) => !c.completeLangs.includes(l)).length === first.report.incompleteCities[l]));
 
-console.log(`\n${pass} passed, ${fail} failed  (${countries.length} ülke, ${travel.length} seyahat, ${cities.length} şehir, ${guides.length} rehber, ${(total / 1024 / 1024).toFixed(2)} MB)`);
+console.log(`\n${pass} passed, ${fail} failed  (${countries.length} ülke, ${travel.length} seyahat, ${cities.length} şehir, ${guides.length} rehber, ${credits.length} görsel atfı [${credits.filter((c) => c.attributionRequired).length} atıf gerektiren], ${(total / 1024 / 1024).toFixed(2)} MB)`);
 process.exit(fail ? 1 : 0);
 
 /* ------------------------------------ yardımcı ------------------------------------ */

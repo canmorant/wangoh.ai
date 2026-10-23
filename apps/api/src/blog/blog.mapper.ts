@@ -1,4 +1,5 @@
 import { DEFAULT_LANG, type Lang, LANGS, resolveTranslation } from "../common/lang.js";
+import type { ImageCreditDto } from "../content/dto/image-credit.dto.js";
 import type { BlogStatus } from "../db/schema/enums.js";
 import type { Translations } from "../db/schema/types.js";
 import { type BlogBlock, isBlankText } from "./blog-blocks.js";
@@ -86,8 +87,8 @@ export function toSummaryDto(row: BlogRow, requested: Lang): BlogPostSummaryDto 
   return build(row, requested).summary;
 }
 
-/** Ayrıntı: özet alanları + tam gövde. */
-export function toDetailDto(row: BlogRow, requested: Lang): BlogPostDto {
+/** Ayrıntı: özet alanları + tam gövde + kapak görselinin atfı. */
+export function toDetailDto(row: BlogRow, requested: Lang, imageCredits: ImageCreditDto[]): BlogPostDto {
   const { summary, view } = build(row, requested);
-  return { ...summary, body: view.body };
+  return { ...summary, body: view.body, imageCredits };
 }

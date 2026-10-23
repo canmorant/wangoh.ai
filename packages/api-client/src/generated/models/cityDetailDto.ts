@@ -8,6 +8,7 @@
 import type { CityCountryDto } from './cityCountryDto';
 import type { CityDetailDtoLang } from './cityDetailDtoLang';
 import type { CityGuideDto } from './cityGuideDto';
+import type { ImageCreditDto } from './imageCreditDto';
 
 export interface CityDetailDto {
   /** İstenen dil tam olarak sunuldu mu? `false` ise Türkçeye düşülmüştür. */
@@ -23,6 +24,8 @@ export interface CityDetailDto {
   guide: CityGuideDto | null;
   /** Şehir rehberi (`GET .../cities/:slug` içinde `guide`) var mı? */
   hasGuide: boolean;
+  /** Bu şehir sayfasında gösterilen görselin (`imageUrl`) zorunlu görsel atfı. Web'deki "Görsel atıfları" bloğuyla aynı kuraldır: görsel atıf gerektirmiyorsa (CC0, kamu malı) ya da atıf kaydı yoksa (harici görsel) boş dizi. Yalnız ayrıntıda gelir. Lisans gereği ekranda gösterilmelidir. */
+  imageCredits: ImageCreditDto[];
   /**
      * Mutlak görsel adresi (JPEG).
      * @nullable

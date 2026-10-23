@@ -166,6 +166,12 @@ Tablolar (Drizzle şemasında; `translations` jsonb sütunları `{ tr: {...}, en
   unique (`country_code`, `slug`), `complete_langs`.
 - `city_guides`: `city_id` pk/fk, `translations` (rehber gövdesi, isteğe bağlı `dietary`),
   `complete_langs`, `reviewed`.
+- `image_credits`: `image` pk (web görsel yolu, `/images/<ad>.avif`), `author`, `license_name`, `license_url`,
+  `source_url`, `attribution_required`. Web'in `imageCredits` verisinden aktarılır (CC BY / CC BY-SA atıfı).
+
+Görsel atıfları: ülke ayrıntısı (ülke + şehir kartı görselleri), şehir ayrıntısı (şehrin görseli) ve blog yazısı
+ayrıntısı (kapak) yanıtlarında `imageCredits: [{ imageUrl, author, licenseName, licenseUrl, sourceUrl }]` gelir; yalnız
+atıf gerektiren görseller listelenir. İstemci bunu görselin bulunduğu ekranda göstermelidir (lisans koşulu).
 
 Görsel adresleri: API mutlak adres döner (`imageUrl`). Web görselleri AVIF olduğundan (Android'de eski
 sürümler AVIF çözemez) mobil için JPEG varyantı kullanılır: `${ASSETS_BASE_URL}/og/<ad>.jpg`
@@ -235,7 +241,13 @@ Tablolar:
 Akış (`?lang=tr|en|es` başlatma, geri yükleme ve cevap uçlarında etiketleri seçer):
 
 1. `POST /v1/games/:gameType/sessions` → 201 `{sessionId, gameType, roundsTotal, expiresAt, round}`. `round` =
-   `{index, question, options, timeLimitMs: 20000, startedAt, deadlineAt}`; `question` = `{flag, flagUrl,
+   `{index, question, options, timeLimitMs: 20000, startedAt, deadlineAt, serverNow}` (`startedAt` = bu turun SAYACININ
+   başladığı an, `deadlineAt = startedAt + 20 sn`; ilk tur için oturumun oluştuğu an, sonraki turlar için aşağıdaki geri
+   bildirim payı; `serverNow` = yanıtın üretildiği sunucu saati, aynı alan tur görünümünün geçtiği her yerde vardır: start
+   yanıtındaki `round`, cevap yanıtındaki `nextRound`, `GET` oturumdaki geçerli `round`. İstemci geri sayımı kendi saatine
+   bakmadan kurar: kalan süre = `deadlineAt - serverNow`, turun başlamasına kalan = `max(0, startedAt - serverNow)`; cevap
+   yanıtındaki `nextRound`te `startedAt - serverNow` ≈ pay, ilk turda ve payı geçmiş turda ≤ 0);
+   `question` = `{flag, flagUrl,
    countryName}` (türe göre dolu olanlar), `options` = `[{id, label}]` (`map-guess`te `null`). Aynı türde
    önceki aktif oturum `abandoned` (süresi dolmuşsa `expired`) olur: kullanıcı başına tür başına tek aktif
    oturum, kullanıcı satırı kilidiyle (`users` → `game_sessions` → `scores` kilit sırası) garanti edilir.
@@ -245,13 +257,18 @@ Akış (`?lang=tr|en|es` başlatma, geri yükleme ve cevap uçlarında etiketler
    points, score, timedOut, speedBonus, streakBonus, streak, distanceKm, nextRound | null}`. Doğru cevap
    yalnız cevaplanan turun yanıtında döner. Sırası bozuk ya da yinelenen `roundIndex` → 409
    (`GAME_ROUND_OUT_OF_ORDER`, `GAME_ROUND_ALREADY_ANSWERED`, `GAME_NO_ROUND_LEFT`); seçenek dışı cevap ya da
-   geçersiz koordinat → 400 (tur tüketilmez). Zaman aşımı (tur başına 20 sn + 3 sn ağ payı, ikisi de dahil)
-   aşılırsa → 0 puan, `correct:false`, `timedOut:true`, seri sıfırlanır, oyun sonraki tura geçer. Aynı tura
-   eşzamanlı iki cevapta yalnız biri puan alır, öbürü 409.
+   geçersiz koordinat → 400 (tur tüketilmez). **Geri bildirim payı:** sonraki turun sayacı cevap anında değil, cevap anı +
+   `FEEDBACK_GRACE_MS` (çoktan seçmeli 2 sn, `map-guess` 5 sn) sonra başlar; istemci doğru/yanlış gösterimini ya da
+   mesafe/puan ekranını bu sürede gösterir. `nextRound.startedAt` bu (gelecekteki) andır. Tur süresi `startedAt`'tan ölçülür;
+   pay içinde gelen cevabın süresi negatif çıkar ve 0 ms sayılır (tam hız bonusu). Pay yalnız sonraki turun başlangıcını öteler:
+   oturum ömrü (`expires_at`) ve `durationMs` değişmez. Zaman aşımı (turun `startedAt`'ından itibaren 20 sn + 3 sn ağ payı,
+   ikisi de dahil; cevapsız/pas turda 20 sn) aşılırsa → 0 puan, `correct:false`, `timedOut:true`, seri sıfırlanır, oyun sonraki
+   tura geçer. Aynı tura eşzamanlı iki cevapta yalnız biri puan alır, öbürü 409.
 3. `POST /v1/games/sessions/:id/finish` (tüm turlar cevaplanınca; yoksa 409 `GAME_NOT_FINISHED`) → 200
    `{sessionId, scoreId, gameType, score, correctCount, roundsTotal, durationMs, rank, personalBest,
    isPersonalBest}`; `scores`a tek satır yazar. İdempotent: yinelenen ve eşzamanlı çağrılar aynı satırı ve
-   aynı gövdeyi döner. `durationMs` = tur sürelerinin toplamı (sunucu ölçümü). `rank` = tüm zamanlar
+   aynı gövdeyi döner. `durationMs` = oyunun GERÇEK süresi: oturum başından son cevaba (duvar saati, geri bildirim payı dahil; sunucu ölçümü), tur
+   sürelerinin toplamı değil. `rank` = tüm zamanlar
    liderliğinde kullanıcının sırası (en iyisine göre), `isPersonalBest` = bu puan önceki hepsinden KESİN
    yüksek (ilk oyun da true). Puanı yönetici sildiyse 410 `GAME_SCORE_REMOVED` (yeniden yazılmaz).
 4. `GET /v1/games/sessions/:id` (yalnız sahibi; devam eden oturumu geri yükler) → `{sessionId, gameType,
@@ -270,7 +287,7 @@ taşır, bu soru türünün doğası gereğidir.
 
 Puan:
 
-- Çoktan seçmeli: doğruysa `100 + hız bonusu`, hız bonusu = `round(50 * max(0, 1 - ms / 15000))`; art arda
+- Çoktan seçmeli: doğruysa `100 + hız bonusu`, hız bonusu = `round(50 * max(0, 1 - ms / 15000))` (`ms` = turun `startedAt`'ından geçen süre; geri bildirim payı içinde 0); art arda
   doğrularda seri bonusu `min(50, 10 * (seri - 1))` (seri bu turu da sayar). Yanlış: 0 ve seri sıfırlanır.
   Kusursuz oyun 1850, tavan 2000.
 - `map-guess`: mesafe haversine ile km (tam sayıya yuvarlanır, puan yuvarlanmış km'den hesaplanır); web'deki
@@ -304,6 +321,8 @@ Liderlik ve istatistik:
   hızdaki oyunları bulur. `DELETE /v1/scores/:id` (204; hileli puanı sil; liderlik ve istatistikler anında değişir).
 - Bilinen sınır: doğru cevaplar herkese açık içerik uçlarından (`GET /v1/countries`: ad, başkent, koordinat, bayrak) türetilebilir;
   sunucu süre/puan hesabı bunu engellemez. Önlem, hileyi bulup kaldırmaktır (yukarıdaki yönetici uçları + devre dışı bırakma).
+  Geri bildirim payı da sınırı biraz genişletir: sonraki soru cevap yanıtıyla hemen gelir, sayaç payın sonunda başlar; soruyu pay
+  içinde okuyan oyuncu ek düşünme süresi kazanır (hız bonusuna etkisi tur başına en çok ≈ 7 puan, tavan değişmez: 1850).
 - Oyun yanıtları `Cache-Control: no-store`; anonim liderlik listesi 15 sn herkese açık (`Vary: Authorization`).
 
 ## 9. API istemcisi (`@wangoh/api-client`)

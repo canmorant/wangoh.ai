@@ -1,7 +1,7 @@
 # İçerik modülü (kıtalar, ülkeler, şehirler, rehberler)
 
 Sözleşme: [`docs/backend-mobil-mimarisi.md`](../../../../docs/backend-mobil-mimarisi.md) 6. bölüm. Tablolar:
-`continents`, `countries`, `country_travel`, `cities`, `city_guides` (`src/db/schema/content.ts`). Tüm yollar `/v1` altındadır.
+`continents`, `countries`, `country_travel`, `cities`, `city_guides`, `image_credits` (`src/db/schema/content.ts`). Tüm yollar `/v1` altındadır.
 
 | operationId | Uç | Erişim |
 | --- | --- | --- |
@@ -48,6 +48,37 @@ Sözleşme: [`docs/backend-mobil-mimarisi.md`](../../../../docs/backend-mobil-mi
   birebir eşleşir. Rehberdeki `relatedGuides[].slug` ve hub `routeIdeas[].cityLinks` yanıtta üretilir (Türkçe şehir adından slug'a).
 - `:code` büyük/küçük harf fark etmez (`fr` → `FR`), `:slug` küçük harfe çevrilir; biçim bozuksa 400, kayıt yoksa 404.
 
+## Görsel atıfları (`imageCredits`)
+
+Wikimedia Commons görsellerinin çoğu CC BY / CC BY-SA lisanslıdır; bu lisanslar **yazar adının, lisans bağlantısının ve kaynak
+bağlantısının gösterilmesini şart koşar**. Web bunu rehber sayfalarının sonunda "Görsel atıfları" bloğunda gösterir
+(`apps/web/src/components/ImageCredits.tsx`, veri `src/data/imageCredits.ts` + `addedImageCredits.json`). API aynı bilgiyi **yalnız ayrıntı
+yanıtlarında** `imageCredits` olarak taşır; mobil bunu görselin bulunduğu ekranda göstermelidir. Liste uçlarında yoktur.
+
+| Yanıt | Hangi görseller için | Web'deki karşılığı |
+| --- | --- | --- |
+| `GET /countries/:code` | ülke görseli (`imageUrl`), ardından şehir kartı görselleri (`cities[].imageUrl`, `position` sırasıyla) | `[country.image, ...country.cities.map(c => c.image)]` |
+| `GET /countries/:code/cities/:slug` | yalnız şehrin kendi görseli (`imageUrl`) | `[city.image]` |
+| `GET /blog/posts/:slug` (ve yazma yanıtları) | kapak görseli (`coverImage`) | web'de blog yok; kapaklar ülke görselleridir |
+
+- **Kural web'in `ImageCredits` bileşeniyle aynıdır:** görsel yolları tekilleştirilir (ilk geçiş sırası korunur), kaydı olanlardan YALNIZ
+  `attributionRequired = true` olanlar döner. CC0, kamu malı ve Unsplash lisanslı görseller (atıf gerekmez) ile atıf kaydı olmayan görseller
+  (harici `https://` görseller) boş dizi demektir. Hata değil, web'deki davranıştır.
+- Öğe: `{ imageUrl, author, licenseName, licenseUrl, sourceUrl }` (`ImageCreditDto`). `imageUrl`, aynı yanıttaki bir görsel adresiyle (`imageUrl`,
+  `cities[].imageUrl`, blogda `coverImage`) **birebir aynıdır**: istemci atfı görselle bu anahtarla eşleştirir. `author` ve `licenseName`/`licenseUrl`
+  boş olabilir (`null`); `sourceUrl` her zaman vardır. Metinler kaynaktaki haliyle verilir, API değiştirmez (`author` birkaç kayıtta uzundur ve
+  satır sonu içerir; web HTML'de boşluk olarak çizer, istemci ihtiyaca göre `\s+` -> boşluk yapabilir). Bazı `licenseUrl`ler kaynakta `http://` ile başlar.
+- Tablo `image_credits` (`image` birincil anahtar = `cities.image` / `country_travel.image` ile aynı web yolu `/images/<ad>.avif`; `author`,
+  `license_name`, `license_url`, `source_url`, `attribution_required`). Dilden bağımsızdır, yabancı anahtarı yoktur. Yönetici ucu yoktur: kayıtlar
+  tohumdan gelir; yönetici bir şehrin/ülkenin görselini değiştirirse atıf yalnız yeni görselin kaydı varsa görünür. Kaynaktaki `lqip` (bulanık önizleme)
+  atıf değildir, aktarılmaz.
+- Blog kapağı yalnız sitenin kendi görseliyse çözülür: `<kaynak>/og/<ad>.jpg` ya da `<kaynak>/images/<ad>.avif`; kaynak `ASSETS_BASE_URL` ya da `https://wangoh.com`
+  (tohum yazıların sabit kaynağı) olmalıdır. Başka bir sitede aynı adlı görsel varsa atıf BAĞLANMAZ. Gövdedeki `image` blokları için atıf üretilmez.
+- Servis: `ImageCreditsService` (`image-credits.service.ts`), tek sorgu; `BlogModule`, `ContentModule`'ü içe aktararak kullanır.
+- **Yükseltme:** migrasyon `0001_image_credits` tabloyu BOŞ oluşturur. `SEED_ON_BOOT=false` (production varsayılanı) ise atıflar `pnpm --filter api db:seed`
+  çalışana kadar boş döner (yalnız eksikleri ekler, yönetici düzenlemelerini ezmez). Bu sessiz eksiklik lisans ihlali olacağından açılışta uyarı yazılır:
+  seyahat ülkesi var ama `image_credits` boşsa `ContentModule.onApplicationBootstrap` uyarır (açılışı engellemez; `SEED_ON_BOOT` açıksa susar).
+
 ## Yazma (yalnız admin)
 
 - `PATCH /countries/:code` ve `PATCH /countries/:code/cities/:slug`: çeviri alanları **dil başına birleştirilir** (gönderilmeyen alan ve dil
@@ -85,7 +116,8 @@ cd apps/web && npx tsx scripts/export-api-seed.ts --check  # diskteki tohum gün
 cd apps/web && npx tsx scripts/export-api-seed.test.ts     # sayılar, bütünlük, tr/en/es tutarlılığı
 ```
 
-- Sayılar: 5 kıta, 196 ülke (dünya + Svalbard), 45 seyahat ülkesi, 360 şehir, 358 rehber (Pyramiden ve Barentsburg'un rehberi yok).
+- Sayılar: 5 kıta, 196 ülke (dünya + Svalbard), 45 seyahat ülkesi, 360 şehir, 358 rehber (Pyramiden ve Barentsburg'un rehberi yok),
+  371 görsel atfı (299'u atıf gerektirir). Atıflar `seed/image-credits.json`: web verisi AYNEN (yazar, lisans, bağlantı; düzeltme/uydurma yok), yola göre sıralı.
 - Bir dil **yalnız o içerik o dilde tam çevrilmişse** yazılır (`complete_langs`); web'in çeviri katmanında olmayan hiçbir metin eklenmez.
 - **Kıta:** seyahat içeriği olan 45 ülkede kıta, web'in rehber bölgesidir (`content/regions.ts`); öteki 151 ülkede dünya verisinin kıtası
   (`data/countries.ts`). Fark yalnız Türkiye'de: iki kıtaya yayıldığı için dünya verisinde Asya, sitenin rehber dizininde Avrupa'dır; API web
@@ -100,7 +132,7 @@ cd apps/web && npx tsx scripts/export-api-seed.test.ts     # sayılar, bütünl�
   olduğundan SJ oyunlarda da çıkar; bayrağı Norveç'inkiyle (`NO`) aynı çizimdir, bu yüzden bayrak sorusunda ikisi aynı seçenekler arasındaysa
   belirsiz kalır (20.000 benzetilmiş bayrak oyununun 118'inde, yaklaşık %0,6, böyle bir tur çıktı). Çözüm oyun havuzunda (`games`) SJ'yi dışlamaktır; içerik modülü ve şema bunu
   ifade etmez.
-- `seedContent(db, { dir, force? })` (`content.seed.ts`): sırayla `continents → countries → country_travel → cities → city_guides`, tek işlemde,
+- `seedContent(db, { dir, force? })` (`content.seed.ts`): sırayla `continents → countries → country_travel → cities → city_guides → image_credits`, tek işlemde,
   toplu eklemeyle. Varsayılan **yalnız eksik satırları ekler** (`ON CONFLICT DO NOTHING`): yöneticinin sonradan yaptığı düzenlemeler yeniden
   açılışta ezilmez. `force: true` ya da `pnpm --filter api db:seed --force` mevcut satırları tohumdaki değerlere döndürür (upsert; şehir
   kimlikleri ve yöneticinin eklediği şehirler korunur). Klasör yoksa hata verilmeden atlanır ama `Seed` günlüğüne uyarı yazılır
@@ -118,4 +150,6 @@ cd apps/web && npx tsx scripts/export-api-seed.test.ts     # sayılar, bütünl�
 - `test/content-postgres.e2e-spec.ts`: yalnız gerçek PostgreSQL'de (`TEST_DATABASE_URL=postgres://postgres@127.0.0.1:5432/postgres`): şehir/ülke
   satırı kilitleri (eşzamanlı rehber yazımı, ikiz ad), yeniden adlandırma ile birlikte yazmalarda kilitlenme olmaması, SQL_ASCII uyarısı.
   PGlite tek bağlantı olduğundan bu yarışlar orada görünmez.
-- `test/content-real-seed.e2e-spec.ts`: gerçek tohum; yalnız sayılar, bütünlük ve veri ↔ DTO uyumu (varsayılan akışta çalışır; süre sınırı yok).
+- `test/content-real-seed.e2e-spec.ts`: gerçek tohum; sayılar, bütünlük, veri ↔ DTO uyumu ve her ülke/şehir ayrıntısının görsel atfı (varsayılan akışta çalışır; süre sınırı yok).
+- `test/content-image-credits.e2e-spec.ts` (fixture): atıf tohumu (idempotans, force, bozuk dosya, işlem bütünlüğü), ülke/şehir `imageCredits` kuralları
+  (sıra, tekilleştirme, CC0, harici görsel, yönetici görsel değişikliği), 0000 → 0001 migrasyon yükseltmesi. Blog kapağı: `test/blog-image-credits.e2e-spec.ts`.

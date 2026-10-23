@@ -30,6 +30,17 @@ export const SHARED_FLAG_DEPENDENCIES: ReadonlySet<string> = new Set(["SJ"]);
 /** Tur süresi (istemciye bildirilir) ve ağ payı: bu ikisinin toplamını aşan cevap zaman aşımıdır. */
 export const ROUND_TIME_LIMIT_MS = 20_000;
 export const NETWORK_GRACE_MS = 3_000;
+/**
+ * Geri bildirim payı: bir tur cevaplanınca sonraki turun sayacı cevap anından bu kadar SONRA başlar. İstemci doğru/yanlış
+ * gösterimini (çoktan seçmeli) ya da mesafe/puan ekranını (harita) bu sürede gösterir; sayaç ve hız bonusu bunu yemez.
+ * Yalnız sonraki turun başlangıcını öteler: oturum ömrü (`SESSION_TTL_MS`) ve `durationMs` (gerçek süre) değişmez. Pay
+ * içinde cevaplanan turun süresi negatif çıkar ve 0'a kıskaçlanır (tam hız bonusu). İlk tur oturum oluşunca başlar.
+ */
+export const FEEDBACK_GRACE_MS: Record<GameType, number> = {
+  "flag-quiz": 2_000,
+  "capital-quiz": 2_000,
+  "map-guess": 5_000,
+};
 /** Oturumun ömrü: başlangıç + 30 dk. */
 export const SESSION_TTL_MS = 30 * 60 * 1000;
 /** Terk edilmiş/süresi dolmuş oturum kayıtları bu süre sonra, o kullanıcının bir sonraki başlatmasında temizlenir. */

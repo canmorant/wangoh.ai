@@ -5,7 +5,7 @@ import { and, eq } from "drizzle-orm";
 import { Logger } from "@nestjs/common";
 import { afterAll, beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
 import { loadContentSeed, seedContent } from "../src/content/content.seed.js";
-import { cities, cityGuides, continents, countries, countryTravel } from "../src/db/schema/index.js";
+import { cities, cityGuides, continents, countries, countryTravel, imageCredits } from "../src/db/schema/index.js";
 import { runSeed } from "../src/db/seed/index.js";
 import { OperationalError } from "../src/common/startup-error.js";
 import { bearer, createAdmin, createTestApp, type TestApp, type TestSession } from "./helpers/index.js";
@@ -17,8 +17,11 @@ const counts = async (t: TestApp) => ({
   countryTravel: (await t.db.select().from(countryTravel)).length,
   cities: (await t.db.select().from(cities)).length,
   cityGuides: (await t.db.select().from(cityGuides)).length,
+  imageCredits: (await t.db.select().from(imageCredits)).length,
 });
-const FIXTURE_COUNTS = { continents: 3, countries: 6, countryTravel: 2, cities: 4, cityGuides: 2 };
+const FIXTURE_COUNTS = { continents: 3, countries: 6, countryTravel: 2, cities: 4, cityGuides: 2, imageCredits: 4 };
+/** Hiçbir satır eklenmedi. */
+const NOTHING = { continents: 0, countries: 0, countryTravel: 0, cities: 0, cityGuides: 0, imageCredits: 0 };
 
 describe("içerik tohumu (seedContent)", () => {
   let t: TestApp | undefined;
@@ -30,6 +33,7 @@ describe("içerik tohumu (seedContent)", () => {
   });
   // Her test içerik tablolarını boşaltarak başlar (yabancı anahtar sırasıyla).
   beforeEach(async () => {
+    await t!.db.delete(imageCredits);
     await t!.db.delete(cityGuides);
     await t!.db.delete(cities);
     await t!.db.delete(countryTravel);
@@ -60,7 +64,7 @@ describe("içerik tohumu (seedContent)", () => {
   it("idempotent: ikinci ve üçüncü çalıştırma hiçbir şey eklemez, çift kayıt oluşmaz, kimlikler değişmez", async () => {
     await loadFixtureSeed(app());
     const ids = (await app().db.select({ id: cities.id }).from(cities).orderBy(cities.slug)).map((r) => r.id);
-    expect(await loadFixtureSeed(app())).toEqual({ continents: 0, countries: 0, countryTravel: 0, cities: 0, cityGuides: 0 });
+    expect(await loadFixtureSeed(app())).toEqual(NOTHING);
     await seedContent(app().db, { dir: FIXTURE_SEED_DIR });
     expect(await counts(app())).toEqual(FIXTURE_COUNTS);
     expect((await app().db.select({ id: cities.id }).from(cities).orderBy(cities.slug)).map((r) => r.id)).toEqual(ids);
@@ -74,7 +78,7 @@ describe("içerik tohumu (seedContent)", () => {
     const added = await app().http.post("/v1/countries/FR/cities").set(auth).send({ slug: "eklenen", translations: { tr: { name: "Eklenen", description: "Yönetici ekledi." } } });
     expect(added.status).toBe(201);
 
-    expect(await loadFixtureSeed(app())).toEqual({ continents: 0, countries: 0, countryTravel: 0, cities: 0, cityGuides: 0 });
+    expect(await loadFixtureSeed(app())).toEqual(NOTHING);
     await runSeed(app().db, { dir: FIXTURE_SEED_DIR });
 
     const fr = (await app().http.get("/v1/countries/FR")).body;
@@ -87,7 +91,7 @@ describe("içerik tohumu (seedContent)", () => {
 
     // Tohumdaki bir şehir silinirse yeniden eklenir (silme kalıcı değildir; bkz. README); düzenlemeler yine korunur.
     await app().http.delete("/v1/countries/FR/cities/nice").set(auth).expect(204);
-    expect(await loadFixtureSeed(app())).toEqual({ continents: 0, countries: 0, countryTravel: 0, cities: 1, cityGuides: 0 });
+    expect(await loadFixtureSeed(app())).toEqual({ ...NOTHING, cities: 1 });
     expect((await app().http.get("/v1/countries/FR/cities/nice")).status).toBe(200);
     expect((await app().http.get("/v1/countries/FR")).body.name).toBe("Fransa (düzenlendi)");
   });
@@ -140,13 +144,13 @@ describe("içerik tohumu (seedContent)", () => {
     } finally {
       warn.mockRestore();
     }
-    expect(await counts(app())).toEqual({ continents: 0, countries: 0, countryTravel: 0, cities: 0, cityGuides: 0 });
+    expect(await counts(app())).toEqual(NOTHING);
 
     const partial = tempDir();
     writeFileSync(join(partial, "continents.json"), JSON.stringify([{ slug: "asia", position: 0, translations: { tr: { name: "Asya" } } }]));
-    expect(await loadContentSeed(app().db, { dir: partial })).toEqual({ continents: 1, countries: 0, countryTravel: 0, cities: 0, cityGuides: 0 });
+    expect(await loadContentSeed(app().db, { dir: partial })).toEqual({ ...NOTHING, continents: 1 });
     const empty = tempDir();
-    expect(await loadContentSeed(app().db, { dir: empty })).toEqual({ continents: 0, countries: 0, countryTravel: 0, cities: 0, cityGuides: 0 });
+    expect(await loadContentSeed(app().db, { dir: empty })).toEqual(NOTHING);
   });
 
   it("bozuk tohum dosyası Türkçe, dosya ve alan adıyla bildirilir; hiçbir şey yazılmaz", async () => {
@@ -177,7 +181,7 @@ describe("içerik tohumu (seedContent)", () => {
       JSON.stringify([{ code: "XX", iso3: "XXX", continentSlug: "atlantis", subregion: null, flag: null, latitude: null, longitude: null, landlocked: false, borders: [], aliases: [], capital: [], translations: { tr: { name: "X" } }, hasTravel: false }]),
     );
     await expect(loadContentSeed(app().db, { dir })).rejects.toThrow();
-    expect(await counts(app())).toEqual({ continents: 0, countries: 0, countryTravel: 0, cities: 0, cityGuides: 0 });
+    expect(await counts(app())).toEqual(NOTHING);
   });
 
   it("rehber dosyasındaki şehir cities.json'da yoksa bildirilir", async () => {

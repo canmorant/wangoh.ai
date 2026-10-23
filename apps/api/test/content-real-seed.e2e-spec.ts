@@ -1,3 +1,5 @@
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 import { plainToInstance } from "class-transformer";
 import { validate, type ValidationError } from "class-validator";
 import { sql } from "drizzle-orm";
@@ -9,7 +11,7 @@ import { CountryFieldsPatchDto, TravelFieldsPatchDto } from "../src/content/dto/
 import { GuideBodyInputDto } from "../src/content/dto/guide.dto.js";
 import { flattenValidationErrors } from "../src/common/validation.js";
 import { rowsOf } from "../src/db/client.js";
-import { cities, cityGuides, countries, countryTravel } from "../src/db/schema/index.js";
+import { cities, cityGuides, countries, countryTravel, imageCredits } from "../src/db/schema/index.js";
 import { SEED_DIR } from "../src/paths.js";
 import { bearer, createAdmin, createTestApp, type TestApp } from "./helpers/index.js";
 
@@ -31,10 +33,10 @@ describe("gerçek içerik tohumu", () => {
 
   it("tüm tohum PGlite'a yüklenir; sayılar sözleşmedeki gibi; ikinci çalıştırma hiçbir şey eklemez", async () => {
     const stats = await loadContentSeed(t.db, { dir: SEED_DIR });
-    expect(stats).toEqual({ continents: 5, countries: 196, countryTravel: 45, cities: 360, cityGuides: 358 });
+    expect(stats).toEqual({ continents: 5, countries: 196, countryTravel: 45, cities: 360, cityGuides: 358, imageCredits: 371 });
 
     const again = await loadContentSeed(t.db, { dir: SEED_DIR });
-    expect(again).toEqual({ continents: 0, countries: 0, countryTravel: 0, cities: 0, cityGuides: 0 });
+    expect(again).toEqual({ continents: 0, countries: 0, countryTravel: 0, cities: 0, cityGuides: 0, imageCredits: 0 });
   }, 180_000);
 
   it("bütünlük: slug = slugify(Türkçe ad), (ülke, slug) benzersiz, her şehir seyahat ülkesinde, completeLangs ↔ çeviri anahtarları", async () => {
@@ -186,6 +188,84 @@ describe("gerçek içerik tohumu", () => {
     expect(external.length).toBeGreaterThan(0);
     for (const row of external) expect((await get(`/v1/countries/${row.country_code}/cities/${row.slug}`)).body.imageUrl).toBe(row.image);
   });
+
+  it("görsel atıfları: 371 kayıt tohumdaki gibi; her ülke ve şehir ayrıntısı atfı web ImageCredits kuralıyla verir (tekilleştir, yalnız atıf gerektirenler)", async () => {
+    type SeedCredit = { image: string; author: string | null; licenseName: string | null; licenseUrl: string | null; sourceUrl: string; attributionRequired: boolean };
+    const read = <T,>(name: string): T => JSON.parse(readFileSync(join(SEED_DIR, name), "utf8")) as T;
+    const seedCredits = read<SeedCredit[]>("image-credits.json");
+    const seedCities = read<Array<{ countryCode: string; slug: string; position: number; image: string | null }>>("cities.json");
+    const seedTravel = read<Array<{ countryCode: string; image: string | null }>>("country-travel.json");
+    const byImage = new Map(seedCredits.map((c) => [c.image, c]));
+    expect(seedCredits).toHaveLength(371);
+    expect(seedCredits.filter((c) => c.attributionRequired)).toHaveLength(299);
+
+    // Veritabanındaki tablo tohumla aynı (alan alan).
+    const rows = await t.db.select().from(imageCredits);
+    expect(rows).toHaveLength(371);
+    const dbByImage = new Map(rows.map((r) => [r.image, r]));
+    for (const c of seedCredits) expect(dbByImage.get(c.image), c.image).toEqual(c);
+
+    // Web kuralı: yolları tekilleştir (ilk geçiş sırası), kaydı olan ve atıf gerektirenleri sırayla göster.
+    const og = (image: string) => `https://wangoh.com/og/${/^\/images\/(.+)\.avif$/.exec(image)![1]}.jpg`;
+    const expectedFor = (images: Array<string | null>) =>
+      [...new Set(images.filter((i): i is string => i !== null))].flatMap((image) => {
+        const c = byImage.get(image);
+        return c && c.attributionRequired ? [{ imageUrl: og(image), author: c.author, licenseName: c.licenseName, licenseUrl: c.licenseUrl, sourceUrl: c.sourceUrl }] : [];
+      });
+    const citiesOf = (code: string) => seedCities.filter((c) => c.countryCode === code).sort((a, b) => a.position - b.position || (a.slug < b.slug ? -1 : 1));
+
+    let countriesWithCredits = 0;
+    let citiesWithCredits = 0;
+    let citiesWithoutCredits = 0;
+    for (const { countryCode, image } of seedTravel) {
+      const country = await get(`/v1/countries/${countryCode}`);
+      expect(country.status, countryCode).toBe(200);
+      const expected = expectedFor([image, ...citiesOf(countryCode).map((c) => c.image)]);
+      expect(country.body.imageCredits, countryCode).toEqual(expected);
+      if (expected.length > 0) countriesWithCredits++;
+      // Atfın imageUrl'ı sayfadaki görsel adreslerinden biridir (eşleştirme anahtarı).
+      const shown = new Set([country.body.imageUrl, ...country.body.cities.map((c: { imageUrl: string | null }) => c.imageUrl)]);
+      for (const credit of country.body.imageCredits) expect(shown.has(credit.imageUrl), `${countryCode} ${credit.imageUrl}`).toBe(true);
+
+      for (const city of citiesOf(countryCode)) {
+        const res = await get(`/v1/countries/${countryCode}/cities/${city.slug}`);
+        expect(res.status, `${countryCode}/${city.slug}`).toBe(200);
+        const cityExpected = expectedFor([city.image]);
+        expect(res.body.imageCredits, `${countryCode}/${city.slug}`).toEqual(cityExpected);
+        if (cityExpected.length > 0) {
+          citiesWithCredits++;
+          expect(res.body.imageCredits[0].imageUrl).toBe(res.body.imageUrl);
+        } else citiesWithoutCredits++;
+      }
+    }
+    expect(countriesWithCredits).toBeGreaterThan(30);
+    expect(citiesWithCredits + citiesWithoutCredits).toBe(360);
+    expect(citiesWithCredits).toBeGreaterThan(250);
+
+    // Gerçek bir örnek: Zagreb (Wikimedia Commons, CC BY-SA 2.0), kaynak web verisiyle birebir.
+    const zagreb = (await get("/v1/countries/HR/cities/zagreb")).body;
+    expect(zagreb.imageCredits).toEqual([
+      {
+        imageUrl: "https://wangoh.com/og/zagreb-29255640143-297b40ff.jpg",
+        author: "Nick Savchenko from Kiev, Ukraine",
+        licenseName: "CC BY-SA 2.0",
+        licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0",
+        sourceUrl: "https://commons.wikimedia.org/wiki/File:Zagreb_(29255640143).jpg",
+      },
+    ]);
+    // Unsplash görselli Tokyo ve ülke sayfası (hepsi Unsplash): atıf gerekmez. Harici (https) görselli Jeju: kayıt yok.
+    expect((await get("/v1/countries/JP/cities/tokyo")).body.imageCredits).toEqual([]);
+    expect((await get("/v1/countries/JP")).body.imageCredits).toEqual([]);
+    const jeju = (await get("/v1/countries/KR/cities/jeju-adasi")).body;
+    expect(jeju.imageUrl).toMatch(/^https:\/\/(?!wangoh\.com)/);
+    expect(jeju.imageCredits).toEqual([]);
+    // Seyahat içeriği olmayan ülke ve liste uçları.
+    const [plain] = (await get("/v1/countries?hasTravel=false&pageSize=1")).body.items as Array<{ code: string }>;
+    const plainDetail = (await get(`/v1/countries/${plain!.code}`)).body;
+    expect(plainDetail).toMatchObject({ hasTravel: false, imageUrl: null, cities: [] });
+    expect(plainDetail.imageCredits).toEqual([]);
+    expect(JSON.stringify((await get("/v1/countries?pageSize=100")).body)).not.toContain("imageCredits");
+  }, 120_000);
 
   it("yönetici gerçek bir rehberi kendi çıktısıyla geri yazabilir (yanıt alanları yazma şemasından geçer)", async () => {
     const admin = await createAdmin(t);

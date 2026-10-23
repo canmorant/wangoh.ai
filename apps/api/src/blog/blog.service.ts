@@ -6,6 +6,7 @@ import { containsIlike } from "../common/like.js";
 import { LANGS } from "../common/lang.js";
 import { type Page, pageWindow, toPage } from "../common/pagination.js";
 import { DATABASE, type Database } from "../db/client.js";
+import { ImageCreditsService } from "../content/image-credits.service.js";
 import { blogPosts, countries, users } from "../db/schema/index.js";
 import type { Translations } from "../db/schema/types.js";
 import { assertValidBlocks } from "./blog-blocks.js";
@@ -65,7 +66,10 @@ function resolveVisibility(requested: BlogVisibility | undefined, user: AuthUser
 
 @Injectable()
 export class BlogService {
-  constructor(@Inject(DATABASE) private readonly db: Database) {}
+  constructor(
+    @Inject(DATABASE) private readonly db: Database,
+    private readonly credits: ImageCreditsService,
+  ) {}
 
   // --- herkese açık okuma -----------------------------------------------
 
@@ -125,7 +129,7 @@ export class BlogService {
     const row = await this.findOne(this.db, eq(blogPosts.slug, slug));
     // Taslak ile hiç olmayan yazı aynı yanıtı verir: yetkisiz çağıran bir taslağın varlığını öğrenemez.
     if (!row || (visibility !== "all" && row.status !== visibility)) throw postNotFound();
-    return toDetailDto(row, query.lang);
+    return toDetailDto(row, query.lang, await this.credits.forCoverUrl(row.coverImage));
   }
 
   // --- yönetici ---------------------------------------------------------
@@ -163,7 +167,7 @@ export class BlogService {
       if (isUniqueViolation(err)) throw slugTaken();
       throw err;
     }
-    return toDetailDto(created, "tr");
+    return toDetailDto(created, "tr", await this.credits.forCoverUrl(created.coverImage));
   }
 
   async update(id: string, dto: UpdateBlogPostDto): Promise<BlogPostDto> {
@@ -218,7 +222,7 @@ export class BlogService {
       if (isUniqueViolation(err)) throw slugTaken();
       throw err;
     }
-    return toDetailDto(updated, "tr");
+    return toDetailDto(updated, "tr", await this.credits.forCoverUrl(updated.coverImage));
   }
 
   async remove(id: string): Promise<void> {

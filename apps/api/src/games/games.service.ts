@@ -12,6 +12,7 @@ import type { AnswerResponseDto, FinishResponseDto, GameRoundDto, GameSessionDto
 import type { SubmitAnswerDto } from "./dto/game-requests.dto.js";
 import { type GameStrategy, streakBefore, strategyFor } from "./game-engine.js";
 import {
+  FEEDBACK_GRACE_MS,
   MAX_SESSION_SCORE,
   MAX_STALE_SESSIONS_PER_USER,
   NETWORK_GRACE_MS,
@@ -39,6 +40,21 @@ type ScoreRow = typeof scores.$inferSelect;
 
 /** `rounds` sütunu sunucu sırrıdır; yalnız bu servis ve `GameStrategy` görünümleri okur. */
 const roundsOf = (row: SessionRow): StoredRound[] => row.rounds as StoredRound[];
+
+/**
+ * Oyunun gerçek (duvar saati) süresi: oturum başından son cevaba kadar, geri bildirim payı dahil. Tur sürelerinin (`elapsedMs`,
+ * paydan sonra ölçülür ve 0'a kıskaçlanır) toplamı DEĞİLDİR: pay içinde cevaplanan turlar toplamı küçültürdü, `durationMs`
+ * ise hile incelemesinde (`maxDurationMs`) insanın ulaşamayacağı hızı yakalamak için gerçek süreyi taşımalı.
+ */
+function wallClockMs(row: SessionRow, rounds: readonly StoredRound[]): number {
+  const start = row.startedAt.getTime();
+  let last = start;
+  for (const r of rounds) {
+    const answeredAt = r.result ? Date.parse(r.result.answeredAt) : Number.NaN;
+    if (Number.isFinite(answeredAt) && answeredAt > last) last = answeredAt;
+  }
+  return Math.min(2_147_483_647, last - start);
+}
 
 /** Bir istekteki hata, işlem sonrasına bırakılacaksa (durum yazılıp ONDAN SONRA fırlatılacaksa) bu işaret döner. */
 interface Expired {
@@ -174,6 +190,8 @@ export class GamesService {
       // Biçim hatası turu tüketmez (400); doğru cevabı ele vermez.
       const answer = strategy.parseAnswer(dto.answer, round);
 
+      // Tur sayacı: ilk tur oturum oluşunca, sonrakiler önceki cevap + geri bildirim payında başlar (`roundStartedAt`).
+      // Pay içinde cevap gelirse fark negatiftir ve 0'a kıskaçlanır (tam hız bonusu); zaman aşımı da aynı başlangıçtan ölçülür.
       const startedAt = row.roundStartedAt ?? row.startedAt;
       const elapsedMs = Math.max(0, now.getTime() - startedAt.getTime());
       // Cevap yoksa (`null`) süre, bildirilen tur süresine (20 sn) göre; cevap varsa ağ payı (3 sn) dahil.
@@ -186,6 +204,7 @@ export class GamesService {
       const updatedRounds = rounds.map((r, i) => (i === index ? { ...r, result } : r));
       const nextIndex = index + 1;
       const hasNext = nextIndex < rounds.length;
+      const nextStartedAt = new Date(now.getTime() + FEEDBACK_GRACE_MS[row.gameType]);
       const score = Math.min(MAX_SESSION_SCORE[row.gameType], row.score + graded.points);
 
       await tx
@@ -193,18 +212,18 @@ export class GamesService {
         .set({
           rounds: updatedRounds,
           currentRound: nextIndex,
-          roundStartedAt: hasNext ? now : null,
+          roundStartedAt: hasNext ? nextStartedAt : null,
           score,
           correctCount: row.correctCount + (graded.correct ? 1 : 0),
         })
         .where(eq(gameSessions.id, id));
 
-      return { kind: "ok" as const, strategy, round, result, rounds: updatedRounds, nextIndex, hasNext, score, now };
+      return { kind: "ok" as const, strategy, round, result, rounds: updatedRounds, nextIndex, hasNext, score, nextStartedAt };
     });
 
     if (outcome.kind === "expired") throw sessionExpired();
 
-    const { strategy, round, result, rounds, nextIndex, hasNext, score, now } = outcome;
+    const { strategy, round, result, rounds, nextIndex, hasNext, score, nextStartedAt } = outcome;
     return {
       correct: result.correct,
       correctAnswer: strategy.correctAnswer(round, lang),
@@ -215,7 +234,7 @@ export class GamesService {
       streakBonus: result.streakBonus,
       streak: result.streak,
       distanceKm: result.distanceKm,
-      nextRound: hasNext ? this.roundView(strategy, rounds[nextIndex]!, nextIndex, now, lang) : null,
+      nextRound: hasNext ? this.roundView(strategy, rounds[nextIndex]!, nextIndex, nextStartedAt, lang) : null,
     };
   }
 
@@ -241,10 +260,7 @@ export class GamesService {
       const rounds = roundsOf(row);
       if (row.currentRound < rounds.length) throw notFinished();
 
-      const durationMs = Math.min(
-        2_147_483_647,
-        rounds.reduce((sum, r) => sum + (r.result?.elapsedMs ?? 0), 0),
-      );
+      const durationMs = wallClockMs(row, rounds);
       await tx.update(gameSessions).set({ status: "finished", finishedAt: now }).where(eq(gameSessions.id, id));
       const [inserted] = await tx
         .insert(scores)
@@ -328,6 +344,8 @@ export class GamesService {
       timeLimitMs: ROUND_TIME_LIMIT_MS,
       startedAt: startedAt.toISOString(),
       deadlineAt: new Date(startedAt.getTime() + ROUND_TIME_LIMIT_MS).toISOString(),
+      // Yanıtın üretildiği an: istemci geri sayımı `deadlineAt - serverNow` ile kendi saatinden bağımsız kurar.
+      serverNow: this.clock.now().toISOString(),
     };
   }
 

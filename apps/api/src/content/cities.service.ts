@@ -25,6 +25,7 @@ import { jsonAt, localizedObject } from "./content.sql.js";
 import type { CityRow, CityTexts, CountryTexts, GuideBody, GuideRow } from "./content.types.js";
 import type { CityCountryDto, CityDetailDto, CityGuidePatchDto, CitySummaryDto, CreateCityDto, UpdateCityDto } from "./dto/city.dto.js";
 import type { ListCitiesQueryDto } from "./dto/queries.dto.js";
+import { ImageCreditsService } from "./image-credits.service.js";
 import { foldContains } from "./search.js";
 import { MAX_SLUG_LENGTH, SLUG_PATTERN, slugify } from "./slug.js";
 import { pickTranslation } from "./translations.js";
@@ -40,6 +41,7 @@ export class CitiesService {
   constructor(
     @Inject(DATABASE) private readonly db: Database,
     @Inject(APP_CONFIG) private readonly config: AppConfig,
+    private readonly credits: ImageCreditsService,
   ) {}
 
   /* ------------------------------- okuma ------------------------------- */
@@ -97,6 +99,8 @@ export class CitiesService {
       ...mapCitySummary(city, lang, this.config.assetsBaseUrl),
       country,
       guide: guide ? mapGuide(guide as GuideRow, lang, links) : null,
+      // Web şehir sayfası yalnız şehrin kendi görselinin atfını gösterir.
+      imageCredits: await this.credits.forImages([city.image]),
     };
   }
 

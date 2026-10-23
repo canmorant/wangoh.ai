@@ -16,7 +16,7 @@
             "type": "string"
           },
           "durationMs": {
-            "description": "Sunucunun ölçtüğü toplam oyun süresi (ms).",
+            "description": "Oyunun gerçek süresi (ms): oturum başından son cevaba, geri bildirim payı dahil.",
             "type": "integer"
           },
           "gameType": {
@@ -140,7 +140,7 @@
                 "$ref": "#/components/schemas/GameRoundDto"
               }
             ],
-            "description": "Sonraki tur; son turdan sonra null (oyunu `finish` ile bitirin).",
+            "description": "Sonraki tur; son turdan sonra null (oyunu `finish` ile bitirin). Sayacı `startedAt`'ta (cevap anı + geri bildirim payı) başlar.",
             "nullable": true,
             "type": "object"
           },
@@ -308,6 +308,13 @@
             "format": "uuid",
             "type": "string"
           },
+          "imageCredits": {
+            "description": "Kapak görselinin (`coverImage`) zorunlu görsel atfı. Kapak, sitenin kendi görsellerinden biriyse (`<site>/og/<ad>.jpg`) ve görsel atıf gerektiriyorsa (CC BY / CC BY-SA...) tek öğe; aksi halde (harici kapak, CC0, kamu malı, kapak yok) boş dizi. Yalnız ayrıntıda gelir. Lisans gereği ekranda gösterilmelidir.",
+            "items": {
+              "$ref": "#/components/schemas/ImageCreditDto"
+            },
+            "type": "array"
+          },
           "lang": {
             "description": "Gerçekte sunulan dil.",
             "enum": [
@@ -366,7 +373,8 @@
           "publishedAt",
           "createdAt",
           "updatedAt",
-          "body"
+          "body",
+          "imageCredits"
         ],
         "type": "object"
       },
@@ -646,6 +654,13 @@
             "description": "Şehir rehberi (`GET .../cities/:slug` içinde `guide`) var mı?",
             "type": "boolean"
           },
+          "imageCredits": {
+            "description": "Bu şehir sayfasında gösterilen görselin (`imageUrl`) zorunlu görsel atfı. Web'deki \"Görsel atıfları\" bloğuyla aynı kuraldır: görsel atıf gerektirmiyorsa (CC0, kamu malı) ya da atıf kaydı yoksa (harici görsel) boş dizi. Yalnız ayrıntıda gelir. Lisans gereği ekranda gösterilmelidir.",
+            "items": {
+              "$ref": "#/components/schemas/ImageCreditDto"
+            },
+            "type": "array"
+          },
           "imageUrl": {
             "description": "Mutlak görsel adresi (JPEG).",
             "example": "https://wangoh.com/og/photo-1540959733332-eab4deabeeaf-a87af73a.jpg",
@@ -686,7 +701,8 @@
           "lang",
           "complete",
           "country",
-          "guide"
+          "guide",
+          "imageCredits"
         ],
         "type": "object"
       },
@@ -1132,6 +1148,13 @@
             "description": "Seyahat içeriği (öne çıkan ülke) var mı?",
             "type": "boolean"
           },
+          "imageCredits": {
+            "description": "Bu ülke sayfasında gösterilen görsellerin (ülke görseli ve şehir kartı görselleri; yinelenenler tek kez, bu sırayla) zorunlu görsel atıfları. Web'deki \"Görsel atıfları\" bloğuyla aynı kuraldır: yalnız atıf gerektiren (CC BY / CC BY-SA...) görseller gelir; atfı olmayanlar ve harici görseller listede yer almaz. Yalnız ayrıntıda gelir. Lisans gereği ekranda gösterilmelidir.",
+            "items": {
+              "$ref": "#/components/schemas/ImageCreditDto"
+            },
+            "type": "array"
+          },
           "imageUrl": {
             "description": "Öne çıkan ülkelerin mutlak görsel adresi (JPEG); diğerlerinde `null`.",
             "nullable": true,
@@ -1207,7 +1230,8 @@
           "complete",
           "borders",
           "travel",
-          "cities"
+          "cities",
+          "imageCredits"
         ],
         "type": "object"
       },
@@ -2012,7 +2036,7 @@
             "type": "integer"
           },
           "durationMs": {
-            "description": "Sunucunun ölçtüğü toplam oyun süresi (ms).",
+            "description": "Oyunun gerçek süresi (ms): oturum başından son cevaba, geri bildirim payı dahil (tur sürelerinin toplamı değil).",
             "type": "integer"
           },
           "gameType": {
@@ -2135,13 +2159,18 @@
           "question": {
             "$ref": "#/components/schemas/GameQuestionDto"
           },
+          "serverNow": {
+            "description": "Sunucu saati: bu yanıtın üretildiği an (ISO 8601). İstemci geri sayımı kendi saatine bakmadan kurar: tur bitimine kalan süre = `deadlineAt - serverNow`, turun başlamasına kalan süre = `max(0, startedAt - serverNow)`. `startedAt` geri bildirim payı yüzünden gelecekte olabilir (cevap yanıtındaki `nextRound`te `startedAt - serverNow` ≈ pay: çoktan seçmeli 2 sn, harita 5 sn); ilk turda ve payı geçmiş bir tur için `startedAt - serverNow ≤ 0`. Aygıt saati yerine bu farkı yerel bir monotonik zamanlayıcıya uygulayın.",
+            "format": "date-time",
+            "type": "string"
+          },
           "startedAt": {
-            "description": "Turun başladığı an (sunucu saati).",
+            "description": "Turun sayacının başladığı an (sunucu saati). İlk tur: oturum oluşunca. Sonraki turlar: önceki cevap anı + geri bildirim payı (çoktan seçmeli 2 sn, harita 5 sn), yani cevap yanıtı döndüğünde GELECEKTE olabilir; pay içinde cevap süresi 0 ms sayılır (tam hız bonusu).",
             "format": "date-time",
             "type": "string"
           },
           "timeLimitMs": {
-            "description": "Tur süresi (ms). Sunucu süreyi kendi ölçer; bu süre ve 3 sn ağ payı aşılırsa cevap 0 puan sayılır.",
+            "description": "Tur süresi (ms). Sunucu süreyi kendi ölçer; bu süre ve 3 sn ağ payı aşılırsa cevap 0 puan sayılır. Süre `startedAt`'tan ölçülür.",
             "example": 20000,
             "type": "integer"
           }
@@ -2152,7 +2181,8 @@
           "options",
           "timeLimitMs",
           "startedAt",
-          "deadlineAt"
+          "deadlineAt",
+          "serverNow"
         ],
         "type": "object"
       },
@@ -2866,6 +2896,46 @@
         ],
         "type": "object"
       },
+      "ImageCreditDto": {
+        "properties": {
+          "author": {
+            "description": "Yazar / telif sahibi, kaynaktaki haliyle. Bazı kayıtlarda uzun ya da satır sonu içerebilir.",
+            "example": "Nick Savchenko from Kiev, Ukraine",
+            "nullable": true,
+            "type": "string"
+          },
+          "imageUrl": {
+            "description": "Atfın ait olduğu görselin mutlak adresi; aynı yanıttaki `imageUrl` alanlarından biriyle (blogda `coverImage`) birebir aynıdır (eşleştirme anahtarı).",
+            "example": "https://wangoh.com/og/zagreb-29255640143-297b40ff.jpg",
+            "type": "string"
+          },
+          "licenseName": {
+            "description": "Lisansın görünen adı.",
+            "example": "CC BY-SA 2.0",
+            "nullable": true,
+            "type": "string"
+          },
+          "licenseUrl": {
+            "description": "Lisans metninin adresi.",
+            "example": "https://creativecommons.org/licenses/by-sa/2.0",
+            "nullable": true,
+            "type": "string"
+          },
+          "sourceUrl": {
+            "description": "Kaynak sayfa (Wikimedia Commons dosya sayfası).",
+            "example": "https://commons.wikimedia.org/wiki/File:Zagreb_(29255640143).jpg",
+            "type": "string"
+          }
+        },
+        "required": [
+          "imageUrl",
+          "author",
+          "licenseName",
+          "licenseUrl",
+          "sourceUrl"
+        ],
+        "type": "object"
+      },
       "LeaderboardDto": {
         "properties": {
           "entries": {
@@ -3182,7 +3252,7 @@
             "type": "string"
           },
           "durationMs": {
-            "description": "Sunucunun ölçtüğü toplam oyun süresi (ms).",
+            "description": "Oyunun gerçek süresi (ms): oturum başından son cevaba, geri bildirim payı dahil.",
             "type": "integer"
           },
           "gameType": {
@@ -5611,7 +5681,7 @@
     },
     "/v1/games/sessions/{id}/answers": {
       "post": {
-        "description": "Turlar sırayla cevaplanır: `roundIndex` bekleyen turla aynı olmalı (yinelenen ya da erken cevap 409 `GAME_ROUND_ALREADY_ANSWERED` / `GAME_ROUND_OUT_OF_ORDER`). Süreyi sunucu ölçer; tur süresi (20 sn) ve 3 sn ağ payı aşılırsa cevap 0 puan, `correct: false`, `timedOut: true` sayılır ve oyun sonraki tura geçer. Süresi dolan ya da pas geçilen tur için `answer: null` gönderilir (0 puan, seri sıfırlanır). Çoktan seçmeli: `100 + hız bonusu (≤ 50) + seri bonusu (≤ 50)`; `map-guess`: haversine uzaklığına göre en çok 1000. Süresi dolmuş oturum 410 `GAME_SESSION_EXPIRED`; bitmiş/terk edilmiş oturum 409 `GAME_SESSION_NOT_ACTIVE`; seçenek dışı cevap ya da geçersiz koordinat 400.",
+        "description": "Turlar sırayla cevaplanır: `roundIndex` bekleyen turla aynı olmalı (yinelenen ya da erken cevap 409 `GAME_ROUND_ALREADY_ANSWERED` / `GAME_ROUND_OUT_OF_ORDER`). Süreyi sunucu ölçer; tur süresi (20 sn) ve 3 sn ağ payı aşılırsa cevap 0 puan, `correct: false`, `timedOut: true` sayılır ve oyun sonraki tura geçer. Sonraki turun sayacı cevap anından bir geri bildirim payı sonra başlar (çoktan seçmeli 2 sn, harita 5 sn; `nextRound.startedAt`): pay içinde gelen cevap 0 ms sayılır (tam hız bonusu), süre ve zaman aşımı payın bitiminden ölçülür. Süresi dolan ya da pas geçilen tur için `answer: null` gönderilir (0 puan, seri sıfırlanır). Çoktan seçmeli: `100 + hız bonusu (≤ 50) + seri bonusu (≤ 50)`; `map-guess`: haversine uzaklığına göre en çok 1000. Süresi dolmuş oturum 410 `GAME_SESSION_EXPIRED`; bitmiş/terk edilmiş oturum 409 `GAME_SESSION_NOT_ACTIVE`; seçenek dışı cevap ya da geçersiz koordinat 400.",
         "operationId": "gamesSubmitAnswer",
         "parameters": [
           {

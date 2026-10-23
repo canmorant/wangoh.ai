@@ -9,7 +9,7 @@ import type { GameType } from './gameType';
 
 export interface FinishResponseDto {
   correctCount: number;
-  /** Sunucunun ölçtüğü toplam oyun süresi (ms). */
+  /** Oyunun gerçek süresi (ms): oturum başından son cevaba, geri bildirim payı dahil (tur sürelerinin toplamı değil). */
   durationMs: number;
   gameType: GameType;
   /** Bu oyun, öncekilerin hepsinden yüksek mi (ilk oyun da true). */

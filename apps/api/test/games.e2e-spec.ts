@@ -3,7 +3,7 @@ import { and, eq } from "drizzle-orm";
 import { afterAll, afterEach, beforeAll, describe, expect, it, vi } from "vitest";
 import { GAME_TYPES, type GameType } from "../src/db/schema/enums.js";
 import { gameSessions, scores, users } from "../src/db/schema/index.js";
-import { MAX_STALE_SESSIONS_PER_USER } from "../src/games/games.constants.js";
+import { FEEDBACK_GRACE_MS, MAX_STALE_SESSIONS_PER_USER } from "../src/games/games.constants.js";
 import { seededRng } from "../src/games/rng.js";
 import { bearer, createAdmin, createTestApp, registerUser, type TestApp, type TestSession } from "./helpers/index.js";
 import {
@@ -204,27 +204,28 @@ describe("oyunlar: oturum akışı", () => {
   });
 
   describe("puanlama (sunucu saatiyle)", () => {
-    it("çoktan seçmeli: hız bonusu 0 ms'de 50, 15000 ms'de 0, ötesinde 0; seri bonusu bu turu sayar", async () => {
+    it("çoktan seçmeli: hız bonusu 0 ms'de 50, 15000 ms'de 0, ötesinde 0; seri bonusu bu turu sayar (ilk tur oturumdan, sonrakiler geri bildirim payından sonra ölçülür)", async () => {
       const u = await newUser();
       const clock = fakeClock(t);
+      const G = FEEDBACK_GRACE_MS["flag-quiz"];
       const start = await startGame(t, u.accessToken, "flag-quiz");
       const rounds = await secretRounds(t, start.sessionId);
       const right = (i: number) => correctAnswerOf(rounds[i]!, "flag-quiz");
 
       const r0 = await submit(t, u.accessToken, start.sessionId, 0, right(0)); // 0 ms
       expect(r0.body).toMatchObject({ points: 150, speedBonus: 50, streakBonus: 0, streak: 1 });
-      clock.advance(15_000);
-      const r1 = await submit(t, u.accessToken, start.sessionId, 1, right(1)); // tam 15000 ms
+      clock.advance(G + 15_000);
+      const r1 = await submit(t, u.accessToken, start.sessionId, 1, right(1)); // tur başlangıcından tam 15000 ms
       expect(r1.body).toMatchObject({ points: 110, speedBonus: 0, streakBonus: 10, streak: 2 });
-      clock.advance(15_001);
+      clock.advance(G + 15_001);
       const r2 = await submit(t, u.accessToken, start.sessionId, 2, right(2));
       expect(r2.body).toMatchObject({ points: 120, speedBonus: 0, streakBonus: 20, streak: 3 });
-      clock.advance(7_500);
+      clock.advance(G + 7_500);
       const r3 = await submit(t, u.accessToken, start.sessionId, 3, wrongAnswerOf(rounds[3]!, "flag-quiz"));
       expect(r3.body).toMatchObject({ correct: false, points: 0, streak: 0, speedBonus: 0, streakBonus: 0 });
-      const r4 = await submit(t, u.accessToken, start.sessionId, 4, right(4)); // 0 ms, seri sıfırdan
+      const r4 = await submit(t, u.accessToken, start.sessionId, 4, right(4)); // pay içinde (0 ms), seri sıfırdan
       expect(r4.body).toMatchObject({ points: 150, streak: 1 });
-      clock.advance(7_500);
+      clock.advance(G + 7_500);
       const r5 = await submit(t, u.accessToken, start.sessionId, 5, right(5));
       expect(r5.body).toMatchObject({ speedBonus: 25, streakBonus: 10, points: 135, streak: 2 });
       expect(r5.body.score).toBe(150 + 110 + 120 + 0 + 150 + 135);
@@ -259,19 +260,21 @@ describe("oyunlar: oturum akışı", () => {
       expect(res.body.streakBonus).toBe(0);
     });
 
-    it("durationMs tur sürelerinin toplamıdır (sunucu ölçümü): zaman aşımı ve pas dahil; finish, geçmiş ve yönetici listesinde aynı", async () => {
+    it("durationMs gerçek duvar saati toplamıdır (oturum başından son cevaba; geri bildirim payı dahil): zaman aşımı ve pas dahil; finish, geçmiş ve yönetici listesinde aynı", async () => {
       const u = await newUser();
       const admin2 = await createAdmin(t);
       const clock = fakeClock(t);
+      const G = FEEDBACK_GRACE_MS["flag-quiz"];
       const start = await startGame(t, u.accessToken, "flag-quiz");
       const rounds = await secretRounds(t, start.sessionId);
-      const elapsed = [0, 1_000, 2_500, 250, 20_000, 22_999, 23_001, 7, 14_999, 1];
+      // Her cevaptan önce geçen gerçek süre (ilk tur için oturumdan, sonrakiler için önceki cevaptan); bazıları pay içinde.
+      const advances = [0, 400, 1_000, G + 2_500, 250, G + 20_000, G + 22_999, G + 23_001, 7, G + 14_999];
       for (let i = 0; i < 10; i++) {
-        clock.advance(elapsed[i]!);
+        clock.advance(advances[i]!);
         const res = await submit(t, u.accessToken, start.sessionId, i, i % 2 === 0 ? correctAnswerOf(rounds[i]!, "flag-quiz") : null);
         expect(res.status).toBe(200);
       }
-      const total = elapsed.reduce((a, b) => a + b, 0);
+      const total = advances.reduce((a, b) => a + b, 0);
       const done = await finish(t, u.accessToken, start.sessionId);
       expect(done.body.durationMs).toBe(total);
       expect((await t.http.get("/v1/users/me/scores").set(bearer(u.accessToken))).body.items[0].durationMs).toBe(total);
@@ -279,6 +282,24 @@ describe("oyunlar: oturum akışı", () => {
       expect(adminView.body.items[0].durationMs).toBe(total);
       expect((await t.http.get(`/v1/scores?sessionId=${start.sessionId}&maxDurationMs=${total}`).set(bearer(admin2.accessToken))).body.total).toBe(1);
       expect((await t.http.get(`/v1/scores?sessionId=${start.sessionId}&maxDurationMs=${total - 1}`).set(bearer(admin2.accessToken))).body.total).toBe(0);
+      // Tur başına ölçülen süre pay düşülmüş ve 0'a kıskaçlıdır; durationMs bunların toplamı DEĞİL.
+      const stored = (await secretRounds(t, start.sessionId)).map((r) => r.result!.elapsedMs);
+      expect(stored).toEqual(advances.map((a, i) => (i === 0 ? a : Math.max(0, a - G))));
+      expect(stored.reduce((a, b) => a + b, 0)).toBeLessThan(total);
+    });
+
+    it("tüm turlar geri bildirim payı içinde cevaplansa da durationMs gerçek süreyi taşır (hile için süre alt sınırı bozulmaz)", async () => {
+      const u = await newUser();
+      const clock = fakeClock(t);
+      const start = await startGame(t, u.accessToken, "flag-quiz");
+      const rounds = await secretRounds(t, start.sessionId);
+      for (let i = 0; i < 10; i++) {
+        clock.advance(i === 0 ? 0 : 100); // ilk tur anında, sonrakiler 100 ms: payın (2 sn) çok içinde
+        expect((await submit(t, u.accessToken, start.sessionId, i, correctAnswerOf(rounds[i]!, "flag-quiz"))).body.speedBonus).toBe(50);
+      }
+      expect((await secretRounds(t, start.sessionId)).every((r) => r.result!.elapsedMs === 0)).toBe(true); // tur sürelerinin toplamı 0
+      expect((await finish(t, u.accessToken, start.sessionId)).body.durationMs).toBe(900); // gerçek süre: 9 × 100 ms'
+
     });
 
     it("harita: 'doğru' sayısı tur puanı ≥ 500 ile sayılır; 1-499 puan alan yakın ama uzak tahmin puan getirir, doğru sayılmaz", async () => {
@@ -299,9 +320,10 @@ describe("oyunlar: oturum akışı", () => {
       expect((await sessionRow(start.sessionId)).score).toBe(res.body.points);
     });
 
-    it("zaman aşımı: 20 sn + 3 sn ağ payı (dahil) kabul, ötesi 0 puan ve doğru cevap bile sayılmaz", async () => {
+    it("zaman aşımı: 20 sn + 3 sn ağ payı (dahil) kabul, ötesi 0 puan ve doğru cevap bile sayılmaz; ilk tur oturumdan, sonrakiler geri bildirim payından sonra ölçülür", async () => {
       const u = await newUser();
       const clock = fakeClock(t);
+      const G = FEEDBACK_GRACE_MS["capital-quiz"];
       const start = await startGame(t, u.accessToken, "capital-quiz");
       const rounds = await secretRounds(t, start.sessionId);
       const right = (i: number) => correctAnswerOf(rounds[i]!, "capital-quiz");
@@ -310,14 +332,14 @@ describe("oyunlar: oturum akışı", () => {
       const onTime = await submit(t, u.accessToken, start.sessionId, 0, right(0));
       expect(onTime.body).toMatchObject({ correct: true, timedOut: false, points: 100, speedBonus: 0 });
 
-      clock.advance(23_001); // 1 ms geç
+      clock.advance(G + 23_001); // tur başlangıcından 1 ms geç
       const late = await submit(t, u.accessToken, start.sessionId, 1, right(1));
       expect(late.status).toBe(200);
       expect(late.body).toMatchObject({ correct: false, timedOut: true, points: 0, streak: 0, score: 100 });
       expect(late.body.correctAnswer.code).toBe(rounds[1]!.code); // doğru cevap açıklanır, puan yok
       expect(late.body.nextRound.index).toBe(2);
 
-      const next = await submit(t, u.accessToken, start.sessionId, 2, right(2)); // 0 ms, seri yeniden başlar
+      const next = await submit(t, u.accessToken, start.sessionId, 2, right(2)); // pay içinde: 0 ms, seri yeniden başlar
       expect(next.body).toMatchObject({ correct: true, points: 150, streak: 1 });
       const session = await getSession(u.accessToken, start.sessionId);
       expect(session.body.results).toEqual([
@@ -349,6 +371,197 @@ describe("oyunlar: oturum akışı", () => {
         .send({ roundIndex: 0, answer: rounds[0]!.code, elapsedMs: 1 });
       expect(res.status).toBe(400);
       expect(res.body.details[0]).toMatchObject({ field: "elapsedMs", code: "whitelistValidation" });
+    });
+  });
+
+  describe("geri bildirim payı: sonraki turun sayacı cevap anı + pay'da başlar", () => {
+    it("pay sabitleri: çoktan seçmeli 2 sn, harita 5 sn", () => {
+      expect(FEEDBACK_GRACE_MS).toEqual({ "flag-quiz": 2_000, "capital-quiz": 2_000, "map-guess": 5_000 });
+    });
+
+    it.each(GAME_TYPES)("%s: nextRound.startedAt = cevap anı + pay, deadlineAt = +20 sn; geri yükleme aynı turu verir; oturum süresi uzamaz", async (type) => {
+      const u = await newUser();
+      const clock = fakeClock(t);
+      const G = FEEDBACK_GRACE_MS[type];
+      const start = await startGame(t, u.accessToken, type);
+      const rounds = await secretRounds(t, start.sessionId);
+      const t0 = clock.now;
+      expect(Date.parse(start.round.startedAt)).toBe(t0); // ilk tur: oturum oluşunca
+      expect(Date.parse(start.round.deadlineAt)).toBe(t0 + 20_000);
+
+      clock.advance(300);
+      const a0 = await submit(t, u.accessToken, start.sessionId, 0, correctAnswerOf(rounds[0]!, type));
+      expect(Date.parse(a0.body.nextRound.startedAt)).toBe(t0 + 300 + G);
+      expect(Date.parse(a0.body.nextRound.deadlineAt)).toBe(t0 + 300 + G + 20_000);
+      const row = await sessionRow(start.sessionId);
+      expect(row.roundStartedAt!.getTime()).toBe(t0 + 300 + G);
+      expect(row.expiresAt.getTime() - row.startedAt.getTime()).toBe(30 * 60 * 1000); // pay oturum ömrünü bozmaz
+      const restored = await getSession(u.accessToken, start.sessionId);
+      expect(restored.body.round).toEqual(a0.body.nextRound);
+
+      // Son tur: sonraki tur yok, saat temizlenir.
+      for (let i = 1; i < rounds.length; i++) await submit(t, u.accessToken, start.sessionId, i, correctAnswerOf(rounds[i]!, type));
+      expect((await sessionRow(start.sessionId)).roundStartedAt).toBeNull();
+    });
+
+    it("pay içinde cevaplanan tur tam hız bonusu alır; negatif süre 0'a kıskaçlanır; paydan sonra bonus normal azalır", async () => {
+      const u = await newUser();
+      const clock = fakeClock(t);
+      const G = FEEDBACK_GRACE_MS["flag-quiz"];
+      const start = await startGame(t, u.accessToken, "flag-quiz");
+      const rounds = await secretRounds(t, start.sessionId);
+      const right = (i: number) => correctAnswerOf(rounds[i]!, "flag-quiz");
+      const bonus = async (i: number, wait: number) => {
+        clock.advance(wait);
+        const res = await submit(t, u.accessToken, start.sessionId, i, right(i));
+        expect(res.status).toBe(200);
+        return res.body.speedBonus as number;
+      };
+
+      expect(await bonus(0, 0)).toBe(50);
+      expect(await bonus(1, 1)).toBe(50); // payın hemen başında: süre negatif, 0 sayılır
+      expect(await bonus(2, G - 1)).toBe(50); // payın bitmesine 1 ms kala
+      expect(await bonus(3, G)).toBe(50); // pay biter bitmez: 0 ms
+      expect(await bonus(4, G + 1)).toBe(50); // 1 ms
+      expect(await bonus(5, G + 7_500)).toBe(25);
+      expect(await bonus(6, G + 14_999)).toBe(0); // 14999 ms: round(0,003) = 0
+      expect(await bonus(7, G + 15_000)).toBe(0);
+      expect(await bonus(8, G + 3_000)).toBe(40);
+      // Saklanan süre pay düşülmüş ve hiçbir zaman negatif değildir.
+      const stored = (await secretRounds(t, start.sessionId)).slice(0, 9).map((r) => r.result!.elapsedMs);
+      expect(stored).toEqual([0, 0, 0, 0, 1, 7_500, 14_999, 15_000, 3_000]);
+      expect(stored.every((ms) => ms >= 0)).toBe(true);
+    });
+
+    it("pay yokmuş gibi hesaplanan süre artık bonusu yemez: pay süresi kadar bekleyen kullanıcı, beklemeyenle aynı bonusu alır", async () => {
+      const u = await newUser();
+      const clock = fakeClock(t);
+      const G = FEEDBACK_GRACE_MS["flag-quiz"];
+      const start = await startGame(t, u.accessToken, "flag-quiz");
+      const rounds = await secretRounds(t, start.sessionId);
+      await submit(t, u.accessToken, start.sessionId, 0, correctAnswerOf(rounds[0]!, "flag-quiz"));
+      clock.advance(G); // geri bildirim süresi kadar bekledi (eskiden bu 2000 ms = bonus 43 olurdu)
+      const res = await submit(t, u.accessToken, start.sessionId, 1, correctAnswerOf(rounds[1]!, "flag-quiz"));
+      expect(res.body.speedBonus).toBe(50);
+    });
+
+    it("zaman aşımı sınırı aynı başlangıçtan ölçülür: cevap 23 sn + pay'a, cevapsız tur 20 sn + pay'a kadar kabul", async () => {
+      const u = await newUser();
+      const clock = fakeClock(t);
+      const G = FEEDBACK_GRACE_MS["flag-quiz"];
+      const start = await startGame(t, u.accessToken, "flag-quiz");
+      const rounds = await secretRounds(t, start.sessionId);
+      const right = (i: number) => correctAnswerOf(rounds[i]!, "flag-quiz");
+      await submit(t, u.accessToken, start.sessionId, 0, right(0));
+
+      clock.advance(23_001); // eskiden zaman aşımıydı (cevap anından 23001 ms); şimdi turun 21001. ms'si
+      expect((await submit(t, u.accessToken, start.sessionId, 1, right(1))).body).toMatchObject({ timedOut: false, correct: true, speedBonus: 0 });
+      clock.advance(G + 23_000);
+      expect((await submit(t, u.accessToken, start.sessionId, 2, right(2))).body).toMatchObject({ timedOut: false, correct: true });
+      clock.advance(G + 23_001);
+      expect((await submit(t, u.accessToken, start.sessionId, 3, right(3))).body).toMatchObject({ timedOut: true, correct: false, points: 0 });
+      clock.advance(G + 20_000);
+      expect((await submit(t, u.accessToken, start.sessionId, 4, null)).body.timedOut).toBe(false);
+      clock.advance(G + 20_001);
+      expect((await submit(t, u.accessToken, start.sessionId, 5, null)).body.timedOut).toBe(true);
+    });
+
+    it("harita: sonucu 20 sn'den uzun inceleyen kullanıcı sonraki turu kaybetmez (pay 5 sn); ötesinde zaman aşımı", async () => {
+      const u = await newUser();
+      const clock = fakeClock(t);
+      const G = FEEDBACK_GRACE_MS["map-guess"];
+      const start = await startGame(t, u.accessToken, "map-guess");
+      const rounds = await secretRounds(t, start.sessionId);
+      const right = (i: number) => correctAnswerOf(rounds[i]!, "map-guess");
+      const first = await submit(t, u.accessToken, start.sessionId, 0, right(0));
+      expect(first.body.points).toBe(1000);
+
+      clock.advance(24_000); // mesafe/puan ekranında 24 sn; eskiden sonraki tur 23 sn sınırını aşıp 0 puan olurdu
+      const reviewed = await submit(t, u.accessToken, start.sessionId, 1, right(1));
+      expect(reviewed.body).toMatchObject({ timedOut: false, correct: true, points: 1000 });
+
+      clock.advance(G + 23_000);
+      expect((await submit(t, u.accessToken, start.sessionId, 2, right(2))).body).toMatchObject({ timedOut: false, points: 1000 });
+      clock.advance(G + 23_001);
+      expect((await submit(t, u.accessToken, start.sessionId, 3, right(3))).body).toMatchObject({ timedOut: true, points: 0 });
+    });
+
+    it("oturum süresi (30 dk) paydan etkilenmez: son kullanma anı sabit, ondan sonra cevap 410", async () => {
+      const u = await newUser();
+      const clock = fakeClock(t);
+      const start = await startGame(t, u.accessToken, "map-guess");
+      const rounds = await secretRounds(t, start.sessionId);
+      await submit(t, u.accessToken, start.sessionId, 0, correctAnswerOf(rounds[0]!, "map-guess"));
+      expect((await sessionRow(start.sessionId)).expiresAt.toISOString()).toBe(start.expiresAt);
+      clock.set(Date.parse(start.expiresAt));
+      expect((await submit(t, u.accessToken, start.sessionId, 1, correctAnswerOf(rounds[1]!, "map-guess"))).status).toBe(410);
+    });
+  });
+
+  describe("serverNow: istemci geri sayımı aygıt saatinden bağımsız kurar", () => {
+    const remaining = (round: { deadlineAt: string; serverNow: string }) => Date.parse(round.deadlineAt) - Date.parse(round.serverNow);
+    const untilStart = (round: { startedAt: string; serverNow: string }) => Math.max(0, Date.parse(round.startedAt) - Date.parse(round.serverNow));
+
+    it.each(GAME_TYPES)("%s: start, cevap (nextRound) ve GET geri yükleme turlarında serverNow var; belirleyici saatte değerler tam", async (type) => {
+      const u = await newUser();
+      const clock = fakeClock(t);
+      const G = FEEDBACK_GRACE_MS[type];
+      const t0 = clock.now;
+      const start = await startGame(t, u.accessToken, type);
+      const rounds = await secretRounds(t, start.sessionId);
+
+      // İlk tur: sayaç oturumla başladı; startedAt - serverNow <= 0, kalan süre tur süresi.
+      expect(start.round.serverNow).toBe(new Date(t0).toISOString());
+      expect(Date.parse(start.round.startedAt) - Date.parse(start.round.serverNow)).toBe(0);
+      expect(untilStart(start.round)).toBe(0);
+      expect(remaining(start.round)).toBe(20_000);
+
+      // Cevap sonrası nextRound: startedAt - serverNow = tam pay.
+      clock.advance(300);
+      const a0 = await submit(t, u.accessToken, start.sessionId, 0, correctAnswerOf(rounds[0]!, type));
+      const next = a0.body.nextRound;
+      expect(next.serverNow).toBe(new Date(t0 + 300).toISOString());
+      expect(Date.parse(next.startedAt) - Date.parse(next.serverNow)).toBe(G);
+      expect(untilStart(next)).toBe(G);
+      expect(remaining(next)).toBe(G + 20_000);
+
+      // GET geri yükleme: serverNow o anki saat; pay içinde kalan başlama süresi azalır, pay bitince 0, kalan süre tur süresi kadar sınırlı.
+      clock.advance(700);
+      const mid = (await getSession(u.accessToken, start.sessionId)).body.round;
+      expect(mid.serverNow).toBe(new Date(t0 + 1_000).toISOString());
+      expect(untilStart(mid)).toBe(G - 700);
+      expect(remaining(mid)).toBe(G - 700 + 20_000);
+      clock.advance(G); // payın bitiminden 700 ms sonrası
+      const after = (await getSession(u.accessToken, start.sessionId)).body.round;
+      expect(Date.parse(after.startedAt) - Date.parse(after.serverNow)).toBe(-700);
+      expect(untilStart(after)).toBe(0);
+      expect(remaining(after)).toBe(20_000 - 700);
+      // Sabit alanlar serverNow'dan bağımsız aynı tur.
+      expect({ ...after, serverNow: null }).toEqual({ ...next, serverNow: null });
+    });
+
+    it("gerçek saatte: ilk turda startedAt - serverNow <= 0 ve serverNow geçerli ISO; nextRound'da pay'a yakın (ve pay'dan büyük değil)", async () => {
+      const u = await newUser();
+      const start = await startGame(t, u.accessToken, "flag-quiz");
+      const rounds = await secretRounds(t, start.sessionId);
+      expect(start.round.serverNow).toMatch(/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/);
+      expect(Date.parse(start.round.startedAt) - Date.parse(start.round.serverNow)).toBeLessThanOrEqual(0);
+      expect(Math.abs(Date.parse(start.round.serverNow) - Date.now())).toBeLessThan(5_000);
+
+      const a0 = await submit(t, u.accessToken, start.sessionId, 0, correctAnswerOf(rounds[0]!, "flag-quiz"));
+      const wait = Date.parse(a0.body.nextRound.startedAt) - Date.parse(a0.body.nextRound.serverNow);
+      expect(wait).toBeLessThanOrEqual(FEEDBACK_GRACE_MS["flag-quiz"]); // serverNow cevap anından sonra üretilir
+      expect(wait).toBeGreaterThan(FEEDBACK_GRACE_MS["flag-quiz"] - 2_000);
+      const got = (await getSession(u.accessToken, start.sessionId)).body.round;
+      expect(Date.parse(got.serverNow)).toBeGreaterThanOrEqual(Date.parse(a0.body.nextRound.serverNow));
+    });
+
+    it("tur yoksa (tüm turlar cevaplandı, bitmiş ya da süresi dolmuş) round null: serverNow yok", async () => {
+      const u = await newUser();
+      const played = await playThrough(t, u.accessToken, "map-guess");
+      const body = (await getSession(u.accessToken, played.sessionId)).body;
+      expect(body.round).toBeNull();
+      expect(played.answers.at(-1)!.nextRound).toBeNull();
     });
   });
 
@@ -668,7 +881,8 @@ describe("oyunlar: oturum akışı", () => {
       const restored = await getSession(u.accessToken, start.sessionId);
       expect(restored.status).toBe(200);
       expect(restored.body).toMatchObject({ sessionId: start.sessionId, gameType: "flag-quiz", status: "active", roundsTotal: 10, currentRound: 2, score: a1.body.points, correctCount: 1, finishedAt: null });
-      expect(restored.body.round).toEqual(a1.body.nextRound);
+      // Aynı tur; yalnız yanıtın üretildiği an (`serverNow`) farklı olabilir.
+      expect({ ...restored.body.round, serverNow: null }).toEqual({ ...a1.body.nextRound, serverNow: null });
       expect(restored.body.results).toEqual([
         { index: 0, correct: false, points: 0, timedOut: false },
         { index: 1, correct: true, points: a1.body.points, timedOut: false },
@@ -715,9 +929,10 @@ describe("oyunlar: oturum akışı", () => {
       expect(skip.body.nextRound.index).toBe(3);
       expect((await submit(t, u.accessToken, start.sessionId, 3, right(3))).body).toMatchObject({ streak: 1, streakBonus: 0 }); // seri baştan
 
-      clock.advance(20_000); // tam 20 sn: henüz süre aşımı değil
+      const G = FEEDBACK_GRACE_MS["flag-quiz"];
+      clock.advance(G + 20_000); // tur başlangıcından tam 20 sn: henüz süre aşımı değil
       expect((await submit(t, u.accessToken, start.sessionId, 4, null)).body).toMatchObject({ timedOut: false, points: 0 });
-      clock.advance(20_001); // 1 ms geç: süre doldu, null bile olsa timedOut
+      clock.advance(G + 20_001); // 1 ms geç: süre doldu, null bile olsa timedOut
       expect((await submit(t, u.accessToken, start.sessionId, 5, null)).body).toMatchObject({ timedOut: true, points: 0 });
       const session = await getSession(u.accessToken, start.sessionId);
       expect(session.body.results.map((r: { correct: boolean }) => r.correct)).toEqual([true, true, false, true, false, false]);

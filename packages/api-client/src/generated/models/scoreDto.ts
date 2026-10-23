@@ -10,7 +10,7 @@ import type { GameType } from './gameType';
 export interface ScoreDto {
   correctCount: number;
   createdAt: string;
-  /** Sunucunun ölçtüğü toplam oyun süresi (ms). */
+  /** Oyunun gerçek süresi (ms): oturum başından son cevaba, geri bildirim payı dahil. */
   durationMs: number;
   gameType: GameType;
   id: string;

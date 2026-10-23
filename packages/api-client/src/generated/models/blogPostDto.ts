@@ -11,6 +11,7 @@ import type { BlogPostDtoLang } from './blogPostDtoLang';
 import type { BlogPostDtoStatus } from './blogPostDtoStatus';
 import type { HeadingBlockDto } from './headingBlockDto';
 import type { ImageBlockDto } from './imageBlockDto';
+import type { ImageCreditDto } from './imageCreditDto';
 import type { ListBlockDto } from './listBlockDto';
 import type { ParagraphBlockDto } from './paragraphBlockDto';
 import type { QuoteBlockDto } from './quoteBlockDto';
@@ -44,6 +45,8 @@ export interface BlogPostDto {
   /** Kısa özet (kart metni). */
   excerpt: string;
   id: string;
+  /** Kapak görselinin (`coverImage`) zorunlu görsel atfı. Kapak, sitenin kendi görsellerinden biriyse (`<site>/og/<ad>.jpg`) ve görsel atıf gerektiriyorsa (CC BY / CC BY-SA...) tek öğe; aksi halde (harici kapak, CC0, kamu malı, kapak yok) boş dizi. Yalnız ayrıntıda gelir. Lisans gereği ekranda gösterilmelidir. */
+  imageCredits: ImageCreditDto[];
   /** Gerçekte sunulan dil. */
   lang: BlogPostDtoLang;
   /**

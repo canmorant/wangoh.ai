@@ -9,6 +9,7 @@ import type { CitySummaryDto } from './citySummaryDto';
 import type { CountryDetailDtoContinent } from './countryDetailDtoContinent';
 import type { CountryDetailDtoLang } from './countryDetailDtoLang';
 import type { CountryTravelDto } from './countryTravelDto';
+import type { ImageCreditDto } from './imageCreditDto';
 
 export interface CountryDetailDto {
   /** Kara sınırı olan komşuların ISO3 kodları. */
@@ -30,6 +31,8 @@ export interface CountryDetailDto {
   flagUrl: string;
   /** Seyahat içeriği (öne çıkan ülke) var mı? */
   hasTravel: boolean;
+  /** Bu ülke sayfasında gösterilen görsellerin (ülke görseli ve şehir kartı görselleri; yinelenenler tek kez, bu sırayla) zorunlu görsel atıfları. Web'deki "Görsel atıfları" bloğuyla aynı kuraldır: yalnız atıf gerektiren (CC BY / CC BY-SA...) görseller gelir; atfı olmayanlar ve harici görseller listede yer almaz. Yalnız ayrıntıda gelir. Lisans gereği ekranda gösterilmelidir. */
+  imageCredits: ImageCreditDto[];
   /**
      * Öne çıkan ülkelerin mutlak görsel adresi (JPEG); diğerlerinde `null`.
      * @nullable

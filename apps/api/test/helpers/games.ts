@@ -54,6 +54,8 @@ export interface RoundBody {
   timeLimitMs: number;
   startedAt: string;
   deadlineAt: string;
+  /** Yanıtın üretildiği sunucu saati: istemci geri sayımını kendi saatine bakmadan kurar. */
+  serverNow: string;
 }
 
 export interface StartBody {

@@ -19,7 +19,7 @@ export interface AnswerResponseDto {
      */
   distanceKm: number | null;
   /**
-     * Sonraki tur; son turdan sonra null (oyunu `finish` ile bitirin).
+     * Sonraki tur; son turdan sonra null (oyunu `finish` ile bitirin). Sayacı `startedAt`'ta (cevap anı + geri bildirim payı) başlar.
      * @nullable
      */
   nextRound: GameRoundDto | null;

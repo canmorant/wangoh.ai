@@ -1,0 +1,34 @@
+[
+ {
+  "attributionRequired": true,
+  "author": "Test Photographer One",
+  "image": "/images/fixture-france-1a2b3c4d.avif",
+  "licenseName": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fixture_France.jpg"
+ },
+ {
+  "attributionRequired": true,
+  "author": "Test Photographer Two\nsecond line",
+  "image": "/images/fixture-paris-11223344.avif",
+  "licenseName": "CC BY-SA 3.0",
+  "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fixture_Paris.jpg"
+ },
+ {
+  "attributionRequired": false,
+  "author": "Test Photographer Three",
+  "image": "/images/fixture-istanbul-55667788.avif",
+  "licenseName": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fixture_Istanbul.jpg"
+ },
+ {
+  "attributionRequired": true,
+  "author": null,
+  "image": "/images/fixture-orphan-99aabbcc.avif",
+  "licenseName": null,
+  "licenseUrl": null,
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fixture_Orphan.jpg"
+ }
+]

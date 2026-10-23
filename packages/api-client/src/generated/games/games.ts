@@ -192,7 +192,7 @@ export const getGamesSubmitAnswerUrl = (id: string,
 }
 
 /**
- * Turlar sırayla cevaplanır: `roundIndex` bekleyen turla aynı olmalı (yinelenen ya da erken cevap 409 `GAME_ROUND_ALREADY_ANSWERED` / `GAME_ROUND_OUT_OF_ORDER`). Süreyi sunucu ölçer; tur süresi (20 sn) ve 3 sn ağ payı aşılırsa cevap 0 puan, `correct: false`, `timedOut: true` sayılır ve oyun sonraki tura geçer. Süresi dolan ya da pas geçilen tur için `answer: null` gönderilir (0 puan, seri sıfırlanır). Çoktan seçmeli: `100 + hız bonusu (≤ 50) + seri bonusu (≤ 50)`; `map-guess`: haversine uzaklığına göre en çok 1000. Süresi dolmuş oturum 410 `GAME_SESSION_EXPIRED`; bitmiş/terk edilmiş oturum 409 `GAME_SESSION_NOT_ACTIVE`; seçenek dışı cevap ya da geçersiz koordinat 400.
+ * Turlar sırayla cevaplanır: `roundIndex` bekleyen turla aynı olmalı (yinelenen ya da erken cevap 409 `GAME_ROUND_ALREADY_ANSWERED` / `GAME_ROUND_OUT_OF_ORDER`). Süreyi sunucu ölçer; tur süresi (20 sn) ve 3 sn ağ payı aşılırsa cevap 0 puan, `correct: false`, `timedOut: true` sayılır ve oyun sonraki tura geçer. Sonraki turun sayacı cevap anından bir geri bildirim payı sonra başlar (çoktan seçmeli 2 sn, harita 5 sn; `nextRound.startedAt`): pay içinde gelen cevap 0 ms sayılır (tam hız bonusu), süre ve zaman aşımı payın bitiminden ölçülür. Süresi dolan ya da pas geçilen tur için `answer: null` gönderilir (0 puan, seri sıfırlanır). Çoktan seçmeli: `100 + hız bonusu (≤ 50) + seri bonusu (≤ 50)`; `map-guess`: haversine uzaklığına göre en çok 1000. Süresi dolmuş oturum 410 `GAME_SESSION_EXPIRED`; bitmiş/terk edilmiş oturum 409 `GAME_SESSION_NOT_ACTIVE`; seçenek dışı cevap ya da geçersiz koordinat 400.
  * @summary Turu cevaplar
  */
 export const gamesSubmitAnswer = async (id: string,

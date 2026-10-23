@@ -131,7 +131,7 @@ export class ScoreDto {
   @ApiProperty({ type: "integer" })
   roundsTotal!: number;
 
-  @ApiProperty({ type: "integer", description: "Sunucunun ölçtüğü toplam oyun süresi (ms)." })
+  @ApiProperty({ type: "integer", description: "Oyunun gerçek süresi (ms): oturum başından son cevaba, geri bildirim payı dahil." })
   durationMs!: number;
 
   @ApiProperty({ type: String, format: "date-time" })

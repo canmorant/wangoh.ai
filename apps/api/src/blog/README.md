@@ -28,6 +28,10 @@ Sözleşme: [`docs/backend-mobil-mimarisi.md`](../../../../docs/backend-mobil-mi
   `lang` sunulan dili, `complete` istenen dilin tam sunulup sunulmadığını, `availableLangs` kullanılabilir çevirisi olan dilleri
   söyler. Böylece yönetici önce başlık/özeti çevirip gövdeyi sonra yazarsa yayındaki yazıda boş makale görünmez; gövde dolunca çeviri
   açılır. Boş gövde yalnız Türkçede (taslak) serbesttir ve olduğu gibi sunulur.
+- `imageCredits` (YALNIZ ayrıntı ve yazma yanıtları; kartta yok): kapağın (`coverImage`) zorunlu görsel atfı `[{ imageUrl, author, licenseName, licenseUrl, sourceUrl }]`.
+  Kapak sitenin kendi görseliyse (`<kaynak>/og/<ad>.jpg`, kaynak `ASSETS_BASE_URL` ya da `https://wangoh.com`) ve görsel atıf gerektiriyorsa (CC BY / CC BY-SA...) tek öğe;
+  CC0/kamu malı, atıf kaydı olmayan görsel, başka sitenin görseli ve kapaksız yazı için boş dizi. `imageUrl` = `coverImage`. Veri `image_credits` tablosundadır
+  (içerik modülü, `ImageCreditsService`; ayrıntı için `src/content/README.md` "Görsel atıfları").
 - `author`: `{ displayName } | null`. Yazar silinirse yazı kalır, `author` null olur. E-posta/kimlik hiçbir yanıtta yoktur.
 - Sıralama: `coalesce(publishedAt, createdAt)` yeniden eskiye, eşitlikte `slug` artan (tohum yazıları aynı tarihi paylaşır).
 - Filtreler: `tag` (tam eşleşme, küçük harf), `country` (ISO2, büyük/küçük harf fark etmez), `q` (slug, Türkçe ve istenen dildeki

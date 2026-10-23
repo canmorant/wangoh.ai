@@ -14,6 +14,7 @@ import { jsonAt, localizedObject } from "./content.sql.js";
 import type { CountryRow, CountryTexts, TravelRow, TravelTexts } from "./content.types.js";
 import type { CountryDetailDto, CountrySummaryDto, UpdateCountryDto } from "./dto/country.dto.js";
 import type { ListCountriesQueryDto } from "./dto/queries.dto.js";
+import { ImageCreditsService } from "./image-credits.service.js";
 import { foldContains, foldSql } from "./search.js";
 
 const countryNotFound = (): AppException => AppException.notFound("Ülke bulunamadı.");
@@ -24,6 +25,7 @@ export class CountriesService {
     @Inject(DATABASE) private readonly db: Database,
     @Inject(APP_CONFIG) private readonly config: AppConfig,
     private readonly cities: CitiesService,
+    private readonly credits: ImageCreditsService,
   ) {}
 
   /**
@@ -87,6 +89,8 @@ export class CountriesService {
       borders: borders?.borders ?? [],
       travel: travel ? mapTravel(travel as TravelRow, lang, this.config.assetsBaseUrl, buildCityLinks(cityRows, lang)) : null,
       cities: items,
+      // Web ülke sayfasıyla aynı görsel kümesi: ülke görseli, ardından şehir kartı görselleri (sıra: şehir sırası).
+      imageCredits: await this.credits.forImages([country.image, ...cityRows.map((row) => row.image)]),
     };
   }
 

@@ -22,8 +22,10 @@ export interface GameRoundDto {
      */
   options: GameOptionDto[] | null;
   question: GameQuestionDto;
-  /** Turun başladığı an (sunucu saati). */
+  /** Sunucu saati: bu yanıtın üretildiği an (ISO 8601). İstemci geri sayımı kendi saatine bakmadan kurar: tur bitimine kalan süre = `deadlineAt - serverNow`, turun başlamasına kalan süre = `max(0, startedAt - serverNow)`. `startedAt` geri bildirim payı yüzünden gelecekte olabilir (cevap yanıtındaki `nextRound`te `startedAt - serverNow` ≈ pay: çoktan seçmeli 2 sn, harita 5 sn); ilk turda ve payı geçmiş bir tur için `startedAt - serverNow ≤ 0`. Aygıt saati yerine bu farkı yerel bir monotonik zamanlayıcıya uygulayın. */
+  serverNow: string;
+  /** Turun sayacının başladığı an (sunucu saati). İlk tur: oturum oluşunca. Sonraki turlar: önceki cevap anı + geri bildirim payı (çoktan seçmeli 2 sn, harita 5 sn), yani cevap yanıtı döndüğünde GELECEKTE olabilir; pay içinde cevap süresi 0 ms sayılır (tam hız bonusu). */
   startedAt: string;
-  /** Tur süresi (ms). Sunucu süreyi kendi ölçer; bu süre ve 3 sn ağ payı aşılırsa cevap 0 puan sayılır. */
+  /** Tur süresi (ms). Sunucu süreyi kendi ölçer; bu süre ve 3 sn ağ payı aşılırsa cevap 0 puan sayılır. Süre `startedAt`'tan ölçülür. */
   timeLimitMs: number;
 }

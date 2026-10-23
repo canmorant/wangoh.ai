@@ -62,7 +62,8 @@ açılışta çöker.
 ## Veritabanı
 
 - Şema: `src/db/schema/*.ts` (users, refresh_tokens, continents, countries, country_travel, cities, city_guides,
-  blog_posts, game_sessions, scores). **Tek migrasyon** `drizzle/0000_init.sql`. Alan görevleri şemayı değiştirmez.
+  image_credits, blog_posts, game_sessions, scores). Migrasyonlar `drizzle/` altında sırayla (`0000_init`,
+  `0001_image_credits`); şema değişince `pnpm --filter api db:generate` yeni bir migrasyon üretir, eskilere dokunulmaz.
 - `src/db/client.ts`: `createDatabase()` node-postgres ya da PGlite döner; ikisi de aynı Drizzle arayüzünü
   (`Database` tipi) sunar. Nest'te `@Inject(DATABASE) db: Database`. Ham SQL sonucu için `rowsOf()`.
   **PGlite tek bağlantıdır:** `db.transaction(async (tx) => ...)` içinde dış `db` yerine hep `tx` kullanın.

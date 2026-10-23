@@ -2,6 +2,7 @@ import { ApiProperty } from "@nestjs/swagger";
 import { PaginatedDto } from "../../common/pagination.js";
 import { type Lang, LANGS } from "../../db/schema/types.js";
 import { BLOG_STATUSES, type BlogStatus } from "../../db/schema/enums.js";
+import { ImageCreditDto } from "../../content/dto/image-credit.dto.js";
 import type { BlogBlock } from "../blog-blocks.js";
 import { BLOG_BODY_PROPERTY } from "./blog-block.dto.js";
 
@@ -63,6 +64,13 @@ export class BlogPostSummaryDto {
 export class BlogPostDto extends BlogPostSummaryDto {
   @ApiProperty(BLOG_BODY_PROPERTY)
   body!: BlogBlock[];
+
+  @ApiProperty({
+    type: [ImageCreditDto],
+    description:
+      "Kapak görselinin (`coverImage`) zorunlu görsel atfı. Kapak, sitenin kendi görsellerinden biriyse (`<site>/og/<ad>.jpg`) ve görsel atıf gerektiriyorsa (CC BY / CC BY-SA...) tek öğe; aksi halde (harici kapak, CC0, kamu malı, kapak yok) boş dizi. Yalnız ayrıntıda gelir. Lisans gereği ekranda gösterilmelidir.",
+  })
+  imageCredits!: ImageCreditDto[];
 }
 
 export class BlogPostPageDto extends PaginatedDto(BlogPostSummaryDto) {}

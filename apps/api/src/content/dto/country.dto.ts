@@ -4,6 +4,7 @@ import { PaginatedDto } from "../../common/pagination.js";
 import { BUDGETS, type Budget, CONTINENT_SLUGS, type ContinentSlug, type ForeignLang } from "../content.constants.js";
 import { CitySummaryDto } from "./city.dto.js";
 import { Choice, CompleteLangsField, ContentImage, Nested, Text, TextList } from "./decorators.js";
+import { ImageCreditDto } from "./image-credit.dto.js";
 import { TranslationsPatchDto } from "./translations-patch.js";
 
 /* ------------------------------ ülke hub'ı ------------------------------ */
@@ -186,6 +187,14 @@ export class CountryDetailDto extends CountrySummaryDto {
 
   @ApiProperty({ type: [CitySummaryDto], description: "Ülkenin şehirleri (sıralı)." })
   cities!: CitySummaryDto[];
+
+  @ApiProperty({
+    type: [ImageCreditDto],
+    description:
+      "Bu ülke sayfasında gösterilen görsellerin (ülke görseli ve şehir kartı görselleri; yinelenenler tek kez, bu sırayla) zorunlu görsel atıfları. " +
+      "Web'deki \"Görsel atıfları\" bloğuyla aynı kuraldır: yalnız atıf gerektiren (CC BY / CC BY-SA...) görseller gelir; atfı olmayanlar ve harici görseller listede yer almaz. Yalnız ayrıntıda gelir. Lisans gereği ekranda gösterilmelidir.",
+  })
+  imageCredits!: ImageCreditDto[];
 }
 
 /* ---------------------------- ülke: yazma (yönetici) ---------------------------- */

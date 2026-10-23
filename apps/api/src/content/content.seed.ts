@@ -5,7 +5,8 @@ import { inArray, sql } from "drizzle-orm";
 import type { PgColumn } from "drizzle-orm/pg-core";
 import { OperationalError } from "../common/startup-error.js";
 import type { Database } from "../db/client.js";
-import { cities, cityGuides, continents, countries, countryTravel } from "../db/schema/index.js";
+import { cities, cityGuides, continents, countries, countryTravel, imageCredits } from "../db/schema/index.js";
+import { isWebImagePath } from "./assets.js";
 import { FOREIGN_LANGS } from "./content.constants.js";
 
 export interface ContentSeedOptions {
@@ -26,6 +27,7 @@ export interface ContentSeedStats {
   countryTravel: number;
   cities: number;
   cityGuides: number;
+  imageCredits: number;
 }
 
 type Row<T extends { $inferInsert: unknown }> = T["$inferInsert"];
@@ -35,16 +37,19 @@ const CHUNK_SMALL = 100;
 const CHUNK_GUIDES = 20;
 
 /**
- * Kıtalar, ülkeler, seyahat bilgileri, şehirler ve rehberler için tohum yükleyici. Sıra: continents → countries →
- * country_travel → cities → city_guides (yabancı anahtar sırası). Hepsi tek işlemde (hata olursa yarım tohum kalmaz).
- * Dosyalar `apps/web/scripts/export-api-seed.ts` ile üretilir. İmza sabittir; `force` isteğe bağlı eklentidir.
+ * Kıtalar, ülkeler, seyahat bilgileri, şehirler, rehberler ve görsel atıfları için tohum yükleyici. Sıra: continents →
+ * countries → country_travel → cities → city_guides → image_credits (yabancı anahtar sırası; atıfların yabancı anahtarı yok).
+ * Hepsi tek işlemde (hata olursa yarım tohum kalmaz). Dosyalar `apps/web/scripts/export-api-seed.ts` ile üretilir.
+ * İmza sabittir; `force` isteğe bağlı eklentidir.
  */
 export async function seedContent(db: Database, opts: ContentSeedOptions): Promise<void> {
   const logger = new Logger("Seed");
   const stats = await loadContentSeed(db, opts);
   if (stats) {
     const verb = opts.force ? "yüklendi/güncellendi" : "eklendi";
-    logger.log(`İçerik tohumu ${verb}: kıta ${stats.continents}, ülke ${stats.countries}, seyahat ${stats.countryTravel}, şehir ${stats.cities}, rehber ${stats.cityGuides}.`);
+    logger.log(
+      `İçerik tohumu ${verb}: kıta ${stats.continents}, ülke ${stats.countries}, seyahat ${stats.countryTravel}, şehir ${stats.cities}, rehber ${stats.cityGuides}, görsel atfı ${stats.imageCredits}.`,
+    );
   } else {
     // Sözleşme: klasör yoksa hata verilmez (yalnız `dist/` kopyalanan imajda sunucu yine açılır) ama sessiz de kalınmaz;
     // aksi halde `db:seed` "başarılı" görünür, API 0 ülke/0 şehirle ayağa kalkar.
@@ -62,9 +67,10 @@ export async function loadContentSeed(db: Database, opts: ContentSeedOptions): P
   const travelRows = readSeed(opts.dir, "country-travel.json", parseTravel);
   const cityRows = readSeed(opts.dir, "cities.json", parseCities);
   const guideFiles = readGuideFiles(opts.dir);
+  const creditRows = readSeed(opts.dir, "image-credits.json", parseImageCredits);
 
   return db.transaction(async (tx) => {
-    const stats: ContentSeedStats = { continents: 0, countries: 0, countryTravel: 0, cities: 0, cityGuides: 0 };
+    const stats: ContentSeedStats = { continents: 0, countries: 0, countryTravel: 0, cities: 0, cityGuides: 0, imageCredits: 0 };
 
     for (const chunk of chunks(continentRows, CHUNK_SMALL)) {
       const q = tx.insert(continents).values(chunk);
@@ -171,6 +177,25 @@ export async function loadContentSeed(db: Database, opts: ContentSeedOptions): P
           ).returning({ key: cityGuides.cityId })
         ).length;
       }
+    }
+
+    for (const chunk of chunks(creditRows, CHUNK_SMALL)) {
+      const q = tx.insert(imageCredits).values(chunk);
+      stats.imageCredits += (
+        await (force
+          ? q.onConflictDoUpdate({
+              target: imageCredits.image,
+              set: {
+                author: excluded(imageCredits.author),
+                licenseName: excluded(imageCredits.licenseName),
+                licenseUrl: excluded(imageCredits.licenseUrl),
+                sourceUrl: excluded(imageCredits.sourceUrl),
+                attributionRequired: excluded(imageCredits.attributionRequired),
+              },
+            })
+          : q.onConflictDoNothing()
+        ).returning({ key: imageCredits.image })
+      ).length;
     }
 
     return stats;
@@ -333,6 +358,33 @@ function parseCities(file: string, json: unknown): Row<typeof cities>[] {
       image: textOrNull(file, o.image, `${p}.image`),
       translations: translations(file, o.translations, `${p}.translations`, ["name"]) as never,
       completeLangs: completeLangs(file, o.completeLangs, `${p}.completeLangs`),
+    };
+  });
+}
+
+/** `http(s)://` adresi (lisans bağlantıları kaynakta bazen `http://creativecommons.org/...`; veri olduğu gibi korunur). */
+function webUrl(file: string, v: unknown, path: string): string {
+  const value = text(file, v, path);
+  if (!/^https?:\/\/\S+$/.test(value)) bad(file, path, "http(s) adresi bekleniyordu");
+  return value;
+}
+
+function parseImageCredits(file: string, json: unknown): Row<typeof imageCredits>[] {
+  const seen = new Set<string>();
+  return array(file, json).map((item, i) => {
+    const p = `[${i}]`;
+    const o = obj(file, item, p);
+    const image = text(file, o.image, `${p}.image`);
+    if (!isWebImagePath(image)) bad(file, `${p}.image`, "/images/<ad>.avif biçiminde web görsel yolu bekleniyordu");
+    if (seen.has(image)) bad(file, `${p}.image`, `yinelenen görsel: ${image}`);
+    seen.add(image);
+    return {
+      image,
+      author: textOrNull(file, o.author, `${p}.author`),
+      licenseName: textOrNull(file, o.licenseName, `${p}.licenseName`),
+      licenseUrl: o.licenseUrl === null || o.licenseUrl === undefined ? null : webUrl(file, o.licenseUrl, `${p}.licenseUrl`),
+      sourceUrl: webUrl(file, o.sourceUrl, `${p}.sourceUrl`),
+      attributionRequired: bool(file, o.attributionRequired, `${p}.attributionRequired`),
     };
   });
 }

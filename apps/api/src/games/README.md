@@ -31,7 +31,7 @@ Sözleşme: [`docs/backend-mobil-mimarisi.md`](../../../../docs/backend-mobil-mi
   kısıtı olmadan), aynı tura çift cevapta tek kazanan, çift `finish`te tek puan satırı (`scores.session_id` unique ayrıca
   son savunma). Gerçek PostgreSQL kanıtı: `test/games-concurrency.e2e-spec.ts` (`TEST_DATABASE_URL` ile).
 - **Süre ve sona erdirme:** süreyi sunucu ölçer (`round_started_at`, `GameClock`). Tur süresi 20 sn, ağ payı 3 sn;
-  `elapsed > 23000 ms` zaman aşımıdır (0 puan, tur geçer). Oturum 30 dk; süresi dolan oturum ilk istekte `expired`
+  tur sayacının başlangıcından `elapsed > 23000 ms` (cevapsız turda `> 20000 ms`) zaman aşımıdır (0 puan, tur geçer). Oturum 30 dk; süresi dolan oturum ilk istekte `expired`
   yazılır (hata, işlem tamamlandıktan SONRA fırlatılır; yoksa geri alma işareti silerdi).
 - **Başkasının oturumu 404:** olmayan oturumla aynı yanıt; 403 oturumun varlığını sızdırırdı.
 - **Harita formülü:** web "Haritada Bul" ile aynı (`d ≤ 50 km` → 1000, sonra `exp(-(d-50)/1200)`); belgenin ilk taslağındaki
@@ -41,6 +41,17 @@ Sözleşme: [`docs/backend-mobil-mimarisi.md`](../../../../docs/backend-mobil-mi
   ulaşma anı, kullanıcı kimliği). Yanıtta kullanıcı kimliği/e-posta yok; `isMe` SQL'de hesaplanır. Devre dışı bırakılan
   kullanıcılar liste, sıra (`rank`, `finish` yanıtındaki dahil) ve oyuncu sayısından çıkar (`NOT_DISABLED`, `NOT EXISTS`);
   puanlar silinmez, hesap yeniden etkinleştirilince geri döner.
+- **Tur sayacı ve geri bildirim payı:** ilk turun sayacı oturum oluşunca, sonraki turlarınki cevap anı + `FEEDBACK_GRACE_MS` (çoktan
+  seçmeli 2 sn, harita 5 sn; `games.constants.ts`) sonra başlar: `round_started_at` ve `nextRound.startedAt` gelecekte olabilir. Geçen süre
+  `max(0, cevap − round_started_at)`: pay içinde cevap 0 ms (tam hız bonusu), zaman aşımı sınırları (20 sn / 20 + 3 sn) aynı başlangıçtan
+  ölçülür. Pay oturum ömrünü (`expires_at`, 30 dk) uzatmaz. `durationMs` artık gerçek duvar saatidir (oturum başı → son cevabın
+  `answeredAt`'ı); eski "tur sürelerinin toplamı" pay içinde cevaplanan turları 0 sayıp `maxDurationMs` ile hile aramayı körleştirirdi. Takas:
+  soru cevap yanıtıyla hemen geldiğinden pay içinde okuyan oyuncu ek düşünme süresi kazanır (tur başına en çok ≈ 7 hız puanı; tavan 1850 aynı).
+- **`serverNow` (tur görünümü):** her tur görünümü (`round` / `nextRound` / `GET` oturumdaki `round`) yanıtın üretildiği sunucu saatini
+  `serverNow` olarak taşır (`roundView`, `GameClock`): istemci kalan süreyi `deadlineAt - serverNow`, turun başlamasına kalanı
+  `max(0, startedAt - serverNow)` ile aygıt saatinden bağımsız hesaplar (farkı yerel monotonik zamanlayıcıya uygular). `startedAt - serverNow`:
+  cevap yanıtındaki `nextRound`te ≈ pay (belirleyici saatte tam), ilk turda ve payı geçmiş turda ≤ 0. Mevcut alanlar değişmedi (geriye uyumlu);
+  `serverNow` tur görünümünü üreten yanıtın anıdır, bu yüzden aynı tur iki yanıtta yalnız `serverNow`da farklıdır.
 - **Hız bonusu yuvarlaması:** `50 * (15000 - ms) / 15000` tam sayı bölümüyle hesaplanır. `1 - ms / 15000` kayan noktada tam
   .5 sonuçları (8250 ms → 22,5; toplam 7 süre) aşağı düşürüyordu; belgedeki `round(...)` yukarı yuvarlar (`scoring.spec.ts`).
 - **Temizlik (yalnız başlatan kullanıcının kayıtları):** (1) 7 günden eski bitmemiş oturumlar silinir (terk/süresi dolmuşlar

@@ -36,14 +36,35 @@ export class GameRoundDto {
   @ApiProperty({ type: () => [GameOptionDto], nullable: true, description: "Çoktan seçmeli oyunlarda 4 seçenek; `map-guess`te null (haritada nokta işaretlenir)." })
   options!: GameOptionDto[] | null;
 
-  @ApiProperty({ type: "integer", example: 20000, description: "Tur süresi (ms). Sunucu süreyi kendi ölçer; bu süre ve 3 sn ağ payı aşılırsa cevap 0 puan sayılır." })
+  @ApiProperty({
+    type: "integer",
+    example: 20000,
+    description: "Tur süresi (ms). Sunucu süreyi kendi ölçer; bu süre ve 3 sn ağ payı aşılırsa cevap 0 puan sayılır. Süre `startedAt`'tan ölçülür.",
+  })
   timeLimitMs!: number;
 
-  @ApiProperty({ type: String, format: "date-time", description: "Turun başladığı an (sunucu saati)." })
+  @ApiProperty({
+    type: String,
+    format: "date-time",
+    description:
+      "Turun sayacının başladığı an (sunucu saati). İlk tur: oturum oluşunca. Sonraki turlar: önceki cevap anı + geri bildirim payı " +
+      "(çoktan seçmeli 2 sn, harita 5 sn), yani cevap yanıtı döndüğünde GELECEKTE olabilir; pay içinde cevap süresi 0 ms sayılır (tam hız bonusu).",
+  })
   startedAt!: string;
 
   @ApiProperty({ type: String, format: "date-time", description: "`startedAt + timeLimitMs`. Bu andan sonra gelen cevap yine 3 sn'ye kadar kabul edilir ama hız bonusu almaz." })
   deadlineAt!: string;
+
+  @ApiProperty({
+    type: String,
+    format: "date-time",
+    description:
+      "Sunucu saati: bu yanıtın üretildiği an (ISO 8601). İstemci geri sayımı kendi saatine bakmadan kurar: tur bitimine kalan süre = " +
+      "`deadlineAt - serverNow`, turun başlamasına kalan süre = `max(0, startedAt - serverNow)`. `startedAt` geri bildirim payı yüzünden " +
+      "gelecekte olabilir (cevap yanıtındaki `nextRound`te `startedAt - serverNow` ≈ pay: çoktan seçmeli 2 sn, harita 5 sn); ilk turda " +
+      "ve payı geçmiş bir tur için `startedAt - serverNow ≤ 0`. Aygıt saati yerine bu farkı yerel bir monotonik zamanlayıcıya uygulayın.",
+  })
+  serverNow!: string;
 }
 
 export class StartSessionResponseDto {
@@ -157,7 +178,7 @@ export class AnswerResponseDto {
   @ApiProperty({ type: "integer", nullable: true, description: "Yalnız `map-guess`: tahmin ile hedef arasındaki uzaklık (km, tam sayıya yuvarlanmış)." })
   distanceKm!: number | null;
 
-  @ApiProperty({ type: () => GameRoundDto, nullable: true, description: "Sonraki tur; son turdan sonra null (oyunu `finish` ile bitirin)." })
+  @ApiProperty({ type: () => GameRoundDto, nullable: true, description: "Sonraki tur; son turdan sonra null (oyunu `finish` ile bitirin). Sayacı `startedAt`'ta (cevap anı + geri bildirim payı) başlar." })
   nextRound!: GameRoundDto | null;
 }
 
@@ -180,7 +201,7 @@ export class FinishResponseDto {
   @ApiProperty({ type: "integer" })
   roundsTotal!: number;
 
-  @ApiProperty({ type: "integer", description: "Sunucunun ölçtüğü toplam oyun süresi (ms)." })
+  @ApiProperty({ type: "integer", description: "Oyunun gerçek süresi (ms): oturum başından son cevaba, geri bildirim payı dahil (tur sürelerinin toplamı değil)." })
   durationMs!: number;
 
   @ApiProperty({ type: "integer", minimum: 1, description: "Tüm zamanlar liderliğinde sıranız (en iyi puanınıza göre; eşit puan aynı sıra)." })

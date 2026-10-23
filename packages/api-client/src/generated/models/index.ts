@@ -135,6 +135,7 @@ export * from './hubEssentialDto';
 export * from './hubRouteIdeaDto';
 export * from './imageBlockDto';
 export * from './imageBlockDtoType';
+export * from './imageCreditDto';
 export * from './leaderboardDto';
 export * from './leaderboardEntryDto';
 export * from './leaderboardMeDto';

@@ -12,7 +12,7 @@ export interface AdminScoreDto {
   createdAt: string;
   /** Liderlikte görünen ad. */
   displayName: string;
-  /** Sunucunun ölçtüğü toplam oyun süresi (ms). */
+  /** Oyunun gerçek süresi (ms): oturum başından son cevaba, geri bildirim payı dahil. */
   durationMs: number;
   gameType: GameType;
   /** Puan kimliği: `DELETE /v1/scores/{id}` bunu ister. */

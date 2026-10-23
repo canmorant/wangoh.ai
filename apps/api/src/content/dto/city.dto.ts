@@ -5,6 +5,7 @@ import type { ForeignLang } from "../content.constants.js";
 import { MAX_SLUG_LENGTH, SLUG_PATTERN } from "../slug.js";
 import { CompleteLangsField, ContentImage, Flag, Nested, Text, Whole } from "./decorators.js";
 import { CityGuideDto, GuideBodyInputDto } from "./guide.dto.js";
+import { ImageCreditDto } from "./image-credit.dto.js";
 import { TranslationsPatchDto } from "./translations-patch.js";
 
 /* ------------------------------ şehir: yanıt ------------------------------ */
@@ -60,6 +61,13 @@ export class CityDetailDto extends CitySummaryDto {
 
   @ApiProperty({ type: CityGuideDto, nullable: true, description: "Rehber gövdesi; `lang`/`complete` rehberin kendi durumudur (şehir kartından farklı olabilir)." })
   guide!: CityGuideDto | null;
+
+  @ApiProperty({
+    type: [ImageCreditDto],
+    description:
+      "Bu şehir sayfasında gösterilen görselin (`imageUrl`) zorunlu görsel atfı. Web'deki \"Görsel atıfları\" bloğuyla aynı kuraldır: görsel atıf gerektirmiyorsa (CC0, kamu malı) ya da atıf kaydı yoksa (harici görsel) boş dizi. Yalnız ayrıntıda gelir. Lisans gereği ekranda gösterilmelidir.",
+  })
+  imageCredits!: ImageCreditDto[];
 }
 
 /* ------------------------------ şehir: yazma ------------------------------ */
