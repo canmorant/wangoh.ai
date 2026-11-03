@@ -322,10 +322,17 @@ export const DIETARY_GUIDES: DestinationDietaryGuide[] = [
     v("Le Potager de Charlotte", "Vegan Fransız", "9. arrondissement", "Fransız tekniklerini mevsimsel sebze, bakliyat ve yaratıcı soslarla tamamen vegan yorumlayan restoran.", "Paris'te özel bir akşamı ağır taklit ürünler yerine ürün odaklı, dengeli bir menüyle geçirmek için."),
     h("Le Confidentiel", "Fransız ve dünya mutfağı", "8. arrondissement", "Et yemeklerini helal beyanıyla sunan, rezervasyonlu ve şık servisli restoran.", "Paris'te yalnız kebap değil, Fransız tarzı bir akşam yemeği arayanlar için.", "restaurant-confirmed", "halalFrance", "Helal restoran dizinlerinde yer alıyor; AVS/ARGML benzeri güncel sertifikayı ve alkol servisini doğrudan teyit edin.")
   ),
-  guide("FR", "Nice",
-    v("Koko Green", "Vegan Akdeniz füzyon", "Vieux Nice", "Mevsimsel sebze tabakları, brunch ve tatlıları tamamen bitki bazlı hazırlayan samimi restoran.", "Eski Şehir içinde sebze odaklı, renkli ve iyi dengelenmiş bir öğle yemeği için."),
-    h("Le Cèdre", "Lübnan", "Jean Médecin çevresi", "Meze, ızgara ve fırın yemekleri sunan helal et beyanlı Lübnan restoranı.", "Vejetaryenlerle et yiyenlerin aynı masada kolayca paylaşabileceği geniş meze düzeni için.", "restaurant-confirmed", "halalFrance", "Dizin ve işletme beyanı helal et yönünde; resmî belgeyi, alkolü ve ortak ızgarayı yeniden doğrulayın.")
-  ),
+  // Nice: Le Cèdre işletmesi helal olmadığını bildirdi (kayıt kaldırıldı). Doğrulanmış başka helal kayıt olmadığından helal listesi boş.
+  {
+    countryCode: "FR",
+    city: "Nice",
+    vegan: [
+      vegan(
+        v("Koko Green", "Vegan Akdeniz füzyon", "Vieux Nice", "Mevsimsel sebze tabakları, brunch ve tatlıları tamamen bitki bazlı hazırlayan samimi restoran.", "Eski Şehir içinde sebze odaklı, renkli ve iyi dengelenmiş bir öğle yemeği için.")
+      ),
+    ],
+    halal: [],
+  },
   guide("FR", "Lyon",
     v("Against the Grain", "Vegan kafe ve comfort food", "Croix-Rousse", "Sandviç, brunch, günlük tabak ve pastaları tamamen vegan sunan mahalle kafesi.", "Croix-Rousse yürüyüşünde rahat, yaratıcı ve gün ortasına uygun bir bitki bazlı mola için."),
     h("L'Authentik", "Helal Fransız", "Vieux Lyon", "Et ve kümes hayvanlarının sertifikalı olduğunu belirten Fransız bistrosu.", "Klasik kebap hattının dışında soslu et ve bistro tabağı arayanlar için.", "restaurant-confirmed", "halalFrance", "2026 rehberi tüm etlerin sertifikalı olduğunu aktarıyor; sertifikayı ve alkol servisini restoranda güncel olarak kontrol edin.")
