@@ -3,7 +3,7 @@
  * Gerekçe: Nice'teki Le Cèdre işletmesi helal olmadığını bildirdi; tüm helal kayıtlar arama kanıtıyla tarandı.
  *  - remove: işletme bulunamadı, helal olduğuna dair hiçbir kaynak yok ya da kayıt yanlış şehirde.
  *  - downgrade: yalnız dizin/yorum kaynağı var; "restoran doğruladı"/"sertifikalı" iddiası düşürülür.
- * Kayıt sayısı: 195. Uygulama: halalReview.ts.
+ * Kayıt sayısı: 256. Uygulama: halalReview.ts.
  */
 export interface HalalReviewEntry {
   countryCode: string;
@@ -21,7 +21,7 @@ export const HALAL_REVIEW: readonly HalalReviewEntry[] = [
     "countryCode": "AE",
     "city": "Abu Dabi",
     "name": "Meylas",
-    "action": "remove",
+    "action": "downgrade",
     "result": "KANIT_YOK",
     "reason": "Restoranın kendi sitesinde ve Visit Abu Dhabi listesinde helal sertifikası ya da et tedariki ifadesi bulunamadı; Visit Abu Dhabi yalnızca genel olarak Emirati mutfağının varsayılan olarak helal olduğunu söylüyor (Meylas'a özel değil). Etihad rehberi alkol servisi olmadığını yazıyor. Kayıttaki 'tüm etler helal sertifika",
     "sources": [
@@ -42,6 +42,83 @@ export const HALAL_REVIEW: readonly HalalReviewEntry[] = [
       "https://www.alfanarrestaurant.com/al-seef-dubai",
       "https://www.alfanarrestaurant.com/post/where-to-eat-authentic-emirati-food-in-abu-dhabi",
       "https://guide.michelin.com/ca/en/dubai-emirate/dubai/restaurant/al-fanar"
+    ]
+  },
+  {
+    "countryCode": "AL",
+    "city": "Berat",
+    "name": "Homemade Food Lili",
+    "action": "remove",
+    "result": "KANIT_YOK",
+    "reason": "Restoran Berat'ta mevcut (HappyCow, Lonely Planet, In Your Pocket kayıtları var) ama hiçbir kaynak helal olduğunu söylemiyor; HappyCow sayfasındaki '(Halal)' etiketi başka bir işletmenin (Rus Traditional Food) adının yanında duruyor. Menüde ev yapımı şarap ve rakı geçiyor (tek başına sorun değil); bir rehber genel olar",
+    "sources": [
+      "https://happycow.net/reviews/lili-homemade-food-berat-144751",
+      "https://www.inyourpocket.com/berat/homemade-food-lili_173999v",
+      "https://www.milehacker.com/travel/albania/central-albania/berat/best-restaurants-in-berat-food-dining-local-cuisin/"
+    ]
+  },
+  {
+    "countryCode": "AL",
+    "city": "Himarë",
+    "name": "Taverna Lefteri",
+    "action": "remove",
+    "result": "KANIT_YOK",
+    "reason": "Spile semtindeki Taverna Lefteri mevcut (1998'den beri, deniz ürünleri ve Yunan mutfağı, ızgara ahtapot öne çıkıyor) ama hiçbir sonuçta helal sertifika, helal et ya da helal menü ifadesi yok.",
+    "sources": [
+      "https://himara.net/taverna-lefteri",
+      "https://himara.net/taverna-lefteri/find-us",
+      "https://himara.pages.dev/blog/taverna-lefteri-review"
+    ]
+  },
+  {
+    "countryCode": "AL",
+    "city": "Krujë",
+    "name": "Kroi",
+    "action": "remove",
+    "result": "KANIT_YOK",
+    "reason": "Kale girişine yakın Kroi restoranı mevcut (pizza, dana bonfile, kuzu; Akdeniz/yerel mutfak, Google 4.5) ama hiçbir kaynak helal olduğunu söylemiyor, domuz/alkol politikasına dair bilgi de yok. Adres bilgisi (Rruga Kala) bir otel listesinden geliyor.",
+    "sources": [
+      "https://silvertraveladvisor.com/reviews/kroi-restaurant/",
+      "https://hotels.webbanve.net/hotel/al/kroi.en-gb.html",
+      "https://stay.albaniavisit.com/hotel-kroi-near-castle-entrance-castle-and-town-view/"
+    ]
+  },
+  {
+    "countryCode": "AL",
+    "city": "Sarandë",
+    "name": "Taverna Laberia",
+    "action": "remove",
+    "result": "KANIT_YOK",
+    "reason": "Taverna Labëria Sarandë'de aile işletmesi geleneksel Arnavut restoranı olarak listeleniyor ama hiçbir kaynak helal demiyor; halal rehberleri Sarandë için başka mekânları (ör. Lezet Hotel & Restaurant) öneriyor. Uyarı: bir Wanderlog kaydı mekânın ızgara etlerini 'kuzu ve domuz' diye anlatıyor, ancak o kayıt Gjirokastër'",
+    "sources": [
+      "https://wanderlog.com/place/details/2704249/taverna-labëria",
+      "https://wanderlog.com/place/details/4827161/taverna-labëria",
+      "https://albaniavisit.com/halal-guide/"
+    ]
+  },
+  {
+    "countryCode": "AL",
+    "city": "Theth",
+    "name": "Bujtina Polia",
+    "action": "remove",
+    "result": "KANIT_YOK",
+    "reason": "Theth'te restoranlı bir misafirhane olarak birçok listede var ama hiçbirinde helal ifadesi yok (helal kahvaltı seçeneği geçen Bujtina Berishta ve Shpjia e Gjyshit başka işletmeler).",
+    "sources": [
+      "https://thethi-guide.com/accomodation/bujtina-polia",
+      "https://destinia.com/en/hotels/europe/albania/shkoder/theth/bujtina-polia/ho-1832323"
+    ]
+  },
+  {
+    "countryCode": "AL",
+    "city": "Tiran",
+    "name": "Oda",
+    "action": "remove",
+    "result": "KANIT_YOK",
+    "reason": "Oda geleneksel Arnavut restoranı olarak mevcut (tave kosi, fërgesë, köfte, ızgara et, kuzu) ama hiçbir kaynak helal demiyor. Gerçek konumu Blloku değil: Yeni Pazar (Pazari i Ri) yakınında dar bir sokakta, Rruga Riza Jasa, Tiranë 1008; sitedeki 'Blloku / merkez' semtindeki 'Blloku' kısmı yanlış, 'merkez' kısmı makul.",
+    "sources": [
+      "https://adventurealbania.com/es/restaurantes-tirana/",
+      "https://www.myglobalviewpoint.com/restaurants-in-tirana-for-traditional-albanian-food/",
+      "https://www.albania-spirit.com/pl/guides/najlepsze-restauracje-tirana/"
     ]
   },
   {
@@ -93,6 +170,86 @@ export const HALAL_REVIEW: readonly HalalReviewEntry[] = [
       "https://www.welcomeargentina.com/elchalten/la-tapera.html",
       "https://wanderlog.com/place/details/1163011",
       "https://www.atly.com/gluten-free/location/LaTapera"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "city": "Mendoza",
+    "name": "El Sultán",
+    "action": "remove",
+    "result": "BULUNAMADI",
+    "reason": "Tek aramada Mendoza'da 'El Sultán' adlı bir restoran bulunamadı; çıkan sonuçların hepsi İspanya (Córdoba, Granada, Sevilla) ve Fransa'daki aynı adlı mekânlar. Sorguda 'halal' kelimesi vardığı için bu, mekânın kapalı olduğunun kanıtı değil; talimat gereği ikinci arama yapılmadı.",
+    "sources": []
+  },
+  {
+    "countryCode": "AR",
+    "city": "Puerto Iguazú",
+    "name": "La Mamma Pastas",
+    "action": "remove",
+    "result": "KANIT_YOK",
+    "reason": "La Mamma Pastas and Salsas Puerto Iguazú merkezinde Bonpland sokağında ev yapımı ravioli, gnocchi ve makarna sunan bir yer; hiçbir kaynakta helal ya da domuzsuz mutfak ifadesi yok.",
+    "sources": [
+      "https://wanderlog.com/place/details/1180729/la-mamma-pastas-and-salsas",
+      "https://www.kupibilet.ru/gid/argentina/puerto-iguasu/la-mamma-pastas-and-salsas"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "city": "Salta ve Jujuy",
+    "name": "Dubai",
+    "action": "remove",
+    "result": "KANIT_YOK",
+    "reason": "Salta'da 'Dubai Cocina Árabe' (Wanderlog'da 'Comidas Arabes Dubai') adlı Arap mutfağı restoranı bulundu, kebap yorumları var; ancak hiçbir kaynakta helal et ya da helal sertifika ifadesi yok. Arap mutfağı olması helal olduğunu kanıtlamaz.",
+    "sources": [
+      "https://wanderlog.com/place/details/3231362/comidas-arabes-dubai",
+      "https://www.welcomeargentina.com/salta/comidas.html"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "city": "Ushuaia",
+    "name": "Kuar",
+    "action": "remove",
+    "result": "KANIT_YOK",
+    "reason": "Kuar Ushuaia'da Beagle Kanalı kıyısında Av. Perito Moreno 2232 adresinde mevcut (Patagonya kuzusu, centolla, füme ürünler, peynir, deniz ürünleri); hiçbir kaynakta helal ya da helal et ifadesi yok. Aynı grubun 'Kuar 1900' adlı ayrı bir mekânı da var (San Martín 471).",
+    "sources": [
+      "https://www.welcomeargentina.com/usahuaia/kuar-restaurant.html",
+      "https://www.cvent.com/venues/ushuaia/restaurant/kuar-restaurant/venue-0f6c06a5-65ea-43c7-b7c7-92511da33c81"
+    ]
+  },
+  {
+    "countryCode": "AT",
+    "city": "Graz",
+    "name": "Himalaya Masala",
+    "action": "remove",
+    "result": "KANIT_YOK",
+    "reason": "Graz turizm sitesi Himalaya Masala'yı Hint-Nepal mutfağı (kuzu, tavuk, karides, vejetaryen; öğle büfesi yaklaşık 13 euro) olarak listeliyor, HappyCow yorumu da helalden söz etmiyor; helal iddiası yalnız Prag'daki başka bir Himalaya için çıkıyor. Adres Grazbachgasse 35, 8010 Graz; sitedeki 'Lend / merkez' semtiyle uyumu",
+    "sources": [
+      "https://www.graztourismus.at/en/food-drinks-shopping/restaurant-guide/himalaya-masala_gad_1948",
+      "https://www.happycow.net/reviews/himalaya-masala-graz-285143"
+    ]
+  },
+  {
+    "countryCode": "AT",
+    "city": "Linz",
+    "name": "Ayam Zaman",
+    "action": "remove",
+    "result": "KANIT_YOK",
+    "reason": "Landstraße 32'de Suriye mutfağı restoranı olarak mevcut (Yukarı Avusturya turizm sayfası helal etiketi vermiyor, yalnız vejetaryen dostu diyor); SwipeIn'deki helal ifadesi genel topluluk rozeti gibi görünüyor, restorana özgü olduğundan emin olunamadı. Zabihah'ta Linz kaydı yok; hiçbir kaynak net olarak helal demiyor. T",
+    "sources": [
+      "https://www.upperaustria.com/en/oesterreich-gastronomie/detail/430007161/restaurant-ayam-zaman.html",
+      "https://www.swipein.restaurant/en/restaurant/restaurant-ayam-zaman-linz-oberosterreich"
+    ]
+  },
+  {
+    "countryCode": "AT",
+    "city": "Wachau Vadisi",
+    "name": "Alte Schiffstation Melk",
+    "action": "remove",
+    "result": "BULUNAMADI",
+    "reason": "Tek aramada 'Alte Schiffstation' adlı Melk restoranı hiçbir sonuçta çıkmadı; Melk için SwipeIn helal listesinde de yok (orada başka işletmeler var: Wachauerhof, H1 Melk, Zur Post). Varlığı ve helal durumu doğrulanamadı (bir tek arama yapıldı, işletme dizinlerde bulunmuyor olabilir).",
+    "sources": [
+      "https://www.swipein.restaurant/en/place/melk/category/halal"
     ]
   },
   {
@@ -272,6 +429,81 @@ export const HALAL_REVIEW: readonly HalalReviewEntry[] = [
     "sources": []
   },
   {
+    "countryCode": "BR",
+    "city": "Lençóis Maranhenses",
+    "name": "A Canoa",
+    "action": "remove",
+    "result": "KANIT_YOK",
+    "reason": "Arama özeti, Barreirinhas'ta Avenida Beira Rio'daki bir seyahat blogunda 'A Canoa' ve 'Barlavento' restoranlarının geçtiğini söylüyor (kaynak URL'si özette açık değil, en yakın aday blog listelendi); helal ifadesi hiçbir yerde yok. Barreirinhas'ta onaylı helal restoran da bulunamadı.",
+    "sources": [
+      "https://www.360meridianos.com/onde-comer-barreirinhas-lencois-maranhenses/"
+    ]
+  },
+  {
+    "countryCode": "BR",
+    "city": "Manaus ve Amazon",
+    "name": "Almanara",
+    "action": "remove",
+    "result": "BULUNAMADI",
+    "reason": "Almanara bilinen bir Arap mutfağı zinciri ama şubeleri São Paulo, Campinas ve Alphaville'de; Manaus'ta Almanara bulunamadı. Hiçbir sonuç helal sertifikasından söz etmiyor.",
+    "sources": [
+      "https://www.guiadasemana.com.br/sao-paulo/restaurantes/estabelecimento/almanara-centro",
+      "https://www.casamentos.com.br/restaurante-casamento/restaurante-e-churrascaria-almanara--e198176"
+    ]
+  },
+  {
+    "countryCode": "BR",
+    "city": "Recife ve Olinda",
+    "name": "Saj",
+    "action": "remove",
+    "result": "BULUNAMADI",
+    "reason": "Brezilya'daki Saj Arap restoranı São Paulo (Pinheiros, Vila Madalena), Brasília ve Curitiba'da var; Recife'de bulunamadı. Arama özeti, Saj Vila Madalena için bir Wanderlog yorumunda 'helal servis etmiyorlar' dendiğini belirtiyor (doğrudan teyit edilmedi).",
+    "sources": [
+      "https://www.guiadasemana.com.br/sao-paulo/restaurantes/estabelecimento/saj-pinheiros",
+      "https://www.guiadasemana.com.br/sao-paulo/restaurantes/estabelecimento/saj-vila-madalena",
+      "https://gironews.com/food-service/primeiro-ponto-fora-sp-52861/",
+      "https://extensionembed.wanderlog.com/place/details/1345587"
+    ]
+  },
+  {
+    "countryCode": "BR",
+    "city": "Rio de Janeiro",
+    "name": "Amir",
+    "action": "remove",
+    "result": "SORUNLU",
+    "reason": "Amir'in Tripadvisor kaydı 'We DON'T have HALAL FOOD!' (Helal yemeğimiz yok) diyor; bir Wanderlog yorumcusu da duvarlarda Mekke görselleri olmasına rağmen helal servis edilmediğini yazıyor. Copacabana'da Rua Ronald de Carvalho 55'te Orta Doğu mutfağı. Alternatif olarak Zabihah'ta sertifikalı helal diye geçen Restaurante",
+    "sources": [
+      "https://www.tripadvisor.com.au/Restaurant_Review-g303506-d941683-Reviews-Amir-Rio_de_Janeiro_State_of_Rio_de_Janeiro.html",
+      "https://www.tripadvisor.co.nz/Restaurant_Review-g303506-d941683-Reviews-Amir-Rio_de_Janeiro_State_of_Rio_de_Janeiro.html",
+      "https://www.zabihah.com/restaurants/cb0b3b15-7767-11ef-95ae-6045bdeb9f57/restaurante-baghdad-rio-rio-de-janeiro"
+    ]
+  },
+  {
+    "countryCode": "BR",
+    "city": "Salvador",
+    "name": "Arabesco",
+    "action": "remove",
+    "result": "BULUNAMADI",
+    "reason": "Arabesco yalnız São Paulo'da bulundu (Suriye-Lübnan mutfağı, Av. Paulista 1765, Cerqueira César); Salvador/Barra'da Arabesco bulunamadı. Hiçbir kaynak helal demiyor.",
+    "sources": [
+      "https://www.baressp.com.br/restaurantes/arabes/arabesco-paulista",
+      "https://www.guiadasemana.com.br/sao-paulo/restaurantes/estabelecimento/arabesco-cerqueira-cesar"
+    ]
+  },
+  {
+    "countryCode": "BR",
+    "city": "São Paulo",
+    "name": "Halim",
+    "action": "remove",
+    "result": "KANIT_YOK",
+    "reason": "Halim, Paraíso'da Rua Doutor Rafael de Barros 56'da 1970'lerden beri bilinen bir Arap mutfağı restoranı (kibe, esfiha); BaresSP, Apontador ve Wanderlog'da kayıtlı. Hiçbir kaynakta helal kesim, sertifika veya helal ifadesi yok.",
+    "sources": [
+      "https://baressp.com.br/restaurantes/arabes/halim",
+      "https://www.apontador.com.br/local/sp/sao_paulo/comida_arabe/3L2V56NV/halim.html",
+      "https://wanderlog.com/place/details/1896431/halim"
+    ]
+  },
+  {
     "countryCode": "CA",
     "city": "Banff",
     "name": "Masala Authentic Indian Cuisine",
@@ -440,6 +672,19 @@ export const HALAL_REVIEW: readonly HalalReviewEntry[] = [
   },
   {
     "countryCode": "CN",
+    "city": "Harbin",
+    "name": "Harbin Mosque Muslim Restaurant",
+    "action": "remove",
+    "result": "BULUNAMADI",
+    "reason": "Bu adla bir işletme bulunamadı; Daowai Camii (Harbin Camii) mevcut ve çevresinde çok sayıda 'qingzhen' (helal) lokanta olduğu söyleniyor, ama çıkan somut isimler Laorenyi ve Dongfang Muslim Restaurant; kayıttaki ad genel bir tanım gibi duruyor, belirli bir işletmeye bağlanamadı.",
+    "sources": [
+      "https://wanderlog.com/place/details/8419298/daowai-mosque",
+      "https://islamichina.com/harbin/harbin-travel-tips.html",
+      "https://www.idntimes.com/food/dining-guide/restoran-halal-di-harbin-00-z5hk4-96wpbj"
+    ]
+  },
+  {
+    "countryCode": "CN",
     "city": "Kunming",
     "name": "Yilan Yuan",
     "action": "remove",
@@ -448,6 +693,17 @@ export const HALAL_REVIEW: readonly HalalReviewEntry[] = [
     "sources": [
       "https://www.yunnanexploration.com/?p=51364",
       "https://muslim2china.com/halal-food-china/Yitianyuan-Muslim-Restaurant-969.html"
+    ]
+  },
+  {
+    "countryCode": "CN",
+    "city": "Lijiang",
+    "name": "Lijiang Muslim Restaurant",
+    "action": "remove",
+    "result": "BULUNAMADI",
+    "reason": "Arama 'Lijiang Muslim Restaurant' adıyla bir işletme göstermedi; çıkan dizinler Muslim Garden, Yipin Loulan, Crescent Pavilion (Shuhe) gibi başka adlı Müslüman restoranlarını listeliyor. Ad genel bir tanım olduğundan hangi işletmenin kastedildiği ve Dayan dış kapısında olup olmadığı doğrulanamadı.",
+    "sources": [
+      "https://www.yunnanexploration.com/?p=63549"
     ]
   },
   {
@@ -466,6 +722,18 @@ export const HALAL_REVIEW: readonly HalalReviewEntry[] = [
   },
   {
     "countryCode": "CN",
+    "city": "Suzhou",
+    "name": "Suzhou Muslim Restaurant",
+    "action": "remove",
+    "result": "BULUNAMADI",
+    "reason": "Arama 'Suzhou Muslim Restaurant' adıyla bir işletme göstermedi; dizinler Beijiang, Xiyu Diyipan, Loulan, Mo Jiang Nan, Qiao Mian Lang gibi başka adlı helal/Müslüman restoranlarını listeliyor. Ad genel bir tanım olduğundan Gusu semtindeki hangi işletmenin kastedildiği doğrulanamadı.",
+    "sources": [
+      "https://topchinatravel.com/china-food-restaurant/muslim-halal-restaurants-in-suzhou.htm",
+      "https://www.islamichinatravel.com/destination-guide/suzhou/suzhou-halal-restaurants/mo-jiang-nan-restaurant/"
+    ]
+  },
+  {
+    "countryCode": "CN",
     "city": "Xi'an",
     "name": "Lao Mi Jia Paomo",
     "action": "remove",
@@ -476,6 +744,18 @@ export const HALAL_REVIEW: readonly HalalReviewEntry[] = [
       "https://halalspy.com/halal-food-guide/asia/china/",
       "https://www.halaltrip.com/city-guide-details/779/xian/",
       "https://www.sina.cn/news/article/nimevat3844119.html"
+    ]
+  },
+  {
+    "countryCode": "CN",
+    "city": "Zhangjiajie",
+    "name": "Wulingyuan Muslim Restaurant",
+    "action": "remove",
+    "result": "BULUNAMADI",
+    "reason": "Arama özetine göre bir Zhangjiajie yemek dizini 'Wulingyuan Halal Muslim Restaurant' ve 'Wulingyuan Damashige Muslim Restaurant' adlarını adres, menü veya saat vermeden anıyor; adıyla doğrulanabilir bir işletme, adres ya da güncel kayıt bulunamadı. Bir başka kaynak (Howard Johnson Neodalle Resort) Wulingyuan'da otel iç",
+    "sources": [
+      "https://www.visitaroundchina.com/Travel_Zhangjiajie/570.html",
+      "https://www.wyndhamhotels.com/hojo/zhangjiajie-china/howard-johnson-zhangjiajie-neodalle-resort/overview"
     ]
   },
   {
@@ -666,6 +946,18 @@ export const HALAL_REVIEW: readonly HalalReviewEntry[] = [
   },
   {
     "countryCode": "DK",
+    "city": "Aalborg",
+    "name": "Sam's Barbeque",
+    "action": "remove",
+    "result": "KANIT_YOK",
+    "reason": "Wolt Aalborg'da ızgara ve pizza mekânı olarak listeliyor, Wanderlog yorumları yalnız yemek ve nakit ödemeyi anıyor; hiçbir kaynak helal demiyor. Zabihah'ta kaydı yok (Aalborg'daki helal kayıt Kebabistan, farklı işletme).",
+    "sources": [
+      "https://wolt.com/en/dnk/aalborg/brand/sams-barbeque",
+      "https://wanderlog.com/place/details/3504459/sams-barbeque"
+    ]
+  },
+  {
+    "countryCode": "DK",
     "city": "Bornholm",
     "name": "Det Røde Pakhus",
     "action": "remove",
@@ -729,7 +1021,7 @@ export const HALAL_REVIEW: readonly HalalReviewEntry[] = [
     "countryCode": "EG",
     "city": "Hurgada",
     "name": "Al Halaka Fish Market Restaurant",
-    "action": "remove",
+    "action": "downgrade",
     "result": "KANIT_YOK",
     "reason": "Hurghada'da El Mina Camii/balık pazarı yakınında 'Al Halaka (El Halaka) Fish Restaurant' olarak mevcut (Arrival Guides, Wanderlog), semt uyumlu; ancak hiçbir kaynak helal ya da alkolsüz olduğunu yazmıyor. egypt.travel aramasında kayıt çıkmadı, girdideki 'Kızıldeniz Valiliği' kaynağı doğrulanamadı. Tam sokak adresi doğr",
     "sources": [
@@ -743,7 +1035,7 @@ export const HALAL_REVIEW: readonly HalalReviewEntry[] = [
     "countryCode": "EG",
     "city": "Kahire",
     "name": "Farahat",
-    "action": "remove",
+    "action": "downgrade",
     "result": "KANIT_YOK",
     "reason": "Farahat, Al-Azhar caddesinde (Al Gamaliyah, Khan el-Khalili yakını) ızgara ve içi doldurulmuş güvercin ile ünlü köklü bir lokanta (Cairo360, Wanderlog, Tripadvisor), semt uyumlu; fakat hiçbir kaynak helal kesim ya da alkolsüz olduğunu belirtmiyor, egypt.travel aramasında da kayıt çıkmadı.",
     "sources": [
@@ -756,7 +1048,7 @@ export const HALAL_REVIEW: readonly HalalReviewEntry[] = [
     "countryCode": "EG",
     "city": "Luksor",
     "name": "Al-Sahaby Lane Restaurant",
-    "action": "remove",
+    "action": "downgrade",
     "result": "KANIT_YOK",
     "reason": "Luksor'da Nefertiti Hotel çatısında, çarşı ile Karnak yolu arasındaki sokakta gerçekten var (Lonely Planet, Trip.com, booked.ai); kaynaklar alkol servisi olmadığını yazıyor ama hiçbir kaynak helal et/kesim beyan etmiyor. egypt.travel aramasında kayıt çıkmadı.",
     "sources": [
@@ -770,7 +1062,7 @@ export const HALAL_REVIEW: readonly HalalReviewEntry[] = [
     "countryCode": "EG",
     "city": "Şarm el-Şeyh",
     "name": "Fares Seafood",
-    "action": "remove",
+    "action": "downgrade",
     "result": "KANIT_YOK",
     "reason": "Fares Seafood'un Eski Pazar (Old Market) şubesi var, uygun fiyatlı deniz ürünleriyle tanınıyor (Fodor's, easyJet, Lonely Planet); bir listede alkol servisi yok yazıyor, ancak hiçbir kaynak helal sertifikalı et/deniz ürünü beyan etmiyor ve egypt.travel aramasında kayıt çıkmadı. Telefon numaraları kaynaklarda çelişiyor.",
     "sources": [
@@ -946,6 +1238,68 @@ export const HALAL_REVIEW: readonly HalalReviewEntry[] = [
       "https://www.valenciabonita.es/2018/06/15/balansiya-restaurante-arabe-un-precioso-restaurante-andalusi-y-halal-en-valencia/",
       "https://www.salir.com/balansiya-valencia-neg-5144.html",
       "https://tablejourney.com/spain/valencia/dietary/balansiya-valencia/"
+    ]
+  },
+  {
+    "countryCode": "FI",
+    "city": "Finlandiya Göller Bölgesi",
+    "name": "Muikkuterassi",
+    "action": "remove",
+    "result": "KANIT_YOK",
+    "reason": "Savonlinna Kauppatori'nda, Original Sokos Hotel Seurahuone'nin çatı terası olarak çalışan, kızarmış muikku (Saimaa balığı) odaklı bir balık restoranı; Visit Savonlinna ve Visit Finland sayfaları dahil hiçbir kaynak helal demiyor. Helal ile ilgili tek sonuç farklı bir tesis (Hotelli Salpa).",
+    "sources": [
+      "https://visitsavonlinna.fi/en/shops/restaurant-muikkuterassi-2/",
+      "https://www.visitfinland.com/de/produkt/fccb0aca-ff52-4396-9877-7aa46f55826a/muikkuterassi-restaurant-and-roof-top-terrace-lake-saimaa/"
+    ]
+  },
+  {
+    "countryCode": "FI",
+    "city": "Inari ve Saariselkä",
+    "name": "Restaurant Aanaar",
+    "action": "remove",
+    "result": "KANIT_YOK",
+    "reason": "Wilderness Hotel Juutua bünyesinde, Saarikoskentie 2, Inari'de bir Sami/Lapland yöresel fine-dining restoranı (Time Out'a göre 5 yemekli menü 98 euro); kaynaklar vegan seçenekleri anıyor, hiçbiri helal demiyor. Adres Inari'de, Saariselkä'ya yaklaşık bir saatlik mesafede olarak aktarılıyor.",
+    "sources": [
+      "https://wildernesshotels.fi/wilderness-hotel-juutua/restaurant-aanaar",
+      "https://laplandnorth.fi/en/company/restaurant-aanaar/",
+      "https://www.timeout.com/finland/restaurants/aanaar"
+    ]
+  },
+  {
+    "countryCode": "FI",
+    "city": "Porvoo",
+    "name": "Hanna-Maria",
+    "action": "remove",
+    "result": "KANIT_YOK",
+    "reason": "Vanha Porvoo'da, Välikatu 6'da geleneksel Kuzey mutfağı sunan bir öğle yemeği restoranı; hiçbir kaynak helal demiyor ve Zabihah'ın Finlandiya sonuçlarında yalnız Helsinki/Espoo kayıtları çıkıyor. TripAligner kaydında 'Serves Alcohol' etiketi var (alkol tek başına sorun değil, not düşüldü).",
+    "sources": [
+      "https://fonecta.fi/profiili/restaurant-hanna-maria/2638592",
+      "https://tripaligner.com/countries/finland-31/destinations/porvoo-14512/places/hanna-maria-1787977"
+    ]
+  },
+  {
+    "countryCode": "FI",
+    "city": "Rovaniemi",
+    "name": "Ravintola Roka",
+    "action": "remove",
+    "result": "KANIT_YOK",
+    "reason": "Rovaniemi merkezinde, Ainonkatu 3'te Fin ürünleri ve uluslararası etkileri harmanlayan küçük bir bistro; Visit Rovaniemi, Visit Finland ve yorum sayfalarında helal bilgisi yok. Genel bir Laponya helal rehberi de bu restorandan söz etmiyor.",
+    "sources": [
+      "https://www.visitrovaniemi.fi/eat-and-drink/roka/",
+      "https://www.visitfinland.com/en/product/b6d65c78-a668-47a2-88b2-1a3acec5bb9d/ravintola-roka/"
+    ]
+  },
+  {
+    "countryCode": "FI",
+    "city": "Tampere",
+    "name": "Baba's Kitchen",
+    "action": "remove",
+    "result": "KANIT_YOK",
+    "reason": "Tullintori, Tullikatu 6'da Lübnan-Türk mutfağı sunan, vegan seçenekleriyle öne çıkan bir restoran (intravel, HappyCow, Spinach); hiçbir kaynakta helal beyanı, sertifika ya da et tedarik bilgisi yok ve Zabihah'ta kaydı çıkmadı.",
+    "sources": [
+      "https://intravel.net/tampere/restaurants-cafes/babas-kitchen",
+      "https://www.happycow.net/reviews/babas-kitchen-tampere-284566",
+      "https://spinach.guide/venues/baba-s-kitchen-108414/"
     ]
   },
   {
@@ -1309,40 +1663,73 @@ export const HALAL_REVIEW: readonly HalalReviewEntry[] = [
     ]
   },
   {
-    "countryCode": "ID",
-    "city": "Bandung",
-    "name": "Sindang Reret",
+    "countryCode": "HU",
+    "city": "Balaton Gölü",
+    "name": "Mamma Mia Kebab",
+    "action": "remove",
+    "result": "BULUNAMADI",
+    "reason": "Balatonalmádi veya Siófok'ta 'Mamma Mia Kebab' adlı bir işletme bulunamadı; en yakın sonuç Balatonfüred'deki 'Mamma Mia Gyorsétterem' (fast food) olup helal bilgisi içermiyor ve aynı işletme olduğu doğrulanamadı. Deliveroo'daki helal etiketli 'Mamma Mia' İngiltere'ye ait, ilgisiz.",
+    "sources": []
+  },
+  {
+    "countryCode": "HU",
+    "city": "Debrecen",
+    "name": "Aladdin Gyros",
     "action": "remove",
     "result": "KANIT_YOK",
-    "reason": "1973'ten beri Sundanese mutfağı sunan bilinen bir restoran (Jl. Surapati, Gasibu yakını); tek helal göndermesi Layla.ai'nin 'helal dostu' bir Bandung gezi planı, bu bir helal dizini ya da sertifika değil. BPJPH/MUI kaydı bulunamadı. Tek arama yapılabildi (ortak arama bütçesi tükendi); sertifika için ikinci bir arama ön",
+    "reason": "Restoran 'Aladdin Gyros Bár' adıyla Wolt'ta var (Piac utca 10, 4026 Debrecen); et ve soslar kendi baharat karışımıyla hazırlanıyor deniyor ama hiçbir sayfa helal demiyor. Aynı aramada Debrecen'de helal diyen başka işletmeler (The Kitchen, Guszta Kebab) çıktı, bu kayıt onlardan biri değil.",
     "sources": [
-      "https://layla.ai/itinerary/5-day-halal-friendly-bandung-adventure/0191a794-ee63-7feb-9b3e-22eb02e42aac",
-      "https://www.tripadvisor.in/ShowUserReviews-g297704-d6488025-r626262318-Sindang_Reret_Restaurant_Surapati_Bandung-Bandung_West_Java_Java.html"
+      "https://wolt.com/en/hun/debrecen/restaurant/aladdin-gyros-br"
     ]
   },
   {
-    "countryCode": "ID",
-    "city": "Bromo Dağı",
-    "name": "Warung Edi Cemorolawang",
+    "countryCode": "HU",
+    "city": "Eger",
+    "name": "Kebab Club",
     "action": "remove",
-    "result": "KANIT_YOK",
-    "reason": "Cemoro Lawang'da gado-gado, nasi goreng ve baharatlı tavuk sunan yerel bir warung (Wanderlog 3,9/179 yorum); hiçbir kaynakta helal beyanı ya da sertifikası yok. Tek arama yapılabildi.",
+    "result": "BULUNAMADI",
+    "reason": "Tek aramada Eger'de 'Kebab Club' adlı bir işletme kaydı çıkmadı; Wolt Eger listesinde başka kebap yerleri (Istanbul Kebab, Gyros és Kebab Ház) görünüyor, helal ibaresi yok. Arama tek sorguyla sınırlı olduğundan kesin kapanış değil, ama doğrulanabilir hiçbir kayıt yok.",
     "sources": [
-      "https://wanderlog.com/list/geoCategory/367728/dinner",
-      "https://travel-site-ssg.pages.dev/south-east-asia/indonesia/java/bromo-tengger-semeru-area/restaurants"
+      "https://wolt.com/en/hun/eger"
     ]
   },
   {
-    "countryCode": "ID",
-    "city": "Bukittinggi",
-    "name": "Nasi Kapau Uni Lis",
+    "countryCode": "HU",
+    "city": "Pécs",
+    "name": "Sultan Kebab",
+    "action": "remove",
+    "result": "BULUNAMADI",
+    "reason": "Tek aramada Pécs'te 'Sultan Kebab' adlı bir işletme çıkmadı; sonuçlar yalnız ABD, Fransa (Limoges) ve Birleşik Krallık'taki aynı adlı başka işletmelerle ilgili. Arama tek sorguyla sınırlı olduğundan kesin kapanış değil, ama doğrulanabilir hiçbir kayıt yok.",
+    "sources": []
+  },
+  {
+    "countryCode": "HU",
+    "city": "Sopron",
+    "name": "Ottoman Kebab",
+    "action": "remove",
+    "result": "BULUNAMADI",
+    "reason": "Tek aramada Sopron'da 'Ottoman Kebab' adlı bir işletme çıkmadı; yalnız Almanya ve Panama'daki başka 'Ottoman' adlı yerler ile Sopron'da alakasız bir büfe (Anger Büfé, helal ibaresi yok) çıktı. Arama tek sorguyla sınırlı olduğundan kesin kapanış değil, ama doğrulanabilir hiçbir kayıt yok.",
+    "sources": []
+  },
+  {
+    "countryCode": "HU",
+    "city": "Szeged",
+    "name": "Taj Mahal",
     "action": "remove",
     "result": "KANIT_YOK",
-    "reason": "Uni Lis, Los Lambuang nasi kapau pazarı çevresindeki tezgâhlar arasında anılıyor; helal beyanı ya da sertifika kaydı yok. Kaynaklar Los Lambuang'ı Pasar Bawah ya da Pasar Lereng'e yerleştiriyor, sitedeki 'Pasar Atas' ile açık bir çelişki doğrulanamadı (kaynaklar kendi arasında da çelişiyor).",
+    "reason": "Szeged Turizm sayfasında 'Taj Mahal Indian Restaurant' olarak kayıtlı (Gutenberg u. 12, her gün 11:00-22:00, Hint/Pakistan mutfağı) ama hiçbir kaynak helal demiyor; helal ibareli 'Taj Mahal' sonuçları başka ülkelerdeki (Lübeck, Pittsburgh, Tokorozawa) işletmelere ait ve bu kayda uygulanamaz.",
     "sources": [
-      "https://kompas.id/baca/english/2018/02/09/nasi-kapau-king-of-minangkabau-cuisine/",
-      "https://www.antaranews.com/berita/99822/nasi-kapau-nan-mangimbau-imbau"
+      "https://szegedtourism.hu/en/taj-mahal-indian-restaurant"
     ]
+  },
+  {
+    "countryCode": "HU",
+    "city": "Szentendre",
+    "name": "Török Kávézó",
+    "action": "remove",
+    "result": "BULUNAMADI",
+    "reason": "Tek aramada Szentendre'de 'Török Kávézó' adlı güncel bir işletme çıkmadı; tek eşleşme 1950-60'lardan kalma Budapeşte'deki bir kafenin arşiv fotoğrafı. Szentendre için helal diyen hiçbir restoran da bulunamadı.",
+    "sources": []
   },
   {
     "countryCode": "ID",
@@ -1354,6 +1741,101 @@ export const HALAL_REVIEW: readonly HalalReviewEntry[] = [
     "sources": [
       "https://www.airbnb.com/things-to-do/places/1068407",
       "https://co.hoteles.com/go/indonesia/best-canggu-restaurants"
+    ]
+  },
+  {
+    "countryCode": "ID",
+    "city": "Labuan Bajo",
+    "name": "Taman Laut Handayani",
+    "action": "remove",
+    "result": "KANIT_YOK",
+    "reason": "Labuan Bajo'da deniz ürünleri restoranı olarak var (Jl. Ande Bole No.9, Wanderlog'a göre) ama hiçbir kaynak helal olduğunu söylemiyor; balık/deniz ürünü kendiliğinden helal olsa da mutfak ve alkol politikası hakkında kayıt yok. Indonesia.travel sayfası Kupang adresi veriyor, farklı bir işletme olabilir. LPPOM'un Labuan",
+    "sources": [
+      "https://wanderlog.com/place/details/3052185/taman-laut-handayani-seafood-restaurant-labuan-bajo",
+      "https://indonesia.travel/uk/en/travel-ideas/taman-laut-handayani"
+    ]
+  },
+  {
+    "countryCode": "ID",
+    "city": "Lombok",
+    "name": "El Bazar Cafe & Restaurant",
+    "action": "remove",
+    "result": "KANIT_YOK",
+    "reason": "Kuta Lombok'ta (Jl. Raya Kuta No.5) var; Akdeniz/Orta Doğu/İspanyol ve biftek-deniz ürünü menüsü, bir kaynak menüsünün 'şaraba ağırlıklı' olduğunu yazıyor. Lombok varsayılan-helal bölge olsa da alkol merkezli mekân işareti olduğundan VARSAYILAN_HELAL verilmedi; hiçbir kaynak helal demiyor, domuz bilgisi de yok.",
+    "sources": [
+      "https://wanderlog.com/place/details/43533/el-bazar-cafe--restaurant",
+      "https://www.booked.ai/restaurants/el-bazar-cafe-restaurant"
+    ]
+  },
+  {
+    "countryCode": "ID",
+    "city": "Nusa Penida",
+    "name": "Warung Jukung",
+    "action": "remove",
+    "result": "KANIT_YOK",
+    "reason": "Nusa Penida'da kıyıda, deniz manzaralı aile işletmesi deniz ürünü/Endonezya/vejetaryen restoranı olarak kayıtlı, ama hiçbir kaynak helal demiyor (helal diye çıkan 'The Tamban Jukung' farklı bir konaklama tesisi). Semt kaynaklar arasında tutarsız: bir video kaydı Batununggul diyor, bir rehber Batumulapan; kesin çelişki ",
+    "sources": [
+      "https://navi-savi.com/videos/51512-warung-jukung"
+    ]
+  },
+  {
+    "countryCode": "ID",
+    "city": "Raja Ampat",
+    "name": "Raja Ampat Dive Lodge Restaurant",
+    "action": "remove",
+    "result": "KANIT_YOK",
+    "reason": "Mansuar Adası'ndaki Raja Ampat Dive Lodge'un kahvaltı/öğle/akşam servis eden tek restoranı, yerel mutfak ve deniz ürünü sunuyor; ayrı bir restoran değil otel restoranı. HalalBooking helal yemek ve alkolsüz alan bilgisini 'veri beklemede' gösteriyor, başka hiçbir kaynak helal demiyor.",
+    "sources": [
+      "https://halalbooking.com/en/raja-ampat-dive-lodge/p/422890",
+      "https://dinogo.com/hotels/320368-raja-ampat-diving-resort"
+    ]
+  },
+  {
+    "countryCode": "ID",
+    "city": "Tana Toraja",
+    "name": "Rimiko Restaurant",
+    "action": "remove",
+    "result": "KANIT_YOK",
+    "reason": "Rantepao'da Jl. Andi Mappanyukki No.115 adresinde böyle bir restoran var (Wanderlog, Lonely Planet, Spinach Guide); menüsü vejetaryen dostu, ayrıca et ve balık yemekleri var. Hiçbir kaynak helal olduğunu söylemiyor; Tana Toraja varsayılan-helal istisnasının dışında olduğu için KANIT_YOK.",
+    "sources": [
+      "https://wanderlog.com/place/details/2684140/rimiko-restaurant",
+      "https://www-lonelyplanet-com-57e2.imagizer.com/indonesia/sulawesi/rantepao/restaurants/rimiko-restoran/a/poi-eat/1215154/356616",
+      "https://spinach.guide/venues/rimiko-restaurant-189786/"
+    ]
+  },
+  {
+    "countryCode": "ID",
+    "city": "Toba Gölü",
+    "name": "Rohana's Restaurant",
+    "action": "remove",
+    "result": "KANIT_YOK",
+    "reason": "Tuk Tuk bölgesinde pirinç tarlaları arasında sakin, ev yemeği ve vejetaryen seçenekli bir yer olarak anılıyor (Wanderlog yorumları), fakat hiçbir sonuçta helal ifadesi yok. Aynı aramada Tuk Tuk için helal olarak anılan alternatif: Rumah Makan Islam Mami Tempo (Wanderlog yorumları, ayrıca doğrulanmadı).",
+    "sources": [
+      "https://wanderlog.com/place/details/2683269/rumah-makan-islam-mami-tempo"
+    ]
+  },
+  {
+    "countryCode": "ID",
+    "city": "Ubud",
+    "name": "Warung Makan Bu Rus",
+    "action": "remove",
+    "result": "SORUNLU",
+    "reason": "Eatbook.sg'nin Ubud rehberi ve restoran sayfası Warung Makan Bu Rus'un helal sertifikalı bir mekân olmadığını açıkça yazıyor; nasi campur ile tanınan sıradan bir Bali warung'u. Menüde domuz/lard ifadesi sonuçlarda doğrulanmadı, yani sorun helal güvencesinin olmaması.",
+    "sources": [
+      "https://eatbook.sg/warung-makan-bu-rus/",
+      "https://eatbook.sg/ubud-food-guide/"
+    ]
+  },
+  {
+    "countryCode": "ID",
+    "city": "Uluwatu",
+    "name": "Warung Solo Via",
+    "action": "remove",
+    "result": "KANIT_YOK",
+    "reason": "Warung Solo Via var: HappyCow'da Ungasan şubesi vegan ağırlıklı büfe olarak, Spinach Guide'da Endonezya büfesi olarak listeli; helal sertifikası ya da beyanı yok. Bali istisnası (Uluwatu/Pecatu) nedeniyle varsayılan-helal uygulanamaz; Pecatu adresi doğrulanamadı.",
+    "sources": [
+      "https://www.happycow.net/reviews/warung-solo-via-ungasan-307593",
+      "https://spinach.guide/venues/warung-solo-via-188859/"
     ]
   },
   {
@@ -1557,7 +2039,7 @@ export const HALAL_REVIEW: readonly HalalReviewEntry[] = [
     "countryCode": "MA",
     "city": "Fes",
     "name": "Palais Bab Sahra",
-    "action": "remove",
+    "action": "downgrade",
     "result": "KANIT_YOK",
     "reason": "Fes el-Bali'de Boujloud yakınında 'Riad Fes Palais Bab Sahra Suites & Cooking Workshops' adlı bir riad/restoran var (ViaMichelin, Expedia, Wanderlog); yalnızca ViaMichelin otel kaydı 'vejetaryen ve helal seçenekler' diyor, bu bir seçenek beyanı, restoranın helal olduğu ya da sertifika değil. Alkolsüz olduğuna dair kayn",
     "sources": [
@@ -1570,7 +2052,7 @@ export const HALAL_REVIEW: readonly HalalReviewEntry[] = [
     "countryCode": "MA",
     "city": "Marakeş",
     "name": "Al Fassia Aguedal",
-    "action": "remove",
+    "action": "downgrade",
     "result": "KANIT_YOK",
     "reason": "Restoran/butik otel gerçek ve ünlü (Tripadvisor, Fodor's, Gayot), Route de l'Ourika üzerindeki Agdal turistik bölgesinde; Guéliz'deki Al Fassia ayrı bir kardeş şube. Hiçbir kaynak helal ya da 'helal sertifikalı' demiyor; Gayot sayfasında yalnızca 'Moroccan wine' yazılı bir fotoğraf başlığı var (alkol servisi kesin deği",
     "sources": [
@@ -1583,7 +2065,7 @@ export const HALAL_REVIEW: readonly HalalReviewEntry[] = [
     "countryCode": "MA",
     "city": "Şefşavan",
     "name": "Restaurant Beldi Bab Ssour",
-    "action": "remove",
+    "action": "downgrade",
     "result": "KANIT_YOK",
     "reason": "Restoran gerçek ve medinada, adres Rue El Kharrazin No:5 (Fodor's ve Tripadvisor tutarlı), semt uyumlu. Hiçbir kaynak helal ya da alkolsüz olduğunu belirtmiyor; Fas'ta bu tür yerlerin helal olması beklenir ama bu bir tahmin, kanıt değil.",
     "sources": [
@@ -1677,6 +2159,18 @@ export const HALAL_REVIEW: readonly HalalReviewEntry[] = [
     ]
   },
   {
+    "countryCode": "ME",
+    "city": "Ulcinj",
+    "name": "Restaurant Lovac",
+    "action": "remove",
+    "result": "KANIT_YOK",
+    "reason": "Lonely Planet'te Velika Plaža/Ada Bojana bölümünde 'Lovac' adlı balık, biftek ve pizza/makarna sunan bir restoran var; helal ifadesi hiçbir kaynakta yok. Aramada geçen tek helal ibaresi Seafront Apartments adlı farklı bir tesise ait.",
+    "sources": [
+      "https://www.lonelyplanet.com/pois/1611582",
+      "https://app.wanderlog.com/place/details/2727235"
+    ]
+  },
+  {
     "countryCode": "MT",
     "city": "Gozo",
     "name": "Al Qantara Restaurant",
@@ -1700,6 +2194,64 @@ export const HALAL_REVIEW: readonly HalalReviewEntry[] = [
       "https://halalgems.com/?p=6050",
       "https://www.maltatoday.com.mt/gourmet/restaurants/23936/ali-baba-lebanese-heaven-on-a-plate-20130114",
       "https://www-lonelyplanet-com-6c06.imagizer.com/malta/sliema-around/restaurants/ali-baba/a/poi-eat/1598937/1340962"
+    ]
+  },
+  {
+    "countryCode": "MX",
+    "city": "Chiapas",
+    "name": "Al Sultán",
+    "action": "remove",
+    "result": "BULUNAMADI",
+    "reason": "San Cristóbal de las Casas'ta 'Al Sultán' adıyla bir restoran bulunamadı; çıkan Al Sultan kayıtları ABD'de (Zabihah, Maryland ve Garden City). 'Restaurante El Sultán' adlı helal kebap/mansaf iddialı bir Wanderlog/Mapstr kaydı çıktı ama şehri doğrulanamadı, eşleştirilemedi.",
+    "sources": [
+      "https://wanderlog.com/place/details/4097048/restaurante-el-sultán",
+      "https://mapstr.com/place/URFPTdNIJag"
+    ]
+  },
+  {
+    "countryCode": "MX",
+    "city": "Mérida",
+    "name": "Pita Mediterranean Cuisine",
+    "action": "remove",
+    "result": "KANIT_YOK",
+    "reason": "Mérida'da Santa Lucía/merkezde 'Pita Mediterráneo' adlı Akdeniz mutfağı (humus, falafel, somonlu pita, vegan seçenekler) bulundu (pos.do, Midcity Beat); ad birebir aynı olmadığı için eşleşme büyük olasılıkla doğru ama kesin değil. Hiçbir kaynak helal demiyor; Zabihah'taki Pita Mediterranean kayıtları ABD şubeleri.",
+    "sources": [
+      "https://pos.do/pt/merida/restaurant/pita-mediterraneo",
+      "https://midcitybeat.com/?p=108902"
+    ]
+  },
+  {
+    "countryCode": "MX",
+    "city": "Oaxaca",
+    "name": "Mini Taj",
+    "action": "remove",
+    "result": "KANIT_YOK",
+    "reason": "pos.do'da Oaxaca merkezinde Santos Degollado 512'de vegan seçenekli bir Hint restoranı olarak 'MiniTaj' listeli; helal et ya da helal beyanı hiçbir kaynakta yok. Çıkan helal Taj kayıtları başka şehirlerdeki işletmeler.",
+    "sources": [
+      "https://pos.do/pt/oaxaca/restaurant/minitaj"
+    ]
+  },
+  {
+    "countryCode": "MX",
+    "city": "San Miguel de Allende",
+    "name": "Turk Restaurant",
+    "action": "remove",
+    "result": "KANIT_YOK",
+    "reason": "Aramada San Miguel de Allende'de 'TURK Mediterranean Street Food' adlı, falafel ağırlıklı, vejetaryen/vegan dostu bir mekan çıktı (Wanderlog); hiçbir kaynak helal olduğunu söylemiyor. Helal sonuçları (Zabihah) başka şehirlerdeki işletmelere ait.",
+    "sources": [
+      "https://wanderlog.com/place/details/1296690/turk-mediterranean-street-food"
+    ]
+  },
+  {
+    "countryCode": "MX",
+    "city": "Tulum",
+    "name": "Laylo Tulum",
+    "action": "remove",
+    "result": "KANIT_YOK",
+    "reason": "Laylo Tulum, HappyCow ve Spinach.guide'da vegan/bitki bazlı bir mekan olarak listeleniyor; helal iddiası ya da sertifikası yok. Ad benzerliği nedeniyle çıkan Layla Tulum ayrı bir butik otel/restoran ve onda da helal bilgisi yok.",
+    "sources": [
+      "https://happycow.net/reviews/laylo-tulum-163694?page=2",
+      "https://spinach.guide/venues/laylo-219050/"
     ]
   },
   {
@@ -1836,6 +2388,18 @@ export const HALAL_REVIEW: readonly HalalReviewEntry[] = [
   },
   {
     "countryCode": "NO",
+    "city": "Bergen",
+    "name": "Pasha Restaurant",
+    "action": "remove",
+    "result": "BULUNAMADI",
+    "reason": "Tek aramada Bergen'de 'Pasha Restaurant' kaydı çıkmadı; çıkan Pasha kayıtları başka şehirlerde (Karlstad/İsveç, Houston, Londra vb.). Bergen'deki bir işletmeyi doğrulayamadım; var olup indekslenmemiş olması mümkün ama kanıt yok.",
+    "sources": [
+      "https://wanderlog.com/place/details/2720931/pasha-restaurant",
+      "https://www.zabihah.com/restaurants/ca343ff3-7767-11ef-95ae-6045bdeb9f57/pasha-karlstad-vrmland-county"
+    ]
+  },
+  {
+    "countryCode": "NO",
     "city": "Flåm",
     "name": "Ægir BrewPub",
     "action": "remove",
@@ -1964,6 +2528,124 @@ export const HALAL_REVIEW: readonly HalalReviewEntry[] = [
     ]
   },
   {
+    "countryCode": "PL",
+    "city": "Wrocław",
+    "name": "Istanbul Kebab",
+    "action": "remove",
+    "result": "BULUNAMADI",
+    "reason": "Tek aramada Wrocław Stare Miasto'da 'Istanbul Kebab' kaydı çıkmadı; sonuçlar Prag, Cape Town, Roma gibi başka şehirlerdeki aynı adlı işletmelere ait. Wrocław için helal veya varlık kanıtı yok.",
+    "sources": [
+      "https://www.zabihah.com/restaurants/ca1199a1-7767-11ef-95ae-6045bdeb9f57/istanbul-kebab-prague-hlavn-msto-praha",
+      "https://halalbooking.com/en/puro-wroc%C5%82aw-stare-miasto/p/457862"
+    ]
+  },
+  {
+    "countryCode": "PL",
+    "city": "Zakopane",
+    "name": "Samanta Halal",
+    "action": "remove",
+    "result": "BULUNAMADI",
+    "reason": "'Samanta' Zakopane'de Krupówki'de bir pastane/kafe (Cukiernia Samanta) olarak geçiyor ve helal ifadesi yok. Ayrı bir işletme olan 'Zakopane Halal Restaurant' (Krupówki 50 B, TripAligner, yalnız yaz sezonu) çıktı; adı farklı ve Samanta ile bağı doğrulanmadı. 'Samanta Halal' adıyla bir restoran bulunamadı.",
+    "sources": [
+      "https://www.atly.com/gluten-free/location/Cukiernia-%22Samanta%22",
+      "https://tripaligner.com/countries/poland-28/destinations/zakopane-4670/places/zakopane-halal-restaurant-14520818"
+    ]
+  },
+  {
+    "countryCode": "PT",
+    "city": "Algarve",
+    "name": "Taco y Tequilla",
+    "action": "remove",
+    "result": "KANIT_YOK",
+    "reason": "Faro'da Meksika mutfağı, margarita/tekila odaklı bir restoran olarak yorumlarda geçiyor (HappyCow yorumunda personelin tekila ikram ettiği anlatılıyor); helal et ya da sertifika bilgisi hiçbir kaynakta yok. Alkol-merkezli mekan, helal iddiası için uygun değil.",
+    "sources": [
+      "https://www.happycow.net/contact/abuse/review/82873",
+      "https://halalspy.com/halal-food-guide/europe/faro/"
+    ]
+  },
+  {
+    "countryCode": "PT",
+    "city": "Azor Adaları",
+    "name": "Indian Hut",
+    "action": "remove",
+    "result": "BULUNAMADI",
+    "reason": "Tek aramada Ponta Delgada'da 'Indian Hut' kaydı çıkmadı; çıkan helal Indian Hut kayıtları ABD'de (Orlando, Bensalem). Ponta Delgada için varlık veya helal kanıtı yok.",
+    "sources": [
+      "https://www.zabihah.com/restaurants/cb56a7fd-7767-11ef-95ae-6045bdeb9f57/indian-hut-orlando-fl",
+      "https://halalbooking.com/en/octant-ponta-delgada/p/113881"
+    ]
+  },
+  {
+    "countryCode": "PT",
+    "city": "Coimbra",
+    "name": "Aqil Food",
+    "action": "remove",
+    "result": "BULUNAMADI",
+    "reason": "Tek aramada 'Aqil Food' Coimbra için hiçbir sonuç vermedi; ne işletme ne helal kaydı bulundu. Yalnız ibis Coimbra Centro otel sayfası 500 m çevrede helal gıda olduğunu söylüyor, işletme adı geçmiyor.",
+    "sources": [
+      "https://halalbooking.com/en/ibis-coimbra-centro/p/89165"
+    ]
+  },
+  {
+    "countryCode": "PT",
+    "city": "Lizbon",
+    "name": "Zam Zam",
+    "action": "remove",
+    "result": "BULUNAMADI",
+    "reason": "Tek aramada Lizbon/Mouraria'da 'Zam Zam' restoranı çıkmadı; Zam Zam kayıtları Berlin, Paris, Singapur vb. başka şehirlerde. Lizbon helal rehberi Mouraria için başka işletmeleri (ör. Taste of Pakistan) listeliyor, Zam Zam'ı değil.",
+    "sources": [
+      "https://www.eatingeurope.com/blog/halal-food-in-lisbon/",
+      "https://www.zabihah.com/restaurants/ca805899-7767-11ef-95ae-6045bdeb9f57/zam-zam-paris-le-de-france"
+    ]
+  },
+  {
+    "countryCode": "PT",
+    "city": "Madeira",
+    "name": "Indian Palace",
+    "action": "remove",
+    "result": "KANIT_YOK",
+    "reason": "Funchal'da Estrada Monumental 197 adresinde Indian Palace adlı Hint restoranı gluten-free/vegan/genel dizinlerde listeli; hiçbir kaynak helal olduğunu söylemiyor. Zabihah'ın Funchal helal listesinde (Delhi Darbar, India Gate, Babilonia vb.) yer almıyor.",
+    "sources": [
+      "https://www.atly.com/gluten-free/location/IndianPalace",
+      "https://spinach.guide/venues/indian-palace-40212/",
+      "https://www.zabihah.com/halal-restaurants/funchal-madeira-pt"
+    ]
+  },
+  {
+    "countryCode": "PT",
+    "city": "Porto",
+    "name": "Mendi",
+    "action": "remove",
+    "result": "KANIT_YOK",
+    "reason": "Mendi, Porto'da Avenida da Boavista 1430 (Boavista semti, Baixa değil) adresinde 1997'den beri tandoori ağırlıklı Hint restoranı; TripAligner/HappyCow/TableJourney vejetaryen-vegan seçenek belirtiyor, helal iddiası veya sertifikası yok.",
+    "sources": [
+      "https://tablejourney.com/portugal/porto/casual-dining/mendi-indian-boavista/",
+      "https://www.happycow.net/reviews/mendi-porto-88930",
+      "https://tripaligner.com/countries/portugal-38/destinations/porto-9551/places/mendi-1027670"
+    ]
+  },
+  {
+    "countryCode": "PT",
+    "city": "Sintra",
+    "name": "Taj Palace",
+    "action": "remove",
+    "result": "BULUNAMADI",
+    "reason": "Tek aramada Sintra'da 'Taj Palace' kaydı çıkmadı; aynı ad Faro (HalalSpy) ve Portimão'da (Zabihah, kısmi helal) geçiyor, yani kayıt yanlış şehirle eşleşmiş olabilir. Sintra'da Zabihah'ta tam helal listelenen farklı bir işletme (Bengal Tandoori) çıktı; bu doğrulanmış bir öneri değil, yalnız ipucu.",
+    "sources": [
+      "https://halalspy.com/halal-food-guide/europe/faro/",
+      "https://www.zabihah.com/restaurants/cbb9bdec-7767-11ef-95ae-6045bdeb9f57/bengal-tandoori-sintra-lisboa"
+    ]
+  },
+  {
+    "countryCode": "PT",
+    "city": "Évora",
+    "name": "Indian Palace Évora",
+    "action": "remove",
+    "result": "BULUNAMADI",
+    "reason": "Tek aramada Évora'da bu adla bir restoran bulunamadı; sonuçlar yalnız ABD, Avusturya, Ermenistan, Danimarka gibi başka ülkelerdeki 'India Palace' kayıtlarıydı (çoğu Zabihah). Bu, kesin kapanış kanıtı değil, yalnız tek aramanın bulamadığı anlamına gelir; helal iddiasını destekleyen hiçbir kaynak yok.",
+    "sources": []
+  },
+  {
     "countryCode": "RS",
     "city": "Demir Kapı",
     "name": "Čarobna Ribica",
@@ -2037,6 +2719,77 @@ export const HALAL_REVIEW: readonly HalalReviewEntry[] = [
       "https://www.planplus.rs/kafana-ljubis/147272",
       "https://rs.gaultmillau.com/en/restaurants/kafana-ljubis"
     ]
+  },
+  {
+    "countryCode": "RU",
+    "city": "Baykal Gölü",
+    "name": "Khinkalnaya",
+    "action": "remove",
+    "result": "BULUNAMADI",
+    "reason": "Tek aramada Irkutsk'ta 'Хинкальная' adlı belirli bir mekân ya da helal olduğuna dair kayıt çıkmadı (sonuçlar alakasız: köy maddeleri, bir üretici kartı). Ad genel bir sözcük (hinkali evi) olduğu için tek işletmeye bağlanamadı; helal kanıtı yok.",
+    "sources": []
+  },
+  {
+    "countryCode": "RU",
+    "city": "Kaliningrad",
+    "name": "Shafran",
+    "action": "remove",
+    "result": "BULUNAMADI",
+    "reason": "Tek aramada (Шафран Калининград) ne bu adlı restoran ne de şehirde bir helal mekân anıldı; Kaliningrad restoran dizinlerinde (restoclub, komandirovka, sputnik8) 'Шафран' görünmedi. Kesin kapanış kanıtı değil, yalnız bulunamadı.",
+    "sources": []
+  },
+  {
+    "countryCode": "RU",
+    "city": "Kazan",
+    "name": "Halal Cafe",
+    "action": "remove",
+    "result": "BULUNAMADI",
+    "reason": "Ad genel bir sözcük ('halal kafe'); tek aramada 'Halal Cafe' adlı belirli bir işletme doğrulanamadı. Vakhitovsky'de 2GIS'te Suyumbike civarında 'halyal kafe-stolovaya' ve başka halal kafeler (Azu, Medina Food) anılıyor ama hiçbiri site kaydındaki adla eşleştirilemedi. Business Gazeta, tabelada 'halal' yazmasının sertif",
+    "sources": [
+      "https://2gis.ru/firm/2956015536649042"
+    ]
+  },
+  {
+    "countryCode": "RU",
+    "city": "Murmansk",
+    "name": "Halal House",
+    "action": "remove",
+    "result": "BULUNAMADI",
+    "reason": "Tek aramada Murmansk'ta 'Halal House' adlı bir mekân bulunamadı; bu adla yalnız Soçi'de (Culture Trip listesi) ve ABD'de (Zabihah) kayıt çıktı. Bir Murmansk kafesi yorumcusu şehirde helal yemek eksikliğinden şikayet ediyor. Kesin kapanış kanıtı değil.",
+    "sources": [
+      "https://theculturetrip.com/europe/russia/articles/the-best-halal-restaurants-in-sochi"
+    ]
+  },
+  {
+    "countryCode": "RU",
+    "city": "Soçi",
+    "name": "Kavkaz Halal",
+    "action": "remove",
+    "result": "BULUNAMADI",
+    "reason": "Tek aramada Soçi'de 'Kavkaz Halal' adıyla bir mekân çıkmadı. En yakın sonuç, restoclub'ta Soçi'de iki şubesi olan 'Zam-zam' (doğu/helal mutfaklı ucuz kafe) ama bu site kaydındaki işletme değil; Kafkas mutfağı sonuçlarının çoğunda helal belirtilmemiş.",
+    "sources": [
+      "https://www.restoclub.ru/ekb/chain/zam-zam"
+    ]
+  },
+  {
+    "countryCode": "RU",
+    "city": "St. Petersburg",
+    "name": "Beirut",
+    "action": "remove",
+    "result": "KANIT_YOK",
+    "reason": "Peterburg2.ru dizininde 'Kafe Beyrut' (ul. Stremyannaya 11, Merkez ilçe; Doğu/Lübnan/Türk ve İsrail mutfağı) bulundu, ancak hiçbir kaynakta helal beyanı ya da sertifika yok; dizin güncel olmayabilir ve bu kaydın site kaydıyla aynı işletme olduğu kesin değil. Semt (Tsentralny) uyumlu.",
+    "sources": [
+      "https://peterburg2.ru/restplaces/kafe-beyrut-13201.html"
+    ]
+  },
+  {
+    "countryCode": "RU",
+    "city": "Vladivostok",
+    "name": "Kebab House",
+    "action": "remove",
+    "result": "BULUNAMADI",
+    "reason": "Tek aramada Vladivostok'ta Svetlanskaya'da 'Kebab House' bulunamadı; sonuçlar başka şehir/ülkelerdeki aynı adlı yerlerdi (Habarovsk'taki Kebab House kapalı olarak işaretli, Moskova, Tiflis, Lizbon vb.). Genel bir ad olduğu için tek işletmeye bağlanamadı; helal kanıtı yok.",
+    "sources": []
   },
   {
     "countryCode": "SE",
@@ -2334,34 +3087,9 @@ export const HALAL_REVIEW: readonly HalalReviewEntry[] = [
   },
   {
     "countryCode": "TR",
-    "city": "Trabzon",
-    "name": "Tarihi Kalkanoğlu Pilavcısı",
-    "action": "remove",
-    "result": "KANIT_YOK",
-    "reason": "Restoran var (Fodor's ve basın yazılarında Trabzon'da 1856'dan beri anılan köklü pilavcı, pandemi kapanışından sonra yeniden açılmış); hiçbir kaynak helal olduğunu söylemiyor. Bir listede adres 'Pazarkapı, Tophane Cami Sk. No:3, Merkez/Trabzon' görünüyor, Ortahisar ile açık bir çelişki saptanmadı.",
-    "sources": [
-      "https://fodors.fodors.com/world/europe/turkey/the-far-east-and-black-sea-coast/restaurants/reviews/tarihi-kalkanoglu-pilavcisi-164730910",
-      "https://www.turkiyegazetesi.com.tr/yasam/164-yillik-lezzet-terazide-tartilarak-satiliyor-713506"
-    ]
-  },
-  {
-    "countryCode": "TR",
-    "city": "Çanakkale",
-    "name": "Yalova Restaurant",
-    "action": "remove",
-    "result": "KANIT_YOK",
-    "reason": "Çanakkale kordonunda 1940'tan beri anılan bir balık restoranı olarak Lonely Planet, Fodor's ve Wanderlog'da kayıtlı; hiçbir kaynakta helal sertifikası ya da helal beyanı yok. Restoranın kendi sitesi bu aramada incelenemedi.",
-    "sources": [
-      "https://www.lonelyplanet.com/turkey/aegean-coast/canakkale/restaurants",
-      "https://www.fodors.com/world/europe/turkey/the-sea-of-marmara-and-the-north-aegean/places/canakkale/restaurants",
-      "https://wanderlog.com/place/details/549524"
-    ]
-  },
-  {
-    "countryCode": "TR",
     "city": "İstanbul",
     "name": "Buhara Kebab House",
-    "action": "remove",
+    "action": "downgrade",
     "result": "KANIT_YOK",
     "reason": "'Sultanahmet Buhara Kebab House' Nuruosmaniye Cd. No:7'de (Alemdar, Fatih) kebap/İskender restoranı olarak mevcut (Trip.com, Wanderlog, Time Out); hiçbir kaynakta helal sertifikası ya da helal beyanı yok, gimdes.com aramasında kayıt çıkmadı. Bulunan helal beyanı farklı bir işletmeye (Buhara Hotel) ait; alkol politikası",
     "sources": [
@@ -2369,30 +3097,6 @@ export const HALAL_REVIEW: readonly HalalReviewEntry[] = [
       "https://wanderlog.com/place/details/732866",
       "https://halalbooking.com/en/buhara-hotel/p/64612",
       "https://gimdes.com/"
-    ]
-  },
-  {
-    "countryCode": "TR",
-    "city": "İzmir",
-    "name": "Topçu Restoran",
-    "action": "remove",
-    "result": "KANIT_YOK",
-    "reason": "Wanderlog'da kebap ve ızgara ile bilinen bir İzmir restoranı olarak kayıtlı, Ctrip kaydı Alsancak diyor; helal ile ilgili hiçbir kaynak yok. Adres ve telefon bulunamadı.",
-    "sources": [
-      "https://wanderlog.com/place/details/1160558/topçu-restaurant",
-      "https://gs.ctrip.com/html5/you/foods/548.html"
-    ]
-  },
-  {
-    "countryCode": "TR",
-    "city": "Şanlıurfa",
-    "name": "Çulcuoğlu Baklava Restaurant",
-    "action": "remove",
-    "result": "KANIT_YOK",
-    "reason": "Wanderlog'da Haliliye'de (Selahaddin Eyyübi, Recep Tayyip Erdoğan Blv. No:13) kebap ağırlıklı bir restoran olarak, culcuoglurestaurant.com sitesiyle kayıtlı; hiçbir kaynak helal sertifikası ya da açık helal beyanı vermiyor (restoranın kendi sitesi bu aramada incelenemedi).",
-    "sources": [
-      "https://wanderlog.com/place/details/893709/çulcuoğlu-baklavarestaurant",
-      "https://travel-site-ssg.pages.dev/europe/turkey/eastern-and-southeastern-anatolia/sanliurfa/restaurants"
     ]
   },
   {
