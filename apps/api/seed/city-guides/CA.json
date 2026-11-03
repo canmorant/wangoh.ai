@@ -3720,24 +3720,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Banff Town",
-        "category": "halal",
-        "cuisine": "Halal or Muslim-friendly options",
-        "description": "A restaurant candidate that stands out in halal food searches, but whose certificate, meat sourcing and shared-kitchen status should be asked about again on the day of your visit.",
-        "lastVerified": "2026-08-25",
-        "name": "Masala Authentic Indian Cuisine",
-        "verification": {
-         "note": "No current independent certificate was verified. Confirm the halal meat document, shared grill/fryer use, sauces and alcohol service directly with the business; if necessary, choose a vegan or plain fish alternative.",
-         "sourceName": "HalalTrip restaurant guide for Muslim travellers",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/",
-         "status": "verification-recommended"
-        },
-        "why": "For strict halal needs, it offers a visible candidate to start your verification questions with, rather than choosing a business at random."
-       }
-      ],
+      "halal": [],
       "researchNote": "Restaurant ownership, menus and certification status can change quickly. These two picks are a starting point; reconfirm the official document and that the business is open on your travel date.",
       "vegan": [
        {
@@ -4014,24 +3997,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Banff Town",
-        "category": "halal",
-        "cuisine": "Opciones halal o aptas para musulmanes",
-        "description": "Un restaurante candidato que destaca al buscar comida halal, pero al que hay que volver a preguntar el día de la visita por el certificado, el origen de la carne y si la cocina es compartida.",
-        "lastVerified": "2026-08-25",
-        "name": "Masala Authentic Indian Cuisine",
-        "verification": {
-         "note": "No se verificó un certificado independiente y actual. Confirma directamente con el local el documento de carne halal, el uso compartido de parrilla o freidora, las salsas y el servicio de alcohol; si hace falta, elige una alternativa vegana o de pescado sencillo.",
-         "sourceName": "HalalTrip, guía de restaurantes para viajeros musulmanes",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/",
-         "status": "verification-recommended"
-        },
-        "why": "Porque, si necesitas halal estricto, ofrece un candidato visible con el que empezar a hacer preguntas de verificación en lugar de elegir un local al azar."
-       }
-      ],
+      "halal": [],
       "researchNote": "La propiedad, la carta y la situación del certificado de los restaurantes pueden cambiar rápido. Estas dos opciones son un punto de partida; en la fecha del viaje, vuelve a verificar el documento oficial y que el local siga abierto.",
       "vegan": [
        {
@@ -4307,24 +4273,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Banff Town",
-        "category": "halal",
-        "cuisine": "Helal veya Müslüman dostu seçenekler",
-        "description": "Helal yemek aramasında öne çıkan; ancak sertifika, et tedariki ve ortak mutfak durumu ziyaret günü yeniden sorulması gereken restoran adayı.",
-        "lastVerified": "2026-08-25",
-        "name": "Masala Authentic Indian Cuisine",
-        "verification": {
-         "note": "Bağımsız güncel sertifika doğrulanmadı. Helal et belgesini, ortak ızgara/fritöz kullanımını, sosları ve alkol servisini doğrudan işletmeden teyit edin; gerekirse vegan veya sade balık alternatifi seçin.",
-         "sourceName": "HalalTrip Müslüman gezgin restoran rehberi",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/",
-         "status": "verification-recommended"
-        },
-        "why": "Katı helal gereksinimde rastgele bir işletme seçmek yerine doğrulama sorularına başlanabilecek görünür bir aday sunduğu için."
-       }
-      ],
+      "halal": [],
       "researchNote": "Restoran sahipliği, menü ve sertifika durumu hızlı değişebilir. Bu iki seçim başlangıç noktasıdır; seyahat tarihinde resmî belgeyi ve işletmenin açık olduğunu yeniden doğrulayın.",
       "vegan": [
        {
@@ -4647,24 +4596,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Jasper Town",
-        "category": "halal",
-        "cuisine": "Halal or Muslim-friendly options",
-        "description": "A restaurant candidate that stands out in halal food searches, but whose certificate, meat sourcing and shared-kitchen status should be asked about again on the day of your visit.",
-        "lastVerified": "2026-08-25",
-        "name": "The Raven Bistro",
-        "verification": {
-         "note": "No current independent certificate was verified. Confirm the halal meat document, shared grill/fryer use, sauces and alcohol service directly with the business; if necessary, choose a vegan or plain fish alternative.",
-         "sourceName": "HalalTrip restaurant guide for Muslim travellers",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/",
-         "status": "verification-recommended"
-        },
-        "why": "For strict halal needs, it offers a visible candidate to start your verification questions with, rather than choosing a business at random."
-       }
-      ],
+      "halal": [],
       "researchNote": "Restaurant ownership, menus and certification status can change quickly. These two picks are a starting point; reconfirm the official document and that the business is open on your travel date.",
       "vegan": [
        {
@@ -4941,24 +4873,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Jasper Town",
-        "category": "halal",
-        "cuisine": "Opciones halal o aptas para musulmanes",
-        "description": "Un restaurante candidato que destaca al buscar comida halal, pero al que hay que volver a preguntar el día de la visita por el certificado, el origen de la carne y si la cocina es compartida.",
-        "lastVerified": "2026-08-25",
-        "name": "The Raven Bistro",
-        "verification": {
-         "note": "No se verificó un certificado independiente y actual. Confirma directamente con el local el documento de carne halal, el uso compartido de parrilla o freidora, las salsas y el servicio de alcohol; si hace falta, elige una alternativa vegana o de pescado sencillo.",
-         "sourceName": "HalalTrip, guía de restaurantes para viajeros musulmanes",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/",
-         "status": "verification-recommended"
-        },
-        "why": "Porque, si necesitas halal estricto, ofrece un candidato visible con el que empezar a hacer preguntas de verificación en lugar de elegir un local al azar."
-       }
-      ],
+      "halal": [],
       "researchNote": "La propiedad, la carta y la situación del certificado de los restaurantes pueden cambiar rápido. Estas dos opciones son un punto de partida; en la fecha del viaje, vuelve a verificar el documento oficial y que el local siga abierto.",
       "vegan": [
        {
@@ -5234,24 +5149,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Jasper Town",
-        "category": "halal",
-        "cuisine": "Helal veya Müslüman dostu seçenekler",
-        "description": "Helal yemek aramasında öne çıkan; ancak sertifika, et tedariki ve ortak mutfak durumu ziyaret günü yeniden sorulması gereken restoran adayı.",
-        "lastVerified": "2026-08-25",
-        "name": "The Raven Bistro",
-        "verification": {
-         "note": "Bağımsız güncel sertifika doğrulanmadı. Helal et belgesini, ortak ızgara/fritöz kullanımını, sosları ve alkol servisini doğrudan işletmeden teyit edin; gerekirse vegan veya sade balık alternatifi seçin.",
-         "sourceName": "HalalTrip Müslüman gezgin restoran rehberi",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/",
-         "status": "verification-recommended"
-        },
-        "why": "Katı helal gereksinimde rastgele bir işletme seçmek yerine doğrulama sorularına başlanabilecek görünür bir aday sunduğu için."
-       }
-      ],
+      "halal": [],
       "researchNote": "Restoran sahipliği, menü ve sertifika durumu hızlı değişebilir. Bu iki seçim başlangıç noktasıdır; seyahat tarihinde resmî belgeyi ve işletmenin açık olduğunu yeniden doğrulayın.",
       "vegan": [
        {
@@ -5574,24 +5472,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Fallsview / centre",
-        "category": "halal",
-        "cuisine": "Halal or Muslim-friendly options",
-        "description": "A restaurant candidate that stands out in halal food searches, but whose certificate, meat sourcing and shared-kitchen status should be asked about again on the day of your visit.",
-        "lastVerified": "2026-08-25",
-        "name": "The Kasbah Mediterranean",
-        "verification": {
-         "note": "No current independent certificate was verified. Confirm the halal meat document, shared grill/fryer use, sauces and alcohol service directly with the business; if necessary, choose a vegan or plain fish alternative.",
-         "sourceName": "HalalTrip restaurant guide for Muslim travellers",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/",
-         "status": "verification-recommended"
-        },
-        "why": "For strict halal needs, it offers a visible candidate to start your verification questions with, rather than choosing a business at random."
-       }
-      ],
+      "halal": [],
       "researchNote": "Restaurant ownership, menus and certification status can change quickly. These two picks are a starting point; reconfirm the official document and that the business is open on your travel date.",
       "vegan": [
        {
@@ -5868,24 +5749,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Fallsview / centro",
-        "category": "halal",
-        "cuisine": "Opciones halal o aptas para musulmanes",
-        "description": "Un restaurante candidato que destaca al buscar comida halal, pero al que hay que volver a preguntar el día de la visita por el certificado, el origen de la carne y si la cocina es compartida.",
-        "lastVerified": "2026-08-25",
-        "name": "The Kasbah Mediterranean",
-        "verification": {
-         "note": "No se verificó un certificado independiente y actual. Confirma directamente con el local el documento de carne halal, el uso compartido de parrilla o freidora, las salsas y el servicio de alcohol; si hace falta, elige una alternativa vegana o de pescado sencillo.",
-         "sourceName": "HalalTrip, guía de restaurantes para viajeros musulmanes",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/",
-         "status": "verification-recommended"
-        },
-        "why": "Porque, si necesitas halal estricto, ofrece un candidato visible con el que empezar a hacer preguntas de verificación en lugar de elegir un local al azar."
-       }
-      ],
+      "halal": [],
       "researchNote": "La propiedad, la carta y la situación del certificado de los restaurantes pueden cambiar rápido. Estas dos opciones son un punto de partida; en la fecha del viaje, vuelve a verificar el documento oficial y que el local siga abierto.",
       "vegan": [
        {
@@ -6161,24 +6025,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Fallsview / merkez",
-        "category": "halal",
-        "cuisine": "Helal veya Müslüman dostu seçenekler",
-        "description": "Helal yemek aramasında öne çıkan; ancak sertifika, et tedariki ve ortak mutfak durumu ziyaret günü yeniden sorulması gereken restoran adayı.",
-        "lastVerified": "2026-08-25",
-        "name": "The Kasbah Mediterranean",
-        "verification": {
-         "note": "Bağımsız güncel sertifika doğrulanmadı. Helal et belgesini, ortak ızgara/fritöz kullanımını, sosları ve alkol servisini doğrudan işletmeden teyit edin; gerekirse vegan veya sade balık alternatifi seçin.",
-         "sourceName": "HalalTrip Müslüman gezgin restoran rehberi",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/",
-         "status": "verification-recommended"
-        },
-        "why": "Katı helal gereksinimde rastgele bir işletme seçmek yerine doğrulama sorularına başlanabilecek görünür bir aday sunduğu için."
-       }
-      ],
+      "halal": [],
       "researchNote": "Restoran sahipliği, menü ve sertifika durumu hızlı değişebilir. Bu iki seçim başlangıç noktasıdır; seyahat tarihinde resmî belgeyi ve işletmenin açık olduğunu yeniden doğrulayın.",
       "vegan": [
        {
@@ -6501,24 +6348,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Whitehorse",
-        "category": "halal",
-        "cuisine": "Halal or Muslim-friendly options",
-        "description": "A restaurant candidate that stands out in halal food searches, but whose certificate, meat sourcing and shared-kitchen status should be asked about again on the day of your visit.",
-        "lastVerified": "2026-08-25",
-        "name": "Turkish Kebab House",
-        "verification": {
-         "note": "No current independent certificate was verified. Confirm the halal meat document, shared grill/fryer use, sauces and alcohol service directly with the business; if necessary, choose a vegan or plain fish alternative.",
-         "sourceName": "HalalTrip restaurant guide for Muslim travellers",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/",
-         "status": "verification-recommended"
-        },
-        "why": "For strict halal needs, it offers a visible candidate to start your verification questions with, rather than choosing a business at random."
-       }
-      ],
+      "halal": [],
       "researchNote": "Restaurant ownership, menus and certification status can change quickly. These two picks are a starting point; reconfirm the official document and that the business is open on your travel date.",
       "vegan": [
        {
@@ -6795,24 +6625,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Whitehorse",
-        "category": "halal",
-        "cuisine": "Opciones halal o aptas para musulmanes",
-        "description": "Un restaurante candidato que destaca al buscar comida halal, pero al que hay que volver a preguntar el día de la visita por el certificado, el origen de la carne y si la cocina es compartida.",
-        "lastVerified": "2026-08-25",
-        "name": "Turkish Kebab House",
-        "verification": {
-         "note": "No se verificó un certificado independiente y actual. Confirma directamente con el local el documento de carne halal, el uso compartido de parrilla o freidora, las salsas y el servicio de alcohol; si hace falta, elige una alternativa vegana o de pescado sencillo.",
-         "sourceName": "HalalTrip, guía de restaurantes para viajeros musulmanes",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/",
-         "status": "verification-recommended"
-        },
-        "why": "Porque, si necesitas halal estricto, ofrece un candidato visible con el que empezar a hacer preguntas de verificación en lugar de elegir un local al azar."
-       }
-      ],
+      "halal": [],
       "researchNote": "La propiedad, la carta y la situación del certificado de los restaurantes pueden cambiar rápido. Estas dos opciones son un punto de partida; en la fecha del viaje, vuelve a verificar el documento oficial y que el local siga abierto.",
       "vegan": [
        {
@@ -7088,24 +6901,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Whitehorse",
-        "category": "halal",
-        "cuisine": "Helal veya Müslüman dostu seçenekler",
-        "description": "Helal yemek aramasında öne çıkan; ancak sertifika, et tedariki ve ortak mutfak durumu ziyaret günü yeniden sorulması gereken restoran adayı.",
-        "lastVerified": "2026-08-25",
-        "name": "Turkish Kebab House",
-        "verification": {
-         "note": "Bağımsız güncel sertifika doğrulanmadı. Helal et belgesini, ortak ızgara/fritöz kullanımını, sosları ve alkol servisini doğrudan işletmeden teyit edin; gerekirse vegan veya sade balık alternatifi seçin.",
-         "sourceName": "HalalTrip Müslüman gezgin restoran rehberi",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/",
-         "status": "verification-recommended"
-        },
-        "why": "Katı helal gereksinimde rastgele bir işletme seçmek yerine doğrulama sorularına başlanabilecek görünür bir aday sunduğu için."
-       }
-      ],
+      "halal": [],
       "researchNote": "Restoran sahipliği, menü ve sertifika durumu hızlı değişebilir. Bu iki seçim başlangıç noktasıdır; seyahat tarihinde resmî belgeyi ve işletmenin açık olduğunu yeniden doğrulayın.",
       "vegan": [
        {

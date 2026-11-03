@@ -1687,11 +1687,11 @@
         "lastVerified": "2026-10-08",
         "name": "Lazeez Indian Restaurant",
         "verification": {
-         "note": "The business states that it serves halal food. This is not independent verification of a current certificate; confirm documentation, meat sourcing and preparation with the restaurant.",
+         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
          "sourceName": "Da Nang Visitor Center",
          "sourceType": "official-tourism",
          "sourceUrl": "https://danangvisitorcenter.com/en/nha-hang/lazeez-indian-halal-restaurant",
-         "status": "restaurant-confirmed"
+         "status": "verification-recommended"
         },
         "why": "Google Maps checked on 8 October 2026: 4.6/5 from 1,400 reviews. Selection balances rating, review volume and dietary evidence among the candidates checked; it is not a claim of an absolute city-wide ranking."
        }
@@ -1965,11 +1965,11 @@
         "lastVerified": "2026-10-08",
         "name": "Lazeez Indian Restaurant",
         "verification": {
-         "note": "El local declara servir comida halal. No equivale a verificar independientemente un certificado vigente: confirma documentación, carne y preparación con el restaurante.",
+         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
          "sourceName": "Da Nang Visitor Center",
          "sourceType": "official-tourism",
          "sourceUrl": "https://danangvisitorcenter.com/en/nha-hang/lazeez-indian-halal-restaurant",
-         "status": "restaurant-confirmed"
+         "status": "verification-recommended"
         },
         "why": "Google Maps consultado el 8 de octubre de 2026: 4,6/5 y 1400 opiniones. La selección combina puntuación, volumen de opiniones y pruebas alimentarias entre los candidatos revisados; no afirma un primer puesto absoluto en la ciudad."
        }
@@ -2243,11 +2243,11 @@
         "lastVerified": "2026-10-08",
         "name": "Lazeez Indian Restaurant",
         "verification": {
-         "note": "İşletme helal yemek sunduğunu belirtiyor. Bu etiket bağımsız ve süresi geçerli bir sertifika doğrulaması değildir; belge, et tedariki ve hazırlama koşullarını işletmeyle teyit edin.",
+         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
          "sourceName": "Da Nang Visitor Center",
          "sourceType": "official-tourism",
          "sourceUrl": "https://danangvisitorcenter.com/en/nha-hang/lazeez-indian-halal-restaurant",
-         "status": "restaurant-confirmed"
+         "status": "verification-recommended"
         },
         "why": "8 Ekim 2026 kontrolünde Google Maps: 4,6/5, 1.400 yorum. Seçim, kontrol edilen adaylarda puan, yorum sayısı ve beslenme kanıtı birlikte değerlendirilerek yapıldı; şehir genelinde mutlak birincilik iddiası değildir."
        }
@@ -2532,11 +2532,11 @@
         "name": "Baba’s Kitchen",
         "officialUrl": "https://babas.kitchen/",
         "verification": {
-         "note": "The business states that it serves halal food. This is not independent verification of a current certificate; confirm documentation, meat sourcing and preparation with the restaurant.",
+         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
          "sourceName": "Baba’s Kitchen",
          "sourceType": "restaurant",
          "sourceUrl": "https://babas.kitchen/",
-         "status": "restaurant-confirmed"
+         "status": "verification-recommended"
         },
         "why": "Google Maps checked on 8 October 2026: 4.8/5 from 7,205 reviews. Selection balances rating, review volume and dietary evidence among the candidates checked; it is not a claim of an absolute city-wide ranking."
        }
@@ -2815,11 +2815,11 @@
         "name": "Baba’s Kitchen",
         "officialUrl": "https://babas.kitchen/",
         "verification": {
-         "note": "El local declara servir comida halal. No equivale a verificar independientemente un certificado vigente: confirma documentación, carne y preparación con el restaurante.",
+         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
          "sourceName": "Baba’s Kitchen",
          "sourceType": "restaurant",
          "sourceUrl": "https://babas.kitchen/",
-         "status": "restaurant-confirmed"
+         "status": "verification-recommended"
         },
         "why": "Google Maps consultado el 8 de octubre de 2026: 4,8/5 y 7205 opiniones. La selección combina puntuación, volumen de opiniones y pruebas alimentarias entre los candidatos revisados; no afirma un primer puesto absoluto en la ciudad."
        }
@@ -3098,11 +3098,11 @@
         "name": "Baba’s Kitchen",
         "officialUrl": "https://babas.kitchen/",
         "verification": {
-         "note": "İşletme helal yemek sunduğunu belirtiyor. Bu etiket bağımsız ve süresi geçerli bir sertifika doğrulaması değildir; belge, et tedariki ve hazırlama koşullarını işletmeyle teyit edin.",
+         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
          "sourceName": "Baba’s Kitchen",
          "sourceType": "restaurant",
          "sourceUrl": "https://babas.kitchen/",
-         "status": "restaurant-confirmed"
+         "status": "verification-recommended"
         },
         "why": "8 Ekim 2026 kontrolünde Google Maps: 4,8/5, 7.205 yorum. Seçim, kontrol edilen adaylarda puan, yorum sayısı ve beslenme kanıtı birlikte değerlendirilerek yapıldı; şehir genelinde mutlak birincilik iddiası değildir."
        }

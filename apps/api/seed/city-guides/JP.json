@@ -20,11 +20,11 @@
         "lastVerified": "2026-08-12",
         "name": "PANGA",
         "verification": {
-         "note": "The business declares that it uses halal meat; ask about the current certificate, sauce ingredients and alcohol service before ordering.",
+         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
          "sourceName": "JNTO resources for Muslim travellers",
          "sourceType": "official-tourism",
          "sourceUrl": "https://www.japan.travel/en/my/muslim-guide/useful-links/",
-         "status": "restaurant-confirmed"
+         "status": "verification-recommended"
         },
         "why": "It offers a halal yakiniku experience, hard to find in Japan, in a central location."
        }
@@ -343,11 +343,11 @@
         "lastVerified": "2026-08-12",
         "name": "PANGA",
         "verification": {
-         "note": "El local declara que usa carne halal; antes de pedir, pregunta por el certificado vigente, los ingredientes de las salsas y el servicio de alcohol.",
+         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
          "sourceName": "Recursos de la JNTO para viajeros musulmanes",
          "sourceType": "official-tourism",
          "sourceUrl": "https://www.japan.travel/en/my/muslim-guide/useful-links/",
-         "status": "restaurant-confirmed"
+         "status": "verification-recommended"
         },
         "why": "Porque ofrece en una ubicación céntrica una experiencia de yakiniku halal difícil de encontrar en Japón."
        }
@@ -666,11 +666,11 @@
         "lastVerified": "2026-08-12",
         "name": "PANGA",
         "verification": {
-         "note": "İşletme helal et kullandığını beyan ediyor; güncel sertifika, sos içerikleri ve alkol servisini siparişten önce sorun.",
+         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
          "sourceName": "JNTO Müslüman gezgin kaynakları",
          "sourceType": "official-tourism",
          "sourceUrl": "https://www.japan.travel/en/my/muslim-guide/useful-links/",
-         "status": "restaurant-confirmed"
+         "status": "verification-recommended"
         },
         "why": "Japonya'da bulunması zor helal yakiniku deneyimini merkezî bir konumda sunduğu için."
        }
@@ -999,11 +999,11 @@
         "lastVerified": "2026-08-12",
         "name": "Halal Restaurant Matsuri",
         "verification": {
-         "note": "The restaurant declares itself halal-compliant; reconfirm the current certificate's scope and whether alcohol is served.",
+         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
          "sourceName": "JNTO resources for Muslim travellers",
          "sourceType": "official-tourism",
          "sourceUrl": "https://www.japan.travel/en/my/muslim-guide/useful-links/",
-         "status": "restaurant-confirmed"
+         "status": "verification-recommended"
         },
         "why": "You can try the city's street food in one kitchen, with a clear halal declaration."
        }
@@ -1352,11 +1352,11 @@
         "lastVerified": "2026-08-12",
         "name": "Halal Restaurant Matsuri",
         "verification": {
-         "note": "El restaurante declara ser apto halal; vuelve a comprobar el alcance del certificado vigente y si se sirve alcohol.",
+         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
          "sourceName": "Recursos de la JNTO para viajeros musulmanes",
          "sourceType": "official-tourism",
          "sourceUrl": "https://www.japan.travel/en/my/muslim-guide/useful-links/",
-         "status": "restaurant-confirmed"
+         "status": "verification-recommended"
         },
         "why": "Para probar la comida callejera en una sola cocina y con una declaración halal clara."
        }
@@ -1705,11 +1705,11 @@
         "lastVerified": "2026-08-12",
         "name": "Halal Restaurant Matsuri",
         "verification": {
-         "note": "Restoran helal uygunluğunu beyan ediyor; güncel sertifika kapsamını ve alkol bulunup bulunmadığını yeniden doğrulayın.",
+         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
          "sourceName": "JNTO Müslüman gezgin kaynakları",
          "sourceType": "official-tourism",
          "sourceUrl": "https://www.japan.travel/en/my/muslim-guide/useful-links/",
-         "status": "restaurant-confirmed"
+         "status": "verification-recommended"
         },
         "why": "Sokak lezzetlerini tek mutfakta ve açık bir helal beyanıyla deneyebilmek için."
        }
@@ -3143,24 +3143,7 @@
    "translations": {
     "en": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Naka",
-        "category": "halal",
-        "cuisine": "Hiroshima okonomiyaki",
-        "description": "A teppanyaki spot whose entire menu is presented as halal in Hiroshima's official diversity guide.",
-        "lastVerified": "2026-08-12",
-        "name": "Okonomiyaki & Teppanyaki Jirokichi",
-        "verification": {
-         "note": "Hiroshima's official guide presents the entire menu as halal; confirm current practice with the business on the day of your visit.",
-         "sourceName": "JNTO resources for Muslim travellers",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://www.japan.travel/en/my/muslim-guide/useful-links/",
-         "status": "restaurant-confirmed"
-        },
-        "why": "You can try the city's signature dish with clearer information about the meat and sauce ingredients."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Otemachi",
@@ -3484,24 +3467,7 @@
     },
     "es": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Naka",
-        "category": "halal",
-        "cuisine": "Okonomiyaki de Hiroshima",
-        "description": "Local de teppanyaki que la guía oficial de diversidad de Hiroshima presenta con toda la carta halal.",
-        "lastVerified": "2026-08-12",
-        "name": "Okonomiyaki & Teppanyaki Jirokichi",
-        "verification": {
-         "note": "La guía oficial de Hiroshima presenta toda la carta como halal; confirma con el local la práctica vigente el día de la visita.",
-         "sourceName": "Recursos de la JNTO para viajeros musulmanes",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://www.japan.travel/en/my/muslim-guide/useful-links/",
-         "status": "restaurant-confirmed"
-        },
-        "why": "Para probar el plato emblemático de la ciudad con más claridad sobre la carne y las salsas."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Otemachi",
@@ -3825,24 +3791,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Naka",
-        "category": "halal",
-        "cuisine": "Hiroshima okonomiyaki",
-        "description": "Hiroshima'nın resmî çeşitlilik rehberinde tüm menüsü helal olarak tanıtılan teppanyaki adresi.",
-        "lastVerified": "2026-08-12",
-        "name": "Okonomiyaki & Teppanyaki Jirokichi",
-        "verification": {
-         "note": "Hiroshima'nın resmî rehberi menünün tamamını helal olarak tanıtıyor; ziyaret günü işletmeden güncel uygulamayı teyit edin.",
-         "sourceName": "JNTO Müslüman gezgin kaynakları",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://www.japan.travel/en/my/muslim-guide/useful-links/",
-         "status": "restaurant-confirmed"
-        },
-        "why": "Şehrin simge yemeğini, et ve sos içeriği konusunda daha açık bir çerçevede denemek için."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Otemachi",
@@ -6284,24 +6233,7 @@
    "translations": {
     "en": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Sannomiya",
-        "category": "halal",
-        "cuisine": "Kobe beef teppanyaki",
-        "description": "A teppanyaki restaurant, by reservation, focused on a halal Kobe beef experience.",
-        "lastVerified": "2026-08-12",
-        "name": "Halal Kobe Beef Nagomi",
-        "verification": {
-         "note": "Listed as a certified option in the halal programme; re-check the certificate's validity, the drinks list and the booking requirement.",
-         "sourceName": "Kyoto Muslim Friendly Council",
-         "sourceType": "certifier",
-         "sourceUrl": "https://halal.kyoto.jp/client/",
-         "status": "certified-halal"
-        },
-        "why": "For a special experience of Kobe's signature product, with sourcing and preparation in a clearly halal framework."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Sannomiya",
@@ -6617,24 +6549,7 @@
     },
     "es": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Sannomiya",
-        "category": "halal",
-        "cuisine": "Teppanyaki de ternera de Kobe",
-        "description": "Restaurante de teppanyaki con reserva centrado en la experiencia de ternera de Kobe halal.",
-        "lastVerified": "2026-08-12",
-        "name": "Halal Kobe Beef Nagomi",
-        "verification": {
-         "note": "Figura como opción certificada en el programa halal; vuelve a comprobar la validez del certificado, la carta de bebidas y si exige reserva.",
-         "sourceName": "Kyoto Muslim Friendly Council",
-         "sourceType": "certifier",
-         "sourceUrl": "https://halal.kyoto.jp/client/",
-         "status": "certified-halal"
-        },
-        "why": "Para una experiencia especial que ofrece el producto emblemático de Kobe con un suministro y una preparación claramente halal."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Sannomiya",
@@ -6950,24 +6865,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Sannomiya",
-        "category": "halal",
-        "cuisine": "Kobe eti teppanyaki",
-        "description": "Helal Kobe eti deneyimine odaklanan rezervasyonlu teppanyaki restoranı.",
-        "lastVerified": "2026-08-12",
-        "name": "Halal Kobe Beef Nagomi",
-        "verification": {
-         "note": "Helal programında sertifikalı seçenek olarak listeleniyor; sertifika geçerliliğini, içecek listesini ve rezervasyon şartını yeniden kontrol edin.",
-         "sourceName": "Kyoto Muslim Friendly Council",
-         "sourceType": "certifier",
-         "sourceUrl": "https://halal.kyoto.jp/client/",
-         "status": "certified-halal"
-        },
-        "why": "Kobe'nin simge ürününü, tedarik ve hazırlama süreci açıkça helal çerçevede sunan özel bir deneyim için."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Sannomiya",
@@ -7293,24 +7191,7 @@
    "translations": {
     "en": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Nakagusuku",
-        "category": "halal",
-        "cuisine": "Fast food and biryani",
-        "description": "A mostly takeaway kitchen near Okinawa Mosque, opened in 2026, that describes itself as 100 per cent halal.",
-        "lastVerified": "2026-08-12",
-        "name": "Okinawa Halal Kitchen",
-        "verification": {
-         "note": "The business declares that it is 100 per cent halal; as no third-party certificate is visible, ask about current documents and kitchen practice.",
-         "sourceName": "JNTO resources for Muslim travellers",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://www.japan.travel/en/my/muslim-guide/useful-links/",
-         "status": "restaurant-confirmed"
-        },
-        "why": "A straightforward option on the island for anyone looking for a clear halal declaration and an alcohol-free everyday menu."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Chatan",
@@ -7653,24 +7534,7 @@
     },
     "es": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Nakagusuku",
-        "category": "halal",
-        "cuisine": "Comida rápida y biryani",
-        "description": "Cocina sobre todo para llevar, abierta en 2026 cerca de la Mezquita de Okinawa, que se define como cien por cien halal.",
-        "lastVerified": "2026-08-12",
-        "name": "Okinawa Halal Kitchen",
-        "verification": {
-         "note": "El local declara ser cien por cien halal; como no se ve un certificado de terceros, pregunta por el documento vigente y la práctica en cocina.",
-         "sourceName": "Recursos de la JNTO para viajeros musulmanes",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://www.japan.travel/en/my/muslim-guide/useful-links/",
-         "status": "restaurant-confirmed"
-        },
-        "why": "Una opción directa en la isla para quien busca una declaración halal clara y una carta diaria sin alcohol."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Chatan",
@@ -8013,24 +7877,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Nakagusuku",
-        "category": "halal",
-        "cuisine": "Fast food ve biryani",
-        "description": "Okinawa Camii yakınında 2026'da açılan, kendisini yüzde yüz helal olarak tanımlayan paket servis ağırlıklı mutfak.",
-        "lastVerified": "2026-08-12",
-        "name": "Okinawa Halal Kitchen",
-        "verification": {
-         "note": "İşletme yüzde yüz helal olduğunu beyan ediyor; üçüncü taraf sertifikası görünmediğinden güncel belgeyi ve mutfak uygulamasını sorun.",
-         "sourceName": "JNTO Müslüman gezgin kaynakları",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://www.japan.travel/en/my/muslim-guide/useful-links/",
-         "status": "restaurant-confirmed"
-        },
-        "why": "Adada açık helal beyanı ve alkolsüz gündelik menü arayanlar için doğrudan bir seçenek."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Chatan",

@@ -12,25 +12,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Guéliz / Aguedal",
-        "category": "halal",
-        "cuisine": "Traditional Moroccan palace cuisine",
-        "description": "Acclaimed culinary institution run entirely by women chefs, famous for slow-roasted lamb shoulder (mechoui), pigeon pastilla and refined halal Moroccan gastronomy.",
-        "lastVerified": "2026-10-06",
-        "name": "Al Fassia Aguedal",
-        "price": "Yüksek",
-        "verification": {
-         "note": "All traditional Moroccan meats are halal certified; advance booking required.",
-         "sourceName": "Visit Marrakech — official tourism portal",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://www.visitmorocco.com/en/travel/marrakech",
-         "status": "certified-halal"
-        },
-        "why": "The undisputed top dining address in Marrakech to experience royal Moroccan culinary heritage prepared by master women chefs."
-       }
-      ],
+      "halal": [],
       "researchNote": "Traditional Moroccan cuisine is naturally halal; vegetable tagines are great for vegans but confirm they contain no aged butter (smen).",
       "vegan": [
        {
@@ -256,25 +238,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Guéliz / Aguedal",
-        "category": "halal",
-        "cuisine": "Alta cocina tradicional marroquí",
-        "description": "Prestigiosa institución culinaria gestionada por cocineras, célebre por su paletilla de cordero asada (mechoui), pastilla y alta cocina marroquí halal.",
-        "lastVerified": "2026-10-06",
-        "name": "Al Fassia Aguedal",
-        "price": "Yüksek",
-        "verification": {
-         "note": "Todas las carnes marroquíes tienen certificación halal; reserva obligatoria.",
-         "sourceName": "Visit Marrakech — portal oficial de turismo",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://www.visitmorocco.com/en/travel/marrakech",
-         "status": "certified-halal"
-        },
-        "why": "La dirección gastronómica por excelencia de Marrakech para degustar la alta cocina marroquí elaborada por maestras cocineras."
-       }
-      ],
+      "halal": [],
       "researchNote": "La cocina tradicional marroquí es halal; los tajines de verduras son ideales para veganos, pero confirma que no lleven mantequilla rancia (smen).",
       "vegan": [
        {
@@ -500,25 +464,7 @@
     "tr": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Guéliz / Aguedal",
-        "category": "halal",
-        "cuisine": "Geleneksel Fas saray mutfağı",
-        "description": "Tamamen kadın şefler kooperatifi tarafından işletilen, fırında kuzu kolu (mechoui), güvercin pastillası ve zengin Fas mezeleriyle kentin en saygın helal saray mutfağı.",
-        "lastVerified": "2026-10-06",
-        "name": "Al Fassia Aguedal",
-        "price": "Yüksek",
-        "verification": {
-         "note": "Tüm geleneksel Fas etleri helal sertifikalıdır; rezervasyon zorunludur.",
-         "sourceName": "Visit Marrakech — resmî turizm portalı",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://www.visitmorocco.com/en/travel/marrakech",
-         "status": "certified-halal"
-        },
-        "why": "Marakeş'te gerçek ve asil Fas kadın mutfak mirasını tescilli helal etlerle deneyimlemek için tartışmasız 1 numaralı restorandır."
-       }
-      ],
+      "halal": [],
       "researchNote": "Fas'ta geleneksel mutfak doğası gereği helaldir; sebze tajinleri veganlar için harikadır ancak tereyağı (smen) içermediğini teyit edin.",
       "vegan": [
        {
@@ -754,25 +700,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Fes el-Bali Medina",
-        "category": "halal",
-        "cuisine": "Fassi royal cuisine and tagines",
-        "description": "Splendid 19th-century palace in the Medina, celebrated for rich halal beef tagines with prunes, royal couscous and authentic Fassi cooking.",
-        "lastVerified": "2026-10-06",
-        "name": "Palais Bab Sahra",
-        "price": "Orta",
-        "verification": {
-         "note": "All meats used are certified halal; alcohol-free traditional palace setting.",
-         "sourceName": "Fes Regional Tourism Council",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://www.visitmorocco.com/en/travel/fes",
-         "status": "certified-halal"
-        },
-        "why": "The most mesmerizing palace venue in Fes to taste centuries-old beef and lamb tagine recipes amidst Andalusian architectural splendor."
-       }
-      ],
+      "halal": [],
       "researchNote": "Fresh breads and vegetable pots in Fes Medina are delicious; vegans should note that traditional pastilla contains meat.",
       "vegan": [
        {
@@ -998,25 +926,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Medina de Fes el-Bali",
-        "category": "halal",
-        "cuisine": "Cocina real de Fez y tajines",
-        "description": "Espléndido palacio del siglo XIX en la medina, famoso por sus tajines de ternera halal con ciruelas, cuscús real y cocina tradicional de Fez.",
-        "lastVerified": "2026-10-06",
-        "name": "Palais Bab Sahra",
-        "price": "Orta",
-        "verification": {
-         "note": "Todas las carnes utilizadas son halal; ambiente palaciego tradicional sin alcohol.",
-         "sourceName": "Consejo Regional de Turismo de Fez",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://www.visitmorocco.com/en/travel/fes",
-         "status": "certified-halal"
-        },
-        "why": "El palacio más fascinante de Fez para saborear recetas centenarias de tajín de ternera y cordero entre arquitectura andalusí."
-       }
-      ],
+      "halal": [],
       "researchNote": "El pan recién horneado y los guisos de verduras en la medina de Fez son deliciosos; los veganos deben recordar que la pastilla lleva carne.",
       "vegan": [
        {
@@ -1242,25 +1152,7 @@
     "tr": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Fes el-Bali Medinası",
-        "category": "halal",
-        "cuisine": "Fes krallık mutfağı ve tajin",
-        "description": "Asırlık zellige çinili Endülüs sarayında kurutulmuş erikli ve bademli helal dana tajin, taze ekmekler ve geleneksel Fes kraliyet mutfağı.",
-        "lastVerified": "2026-10-06",
-        "name": "Palais Bab Sahra",
-        "price": "Orta",
-        "verification": {
-         "note": "Mutfakta kullanılan tüm etler helal kesimdir; alkolsüz geleneksel saray atmosferi.",
-         "sourceName": "Fes Bölgesel Turizm Konseyi",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://www.visitmorocco.com/en/travel/fes",
-         "status": "certified-halal"
-        },
-        "why": "Fes medinasının mimari ihtişamı eşliğinde asırlık tariflerle pişen kuzu ve dana tajinlerini tatmak için en büyüleyici saray mekanıdır."
-       }
-      ],
+      "halal": [],
       "researchNote": "Fes el-Bali medinasında taze pişirilen ekmekler ve sebze güveçleri lezzetlidir; veganlar güvercinli pastillanın et içerdiğini unutmamalıdır.",
       "vegan": [
        {
@@ -1496,25 +1388,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Blue Alleys / Rue El Kharrazin",
-        "category": "halal",
-        "cuisine": "Rif mountain halal home cooking",
-        "description": "Cherished multi-level restaurant in the blue lanes, serving mountain-spiced halal beef tagines, bubbling fava bean soup (bessara) and fresh home-cooked dishes.",
-        "lastVerified": "2026-10-06",
-        "name": "Restaurant Beldi Bab Ssour",
-        "price": "Ekonomik",
-        "verification": {
-         "note": "Uses halal meats in accordance with local Islamic practices; alcohol-free authentic family venue.",
-         "sourceName": "Moroccan National Tourism Office — Chefchaouen",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://www.visitmorocco.com/en/travel/chefchaouen",
-         "status": "restaurant-confirmed"
-        },
-        "why": "The number one multi-level terrace in the blue city to savor authentic Rif mountain tagines and fava bean soup."
-       }
-      ],
+      "halal": [],
       "researchNote": "In Chefchaouen, morning fava soup (bessara) served with olive oil and cumin is naturally vegan; mountain lamb tagines are strictly halal.",
       "vegan": [
        {
@@ -1730,25 +1604,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Callejuelas azules / Rue El Kharrazin",
-        "category": "halal",
-        "cuisine": "Cocina casera halal de las montañas del Rif",
-        "description": "Apreciado restaurante en las callejuelas azules, con tajines de ternera con especias del Rif, sopa de habas (bessara) y cocina casera halal.",
-        "lastVerified": "2026-10-06",
-        "name": "Restaurant Beldi Bab Ssour",
-        "price": "Ekonomik",
-        "verification": {
-         "note": "Carnes halal según las prácticas islámicas locales; local familiar sin alcohol.",
-         "sourceName": "Oficina Nacional de Turismo de Marruecos — Chauen",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://www.visitmorocco.com/en/travel/chefchaouen",
-         "status": "restaurant-confirmed"
-        },
-        "why": "La terraza número uno en la ciudad azul para degustar auténticos tajines de las montañas del Rif y sopa de habas."
-       }
-      ],
+      "halal": [],
       "researchNote": "En Chauen, la sopa matinal de habas (bessara) con aceite de oliva y comino es vegana; los tajines de cordero son halal.",
       "vegan": [
        {
@@ -1964,25 +1820,7 @@
     "tr": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Mavi Sokaklar / Rue El Kharrazin",
-        "category": "halal",
-        "cuisine": "Rif dağları helal ev mutfağı",
-        "description": "Rif dağlarının zeytinyağı ve baharatlarıyla toprak güveçte pişen helal dana tajin, taze bakla ezmesi (bessara) ve fırın lezzetleri.",
-        "lastVerified": "2026-10-06",
-        "name": "Restaurant Beldi Bab Ssour",
-        "price": "Ekonomik",
-        "verification": {
-         "note": "Yerel İslami kurallara uygun helal etler kullanılır; alkolsüz otantik aile işletmesidir.",
-         "sourceName": "Fas Ulusal Turizm Ofisi — Şefşavan",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://www.visitmorocco.com/en/travel/chefchaouen",
-         "status": "restaurant-confirmed"
-        },
-        "why": "Mavi kentin teraslarında yerel dağ zeytinyağları ve helal et güveçleriyle gerçek bir Fas ev yemeği deneyimi yaşamak için 1 numaradır."
-       }
-      ],
+      "halal": [],
       "researchNote": "Şefşavan'da sabahları bakla çorbası (bessara) zeytinyağı ve kimyonla servis edilir ve doğası gereği vegandır; dağ kuzu tajinleri tam helaldir.",
       "vegan": [
        {

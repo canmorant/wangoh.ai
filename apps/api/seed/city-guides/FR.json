@@ -3936,24 +3936,7 @@
    "translations": {
     "en": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Saint-Michel",
-        "category": "halal",
-        "cuisine": "Indian",
-        "description": "A restaurant serving curries, tandoor dishes and biryani that states it uses halal meat.",
-        "lastVerified": "2026-08-12",
-        "name": "Le Rajistan",
-        "verification": {
-         "note": "Listed in specialist directories with a halal meat declaration; confirm the certificate, alcohol service and shared kitchen with the business.",
-         "sourceName": "Ma Table Halal's current France directory",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://matablehalal.com/",
-         "status": "restaurant-confirmed"
-        },
-        "why": "For a central group meal with adjustable spice levels and strong vegetarian options."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Saint-Pierre",
@@ -4260,24 +4243,7 @@
     },
     "es": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Saint-Michel",
-        "category": "halal",
-        "cuisine": "India",
-        "description": "Restaurante que sirve curris, tandoor y biryani e indica que usa carne halal.",
-        "lastVerified": "2026-08-12",
-        "name": "Le Rajistan",
-        "verification": {
-         "note": "Figura en directorios especializados con declaración de carne halal; confirma con el local el certificado, el servicio de alcohol y si la cocina es compartida.",
-         "sourceName": "Directorio actualizado de Francia de Ma Table Halal",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://matablehalal.com/",
-         "status": "restaurant-confirmed"
-        },
-        "why": "Para una comida en grupo en el centro con picante ajustable y buenas opciones vegetarianas."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Saint-Pierre",
@@ -4584,24 +4550,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Saint-Michel",
-        "category": "halal",
-        "cuisine": "Hint",
-        "description": "Köri, tandoor ve biryani sunan; helal et kullandığını belirten restoran.",
-        "lastVerified": "2026-08-12",
-        "name": "Le Rajistan",
-        "verification": {
-         "note": "Uzman dizinlerde helal et beyanıyla listeleniyor; sertifikayı, alkol servisini ve ortak mutfağı işletmeden teyit edin.",
-         "sourceName": "Ma Table Halal güncel Fransa dizini",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://matablehalal.com/",
-         "status": "restaurant-confirmed"
-        },
-        "why": "Merkezde baharat seviyesi ayarlanabilen ve vejetaryen seçenekleri de güçlü bir grup yemeği için."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Saint-Pierre",
@@ -4927,11 +4876,11 @@
         "lastVerified": "2026-08-12",
         "name": "Au Cèdre",
         "verification": {
-         "note": "The directory/business statement points to halal meat; confirm the current certificate, any shared grill and alcohol status.",
+         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
          "sourceName": "Ma Table Halal's current France directory",
          "sourceType": "specialist-directory",
          "sourceUrl": "https://matablehalal.com/",
-         "status": "restaurant-confirmed"
+         "status": "verification-recommended"
         },
         "why": "For easy access from the cathedral area and a variety of vegetable-heavy plates to share."
        }
@@ -5258,11 +5207,11 @@
         "lastVerified": "2026-08-12",
         "name": "Au Cèdre",
         "verification": {
-         "note": "El directorio y el local declaran carne halal; verifica el certificado vigente, si la parrilla es compartida y el alcohol.",
+         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
          "sourceName": "Directorio actualizado de Francia de Ma Table Halal",
          "sourceType": "specialist-directory",
          "sourceUrl": "https://matablehalal.com/",
-         "status": "restaurant-confirmed"
+         "status": "verification-recommended"
         },
         "why": "Por su fácil acceso desde los alrededores de la catedral y su variedad de platos para compartir con mucha verdura."
        }
@@ -5589,11 +5538,11 @@
         "lastVerified": "2026-08-12",
         "name": "Au Cèdre",
         "verification": {
-         "note": "Dizin/işletme beyanı helal et yönünde; güncel sertifika, ortak ızgara ve alkol durumunu doğrulayın.",
+         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
          "sourceName": "Ma Table Halal güncel Fransa dizini",
          "sourceType": "specialist-directory",
          "sourceUrl": "https://matablehalal.com/",
-         "status": "restaurant-confirmed"
+         "status": "verification-recommended"
         },
         "why": "Katedral çevresinden kolay ulaşım ve sebze ağırlıklı paylaşmalı tabak çeşitliliği için."
        }

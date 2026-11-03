@@ -12,24 +12,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Monastiraki / centre",
-        "category": "halal",
-        "cuisine": "Halal or Muslim-friendly options",
-        "description": "A restaurant candidate that stands out in halal food searches, but whose certificate, meat sourcing and shared-kitchen status should be asked about again on the day of your visit.",
-        "lastVerified": "2026-08-25",
-        "name": "Mirch",
-        "verification": {
-         "note": "No current independent certificate was verified. Confirm the halal meat document, shared grill/fryer use, sauces and alcohol service directly with the business; if necessary, choose a vegan or plain fish alternative.",
-         "sourceName": "HalalTrip restaurant guide for Muslim travellers",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/",
-         "status": "verification-recommended"
-        },
-        "why": "For strict halal needs, it offers a visible candidate to start your verification questions with, rather than choosing a business at random."
-       }
-      ],
+      "halal": [],
       "researchNote": "Restaurant ownership, menus and certification status can change quickly. These two picks are a starting point; reconfirm the official document and that the business is open on your travel date.",
       "vegan": [
        {
@@ -306,24 +289,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Monastiraki / centro",
-        "category": "halal",
-        "cuisine": "Opciones halal o aptas para musulmanes",
-        "description": "Un restaurante candidato que destaca al buscar comida halal, pero al que hay que volver a preguntar el día de la visita por el certificado, el origen de la carne y si la cocina es compartida.",
-        "lastVerified": "2026-08-25",
-        "name": "Mirch",
-        "verification": {
-         "note": "No se verificó un certificado independiente y actual. Confirma directamente con el local el documento de carne halal, el uso compartido de parrilla o freidora, las salsas y el servicio de alcohol; si hace falta, elige una alternativa vegana o de pescado sencillo.",
-         "sourceName": "HalalTrip, guía de restaurantes para viajeros musulmanes",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/",
-         "status": "verification-recommended"
-        },
-        "why": "Porque, si necesitas halal estricto, ofrece un candidato visible con el que empezar a hacer preguntas de verificación en lugar de elegir un local al azar."
-       }
-      ],
+      "halal": [],
       "researchNote": "La propiedad, la carta y la situación del certificado de los restaurantes pueden cambiar rápido. Estas dos opciones son un punto de partida; en la fecha del viaje, vuelve a verificar el documento oficial y que el local siga abierto.",
       "vegan": [
        {
@@ -599,24 +565,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Monastiraki / merkez",
-        "category": "halal",
-        "cuisine": "Helal veya Müslüman dostu seçenekler",
-        "description": "Helal yemek aramasında öne çıkan; ancak sertifika, et tedariki ve ortak mutfak durumu ziyaret günü yeniden sorulması gereken restoran adayı.",
-        "lastVerified": "2026-08-25",
-        "name": "Mirch",
-        "verification": {
-         "note": "Bağımsız güncel sertifika doğrulanmadı. Helal et belgesini, ortak ızgara/fritöz kullanımını, sosları ve alkol servisini doğrudan işletmeden teyit edin; gerekirse vegan veya sade balık alternatifi seçin.",
-         "sourceName": "HalalTrip Müslüman gezgin restoran rehberi",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/",
-         "status": "verification-recommended"
-        },
-        "why": "Katı helal gereksinimde rastgele bir işletme seçmek yerine doğrulama sorularına başlanabilecek görünür bir aday sunduğu için."
-       }
-      ],
+      "halal": [],
       "researchNote": "Restoran sahipliği, menü ve sertifika durumu hızlı değişebilir. Bu iki seçim başlangıç noktasıdır; seyahat tarihinde resmî belgeyi ve işletmenin açık olduğunu yeniden doğrulayın.",
       "vegan": [
        {
@@ -939,24 +888,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Merkez",
-        "category": "halal",
-        "cuisine": "Halal or Muslim-friendly options",
-        "description": "A restaurant candidate that stands out in halal food searches, but whose certificate, meat sourcing and shared-kitchen status should be asked about again on the day of your visit.",
-        "lastVerified": "2026-08-25",
-        "name": "Falafel Taste Middle East",
-        "verification": {
-         "note": "No current independent certificate was verified. Confirm the halal meat document, shared grill/fryer use, sauces and alcohol service directly with the business; if necessary, choose a vegan or plain fish alternative.",
-         "sourceName": "HalalTrip restaurant guide for Muslim travellers",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/",
-         "status": "verification-recommended"
-        },
-        "why": "For strict halal needs, it offers a visible candidate to start your verification questions with, rather than choosing a business at random."
-       }
-      ],
+      "halal": [],
       "researchNote": "Restaurant ownership, menus and certification status can change quickly. These two picks are a starting point; reconfirm the official document and that the business is open on your travel date.",
       "vegan": [
        {
@@ -1229,24 +1161,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Centro",
-        "category": "halal",
-        "cuisine": "Opciones halal o aptas para musulmanes",
-        "description": "Un restaurante candidato que destaca al buscar comida halal, pero al que hay que volver a preguntar el día de la visita por el certificado, el origen de la carne y si la cocina es compartida.",
-        "lastVerified": "2026-08-25",
-        "name": "Falafel Taste Middle East",
-        "verification": {
-         "note": "No se verificó un certificado independiente y actual. Confirma directamente con el local el documento de carne halal, el uso compartido de parrilla o freidora, las salsas y el servicio de alcohol; si hace falta, elige una alternativa vegana o de pescado sencillo.",
-         "sourceName": "HalalTrip, guía de restaurantes para viajeros musulmanes",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/",
-         "status": "verification-recommended"
-        },
-        "why": "Porque, si necesitas halal estricto, ofrece un candidato visible con el que empezar a hacer preguntas de verificación en lugar de elegir un local al azar."
-       }
-      ],
+      "halal": [],
       "researchNote": "La propiedad, la carta y la situación del certificado de los restaurantes pueden cambiar rápido. Estas dos opciones son un punto de partida; en la fecha del viaje, vuelve a verificar el documento oficial y que el local siga abierto.",
       "vegan": [
        {
@@ -1518,24 +1433,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Merkez",
-        "category": "halal",
-        "cuisine": "Helal veya Müslüman dostu seçenekler",
-        "description": "Helal yemek aramasında öne çıkan; ancak sertifika, et tedariki ve ortak mutfak durumu ziyaret günü yeniden sorulması gereken restoran adayı.",
-        "lastVerified": "2026-08-25",
-        "name": "Falafel Taste Middle East",
-        "verification": {
-         "note": "Bağımsız güncel sertifika doğrulanmadı. Helal et belgesini, ortak ızgara/fritöz kullanımını, sosları ve alkol servisini doğrudan işletmeden teyit edin; gerekirse vegan veya sade balık alternatifi seçin.",
-         "sourceName": "HalalTrip Müslüman gezgin restoran rehberi",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/",
-         "status": "verification-recommended"
-        },
-        "why": "Katı helal gereksinimde rastgele bir işletme seçmek yerine doğrulama sorularına başlanabilecek görünür bir aday sunduğu için."
-       }
-      ],
+      "halal": [],
       "researchNote": "Restoran sahipliği, menü ve sertifika durumu hızlı değişebilir. Bu iki seçim başlangıç noktasıdır; seyahat tarihinde resmî belgeyi ve işletmenin açık olduğunu yeniden doğrulayın.",
       "vegan": [
        {
@@ -4599,24 +4497,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Rhodes Town",
-        "category": "halal",
-        "cuisine": "Halal or Muslim-friendly options",
-        "description": "A restaurant candidate that stands out in halal food searches, but whose certificate, meat sourcing and shared-kitchen status should be asked about again on the day of your visit.",
-        "lastVerified": "2026-08-25",
-        "name": "Marrakech",
-        "verification": {
-         "note": "No current independent certificate was verified. Confirm the halal meat document, shared grill/fryer use, sauces and alcohol service directly with the business; if necessary, choose a vegan or plain fish alternative.",
-         "sourceName": "HalalTrip restaurant guide for Muslim travellers",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/",
-         "status": "verification-recommended"
-        },
-        "why": "For strict halal needs, it offers a visible candidate to start your verification questions with, rather than choosing a business at random."
-       }
-      ],
+      "halal": [],
       "researchNote": "Restaurant ownership, menus and certification status can change quickly. These two picks are a starting point; reconfirm the official document and that the business is open on your travel date.",
       "vegan": [
        {
@@ -4889,24 +4770,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Ciudad de Rodas",
-        "category": "halal",
-        "cuisine": "Opciones halal o aptas para musulmanes",
-        "description": "Un restaurante candidato que destaca al buscar comida halal, pero al que hay que volver a preguntar el día de la visita por el certificado, el origen de la carne y si la cocina es compartida.",
-        "lastVerified": "2026-08-25",
-        "name": "Marrakech",
-        "verification": {
-         "note": "No se verificó un certificado independiente y actual. Confirma directamente con el local el documento de carne halal, el uso compartido de parrilla o freidora, las salsas y el servicio de alcohol; si hace falta, elige una alternativa vegana o de pescado sencillo.",
-         "sourceName": "HalalTrip, guía de restaurantes para viajeros musulmanes",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/",
-         "status": "verification-recommended"
-        },
-        "why": "Porque, si necesitas halal estricto, ofrece un candidato visible con el que empezar a hacer preguntas de verificación en lugar de elegir un local al azar."
-       }
-      ],
+      "halal": [],
       "researchNote": "La propiedad, la carta y la situación del certificado de los restaurantes pueden cambiar rápido. Estas dos opciones son un punto de partida; en la fecha del viaje, vuelve a verificar el documento oficial y que el local siga abierto.",
       "vegan": [
        {
@@ -5178,24 +5042,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Rodos şehri",
-        "category": "halal",
-        "cuisine": "Helal veya Müslüman dostu seçenekler",
-        "description": "Helal yemek aramasında öne çıkan; ancak sertifika, et tedariki ve ortak mutfak durumu ziyaret günü yeniden sorulması gereken restoran adayı.",
-        "lastVerified": "2026-08-25",
-        "name": "Marrakech",
-        "verification": {
-         "note": "Bağımsız güncel sertifika doğrulanmadı. Helal et belgesini, ortak ızgara/fritöz kullanımını, sosları ve alkol servisini doğrudan işletmeden teyit edin; gerekirse vegan veya sade balık alternatifi seçin.",
-         "sourceName": "HalalTrip Müslüman gezgin restoran rehberi",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/",
-         "status": "verification-recommended"
-        },
-        "why": "Katı helal gereksinimde rastgele bir işletme seçmek yerine doğrulama sorularına başlanabilecek görünür bir aday sunduğu için."
-       }
-      ],
+      "halal": [],
       "researchNote": "Restoran sahipliği, menü ve sertifika durumu hızlı değişebilir. Bu iki seçim başlangıç noktasıdır; seyahat tarihinde resmî belgeyi ve işletmenin açık olduğunu yeniden doğrulayın.",
       "vegan": [
        {
@@ -5514,24 +5361,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Corfu Town",
-        "category": "halal",
-        "cuisine": "Halal or Muslim-friendly options",
-        "description": "A restaurant candidate that stands out in halal food searches, but whose certificate, meat sourcing and shared-kitchen status should be asked about again on the day of your visit.",
-        "lastVerified": "2026-08-25",
-        "name": "Tandoori Bites",
-        "verification": {
-         "note": "No current independent certificate was verified. Confirm the halal meat document, shared grill/fryer use, sauces and alcohol service directly with the business; if necessary, choose a vegan or plain fish alternative.",
-         "sourceName": "HalalTrip restaurant guide for Muslim travellers",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/",
-         "status": "verification-recommended"
-        },
-        "why": "For strict halal needs, it offers a visible candidate to start your verification questions with, rather than choosing a business at random."
-       }
-      ],
+      "halal": [],
       "researchNote": "Restaurant ownership, menus and certification status can change quickly. These two picks are a starting point; reconfirm the official document and that the business is open on your travel date.",
       "vegan": [
        {
@@ -5804,24 +5634,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Ciudad de Corfú",
-        "category": "halal",
-        "cuisine": "Opciones halal o aptas para musulmanes",
-        "description": "Un restaurante candidato que destaca al buscar comida halal, pero al que hay que volver a preguntar el día de la visita por el certificado, el origen de la carne y si la cocina es compartida.",
-        "lastVerified": "2026-08-25",
-        "name": "Tandoori Bites",
-        "verification": {
-         "note": "No se verificó un certificado independiente y actual. Confirma directamente con el local el documento de carne halal, el uso compartido de parrilla o freidora, las salsas y el servicio de alcohol; si hace falta, elige una alternativa vegana o de pescado sencillo.",
-         "sourceName": "HalalTrip, guía de restaurantes para viajeros musulmanes",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/",
-         "status": "verification-recommended"
-        },
-        "why": "Porque, si necesitas halal estricto, ofrece un candidato visible con el que empezar a hacer preguntas de verificación en lugar de elegir un local al azar."
-       }
-      ],
+      "halal": [],
       "researchNote": "La propiedad, la carta y la situación del certificado de los restaurantes pueden cambiar rápido. Estas dos opciones son un punto de partida; en la fecha del viaje, vuelve a verificar el documento oficial y que el local siga abierto.",
       "vegan": [
        {
@@ -6093,24 +5906,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Korfu şehri",
-        "category": "halal",
-        "cuisine": "Helal veya Müslüman dostu seçenekler",
-        "description": "Helal yemek aramasında öne çıkan; ancak sertifika, et tedariki ve ortak mutfak durumu ziyaret günü yeniden sorulması gereken restoran adayı.",
-        "lastVerified": "2026-08-25",
-        "name": "Tandoori Bites",
-        "verification": {
-         "note": "Bağımsız güncel sertifika doğrulanmadı. Helal et belgesini, ortak ızgara/fritöz kullanımını, sosları ve alkol servisini doğrudan işletmeden teyit edin; gerekirse vegan veya sade balık alternatifi seçin.",
-         "sourceName": "HalalTrip Müslüman gezgin restoran rehberi",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/",
-         "status": "verification-recommended"
-        },
-        "why": "Katı helal gereksinimde rastgele bir işletme seçmek yerine doğrulama sorularına başlanabilecek görünür bir aday sunduğu için."
-       }
-      ],
+      "halal": [],
       "researchNote": "Restoran sahipliği, menü ve sertifika durumu hızlı değişebilir. Bu iki seçim başlangıç noktasıdır; seyahat tarihinde resmî belgeyi ve işletmenin açık olduğunu yeniden doğrulayın.",
       "vegan": [
        {
@@ -6429,24 +6225,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Kalambaka / Kastraki",
-        "category": "halal",
-        "cuisine": "Halal or Muslim-friendly options",
-        "description": "A restaurant candidate that stands out in halal food searches, but whose certificate, meat sourcing and shared-kitchen status should be asked about again on the day of your visit.",
-        "lastVerified": "2026-08-25",
-        "name": "Taverna Gardenia",
-        "verification": {
-         "note": "No current independent certificate was verified. Confirm the halal meat document, shared grill/fryer use, sauces and alcohol service directly with the business; if necessary, choose a vegan or plain fish alternative.",
-         "sourceName": "HalalTrip restaurant guide for Muslim travellers",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/",
-         "status": "verification-recommended"
-        },
-        "why": "For strict halal needs, it offers a visible candidate to start your verification questions with, rather than choosing a business at random."
-       }
-      ],
+      "halal": [],
       "researchNote": "Restaurant ownership, menus and certification status can change quickly. These two picks are a starting point; reconfirm the official document and that the business is open on your travel date.",
       "vegan": [
        {
@@ -6719,24 +6498,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Kalambaka / Kastraki",
-        "category": "halal",
-        "cuisine": "Opciones halal o aptas para musulmanes",
-        "description": "Un restaurante candidato que destaca al buscar comida halal, pero al que hay que volver a preguntar el día de la visita por el certificado, el origen de la carne y si la cocina es compartida.",
-        "lastVerified": "2026-08-25",
-        "name": "Taverna Gardenia",
-        "verification": {
-         "note": "No se verificó un certificado independiente y actual. Confirma directamente con el local el documento de carne halal, el uso compartido de parrilla o freidora, las salsas y el servicio de alcohol; si hace falta, elige una alternativa vegana o de pescado sencillo.",
-         "sourceName": "HalalTrip, guía de restaurantes para viajeros musulmanes",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/",
-         "status": "verification-recommended"
-        },
-        "why": "Porque, si necesitas halal estricto, ofrece un candidato visible con el que empezar a hacer preguntas de verificación en lugar de elegir un local al azar."
-       }
-      ],
+      "halal": [],
       "researchNote": "La propiedad, la carta y la situación del certificado de los restaurantes pueden cambiar rápido. Estas dos opciones son un punto de partida; en la fecha del viaje, vuelve a verificar el documento oficial y que el local siga abierto.",
       "vegan": [
        {
@@ -7008,24 +6770,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Kalambaka / Kastraki",
-        "category": "halal",
-        "cuisine": "Helal veya Müslüman dostu seçenekler",
-        "description": "Helal yemek aramasında öne çıkan; ancak sertifika, et tedariki ve ortak mutfak durumu ziyaret günü yeniden sorulması gereken restoran adayı.",
-        "lastVerified": "2026-08-25",
-        "name": "Taverna Gardenia",
-        "verification": {
-         "note": "Bağımsız güncel sertifika doğrulanmadı. Helal et belgesini, ortak ızgara/fritöz kullanımını, sosları ve alkol servisini doğrudan işletmeden teyit edin; gerekirse vegan veya sade balık alternatifi seçin.",
-         "sourceName": "HalalTrip Müslüman gezgin restoran rehberi",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/",
-         "status": "verification-recommended"
-        },
-        "why": "Katı helal gereksinimde rastgele bir işletme seçmek yerine doğrulama sorularına başlanabilecek görünür bir aday sunduğu için."
-       }
-      ],
+      "halal": [],
       "researchNote": "Restoran sahipliği, menü ve sertifika durumu hızlı değişebilir. Bu iki seçim başlangıç noktasıdır; seyahat tarihinde resmî belgeyi ve işletmenin açık olduğunu yeniden doğrulayın.",
       "vegan": [
        {

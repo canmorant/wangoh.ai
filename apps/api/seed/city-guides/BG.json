@@ -12,25 +12,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Knyaginya Mariya Luiza Blvd",
-        "category": "halal",
-        "cuisine": "Turkish grills and home cooking",
-        "description": "Certified halal Turkish grill house steps away from the historic Banya Bashi Mosque, offering grilled meats, stews and fresh bread.",
-        "lastVerified": "2026-10-06",
-        "name": "Restaurant Türk (Banyabaşı Camii yanı)",
-        "price": "Ekonomik",
-        "verification": {
-         "note": "Meat sourcing is certified halal; alcohol-free restaurant.",
-         "sourceName": "Chief Mufti's Office of Bulgaria Halal Guide",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://www.visitsofia.bg/en",
-         "status": "certified-halal"
-        },
-        "why": "The number one choice in central Sofia for guaranteed halal meats right beside the historic mosque."
-       }
-      ],
+      "halal": [],
       "researchNote": "Salads with sirene cheese are ubiquitous in Bulgaria; ask for no cheese for vegan diets. Head to the Banya Bashi area for halal meats.",
       "vegan": [
        {
@@ -259,25 +241,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Knyaginya Mariya Luiza Blvd",
-        "category": "halal",
-        "cuisine": "Parrilla turca y guisos caseros",
-        "description": "Asador turco halal junto a la mezquita histórica Banya Bashi, con carnes a la brasa, guisos tradicionales y pan recién hecho.",
-        "lastVerified": "2026-10-06",
-        "name": "Restaurant Türk (Banyabaşı Camii yanı)",
-        "price": "Ekonomik",
-        "verification": {
-         "note": "Suministro de carne con certificación halal; restaurante sin alcohol.",
-         "sourceName": "Guía Halal del Gran Muftí de Bulgaria",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://www.visitsofia.bg/en",
-         "status": "certified-halal"
-        },
-        "why": "La mejor opción en el centro de Sofía para comer carne halal con garantías junto a la mezquita histórica."
-       }
-      ],
+      "halal": [],
       "researchNote": "Las ensaladas con queso sirene son habituales en Bulgaria; pide sin queso para dieta vegana. Elige la zona de Banya Bashi para carne halal.",
       "vegan": [
        {
@@ -506,25 +470,7 @@
     "tr": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Knyaginya Mariya Luiza Blvd",
-        "category": "halal",
-        "cuisine": "Türk ızgara ve tencere yemekleri",
-        "description": "Mimar Sinan yapımı tarihi Banyabaşı Camii'nin birkaç adım ötesinde helal sertifikalı ızgara köfte, kuzu kavurma ve geleneksel çorbalar.",
-        "lastVerified": "2026-10-06",
-        "name": "Restaurant Türk (Banyabaşı Camii yanı)",
-        "price": "Ekonomik",
-        "verification": {
-         "note": "Et tedariki helal kesim sertifikalıdır; alkolsüz restorandır.",
-         "sourceName": "Bulgaristan Başmüftülüğü helal yemek rehberi",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://www.visitsofia.bg/en",
-         "status": "certified-halal"
-        },
-        "why": "Sofya merkezinde tarihi camiye sıfır mesafede helal et garantisiyle lezzetli ve doyurucu bir öğün için 1 numaradır."
-       }
-      ],
+      "halal": [],
       "researchNote": "Bulgaristan'da sirene peynirli salatalar yaygındır; vegan tercihte peynirsiz sipariş verin. Helal et için Banyabaşı Camii civarını tercih edin.",
       "vegan": [
        {
@@ -763,25 +709,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Roman Stadium and Dzhumaya Mosque Square",
-        "category": "halal",
-        "cuisine": "Levantine and Turkish grills",
-        "description": "Halal dining stop beside the 14th-century Dzhumaya Mosque and Roman Stadium, serving grilled kebabs, hummus and Levantine mezze.",
-        "lastVerified": "2026-10-06",
-        "name": "Mayrigos (Cuma Camii Yanı)",
-        "price": "Orta",
-        "verification": {
-         "note": "Halal meat declaration confirmed by establishment; alcohol-free seating available.",
-         "sourceName": "Plovdiv Municipality Tourism Portal",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://www.visitplovdiv.com/en",
-         "status": "restaurant-confirmed"
-        },
-        "why": "The most central venue in Plovdiv to enjoy verified halal kebabs overlooking the historic mosque and ancient stadium."
-       }
-      ],
+      "halal": [],
       "researchNote": "Plovdiv's Kapana district has great vegan alternatives; for halal options, the Dzhumaya Mosque area is the best base.",
       "vegan": [
        {
@@ -1002,25 +930,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Plaza del estadio romano y mezquita Dzhumaya",
-        "category": "halal",
-        "cuisine": "Parrilla levantina y turca",
-        "description": "Restaurante halal junto a la mezquita Dzhumaya del siglo XIV y el estadio romano, con brochetas a la brasa, hummus y mezes.",
-        "lastVerified": "2026-10-06",
-        "name": "Mayrigos (Cuma Camii Yanı)",
-        "price": "Orta",
-        "verification": {
-         "note": "Declaración de carne halal confirmada por el local; zona sin alcohol disponible.",
-         "sourceName": "Portal de Turismo del Ayuntamiento de Plovdiv",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://www.visitplovdiv.com/en",
-         "status": "restaurant-confirmed"
-        },
-        "why": "El lugar más céntrico de Plovdiv para disfrutar de kebabs halal con vistas a la mezquita histórica y el estadio romano."
-       }
-      ],
+      "halal": [],
       "researchNote": "El distrito de Kapana en Plovdiv cuenta con buenas opciones veganas; para halal, la zona de la mezquita Dzhumaya es la más adecuada.",
       "vegan": [
        {
@@ -1241,25 +1151,7 @@
     "tr": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Roma Stadyumu ve Cuma Camii Meydanı",
-        "category": "halal",
-        "cuisine": "Şark ve Türk ızgaraları",
-        "description": "14. yüzyıl Dzhumaya (Cuma) Camii'nin gölgesinde helal etli kebaplar, zengin şark mezeleri ve geleneksel fırın lezzetleri.",
-        "lastVerified": "2026-10-06",
-        "name": "Mayrigos (Cuma Camii Yanı)",
-        "price": "Orta",
-        "verification": {
-         "note": "Helal et beyanı işletme tarafından verilmektedir; alkolsüz alan mevcuttur.",
-         "sourceName": "Plovdiv Belediyesi Turizm Portalı",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://www.visitplovdiv.com/en",
-         "status": "restaurant-confirmed"
-        },
-        "why": "Plovdiv antik kent merkezinde cami ve Roma stadyumu manzarası eşliğinde güvenilir helal kebap yemek için en merkezi noktadır."
-       }
-      ],
+      "halal": [],
       "researchNote": "Plovdiv Kapana bölgesi vegan ve vejetaryen seçenekler bakımından zengindir; helal et arayışında Cuma Camii çevresi en uygun bölgedir.",
       "vegan": [
        {
@@ -1490,25 +1382,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Railway Station and Port area",
-        "category": "halal",
-        "cuisine": "Halal grills and bakery",
-        "description": "Reliable halal grill house near the railway station and coastal promenade, offering grilled lamb, beef dishes and warm flatbreads.",
-        "lastVerified": "2026-10-06",
-        "name": "Kervan Halal Grill",
-        "price": "Ekonomik",
-        "verification": {
-         "note": "Meats sourced from halal-certified wholesalers.",
-         "sourceName": "Varna Tourism Information Centre",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://visit.varna.bg/en/",
-         "status": "restaurant-confirmed"
-        },
-        "why": "A practical Varna spot with clear halal declarations, serving generous and hearty grilled meat portions."
-       }
-      ],
+      "halal": [],
       "researchNote": "Seafood restaurants along the Varna coast offer good halal-friendly alternatives; vegans can opt for baked bean and vegetable dishes.",
       "vegan": [
        {
@@ -1743,25 +1617,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Zona de la estación y puerto de Varna",
-        "category": "halal",
-        "cuisine": "Parrilla halal y panadería",
-        "description": "Asador halal de confianza cerca de la estación y el paseo marítimo, con carnes de cordero y ternera a la parrilla y panes calientes.",
-        "lastVerified": "2026-10-06",
-        "name": "Kervan Halal Grill",
-        "price": "Ekonomik",
-        "verification": {
-         "note": "Carnes suministradas por mayoristas con certificación halal.",
-         "sourceName": "Centro de Información Turística de Varna",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://visit.varna.bg/en/",
-         "status": "restaurant-confirmed"
-        },
-        "why": "Un local práctico en Varna con declaración halal clara, que sirve raciones generosas de carne a la parrilla."
-       }
-      ],
+      "halal": [],
       "researchNote": "Las marisquerías de la costa de Varna son buenas alternativas para dieta halal; los veganos pueden optar por guisos de alubias y verduras.",
       "vegan": [
        {
@@ -1996,25 +1852,7 @@
     "tr": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Varna Garı & Liman civarı",
-        "category": "halal",
-        "cuisine": "Helal ızgaralar ve pide fırını",
-        "description": "Deniz kıyısına yakın konumda güvenilir helal dana ve kuzu ızgaraları, taze salatalar ve sıcak pide ekmekleri sunan lezzet durağı.",
-        "lastVerified": "2026-10-06",
-        "name": "Kervan Halal Grill",
-        "price": "Ekonomik",
-        "verification": {
-         "note": "Etler helal kesim sertifikalı toptancılardan temin edilir.",
-         "sourceName": "Varna Turizm Enformasyon Merkezi",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://visit.varna.bg/en/",
-         "status": "restaurant-confirmed"
-        },
-        "why": "Varna'da helal et konusunda açık beyan sunan ve doyurucu ızgara porsiyonları hazırlayan pratik bir restorandır."
-       }
-      ],
+      "halal": [],
       "researchNote": "Varna sahilindeki balık lokantaları helal beslenme için iyi bir alternatiftir; veganlar fırın sebze ve fasulye yemeklerini tercih edebilir.",
       "vegan": [
        {

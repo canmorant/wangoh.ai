@@ -22,11 +22,11 @@
         "name": "Al Fanar Restaurant & Cafe",
         "price": "Orta",
         "verification": {
-         "note": "Meat sourcing complies with official UAE halal standards; no alcohol is served on the premises.",
+         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
          "sourceName": "Visit Dubai — official gastronomy guide",
          "sourceType": "official-tourism",
          "sourceUrl": "https://www.visitdubai.com/en/places-to-visit/al-fanar-restaurant-and-cafe",
-         "status": "certified-halal"
+         "status": "verification-recommended"
         },
         "why": "The most trusted address along Dubai Creek to experience authentic Emirati recipes and certified halal meats in a heritage atmosphere."
        }
@@ -265,11 +265,11 @@
         "name": "Al Fanar Restaurant & Cafe",
         "price": "Orta",
         "verification": {
-         "note": "El suministro de carne cumple las normas halal oficiales de EAU; no se sirve alcohol en el establecimiento.",
+         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
          "sourceName": "Visit Dubai — guía gastronómica oficial",
          "sourceType": "official-tourism",
          "sourceUrl": "https://www.visitdubai.com/en/places-to-visit/al-fanar-restaurant-and-cafe",
-         "status": "certified-halal"
+         "status": "verification-recommended"
         },
         "why": "La dirección más fiable junto a Dubai Creek para probar recetas emiratíes tradicionales y carnes halal certificadas en un entorno histórico."
        }
@@ -508,11 +508,11 @@
         "name": "Al Fanar Restaurant & Cafe",
         "price": "Orta",
         "verification": {
-         "note": "Et tedariki BAE resmî helal standartlarına uygundur; mekânda alkol servisi bulunmamaktadır.",
+         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
          "sourceName": "Visit Dubai — resmî gastronomi rehberi",
          "sourceType": "official-tourism",
          "sourceUrl": "https://www.visitdubai.com/en/places-to-visit/al-fanar-restaurant-and-cafe",
-         "status": "certified-halal"
+         "status": "verification-recommended"
         },
         "why": "Dubai Creek kıyısında otantik Emirlik mutfağını ve tescilli helal etlerini tarihî bir ambiyansta deneyimlemek için en güvenilir adrestir."
        }
@@ -751,25 +751,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Al Muneera / Al Raha Beach",
-        "category": "halal",
-        "cuisine": "Emirati home cooking",
-        "description": "Warm Emirati restaurant founded by local women, serving freshly baked khameer breads, lamb machboos and home-style Gulf recipes by the water.",
-        "lastVerified": "2026-10-06",
-        "name": "Meylas",
-        "price": "Orta",
-        "verification": {
-         "note": "All meats are halal certified; family-friendly alcohol-free venue.",
-         "sourceName": "Experience Abu Dhabi — official tourism portal",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://visitabudhabi.ae/en/where-to-eat/meylas",
-         "status": "certified-halal"
-        },
-        "why": "Ideal for experiencing authentic Gulf home cooking in a welcoming, family-run atmosphere by the water."
-       }
-      ],
+      "halal": [],
       "researchNote": "Rice and meat dishes in Abu Dhabi follow halal standards; for vegan meals, confirm that meat stock or butter is not used.",
       "vegan": [
        {
@@ -997,25 +979,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Al Muneera / Al Raha Beach",
-        "category": "halal",
-        "cuisine": "Cocina casera emiratí",
-        "description": "Acogedor restaurante emiratí impulsado por mujeres locales, con panes khameer recién horneados, machboos de cordero y recetas caseras del Golfo.",
-        "lastVerified": "2026-10-06",
-        "name": "Meylas",
-        "price": "Orta",
-        "verification": {
-         "note": "Todas las carnes tienen certificación halal; local familiar sin alcohol.",
-         "sourceName": "Experience Abu Dhabi — portal oficial de turismo",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://visitabudhabi.ae/en/where-to-eat/meylas",
-         "status": "certified-halal"
-        },
-        "why": "Ideal para disfrutar de la auténtica cocina casera del Golfo en un ambiente familiar y junto al mar."
-       }
-      ],
+      "halal": [],
       "researchNote": "Los arroces y carnes en Abu Dabi siguen pautas halal; para platos veganos, confirma que no lleven caldo de carne ni mantequilla.",
       "vegan": [
        {
@@ -1243,25 +1207,7 @@
     "tr": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Al Muneera / Al Raha Beach",
-        "category": "halal",
-        "cuisine": "Emirlik ev yemekleri",
-        "description": "Emirlik kadınları tarafından işletilen, deniz kenarında taze fırın ekmekleri, kuzu machboos ve ev yapımı yerel lezzetler sunan tescilli helal durak.",
-        "lastVerified": "2026-10-06",
-        "name": "Meylas",
-        "price": "Orta",
-        "verification": {
-         "note": "Tüm etler helal sertifikalıdır; alkolsüz aile dostu işletmedir.",
-         "sourceName": "Experience Abu Dhabi — resmî turizm portalı",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://visitabudhabi.ae/en/where-to-eat/meylas",
-         "status": "certified-halal"
-        },
-        "why": "Körfez mutfağının geleneksel lezzetlerini ticari olmayan samimi bir aile mutfağı dokusuyla deneyimlemek için idealdir."
-       }
-      ],
+      "halal": [],
       "researchNote": "Abu Dabi'de pilav ve et yemekleri helal kurallara uygundur; vegan tercihlerde et suyu veya tereyağı kullanılmadığını sipariş anında teyit edin.",
       "vegan": [
        {

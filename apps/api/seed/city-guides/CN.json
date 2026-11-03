@@ -953,7 +953,7 @@
          "sourceName": "HalalTrip — food guide for Muslim travellers in China",
          "sourceType": "specialist-directory",
          "sourceUrl": "https://www.halaltrip.com/country-guide-details/42/china/",
-         "status": "restaurant-confirmed"
+         "status": "verification-recommended"
         },
         "why": "For a Chinese Muslim dining experience with a long history in the centre."
        }
@@ -1242,7 +1242,7 @@
          "sourceName": "HalalTrip, guía gastronómica de China para viajeros musulmanes",
          "sourceType": "specialist-directory",
          "sourceUrl": "https://www.halaltrip.com/country-guide-details/42/china/",
-         "status": "restaurant-confirmed"
+         "status": "verification-recommended"
         },
         "why": "Para una experiencia de cocina musulmana china con larga historia en el centro."
        }
@@ -1530,7 +1530,7 @@
          "sourceName": "HalalTrip — Çin Müslüman gezgin yemek rehberi",
          "sourceType": "specialist-directory",
          "sourceUrl": "https://www.halaltrip.com/country-guide-details/42/china/",
-         "status": "restaurant-confirmed"
+         "status": "verification-recommended"
         },
         "why": "Merkezde uzun geçmişi olan Çin Müslüman mutfağı deneyimi için."
        }
@@ -1856,24 +1856,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Muslim Quarter",
-        "category": "halal",
-        "cuisine": "Xi'an Hui cuisine",
-        "description": "A family eatery serving lamb paomo and Hui snacks.",
-        "lastVerified": "2026-08-25",
-        "name": "Lao Mi Jia Paomo",
-        "verification": {
-         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
-         "sourceName": "HalalTrip — food guide for Muslim travellers in China",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/42/china/",
-         "status": "restaurant-confirmed"
-        },
-        "why": "For trying the city's signature dish in the context of the Muslim Quarter."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Around Daxingshan Temple",
@@ -2145,24 +2128,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Barrio Musulmán",
-        "category": "halal",
-        "cuisine": "Cocina hui de Xi'an",
-        "description": "Casa de comidas familiar que sirve paomo de cordero y aperitivos hui.",
-        "lastVerified": "2026-08-25",
-        "name": "Lao Mi Jia Paomo",
-        "verification": {
-         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
-         "sourceName": "HalalTrip, guía gastronómica de China para viajeros musulmanes",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/42/china/",
-         "status": "restaurant-confirmed"
-        },
-        "why": "Para probar el plato emblemático de la ciudad en el contexto del barrio musulmán."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Alrededores del templo Daxingshan",
@@ -2433,24 +2399,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Müslüman Mahallesi",
-        "category": "halal",
-        "cuisine": "Xi'an Hui mutfağı",
-        "description": "Kuzu paomo ve Hui atıştırmalıkları sunan aile lokantası.",
-        "lastVerified": "2026-08-25",
-        "name": "Lao Mi Jia Paomo",
-        "verification": {
-         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
-         "sourceName": "HalalTrip — Çin Müslüman gezgin yemek rehberi",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/42/china/",
-         "status": "restaurant-confirmed"
-        },
-        "why": "Şehrin simge yemeğini Müslüman mahalle bağlamında denemek için."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Daxingshan Temple çevresi",
@@ -2772,24 +2721,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Around Tianfu Square",
-        "category": "halal",
-        "cuisine": "Hui and Sichuan",
-        "description": "A restaurant serving noodles, lamb and local dishes for the Hui community.",
-        "lastVerified": "2026-08-25",
-        "name": "Chengdu Huangcheng Mosque Restaurant",
-        "verification": {
-         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
-         "sourceName": "HalalTrip — food guide for Muslim travellers in China",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/42/china/",
-         "status": "verification-recommended"
-        },
-        "why": "A strong candidate for pork-free Chinese food in the centre; ask about the current certificate and shared kitchen."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Taikoo Li",
@@ -3061,24 +2993,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Alrededores de la plaza Tianfu",
-        "category": "halal",
-        "cuisine": "Hui y de Sichuan",
-        "description": "Restaurante para la comunidad hui que sirve fideos, cordero y platos locales.",
-        "lastVerified": "2026-08-25",
-        "name": "Chengdu Huangcheng Mosque Restaurant",
-        "verification": {
-         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
-         "sourceName": "HalalTrip, guía gastronómica de China para viajeros musulmanes",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/42/china/",
-         "status": "verification-recommended"
-        },
-        "why": "Un buen candidato para comida china sin cerdo en el centro; hay que preguntar por el certificado vigente y la cocina compartida."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Taikoo Li",
@@ -3349,24 +3264,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Tianfu Square çevresi",
-        "category": "halal",
-        "cuisine": "Hui ve Sichuan",
-        "description": "Hui topluluğuna yönelik erişte, kuzu ve yerel yemekler sunan restoran.",
-        "lastVerified": "2026-08-25",
-        "name": "Chengdu Huangcheng Mosque Restaurant",
-        "verification": {
-         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
-         "sourceName": "HalalTrip — Çin Müslüman gezgin yemek rehberi",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/42/china/",
-         "status": "verification-recommended"
-        },
-        "why": "Merkezde domuzsuz Çin yemeği için güçlü aday; güncel sertifika ve ortak mutfak sorulmalı."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Taikoo Li",
@@ -3688,24 +3586,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Yuzhong",
-        "category": "halal",
-        "cuisine": "Lanzhou Muslim noodles",
-        "description": "A Muslim eatery serving hand-pulled noodles and beef soup.",
-        "lastVerified": "2026-08-25",
-        "name": "Yilan Lanzhou Beef Noodles",
-        "verification": {
-         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
-         "sourceName": "HalalTrip — food guide for Muslim travellers in China",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/42/china/",
-         "status": "verification-recommended"
-        },
-        "why": "It's a quick, community-based halal candidate away from oily hotpot."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Yuzhong",
@@ -3977,24 +3858,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Yuzhong",
-        "category": "halal",
-        "cuisine": "Fideos musulmanes de Lanzhou",
-        "description": "Casa de comidas musulmana que sirve fideos estirados a mano y sopa de ternera.",
-        "lastVerified": "2026-08-25",
-        "name": "Yilan Lanzhou Beef Noodles",
-        "verification": {
-         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
-         "sourceName": "HalalTrip, guía gastronómica de China para viajeros musulmanes",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/42/china/",
-         "status": "verification-recommended"
-        },
-        "why": "Porque es un candidato de comida halal rápida y comunitaria fuera del hotpot muy graso."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Yuzhong",
@@ -4265,24 +4129,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Yuzhong",
-        "category": "halal",
-        "cuisine": "Lanzhou Müslüman eriştesi",
-        "description": "Elle çekme erişte ve dana çorbası sunan Müslüman lokantası.",
-        "lastVerified": "2026-08-25",
-        "name": "Yilan Lanzhou Beef Noodles",
-        "verification": {
-         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
-         "sourceName": "HalalTrip — Çin Müslüman gezgin yemek rehberi",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/42/china/",
-         "status": "verification-recommended"
-        },
-        "why": "Yüksek yağlı hotpot dışında hızlı ve topluluk temelli helal yemek adayı olduğu için."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Yuzhong",
@@ -4604,24 +4451,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Shangcheng",
-        "category": "halal",
-        "cuisine": "Hui cuisine",
-        "description": "A restaurant near the mosque serving noodles, lamb and Chinese Muslim dishes.",
-        "lastVerified": "2026-08-25",
-        "name": "Phoenix Mosque Muslim Restaurant",
-        "verification": {
-         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
-         "sourceName": "HalalTrip — food guide for Muslim travellers in China",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/42/china/",
-         "status": "verification-recommended"
-        },
-        "why": "It's a central dining candidate connected with the historic Muslim community."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Around West Lake",
@@ -4893,24 +4723,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Shangcheng",
-        "category": "halal",
-        "cuisine": "Cocina hui",
-        "description": "Restaurante junto a la mezquita que sirve fideos, cordero y platos musulmanes chinos.",
-        "lastVerified": "2026-08-25",
-        "name": "Phoenix Mosque Muslim Restaurant",
-        "verification": {
-         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
-         "sourceName": "HalalTrip, guía gastronómica de China para viajeros musulmanes",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/42/china/",
-         "status": "verification-recommended"
-        },
-        "why": "Porque es un candidato céntrico vinculado a la histórica comunidad musulmana."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Alrededores del Lago del Oeste",
@@ -5181,24 +4994,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Shangcheng",
-        "category": "halal",
-        "cuisine": "Hui mutfağı",
-        "description": "Cami çevresinde erişte, kuzu ve Çin Müslüman yemekleri sunan restoran.",
-        "lastVerified": "2026-08-25",
-        "name": "Phoenix Mosque Muslim Restaurant",
-        "verification": {
-         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
-         "sourceName": "HalalTrip — Çin Müslüman gezgin yemek rehberi",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/42/china/",
-         "status": "verification-recommended"
-        },
-        "why": "Tarihî Müslüman topluluğuyla bağlantılı merkezî yemek adayı olduğu için."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "West Lake çevresi",
@@ -6449,7 +6245,7 @@
          "sourceName": "HalalTrip — food guide for Muslim travellers in China",
          "sourceType": "specialist-directory",
          "sourceUrl": "https://www.halaltrip.com/country-guide-details/42/china/",
-         "status": "restaurant-confirmed"
+         "status": "verification-recommended"
         },
         "why": "For experiencing a Muslim culinary institution with a long history in Nanjing."
        }
@@ -6738,7 +6534,7 @@
          "sourceName": "HalalTrip, guía gastronómica de China para viajeros musulmanes",
          "sourceType": "specialist-directory",
          "sourceUrl": "https://www.halaltrip.com/country-guide-details/42/china/",
-         "status": "restaurant-confirmed"
+         "status": "verification-recommended"
         },
         "why": "Para conocer una institución de la cocina musulmana con larga historia en Nankín."
        }
@@ -7026,7 +6822,7 @@
          "sourceName": "HalalTrip — Çin Müslüman gezgin yemek rehberi",
          "sourceType": "specialist-directory",
          "sourceUrl": "https://www.halaltrip.com/country-guide-details/42/china/",
-         "status": "restaurant-confirmed"
+         "status": "verification-recommended"
         },
         "why": "Nanjing'de uzun geçmişi olan Müslüman mutfak kurumunu deneyimlemek için."
        }
@@ -7352,24 +7148,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Around Chongshan Road",
-        "category": "halal",
-        "cuisine": "Hui and northern Chinese",
-        "description": "A Muslim restaurant serving noodles, lamb and beef dishes.",
-        "lastVerified": "2026-08-25",
-        "name": "Guilin Islam Restaurant",
-        "verification": {
-         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
-         "sourceName": "HalalTrip — food guide for Muslim travellers in China",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/42/china/",
-         "status": "verification-recommended"
-        },
-        "why": "It's a halal candidate around the mosque/community in central Guilin."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Central Guilin",
@@ -7641,24 +7420,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Alrededores de Chongshan Road",
-        "category": "halal",
-        "cuisine": "Hui y del norte de China",
-        "description": "Restaurante musulmán que sirve fideos y platos de cordero y ternera.",
-        "lastVerified": "2026-08-25",
-        "name": "Guilin Islam Restaurant",
-        "verification": {
-         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
-         "sourceName": "HalalTrip, guía gastronómica de China para viajeros musulmanes",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/42/china/",
-         "status": "verification-recommended"
-        },
-        "why": "Porque es un candidato de comida halal en el entorno de la mezquita y la comunidad del centro de Guilin."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Centro de Guilin",
@@ -7929,24 +7691,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Chongshan Road çevresi",
-        "category": "halal",
-        "cuisine": "Hui ve kuzey Çin",
-        "description": "Erişte, kuzu ve dana yemekleri sunan Müslüman restoranı.",
-        "lastVerified": "2026-08-25",
-        "name": "Guilin Islam Restaurant",
-        "verification": {
-         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
-         "sourceName": "HalalTrip — Çin Müslüman gezgin yemek rehberi",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/42/china/",
-         "status": "verification-recommended"
-        },
-        "why": "Guilin merkezde cami/topluluk çevresinde helal yemek adayı olduğu için."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Guilin merkezi",
@@ -9200,7 +8945,7 @@
          "sourceName": "HalalTrip — food guide for Muslim travellers in China",
          "sourceType": "specialist-directory",
          "sourceUrl": "https://www.halaltrip.com/country-guide-details/42/china/",
-         "status": "restaurant-confirmed"
+         "status": "verification-recommended"
         },
         "why": "For a filling group meal with a clear Muslim-cuisine identity in central Guangzhou."
        }
@@ -9489,7 +9234,7 @@
          "sourceName": "HalalTrip, guía gastronómica de China para viajeros musulmanes",
          "sourceType": "specialist-directory",
          "sourceUrl": "https://www.halaltrip.com/country-guide-details/42/china/",
-         "status": "restaurant-confirmed"
+         "status": "verification-recommended"
         },
         "why": "Para una comida de grupo saciante con una clara identidad de cocina musulmana en el centro de Cantón."
        }
@@ -9777,7 +9522,7 @@
          "sourceName": "HalalTrip — Çin Müslüman gezgin yemek rehberi",
          "sourceType": "specialist-directory",
          "sourceUrl": "https://www.halaltrip.com/country-guide-details/42/china/",
-         "status": "restaurant-confirmed"
+         "status": "verification-recommended"
         },
         "why": "Guangzhou merkezinde açık Müslüman mutfak kimliğiyle doyurucu grup yemeği için."
        }
@@ -11019,24 +10764,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Central Kunming",
-        "category": "halal",
-        "cuisine": "Yunnan Hui cuisine",
-        "description": "A well-known Muslim restaurant serving beef, lamb and Yunnan-Hui dishes.",
-        "lastVerified": "2026-08-25",
-        "name": "Yilan Yuan",
-        "verification": {
-         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
-         "sourceName": "HalalTrip — food guide for Muslim travellers in China",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/42/china/",
-         "status": "restaurant-confirmed"
-        },
-        "why": "For trying Kunming's important Hui food tradition at a central address."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Wuhua",
@@ -11308,24 +11036,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Centro de Kunming",
-        "category": "halal",
-        "cuisine": "Cocina hui de Yunnan",
-        "description": "Conocido restaurante musulmán que sirve ternera, cordero y platos de Yunnan-hui.",
-        "lastVerified": "2026-08-25",
-        "name": "Yilan Yuan",
-        "verification": {
-         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
-         "sourceName": "HalalTrip, guía gastronómica de China para viajeros musulmanes",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/42/china/",
-         "status": "restaurant-confirmed"
-        },
-        "why": "Para probar en una dirección céntrica la importante tradición gastronómica hui de Kunming."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Wuhua",
@@ -11596,24 +11307,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Kunming merkezi",
-        "category": "halal",
-        "cuisine": "Yunnan Hui mutfağı",
-        "description": "Dana, kuzu ve Yunnan-Hui yemekleri sunan bilinen Müslüman restoranı.",
-        "lastVerified": "2026-08-25",
-        "name": "Yilan Yuan",
-        "verification": {
-         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
-         "sourceName": "HalalTrip — Çin Müslüman gezgin yemek rehberi",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/42/china/",
-         "status": "restaurant-confirmed"
-        },
-        "why": "Kunming'in önemli Hui yemek geleneğini merkezî bir adreste denemek için."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Wuhua",
@@ -11935,24 +11629,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Dali Ancient Town",
-        "category": "halal",
-        "cuisine": "Yunnan Hui",
-        "description": "A Muslim eatery serving beef noodles, lamb and pilaf.",
-        "lastVerified": "2026-08-25",
-        "name": "Dali Muslim Restaurant",
-        "verification": {
-         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
-         "sourceName": "HalalTrip — food guide for Muslim travellers in China",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/42/china/",
-         "status": "verification-recommended"
-        },
-        "why": "A candidate for a pork-free hot meal alongside Bai cooking; verify the current certificate and business name on site."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Dali Ancient Town",
@@ -12224,24 +11901,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Ciudad antigua de Dali",
-        "category": "halal",
-        "cuisine": "Hui de Yunnan",
-        "description": "Casa de comidas musulmana que sirve fideos con ternera, cordero y arroz.",
-        "lastVerified": "2026-08-25",
-        "name": "Dali Muslim Restaurant",
-        "verification": {
-         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
-         "sourceName": "HalalTrip, guía gastronómica de China para viajeros musulmanes",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/42/china/",
-         "status": "verification-recommended"
-        },
-        "why": "Un candidato de comida caliente sin cerdo junto a la cocina bai; hay que verificar en el sitio el certificado vigente y el nombre del local."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Ciudad antigua de Dali",
@@ -12512,24 +12172,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Dali Ancient Town",
-        "category": "halal",
-        "cuisine": "Yunnan Hui",
-        "description": "Dana eriştesi, kuzu ve pilav sunan Müslüman lokantası.",
-        "lastVerified": "2026-08-25",
-        "name": "Dali Muslim Restaurant",
-        "verification": {
-         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
-         "sourceName": "HalalTrip — Çin Müslüman gezgin yemek rehberi",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/42/china/",
-         "status": "verification-recommended"
-        },
-        "why": "Bai mutfağı yanında domuzsuz sıcak yemek adayı; güncel sertifika ve işletme adı yerinde doğrulanmalı."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Dali Ancient Town",

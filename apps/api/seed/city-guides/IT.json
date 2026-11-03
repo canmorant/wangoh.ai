@@ -20,11 +20,11 @@
         "lastVerified": "2026-08-12",
         "name": "Himalaya's Kashmir",
         "verification": {
-         "note": "It appears in the current Italy halal guide; confirm official certification, the meat supplier and alcohol service with the restaurant.",
+         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
          "sourceName": "HalalSpy Italy 2026 field guide",
          "sourceType": "specialist-directory",
          "sourceUrl": "https://halalspy.com/halal-food-guide/europe/italy/",
-         "status": "restaurant-confirmed"
+         "status": "verification-recommended"
         },
         "why": "For its wide menu near Termini, shared-plate service and suitability for late plans."
        }
@@ -369,11 +369,11 @@
         "lastVerified": "2026-08-12",
         "name": "Himalaya's Kashmir",
         "verification": {
-         "note": "Figura en la guía halal actual de Italia; confirma con el restaurante el certificado oficial, el proveedor de carne y el servicio de alcohol.",
+         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
          "sourceName": "Guía de campo HalalSpy Italia 2026",
          "sourceType": "specialist-directory",
          "sourceUrl": "https://halalspy.com/halal-food-guide/europe/italy/",
-         "status": "restaurant-confirmed"
+         "status": "verification-recommended"
         },
         "why": "Por su amplia carta junto a Termini, su servicio para compartir y porque encaja con planes hasta tarde."
        }
@@ -718,11 +718,11 @@
         "lastVerified": "2026-08-12",
         "name": "Himalaya's Kashmir",
         "verification": {
-         "note": "Güncel İtalya helal rehberinde yer alıyor; resmî sertifika, et tedarikçisi ve alkol servisini restoranla teyit edin.",
+         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
          "sourceName": "HalalSpy İtalya 2026 saha rehberi",
          "sourceType": "specialist-directory",
          "sourceUrl": "https://halalspy.com/halal-food-guide/europe/italy/",
-         "status": "restaurant-confirmed"
+         "status": "verification-recommended"
         },
         "why": "Termini çevresinde geniş menü, paylaşmalı servis ve geç saat planlarına uygunluğu nedeniyle."
        }
@@ -1077,11 +1077,11 @@
         "lastVerified": "2026-08-12",
         "name": "SKK Mediterranea",
         "verification": {
-         "note": "Listed in current halal guides; check third-party certification, kitchen sharing and alcohol service on site.",
+         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
          "sourceName": "HalalSpy Italy 2026 field guide",
          "sourceType": "specialist-directory",
          "sourceUrl": "https://halalspy.com/halal-food-guide/europe/italy/",
-         "status": "restaurant-confirmed"
+         "status": "verification-recommended"
         },
         "why": "It's an accessible hot-meal option in an area of the historic island where halal choices are limited."
        }
@@ -1420,11 +1420,11 @@
         "lastVerified": "2026-08-12",
         "name": "SKK Mediterranea",
         "verification": {
-         "note": "Figura en guías halal actuales; comprueba en el sitio el certificado de terceros, si la cocina es compartida y el servicio de alcohol.",
+         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
          "sourceName": "Guía de campo HalalSpy Italia 2026",
          "sourceType": "specialist-directory",
          "sourceUrl": "https://halalspy.com/halal-food-guide/europe/italy/",
-         "status": "restaurant-confirmed"
+         "status": "verification-recommended"
         },
         "why": "Porque es una alternativa asequible de comida caliente en la isla histórica, donde las opciones halal son escasas."
        }
@@ -1763,11 +1763,11 @@
         "lastVerified": "2026-08-12",
         "name": "SKK Mediterranea",
         "verification": {
-         "note": "Güncel helal rehberlerinde listeleniyor; üçüncü taraf sertifika, ortak mutfak ve alkol servisini yerinde kontrol edin.",
+         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
          "sourceName": "HalalSpy İtalya 2026 saha rehberi",
          "sourceType": "specialist-directory",
          "sourceUrl": "https://halalspy.com/halal-food-guide/europe/italy/",
-         "status": "restaurant-confirmed"
+         "status": "verification-recommended"
         },
         "why": "Tarihî adada helal seçeneğin sınırlı olduğu bir bölgede ulaşılabilir sıcak yemek alternatifi olduğu için."
        }
@@ -2107,24 +2107,7 @@
    "translations": {
     "en": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Santa Maria Novella",
-        "category": "halal",
-        "cuisine": "Indian",
-        "description": "A central restaurant serving curries, tandoor dishes and biryani that states it uses halal meat.",
-        "lastVerified": "2026-08-12",
-        "name": "Crown of India",
-        "verification": {
-         "note": "The business/directory statement points to halal meat; ask about the scope of certification, lamb and chicken sourcing and alcohol service.",
-         "sourceName": "HalalSpy Italy 2026 field guide",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://halalspy.com/halal-food-guide/europe/italy/",
-         "status": "restaurant-confirmed"
-        },
-        "why": "For anyone looking for a wide menu to share as a group between the railway station and the historic centre."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Santa Croce",
@@ -2448,24 +2431,7 @@
     },
     "es": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Santa Maria Novella",
-        "category": "halal",
-        "cuisine": "India",
-        "description": "Restaurante céntrico que sirve curris, tandoor y biryani e indica que usa carne halal.",
-        "lastVerified": "2026-08-12",
-        "name": "Crown of India",
-        "verification": {
-         "note": "El local y el directorio declaran carne halal; pregunta por el alcance del certificado, el origen del cordero y el pollo y el servicio de alcohol.",
-         "sourceName": "Guía de campo HalalSpy Italia 2026",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://halalspy.com/halal-food-guide/europe/italy/",
-         "status": "restaurant-confirmed"
-        },
-        "why": "Para quien busca una carta amplia para compartir en grupo entre la estación de tren y el centro histórico."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Santa Croce",
@@ -2789,24 +2755,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Santa Maria Novella",
-        "category": "halal",
-        "cuisine": "Hint",
-        "description": "Köri, tandoor ve biryani sunan, helal et kullandığını belirten merkezî restoran.",
-        "lastVerified": "2026-08-12",
-        "name": "Crown of India",
-        "verification": {
-         "note": "İşletme/dizin beyanı helal et yönünde; sertifika kapsamını, kuzu-tavuk tedarikini ve alkol servisini sorun.",
-         "sourceName": "HalalSpy İtalya 2026 saha rehberi",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://halalspy.com/halal-food-guide/europe/italy/",
-         "status": "restaurant-confirmed"
-        },
-        "why": "Tren istasyonu ve tarihî merkez arasında grupça paylaşılabilen geniş menü arayanlar için."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Santa Croce",
@@ -3149,11 +3098,11 @@
         "lastVerified": "2026-08-12",
         "name": "Aladino",
         "verification": {
-         "note": "Highlighted in the 2026 Italy halal guide; reconfirm the current certificate and alcohol policy with the business.",
+         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
          "sourceName": "HalalSpy Italy 2026 field guide",
          "sourceType": "specialist-directory",
          "sourceUrl": "https://halalspy.com/halal-food-guide/europe/italy/",
-         "status": "restaurant-confirmed"
+         "status": "verification-recommended"
         },
         "why": "For mezze suited to big tables and a taste of Via Padova's multicultural food scene."
        }
@@ -3484,11 +3433,11 @@
         "lastVerified": "2026-08-12",
         "name": "Aladino",
         "verification": {
-         "note": "Destaca en la guía halal de Italia de 2026; vuelve a confirmar con el local el certificado vigente y la política de alcohol.",
+         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
          "sourceName": "Guía de campo HalalSpy Italia 2026",
          "sourceType": "specialist-directory",
          "sourceUrl": "https://halalspy.com/halal-food-guide/europe/italy/",
-         "status": "restaurant-confirmed"
+         "status": "verification-recommended"
         },
         "why": "Por sus mezze, ideales para mesas grandes, y para conocer la escena gastronómica multicultural de Via Padova."
        }
@@ -3819,11 +3768,11 @@
         "lastVerified": "2026-08-12",
         "name": "Aladino",
         "verification": {
-         "note": "2026 İtalya helal rehberinde öne çıkıyor; güncel sertifika ve alkol politikasını işletmeden yeniden teyit edin.",
+         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
          "sourceName": "HalalSpy İtalya 2026 saha rehberi",
          "sourceType": "specialist-directory",
          "sourceUrl": "https://halalspy.com/halal-food-guide/europe/italy/",
-         "status": "restaurant-confirmed"
+         "status": "verification-recommended"
         },
         "why": "Kalabalık masalara uygun mezeleri ve Via Padova'nın çok kültürlü yemek sahnesini deneyimlemek için."
        }
@@ -4155,24 +4104,7 @@
    "translations": {
     "en": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Praiano",
-        "category": "halal",
-        "cuisine": "Japanese and Mediterranean fusion",
-        "description": "A restaurant with a mostly seafood menu that says it can adapt dishes for Muslim guests when told in advance.",
-        "lastVerified": "2026-08-12",
-        "name": "Kasai Amalfi Coast",
-        "verification": {
-         "note": "No independent halal certificate was found; this is only an option that requires prior discussion. Don't treat it as halal without written confirmation about alcohol, mirin, sauces and the shared kitchen.",
-         "sourceName": "HalalSpy Italy 2026 field guide",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://halalspy.com/halal-food-guide/europe/italy/",
-         "status": "verification-recommended"
-        },
-        "why": "While the coast still lacks documented halal restaurants, it's a place where seafood/vegan options can be planned through advance contact."
-       }
-      ],
+      "halal": [],
       "researchNote": "No current, independently certified halal restaurant was found on the Amalfi Coast; this pick is marked only as an alternative that needs prior confirmation.",
       "vegan": [
        {
@@ -4522,24 +4454,7 @@
     },
     "es": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Praiano",
-        "category": "halal",
-        "cuisine": "Fusión japonesa y mediterránea",
-        "description": "Restaurante con una carta centrada en el marisco que indica que puede adaptar platos para clientes musulmanes si se avisa con antelación.",
-        "lastVerified": "2026-08-12",
-        "name": "Kasai Amalfi Coast",
-        "verification": {
-         "note": "No se encontró un certificado halal independiente; es solo una opción que exige consultar antes. No la consideres halal sin confirmar por escrito el alcohol, el mirin, las salsas y si la cocina es compartida.",
-         "sourceName": "Guía de campo HalalSpy Italia 2026",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://halalspy.com/halal-food-guide/europe/italy/",
-         "status": "verification-recommended"
-        },
-        "why": "Porque, mientras en la costa siguen faltando restaurantes halal documentados, aquí se pueden planificar opciones de marisco o veganas contactando antes."
-       }
-      ],
+      "halal": [],
       "researchNote": "No se encontró en la Costa Amalfitana ningún restaurante halal actual con certificación independiente; la recomendación se marca solo como alternativa con confirmación previa.",
       "vegan": [
        {
@@ -4889,24 +4804,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Praiano",
-        "category": "halal",
-        "cuisine": "Japon ve Akdeniz füzyon",
-        "description": "Deniz ürünü ağırlıklı menüsünde Müslüman misafir için önceden bildirildiğinde uyarlama yapabildiğini belirten restoran.",
-        "lastVerified": "2026-08-12",
-        "name": "Kasai Amalfi Coast",
-        "verification": {
-         "note": "Bağımsız helal sertifikası bulunamadı; bu yalnızca ön görüşme gerektiren bir seçenek. Alkol, mirin, sos ve ortak mutfağı yazılı teyit etmeden helal kabul etmeyin.",
-         "sourceName": "HalalSpy İtalya 2026 saha rehberi",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://halalspy.com/halal-food-guide/europe/italy/",
-         "status": "verification-recommended"
-        },
-        "why": "Kıyıda belgeli helal restoran açığı sürerken, ön iletişimle deniz ürünü/vegan seçenek planlanabilen bir adres olması nedeniyle."
-       }
-      ],
+      "halal": [],
       "researchNote": "Amalfi Kıyısı'nda güncel, bağımsız biçimde sertifikalanmış bir helal restoran bulunamadı; öneri yalnızca ön teyitli alternatif olarak işaretlendi.",
       "vegan": [
        {
@@ -5275,11 +5173,11 @@
         "lastVerified": "2026-08-12",
         "name": "Taj Mahal Napoli",
         "verification": {
-         "note": "It appears in current halal directories; confirm the certificate, meat sourcing and alcohol policy before ordering.",
+         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
          "sourceName": "HalalSpy Italy 2026 field guide",
          "sourceType": "specialist-directory",
          "sourceUrl": "https://halalspy.com/halal-food-guide/europe/italy/",
-         "status": "restaurant-confirmed"
+         "status": "verification-recommended"
         },
         "why": "It's close to the Garibaldi transport hub and has a wide, easy-to-understand menu."
        }
@@ -5620,11 +5518,11 @@
         "lastVerified": "2026-08-12",
         "name": "Taj Mahal Napoli",
         "verification": {
-         "note": "Figura en directorios halal actuales; verifica el certificado, el origen de la carne y la política de alcohol antes de pedir.",
+         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
          "sourceName": "Guía de campo HalalSpy Italia 2026",
          "sourceType": "specialist-directory",
          "sourceUrl": "https://halalspy.com/halal-food-guide/europe/italy/",
-         "status": "restaurant-confirmed"
+         "status": "verification-recommended"
         },
         "why": "Porque está cerca del nudo de transporte de Garibaldi y ofrece una carta amplia y fácil de entender."
        }
@@ -5965,11 +5863,11 @@
         "lastVerified": "2026-08-12",
         "name": "Taj Mahal Napoli",
         "verification": {
-         "note": "Güncel helal dizinlerinde yer alıyor; sertifika, et tedariki ve alkol politikasını siparişten önce doğrulayın.",
+         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
          "sourceName": "HalalSpy İtalya 2026 saha rehberi",
          "sourceType": "specialist-directory",
          "sourceUrl": "https://halalspy.com/halal-food-guide/europe/italy/",
-         "status": "restaurant-confirmed"
+         "status": "verification-recommended"
         },
         "why": "Garibaldi ulaşım düğümüne yakın, geniş ve kolay anlaşılır bir menü sunduğu için."
        }

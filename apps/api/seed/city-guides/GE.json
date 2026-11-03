@@ -12,25 +12,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Old Tbilisi / Gorgasali Square",
-        "category": "halal",
-        "cuisine": "Caucasian and Middle Eastern grills",
-        "description": "Certified halal restaurant near the historic Tbilisi Juma Mosque, offering grilled lamb skewers, fresh Georgian bread and Caucasian dishes.",
-        "lastVerified": "2026-10-06",
-        "name": "Ali Baba Halal Restaurant",
-        "price": "Orta",
-        "verification": {
-         "note": "Meat sourced from halal certified slaughterhouses; alcohol-free family dining section.",
-         "sourceName": "Administration of All Muslims of Georgia Guide",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://georgia.travel/en/tbilisi",
-         "status": "certified-halal"
-        },
-        "why": "Most central spot near the sulfur baths and mosque for Muslim travelers seeking verified halal meats and Caucasian kebabs."
-       }
-      ],
+      "halal": [],
       "researchNote": "Cheese and meat are prominent in Georgia; pkhali (walnut paste) and lobio (bean stew) are naturally vegan. Choose certified venues for halal meat.",
       "vegan": [
        {
@@ -265,25 +247,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Casco antiguo de Tiflis / Plaza Gorgasali",
-        "category": "halal",
-        "cuisine": "Parrilla caucásica y de Oriente Medio",
-        "description": "Restaurante halal certificado cerca de la mezquita Juma de Tiflis, con brochetas de cordero, pan georgiano caliente y guisos del Cáucaso.",
-        "lastVerified": "2026-10-06",
-        "name": "Ali Baba Halal Restaurant",
-        "price": "Orta",
-        "verification": {
-         "note": "Carne procedente de mataderos con certificación halal; zona familiar sin alcohol.",
-         "sourceName": "Guía de la Administración de Musulmanes de Georgia",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://georgia.travel/en/tbilisi",
-         "status": "certified-halal"
-        },
-        "why": "El lugar más céntrico junto a los baños de azufre y la mezquita para viajeros que buscan carnes halal verificadas."
-       }
-      ],
+      "halal": [],
       "researchNote": "El queso y la carne abundan en Georgia; el pkhali (pasta de nuez) y el lobio (alubias) son naturalmente veganos. Elige locales certificados para carne halal.",
       "vegan": [
        {
@@ -518,25 +482,7 @@
     "tr": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Eski Tiflis / Gorgasali Meydanı",
-        "category": "halal",
-        "cuisine": "Kafkas ve Orta Doğu ızgaraları",
-        "description": "Tiflis Cuma Camii'ne yürüme mesafesinde helal sertifikalı kuzu şiş, taze Gürcü lavaşı ve aromatik Kafkas tencere yemekleri.",
-        "lastVerified": "2026-10-06",
-        "name": "Ali Baba Halal Restaurant",
-        "price": "Orta",
-        "verification": {
-         "note": "Et tedariki helal kesim sertifikalıdır; alkolsüz aile salonu mevcuttur.",
-         "sourceName": "Gürcistan Müslümanları İdaresi rehberi",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://georgia.travel/en/tbilisi",
-         "status": "certified-halal"
-        },
-        "why": "Tiflis'in tarihi kükürt banyoları ve cami çevresinde güvenilir helal et ve Kafkas kebabı arayan Müslüman gezginler için en merkezi adrestir."
-       }
-      ],
+      "halal": [],
       "researchNote": "Gürcistan'da peynirli ve etli yemekler yaygındır; pkhali (cevizli sebze ezmesi) ve lobio (fasulye) doğası gereği vegandır. Helal et için sertifikalı lokantaları tercih edin.",
       "vegan": [
        {
@@ -791,11 +737,11 @@
         "name": "Karabak Halal Restaurant",
         "price": "Ekonomik",
         "verification": {
-         "note": "Meats used in the kitchen are halal certified; alcohol-free establishment.",
+         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
          "sourceName": "Adjara Tourism Department — Batumi Guide",
          "sourceType": "official-tourism",
          "sourceUrl": "https://gobatumi.com/en",
-         "status": "certified-halal"
+         "status": "verification-recommended"
         },
         "why": "The most dependable address in Batumi for fresh, certified halal meat dishes right by the historic mosque."
        }
@@ -1035,11 +981,11 @@
         "name": "Karabak Halal Restaurant",
         "price": "Ekonomik",
         "verification": {
-         "note": "Las carnes utilizadas tienen certificación halal; local sin alcohol.",
+         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
          "sourceName": "Departamento de Turismo de Ayaria — Guía de Batumi",
          "sourceType": "official-tourism",
          "sourceUrl": "https://gobatumi.com/en",
-         "status": "certified-halal"
+         "status": "verification-recommended"
         },
         "why": "La dirección más fiable de Batumi para disfrutar de carnes halal frescas y certificadas junto a la mezquita histórica."
        }
@@ -1279,11 +1225,11 @@
         "name": "Karabak Halal Restaurant",
         "price": "Ekonomik",
         "verification": {
-         "note": "Mutfakta kullanılan etler helal sertifikalıdır; alkolsüz işletmedir.",
+         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
          "sourceName": "Acara Turizm Departmanı — Batum Rehberi",
          "sourceType": "official-tourism",
          "sourceUrl": "https://gobatumi.com/en",
-         "status": "certified-halal"
+         "status": "verification-recommended"
         },
         "why": "Orta Camii sokağında taze, temiz ve helal sertifikalı et yemekleri arayanlar için Batum'daki en güvenilir merkezdir."
        }
@@ -1523,25 +1469,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Georgian Military Highway",
-        "category": "halal",
-        "cuisine": "Caucasian halal chicken and stews",
-        "description": "Convenient halal stop along the Georgian Military Highway in Kazbegi, offering verified halal chicken, beef stews and hot soups.",
-        "lastVerified": "2026-10-06",
-        "name": "Kazbegi Halal Corner",
-        "price": "Orta",
-        "verification": {
-         "note": "Owner states halal meat usage; verify current sourcing on site due to mountain logistics.",
-         "sourceName": "Administration of All Muslims of Georgia Guide",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://georgia.travel/en",
-         "status": "verification-recommended"
-        },
-        "why": "A dependable address in the Kazbegi mountains providing an explicit halal declaration and fresh hot meals."
-       }
-      ],
+      "halal": [],
       "researchNote": "In Kazbegi village, mushroom khinkali and claypot lobio are reliable vegan staples; ask for halal confirmations in advance for meat.",
       "vegan": [
        {
@@ -1763,25 +1691,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Carretera militar georgiana",
-        "category": "halal",
-        "cuisine": "Pollo halal del Cáucaso y guisos",
-        "description": "Práctica parada halal en la carretera militar de Kazbegi, con platos de pollo y ternera verificados y sopas reconfortantes.",
-        "lastVerified": "2026-10-06",
-        "name": "Kazbegi Halal Corner",
-        "price": "Orta",
-        "verification": {
-         "note": "El propietario declara el uso de carne halal; conviene confirmar el suministro debido a la logística de montaña.",
-         "sourceName": "Guía de la Administración de Musulmanes de Georgia",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://georgia.travel/en",
-         "status": "verification-recommended"
-        },
-        "why": "Una dirección de confianza en las montañas de Kazbegi que ofrece declaración halal explícita y platos calientes."
-       }
-      ],
+      "halal": [],
       "researchNote": "En Kazbegi, el khinkali de setas y el lobio en barro son excelentes opciones veganas; para carnes, consulta la opción halal con antelación.",
       "vegan": [
        {
@@ -2003,25 +1913,7 @@
     "tr": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Askeri Karayolu üzeri",
-        "category": "halal",
-        "cuisine": "Kafkas helal tavuk ve güveç",
-        "description": "Kafkas dağ rotasında helal sertifikalı tavuk ve dana yemekleri, taze çorbalar ve Müslüman gezginler için güvenilir sıcak mola noktası.",
-        "lastVerified": "2026-10-06",
-        "name": "Kazbegi Halal Corner",
-        "price": "Orta",
-        "verification": {
-         "note": "İşletmeci helal et kullandığını beyan etmektedir; dağ lojistiği nedeniyle güncel tedariki teyit edin.",
-         "sourceName": "Gürcistan Müslümanları İdaresi rehberi",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://georgia.travel/en",
-         "status": "verification-recommended"
-        },
-        "why": "Kazbegi dağlarında sınırlı olan helal seçenekler arasında açık helal beyanı ve taze sıcak yemek sunan güvenilir bir adrestir."
-       }
-      ],
+      "halal": [],
       "researchNote": "Kazbegi dağ köyünde mantarlı khinkali ve kil güveçte lobio en popüler vegan seçeneklerdir; et yemeklerinde helal beyanını önceden sorun.",
       "vegan": [
        {

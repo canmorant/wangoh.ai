@@ -1856,24 +1856,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Central The Hague",
-        "category": "halal",
-        "cuisine": "Turkish",
-        "description": "A Turkish restaurant serving charcoal grills, pide and mezze.",
-        "lastVerified": "2026-08-25",
-        "name": "Saray",
-        "verification": {
-         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
-         "sourceName": "HalalTrip — guide for Muslim travellers in the Netherlands",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/78/netherlands/",
-         "status": "verification-recommended"
-        },
-        "why": "For a comprehensive menu within The Hague's strong Turkish community, where you can ask about a halal meat declaration."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Central The Hague",
@@ -2145,24 +2128,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Centro de La Haya",
-        "category": "halal",
-        "cuisine": "Turca",
-        "description": "Restaurante turco que sirve parrilla al carbón (ocakbaşı), pide y mezze.",
-        "lastVerified": "2026-08-25",
-        "name": "Saray",
-        "verification": {
-         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
-         "sourceName": "HalalTrip, guía de los Países Bajos para viajeros musulmanes",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/78/netherlands/",
-         "status": "verification-recommended"
-        },
-        "why": "Por su carta completa, en la que se puede preguntar por la declaración de carne halal, dentro de la gran comunidad turca de La Haya."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Centro de La Haya",
@@ -2433,24 +2399,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Den Haag merkezi",
-        "category": "halal",
-        "cuisine": "Türk",
-        "description": "Ocakbaşı, pide ve mezeler sunan Türk restoranı.",
-        "lastVerified": "2026-08-25",
-        "name": "Saray",
-        "verification": {
-         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
-         "sourceName": "HalalTrip — Hollanda Müslüman gezgin rehberi",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/78/netherlands/",
-         "status": "verification-recommended"
-        },
-        "why": "Lahey'in güçlü Türk topluluğu içinde helal et beyanı sorulabilen kapsamlı menü için."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Den Haag merkezi",
@@ -2772,24 +2721,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Kanaalstraat",
-        "category": "halal",
-        "cuisine": "Turkish grill",
-        "description": "A Turkish restaurant serving grills, pide and wraps.",
-        "lastVerified": "2026-08-25",
-        "name": "Kasap Utrecht",
-        "verification": {
-         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
-         "sourceName": "HalalTrip — guide for Muslim travellers in the Netherlands",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/78/netherlands/",
-         "status": "verification-recommended"
-        },
-        "why": "A community-focused halal candidate in the Lombok neighbourhood; verify that the certificate is current."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Voorstraat",
@@ -3061,24 +2993,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Kanaalstraat",
-        "category": "halal",
-        "cuisine": "Parrilla turca",
-        "description": "Restaurante turco que sirve parrilladas, pide y dürüm.",
-        "lastVerified": "2026-08-25",
-        "name": "Kasap Utrecht",
-        "verification": {
-         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
-         "sourceName": "HalalTrip, guía de los Países Bajos para viajeros musulmanes",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/78/netherlands/",
-         "status": "verification-recommended"
-        },
-        "why": "Un candidato de comida halal centrado en la comunidad musulmana del barrio de Lombok; hay que verificar que el certificado esté vigente."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Voorstraat",
@@ -3349,24 +3264,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Kanaalstraat",
-        "category": "halal",
-        "cuisine": "Türk ızgara",
-        "description": "Izgara, pide ve dürüm sunan Türk restoranı.",
-        "lastVerified": "2026-08-25",
-        "name": "Kasap Utrecht",
-        "verification": {
-         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
-         "sourceName": "HalalTrip — Hollanda Müslüman gezgin rehberi",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/78/netherlands/",
-         "status": "verification-recommended"
-        },
-        "why": "Lombok mahallesinde Müslüman topluluk odaklı helal yemek adayı; sertifika güncelliği doğrulanmalı."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Voorstraat",
@@ -3688,24 +3586,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Centrum",
-        "category": "halal",
-        "cuisine": "Turkish",
-        "description": "A Turkish restaurant serving kebabs, pide and mezze.",
-        "lastVerified": "2026-08-25",
-        "name": "Bosphorus Haarlem",
-        "verification": {
-         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
-         "sourceName": "HalalTrip — guide for Muslim travellers in the Netherlands",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/78/netherlands/",
-         "status": "verification-recommended"
-        },
-        "why": "For a practical family meal in the centre where you can ask about a halal meat declaration; reconfirm the certificate and alcohol."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Central Haarlem",
@@ -3977,24 +3858,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Centrum",
-        "category": "halal",
-        "cuisine": "Turca",
-        "description": "Restaurante turco que sirve kebab, pide y mezze.",
-        "lastVerified": "2026-08-25",
-        "name": "Bosphorus Haarlem",
-        "verification": {
-         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
-         "sourceName": "HalalTrip, guía de los Países Bajos para viajeros musulmanes",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/78/netherlands/",
-         "status": "verification-recommended"
-        },
-        "why": "Para una comida familiar práctica en el centro en la que se puede preguntar por la declaración de carne halal; hay que volver a confirmar el certificado y el alcohol."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Centro de Haarlem",
@@ -4265,24 +4129,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Centrum",
-        "category": "halal",
-        "cuisine": "Türk",
-        "description": "Kebap, pide ve mezeler sunan Türk restoranı.",
-        "lastVerified": "2026-08-25",
-        "name": "Bosphorus Haarlem",
-        "verification": {
-         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
-         "sourceName": "HalalTrip — Hollanda Müslüman gezgin rehberi",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/78/netherlands/",
-         "status": "verification-recommended"
-        },
-        "why": "Merkezde helal et beyanı sorulabilen pratik aile yemeği için; sertifika ve alkol yeniden teyit edilmeli."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Haarlem merkezi",
@@ -4604,24 +4451,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Professorenwijk",
-        "category": "halal",
-        "cuisine": "Lebanese vegetarian",
-        "description": "A vegetarian restaurant serving falafel, hummus, kibbeh and many vegan Levantine dishes.",
-        "lastVerified": "2026-08-25",
-        "name": "Taratoer",
-        "verification": {
-         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
-         "sourceName": "HalalTrip — guide for Muslim travellers in the Netherlands",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/78/netherlands/",
-         "status": "verification-recommended"
-        },
-        "why": "For a vegetable-led alternative that removes uncertainty about meat certification, run by a Muslim owner you can discuss ingredients with."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Leiden Bio Science Park",
@@ -4893,24 +4723,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Professorenwijk",
-        "category": "halal",
-        "cuisine": "Libanesa vegetariana",
-        "description": "Restaurante vegetariano que sirve falafel, hummus, kibbeh y muchos platos levantinos veganos.",
-        "lastVerified": "2026-08-25",
-        "name": "Taratoer",
-        "verification": {
-         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
-         "sourceName": "HalalTrip, guía de los Países Bajos para viajeros musulmanes",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/78/netherlands/",
-         "status": "verification-recommended"
-        },
-        "why": "Como alternativa centrada en las verduras que elimina la duda sobre el certificado de la carne y en la que se pueden comentar los ingredientes con el dueño, musulmán."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Leiden Bio Science Park",
@@ -5181,24 +4994,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Professorenwijk",
-        "category": "halal",
-        "cuisine": "Lübnan vejetaryen",
-        "description": "Falafel, humus, kebbeh ve çok sayıda vegan Levant tabağı sunan vejetaryen restoran.",
-        "lastVerified": "2026-08-25",
-        "name": "Taratoer",
-        "verification": {
-         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
-         "sourceName": "HalalTrip — Hollanda Müslüman gezgin rehberi",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/78/netherlands/",
-         "status": "verification-recommended"
-        },
-        "why": "Et sertifikası belirsizliğini ortadan kaldıran, Müslüman işletmeciyle içerik konuşulabilen sebze odaklı alternatif için."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Leiden Bio Science Park",
@@ -5520,24 +5316,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Central Delft",
-        "category": "halal",
-        "cuisine": "Café and world",
-        "description": "A café-restaurant serving vegetarian, fish and various world dishes.",
-        "lastVerified": "2026-08-25",
-        "name": "Hanno Groots Café",
-        "verification": {
-         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
-         "sourceName": "HalalTrip — guide for Muslim travellers in the Netherlands",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/78/netherlands/",
-         "status": "verification-recommended"
-        },
-        "why": "A candidate you can plan around a plain fish/vegan order; as there is no independent halal certificate, don't take it as definite."
-       }
-      ],
+      "halal": [],
       "researchNote": "Strong evidence of a central, independently halal-certified restaurant in Delft is limited; Rotterdam or The Hague have more options.",
       "vegan": [
        {
@@ -5810,24 +5589,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Centro de Delft",
-        "category": "halal",
-        "cuisine": "Café e internacional",
-        "description": "Café-restaurante que sirve platos vegetarianos, de pescado y de distintas cocinas del mundo.",
-        "lastVerified": "2026-08-25",
-        "name": "Hanno Groots Café",
-        "verification": {
-         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
-         "sourceName": "HalalTrip, guía de los Países Bajos para viajeros musulmanes",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/78/netherlands/",
-         "status": "verification-recommended"
-        },
-        "why": "Un candidato que se puede planificar con un pedido sencillo de pescado o vegano; al no haber certificado halal independiente, no debe darse por seguro."
-       }
-      ],
+      "halal": [],
       "researchNote": "En Delft hay pocas pruebas sólidas de restaurantes céntricos con certificado halal independiente; en Róterdam o La Haya hay más opciones.",
       "vegan": [
        {
@@ -6099,24 +5861,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Delft merkezi",
-        "category": "halal",
-        "cuisine": "Kafe ve dünya",
-        "description": "Vejetaryen, balık ve farklı dünya yemekleri sunan kafe-restoran.",
-        "lastVerified": "2026-08-25",
-        "name": "Hanno Groots Café",
-        "verification": {
-         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
-         "sourceName": "HalalTrip — Hollanda Müslüman gezgin rehberi",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/78/netherlands/",
-         "status": "verification-recommended"
-        },
-        "why": "Sade balık/vegan siparişiyle planlanabilecek aday; bağımsız helal sertifika bulunmadığından kesin kabul edilmemeli."
-       }
-      ],
+      "halal": [],
       "researchNote": "Delft'te merkezî bağımsız helal restoran sertifikası için güçlü kanıt sınırlıdır; Rotterdam veya Lahey'de daha fazla seçenek bulunur.",
       "vegan": [
        {
@@ -6439,24 +6184,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Central Maastricht",
-        "category": "halal",
-        "cuisine": "Levantine",
-        "description": "A Levantine restaurant serving falafel, hummus, mezze and grills.",
-        "lastVerified": "2026-08-25",
-        "name": "Levantini",
-        "verification": {
-         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
-         "sourceName": "HalalTrip — guide for Muslim travellers in the Netherlands",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/78/netherlands/",
-         "status": "verification-recommended"
-        },
-        "why": "For a table with strong vegetable options where a halal meat request can be discussed; reconfirm the certificate."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Sint Pieter",
@@ -6728,24 +6456,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Centro de Maastricht",
-        "category": "halal",
-        "cuisine": "Levantina",
-        "description": "Restaurante levantino que sirve falafel, hummus, mezze y parrilladas.",
-        "lastVerified": "2026-08-25",
-        "name": "Levantini",
-        "verification": {
-         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
-         "sourceName": "HalalTrip, guía de los Países Bajos para viajeros musulmanes",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/78/netherlands/",
-         "status": "verification-recommended"
-        },
-        "why": "Para una mesa con buenas opciones de verdura en la que se puede comentar la petición de carne halal; hay que volver a confirmar el certificado."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Sint Pieter",
@@ -7016,24 +6727,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Maastricht merkezi",
-        "category": "halal",
-        "cuisine": "Levant",
-        "description": "Falafel, humus, meze ve ızgara sunan Levant restoranı.",
-        "lastVerified": "2026-08-25",
-        "name": "Levantini",
-        "verification": {
-         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
-         "sourceName": "HalalTrip — Hollanda Müslüman gezgin rehberi",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/78/netherlands/",
-         "status": "verification-recommended"
-        },
-        "why": "Sebze seçenekleri güçlü ve helal et talebi konuşulabilen masa için; sertifika yeniden teyit edilmeli."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Sint Pieter",
@@ -8271,24 +7965,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Eindhoven",
-        "category": "halal",
-        "cuisine": "Turkish",
-        "description": "A restaurant serving kebabs, pide and traditional Turkish dishes.",
-        "lastVerified": "2026-08-25",
-        "name": "Antep Sofrası",
-        "verification": {
-         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
-         "sourceName": "HalalTrip — guide for Muslim travellers in the Netherlands",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/78/netherlands/",
-         "status": "verification-recommended"
-        },
-        "why": "For a wide family menu in the city where you can ask about a halal meat declaration; confirm the current certificate."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Central Eindhoven",
@@ -8560,24 +8237,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Eindhoven",
-        "category": "halal",
-        "cuisine": "Turca",
-        "description": "Restaurante que sirve kebab, pide y platos turcos tradicionales.",
-        "lastVerified": "2026-08-25",
-        "name": "Antep Sofrası",
-        "verification": {
-         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
-         "sourceName": "HalalTrip, guía de los Países Bajos para viajeros musulmanes",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/78/netherlands/",
-         "status": "verification-recommended"
-        },
-        "why": "Por su amplia carta familiar en la ciudad, en la que se puede preguntar por la declaración de carne halal; hay que confirmar el certificado vigente."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Centro de Eindhoven",
@@ -8848,24 +8508,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Eindhoven",
-        "category": "halal",
-        "cuisine": "Türk",
-        "description": "Kebap, pide ve geleneksel Türk yemekleri sunan restoran.",
-        "lastVerified": "2026-08-25",
-        "name": "Antep Sofrası",
-        "verification": {
-         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
-         "sourceName": "HalalTrip — Hollanda Müslüman gezgin rehberi",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/78/netherlands/",
-         "status": "verification-recommended"
-        },
-        "why": "Şehirde helal et beyanı sorulabilen geniş aile menüsü için; güncel sertifika teyit edilmeli."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Eindhoven merkezi",
@@ -9187,24 +8830,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Central Giethoorn",
-        "category": "halal",
-        "cuisine": "Dutch and world",
-        "description": "A restaurant serving fish, vegetarian and local dishes.",
-        "lastVerified": "2026-08-25",
-        "name": "Grand Café Fanfare",
-        "verification": {
-         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
-         "sourceName": "HalalTrip — guide for Muslim travellers in the Netherlands",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/78/netherlands/",
-         "status": "verification-recommended"
-        },
-        "why": "A candidate you can plan around a plain fish/vegan order; there is no halal certificate or guarantee of a separate kitchen."
-       }
-      ],
+      "halal": [],
       "researchNote": "Evidence of verified, certified halal restaurants in Giethoorn is limited; bringing a packed meal or eating in Zwolle may be safer.",
       "vegan": [
        {
@@ -9477,24 +9103,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Centro de Giethoorn",
-        "category": "halal",
-        "cuisine": "Neerlandesa e internacional",
-        "description": "Restaurante que sirve platos de pescado, vegetarianos y locales.",
-        "lastVerified": "2026-08-25",
-        "name": "Grand Café Fanfare",
-        "verification": {
-         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
-         "sourceName": "HalalTrip, guía de los Países Bajos para viajeros musulmanes",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/78/netherlands/",
-         "status": "verification-recommended"
-        },
-        "why": "Un candidato que se puede planificar con un pedido sencillo de pescado o vegano; no hay certificado halal ni garantía de cocina separada."
-       }
-      ],
+      "halal": [],
       "researchNote": "En Giethoorn hay pocas pruebas de restaurantes con certificado halal verificado; puede ser más seguro llevar comida envasada o comer en Zwolle.",
       "vegan": [
        {
@@ -9766,24 +9375,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Giethoorn merkezi",
-        "category": "halal",
-        "cuisine": "Hollanda ve dünya",
-        "description": "Balık, vejetaryen ve yerel yemekler sunan restoran.",
-        "lastVerified": "2026-08-25",
-        "name": "Grand Café Fanfare",
-        "verification": {
-         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
-         "sourceName": "HalalTrip — Hollanda Müslüman gezgin rehberi",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/78/netherlands/",
-         "status": "verification-recommended"
-        },
-        "why": "Sade balık/vegan siparişiyle planlanabilecek aday; helal sertifikası veya ayrı mutfak garantisi yoktur."
-       }
-      ],
+      "halal": [],
       "researchNote": "Giethoorn'da doğrulanmış sertifikalı helal restoran kanıtı sınırlıdır; paketli öğün getirmek veya Zwolle'de yemek daha güvenli olabilir.",
       "vegan": [
        {
@@ -10106,24 +9698,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Zaanse Schans",
-        "category": "halal",
-        "cuisine": "Dutch and seafood",
-        "description": "A historic-looking restaurant serving fish, vegetables and Dutch dishes.",
-        "lastVerified": "2026-08-25",
-        "name": "De Hoop op d'Swarte Walvis",
-        "verification": {
-         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
-         "sourceName": "HalalTrip — guide for Muslim travellers in the Netherlands",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/78/netherlands/",
-         "status": "verification-recommended"
-        },
-        "why": "A candidate for a plain fish/vegan order; it is not definite, because of halal certification, alcohol and the shared kitchen."
-       }
-      ],
+      "halal": [],
       "researchNote": "Evidence of certified halal restaurants in Zaanse Schans is limited; planning your main meal in Zaandam or Amsterdam is safer.",
       "vegan": [
        {
@@ -10396,24 +9971,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Zaanse Schans",
-        "category": "halal",
-        "cuisine": "Neerlandesa y marisco",
-        "description": "Restaurante de aspecto histórico que sirve pescado, verduras y platos neerlandeses.",
-        "lastVerified": "2026-08-25",
-        "name": "De Hoop op d'Swarte Walvis",
-        "verification": {
-         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
-         "sourceName": "HalalTrip, guía de los Países Bajos para viajeros musulmanes",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/78/netherlands/",
-         "status": "verification-recommended"
-        },
-        "why": "Un candidato para un pedido sencillo de pescado o vegano; por el certificado halal, el alcohol y la cocina compartida, no es seguro."
-       }
-      ],
+      "halal": [],
       "researchNote": "En Zaanse Schans hay pocas pruebas de restaurantes con certificado halal; es más seguro planificar la comida principal en Zaandam o Ámsterdam.",
       "vegan": [
        {
@@ -10685,24 +10243,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Zaanse Schans",
-        "category": "halal",
-        "cuisine": "Hollanda ve deniz ürünü",
-        "description": "Balık, sebze ve Hollanda tabakları sunan tarihî görünümlü restoran.",
-        "lastVerified": "2026-08-25",
-        "name": "De Hoop op d'Swarte Walvis",
-        "verification": {
-         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
-         "sourceName": "HalalTrip — Hollanda Müslüman gezgin rehberi",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/78/netherlands/",
-         "status": "verification-recommended"
-        },
-        "why": "Sade balık/vegan siparişi için aday; helal sertifika, alkol ve ortak mutfak nedeniyle kesin değildir."
-       }
-      ],
+      "halal": [],
       "researchNote": "Zaanse Schans'ta sertifikalı helal restoran kanıtı sınırlıdır; Zaandam veya Amsterdam'da ana öğün planlamak daha güvenlidir.",
       "vegan": [
        {
@@ -11025,24 +10566,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Lisse",
-        "category": "halal",
-        "cuisine": "Dutch and world",
-        "description": "A central restaurant serving fish, vegetable and meat dishes.",
-        "lastVerified": "2026-08-25",
-        "name": "Restaurant Den Ouden Heere",
-        "verification": {
-         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
-         "sourceName": "HalalTrip — guide for Muslim travellers in the Netherlands",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/78/netherlands/",
-         "status": "verification-recommended"
-        },
-        "why": "A candidate where a plain fish/vegan order can be discussed; prior confirmation is essential as there is no independent halal certificate."
-       }
-      ],
+      "halal": [],
       "researchNote": "Evidence of certified halal options in Keukenhof/Lisse is limited; it's safer to bring a packed meal where allowed and plan to eat in Leiden.",
       "vegan": [
        {
@@ -11315,24 +10839,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Lisse",
-        "category": "halal",
-        "cuisine": "Neerlandesa e internacional",
-        "description": "Restaurante céntrico que sirve platos de pescado, verduras y carne.",
-        "lastVerified": "2026-08-25",
-        "name": "Restaurant Den Ouden Heere",
-        "verification": {
-         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
-         "sourceName": "HalalTrip, guía de los Países Bajos para viajeros musulmanes",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/78/netherlands/",
-         "status": "verification-recommended"
-        },
-        "why": "Un candidato en el que se puede hablar de un pedido sencillo de pescado o vegano; al no haber certificado halal independiente, es imprescindible confirmar antes."
-       }
-      ],
+      "halal": [],
       "researchNote": "En Keukenhof/Lisse hay pocas pruebas de opciones con certificado halal; es más seguro llevar comida envasada en la medida en que esté permitido y planear la comida en Leiden.",
       "vegan": [
        {
@@ -11604,24 +11111,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Lisse",
-        "category": "halal",
-        "cuisine": "Hollanda ve dünya",
-        "description": "Balık, sebze ve et yemekleri sunan merkezî restoran.",
-        "lastVerified": "2026-08-25",
-        "name": "Restaurant Den Ouden Heere",
-        "verification": {
-         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
-         "sourceName": "HalalTrip — Hollanda Müslüman gezgin rehberi",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/78/netherlands/",
-         "status": "verification-recommended"
-        },
-        "why": "Sade balık/vegan siparişi konuşulabilen aday; bağımsız helal sertifikası bulunmadığından ön teyit şart."
-       }
-      ],
+      "halal": [],
       "researchNote": "Keukenhof/Lisse'de sertifikalı helal seçenek kanıtı sınırlıdır; izin verilen ölçüde paketli öğün taşımak ve Leiden'da yemek planlamak daha güvenlidir.",
       "vegan": [
        {
@@ -11944,24 +11434,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Den Hoorn",
-        "category": "halal",
-        "cuisine": "Island produce and world",
-        "description": "A restaurant preparing tasting menus with local produce.",
-        "lastVerified": "2026-08-25",
-        "name": "Bij Jef",
-        "verification": {
-         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
-         "sourceName": "HalalTrip — guide for Muslim travellers in the Netherlands",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/78/netherlands/",
-         "status": "verification-recommended"
-        },
-        "why": "A candidate where a vegan or plain fish menu can be requested in advance; get a written guarantee of halal meat and alcohol-free preparation."
-       }
-      ],
+      "halal": [],
       "researchNote": "Evidence of verified, certified halal restaurants on Texel is limited; the safest plan is to bring certified packaged food from Den Helder and choose self-catering accommodation.",
       "vegan": [
        {
@@ -12234,24 +11707,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Den Hoorn",
-        "category": "halal",
-        "cuisine": "Productos de la isla e internacional",
-        "description": "Restaurante que prepara un menú degustación con productos locales.",
-        "lastVerified": "2026-08-25",
-        "name": "Bij Jef",
-        "verification": {
-         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
-         "sourceName": "HalalTrip, guía de los Países Bajos para viajeros musulmanes",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/78/netherlands/",
-         "status": "verification-recommended"
-        },
-        "why": "Un candidato en el que se puede pedir antes un menú vegano o de pescado sencillo; hay que obtener por escrito la garantía de carne halal y preparación sin alcohol."
-       }
-      ],
+      "halal": [],
       "researchNote": "En Texel hay pocas pruebas de restaurantes con certificado halal verificado; el plan más seguro es llevar desde Den Helder comida certificada envasada y elegir un alojamiento donde se pueda cocinar.",
       "vegan": [
        {
@@ -12523,24 +11979,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Den Hoorn",
-        "category": "halal",
-        "cuisine": "Ada ürünleri ve dünya",
-        "description": "Yerel ürünlerle tadım menüsü hazırlayan restoran.",
-        "lastVerified": "2026-08-25",
-        "name": "Bij Jef",
-        "verification": {
-         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
-         "sourceName": "HalalTrip — Hollanda Müslüman gezgin rehberi",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/country-guide-details/78/netherlands/",
-         "status": "verification-recommended"
-        },
-        "why": "Önceden vegan veya sade balık menüsü talep edilebilen aday; helal et ve alkolsüz hazırlık garantisi yazılı alınmalı."
-       }
-      ],
+      "halal": [],
       "researchNote": "Texel'de doğrulanmış sertifikalı helal restoran kanıtı sınırlıdır; Den Helder'den paketli sertifikalı gıda getirmek ve öz hazırlık yapabilen konaklama seçmek en güvenli plandır.",
       "vegan": [
        {

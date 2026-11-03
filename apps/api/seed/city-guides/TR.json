@@ -12,24 +12,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Sultanahmet",
-        "category": "halal",
-        "cuisine": "Turkish grill",
-        "description": "A restaurant in the tourist centre that clearly states it uses halal meat in its kebabs and pottery-kebab dishes.",
-        "lastVerified": "2026-08-12",
-        "name": "Buhara Kebab House",
-        "verification": {
-         "note": "The business declares halal meat; confirm the GİMDES/TSE scope, the supplier and the alcohol policy directly.",
-         "sourceName": "GİMDES current halal certificate search",
-         "sourceType": "certifier",
-         "sourceUrl": "https://www.gimdes.com/SertifikaAra",
-         "status": "restaurant-confirmed"
-        },
-        "why": "For a comprehensive menu with a halal declaration on the Historic Peninsula route."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Beyoğlu",
@@ -374,24 +357,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Sultanahmet",
-        "category": "halal",
-        "cuisine": "Parrilla turca",
-        "description": "Restaurante en la zona turística que indica claramente que usa carne halal en sus kebabs y platos en vasija de barro (testi).",
-        "lastVerified": "2026-08-12",
-        "name": "Buhara Kebab House",
-        "verification": {
-         "note": "El local declara carne halal; confirma directamente el alcance de GİMDES/TSE, el proveedor y la política de alcohol.",
-         "sourceName": "Búsqueda actualizada de certificados halal de GİMDES",
-         "sourceType": "certifier",
-         "sourceUrl": "https://www.gimdes.com/SertifikaAra",
-         "status": "restaurant-confirmed"
-        },
-        "why": "Para una carta completa con declaración halal en la ruta de la Península Histórica."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Beyoğlu",
@@ -735,24 +701,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Sultanahmet",
-        "category": "halal",
-        "cuisine": "Türk ızgara",
-        "description": "Kebap ve testi yemeklerinde helal et kullandığını açıkça belirten turistik merkez restoranı.",
-        "lastVerified": "2026-08-12",
-        "name": "Buhara Kebab House",
-        "verification": {
-         "note": "İşletme helal et beyan ediyor; GİMDES/TSE kapsamını, tedarikçiyi ve alkol politikasını doğrudan teyit edin.",
-         "sourceName": "GİMDES güncel helal sertifika araması",
-         "sourceType": "certifier",
-         "sourceUrl": "https://www.gimdes.com/SertifikaAra",
-         "status": "restaurant-confirmed"
-        },
-        "why": "Tarihî Yarımada rotasında helal beyanı bulunan kapsamlı bir menü için."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Beyoğlu",
@@ -2144,24 +2093,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Alsancak",
-        "category": "halal",
-        "cuisine": "İzmir köfte and grill",
-        "description": "A long-established restaurant known for İzmir köfte and classic grills.",
-        "lastVerified": "2026-08-12",
-        "name": "Topçu Restoran",
-        "verification": {
-         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
-         "sourceName": "GİMDES current halal certificate search",
-         "sourceType": "certifier",
-         "sourceUrl": "https://www.gimdes.com/SertifikaAra",
-         "status": "verification-recommended"
-        },
-        "why": "For anyone wanting a local meat dish in the centre; don't treat it as definitely halal without seeing halal sourcing documents."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Bostanlı",
@@ -2477,24 +2409,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Alsancak",
-        "category": "halal",
-        "cuisine": "Albóndigas de Esmirna y parrilla",
-        "description": "Restaurante veterano conocido por sus albóndigas de Esmirna y sus parrilladas clásicas.",
-        "lastVerified": "2026-08-12",
-        "name": "Topçu Restoran",
-        "verification": {
-         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
-         "sourceName": "Búsqueda actualizada de certificados halal de GİMDES",
-         "sourceType": "certifier",
-         "sourceUrl": "https://www.gimdes.com/SertifikaAra",
-         "status": "verification-recommended"
-        },
-        "why": "Para quien quiere un plato de carne local en el centro; no debe darse por halal sin ver un documento del suministro."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Bostanlı",
@@ -2809,24 +2724,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Alsancak",
-        "category": "halal",
-        "cuisine": "İzmir köfte ve ızgara",
-        "description": "İzmir köfte ve klasik ızgaralarıyla bilinen köklü restoran.",
-        "lastVerified": "2026-08-12",
-        "name": "Topçu Restoran",
-        "verification": {
-         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
-         "sourceName": "GİMDES güncel helal sertifika araması",
-         "sourceType": "certifier",
-         "sourceUrl": "https://www.gimdes.com/SertifikaAra",
-         "status": "verification-recommended"
-        },
-        "why": "Merkezde yerel bir et yemeği isteyenler için; helal tedarik belgesi görülmeden kesin kabul edilmemeli."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Bostanlı",
@@ -3165,24 +3063,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Menteşe",
-        "category": "halal",
-        "cuisine": "Muğla home cooking",
-        "description": "A local eatery serving stews, kebabs and olive-oil dishes.",
-        "lastVerified": "2026-08-12",
-        "name": "Sultan Sofrası",
-        "verification": {
-         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
-         "sourceName": "GİMDES current halal certificate search",
-         "sourceType": "certifier",
-         "sourceUrl": "https://www.gimdes.com/SertifikaAra",
-         "status": "verification-recommended"
-        },
-        "why": "For trying regional cooking in a mixed selection; meat sourcing must be confirmed."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Akyaka",
@@ -3505,24 +3386,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Menteşe",
-        "category": "halal",
-        "cuisine": "Cocina casera de Muğla",
-        "description": "Casa de comidas local que sirve guisos, kebab y verduras en aceite de oliva.",
-        "lastVerified": "2026-08-12",
-        "name": "Sultan Sofrası",
-        "verification": {
-         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
-         "sourceName": "Búsqueda actualizada de certificados halal de GİMDES",
-         "sourceType": "certifier",
-         "sourceUrl": "https://www.gimdes.com/SertifikaAra",
-         "status": "verification-recommended"
-        },
-        "why": "Para probar la cocina regional en una selección variada; hay que confirmar sin falta el origen de la carne."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Akyaka",
@@ -3844,24 +3708,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Menteşe",
-        "category": "halal",
-        "cuisine": "Muğla ev yemekleri",
-        "description": "Tencere yemekleri, kebap ve zeytinyağlılar sunan yerel lokanta.",
-        "lastVerified": "2026-08-12",
-        "name": "Sultan Sofrası",
-        "verification": {
-         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
-         "sourceName": "GİMDES güncel helal sertifika araması",
-         "sourceType": "certifier",
-         "sourceUrl": "https://www.gimdes.com/SertifikaAra",
-         "status": "verification-recommended"
-        },
-        "why": "Bölgesel mutfağı karışık bir seçkide denemek için; et tedariki mutlaka teyit edilmeli."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Akyaka",
@@ -10345,24 +10192,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Kordon",
-        "category": "halal",
-        "cuisine": "Fish and seafood",
-        "description": "A long-established seafront restaurant known for fish and olive-oil dishes.",
-        "lastVerified": "2026-08-12",
-        "name": "Yalova Restaurant",
-        "verification": {
-         "note": "No halal certificate was found and alcohol may be served. Ask clearly about the fish sauce, frying oil and shared kitchen.",
-         "sourceName": "GİMDES current halal certificate search",
-         "sourceType": "certifier",
-         "sourceUrl": "https://www.gimdes.com/SertifikaAra",
-         "status": "verification-recommended"
-        },
-        "why": "A candidate where plain seafood can be chosen instead of meat; advance confirmation is essential because of alcohol and preparation."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Merkez",
@@ -10684,24 +10514,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Kordon",
-        "category": "halal",
-        "cuisine": "Pescado y marisco",
-        "description": "Veterano restaurante del paseo marítimo conocido por su pescado y sus verduras en aceite de oliva.",
-        "lastVerified": "2026-08-12",
-        "name": "Yalova Restaurant",
-        "verification": {
-         "note": "No se encontró un certificado halal y puede servirse alcohol. Pregunta claramente por la salsa del pescado, el aceite de fritura y si la cocina es compartida.",
-         "sourceName": "Búsqueda actualizada de certificados halal de GİMDES",
-         "sourceType": "certifier",
-         "sourceUrl": "https://www.gimdes.com/SertifikaAra",
-         "status": "verification-recommended"
-        },
-        "why": "Un candidato en el que se puede elegir marisco sencillo en lugar de carne; por el alcohol y la forma de preparación, es imprescindible confirmar antes."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Centro",
@@ -11022,24 +10835,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Kordon",
-        "category": "halal",
-        "cuisine": "Balık ve deniz ürünleri",
-        "description": "Balık ve zeytinyağlılarıyla bilinen köklü sahil restoranı.",
-        "lastVerified": "2026-08-12",
-        "name": "Yalova Restaurant",
-        "verification": {
-         "note": "Helal sertifika bulunamadı ve alkol servis edilebilir. Balığın sosunu, kızartma yağını ve ortak mutfağı açıkça sorun.",
-         "sourceName": "GİMDES güncel helal sertifika araması",
-         "sourceType": "certifier",
-         "sourceUrl": "https://www.gimdes.com/SertifikaAra",
-         "status": "verification-recommended"
-        },
-        "why": "Et yerine sade deniz ürünü seçilebilen bir aday; alkol ve hazırlama süreci nedeniyle ön teyit şart."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Merkez",
@@ -11384,24 +11180,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Ortahisar",
-        "category": "halal",
-        "cuisine": "Black Sea pilaf",
-        "description": "A historic tradesmen's eatery serving kavurma, pilaf and hoşaf.",
-        "lastVerified": "2026-08-12",
-        "name": "Tarihi Kalkanoğlu Pilavcısı",
-        "verification": {
-         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
-         "sourceName": "GİMDES current halal certificate search",
-         "sourceType": "certifier",
-         "sourceUrl": "https://www.gimdes.com/SertifikaAra",
-         "status": "verification-recommended"
-        },
-        "why": "For the city's authentic tradesmen's-eatery experience; confirm the halal sourcing document for the meat before visiting."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Ortahisar",
@@ -11717,24 +11496,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Ortahisar",
-        "category": "halal",
-        "cuisine": "Arroz del mar Negro",
-        "description": "Histórica casa de comidas para trabajadores que sirve kavurma, arroz y compota (hoşaf).",
-        "lastVerified": "2026-08-12",
-        "name": "Tarihi Kalkanoğlu Pilavcısı",
-        "verification": {
-         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
-         "sourceName": "Búsqueda actualizada de certificados halal de GİMDES",
-         "sourceType": "certifier",
-         "sourceUrl": "https://www.gimdes.com/SertifikaAra",
-         "status": "verification-recommended"
-        },
-        "why": "Para la auténtica experiencia de casa de comidas de la ciudad; hay que confirmar antes de ir el documento del suministro halal de la carne."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Ortahisar",
@@ -12049,24 +11811,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Ortahisar",
-        "category": "halal",
-        "cuisine": "Karadeniz pilavı",
-        "description": "Kavurma, pilav ve hoşaf sunan tarihî esnaf lokantası.",
-        "lastVerified": "2026-08-12",
-        "name": "Tarihi Kalkanoğlu Pilavcısı",
-        "verification": {
-         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
-         "sourceName": "GİMDES güncel helal sertifika araması",
-         "sourceType": "certifier",
-         "sourceUrl": "https://www.gimdes.com/SertifikaAra",
-         "status": "verification-recommended"
-        },
-        "why": "Şehrin özgün esnaf yemeği deneyimi için; etin helal tedarik belgesi ziyaret öncesi teyit edilmeli."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Ortahisar",
@@ -14432,24 +14177,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Haliliye",
-        "category": "halal",
-        "cuisine": "Urfa kebab",
-        "description": "A large restaurant serving kebabs, aubergine kebab and regional desserts.",
-        "lastVerified": "2026-08-12",
-        "name": "Çulcuoğlu Baklava Restaurant",
-        "verification": {
-         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
-         "sourceName": "GİMDES current halal certificate search",
-         "sourceType": "certifier",
-         "sourceUrl": "https://www.gimdes.com/SertifikaAra",
-         "status": "verification-recommended"
-        },
-        "why": "For an Urfa selection suited to family and group tables; the meat's halal source must be confirmed with documents."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Eyyübiye",
@@ -14760,24 +14488,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Haliliye",
-        "category": "halal",
-        "cuisine": "Kebab de Urfa",
-        "description": "Gran restaurante que sirve kebab, kebab de berenjena y postres típicos.",
-        "lastVerified": "2026-08-12",
-        "name": "Çulcuoğlu Baklava Restaurant",
-        "verification": {
-         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
-         "sourceName": "Búsqueda actualizada de certificados halal de GİMDES",
-         "sourceType": "certifier",
-         "sourceUrl": "https://www.gimdes.com/SertifikaAra",
-         "status": "verification-recommended"
-        },
-        "why": "Para una selección de Urfa apta para familias y grupos; el origen halal de la carne debe verificarse con un documento."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Eyyübiye",
@@ -15087,24 +14798,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Haliliye",
-        "category": "halal",
-        "cuisine": "Urfa kebap",
-        "description": "Kebap, patlıcan kebabı ve yöresel tatlılar sunan geniş restoran.",
-        "lastVerified": "2026-08-12",
-        "name": "Çulcuoğlu Baklava Restaurant",
-        "verification": {
-         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
-         "sourceName": "GİMDES güncel helal sertifika araması",
-         "sourceType": "certifier",
-         "sourceUrl": "https://www.gimdes.com/SertifikaAra",
-         "status": "verification-recommended"
-        },
-        "why": "Aile ve grup masasına uygun Urfa seçkisi için; etin helal kaynağı belgeyle doğrulanmalı."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Eyyübiye",

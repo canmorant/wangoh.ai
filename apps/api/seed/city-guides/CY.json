@@ -22,11 +22,11 @@
         "name": "Niazi's Restaurant",
         "price": "Orta",
         "verification": {
-         "note": "All red meat and poultry products are sourced from local halal slaughter.",
+         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
          "sourceName": "Cyprus Turkish Hoteliers and Restaurateurs Association",
          "sourceType": "official-tourism",
          "sourceUrl": "https://visitncy.com/",
-         "status": "restaurant-confirmed"
+         "status": "verification-recommended"
         },
         "why": "The most established restaurant in Kyrenia harbour to enjoy Cyprus's famous sheftalia kebab and grills with verified halal meat."
        }
@@ -261,11 +261,11 @@
         "name": "Niazi's Restaurant",
         "price": "Orta",
         "verification": {
-         "note": "Toda la carne roja y aves proceden de matanza local halal.",
+         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
          "sourceName": "Asociación de Hoteleros y Restauradores Turcochipriotas",
          "sourceType": "official-tourism",
          "sourceUrl": "https://visitncy.com/",
-         "status": "restaurant-confirmed"
+         "status": "verification-recommended"
         },
         "why": "El restaurante más consagrado del puerto de Kyrenia para degustar el famoso kebab sheftalia y parrilladas con carne halal."
        }
@@ -500,11 +500,11 @@
         "name": "Niazi's Restaurant",
         "price": "Orta",
         "verification": {
-         "note": "Tüm kırmızı et ve tavuk ürünleri yerel helal kesimdir.",
+         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
          "sourceName": "Kıbrıs Türk Otelciler ve Restorancılar Birliği",
          "sourceType": "official-tourism",
          "sourceUrl": "https://visitncy.com/",
-         "status": "restaurant-confirmed"
+         "status": "verification-recommended"
         },
         "why": "Girne limanında adanın tescilli şeftali kebabı ve ızgaralarını güvenilir helal etle tatmak için en köklü restorandır."
        }
@@ -739,25 +739,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Salamis Road",
-        "category": "halal",
-        "cuisine": "Traditional kebabs and döner",
-        "description": "Bustling local restaurant on Salamis Road, serving freshly roasted halal döner, thin crispy lahmacun and seasoned charcoal grills.",
-        "lastVerified": "2026-10-06",
-        "name": "Aspava Restaurant Gazimağusa",
-        "price": "Ekonomik",
-        "verification": {
-         "note": "Döner and kebab meats sourced from certified local halal slaughterhouses.",
-         "sourceName": "Cyprus Turkish Gastronomy Guide",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://visitncy.com/island/famagusta/",
-         "status": "restaurant-confirmed"
-        },
-        "why": "The city's most popular venue for a quick, hearty meal with verified halal meats before or after visiting Salamis."
-       }
-      ],
+      "halal": [],
       "researchNote": "Cold olive-oil mezze inside Famagusta's walls are great for vegans; meat dishes follow local halal standards.",
       "vegan": [
        {
@@ -983,25 +965,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Salamis Road",
-        "category": "halal",
-        "cuisine": "Kebabs tradicionales y döner",
-        "description": "Concurrido restaurante local en Salamis Road, con döner halal recién cortado, lahmacun crujiente y carnes sabrosas a la brasa.",
-        "lastVerified": "2026-10-06",
-        "name": "Aspava Restaurant Gazimağusa",
-        "price": "Ekonomik",
-        "verification": {
-         "note": "La carne de döner y kebab procede de mataderos locales con certificación halal.",
-         "sourceName": "Guía Gastronómica Turcochipriota",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://visitncy.com/island/famagusta/",
-         "status": "restaurant-confirmed"
-        },
-        "why": "El local más popular de la ciudad para una comida rápida y sabrosa con carne halal garantizada antes o después de Salamina."
-       }
-      ],
+      "halal": [],
       "researchNote": "Los mezes fríos con aceite de oliva intramuros en Famagusta son ideales para veganos; las carnes siguen pautas halal locales.",
       "vegan": [
        {
@@ -1227,25 +1191,7 @@
     "tr": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Salamis Yolu",
-        "category": "halal",
-        "cuisine": "Geleneksel kebap ve döner",
-        "description": "Şehrin işlek caddesinde taze helal döner, lahmacun, pide ve kuzu ızgaralarıyla yerel halkın en çok tercih ettiği güvenilir lezzet durağı.",
-        "lastVerified": "2026-10-06",
-        "name": "Aspava Restaurant Gazimağusa",
-        "price": "Ekonomik",
-        "verification": {
-         "note": "Döner ve kebap etleri helal sertifikalı yerel mezbahalardan temin edilir.",
-         "sourceName": "Kıbrıs Türk Gastronomi Rehberi",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://visitncy.com/island/famagusta/",
-         "status": "restaurant-confirmed"
-        },
-        "why": "Salamis gezisi öncesi veya sonrası hızlı, doyurucu ve helal et güvencesiyle yemek yemek için kentin en popüler adresidir."
-       }
-      ],
+      "halal": [],
       "researchNote": "Gazimağusa sur içinde zeytinyağlı taze mezeler veganlar için harika seçenektir; et yemeklerinde yerel helal sertifikası geçerlidir.",
       "vegan": [
        {
@@ -1481,25 +1427,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Kato Paphos / Coral Bay Road",
-        "category": "halal",
-        "cuisine": "Lebanese grills and kebabs",
-        "description": "Dedicated halal restaurant in the Kato Paphos area, offering certified halal lamb skewers, chicken shawarma, falafel and fresh meze.",
-        "lastVerified": "2026-10-06",
-        "name": "Samisen & Lebanese Halal House",
-        "price": "Orta",
-        "verification": {
-         "note": "All meats are halal certified; wide range of non-alcoholic beverages.",
-         "sourceName": "Visit Cyprus — dining directory",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://www.visitcyprus.com/",
-         "status": "certified-halal"
-        },
-        "why": "The best-known restaurant in Paphos offering certified halal meats after touring the harbour and mosaic park."
-       }
-      ],
+      "halal": [],
       "researchNote": "Tavernas in Paphos feature dairy in meze; vegans can select pulse-based dishes while Muslim travelers can opt for fresh fish or halal Lebanese venues.",
       "vegan": [
        {
@@ -1735,25 +1663,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Kato Pafos / Carretera de Coral Bay",
-        "category": "halal",
-        "cuisine": "Parrilla libanesa y kebabs",
-        "description": "Restaurante halal en Kato Pafos, con brochetas de cordero certificadas, shawarma de pollo, falafel crujiente y mezes frescos.",
-        "lastVerified": "2026-10-06",
-        "name": "Samisen & Lebanese Halal House",
-        "price": "Orta",
-        "verification": {
-         "note": "Todas las carnes tienen certificación halal; amplia selección de bebidas sin alcohol.",
-         "sourceName": "Visit Cyprus — directorio gastronómico",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://www.visitcyprus.com/",
-         "status": "certified-halal"
-        },
-        "why": "El restaurante más conocido de Pafos que ofrece carnes halal certificadas tras recorrer el puerto y los mosaicos."
-       }
-      ],
+      "halal": [],
       "researchNote": "Las tabernas de Pafos incluyen lácteos en los mezes; los veganos pueden pedir platos de legumbres y los musulmanes pescado o locales libaneses halal.",
       "vegan": [
        {
@@ -1989,25 +1899,7 @@
     "tr": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Kato Paphos / Coral Bay Yolu",
-        "category": "halal",
-        "cuisine": "Lübnan ızgaraları ve kebap",
-        "description": "Kato Paphos liman bölgesinde helal sertifikalı kuzu şiş, tavuk shawarma, taze falafel ve zengin Levant mezeleri sunan güvenilir restoran.",
-        "lastVerified": "2026-10-06",
-        "name": "Samisen & Lebanese Halal House",
-        "price": "Orta",
-        "verification": {
-         "note": "Tüm etler helal sertifikalıdır; alkolsüz içecek seçenekleri geniştir.",
-         "sourceName": "Visit Cyprus — gastronomi rehberi",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://www.visitcyprus.com/",
-         "status": "certified-halal"
-        },
-        "why": "Mozaik parkı ve liman yürüyüşü sonrasında Baf'ta açık helal et garantisiyle yemek yemek için en bilinen mekandır."
-       }
-      ],
+      "halal": [],
       "researchNote": "Baf'ta Rum meyhanelerinde meze menüleri peynir ve yoğurt içerir; veganlar bakliyat mezelerini, Müslüman gezginler balık veya helal Lübnan lokantalarını seçebilir.",
       "vegan": [
        {
@@ -2253,25 +2145,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Finikoudes Promenade / Larnaca",
-        "category": "halal",
-        "cuisine": "Halal Levantine and Lebanese grills",
-        "description": "Established halal restaurant along the palm-lined Finikoudes promenade, serving certified halal grills, shish taouk and fresh flatbreads.",
-        "lastVerified": "2026-10-06",
-        "name": "Abu Dany Lebanese Halal Restaurant",
-        "price": "Orta",
-        "verification": {
-         "note": "All meats are certified halal; features a sea-view outdoor terrace.",
-         "sourceName": "Visit Cyprus — Larnaca dining directory",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://www.visitcyprus.com/",
-         "status": "certified-halal"
-        },
-        "why": "The premier choice along the Larnaca coast for verified halal meats and mezze after visiting Hala Sultan Tekke or the beach."
-       }
-      ],
+      "halal": [],
       "researchNote": "The historic Hala Sultan Tekke by the Larnaca Salt Lake is a revered Islamic heritage site; halal Levantine restaurants are well established along the coast.",
       "vegan": [
        {
@@ -2497,25 +2371,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Paseo de Finikoudes / Lárnaca",
-        "category": "halal",
-        "cuisine": "Parrilla levantina y libanesa halal",
-        "description": "Veterano restaurante halal en el paseo marítimo de Finikoudes, con carnes a la brasa certificadas, shish taouk y panes recién horneados.",
-        "lastVerified": "2026-10-06",
-        "name": "Abu Dany Lebanese Halal Restaurant",
-        "price": "Orta",
-        "verification": {
-         "note": "Todas las carnes tienen certificación halal; terraza con vistas al mar.",
-         "sourceName": "Visit Cyprus — directorio gastronómico de Lárnaca",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://www.visitcyprus.com/",
-         "status": "certified-halal"
-        },
-        "why": "La opción principal en la costa de Lárnaca para disfrutar de carnes halal y mezes tras visitar Hala Sultan Tekke o la playa."
-       }
-      ],
+      "halal": [],
       "researchNote": "La histórica mezquita Hala Sultan Tekke junto al lago salado es un venerado lugar islámico; hay restaurantes levantinos halal en la costa.",
       "vegan": [
        {
@@ -2741,25 +2597,7 @@
     "tr": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Finikoudes Kordonu / Larnaka",
-        "category": "halal",
-        "cuisine": "Helal Levant ve Lübnan ızgaraları",
-        "description": "Finikoudes palmiye sahilinde helal sertifikalı ızgara kebaplar, tavuk taouk, humus ve taze lavaş ekmekleriyle bilinen köklü mekan.",
-        "lastVerified": "2026-10-06",
-        "name": "Abu Dany Lebanese Halal Restaurant",
-        "price": "Orta",
-        "verification": {
-         "note": "Tüm et çeşitleri helal sertifikalıdır; deniz manzaralı terası bulunur.",
-         "sourceName": "Visit Cyprus — Larnaka gastronomi rehberi",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://www.visitcyprus.com/",
-         "status": "certified-halal"
-        },
-        "why": "Larnaka sahilinde Hala Sultan Tekkesi veya plaj günü sonrasında güvenilir helal et ve meze yemek için 1 numaradır."
-       }
-      ],
+      "halal": [],
       "researchNote": "Larnaka Tuz Gölü kıyısındaki tarihi Hala Sultan Tekkesi İslam dünyası için kutsal bir ziyaret noktasıdır; sahil boyunca helal Levant lokantaları yaygındır.",
       "vegan": [
        {

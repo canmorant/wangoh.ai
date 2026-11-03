@@ -22,11 +22,11 @@
         "name": "Ali Baba Restaurant",
         "price": "Yüksek",
         "verification": {
-         "note": "All meats are halal certified; reservations recommended.",
+         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
          "sourceName": "Visit Malta — official dining guide",
          "sourceType": "official-tourism",
          "sourceUrl": "https://www.visitmalta.com/en/restaurants/",
-         "status": "certified-halal"
+         "status": "verification-recommended"
         },
         "why": "Legendary gastronomy landmark near the Valletta ferry, offering the island's highest-quality certified halal meat experience."
        }
@@ -263,11 +263,11 @@
         "name": "Ali Baba Restaurant",
         "price": "Yüksek",
         "verification": {
-         "note": "Todas las carnes tienen certificación halal; se recomienda reservar.",
+         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
          "sourceName": "Visit Malta — guía gastronómica oficial",
          "sourceType": "official-tourism",
          "sourceUrl": "https://www.visitmalta.com/en/restaurants/",
-         "status": "certified-halal"
+         "status": "verification-recommended"
         },
         "why": "Emblemático restaurante cerca del ferry de La Valeta que ofrece la experiencia de carne halal certificada de mayor calidad de la isla."
        }
@@ -504,11 +504,11 @@
         "name": "Ali Baba Restaurant",
         "price": "Yüksek",
         "verification": {
-         "note": "Etlerin tamamı helal sertifikalıdır; rezervasyon önerilir.",
+         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
          "sourceName": "Visit Malta — resmî gastronomi rehberi",
          "sourceType": "official-tourism",
          "sourceUrl": "https://www.visitmalta.com/en/restaurants/",
-         "status": "certified-halal"
+         "status": "verification-recommended"
         },
         "why": "Valletta feribotuna kısa mesafede, Malta adasındaki en yüksek kaliteli ve tescilli helal et ziyafetini sunan efsanevi gastronomi kurumudur."
        }
@@ -745,25 +745,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Victoria / Below Gozo Citadel",
-        "category": "halal",
-        "cuisine": "Mediterranean and Middle Eastern dishes",
-        "description": "Reliable Mediterranean restaurant below Victoria's Citadel, serving halal lamb tagines, grilled meats and fresh island seafood.",
-        "lastVerified": "2026-10-06",
-        "name": "Al Qantara Restaurant",
-        "price": "Orta",
-        "verification": {
-         "note": "Establishment confirms halal meat supply; island fish is sourced fresh daily.",
-         "sourceName": "Visit Gozo — official island tourism portal",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://www.visitgozo.com/",
-         "status": "restaurant-confirmed"
-        },
-        "why": "The most convenient and trusted base on Gozo for fresh halal meats and Mediterranean seafood after visiting the Citadel."
-       }
-      ],
+      "halal": [],
       "researchNote": "Fresh Mediterranean fish in Gozo is ideal for halal diets; local goat cheese (ġbejna) is not suitable for vegan requirements.",
       "vegan": [
        {
@@ -988,25 +970,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Victoria / A los pies de la ciudadela de Gozo",
-        "category": "halal",
-        "cuisine": "Platos mediterráneos y de Oriente Medio",
-        "description": "Restaurante mediterráneo a los pies de la ciudadela de Victoria, con tajines de cordero halal, carnes a la brasa y pescado fresco de la isla.",
-        "lastVerified": "2026-10-06",
-        "name": "Al Qantara Restaurant",
-        "price": "Orta",
-        "verification": {
-         "note": "El establecimiento confirma suministro de carne halal; el pescado es fresco del día.",
-         "sourceName": "Visit Gozo — portal oficial de turismo de la isla",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://www.visitgozo.com/",
-         "status": "restaurant-confirmed"
-        },
-        "why": "El lugar más práctico y fiable de Gozo para comer carne halal fresca y pescado mediterráneo tras visitar la ciudadela."
-       }
-      ],
+      "halal": [],
       "researchNote": "El pescado fresco en Gozo es ideal para dieta halal; el queso local de cabra (ġbejna) no es apto para veganos.",
       "vegan": [
        {
@@ -1231,25 +1195,7 @@
     "tr": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Victoria / Gozo Kalesi eteği",
-        "category": "halal",
-        "cuisine": "Akdeniz ve Orta Doğu lezzetleri",
-        "description": "Gozo'nun tarihi Victoria kalesi yakınında helal kuzu güveçleri, ızgaralar ve taze yerel Akdeniz balıkları sunan güvenilir lezzet durağı.",
-        "lastVerified": "2026-10-06",
-        "name": "Al Qantara Restaurant",
-        "price": "Orta",
-        "verification": {
-         "note": "İşletme helal et tedarikini beyan etmektedir; ada balıkları günlük tazedir.",
-         "sourceName": "Visit Gozo — resmî ada turizm portalı",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://www.visitgozo.com/",
-         "status": "restaurant-confirmed"
-        },
-        "why": "Gozo adasında kale gezisinden sonra taze helal et ve Akdeniz balığı yemek için en pratik ve güvenilir merkezdir."
-       }
-      ],
+      "halal": [],
       "researchNote": "Gozo'da taze Akdeniz balıkları helal diyetler için mükemmeldir; yerel keçi peynirleri (ġbejna) vegan beslenmeye uygun değildir.",
       "vegan": [
        {

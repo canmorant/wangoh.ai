@@ -11,24 +11,7 @@
    "translations": {
     "en": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Svalbard Hotell",
-        "category": "halal",
-        "cuisine": "Nordic and international",
-        "description": "A hotel restaurant you can plan around with fish and plant-based dishes discussed in advance.",
-        "lastVerified": "2026-08-12",
-        "name": "Restaurant Polfareren",
-        "verification": {
-         "note": "No halal certificate or halal meat verification was found; alcohol is served. Consider it only by confirming plain fish or vegan ingredients, sauces and the shared kitchen in writing.",
-         "sourceName": "HalalTrip guide for Muslim travellers in Longyearbyen",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/city-guide-details/614/longyearbyen/",
-         "status": "verification-recommended"
-        },
-        "why": "As there is no certified halal restaurant on the island, only as a meal-planning alternative where ingredients can be confirmed in writing in advance."
-       }
-      ],
+      "halal": [],
       "researchNote": "No verified halal restaurant was found in Longyearbyen; for strict halal needs, the safest plan is to bring certified packaged food and self-cater.",
       "vegan": [
        {
@@ -134,24 +117,7 @@
     },
     "es": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Svalbard Hotell",
-        "category": "halal",
-        "cuisine": "Nórdica e internacional",
-        "description": "Restaurante de hotel con el que se puede planificar con pescado y platos vegetales acordados de antemano.",
-        "lastVerified": "2026-08-12",
-        "name": "Restaurant Polfareren",
-        "verification": {
-         "note": "No se encontró ningún certificado halal ni verificación de carne halal; se sirve alcohol. Considéralo solo confirmando por escrito los ingredientes de un plato de pescado sencillo o vegano, las salsas y si la cocina es compartida.",
-         "sourceName": "HalalTrip, guía de Longyearbyen para viajeros musulmanes",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/city-guide-details/614/longyearbyen/",
-         "status": "verification-recommended"
-        },
-        "why": "Como alternativa para planificar las comidas en la que se pueden confirmar antes los ingredientes por escrito, ya que en la isla no hay restaurantes con certificado halal."
-       }
-      ],
+      "halal": [],
       "researchNote": "No se encontró ningún restaurante halal verificado en Longyearbyen; si necesitas halal estricto, lo más seguro es llevar comida certificada envasada y cocinar tú mismo.",
       "vegan": [
        {
@@ -257,24 +223,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Svalbard Hotell",
-        "category": "halal",
-        "cuisine": "Nordik ve uluslararası",
-        "description": "Balık ve önceden konuşulabilen bitki bazlı tabaklarla plan yapılabilecek otel restoranı.",
-        "lastVerified": "2026-08-12",
-        "name": "Restaurant Polfareren",
-        "verification": {
-         "note": "Helal sertifikası veya helal et doğrulaması bulunamadı; alkol servis edilir. Yalnızca sade balık ya da vegan içerikleri, sosları ve ortak mutfağı yazılı teyit ederek değerlendirin.",
-         "sourceName": "HalalTrip Longyearbyen Müslüman gezgin rehberi",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://www.halaltrip.com/city-guide-details/614/longyearbyen/",
-         "status": "verification-recommended"
-        },
-        "why": "Adada sertifikalı helal restoran bulunmadığı için yalnızca içerikleri önceden yazılı teyit edilebilecek bir yemek planlama alternatifi olarak."
-       }
-      ],
+      "halal": [],
       "researchNote": "Longyearbyen'de doğrulanmış helal restoran bulunamadı; katı helal gereksiniminde sertifikalı paketli gıda getirmek ve öz hazırlık yapmak en güvenli plandır.",
       "vegan": [
        {
@@ -390,24 +339,7 @@
    "translations": {
     "en": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Central Ny-Ålesund",
-        "category": "halal",
-        "cuisine": "Kiosk and self-catering",
-        "description": "The settlement shop offering limited snacks and basics; it is not a restaurant or halal outlet.",
-        "lastVerified": "2026-08-12",
-        "name": "Kongsfjordbutikken",
-        "verification": {
-         "note": "There is no halal-certified restaurant or product guarantee. Access and stock are limited; bring certified packaged food from Longyearbyen and make a written plan with Kings Bay in advance.",
-         "sourceName": "Kings Bay Ny-Ålesund accommodation and dining information",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://kingsbay.no/accommodations-meals-and-shop/",
-         "status": "verification-recommended"
-        },
-        "why": "Without a halal food service, it's the only retail outlet where you can make a backup plan by checking labelled packaged products."
-       }
-      ],
+      "halal": [],
       "researchNote": "There is no public restaurant in Ny-Ålesund. The canteen serves registered researchers and staying visitors; vegan or halal needs must be planned with Kings Bay before booking.",
       "vegan": [
        {
@@ -555,24 +487,7 @@
     },
     "es": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Centro de Ny-Ålesund",
-        "category": "halal",
-        "cuisine": "Quiosco y autoabastecimiento",
-        "description": "Tienda del asentamiento con tentempiés y productos básicos limitados; no es un restaurante ni un punto de venta halal.",
-        "lastVerified": "2026-08-12",
-        "name": "Kongsfjordbutikken",
-        "verification": {
-         "note": "No hay restaurantes ni productos con certificado halal garantizados. El acceso y las existencias son limitados; lleva desde Longyearbyen comida certificada envasada y planifica por escrito con Kings Bay de antemano.",
-         "sourceName": "Información de alojamiento y comidas de Kings Bay Ny-Ålesund",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://kingsbay.no/accommodations-meals-and-shop/",
-         "status": "verification-recommended"
-        },
-        "why": "Porque, si no hay servicio de comida halal, es el único punto de venta donde se puede preparar un plan de reserva comprobando productos envasados etiquetados."
-       }
-      ],
+      "halal": [],
       "researchNote": "En Ny-Ålesund no hay restaurantes abiertos al público. El comedor atiende a investigadores registrados y a visitantes alojados; las necesidades veganas o halal deben planificarse con Kings Bay antes de reservar.",
       "vegan": [
        {
@@ -720,24 +635,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Ny-Ålesund merkezi",
-        "category": "halal",
-        "cuisine": "Kiosk ve öz hazırlık",
-        "description": "Kısıtlı atıştırmalık ve temel ürün sunan yerleşim dükkânı; restoran veya helal satış noktası değildir.",
-        "lastVerified": "2026-08-12",
-        "name": "Kongsfjordbutikken",
-        "verification": {
-         "note": "Helal sertifikalı restoran ya da ürün garantisi yoktur. Erişim ve stok sınırlıdır; Longyearbyen'den sertifikalı paketli gıda getirin ve Kings Bay ile önceden yazılı plan yapın.",
-         "sourceName": "Kings Bay Ny-Ålesund konaklama ve yemek bilgileri",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://kingsbay.no/accommodations-meals-and-shop/",
-         "status": "verification-recommended"
-        },
-        "why": "Helal yemek hizmeti bulunmadığında yalnızca etiketli paketli ürünleri kontrol ederek yedek plan yapılabilecek tek perakende noktası olduğu için."
-       }
-      ],
+      "halal": [],
       "researchNote": "Ny-Ålesund'da halka açık restoran yoktur. Yemekhane kayıtlı araştırmacı ve konaklayan ziyaretçilere hizmet verir; vegan veya helal gereksinimi rezervasyondan önce Kings Bay ile planlanmalıdır.",
       "vegan": [
        {

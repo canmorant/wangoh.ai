@@ -1037,11 +1037,11 @@
         "lastVerified": "2026-08-12",
         "name": "Cappadocia",
         "verification": {
-         "note": "Classified as halal or business-declared in KTO/Busan sources; confirm the current certificate and alcohol status.",
+         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
          "sourceName": "Korea Tourism Organization Muslim-Friendly Restaurants",
          "sourceType": "official-tourism",
          "sourceUrl": "https://english.visitkorea.or.kr/public/asis/upload/Muslim-friendly_restaurants.pdf",
-         "status": "restaurant-confirmed"
+         "status": "verification-recommended"
         },
         "why": "For finding pide, kebabs and soup in a clear halal setting next to Busan Al-Fatah Mosque."
        }
@@ -1347,11 +1347,11 @@
         "lastVerified": "2026-08-12",
         "name": "Cappadocia",
         "verification": {
-         "note": "Las fuentes de la KTO y de Busan lo clasifican como halal o con declaración del propio local; confirma el certificado actual y el alcohol.",
+         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
          "sourceName": "Restaurantes aptos para musulmanes de la Organización de Turismo de Corea",
          "sourceType": "official-tourism",
          "sourceUrl": "https://english.visitkorea.or.kr/public/asis/upload/Muslim-friendly_restaurants.pdf",
-         "status": "restaurant-confirmed"
+         "status": "verification-recommended"
         },
         "why": "Para encontrar pide, kebab y sopa en un marco claramente halal junto a la Mezquita Al-Fatah de Busan."
        }
@@ -1657,11 +1657,11 @@
         "lastVerified": "2026-08-12",
         "name": "Cappadocia",
         "verification": {
-         "note": "KTO/Busan kaynaklarında helal veya işletme beyanlı olarak sınıflandırılıyor; mevcut sertifika ve alkol durumunu teyit edin.",
+         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
          "sourceName": "Korea Tourism Organization Müslüman Dostu Restoranlar",
          "sourceType": "official-tourism",
          "sourceUrl": "https://english.visitkorea.or.kr/public/asis/upload/Muslim-friendly_restaurants.pdf",
-         "status": "restaurant-confirmed"
+         "status": "verification-recommended"
         },
         "why": "Busan Al-Fatah Camii yanında pide, kebap ve çorbayı açık helal çerçevede bulmak için."
        }
@@ -2926,24 +2926,7 @@
    "translations": {
     "en": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Central Gyeongju",
-        "category": "halal",
-        "cuisine": "Indian",
-        "description": "A curry and tandoor restaurant on KTO's current list of Muslim-friendly restaurants.",
-        "lastVerified": "2026-08-12",
-        "name": "Taj Mahal in Korea",
-        "verification": {
-         "note": "It's listed as Muslim-friendly by KTO; that doesn't mean certified. Ask about halal meat, the shared kitchen and alcohol.",
-         "sourceName": "Korea Tourism Organization Muslim-Friendly Restaurants",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://english.visitkorea.or.kr/public/asis/upload/Muslim-friendly_restaurants.pdf",
-         "status": "muslim-friendly"
-        },
-        "why": "It offers a clearly classified hot-meal option after the palace and tumuli route."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Hwangnidan-gil",
@@ -3226,24 +3209,7 @@
     },
     "es": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Centro de Gyeongju",
-        "category": "halal",
-        "cuisine": "India",
-        "description": "Restaurante de curry y tandoor que figura en la lista actual de restaurantes aptos para musulmanes de la KTO.",
-        "lastVerified": "2026-08-12",
-        "name": "Taj Mahal in Korea",
-        "verification": {
-         "note": "Figura en la lista de la KTO como apto para musulmanes; eso no significa que esté certificado. Pregunta por la carne halal, la cocina compartida y el alcohol.",
-         "sourceName": "Restaurantes aptos para musulmanes de la Organización de Turismo de Corea",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://english.visitkorea.or.kr/public/asis/upload/Muslim-friendly_restaurants.pdf",
-         "status": "muslim-friendly"
-        },
-        "why": "Porque ofrece una alternativa de comida caliente con clasificación clara tras la ruta de palacios y túmulos."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Hwangnidan-gil",
@@ -3526,24 +3492,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Gyeongju merkezi",
-        "category": "halal",
-        "cuisine": "Hint",
-        "description": "KTO'nun güncel Müslüman dostu restoran listesinde yer alan köri ve tandoor restoranı.",
-        "lastVerified": "2026-08-12",
-        "name": "Taj Mahal in Korea",
-        "verification": {
-         "note": "KTO listesinde Müslüman dostu olarak geçiyor; bu sertifikalı anlamına gelmez. Helal et, ortak mutfak ve alkolü sorun.",
-         "sourceName": "Korea Tourism Organization Müslüman Dostu Restoranlar",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://english.visitkorea.or.kr/public/asis/upload/Muslim-friendly_restaurants.pdf",
-         "status": "muslim-friendly"
-        },
-        "why": "Saray ve tümülüs rotası sonrası, açık sınıflandırmalı sıcak bir yemek alternatifi sunduğu için."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Hwangnidan-gil",
@@ -3836,24 +3785,7 @@
    "translations": {
     "en": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Yeonsu / Songdo",
-        "category": "halal",
-        "cuisine": "Turkish and Middle Eastern",
-        "description": "A kebab and grill restaurant listed by KTO in the category declared by a Muslim-run business.",
-        "lastVerified": "2026-08-12",
-        "name": "Aladdin Kebab",
-        "verification": {
-         "note": "Listed as self-certified by KTO; don't assume third-party certification, and confirm meat sourcing and alcohol with the business.",
-         "sourceName": "Korea Tourism Organization Muslim-Friendly Restaurants",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://english.visitkorea.or.kr/public/asis/upload/Muslim-friendly_restaurants.pdf",
-         "status": "restaurant-confirmed"
-        },
-        "why": "For a quick, filling, halal-focused meal around Songdo Central Park."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Chinatown",
@@ -4144,24 +4076,7 @@
     },
     "es": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Yeonsu / Songdo",
-        "category": "halal",
-        "cuisine": "Turca y de Oriente Próximo",
-        "description": "Restaurante de kebab y parrilla incluido en la lista de la KTO en la categoría declarada por el propio negocio musulmán.",
-        "lastVerified": "2026-08-12",
-        "name": "Aladdin Kebab",
-        "verification": {
-         "note": "La KTO lo incluye como autocertificado; no des por hecho un certificado de terceros y confirma con el local el origen de la carne y el alcohol.",
-         "sourceName": "Restaurantes aptos para musulmanes de la Organización de Turismo de Corea",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://english.visitkorea.or.kr/public/asis/upload/Muslim-friendly_restaurants.pdf",
-         "status": "restaurant-confirmed"
-        },
-        "why": "Para una comida halal rápida y saciante cerca del Songdo Central Park."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Chinatown",
@@ -4452,24 +4367,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Yeonsu / Songdo",
-        "category": "halal",
-        "cuisine": "Türk ve Orta Doğu",
-        "description": "KTO listesinde Müslüman işletmesi tarafından beyanlı kategoride yer alan kebap ve ızgara restoranı.",
-        "lastVerified": "2026-08-12",
-        "name": "Aladdin Kebab",
-        "verification": {
-         "note": "KTO'da self-certified olarak listeleniyor; üçüncü taraf sertifikası varsaymayın, et tedariki ve alkolü işletmeden teyit edin.",
-         "sourceName": "Korea Tourism Organization Müslüman Dostu Restoranlar",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://english.visitkorea.or.kr/public/asis/upload/Muslim-friendly_restaurants.pdf",
-         "status": "restaurant-confirmed"
-        },
-        "why": "Songdo Central Park çevresinde helal odaklı, hızlı ve doyurucu bir öğün için."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Chinatown",
@@ -4770,24 +4668,7 @@
    "translations": {
     "en": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Seoraksan",
-        "category": "halal",
-        "cuisine": "Korean",
-        "description": "A restaurant serving dried pollack sets, classified by KTO as having a halal menu and as pork-free.",
-        "lastVerified": "2026-08-12",
-        "name": "Miga",
-        "verification": {
-         "note": "Some halal dishes are served and alcohol may be sold; the kitchen is not fully halal. Confirm your order, the sauces and the preparation area.",
-         "sourceName": "Korea Tourism Organization Muslim-Friendly Restaurants",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://english.visitkorea.or.kr/public/asis/upload/Muslim-friendly_restaurants.pdf",
-         "status": "halal-options"
-        },
-        "why": "One of the rare options around the Seoraksan hiking area with a clear classification in an official tourism source."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Joyang",
@@ -5078,24 +4959,7 @@
     },
     "es": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Seoraksan",
-        "category": "halal",
-        "cuisine": "Coreana",
-        "description": "Restaurante que sirve menús de abadejo seco y que la KTO clasifica como sin cerdo y con carta halal.",
-        "lastVerified": "2026-08-12",
-        "name": "Miga",
-        "verification": {
-         "note": "Se sirven algunos platos halal y puede venderse alcohol; la cocina no es totalmente halal. Confirma el pedido, las salsas y la zona de preparación.",
-         "sourceName": "Restaurantes aptos para musulmanes de la Organización de Turismo de Corea",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://english.visitkorea.or.kr/public/asis/upload/Muslim-friendly_restaurants.pdf",
-         "status": "halal-options"
-        },
-        "why": "Una de las pocas opciones con una clasificación clara en una fuente turística oficial cerca de la ruta de senderismo del Seoraksan."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Joyang",
@@ -5386,24 +5250,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Seoraksan",
-        "category": "halal",
-        "cuisine": "Kore",
-        "description": "KTO tarafından helal menüsü bulunan ve domuzsuz olarak sınıflandırılan, kurutulmuş pollack setleri sunan restoran.",
-        "lastVerified": "2026-08-12",
-        "name": "Miga",
-        "verification": {
-         "note": "Bazı helal yemekler sunulur ve alkol satılabilir; mutfak tamamen helal değildir. Siparişi, sosları ve hazırlama alanını teyit edin.",
-         "sourceName": "Korea Tourism Organization Müslüman Dostu Restoranlar",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://english.visitkorea.or.kr/public/asis/upload/Muslim-friendly_restaurants.pdf",
-         "status": "halal-options"
-        },
-        "why": "Seoraksan yürüyüşü çevresinde resmî turizm kaynağında açık sınıflandırması olan nadir seçeneklerden."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Joyang",

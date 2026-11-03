@@ -12,25 +12,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Al-Azhar / Khan el-Khalili",
-        "category": "halal",
-        "cuisine": "Egyptian grills and stuffed squab",
-        "description": "Celebrated historic eatery in the Khan el-Khalili bazaar, renowned for traditional halal stuffed squab (hamam mahshi) and charcoal-grilled lamb.",
-        "lastVerified": "2026-10-06",
-        "name": "Farahat",
-        "price": "Orta",
-        "verification": {
-         "note": "Serves halal meats in accordance with traditional Islamic standards; no alcohol is served.",
-         "sourceName": "Egyptian Tourism Authority — heritage dining",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://www.egypt.travel/",
-         "status": "restaurant-confirmed"
-        },
-        "why": "The most established stop in the alleys of Khan el-Khalili to taste traditional Egyptian halal grilled meats and squab."
-       }
-      ],
+      "halal": [],
       "researchNote": "Cairo street foods like koshary and taameya (fava falafel) are naturally plant-based; meat preparations follow local halal standards.",
       "vegan": [
        {
@@ -269,25 +251,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Al-Azhar / Khan el-Khalili",
-        "category": "halal",
-        "cuisine": "Parrilla egipcia y paloma rellena",
-        "description": "Restaurante histórico en el bazar de Khan el-Khalili, famoso por sus palomas rellenas halal (hamam mahshi) y cordero a la brasa.",
-        "lastVerified": "2026-10-06",
-        "name": "Farahat",
-        "price": "Orta",
-        "verification": {
-         "note": "Sirve carnes halal según las pautas islámicas tradicionales; no se sirve alcohol.",
-         "sourceName": "Autoridad de Turismo de Egipto — gastronomía tradicional",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://www.egypt.travel/",
-         "status": "restaurant-confirmed"
-        },
-        "why": "La parada más clásica en los callejones de Khan el-Khalili para degustar carnes a la brasa halal y paloma rellena egipcia."
-       }
-      ],
+      "halal": [],
       "researchNote": "La comida callejera de El Cairo como el koshary y la taameya es naturalmente vegetal; las carnes siguen los estándares halal locales.",
       "vegan": [
        {
@@ -526,25 +490,7 @@
     "tr": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Al-Azhar / Khan el-Khalili",
-        "category": "halal",
-        "cuisine": "Mısır ızgara ve güvercin dolması",
-        "description": "Tarihi çarşı meydanında odun kömüründe pişen helal güvercin dolması (hamam mahshi), kuzu pirzola ve taze fırın lavaşlarıyla asırlık Kahire klasiği.",
-        "lastVerified": "2026-10-06",
-        "name": "Farahat",
-        "price": "Orta",
-        "verification": {
-         "note": "Geleneksel İslami usullere göre helal et servisi yapılır; mekânda alkol servisi yoktur.",
-         "sourceName": "Mısır Turizm Otoritesi — geleneksel restoranlar",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://www.egypt.travel/",
-         "status": "restaurant-confirmed"
-        },
-        "why": "Khan el-Khalili sokaklarında gezerken Mısır usulü geleneksel helal et ve güvercin lezzetini tatmak için en köklü duraktır."
-       }
-      ],
+      "halal": [],
       "researchNote": "Kahire'de sokak lezzetlerinden koşeri ve taameya (bakla falafeli) doğası gereği bitkiseldir; et yemeklerinin tamamı yerel helal standartlara uygundur.",
       "vegan": [
        {
@@ -793,25 +739,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Luxor Souk / Nefertiti Hotel Rooftop",
-        "category": "halal",
-        "cuisine": "Egyptian tagines and grills",
-        "description": "Rooftop restaurant overlooking Luxor Temple and the Nile, serving halal lamb tagines, camel meat specialties and fresh Egyptian flatbreads.",
-        "lastVerified": "2026-10-06",
-        "name": "Al-Sahaby Lane Restaurant",
-        "price": "Orta",
-        "verification": {
-         "note": "Meats sourced from local halal certified suppliers; alcohol-free dining areas available.",
-         "sourceName": "Egyptian Tourism Authority — Luxor guide",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://www.egypt.travel/en/regions/nile-valley/luxor",
-         "status": "restaurant-confirmed"
-        },
-        "why": "Luxor's most popular panoramic terrace to enjoy quality halal meat dishes and oven-fresh breads facing the temple skyline."
-       }
-      ],
+      "halal": [],
       "researchNote": "Check stocks in tour-group restaurants in Luxor; confirm plant-based preferences when ordering vegetable dishes.",
       "vegan": [
        {
@@ -1036,25 +964,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Zoco de Luxor / Azotea del Nefertiti Hotel",
-        "category": "halal",
-        "cuisine": "Tajines egipcios y parrilla",
-        "description": "Terraza con vistas al templo de Luxor y al Nilo, con tajines de cordero halal, especialidades de carne y panes egipcios recién horneados.",
-        "lastVerified": "2026-10-06",
-        "name": "Al-Sahaby Lane Restaurant",
-        "price": "Orta",
-        "verification": {
-         "note": "Carnes procedentes de proveedores locales con certificación halal; zonas sin alcohol disponibles.",
-         "sourceName": "Autoridad de Turismo de Egipto — guía de Luxor",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://www.egypt.travel/en/regions/nile-valley/luxor",
-         "status": "restaurant-confirmed"
-        },
-        "why": "La terraza panorámica más popular de Luxor para saborear platos halal de calidad y panes recién horneados frente al templo."
-       }
-      ],
+      "halal": [],
       "researchNote": "Comprueba caldos en restaurantes de grupos turísticos en Luxor; confirma platos vegetales al pedir.",
       "vegan": [
        {
@@ -1279,25 +1189,7 @@
     "tr": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Luksor Çarşısı / Nefertiti Hotel Çatısı",
-        "category": "halal",
-        "cuisine": "Mısır güveçleri ve ızgaralar",
-        "description": "Nil Nehri ve Luksor Tapınağı manzaralı terasta taze helal kuzu tajin, deve burger ve fırından sıcak çıkan Mısır fırın ekmekleri.",
-        "lastVerified": "2026-10-06",
-        "name": "Al-Sahaby Lane Restaurant",
-        "price": "Orta",
-        "verification": {
-         "note": "Etler yerel helal sertifikalı kasaplardan temin edilir; alkolsüz yemek bölümü bulunur.",
-         "sourceName": "Mısır Turizm Otoritesi — Luksor rehberi",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://www.egypt.travel/en/regions/nile-valley/luxor",
-         "status": "restaurant-confirmed"
-        },
-        "why": "Tapınak silüetine karşı kaliteli helal et yemekleri ve taze fırın ürünleri tatmak için kentin en popüler seyir terasıdır."
-       }
-      ],
+      "halal": [],
       "researchNote": "Luksor'da tur restoranlarında et sularına dikkat edin; sebze yemeklerinde vegan tercihinizi masada belirtin.",
       "vegan": [
        {
@@ -1532,25 +1424,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Beside El Mina Mosque",
-        "category": "halal",
-        "cuisine": "Fresh Red Sea seafood",
-        "description": "Famous waterfront seafood restaurant next to El Mina Mosque, serving fresh daily Red Sea catches prepared to halal standards.",
-        "lastVerified": "2026-10-06",
-        "name": "Al Halaka Fish Market Restaurant",
-        "price": "Orta",
-        "verification": {
-         "note": "Muslim-friendly halal establishment; no alcohol served.",
-         "sourceName": "Red Sea Governorate Tourism Guide",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://www.egypt.travel/en/regions/red-sea/hurghada",
-         "status": "restaurant-confirmed"
-        },
-        "why": "The most authentic place in Hurghada to enjoy freshly caught seafood alongside locals with verified halal kitchen practices."
-       }
-      ],
+      "halal": [],
       "researchNote": "Seafood venues in Hurghada suit halal dining well; in resort buffets, verify dish labels and utensils.",
       "vegan": [
        {
@@ -1781,25 +1655,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Junto a la mezquita El Mina",
-        "category": "halal",
-        "cuisine": "Pescado fresco del mar Rojo",
-        "description": "Reconocido restaurante junto a la mezquita El Mina, con pescado fresco del mar Rojo preparado según las pautas halal.",
-        "lastVerified": "2026-10-06",
-        "name": "Al Halaka Fish Market Restaurant",
-        "price": "Orta",
-        "verification": {
-         "note": "Establecimiento halal orientado a la comunidad musulmana; no sirve alcohol.",
-         "sourceName": "Guía Turística de la Gobernación del Mar Rojo",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://www.egypt.travel/en/regions/red-sea/hurghada",
-         "status": "restaurant-confirmed"
-        },
-        "why": "El lugar más auténtico de Hurgada para comer pescado recién capturado junto a los lugareños con garantías halal."
-       }
-      ],
+      "halal": [],
       "researchNote": "Las marisquerías de Hurgada son muy adecuadas para dieta halal; en bufés de hotel, comprueba etiquetas y cubiertos.",
       "vegan": [
        {
@@ -2030,25 +1886,7 @@
     "tr": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "El Mina Camii yanı",
-        "category": "halal",
-        "cuisine": "Kızıldeniz taze balık ve deniz ürünleri",
-        "description": "Tarihi cami ve balık hali yanında günlük tutulan taze Kızıldeniz balıklarını İslami usullere uygun helal ızgara ve fırında hazırlayan ünlü liman lokantası.",
-        "lastVerified": "2026-10-06",
-        "name": "Al Halaka Fish Market Restaurant",
-        "price": "Orta",
-        "verification": {
-         "note": "Müslüman topluluk odaklı helal işletmedir; alkol servisi bulunmaz.",
-         "sourceName": "Kızıldeniz Valiliği Turizm Rehberi",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://www.egypt.travel/en/regions/red-sea/hurghada",
-         "status": "restaurant-confirmed"
-        },
-        "why": "Hurgada'da taze deniz mahsullerini yerel halkla iç içe ve helal mutfak güvencesiyle yemek için en otantik adrestir."
-       }
-      ],
+      "halal": [],
       "researchNote": "Hurgada'da balık restoranları helal beslenmeye çok uygundur; otel büfelerinde etiketleri ve ortak kaşıkları kontrol edin.",
       "vegan": [
        {
@@ -2289,25 +2127,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Old City / Old Market Square",
-        "category": "halal",
-        "cuisine": "Seafood and Egyptian cuisine",
-        "description": "Iconic seafood institution opposite the Al Sahaba Mosque, famous for fragrant seafood chowder, grilled prawns and halal fresh fish.",
-        "lastVerified": "2026-10-06",
-        "name": "Fares Seafood",
-        "price": "Orta",
-        "verification": {
-         "note": "Serves halal-certified seafood and meats; alcohol-free casual dining venue.",
-         "sourceName": "Egyptian Tourism Authority — Sinai Peninsula",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://www.egypt.travel/en/regions/red-sea/sharm-el-sheikh",
-         "status": "restaurant-confirmed"
-        },
-        "why": "The undisputed top halal seafood stop in Sharm, perfect after exploring the Old Market with its famous soup and fish."
-       }
-      ],
+      "halal": [],
       "researchNote": "Restaurants in Sharm el-Sheikh's Old Market follow halal standards; in resort buffets, confirm vegan-friendly dressings.",
       "vegan": [
        {
@@ -2538,25 +2358,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Casco antiguo / Plaza del Old Market",
-        "category": "halal",
-        "cuisine": "Marisco y cocina egipcia",
-        "description": "Emblemático restaurante marinero frente a la mezquita Al Sahaba, famoso por su sopa de marisco, langostinos a la plancha y pescado fresco halal.",
-        "lastVerified": "2026-10-06",
-        "name": "Fares Seafood",
-        "price": "Orta",
-        "verification": {
-         "note": "Sirve marisco y carnes con certificación halal; restaurante informal sin alcohol.",
-         "sourceName": "Autoridad de Turismo de Egipto — Península del Sinaí",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://www.egypt.travel/en/regions/red-sea/sharm-el-sheikh",
-         "status": "restaurant-confirmed"
-        },
-        "why": "La marisquería halal más destacada de Sharm, ideal tras recorrer el Old Market con su famosa sopa y pescado fresco."
-       }
-      ],
+      "halal": [],
       "researchNote": "Los restaurantes del Old Market en Sharm siguen pautas halal; en los bufés de hotel, confirma los aliños veganos.",
       "vegan": [
        {
@@ -2787,25 +2589,7 @@
     "tr": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Eski Şehir / Old Market Meydanı",
-        "category": "halal",
-        "cuisine": "Deniz mahsulleri ve Mısır mutfağı",
-        "description": "Sahaba Camii meydanında zengin deniz mahsulleri çorbası, ızgara karides ve taze balık tava sunan Mısır'ın en popüler tescilli helal deniz ürünleri zinciri.",
-        "lastVerified": "2026-10-06",
-        "name": "Fares Seafood",
-        "price": "Orta",
-        "verification": {
-         "note": "Helal sertifikalı deniz ürünleri ve etler servis edilir; alkolsüz halk restoranıdır.",
-         "sourceName": "Mısır Turizm Otoritesi — Sina Yarımadası",
-         "sourceType": "official-tourism",
-         "sourceUrl": "https://www.egypt.travel/en/regions/red-sea/sharm-el-sheikh",
-         "status": "restaurant-confirmed"
-        },
-        "why": "Eski Pazar gezisi sonrasında muazzam çorbası ve taze balıklarıyla kentin tartışmasız en ünlü helal lezzet durağıdır."
-       }
-      ],
+      "halal": [],
       "researchNote": "Şarm el-Şeyh'te Old Market bölgesindeki restoranlar İslami usullere tam uygundur; otel büfelerinde vegan sosları teyit edin.",
       "vegan": [
        {
