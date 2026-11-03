@@ -751,7 +751,25 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [],
+      "halal": [
+       {
+        "area": "Al Muneera / Al Raha Beach",
+        "category": "halal",
+        "cuisine": "Emirati home cooking",
+        "description": "Warm Emirati restaurant founded by local women, serving freshly baked khameer breads, lamb machboos and home-style Gulf recipes by the water.",
+        "lastVerified": "2026-10-06",
+        "name": "Meylas",
+        "price": "Orta",
+        "verification": {
+         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
+         "sourceName": "Experience Abu Dhabi — official tourism portal",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://visitabudhabi.ae/en/where-to-eat/meylas",
+         "status": "verification-recommended"
+        },
+        "why": "Ideal for experiencing authentic Gulf home cooking in a welcoming, family-run atmosphere by the water."
+       }
+      ],
       "researchNote": "Rice and meat dishes in Abu Dhabi follow halal standards; for vegan meals, confirm that meat stock or butter is not used.",
       "vegan": [
        {
@@ -979,7 +997,25 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [],
+      "halal": [
+       {
+        "area": "Al Muneera / Al Raha Beach",
+        "category": "halal",
+        "cuisine": "Cocina casera emiratí",
+        "description": "Acogedor restaurante emiratí impulsado por mujeres locales, con panes khameer recién horneados, machboos de cordero y recetas caseras del Golfo.",
+        "lastVerified": "2026-10-06",
+        "name": "Meylas",
+        "price": "Orta",
+        "verification": {
+         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
+         "sourceName": "Experience Abu Dhabi — portal oficial de turismo",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://visitabudhabi.ae/en/where-to-eat/meylas",
+         "status": "verification-recommended"
+        },
+        "why": "Ideal para disfrutar de la auténtica cocina casera del Golfo en un ambiente familiar y junto al mar."
+       }
+      ],
       "researchNote": "Los arroces y carnes en Abu Dabi siguen pautas halal; para platos veganos, confirma que no lleven caldo de carne ni mantequilla.",
       "vegan": [
        {
@@ -1207,7 +1243,25 @@
     "tr": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [],
+      "halal": [
+       {
+        "area": "Al Muneera / Al Raha Beach",
+        "category": "halal",
+        "cuisine": "Emirlik ev yemekleri",
+        "description": "Emirlik kadınları tarafından işletilen, deniz kenarında taze fırın ekmekleri, kuzu machboos ve ev yapımı yerel lezzetler sunan tescilli helal durak.",
+        "lastVerified": "2026-10-06",
+        "name": "Meylas",
+        "price": "Orta",
+        "verification": {
+         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
+         "sourceName": "Experience Abu Dhabi — resmî turizm portalı",
+         "sourceType": "official-tourism",
+         "sourceUrl": "https://visitabudhabi.ae/en/where-to-eat/meylas",
+         "status": "verification-recommended"
+        },
+        "why": "Körfez mutfağının geleneksel lezzetlerini ticari olmayan samimi bir aile mutfağı dokusuyla deneyimlemek için idealdir."
+       }
+      ],
       "researchNote": "Abu Dabi'de pilav ve et yemekleri helal kurallara uygundur; vegan tercihlerde et suyu veya tereyağı kullanılmadığını sipariş anında teyit edin.",
       "vegan": [
        {

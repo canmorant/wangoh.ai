@@ -1872,24 +1872,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Central Ubud",
-        "category": "halal",
-        "cuisine": "Indonesian home cooking",
-        "description": "A long-running family warung serving nasi campur, vegetable and chicken dishes.",
-        "lastVerified": "2026-08-25",
-        "name": "Warung Makan Bu Rus",
-        "verification": {
-         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
-         "sourceName": "Indonesia's BPJPH, the official halal product and certification agency",
-         "sourceType": "certifier",
-         "sourceUrl": "https://bpjph.halal.go.id/",
-         "status": "verification-recommended"
-        },
-        "why": "A candidate for an alcohol-free local meal in the centre where you can discuss simple ingredients; don't assume certification."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Penestanan",
@@ -2165,24 +2148,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Centro de Ubud",
-        "category": "halal",
-        "cuisine": "Cocina casera indonesia",
-        "description": "Warung familiar de larga trayectoria que sirve nasi campur, verduras y platos de pollo.",
-        "lastVerified": "2026-08-25",
-        "name": "Warung Makan Bu Rus",
-        "verification": {
-         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
-         "sourceName": "BPJPH de Indonesia, organismo oficial de productos y certificación halal",
-         "sourceType": "certifier",
-         "sourceUrl": "https://bpjph.halal.go.id/",
-         "status": "verification-recommended"
-        },
-        "why": "Un candidato céntrico para una comida local sin alcohol en el que se pueden comentar ingredientes sencillos; no hay que dar por hecho un certificado."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Penestanan",
@@ -2457,24 +2423,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Ubud merkezi",
-        "category": "halal",
-        "cuisine": "Endonezya ev yemekleri",
-        "description": "Nasi campur, sebze ve tavuk yemekleri sunan uzun soluklu aile warungu.",
-        "lastVerified": "2026-08-25",
-        "name": "Warung Makan Bu Rus",
-        "verification": {
-         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
-         "sourceName": "Endonezya BPJPH — resmî helal ürün ve sertifika kurumu",
-         "sourceType": "certifier",
-         "sourceUrl": "https://bpjph.halal.go.id/",
-         "status": "verification-recommended"
-        },
-        "why": "Merkezde alkolsüz ve sade içerik konuşulabilen bir yerel öğün adayı; sertifika varsayılmamalı."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Penestanan",
@@ -3669,24 +3618,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Pecatu",
-        "category": "halal",
-        "cuisine": "Javanese and Indonesian",
-        "description": "An everyday local warung serving nasi campur, soups and grills.",
-        "lastVerified": "2026-08-25",
-        "name": "Warung Solo Via",
-        "verification": {
-         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
-         "sourceName": "Indonesia's BPJPH, the official halal product and certification agency",
-         "sourceType": "certifier",
-         "sourceUrl": "https://bpjph.halal.go.id/",
-         "status": "verification-recommended"
-        },
-        "why": "An affordable local-food candidate on the Bukit; don't consider it definitely halal without seeing a BPJPH certificate."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Bingin",
@@ -3962,24 +3894,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Pecatu",
-        "category": "halal",
-        "cuisine": "Javanesa e indonesia",
-        "description": "Warung local informal que sirve nasi campur, sopas y parrilladas.",
-        "lastVerified": "2026-08-25",
-        "name": "Warung Solo Via",
-        "verification": {
-         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
-         "sourceName": "BPJPH de Indonesia, organismo oficial de productos y certificación halal",
-         "sourceType": "certifier",
-         "sourceUrl": "https://bpjph.halal.go.id/",
-         "status": "verification-recommended"
-        },
-        "why": "Un candidato de comida local económica en Bukit; no debe considerarse halal con seguridad sin ver el certificado del BPJPH."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Bingin",
@@ -4254,24 +4169,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Pecatu",
-        "category": "halal",
-        "cuisine": "Cava ve Endonezya",
-        "description": "Nasi campur, çorba ve ızgara sunan gündelik yerel warung.",
-        "lastVerified": "2026-08-25",
-        "name": "Warung Solo Via",
-        "verification": {
-         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
-         "sourceName": "Endonezya BPJPH — resmî helal ürün ve sertifika kurumu",
-         "sourceType": "certifier",
-         "sourceUrl": "https://bpjph.halal.go.id/",
-         "status": "verification-recommended"
-        },
-        "why": "Bukit'te uygun bütçeli yerel yemek adayı; BPJPH sertifikası görülmeden kesin helal sayılmamalı."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Bingin",
@@ -4593,24 +4491,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Batununggul",
-        "category": "halal",
-        "cuisine": "Seafood and Indonesian",
-        "description": "A seaside warung serving fish, rice and local dishes.",
-        "lastVerified": "2026-08-25",
-        "name": "Warung Jukung",
-        "verification": {
-         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
-         "sourceName": "Indonesia's BPJPH, the official halal product and certification agency",
-         "sourceType": "certifier",
-         "sourceUrl": "https://bpjph.halal.go.id/",
-         "status": "verification-recommended"
-        },
-        "why": "A candidate where you can discuss ordering plain fish and vegetables; alcohol, sauces and the shared kitchen must be confirmed in writing."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Ped",
@@ -4886,24 +4767,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Batununggul",
-        "category": "halal",
-        "cuisine": "Marisco e indonesia",
-        "description": "Warung costero que sirve pescado, arroz y platos locales.",
-        "lastVerified": "2026-08-25",
-        "name": "Warung Jukung",
-        "verification": {
-         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
-         "sourceName": "BPJPH de Indonesia, organismo oficial de productos y certificación halal",
-         "sourceType": "certifier",
-         "sourceUrl": "https://bpjph.halal.go.id/",
-         "status": "verification-recommended"
-        },
-        "why": "Un candidato en el que se puede hablar de un pedido sencillo de pescado y verduras; hay que confirmar por escrito el alcohol, las salsas y si la cocina es compartida."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Ped",
@@ -5178,24 +5042,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Batununggul",
-        "category": "halal",
-        "cuisine": "Deniz ürünü ve Endonezya",
-        "description": "Balık, pirinç ve yerel yemekler sunan kıyı warungu.",
-        "lastVerified": "2026-08-25",
-        "name": "Warung Jukung",
-        "verification": {
-         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
-         "sourceName": "Endonezya BPJPH — resmî helal ürün ve sertifika kurumu",
-         "sourceType": "certifier",
-         "sourceUrl": "https://bpjph.halal.go.id/",
-         "status": "verification-recommended"
-        },
-        "why": "Sade balık ve sebze siparişi konuşulabilen aday; alkol, sos ve ortak mutfak yazılı teyit edilmeli."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Ped",
@@ -5517,24 +5364,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Kuta Lombok",
-        "category": "halal",
-        "cuisine": "Mediterranean and Indonesian",
-        "description": "A central restaurant serving grills, mezze and local dishes.",
-        "lastVerified": "2026-08-25",
-        "name": "El Bazar Cafe & Restaurant",
-        "verification": {
-         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
-         "sourceName": "Indonesia's BPJPH, the official halal product and certification agency",
-         "sourceType": "certifier",
-         "sourceUrl": "https://bpjph.halal.go.id/",
-         "status": "verification-recommended"
-        },
-        "why": "A strong candidate in Muslim-majority Lombok where you can ask about meat sourcing; confirmation is essential because alcohol is served."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Kuta Lombok",
@@ -5810,24 +5640,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Kuta Lombok",
-        "category": "halal",
-        "cuisine": "Mediterránea e indonesia",
-        "description": "Restaurante céntrico que sirve parrilladas, mezze y platos locales.",
-        "lastVerified": "2026-08-25",
-        "name": "El Bazar Cafe & Restaurant",
-        "verification": {
-         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
-         "sourceName": "BPJPH de Indonesia, organismo oficial de productos y certificación halal",
-         "sourceType": "certifier",
-         "sourceUrl": "https://bpjph.halal.go.id/",
-         "status": "verification-recommended"
-        },
-        "why": "Un buen candidato en una Lombok de mayoría musulmana, donde se puede preguntar por el origen de la carne; por el servicio de alcohol, es imprescindible confirmar."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Kuta Lombok",
@@ -6102,24 +5915,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Kuta Lombok",
-        "category": "halal",
-        "cuisine": "Akdeniz ve Endonezya",
-        "description": "Izgara, meze ve yerel yemekler sunan merkezî restoran.",
-        "lastVerified": "2026-08-25",
-        "name": "El Bazar Cafe & Restaurant",
-        "verification": {
-         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
-         "sourceName": "Endonezya BPJPH — resmî helal ürün ve sertifika kurumu",
-         "sourceType": "certifier",
-         "sourceUrl": "https://bpjph.halal.go.id/",
-         "status": "verification-recommended"
-        },
-        "why": "Müslüman çoğunluklu Lombok'ta et tedariki sorulabilen güçlü aday; alkol servisi nedeniyle teyit şart."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Kuta Lombok",
@@ -7365,24 +7161,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Labuan Bajo",
-        "category": "halal",
-        "cuisine": "Indonesian seafood",
-        "description": "A large restaurant serving grilled fish and local dishes.",
-        "lastVerified": "2026-08-25",
-        "name": "Taman Laut Handayani",
-        "verification": {
-         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
-         "sourceName": "Indonesia's BPJPH, the official halal product and certification agency",
-         "sourceType": "certifier",
-         "sourceUrl": "https://bpjph.halal.go.id/",
-         "status": "verification-recommended"
-        },
-        "why": "A candidate for plain seafood and an alcohol-free order; the certificate, sauces and any shared grill must be confirmed."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Central Labuan Bajo",
@@ -7658,24 +7437,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Labuan Bajo",
-        "category": "halal",
-        "cuisine": "Marisco indonesio",
-        "description": "Gran restaurante que sirve pescado a la parrilla y platos locales.",
-        "lastVerified": "2026-08-25",
-        "name": "Taman Laut Handayani",
-        "verification": {
-         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
-         "sourceName": "BPJPH de Indonesia, organismo oficial de productos y certificación halal",
-         "sourceType": "certifier",
-         "sourceUrl": "https://bpjph.halal.go.id/",
-         "status": "verification-recommended"
-        },
-        "why": "Un candidato para un pedido sencillo de marisco sin alcohol; hay que confirmar el certificado, las salsas y si la parrilla es compartida."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Centro de Labuan Bajo",
@@ -7950,24 +7712,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Labuan Bajo",
-        "category": "halal",
-        "cuisine": "Endonezya deniz ürünleri",
-        "description": "Izgara balık ve yerel yemekler sunan geniş restoran.",
-        "lastVerified": "2026-08-25",
-        "name": "Taman Laut Handayani",
-        "verification": {
-         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
-         "sourceName": "Endonezya BPJPH — resmî helal ürün ve sertifika kurumu",
-         "sourceType": "certifier",
-         "sourceUrl": "https://bpjph.halal.go.id/",
-         "status": "verification-recommended"
-        },
-        "why": "Sade deniz ürünü ve alkolsüz sipariş için aday; sertifika, sos ve ortak ızgara teyit edilmeli."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Labuan Bajo merkezi",
@@ -8289,7 +8034,24 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [],
+      "halal": [
+       {
+        "area": "Cemoro Lawang",
+        "category": "halal",
+        "cuisine": "Javanese home cooking",
+        "description": "A small warung serving soup, rice and hot Javanese dishes.",
+        "lastVerified": "2026-08-25",
+        "name": "Warung Edi Cemorolawang",
+        "verification": {
+         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
+         "sourceName": "Indonesia's BPJPH, the official halal product and certification agency",
+         "sourceType": "certifier",
+         "sourceUrl": "https://bpjph.halal.go.id/",
+         "status": "verification-recommended"
+        },
+        "why": "A candidate for a simple local meal around the sunrise tour; as there is no independent certificate, clear confirmation is needed."
+       }
+      ],
       "researchNote": "In Cemoro Lawang, evidence of both fully vegan and independently certified halal restaurants is limited; carry packaged backup food.",
       "vegan": [
        {
@@ -8566,7 +8328,24 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [],
+      "halal": [
+       {
+        "area": "Cemoro Lawang",
+        "category": "halal",
+        "cuisine": "Comida casera javanesa",
+        "description": "Pequeño warung que sirve sopas, arroz y platos calientes javaneses.",
+        "lastVerified": "2026-08-25",
+        "name": "Warung Edi Cemorolawang",
+        "verification": {
+         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
+         "sourceName": "BPJPH de Indonesia, organismo oficial de productos y certificación halal",
+         "sourceType": "certifier",
+         "sourceUrl": "https://bpjph.halal.go.id/",
+         "status": "verification-recommended"
+        },
+        "why": "Un candidato para una comida local sencilla en torno a la excursión del amanecer; al no haber certificado independiente, hace falta una confirmación clara."
+       }
+      ],
       "researchNote": "En Cemoro Lawang hay pocas pruebas tanto de restaurantes totalmente veganos como de restaurantes halal con certificación independiente; lleva comida envasada de reserva.",
       "vegan": [
        {
@@ -8842,7 +8621,24 @@
     },
     "tr": {
      "dietary": {
-      "halal": [],
+      "halal": [
+       {
+        "area": "Cemoro Lawang",
+        "category": "halal",
+        "cuisine": "Cava ev yemekleri",
+        "description": "Çorba, pirinç ve sıcak Cava tabakları sunan küçük warung.",
+        "lastVerified": "2026-08-25",
+        "name": "Warung Edi Cemorolawang",
+        "verification": {
+         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
+         "sourceName": "Endonezya BPJPH — resmî helal ürün ve sertifika kurumu",
+         "sourceType": "certifier",
+         "sourceUrl": "https://bpjph.halal.go.id/",
+         "status": "verification-recommended"
+        },
+        "why": "Şafak turu çevresinde sade yerel öğün adayı; bağımsız sertifika bulunmadığından açık teyit gerekir."
+       }
+      ],
       "researchNote": "Cemoro Lawang'da hem tam vegan hem bağımsız sertifikalı helal restoran kanıtı sınırlıdır; paketli yedek gıda taşıyın.",
       "vegan": [
        {
@@ -10089,7 +9885,24 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [],
+      "halal": [
+       {
+        "area": "Bandung",
+        "category": "halal",
+        "cuisine": "Sundanese cuisine",
+        "description": "A long-established restaurant serving nasi timbel, grills and traditional Sundanese dishes.",
+        "lastVerified": "2026-08-25",
+        "name": "Sindang Reret",
+        "verification": {
+         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
+         "sourceName": "Indonesia's BPJPH, the official halal product and certification agency",
+         "sourceType": "certifier",
+         "sourceUrl": "https://bpjph.halal.go.id/",
+         "status": "verification-recommended"
+        },
+        "why": "For trying local cooking family-style; the current BPJPH certificate and branch coverage should be verified."
+       }
+      ],
       "vegan": [
        {
         "area": "Central Bandung",
@@ -10365,7 +10178,24 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [],
+      "halal": [
+       {
+        "area": "Bandung",
+        "category": "halal",
+        "cuisine": "Cocina sundanesa",
+        "description": "Restaurante veterano que sirve nasi timbel, parrilladas y platos tradicionales sundaneses.",
+        "lastVerified": "2026-08-25",
+        "name": "Sindang Reret",
+        "verification": {
+         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
+         "sourceName": "BPJPH de Indonesia, organismo oficial de productos y certificación halal",
+         "sourceType": "certifier",
+         "sourceUrl": "https://bpjph.halal.go.id/",
+         "status": "verification-recommended"
+        },
+        "why": "Para probar la cocina local en formato familiar; hay que verificar el certificado vigente del BPJPH y su alcance en el local."
+       }
+      ],
       "vegan": [
        {
         "area": "Centro de Bandung",
@@ -10640,7 +10470,24 @@
     },
     "tr": {
      "dietary": {
-      "halal": [],
+      "halal": [
+       {
+        "area": "Bandung",
+        "category": "halal",
+        "cuisine": "Sunda mutfağı",
+        "description": "Nasi timbel, ızgara ve geleneksel Sunda yemekleri sunan köklü restoran.",
+        "lastVerified": "2026-08-25",
+        "name": "Sindang Reret",
+        "verification": {
+         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
+         "sourceName": "Endonezya BPJPH — resmî helal ürün ve sertifika kurumu",
+         "sourceType": "certifier",
+         "sourceUrl": "https://bpjph.halal.go.id/",
+         "status": "verification-recommended"
+        },
+        "why": "Yerel mutfağı aile düzeninde denemek için; güncel BPJPH sertifikası ve şube kapsamı doğrulanmalı."
+       }
+      ],
       "vegan": [
        {
         "area": "Bandung merkezi",
@@ -11886,24 +11733,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Tuk Tuk",
-        "category": "halal",
-        "cuisine": "Indonesian and lake fish",
-        "description": "A family restaurant serving fish, rice and vegetable dishes.",
-        "lastVerified": "2026-08-25",
-        "name": "Rohana's Restaurant",
-        "verification": {
-         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
-         "sourceName": "Indonesia's BPJPH, the official halal product and certification agency",
-         "sourceType": "certifier",
-         "sourceUrl": "https://bpjph.halal.go.id/",
-         "status": "verification-recommended"
-        },
-        "why": "A candidate for a plain fish/vegan order; separate preparation is essential because pork and alcohol are common in Batak cooking."
-       }
-      ],
+      "halal": [],
       "researchNote": "On Samosir, pork is an important part of Batak cooking; as evidence of independent halal certification is limited, ask in writing about separate equipment and ingredients.",
       "vegan": [
        {
@@ -12180,24 +12010,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Tuk Tuk",
-        "category": "halal",
-        "cuisine": "Indonesia y pescado de lago",
-        "description": "Restaurante familiar que sirve pescado, arroz y platos de verduras.",
-        "lastVerified": "2026-08-25",
-        "name": "Rohana's Restaurant",
-        "verification": {
-         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
-         "sourceName": "BPJPH de Indonesia, organismo oficial de productos y certificación halal",
-         "sourceType": "certifier",
-         "sourceUrl": "https://bpjph.halal.go.id/",
-         "status": "verification-recommended"
-        },
-        "why": "Un candidato para un pedido sencillo de pescado o vegano; como en la cocina batak son habituales el cerdo y el alcohol, es imprescindible una preparación separada."
-       }
-      ],
+      "halal": [],
       "researchNote": "En Samosir el cerdo es una parte importante de la cocina batak; como hay pocas pruebas de certificados halal independientes, pregunta por escrito por el equipo separado y los ingredientes.",
       "vegan": [
        {
@@ -12473,24 +12286,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Tuk Tuk",
-        "category": "halal",
-        "cuisine": "Endonezya ve göl balığı",
-        "description": "Balık, pirinç ve sebze yemekleri sunan aile restoranı.",
-        "lastVerified": "2026-08-25",
-        "name": "Rohana's Restaurant",
-        "verification": {
-         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
-         "sourceName": "Endonezya BPJPH — resmî helal ürün ve sertifika kurumu",
-         "sourceType": "certifier",
-         "sourceUrl": "https://bpjph.halal.go.id/",
-         "status": "verification-recommended"
-        },
-        "why": "Sade balık/vegan siparişi için aday; Batak mutfağında domuz ve alkol yaygın olduğundan ayrı hazırlama şart."
-       }
-      ],
+      "halal": [],
       "researchNote": "Samosir'de domuz eti Batak mutfağının önemli parçasıdır; bağımsız helal sertifika kanıtı sınırlı olduğundan ayrılmış ekipman ve içerik yazılı sorulmalıdır.",
       "vegan": [
        {
@@ -12813,7 +12609,24 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [],
+      "halal": [
+       {
+        "area": "Pasar Atas",
+        "category": "halal",
+        "cuisine": "Minangkabau",
+        "description": "A well-known local eatery serving nasi kapau, gulai and vegetable dishes.",
+        "lastVerified": "2026-08-25",
+        "name": "Nasi Kapau Uni Lis",
+        "verification": {
+         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
+         "sourceName": "Indonesia's BPJPH, the official halal product and certification agency",
+         "sourceType": "certifier",
+         "sourceUrl": "https://bpjph.halal.go.id/",
+         "status": "verification-recommended"
+        },
+        "why": "For trying Muslim-majority Minangkabau cooking where it comes from; the current certificate record should still be checked."
+       }
+      ],
       "vegan": [
        {
         "area": "Around Jam Gadang",
@@ -13089,7 +12902,24 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [],
+      "halal": [
+       {
+        "area": "Pasar Atas",
+        "category": "halal",
+        "cuisine": "Minangkabau",
+        "description": "Conocida casa de comidas local que sirve nasi kapau, gulai y platos de verduras.",
+        "lastVerified": "2026-08-25",
+        "name": "Nasi Kapau Uni Lis",
+        "verification": {
+         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
+         "sourceName": "BPJPH de Indonesia, organismo oficial de productos y certificación halal",
+         "sourceType": "certifier",
+         "sourceUrl": "https://bpjph.halal.go.id/",
+         "status": "verification-recommended"
+        },
+        "why": "Para probar en su lugar de origen la cocina minangkabau, de mayoría musulmana; aun así, conviene comprobar el registro del certificado vigente."
+       }
+      ],
       "vegan": [
        {
         "area": "Alrededores del Jam Gadang",
@@ -13364,7 +13194,24 @@
     },
     "tr": {
      "dietary": {
-      "halal": [],
+      "halal": [
+       {
+        "area": "Pasar Atas",
+        "category": "halal",
+        "cuisine": "Minangkabau",
+        "description": "Nasi kapau, gulai ve sebze tabakları sunan tanınmış yerel lokanta.",
+        "lastVerified": "2026-08-25",
+        "name": "Nasi Kapau Uni Lis",
+        "verification": {
+         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
+         "sourceName": "Endonezya BPJPH — resmî helal ürün ve sertifika kurumu",
+         "sourceType": "certifier",
+         "sourceUrl": "https://bpjph.halal.go.id/",
+         "status": "verification-recommended"
+        },
+        "why": "Müslüman çoğunluklu Minangkabau mutfağını yerinde denemek için; güncel sertifika kaydı yine kontrol edilmeli."
+       }
+      ],
       "vegan": [
        {
         "area": "Jam Gadang çevresi",
@@ -13686,24 +13533,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Mansuar",
-        "category": "halal",
-        "cuisine": "Island and seafood",
-        "description": "A resort restaurant offering staying guests fish, rice and special meals that can be discussed in advance.",
-        "lastVerified": "2026-08-25",
-        "name": "Raja Ampat Dive Lodge Restaurant",
-        "verification": {
-         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
-         "sourceName": "Indonesia's BPJPH, the official halal product and certification agency",
-         "sourceType": "certifier",
-         "sourceUrl": "https://bpjph.halal.go.id/",
-         "status": "verification-recommended"
-        },
-        "why": "On a remote island, it's a regular kitchen where you can confirm ingredients in writing before booking."
-       }
-      ],
+      "halal": [],
       "researchNote": "Access to public restaurants in Raja Ampat is very limited; plan vegan and halal needs in writing before booking accommodation and carry packaged backup food.",
       "vegan": [
        {
@@ -13980,24 +13810,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Mansuar",
-        "category": "halal",
-        "cuisine": "Isla y marisco",
-        "description": "Restaurante del alojamiento que ofrece a los huéspedes pescado, arroz y comidas especiales que se pueden acordar antes.",
-        "lastVerified": "2026-08-25",
-        "name": "Raja Ampat Dive Lodge Restaurant",
-        "verification": {
-         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
-         "sourceName": "BPJPH de Indonesia, organismo oficial de productos y certificación halal",
-         "sourceType": "certifier",
-         "sourceUrl": "https://bpjph.halal.go.id/",
-         "status": "verification-recommended"
-        },
-        "why": "Porque es una alternativa de cocina organizada en una isla remota con la que se pueden confirmar por escrito los ingredientes antes de reservar."
-       }
-      ],
+      "halal": [],
       "researchNote": "En Raja Ampat el acceso a restaurantes abiertos al público es muy limitado; planifica por escrito tus necesidades veganas y halal antes de reservar el alojamiento y lleva comida envasada de reserva.",
       "vegan": [
        {
@@ -14273,24 +14086,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Mansuar",
-        "category": "halal",
-        "cuisine": "Ada ve deniz ürünleri",
-        "description": "Konaklayan misafirlere balık, pirinç ve önceden konuşulabilen özel öğün sunan tesis restoranı.",
-        "lastVerified": "2026-08-25",
-        "name": "Raja Ampat Dive Lodge Restaurant",
-        "verification": {
-         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
-         "sourceName": "Endonezya BPJPH — resmî helal ürün ve sertifika kurumu",
-         "sourceType": "certifier",
-         "sourceUrl": "https://bpjph.halal.go.id/",
-         "status": "verification-recommended"
-        },
-        "why": "Uzak adada içerikleri rezervasyon öncesi yazılı teyit edebilecek düzenli mutfak alternatifi olduğu için."
-       }
-      ],
+      "halal": [],
       "researchNote": "Raja Ampat'ta halka açık restoran erişimi çok sınırlıdır; vegan ve helal gereksinimini konaklama rezervasyonundan önce yazılı planlayın ve paketli yedek gıda taşıyın.",
       "vegan": [
        {
@@ -15537,24 +15333,7 @@
     "en": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Rantepao",
-        "category": "halal",
-        "cuisine": "Indonesian and Torajan",
-        "description": "A central restaurant serving local and Indonesian dishes.",
-        "lastVerified": "2026-08-25",
-        "name": "Rimiko Restaurant",
-        "verification": {
-         "note": "As no current independent certificate record was found, reconfirm meat sourcing, the shared kitchen and alcohol policy with the business.",
-         "sourceName": "Indonesia's BPJPH, the official halal product and certification agency",
-         "sourceType": "certifier",
-         "sourceUrl": "https://bpjph.halal.go.id/",
-         "status": "verification-recommended"
-        },
-        "why": "A planning candidate for a plain fish/vegetable order; it is not definitely halal, because of pork, alcohol and the shared kitchen."
-       }
-      ],
+      "halal": [],
       "researchNote": "Pork and ceremonial meat dishes are common in Tana Toraja; as verified halal restaurants are limited, packaged food and written kitchen confirmation in advance are recommended.",
       "vegan": [
        {
@@ -15831,24 +15610,7 @@
     "es": {
      "countryInfoOnHub": true,
      "dietary": {
-      "halal": [
-       {
-        "area": "Rantepao",
-        "category": "halal",
-        "cuisine": "Indonesia y toraja",
-        "description": "Restaurante céntrico que sirve platos locales e indonesios.",
-        "lastVerified": "2026-08-25",
-        "name": "Rimiko Restaurant",
-        "verification": {
-         "note": "Como no hay un registro de certificado independiente y actual, vuelve a confirmar con el local el origen de la carne, si la cocina es compartida y la política de alcohol.",
-         "sourceName": "BPJPH de Indonesia, organismo oficial de productos y certificación halal",
-         "sourceType": "certifier",
-         "sourceUrl": "https://bpjph.halal.go.id/",
-         "status": "verification-recommended"
-        },
-        "why": "Un candidato para planificar un pedido sencillo de pescado o verduras; por el cerdo, el alcohol y la cocina compartida, no es halal con seguridad."
-       }
-      ],
+      "halal": [],
       "researchNote": "En Tana Toraja son habituales el cerdo y los platos de carne ceremoniales; como hay pocos restaurantes halal verificados, se recomienda llevar comida envasada y confirmar la cocina por escrito.",
       "vegan": [
        {
@@ -16124,24 +15886,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Rantepao",
-        "category": "halal",
-        "cuisine": "Endonezya ve Toraja",
-        "description": "Yerel ve Endonezya yemekleri sunan merkezî restoran.",
-        "lastVerified": "2026-08-25",
-        "name": "Rimiko Restaurant",
-        "verification": {
-         "note": "Bağımsız güncel bir sertifika kaydı bulunmadığı için işletmeden et tedarikini, ortak mutfağı ve alkol politikasını yeniden teyit edin.",
-         "sourceName": "Endonezya BPJPH — resmî helal ürün ve sertifika kurumu",
-         "sourceType": "certifier",
-         "sourceUrl": "https://bpjph.halal.go.id/",
-         "status": "verification-recommended"
-        },
-        "why": "Sade balık/sebze siparişi için planlama adayı; domuz, alkol ve ortak mutfak nedeniyle kesin helal değildir."
-       }
-      ],
+      "halal": [],
       "researchNote": "Tana Toraja'da domuz ve törensel et yemekleri yaygındır; doğrulanmış helal restoran sınırlı olduğundan önceden paketli gıda ve yazılı mutfak teyidi önerilir.",
       "vegan": [
        {
