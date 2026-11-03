@@ -1,7 +1,12 @@
-import { DIETARY_GUIDES } from "./catalog";
+import { DIETARY_GUIDES as CATALOG_GUIDES } from "./catalog";
+import { applyHalalReview } from "./halalReview";
 import type { DestinationDietaryGuide } from "./types";
 
 export type { DestinationDietaryGuide, DietaryRestaurant } from "./types";
+
+/** Katalog + helal denetimi sonucu (kaldırılan ve düşürülen kayıtlar uygulanmış hâli). */
+const DIETARY_GUIDES = applyHalalReview(CATALOG_GUIDES);
+export const REVIEWED_DIETARY_GUIDES = DIETARY_GUIDES;
 
 const dietaryByKey = new Map(
   DIETARY_GUIDES.map((entry) => [`${entry.countryCode}:${entry.city}`, entry])

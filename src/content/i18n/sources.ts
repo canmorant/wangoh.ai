@@ -1,7 +1,7 @@
 import { ALL_DESTINATIONS, destinationTexts } from "./destinations";
 import { ORIGIN_CITIES } from "@/data/origins";
 import { countryHubFor } from "@/content/countryHubs";
-import { DIETARY_GUIDES } from "@/content/dietary/catalog";
+import { REVIEWED_DIETARY_GUIDES } from "@/content/dietary";
 import { buildGuides } from "@/content/guides";
 import { createGuideContext } from "@/content/guides/context";
 import { en as anyTemplates } from "@/content/guides/templates/en";
@@ -59,7 +59,7 @@ export function collectSources(): Map<string, SourceText> {
     if (hub) translateDeep(hub, recorder("hubs", country.code), HUB_KEYS);
   }
 
-  for (const entry of DIETARY_GUIDES) {
+  for (const entry of REVIEWED_DIETARY_GUIDES) {
     translateDeep(entry, recorder("dietary", `${entry.countryCode}:${entry.city}`), DIETARY_KEYS);
   }
 
