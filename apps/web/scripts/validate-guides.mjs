@@ -204,6 +204,10 @@ async function htmlFor(path) {
   return response.text();
 }
 
+// Helal önerisi bilinçli olarak boş olan şehirler: işletme helal olmadığını bildirdiği için kayıt kaldırıldı
+// (Nice, Le Cèdre). Doğrulanmış başka helal kayıt eklenene kadar yalnız vegan kart beklenir.
+const NO_HALAL_PATHS = new Set(["/fransa/nice"]);
+
 const titles = new Set();
 const descriptions = new Set();
 
@@ -243,17 +247,19 @@ for (const scope of scopes) {
     assert(!html.toLocaleLowerCase("tr").includes("hazırlanıyor"), `${path}: taslak metni görünüyor`);
     assert(html.includes("Beslenme tercihleri"), `${path}: beslenme tercihleri bölümü eksik`);
     assert(html.includes("Vegan Pick"), `${path}: vegan önerisi eksik`);
-    assert(html.includes("Halal Pick"), `${path}: helal önerisi eksik`);
+    const expectsHalal = !NO_HALAL_PATHS.has(path);
+    assert(!expectsHalal || html.includes("Halal Pick"), `${path}: helal önerisi eksik`);
     assert(html.includes("Google Maps"), `${path}: restoran harita bağlantısı eksik`);
     assert(html.includes("Doğrulama notu"), `${path}: restoran doğrulama notu eksik`);
     assert((html.match(/dateTime="\d{4}-\d{2}-\d{2}"/g) ?? []).length >= 2, `${path}: restoran kontrol tarihi eksik`);
     const dietaryCards = html.match(/<article\b[^>]*data-dietary-card[^>]*>/gi) ?? [];
     const dietaryCategories = dietaryCards.map((tag) => attributeValue(tag, "data-dietary-category"));
     const dietaryNames = dietaryCards.map((tag) => attributeValue(tag, "data-restaurant-name"));
-    assert(dietaryCards.length === 2, `${path}: iki beslenme kartı bekleniyordu, ${dietaryCards.length} bulundu`);
+    const expectedCards = expectsHalal ? 2 : 1;
+    assert(dietaryCards.length === expectedCards, `${path}: ${expectedCards} beslenme kartı bekleniyordu, ${dietaryCards.length} bulundu`);
     assert(dietaryCategories.includes("vegan"), `${path}: vegan kart kategorisi eksik`);
-    assert(dietaryCategories.includes("halal"), `${path}: helal kart kategorisi eksik`);
-    assert(new Set(dietaryNames).size === 2, `${path}: aynı restoran iki kez kullanılmış`);
+    assert(dietaryCategories.includes("halal") === expectsHalal, `${path}: helal kart kategorisi beklentisi tutmuyor`);
+    assert(new Set(dietaryNames).size === expectedCards, `${path}: aynı restoran iki kez kullanılmış`);
 
     for (const sibling of scope.cities.filter((candidate) => candidate !== city)) {
       assert(html.includes(`href="/${scope.country}/${sibling}"`), `${path}: ${sibling} iç bağlantısı eksik`);
