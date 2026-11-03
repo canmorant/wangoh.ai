@@ -1035,24 +1035,7 @@
    "translations": {
     "en": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Around Jean Médecin",
-        "category": "halal",
-        "cuisine": "Lebanese",
-        "description": "A Lebanese restaurant with a halal meat declaration, serving mezze, grills and baked dishes.",
-        "lastVerified": "2026-08-12",
-        "name": "Le Cèdre",
-        "verification": {
-         "note": "The directory and business statements point to halal meat; reconfirm the official document, alcohol and any shared grill.",
-         "sourceName": "Ma Table Halal's current France directory",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://matablehalal.com/",
-         "status": "restaurant-confirmed"
-        },
-        "why": "Its wide mezze spread is easy to share between vegetarians and meat-eaters at the same table."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Vieux Nice",
@@ -1363,24 +1346,7 @@
     },
     "es": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Alrededores de Jean Médecin",
-        "category": "halal",
-        "cuisine": "Libanesa",
-        "description": "Restaurante libanés con carne declarada halal que sirve mezze, parrilladas y platos al horno.",
-        "lastVerified": "2026-08-12",
-        "name": "Le Cèdre",
-        "verification": {
-         "note": "El directorio y el local declaran carne halal; vuelve a verificar el documento oficial, el alcohol y si la parrilla es compartida.",
-         "sourceName": "Directorio actualizado de Francia de Ma Table Halal",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://matablehalal.com/",
-         "status": "restaurant-confirmed"
-        },
-        "why": "Por su amplia oferta de mezze, que vegetarianos y carnívoros pueden compartir fácilmente en la misma mesa."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Vieux Nice",
@@ -1691,24 +1657,7 @@
     },
     "tr": {
      "dietary": {
-      "halal": [
-       {
-        "area": "Jean Médecin çevresi",
-        "category": "halal",
-        "cuisine": "Lübnan",
-        "description": "Meze, ızgara ve fırın yemekleri sunan helal et beyanlı Lübnan restoranı.",
-        "lastVerified": "2026-08-12",
-        "name": "Le Cèdre",
-        "verification": {
-         "note": "Dizin ve işletme beyanı helal et yönünde; resmî belgeyi, alkolü ve ortak ızgarayı yeniden doğrulayın.",
-         "sourceName": "Ma Table Halal güncel Fransa dizini",
-         "sourceType": "specialist-directory",
-         "sourceUrl": "https://matablehalal.com/",
-         "status": "restaurant-confirmed"
-        },
-        "why": "Vejetaryenlerle et yiyenlerin aynı masada kolayca paylaşabileceği geniş meze düzeni için."
-       }
-      ],
+      "halal": [],
       "vegan": [
        {
         "area": "Vieux Nice",
