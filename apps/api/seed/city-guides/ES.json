@@ -13047,7 +13047,7 @@
      "countryInfoOnHub": true,
      "dietary": {
       "halal": [],
-      "researchNote": "Evidence of a current, independently certified restaurant in Ibiza is limited; this pick requires prior confirmation.",
+      "researchNote": "No evidence was found of a current, independently certified halal restaurant in Ibiza.",
       "vegan": [
        {
         "area": "Santa Gertrudis",
@@ -13371,7 +13371,7 @@
      "countryInfoOnHub": true,
      "dietary": {
       "halal": [],
-      "researchNote": "En Ibiza hay pocas pruebas de restaurantes con certificación independiente actual; la recomendación exige confirmación previa.",
+      "researchNote": "En Ibiza no se encontraron pruebas de un restaurante halal con certificación independiente actual.",
       "vegan": [
        {
         "area": "Santa Gertrudis",
@@ -13694,7 +13694,7 @@
     "tr": {
      "dietary": {
       "halal": [],
-      "researchNote": "Ibiza'da güncel, bağımsız sertifikalı restoran kanıtı sınırlı; öneri ön teyit gerektiriyor.",
+      "researchNote": "Ibiza'da güncel, bağımsız sertifikalı helal restoran kanıtı bulunamadı.",
       "vegan": [
        {
         "area": "Santa Gertrudis",
