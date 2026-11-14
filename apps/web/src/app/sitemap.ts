@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { countries } from "@/data/destinations";
 import { countrySlug, citySlug, guideFor } from "@/content/guides";
+import { cityLastModified } from "@/content/lastModified";
 import { routing, type AppLocale } from "@/i18n/routing";
 import { cityPageLocales, countryPageLocales, guideIndexLocales } from "@/content/localized";
 import { localizedUrl, translatedAlternates } from "@/i18n/seo";
@@ -61,9 +62,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const image = (src: string | undefined) => (src ? { images: [new URL(src, SITE.url).href] } : {});
 
   const countryPages: MetadataRoute.Sitemap = countries.flatMap((c) => {
-    // Ülke sayfası, içindeki en son gözden geçirilen rehberle birlikte güncellenir.
+    // Ülke sayfası, içindeki en son değişen rehberle birlikte güncellenir.
     const reviewed = c.cities
-      .map((city) => guideFor(c.code, city.name)?.reviewed)
+      .map((city) => cityLastModified(c.code, city.name))
       .filter((d): d is string => !!d)
       .sort()
       .at(-1);
@@ -79,7 +80,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       const guide = guideFor(c.code, city.name);
       return guide
         ? entries(`/${countrySlug(c)}/${citySlug(city)}`, cityPageLocales(c, city.name), {
-            lastModified: new Date(guide.reviewed),
+            lastModified: new Date(cityLastModified(c.code, city.name) ?? guide.reviewed),
             priority: 0.9,
             ...image(city.image),
           })

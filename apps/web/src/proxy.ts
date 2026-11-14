@@ -8,7 +8,7 @@ const intl = createMiddleware(routing);
 /**
  * Next 16'da middleware.ts'in yeni adı proxy.ts. Görevi dil yönlendirmesi:
  *   /japonya        → (iç) /tr/japonya     adres değişmez
- *   /tr/japonya     → 307 /japonya         varsayılan dil önek almaz
+ *   /tr/japonya     → 308 /japonya         varsayılan dil önek almaz (kalıcı)
  *   /en/japonya     → yayındaysa olduğu gibi
  *
  * Henüz yayında olmayan bir dilin adresi (çevirisi süren dil) Türkçe
@@ -48,7 +48,15 @@ export default function proxy(request: NextRequest) {
       }
     }
   }
-  return intl(request);
+  const response = intl(request);
+  // Varsayılan dilin önekli adresi (/tr/...) hiçbir zaman kendi sayfasını açmayacak; next-intl'in geçici (307)
+  // yönlendirmesi kalıcıya (308) çevrilir ki arama motorları sinyali öneksiz adreste toplasın. Dil algılama ve
+  // dil çerezi kapalı olduğundan (bkz. i18n/routing) yanıtta taşınması gereken başka bir başlık yok.
+  if (prefix === routing.defaultLocale && response.status === 307) {
+    const location = response.headers.get("location");
+    if (location) return NextResponse.redirect(new URL(location, request.url), 308);
+  }
+  return response;
 }
 
 export const config = {

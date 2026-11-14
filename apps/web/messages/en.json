@@ -181,6 +181,10 @@
     "eyebrow": "Dietary preferences",
     "heading": "Vegan and halal restaurants in {city}",
     "intro": "For {city} we picked one plant-based place and one aimed at Muslim travellers. Halal labels don't all mean the same thing: certification, the restaurant's own declaration and \"some halal options\" are shown separately on each card.",
+    "headingVeganOnly": "Vegan restaurants and halal dining notes in {city}",
+    "introVeganOnly": "For {city} we picked one plant-based place. We don't currently have a halal restaurant we could verify; if halal matters to you, ask the restaurant directly about its certificate and meat supply.",
+    "headingHalalOnly": "Halal restaurants and vegan dining notes in {city}",
+    "introHalalOnly": "For {city} we picked one place aimed at Muslim travellers. We don't currently have a fully plant-based restaurant we could verify; check vegan options with the restaurant before ordering. The type of halal label is shown on the card.",
     "researchNote": "Research note:",
     "disclaimer": "Menus, suppliers and certifications change. If you keep strict halal, confirm the current certificate, alcohol, sauce ingredients and shared-kitchen risk directly with the restaurant.",
     "notesHeading": "Vegan and halal dining tips for {city}",
@@ -191,6 +195,7 @@
     "heading": "A travel guide for your next city",
     "intro": "What to see, where to stay, how to get around? Pick your stops, find places to eat and build a day-by-day route with our city guides.",
     "guideTitle": "{city} Travel Guide",
+    "countriesHeading": "Travel guides by country",
     "allGuides": "All country and city guides →",
     "featured": {
       "newYork": {

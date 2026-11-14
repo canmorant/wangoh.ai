@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { getFormatter, getTranslations } from "next-intl/server";
 import { Link, permanentRedirect } from "@/i18n/navigation";
 import { resolveLocale } from "@/i18n/server";
-import { contentSeo, localizedUrl, OG_LOCALE, ogAlternateLocales } from "@/i18n/seo";
+import { contentSeo, localizedUrl, OG_LOCALE, ogAlternateLocales, INDEXABLE_ROBOTS } from "@/i18n/seo";
 import { contentTranslator, countryPageLocales, localizedCountry, localizedHub, placeName } from "@/content/localized";
 import { countryPracticalInfo } from "@/content/guides/expandedFactory";
 import { regionalBudgetNote } from "@/content/guides/regionalFactory";
@@ -85,7 +85,7 @@ export async function generateMetadata({
       description,
       images: share ? [share.url] : undefined,
     },
-    robots: seo.robots ?? { index: true, follow: true },
+    robots: seo.robots ?? INDEXABLE_ROBOTS,
   };
 }
 

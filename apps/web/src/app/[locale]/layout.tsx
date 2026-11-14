@@ -12,7 +12,7 @@ import "../globals.css";
 import { SITE } from "@/lib/site";
 import { ADSENSE_CLIENT } from "@/lib/adsense";
 import { routing } from "@/i18n/routing";
-import { OG_LOCALE, ogAlternateLocales, translatedAlternates } from "@/i18n/seo";
+import { INDEXABLE_ROBOTS, OG_LOCALE, ogAlternateLocales, translatedAlternates } from "@/i18n/seo";
 import { ogImage } from "@/lib/ogImage";
 import { HERO_PLATE } from "@/lib/heroPlate";
 import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: Omit<Props, "children">): Pro
     metadataBase: new URL(SITE.url),
     title: t("title"),
     description: t("description"),
-    robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large" } },
+    robots: INDEXABLE_ROBOTS,
     verification: { google: process.env.GOOGLE_SITE_VERIFICATION },
     // Ana ekrana eklenince görünen ad, açıklama ve başlangıç adresi dile göre.
     // Kendi manifest dosyası olmayan diller İngilizcesini kullanır.

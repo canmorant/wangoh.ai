@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { resolveLocale } from "@/i18n/server";
-import { contentSeo } from "@/i18n/seo";
+import { contentSeo, INDEXABLE_ROBOTS } from "@/i18n/seo";
 import { legalPageLocales, legalTextLocale } from "@/components/legal/locales";
 import TermsEn from "@/components/legal/en/Terms";
 import TermsEs from "@/components/legal/es/Terms";
@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     alternates: seo.alternates,
-    robots: seo.robots ?? { index: true, follow: true },
+    robots: seo.robots ?? INDEXABLE_ROBOTS,
   };
 }
 

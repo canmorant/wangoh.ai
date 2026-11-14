@@ -181,6 +181,10 @@
     "eyebrow": "Préférences alimentaires",
     "heading": "Restaurants végans et halal à {city}",
     "intro": "À {city}, nous avons retenu une adresse végétale et une autre pensée pour les voyageurs musulmans. Les mentions halal ne se valent pas toutes : la certification, la déclaration du restaurant et « quelques options halal » sont indiquées séparément sur chaque fiche.",
+    "headingVeganOnly": "Restaurants végans et conseils halal à {city}",
+    "introVeganOnly": "À {city}, nous avons retenu une adresse végétale. Nous n'avons pas pour l'instant de restaurant halal que nous ayons pu vérifier ; si c'est important pour vous, demandez directement au restaurant son certificat et l'origine de la viande.",
+    "headingHalalOnly": "Restaurants halal et conseils végans à {city}",
+    "introHalalOnly": "À {city}, nous avons retenu une adresse pensée pour les voyageurs musulmans. Nous n'avons pas pour l'instant de restaurant entièrement végétal que nous ayons pu vérifier ; vérifiez les options véganes auprès du restaurant avant de commander. Le type de mention halal figure sur la fiche.",
     "researchNote": "Note de recherche :",
     "disclaimer": "Les cartes, les fournisseurs et les certifications changent. Si vous suivez un halal strict, vérifiez directement auprès du restaurant le certificat en vigueur, l’alcool, la composition des sauces et le risque lié à une cuisine partagée.",
     "notesHeading": "Conseils pour manger vegan et halal à {city}",
@@ -191,6 +195,7 @@
     "heading": "Un guide de voyage pour votre prochaine ville",
     "intro": "Que voir, où dormir, comment se déplacer ? Choisissez vos étapes, trouvez où manger et construisez un itinéraire jour par jour grâce à nos guides de villes — disponibles pour l’instant en turc.",
     "guideTitle": "Guide de voyage : {city}",
+    "countriesHeading": "Guides de voyage par pays",
     "allGuides": "Tous les guides de pays et de villes →",
     "featured": {
       "newYork": {

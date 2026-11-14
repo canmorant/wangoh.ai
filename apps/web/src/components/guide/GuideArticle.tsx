@@ -26,11 +26,14 @@ export default function GuideArticle({
   country,
   city,
   dietary,
+  lastModified,
 }: {
   guide: CityGuide;
   country: Country;
   city: City;
   dietary: DestinationDietaryGuide;
+  /** Sayfanın görünen içeriğinin son değiştiği gün (ISO); bkz. content/lastModified. */
+  lastModified: string;
 }) {
   const siblings = country.cities.filter((c) => c.name !== city.name);
   const t = useTranslations("Guide");
@@ -56,7 +59,7 @@ export default function GuideArticle({
       {guide.places.length > 0 && (
         <TocItem href="#nerede-yenir">{sights ? placesHeading : t("tocWhereToEat")}</TocItem>
       )}
-      <TocItem href="#vegan-helal-restoranlar">{t(dietary.vegan.length || dietary.halal.length ? "tocDietary" : "tocDietaryNotes")}</TocItem>
+      <TocItem href="#vegan-helal-restoranlar">{t(dietary.vegan.length && dietary.halal.length ? "tocDietary" : "tocDietaryNotes")}</TocItem>
       {guide.itinerary.length > 0 && <TocItem href="#gezi-plani">{t("itinerary")}</TocItem>}
       {guide.practicalTips && guide.practicalTips.length > 0 && (
         <TocItem href="#bilmeden-gitme">{t("beforeYouGo")}</TocItem>
@@ -343,8 +346,8 @@ export default function GuideArticle({
             <p className="rounded-xl border border-white/[0.08] bg-white/[0.02] p-5 text-[13px] leading-relaxed text-white/45">
               <strong className="font-semibold text-white/70">{t("note")}</strong>{" "}
               {guide.volatileNote} {t("lastUpdated")}{" "}
-              <time dateTime={guide.reviewed}>
-                {format.dateTime(new Date(guide.reviewed), {
+              <time dateTime={lastModified}>
+                {format.dateTime(new Date(lastModified), {
                   day: "numeric",
                   month: "long",
                   year: "numeric",

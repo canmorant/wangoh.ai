@@ -1,6 +1,6 @@
 /**
  * Dile özel rehber ve ülke başlık/açıklamaları
- * (src/content/guides/seo.en.ts, seo.es.ts, countryHubs.seo.*.ts).
+ * (src/content/guides/seo.en.ts, seo.es.ts, seo.tr.ts, countryHubs.seo.*.ts).
  * Run:  npx tsx scripts/seo-copy.test.ts
  *
  * Arama sonucunda kesilmeyecek uzunluk, her rehberin kendi metni, tekrar ve
@@ -11,6 +11,7 @@ import { SECRET_DESTINATION } from "../src/data/secret";
 import { guideFor } from "../src/content/guides";
 import { EN_GUIDE_SEO } from "../src/content/guides/seo.en";
 import { ES_GUIDE_SEO } from "../src/content/guides/seo.es";
+import { TR_GUIDE_TITLES } from "../src/content/guides/seo.tr";
 import { EN_HUB_TITLES } from "../src/content/countryHubs.seo.en";
 import { ES_HUB_SEO } from "../src/content/countryHubs.seo.es";
 import { localizedGuide, localizedHub, placeName } from "../src/content/localized";
@@ -58,6 +59,30 @@ for (const [locale, table] of GUIDES) {
     descriptions.add(description);
     const guide = localizedGuide(code, city, locale)?.value;
     ok(`${id} rehbere uygulanıyor`, guide?.seoTitle === title && guide?.seoDescription === description);
+  }
+}
+
+// Türkçe: 60 karakteri aşan rehber başlıklarının kısa hâli (seo.tr.ts). Yalnız <title> kısalır; rehber verisi aynı kalır.
+{
+  ok("tr: fazla satır yok", Object.keys(TR_GUIDE_TITLES).every((k) => known.has(k)),
+    Object.keys(TR_GUIDE_TITLES).filter((k) => !known.has(k)).join(", "));
+  const titles = new Set<string>();
+  for (const { code, city } of keys) {
+    const id = `tr ${code}:${city}`;
+    const source = guideFor(code, city)!.seoTitle;
+    const short = TR_GUIDE_TITLES[`${code}:${city}`];
+    const title = localizedGuide(code, city, "tr")!.value.seoTitle;
+    ok(`${id} başlık ≤ 60`, title.length <= 60, `${title.length}: ${title}`);
+    ok(`${id} başlık tekil`, !titles.has(title), title);
+    titles.add(title);
+    ok(`${id} kesik metin yok`, !/…|\.\.\./.test(title));
+    if (short) {
+      ok(`${id} kısa başlık gerekli (kaynak > 60)`, source.length > 60, `${source.length}: ${source}`);
+      ok(`${id} kısa başlık uygulanıyor`, title === short);
+      ok(`${id} kısa başlık aynı kalıpta`, short.startsWith(`${source.split(": ")[0]}: `), short);
+    } else {
+      ok(`${id} başlık değişmedi`, title === source);
+    }
   }
 }
 
