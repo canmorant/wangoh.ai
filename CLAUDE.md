@@ -25,7 +25,7 @@
 - Paket yöneticisi pnpm 10 (`corepack enable` yeter). Kurulum: kökte `pnpm install`.
 - Kökten: `pnpm dev:web`, `pnpm dev:mobile`, `pnpm build` (web), `pnpm lint` (web), `pnpm typecheck` (web ve mobil).
 - Web (`apps/web` içinde, ya da kökten `pnpm --filter web <betik>`): `npx tsc --noEmit -p .`, `npx eslint .`
-- `npx tsx scripts/i18n.test.ts`, `npx tsx scripts/paths.test.ts`, `npx tsx scripts/seo-copy.test.ts`, `npx tsx scripts/distance.test.ts`, `npx tsx scripts/map.test.ts`, `npx tsx scripts/turkish.test.ts` (`apps/web` içinden)
+- `npx tsx scripts/i18n.test.ts`, `npx tsx scripts/paths.test.ts`, `npx tsx scripts/seo-copy.test.ts`, `npx tsx scripts/distance.test.ts`, `npx tsx scripts/map.test.ts`, `npx tsx scripts/turkish.test.ts`, `npx tsx scripts/hero-scroll.test.ts` (ana sayfa pencere sahnesi: en çok iki kaydırmada geçilir) (`apps/web` içinden)
 - Derleme sonrası yerel sunucuya karşı (`apps/web` içinde, `pnpm start -p 3200` ile): `VALIDATION_BASE_URL=http://127.0.0.1:3200 pnpm test:seo` ve `pnpm test:guides`
 - Mobil (`apps/mobile`): bağımlılık eklerken `npx expo install <paket>`; `pnpm typecheck`, `pnpm test`.
 - API (`apps/api`): `pnpm --filter api test|typecheck|lint|build`; API şeması değişince `pnpm generate:api` ve `apps/api/openapi.json` ile `packages/api-client/src/generated` birlikte commit'lenir. Mobil içerik verisi tutmaz: kıta/ülke/şehir/blog/oyun yalnız API'den gelir. Tohum üretimi: `apps/web/scripts/export-api-seed.ts`, `export-blog-seed.ts` (`apps/web` içinden, `--check` ile güncellik).

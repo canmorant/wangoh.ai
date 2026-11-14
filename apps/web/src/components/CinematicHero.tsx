@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { useFormatter, useTranslations } from "next-intl";
 import WindowShade, { SHADE_CONFIG } from "./WindowShade";
 import { useAdaptiveMotionQuality } from "@/hooks/useAdaptiveMotionQuality";
+import { attachHeroWheel, HERO_STAGE_HEIGHT } from "@/lib/heroScroll";
 import {
   CAMERA,
   clamp01,
@@ -406,6 +407,15 @@ export default function CinematicHero() {
     return () => ctx.revert();
   }, [applyGlass, dims, motionQuality]);
 
+  /* ---------------- wheel ---------------- */
+  // İki tekerlek çentiği sahnenin tamamını geçirir; ayrıntı lib/heroScroll'da.
+  useEffect(() => {
+    const stage = stageRef.current;
+    const view = viewportRef.current;
+    if (!stage || !view) return;
+    return attachHeroWheel(stage, view);
+  }, []);
+
   /* ---------------- entrance ---------------- */
   useEffect(() => {
     if (!dims) return;
@@ -500,13 +510,13 @@ export default function CinematicHero() {
   const lip = dims && ring(dims, dims.lip);
   const glass = dims && ring(dims, 0);
 
-  // Halved from 620vh. The camera curve was reshaped to match — see `render`.
+  // Sahne yüksekliği WindowHero ile ortak (lib/heroScroll): pencereden en çok iki kaydırmada geçilir.
   return (
     <div
       ref={stageRef}
       data-motion-quality={motionQuality}
       data-hero-active="true"
-      className="hero-stage relative h-[265svh] sm:h-[310vh]"
+      className={`hero-stage relative ${HERO_STAGE_HEIGHT}`}
     >
       <div ref={viewportRef} className="sticky top-0 h-[100svh] w-full overflow-hidden bg-[#0b0d12]">
         {/* ============ WORLD — everything beyond the glass ============ */}

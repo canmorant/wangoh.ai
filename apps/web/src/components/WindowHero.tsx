@@ -14,6 +14,7 @@ import {
   worldScale,
 } from "@/lib/camera";
 import { HERO_PLATE, HERO_PLATE_SOFT } from "@/lib/heroPlate";
+import { attachHeroWheel, HERO_STAGE_HEIGHT } from "@/lib/heroScroll";
 
 /**
  * Telefon ve tabletlerin "pencereden içeri gir" sahnesi.
@@ -134,7 +135,10 @@ export default function WindowHero() {
     update();
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onResize);
+    // Fareyle gelen ziyaretçi iki tekerlek çentiğinde pencereden geçsin (dokunmatikte etkisiz).
+    const detachWheel = attachHeroWheel(stage, view);
     return () => {
+      detachWheel();
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onResize);
       if (frame) cancelAnimationFrame(frame);
@@ -144,7 +148,7 @@ export default function WindowHero() {
   return (
     <section
       ref={stageRef}
-      className="relative h-[265svh] bg-[#0b0d12] sm:h-[310vh]"
+      className={`relative bg-[#0b0d12] ${HERO_STAGE_HEIGHT}`}
       aria-label={t("regionLabel")}
     >
       <div ref={viewRef} className="sticky top-0 h-[100svh] w-full overflow-hidden">
