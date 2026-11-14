@@ -21,7 +21,7 @@
 ## Testler
 
 - `npx tsc --noEmit -p .`, `npx eslint .`
-- `npx tsx scripts/i18n.test.ts`, `npx tsx scripts/paths.test.ts`, `npx tsx scripts/seo-copy.test.ts`, `npx tsx scripts/distance.test.ts`, `npx tsx scripts/map.test.ts`, `npx tsx scripts/turkish.test.ts`, `npx tsx scripts/island.test.ts` (uygulamada pencerenin Dynamic Island'a dönüşümü)
+- `npx tsx scripts/i18n.test.ts`, `npx tsx scripts/paths.test.ts`, `npx tsx scripts/seo-copy.test.ts`, `npx tsx scripts/distance.test.ts`, `npx tsx scripts/map.test.ts`, `npx tsx scripts/turkish.test.ts`, `npx tsx scripts/island.test.ts` (uygulamada pencerenin Dynamic Island'a dönüşümü), `npx tsx scripts/hero-scroll.test.ts` (ana sayfa pencere sahnesi: en çok iki kaydırmada geçilir)
 - Derleme sonrası yerel sunucuya karşı: `VALIDATION_BASE_URL=http://127.0.0.1:3200 npm run test:seo` ve `npm run test:guides`
 
 ## Google Maps listeleri

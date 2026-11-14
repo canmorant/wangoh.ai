@@ -14,6 +14,7 @@ import {
   worldScale,
 } from "@/lib/camera";
 import { HERO_PLATE, HERO_PLATE_SOFT } from "@/lib/heroPlate";
+import { attachHeroWheel, HERO_STAGE_HEIGHT } from "@/lib/heroScroll";
 import { IS_APP_BUILD } from "@/i18n/routing";
 import { ISLAND, islandCenterY, readSafeTop } from "@/lib/island";
 import { drawMorph, morphShape, type MorphFrame } from "@/lib/islandMorph";
@@ -196,9 +197,12 @@ export default function WindowHero() {
     const retries = IS_APP_BUILD ? [150, 600, 1500, 3500].map((ms) => window.setTimeout(onResize, ms)) : [];
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onResize);
+    // Fareyle gelen ziyaretçi iki tekerlek çentiğinde pencereden geçsin (dokunmatikte etkisiz).
+    const detachWheel = attachHeroWheel(stage, view);
     // Uygulamadaki Dynamic Island çerçevesi (IslandFrame) sahnenin geldiğini/gittiğini bilsin.
     window.dispatchEvent(new Event("wangoh:hero"));
     return () => {
+      detachWheel();
       retries.forEach((id) => window.clearTimeout(id));
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onResize);
@@ -211,7 +215,7 @@ export default function WindowHero() {
     <section
       ref={stageRef}
       data-hero-stage
-      className="relative h-[265svh] bg-[#0b0d12] sm:h-[310vh]"
+      className={`relative bg-[#0b0d12] ${HERO_STAGE_HEIGHT}`}
       aria-label={t("regionLabel")}
     >
       <div ref={viewRef} className="sticky top-0 h-[100svh] w-full overflow-hidden">
