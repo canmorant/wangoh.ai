@@ -1,8 +1,56 @@
 "use client";
 
-import { useRef, ReactNode } from "react";
-import { motion, useMotionValue, useSpring } from "framer-motion";
+import { useEffect, useRef, type PointerEvent, type ReactNode } from "react";
 import { SPRING } from "@/lib/motion";
+
+/** Position, velocity and target of the pull, plus the running frame. */
+interface Pull {
+  x: number;
+  y: number;
+  vx: number;
+  vy: number;
+  tx: number;
+  ty: number;
+  frame: number;
+  last: number;
+}
+
+const REST = 0.01;
+const SUBSTEPS = 4;
+
+/**
+ * Damped spring toward (tx, ty), written straight to the element's transform.
+ * Lives outside React: the menu sits on every page, and this keeps an
+ * animation library out of the first load.
+ */
+function follow(el: HTMLElement, pull: Pull) {
+  if (pull.frame) return;
+  const tick = (now: number) => {
+    const h = Math.min(0.032, (now - pull.last) / 1000) / SUBSTEPS;
+    pull.last = now;
+    for (let i = 0; i < SUBSTEPS; i++) {
+      pull.vx += ((-SPRING.stiffness * (pull.x - pull.tx) - SPRING.damping * pull.vx) / SPRING.mass) * h;
+      pull.vy += ((-SPRING.stiffness * (pull.y - pull.ty) - SPRING.damping * pull.vy) / SPRING.mass) * h;
+      pull.x += pull.vx * h;
+      pull.y += pull.vy * h;
+    }
+    const settled =
+      Math.abs(pull.x - pull.tx) < REST &&
+      Math.abs(pull.y - pull.ty) < REST &&
+      Math.abs(pull.vx) < REST &&
+      Math.abs(pull.vy) < REST;
+    if (settled) {
+      pull.x = pull.tx;
+      pull.y = pull.ty;
+      pull.vx = 0;
+      pull.vy = 0;
+    }
+    el.style.transform = pull.x === 0 && pull.y === 0 ? "" : `translate(${pull.x}px, ${pull.y}px)`;
+    pull.frame = settled ? 0 : requestAnimationFrame(tick);
+  };
+  pull.last = performance.now();
+  pull.frame = requestAnimationFrame(tick);
+}
 
 /**
  * Pulls its child gently toward the cursor while hovered, then springs home.
@@ -22,12 +70,25 @@ export default function Magnetic({
   className?: string;
 }) {
   const ref = useRef<HTMLSpanElement>(null);
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-  const sx = useSpring(x, SPRING);
-  const sy = useSpring(y, SPRING);
+  const pull = useRef<Pull>({ x: 0, y: 0, vx: 0, vy: 0, tx: 0, ty: 0, frame: 0, last: 0 });
 
-  const onMove = (e: React.PointerEvent) => {
+  useEffect(() => {
+    const state = pull.current;
+    return () => {
+      if (state.frame) cancelAnimationFrame(state.frame);
+      state.frame = 0;
+    };
+  }, []);
+
+  const aim = (tx: number, ty: number) => {
+    const el = ref.current;
+    if (!el) return;
+    pull.current.tx = tx;
+    pull.current.ty = ty;
+    follow(el, pull.current);
+  };
+
+  const onMove = (e: PointerEvent) => {
     const el = ref.current;
     if (!el) return;
     const r = el.getBoundingClientRect();
@@ -39,24 +100,18 @@ export default function Magnetic({
     const dist = Math.hypot(dx, dy);
     const max = (Math.max(r.width, r.height) / 2) * radius;
     const falloff = Math.max(0, 1 - dist / max);
-    x.set(dx * strength * falloff);
-    y.set(dy * strength * falloff);
-  };
-
-  const reset = () => {
-    x.set(0);
-    y.set(0);
+    aim(dx * strength * falloff, dy * strength * falloff);
   };
 
   return (
-    <motion.span
+    <span
       ref={ref}
       onPointerMove={onMove}
-      onPointerLeave={reset}
-      style={{ x: sx, y: sy, display: "inline-flex" }}
+      onPointerLeave={() => aim(0, 0)}
+      style={{ display: "inline-flex" }}
       className={className}
     >
       {children}
-    </motion.span>
+    </span>
   );
 }

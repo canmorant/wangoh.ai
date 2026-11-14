@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import SiteFooter from "@/components/SiteFooter";
 import { Link } from "@/i18n/navigation";
+import IntentLink from "@/components/IntentLink";
 import { resolveLocale } from "@/i18n/server";
 
 const links = [
@@ -27,12 +28,12 @@ export default async function CorporateLayout({
           aria-label={t("nav")}
           className="mx-auto flex min-h-18 max-w-[1160px] items-center justify-between gap-6"
         >
-          <Link
+          <IntentLink
             href="/"
             className="shrink-0 text-[13px] tracking-[0.34em] text-white/90 uppercase transition-opacity hover:opacity-70"
           >
             Wangoh
-          </Link>
+          </IntentLink>
           <div className="flex items-center gap-4 sm:gap-7">
             {links.map((link) => (
               <Link
@@ -43,12 +44,12 @@ export default async function CorporateLayout({
                 {tFooter(link.key)}
               </Link>
             ))}
-            <Link
+            <IntentLink
               href="/"
               className="rounded-full border border-white/12 px-4 py-2.5 text-[10px] tracking-[0.16em] text-white/62 uppercase transition-colors hover:border-white/30 hover:text-white"
             >
               {tContent("home")}
-            </Link>
+            </IntentLink>
           </div>
         </nav>
       </header>

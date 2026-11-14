@@ -25,3 +25,7 @@ export const DUR = {
 
 /** Spring used for pointer-follow interactions (tilt, magnetism). */
 export const SPRING = { stiffness: 260, damping: 28, mass: 0.7 } as const;
+
+/** The same curves as a CSS / Web Animations timing function. */
+export const cssEase = (curve: readonly [number, number, number, number]) =>
+  `cubic-bezier(${curve.join(", ")})`;
