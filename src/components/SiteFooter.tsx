@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import IntentLink from "./IntentLink";
 import { SITE } from "@/lib/site";
 import { IS_APP_BUILD } from "@/i18n/routing";
 import LanguageSwitcher from "./LanguageSwitcher";
@@ -25,12 +26,12 @@ export default function SiteFooter() {
     <footer className="relative border-t border-white/[0.07] bg-[#070a12] px-5 py-12 sm:px-8 sm:py-14">
       <div className="mx-auto grid max-w-[1160px] gap-10 md:grid-cols-[1.35fr_1fr_1fr] md:gap-12">
         <div>
-          <Link
+          <IntentLink
             href="/"
             className="text-[13px] tracking-[0.34em] text-white/90 uppercase transition-opacity hover:opacity-70"
           >
             Wangoh
-          </Link>
+          </IntentLink>
           <p className="mt-4 max-w-[34ch] text-[13px] leading-relaxed text-white/38">
             {t("tagline")}
           </p>

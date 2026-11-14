@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import IntentLink from "@/components/IntentLink";
 
 export interface Crumb {
   name: string;
@@ -13,7 +14,12 @@ export default function Breadcrumbs({ items }: { items: Crumb[] }) {
       <ol className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[11px] tracking-[0.14em] text-white/35 uppercase">
         {items.map((c, i) => (
           <li key={c.name} className="flex items-center gap-2">
-            {c.href ? (
+            {c.href === "/" ? (
+              // Ana sayfa ağır; ancak kullanıcı bağlantıya yönelince önden yüklenir.
+              <IntentLink href={c.href} className="transition-colors duration-300 hover:text-white/80">
+                {c.name}
+              </IntentLink>
+            ) : c.href ? (
               <Link href={c.href} className="transition-colors duration-300 hover:text-white/80">
                 {c.name}
               </Link>

@@ -1,14 +1,14 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import dynamic from "next/dynamic";
-import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { ChevronLeft, Menu, Search, X } from "lucide-react";
 import Magnetic from "./Magnetic";
+import IntentLink from "./IntentLink";
 import type { Country } from "@/data/destinations";
-import { EASE_OUT, EASE_SOFT } from "@/lib/motion";
+import { cssEase, EASE_OUT, EASE_SOFT } from "@/lib/motion";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { IS_APP_BUILD, routing } from "@/i18n/routing";
 import { useAppBack } from "@/hooks/useAppBack";
@@ -19,6 +19,40 @@ export interface NavAction {
   label: string;
   onClick?: () => void;
   href?: string;
+}
+
+/**
+ * Mobil menü kapanırken çıkış geçişi bitene kadar DOM'da kalır ("closing").
+ * Menü her sayfada olduğu için geçişler bir animasyon kütüphanesiyle değil,
+ * CSS geçişleri ve Web Animations API ile yapılır; kütüphane yalnız onu
+ * gerçekten kullanan sayfalarda (ana sayfa, arama penceresi) yüklenir.
+ */
+type MenuState = "closed" | "open" | "closing";
+const closeMenu = (state: MenuState): MenuState => (state === "open" ? "closing" : state);
+const toggleMenu = (state: MenuState): MenuState => (state === "open" ? "closing" : "open");
+
+const HEADER_EASE = cssEase(EASE_OUT);
+const HEADER_TRANSITION = `transform 0.55s ${HEADER_EASE}, opacity 0.55s ${HEADER_EASE}`;
+const MENU_FADE: KeyframeAnimationOptions = { duration: 250, easing: "ease-out" };
+const MENU_PANEL: KeyframeAnimationOptions = { duration: 350, easing: HEADER_EASE };
+const MENU_EXIT_MS = 350;
+
+/**
+ * Öğeyi `from` karesinden (verilmezse o anki görünümünden) `to` karesine götürür.
+ * Giriş bitince animasyon bırakılır, öğe kendi stiline döner; çıkış son karede
+ * kalır (`hold`), çünkü öğe az sonra DOM'dan kalkacak.
+ */
+function playMenu(
+  el: HTMLElement,
+  from: Keyframe | null,
+  to: Keyframe,
+  options: KeyframeAnimationOptions,
+  hold: boolean,
+) {
+  const current = getComputedStyle(el);
+  const start = from ?? { opacity: current.opacity, transform: current.transform };
+  for (const running of el.getAnimations()) running.cancel();
+  el.animate([start, to], hold ? { ...options, fill: "forwards" } : options);
 }
 
 /**
@@ -40,13 +74,40 @@ export default function FloatingNav({
   const { canBack, back } = useAppBack();
   const [visible, setVisible] = useState(true);
   const [solid, setSolid] = useState(false);
-  const [hovered, setHovered] = useState<string | null>(null);
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchRequested, setSearchRequested] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
+  const [menu, setMenu] = useState<MenuState>("closed");
+  const mobileOpen = menu === "open";
   const lastY = useRef(0);
   const solidRef = useRef(false);
   const visibleRef = useRef(true);
+  const highlightRef = useRef<HTMLSpanElement>(null);
+  const highlightShown = useRef(false);
+  const overlayRef = useRef<HTMLDivElement>(null);
+  const panelRef = useRef<HTMLElement>(null);
+
+  /**
+   * Masaüstünde imlecin altındaki bağlantının arkasındaki vurgu: ilk girişte
+   * yerinde belirir, bağlantıdan bağlantıya geçerken kayar, menüden çıkınca söner.
+   */
+  const moveHighlight = (item: HTMLElement | null) => {
+    const mark = highlightRef.current;
+    if (!mark) return;
+    if (!item) {
+      mark.style.opacity = "0";
+      highlightShown.current = false;
+      return;
+    }
+    // Kesirli ölçü: offsetWidth tam sayıya yuvarlar, vurgu bağlantıdan yarım piksel taşardı.
+    const box = item.getBoundingClientRect();
+    const origin = (mark.offsetParent ?? mark).getBoundingClientRect();
+    mark.style.transitionProperty = highlightShown.current ? "transform, width, height, opacity" : "opacity";
+    mark.style.transform = `translate(${box.left - origin.left}px, ${box.top - origin.top}px)`;
+    mark.style.width = `${box.width}px`;
+    mark.style.height = `${box.height}px`;
+    mark.style.opacity = "1";
+    highlightShown.current = true;
+  };
 
   useEffect(() => {
     lastY.current = window.scrollY;
@@ -91,12 +152,12 @@ export default function FloatingNav({
     document.body.style.overflow = "hidden";
     const desktop = window.matchMedia("(min-width: 768px)");
     const onViewportChange = () => {
-      if (desktop.matches) setMobileOpen(false);
+      if (desktop.matches) setMenu(closeMenu);
     };
     desktop.addEventListener("change", onViewportChange);
     onViewportChange();
     const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setMobileOpen(false);
+      if (event.key === "Escape") setMenu(closeMenu);
     };
     window.addEventListener("keydown", onKeyDown);
     return () => {
@@ -106,12 +167,47 @@ export default function FloatingNav({
     };
   }, [mobileOpen]);
 
+  // Mobil menünün giriş ve çıkış geçişi. Yarıda kesilen geçiş (hızlı aç-kapa)
+  // o anki görünümden devam eder, sıçramaz.
+  useLayoutEffect(() => {
+    const overlay = overlayRef.current;
+    const panel = panelRef.current;
+    if (menu === "closed" || !overlay || !panel) return;
+    try {
+      if (menu === "open") {
+        const fresh = overlay.getAnimations().length === 0;
+        playMenu(overlay, fresh ? { opacity: 0 } : null, { opacity: 1 }, MENU_FADE, false);
+        playMenu(
+          panel,
+          fresh ? { opacity: 0, transform: "translateY(-18px) scale(0.98)" } : null,
+          { opacity: 1, transform: "none" },
+          MENU_PANEL,
+          false,
+        );
+      } else {
+        playMenu(overlay, null, { opacity: 0 }, MENU_FADE, true);
+        playMenu(panel, null, { opacity: 0, transform: "translateY(-12px) scale(0.98)" }, MENU_PANEL, true);
+      }
+    } catch {
+      // Web Animations API'yi tam desteklemeyen eski tarayıcı: menü geçişsiz açılıp kapanır.
+    }
+  }, [menu]);
+
+  useEffect(() => {
+    if (menu !== "closing") return;
+    const timer = window.setTimeout(
+      () => setMenu((state) => (state === "closing" ? "closed" : state)),
+      MENU_EXIT_MS,
+    );
+    return () => window.clearTimeout(timer);
+  }, [menu]);
+
   // Global Keyboard Shortcuts (Cmd+K / Ctrl+K / /)
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
         e.preventDefault();
-        setMobileOpen(false);
+        setMenu(closeMenu);
         setSearchRequested(true);
         setSearchOpen((prev) => !prev);
       } else if (
@@ -120,7 +216,7 @@ export default function FloatingNav({
         document.activeElement?.tagName !== "TEXTAREA"
       ) {
         e.preventDefault();
-        setMobileOpen(false);
+        setMenu(closeMenu);
         setSearchRequested(true);
         setSearchOpen(true);
       }
@@ -129,12 +225,16 @@ export default function FloatingNav({
     return () => window.removeEventListener("keydown", onKeyDown);
   }, []);
 
+  const shown = visible || mobileOpen;
+
   return (
     <>
-      <motion.header
-        initial={false}
-        animate={{ y: visible || mobileOpen ? 0 : -96, opacity: visible || mobileOpen ? 1 : 0 }}
-        transition={{ duration: 0.55, ease: EASE_OUT }}
+      <header
+        style={{
+          transform: shown ? "none" : "translateY(-96px)",
+          opacity: shown ? 1 : 0,
+          transition: HEADER_TRANSITION,
+        }}
         className="pointer-events-none fixed inset-x-0 top-0 z-[60] flex justify-center px-3 pt-[max(0.75rem,env(safe-area-inset-top))] lg:px-4 lg:pt-6"
       >
         <nav
@@ -146,13 +246,13 @@ export default function FloatingNav({
             WebkitBackdropFilter: solid || mobileOpen ? "blur(22px) saturate(160%)" : "blur(0px)",
             boxShadow: solid || mobileOpen ? "0 8px 40px -12px rgba(0,0,0,0.6)" : "none",
           }}
-          onPointerLeave={() => setHovered(null)}
+          onPointerLeave={() => moveHighlight(null)}
         >
           {canBack && (
             <button
               type="button"
               onClick={() => {
-                setMobileOpen(false);
+                setMenu(closeMenu);
                 back();
               }}
               aria-label={t("back")}
@@ -162,10 +262,10 @@ export default function FloatingNav({
             </button>
           )}
 
-          <Link
+          <IntentLink
             href="/"
             onClick={(event) => {
-              setMobileOpen(false);
+              setMenu(closeMenu);
               // Uygulamada logo, hangi kıta/ülke görünümünde ya da sayfanın neresinde
               // olursan ol, ana sayfanın en başına (pencere sahnesine) götürür.
               if (IS_APP_BUILD && onHome) {
@@ -179,14 +279,14 @@ export default function FloatingNav({
             className={`${canBack ? "ml-0.5" : "ml-3"} shrink-0 text-[13px] tracking-[0.32em] text-white/90 uppercase transition-opacity duration-300 hover:opacity-70 lg:mr-2`}
           >
             Wangoh
-          </Link>
+          </IntentLink>
 
           <div className="flex shrink-0 items-center gap-1">
             {/* Search Trigger Button */}
             <button
               type="button"
               onClick={() => {
-                setMobileOpen(false);
+                setMenu(closeMenu);
                 setSearchRequested(true);
                 setSearchOpen(true);
               }}
@@ -199,7 +299,7 @@ export default function FloatingNav({
 
             <button
               type="button"
-              onClick={() => setMobileOpen((current) => !current)}
+              onClick={() => setMenu(toggleMenu)}
               className="flex h-11 w-11 items-center justify-center rounded-full text-white/75 transition-colors hover:bg-white/10 hover:text-white lg:hidden"
               aria-label={mobileOpen ? t("closeMenu") : t("openMenu")}
               aria-expanded={mobileOpen}
@@ -209,7 +309,13 @@ export default function FloatingNav({
             </button>
           </div>
 
-          <div className="hidden items-center lg:flex">
+          <div className="relative hidden items-center lg:flex">
+            <span
+              ref={highlightRef}
+              aria-hidden
+              className="pointer-events-none absolute top-0 left-0 rounded-full bg-white/[0.09] opacity-0"
+              style={{ transitionDuration: "0.35s", transitionTimingFunction: cssEase(EASE_SOFT) }}
+            />
             {actions.map((a) => {
               const inner = (
                 <span className="relative z-10 whitespace-nowrap">{a.label}</span>
@@ -219,25 +325,16 @@ export default function FloatingNav({
                 "relative cursor-pointer rounded-full px-4 py-2 text-[13px] text-white/70 transition-colors duration-300 hover:text-white lg:px-3.5 xl:px-5";
 
               return (
-                <div key={a.label} className="relative" onPointerEnter={() => setHovered(a.label)}>
-                  <AnimatePresence>
-                    {hovered === a.label && (
-                      <motion.span
-                        layoutId="nav-highlight"
-                        className="absolute inset-0 rounded-full bg-white/[0.09]"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.35, ease: EASE_SOFT }}
-                      />
-                    )}
-                  </AnimatePresence>
-
+                <div
+                  key={a.label}
+                  className="relative"
+                  onPointerEnter={(event) => moveHighlight(event.currentTarget)}
+                >
                   <Magnetic strength={0.25}>
                     {a.href ? (
-                      <Link href={a.href} className={shared}>
+                      <IntentLink href={a.href} className={shared}>
                         {inner}
-                      </Link>
+                      </IntentLink>
                     ) : (
                       <button type="button" onClick={a.onClick} className={shared}>
                         {inner}
@@ -250,76 +347,68 @@ export default function FloatingNav({
             <LanguageSwitcher className="ml-1" />
           </div>
         </nav>
-      </motion.header>
+      </header>
 
-      <AnimatePresence>
-        {mobileOpen && (
-          <motion.div
-            id="mobile-navigation"
-            role="dialog"
-            aria-modal="true"
-            aria-label={t("mobileMenu")}
-            className="fixed inset-0 z-[55] lg:hidden"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.25 }}
+      {menu !== "closed" && (
+        <div
+          ref={overlayRef}
+          id="mobile-navigation"
+          role="dialog"
+          aria-modal="true"
+          aria-label={t("mobileMenu")}
+          className="fixed inset-0 z-[55] lg:hidden"
+        >
+          <button
+            type="button"
+            aria-label={t("closeMenu")}
+            onClick={() => setMenu(closeMenu)}
+            className="absolute inset-0 bg-[#05070c]/80 backdrop-blur-xl"
+          />
+          <nav
+            ref={panelRef}
+            className="absolute inset-x-3 top-[calc(max(0.75rem,env(safe-area-inset-top))_+_4rem)] overflow-hidden rounded-[24px] border border-white/10 bg-[#0d111b]/[0.96] p-2 shadow-2xl"
           >
-            <button
-              type="button"
-              aria-label={t("closeMenu")}
-              onClick={() => setMobileOpen(false)}
-              className="absolute inset-0 bg-[#05070c]/80 backdrop-blur-xl"
-            />
-            <motion.nav
-              initial={{ opacity: 0, y: -18, scale: 0.98 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: -12, scale: 0.98 }}
-              transition={{ duration: 0.35, ease: EASE_OUT }}
-              className="absolute inset-x-3 top-[calc(max(0.75rem,env(safe-area-inset-top))_+_4rem)] overflow-hidden rounded-[24px] border border-white/10 bg-[#0d111b]/[0.96] p-2 shadow-2xl"
-            >
-              {actions.map((action, index) => {
-                const content = (
-                  <>
-                    <span className="text-[15px] text-white/85">{action.label}</span>
-                    <span className="text-white/25" aria-hidden>→</span>
-                  </>
-                );
-                const className =
-                  "flex min-h-14 w-full items-center justify-between rounded-2xl px-5 text-left transition-colors hover:bg-white/[0.07] focus-visible:bg-white/[0.07] focus-visible:outline-none";
-                return action.href ? (
-                  <Link
-                    key={action.label}
-                    href={action.href}
-                    onClick={() => setMobileOpen(false)}
-                    className={className}
-                  >
-                    {content}
-                  </Link>
-                ) : (
-                  <button
-                    key={action.label}
-                    type="button"
-                    onClick={() => {
-                      setMobileOpen(false);
-                      action.onClick?.();
-                    }}
-                    className={className}
-                    style={{ borderTop: index ? "1px solid rgba(255,255,255,0.05)" : undefined }}
-                  >
-                    {content}
-                  </button>
-                );
-              })}
-              {routing.locales.length > 1 && (
-                <div className="mt-1 flex items-center justify-between rounded-2xl border-t border-white/[0.05] px-3 pt-1">
-                  <LanguageSwitcher />
-                </div>
-              )}
-            </motion.nav>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            {actions.map((action, index) => {
+              const content = (
+                <>
+                  <span className="text-[15px] text-white/85">{action.label}</span>
+                  <span className="text-white/25" aria-hidden>→</span>
+                </>
+              );
+              const className =
+                "flex min-h-14 w-full items-center justify-between rounded-2xl px-5 text-left transition-colors hover:bg-white/[0.07] focus-visible:bg-white/[0.07] focus-visible:outline-none";
+              return action.href ? (
+                <Link
+                  key={action.label}
+                  href={action.href}
+                  onClick={() => setMenu(closeMenu)}
+                  className={className}
+                >
+                  {content}
+                </Link>
+              ) : (
+                <button
+                  key={action.label}
+                  type="button"
+                  onClick={() => {
+                    setMenu(closeMenu);
+                    action.onClick?.();
+                  }}
+                  className={className}
+                  style={{ borderTop: index ? "1px solid rgba(255,255,255,0.05)" : undefined }}
+                >
+                  {content}
+                </button>
+              );
+            })}
+            {routing.locales.length > 1 && (
+              <div className="mt-1 flex items-center justify-between rounded-2xl border-t border-white/[0.05] px-3 pt-1">
+                <LanguageSwitcher />
+              </div>
+            )}
+          </nav>
+        </div>
+      )}
 
       {/* Global Search Modal */}
       {searchRequested && (
