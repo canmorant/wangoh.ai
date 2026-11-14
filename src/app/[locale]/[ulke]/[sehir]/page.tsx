@@ -6,7 +6,9 @@ import { useLocale, useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { Link, permanentRedirect } from "@/i18n/navigation";
 import { resolveLocale } from "@/i18n/server";
-import { contentSeo, localizedUrl, OG_LOCALE, ogAlternateLocales } from "@/i18n/seo";
+import { contentSeo, INDEXABLE_ROBOTS, localizedUrl, OG_LOCALE, ogAlternateLocales } from "@/i18n/seo";
+import { cityLastModified } from "@/content/lastModified";
+import { dietaryHeadingKey } from "@/content/dietary";
 import type { AppLocale } from "@/i18n/routing";
 import {
   cityPageLocales,
@@ -123,7 +125,7 @@ export async function generateMetadata({
       images: share ? [share.url] : undefined,
     },
     robots: guide
-      ? (seo.robots ?? { index: true, follow: true })
+      ? (seo.robots ?? INDEXABLE_ROBOTS)
       : { index: false, follow: true, noarchive: true },
   };
 }
@@ -145,6 +147,9 @@ export default async function CityGuidePage({ params }: { params: Promise<Params
   const tContent = await getTranslations("Content");
   const tGuides = await getTranslations("Guides");
   const tGuide = await getTranslations("Guide");
+  const tDietary = await getTranslations("Dietary");
+  // Sitemap lastmod, Article dateModified ve sayfadaki "son güncelleme" aynı tarihi gösterir.
+  const lastModified = cityLastModified(country.code, city.name) ?? guide?.reviewed ?? "";
   const pageUrl = complete ? localizedUrl(path, locale) : absolute(path);
 
   // Ana sayfa › Rehberler › Ülke › Şehir: her şehir hem ülke hub'ına hem
@@ -184,7 +189,7 @@ export default async function CityGuidePage({ params }: { params: Promise<Params
               image: city.image
                 ? [ogImage(city.image, cityLabel)!.url, new URL(city.image, SITE.url).href]
                 : undefined,
-              dateModified: guide.reviewed,
+              dateModified: lastModified,
               mainEntityOfPage: { "@type": "WebPage", "@id": pageUrl },
               publisher: { "@id": `${SITE.url}/#organization` },
               author: {
@@ -227,7 +232,10 @@ export default async function CityGuidePage({ params }: { params: Promise<Params
           data={{
             "@context": "https://schema.org",
             "@type": "ItemList",
-            name: t("dietaryListName", { city: cityLabel }),
+            name:
+              dietary.vegan.length && dietary.halal.length
+                ? t("dietaryListName", { city: cityLabel })
+                : tDietary(dietaryHeadingKey(dietary), { city: cityLabel }),
             itemListElement: [...dietary.vegan, ...dietary.halal].map((pick, index) => ({
               "@type": "ListItem",
               position: index + 1,
@@ -266,7 +274,9 @@ export default async function CityGuidePage({ params }: { params: Promise<Params
                 src={city.image}
                 alt={t("heroAlt", { city: cityLabel, country: countryLabel })}
                 fill
-                priority
+                // LCP görseli: gövdede hemen keşfedilir; tarayıcıya yüksek öncelikle indirmesi söylenir.
+                loading="eager"
+                fetchPriority="high"
                 unoptimized={city.image.includes("upload.wikimedia.org")}
                 sizes="(max-width:1100px) 100vw, 1100px"
                 className="object-cover"
@@ -297,7 +307,13 @@ export default async function CityGuidePage({ params }: { params: Promise<Params
 
       <div className="mt-14">
         {guide ? (
-          <GuideArticle guide={guide} country={localCountry} city={localCity} dietary={dietary!} />
+          <GuideArticle
+            guide={guide}
+            country={localCountry}
+            city={localCity}
+            dietary={dietary!}
+            lastModified={lastModified}
+          />
         ) : (
           <PendingGuide country={localCountry} countryLabel={countryLabel} city={localCity} cityLabel={cityLabel} />
         )}

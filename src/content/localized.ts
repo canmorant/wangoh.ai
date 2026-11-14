@@ -12,6 +12,7 @@ import type { CityGuide } from "@/content/guides/types";
 import { EN_GUIDE_SEO } from "@/content/guides/seo.en";
 import { EN_HUB_TITLES } from "@/content/countryHubs.seo.en";
 import { ES_GUIDE_SEO } from "@/content/guides/seo.es";
+import { TR_GUIDE_TITLES } from "@/content/guides/seo.tr";
 import { ES_HUB_SEO } from "@/content/countryHubs.seo.es";
 import { countryHubFor, type CountryHubContent } from "@/content/countryHubs";
 import { dietaryGuideFor, type DestinationDietaryGuide } from "@/content/dietary";
@@ -65,7 +66,10 @@ function guidesIn(locale: AppLocale) {
 export function localizedGuide(countryCode: string, city: string, locale: AppLocale): Localized<CityGuide> | null {
   if (locale === "tr") {
     const guide = guideFor(countryCode, city);
-    return guide && { value: guide, complete: true };
+    if (!guide) return null;
+    // Arama sonucunda kesilmesin diye 60 karakteri aşan Türkçe başlıkların kısa hâli (seo.tr.ts).
+    const title = TR_GUIDE_TITLES[`${countryCode}:${city}`];
+    return { value: title ? { ...guide, seoTitle: title } : guide, complete: true };
   }
   const key = `${countryCode}:${city}`;
   const { byKey, missing } = guidesIn(locale);

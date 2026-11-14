@@ -10,6 +10,25 @@ const COMMON_HALAL_NOTE =
 const keyOf = (countryCode: string, city: string, name: string) => `${countryCode}|${city}|${name}`;
 
 /**
+ * Helal kartı kaldırılıp listesi boşalan şehirlerde araştırma notu artık var olmayan bir öneriden söz etmemeli.
+ * Bölgesel katalogdaki ortak not "bu iki seçim" diyordu; iki şehrin kendi notu da kaldırılan öneriye atıf yapıyordu.
+ */
+const NOTE_TWO_PICKS =
+  "Restoran sahipliği, menü ve sertifika durumu hızlı değişebilir. Bu iki seçim başlangıç noktasıdır; seyahat tarihinde resmî belgeyi ve işletmenin açık olduğunu yeniden doğrulayın.";
+const NOTE_ONE_PICK =
+  "Restoran sahipliği ve menü hızlı değişebilir. Bu seçim başlangıç noktasıdır; seyahat tarihinde işletmenin açık olduğunu ve menüsünü yeniden doğrulayın.";
+const NOTE_WITHOUT_HALAL_PICK: Record<string, string> = {
+  "IT|Amalfi Kıyısı": "Amalfi Kıyısı'nda güncel, bağımsız biçimde sertifikalanmış bir helal restoran bulunamadı.",
+  "ES|Ibiza": "Ibiza'da güncel, bağımsız sertifikalı helal restoran kanıtı bulunamadı.",
+};
+
+function noteWithoutHalalPick(guide: DestinationDietaryGuide): string | undefined {
+  const own = NOTE_WITHOUT_HALAL_PICK[`${guide.countryCode}|${guide.city}`];
+  if (own) return own;
+  return guide.researchNote === NOTE_TWO_PICKS ? NOTE_ONE_PICK : guide.researchNote;
+}
+
+/**
  * Helal kayıtlarının web kanıtıyla denetiminin sonucu (halalReview.data.ts, 2026-11-03):
  *  - remove: işletme bulunamadı, helal olduğuna dair hiçbir kaynak yok ya da başka şehirde; kayıt gösterilmez.
  *  - downgrade: yalnız dizin/yorum kaynağı var; "restoran doğruladı"/"sertifikalı" iddiası düşürülür, ortak uyarı gösterilir.
@@ -42,7 +61,10 @@ export function applyHalalReview(
         });
       }
     }
-    return changed ? { ...guide, halal } : guide;
+    if (!changed) return guide;
+    if (halal.length > 0) return { ...guide, halal };
+    const researchNote = noteWithoutHalalPick(guide);
+    return { ...guide, halal, ...(researchNote ? { researchNote } : {}) };
   });
 
   const missing = [...actions.keys()].filter((key) => !matched.has(key));

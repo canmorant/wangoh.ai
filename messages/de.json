@@ -189,6 +189,10 @@
     "eyebrow": "Ernährungsvorlieben",
     "heading": "Vegane und Halal-Restaurants in {city}",
     "intro": "In {city} haben wir eine pflanzliche Adresse und eine für muslimische Reisende ausgewählt. Halal-Angaben bedeuten nicht alle dasselbe: Zertifizierung, Eigenangabe des Restaurants und „einige Halal-Optionen“ sind auf jeder Karte getrennt ausgewiesen.",
+    "headingVeganOnly": "Vegane Restaurants und Hinweise zu Halal-Essen in {city}",
+    "introVeganOnly": "In {city} haben wir eine pflanzliche Adresse ausgewählt. Ein Halal-Restaurant, das wir überprüfen konnten, haben wir derzeit nicht; fragen Sie bei Bedarf direkt im Restaurant nach Zertifikat und Fleischherkunft.",
+    "headingHalalOnly": "Halal-Restaurants und Hinweise zu veganem Essen in {city}",
+    "introHalalOnly": "In {city} haben wir eine Adresse für muslimische Reisende ausgewählt. Ein rein pflanzliches Restaurant, das wir überprüfen konnten, haben wir derzeit nicht; klären Sie vegane Optionen vor der Bestellung mit dem Restaurant. Die Art der Halal-Angabe steht auf der Karte.",
     "researchNote": "Recherchehinweis:",
     "disclaimer": "Speisekarten, Lieferanten und Zertifikate ändern sich. Wenn du streng halal isst, kläre das aktuelle Zertifikat, Alkohol, Saucenzutaten und das Risiko einer gemeinsam genutzten Küche direkt mit dem Restaurant.",
     "notesHeading": "Vegane und Halal-Ernährung in {city}",
@@ -199,6 +203,7 @@
     "heading": "Ein Reiseführer für deine nächste Stadt",
     "intro": "Was ansehen, wo übernachten, wie herumkommen? Wähle deine Stopps, finde Orte zum Essen und plane mit unseren Stadtführern deine Route Tag für Tag – derzeit auf Türkisch verfügbar.",
     "guideTitle": "Reiseführer {city}",
+    "countriesHeading": "Reiseführer nach Ländern",
     "allGuides": "Alle Länder- und Stadtführer →",
     "featured": {
       "newYork": {

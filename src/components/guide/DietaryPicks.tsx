@@ -1,5 +1,5 @@
 import type { DestinationDietaryGuide, DietaryRestaurant } from "@/content/dietary";
-import { googleMapsSearchUrl } from "@/content/dietary";
+import { dietaryHeadingKey, dietaryIntroKey, googleMapsSearchUrl } from "@/content/dietary";
 import { useFormatter, useTranslations } from "next-intl";
 
 /** Veri kümesindeki doğrulama durumu → mesaj anahtarı (Dietary.status.*). */
@@ -124,10 +124,10 @@ export default function DietaryPicks({
         {t("eyebrow")}
       </p>
       <h2 className="font-display mt-3 text-[clamp(1.6rem,3.2vw,2.2rem)] leading-tight text-white">
-        {t(hasPicks ? "heading" : "notesHeading", { city })}
+        {t(dietaryHeadingKey(dietary), { city })}
       </h2>
       <p className="mt-4 max-w-[68ch] text-[15px] leading-relaxed text-white/55">
-        {t(hasPicks ? (dietary.countryCode === "VN" ? "verifiedSelectionIntro" : "intro") : "notesIntro", { city })}
+        {t(hasPicks && dietary.countryCode === "VN" ? "verifiedSelectionIntro" : dietaryIntroKey(dietary), { city })}
       </p>
 
       {hasPicks && (

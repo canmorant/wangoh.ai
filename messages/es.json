@@ -189,6 +189,10 @@
     "eyebrow": "Preferencias alimentarias",
     "heading": "Restaurantes veganos y halal en {city}",
     "intro": "En {city} elegimos un sitio de cocina vegetal y otro pensado para viajeros musulmanes. Las etiquetas halal no significan todas lo mismo: la certificación, la declaración del propio restaurante y «algunas opciones halal» se indican por separado en cada tarjeta.",
+    "headingVeganOnly": "Restaurantes veganos y notas sobre comida halal en {city}",
+    "introVeganOnly": "En {city} elegimos un sitio de cocina vegetal. Por ahora no tenemos un restaurante halal que hayamos podido verificar; si lo necesitas, pregunta directamente al restaurante por su certificado y el origen de la carne.",
+    "headingHalalOnly": "Restaurantes halal y notas sobre comida vegana en {city}",
+    "introHalalOnly": "En {city} elegimos un sitio pensado para viajeros musulmanes. Por ahora no tenemos un restaurante totalmente vegetal que hayamos podido verificar; confirma las opciones veganas con el restaurante antes de pedir. El tipo de etiqueta halal se indica en la tarjeta.",
     "researchNote": "Nota de investigación:",
     "disclaimer": "Las cartas, los proveedores y las certificaciones cambian. Si sigues un halal estricto, confirma directamente con el restaurante el certificado vigente, el alcohol, los ingredientes de las salsas y el riesgo de cocina compartida.",
     "notesHeading": "Consejos de alimentación vegana y halal en {city}",
@@ -199,6 +203,7 @@
     "heading": "Una guía de viaje para tu próxima ciudad",
     "intro": "¿Qué ver, dónde alojarse, cómo moverse? Elige tus paradas, encuentra dónde comer y arma una ruta día a día con nuestras guías de ciudades.",
     "guideTitle": "Guía de viaje de {city}",
+    "countriesHeading": "Guías de viaje por país",
     "allGuides": "Todas las guías de países y ciudades →",
     "featured": {
       "newYork": {

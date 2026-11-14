@@ -43,6 +43,19 @@ export const ogAlternateLocales = (locale: AppLocale, locales: readonly AppLocal
   locales.filter((l) => l !== locale).map((l) => OG_LOCALE[l]);
 
 /**
+ * Dizine açık sayfaların robots ayarı. Büyük görsel önizlemesi (Google Discover ve görselli sonuçlar) ile tam
+ * metin/video önizlemesine izin verir. Sayfalar kendi `robots` değerini verdiğinde kök düzendeki ayar tamamen
+ * ezildiği için bu sabit her yerde ortak kullanılır.
+ */
+export const INDEXABLE_ROBOTS = {
+  index: true,
+  follow: true,
+  "max-image-preview": "large",
+  "max-snippet": -1,
+  "max-video-preview": -1,
+} as const satisfies Metadata["robots"];
+
+/**
  * İçerik sayfaları (rehber, ülke, kurumsal): `available` o sayfanın içeriği
  * TAM çevrilmiş diller (Türkçe her zaman dahil). Bu dillerde sayfa kendi
  * canonical'ıyla dizine açık ve hreflang yalnız bu dilleri listeler; içeriği

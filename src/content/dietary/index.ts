@@ -17,6 +17,28 @@ export const dietaryGuideFor = (
   city: string
 ): DestinationDietaryGuide | null => dietaryByKey.get(`${countryCode}:${city}`) ?? null;
 
+/**
+ * Beslenme bölümünün başlık ve giriş metni anahtarları (messages → Dietary). Metin yalnız gerçekten gösterilen
+ * kart türlerini vaat eder: helal kartı yoksa "bir helal adres seçtik" denmez.
+ */
+export const dietaryHeadingKey = (guide: DestinationDietaryGuide) =>
+  guide.vegan.length && guide.halal.length
+    ? "heading"
+    : guide.vegan.length
+      ? "headingVeganOnly"
+      : guide.halal.length
+        ? "headingHalalOnly"
+        : "notesHeading";
+
+export const dietaryIntroKey = (guide: DestinationDietaryGuide) =>
+  guide.vegan.length && guide.halal.length
+    ? "intro"
+    : guide.vegan.length
+      ? "introVeganOnly"
+      : guide.halal.length
+        ? "introHalalOnly"
+        : "notesIntro";
+
 export const dietaryCoverage = () => ({
   destinations: DIETARY_GUIDES.length,
   veganPicks: DIETARY_GUIDES.reduce((sum, entry) => sum + entry.vegan.length, 0),

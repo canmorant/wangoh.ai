@@ -189,6 +189,10 @@
     "eyebrow": "Beslenme tercihleri",
     "heading": "{city} vegan ve helal restoran önerileri",
     "intro": "{city} için bir bitki bazlı ve bir Müslüman gezgin odaklı adres seçtik. Helal etiketleri aynı anlama gelmez: sertifika, işletme beyanı ve yalnızca bazı helal seçenekler kartlarda ayrı ayrı gösterilir.",
+    "headingVeganOnly": "{city} vegan restoran önerileri ve helal beslenme notu",
+    "introVeganOnly": "{city} için bir bitki bazlı adres seçtik. Doğrulayabildiğimiz bir helal restoran önerimiz şu an yok; helal hassasiyetiniz varsa gideceğiniz işletmeden sertifikayı ve et tedarikini doğrudan sorun.",
+    "headingHalalOnly": "{city} helal restoran önerileri ve vegan beslenme notu",
+    "introHalalOnly": "{city} için Müslüman gezgin odaklı bir adres seçtik. Doğrulayabildiğimiz tamamen bitki bazlı bir restoran önerimiz şu an yok; vegan seçenekleri sipariş öncesi işletmeden teyit edin. Helal etiketinin türü kartta ayrıca gösterilir.",
     "researchNote": "Araştırma notu:",
     "disclaimer": "Restoran menüleri, tedarikçiler ve sertifikalar değişebilir. Özellikle sıkı helal hassasiyetinde güncel sertifikayı, alkolü, sos içeriklerini ve ortak mutfak riskini doğrudan işletmeden doğrulayın.",
     "notesHeading": "{city} vegan ve helal beslenme ipuçları",
@@ -199,6 +203,7 @@
     "heading": "Bir sonraki şehrin gezi rehberi",
     "intro": "Nereler gezilir, nerede kalınır, şehir içinde nasıl dolaşılır? Türkçe şehir rehberleriyle duraklarını seç, yemek adreslerini bul ve gün gün rotanı oluştur.",
     "guideTitle": "{city} Gezi Rehberi",
+    "countriesHeading": "Ülkelere göre gezi rehberleri",
     "allGuides": "Tüm ülke ve şehir rehberleri →",
     "featured": {
       "newYork": {
@@ -706,7 +711,7 @@
     "note": "Not:",
     "lastUpdated": "Son güncelleme:",
     "editorialLabel": "Editoryal bilgi",
-    "editorialTeam": "Editorya Ekibi",
+    "editorialTeam": "Editör Ekibi",
     "editorialBy": "Hazırlayan: {name}",
     "editorialMethod": "Bu rehber destinasyona özgü araştırma, resmî kaynak kontrolü ve editoryal incelemeyle hazırlanır. Değişebilen bilgiler yolculuk öncesinde yeniden doğrulanmalıdır.",
     "reviewedOn": "Son editoryal kontrol: {date}",
