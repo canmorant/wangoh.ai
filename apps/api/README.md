@@ -254,3 +254,20 @@ it("...", async () => {
 - E-posta doğrulaması ve parola sıfırlama ("parolamı unuttum") bu sürümde yok; bu yüzden admin bootstrap yükseltmesi parola eşleşmesi ister.
 - Çıkış erişim belirtecini sunucuda geçersiz kılmaz (en çok 15 dk). Parola değişimi ve devre dışı bırakma kılar.
 - PGlite yalnız geliştirme/test içindir ve tek süreçlidir (kilit dosyasıyla korunur); üretimde `DATABASE_URL` ile PostgreSQL kullanın.
+
+## Yayın (Vercel + Supabase)
+
+- **Çalışma biçimi:** `api/index.js` tek bir Vercel işlevidir; Nest uygulamasını ilk istekte kurar (`createApp` + `init`) ve
+  Express uygulamasını istek işleyicisi olarak çağırır. `vercel.json` tüm yolları bu işleve yönlendirir (bölge `fra1`).
+  Vercel projesinin kök dizini `apps/api`'dir.
+- **Derleme:** `pnpm build && node dist/db/seed/cli.js`. Migrasyonlar ve tohum DERLEME sırasında uygulanır (ikisi de
+  idempotent); çalışma anında `MIGRATE_ON_BOOT=false` ve `SEED_ON_BOOT=false` (soğuk başlatma veritabanı şemasına dokunmaz).
+- **Veritabanı:** Supabase PostgreSQL. Vercel yalnız IPv4 çıkışlıdır, bu yüzden doğrudan adres değil paylaşımlı havuzlayıcı
+  kullanılır (işlem kipi, 6543). Bağlantı API'ye özel `wangoh_api` rolüyledir; `DATABASE_URL` sonunda
+  `?uselibpqcompat=true&sslmode=require` bulunur (şifreli bağlantı).
+- **Ortam değişkenleri (Vercel, Production):** `NODE_ENV=production`, `DATABASE_URL`, `JWT_ACCESS_SECRET`,
+  `MIGRATE_ON_BOOT=false`, `TRUST_PROXY=1`, `NODEJS_HELPERS=0` (gövdeyi Vercel değil uygulama ayrıştırır).
+  Yönetici hesabı için `ADMIN_EMAIL` + `ADMIN_PASSWORD` eklenir (ikisi de varsa açılışta oluşturulur).
+- **Supabase Veri API'si:** uygulama tabloları `wangoh_api` rolüne aittir; `anon`/`authenticated` rollerine yetki verilmez
+  ve tablolarda satır düzeyi güvenlik açıktır. Yeni tablo ekleyen migrasyondan sonra `alter table ... enable row level security`
+  çalıştırın.
