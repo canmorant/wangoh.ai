@@ -7,10 +7,15 @@ import { AuthGate, useAuth } from "@/auth";
 import { colors, radius, spacing } from "@/theme";
 import { Badge, Button, Card, EmptyState, Header, LoadingView, Screen, Text } from "@/ui";
 
+import { ImageCredits } from "@/features/credits/ImageCredits";
+import { cityHref } from "@/features/explore/lib/routes";
+
+import { CityRecapList } from "./components/CityRecapList";
 import { ProgressSteps } from "./components/ProgressSteps";
 import { StatTile } from "./components/StatTile";
 import { StatusView } from "./components/StatusView";
 import { useGameResult } from "./hooks/useGameResult";
+import { cityRecap, recapCredits } from "./model/cityRecap";
 import { endCopy, gameErrorMessage } from "./model/gameErrors";
 import { GAME_INFO, firstParam, formatDuration, formatNumber } from "./model/gameTypes";
 import { activeSessionStore } from "./storage";
@@ -102,6 +107,7 @@ function ResultsBody({ sessionId, userId }: { sessionId: string; userId: string 
     }
     case "ready": {
       const { result, outcomes } = view;
+      const cities = result.gameType === "city-photo" ? cityRecap.get(result.sessionId) : [];
       return (
         <Screen header={header} contentContainerStyle={styles.content}>
           <View style={styles.hero} testID="result-hero">
@@ -137,6 +143,9 @@ function ResultsBody({ sessionId, userId }: { sessionId: string; userId: string 
             </Card>
           ) : null}
 
+          {/* Şehir oyunu: çıkan şehirler ve rehber bağlantıları (yalnız bu oturumda açıklananlar). */}
+          <CityRecapList entries={cities} onOpen={(entry) => router.push(cityHref(entry.countryCode, entry.citySlug))} />
+
           <View style={styles.actions}>
             <Button title="Tekrar oyna" fullWidth onPress={() => router.replace(gamesRoutes.play(result.gameType))} testID="play-again" />
             <Button
@@ -148,6 +157,9 @@ function ResultsBody({ sessionId, userId }: { sessionId: string; userId: string 
             />
             <Button title="Merkeze dön" variant="ghost" fullWidth onPress={goHub} testID="back-to-hub" />
           </View>
+
+          {/* Oyunda gösterilen fotoğrafların tam atıfları (yazar, kaynak, lisans): ekranın sonunda, gizlenmeden. */}
+          <ImageCredits credits={recapCredits(cities)} testID="result-image-credits" />
         </Screen>
       );
     }

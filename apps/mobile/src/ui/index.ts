@@ -10,7 +10,7 @@ export { Icon, type IconName, type IconProps } from "./Icon";
 export { Input, type InputProps } from "./Input";
 export { ListRow, type ListRowProps } from "./ListRow";
 export { LoadingView, type LoadingViewProps } from "./LoadingView";
-export { RemoteImage, type RemoteImageProps } from "./RemoteImage";
+export { prefetchImage, RemoteImage, type RemoteImageProps } from "./RemoteImage";
 export { Screen, ThemedRefreshControl, type ScreenProps } from "./Screen";
 export { Skeleton, SkeletonList, type SkeletonListProps, type SkeletonProps } from "./Skeleton";
 export { Text, type TextProps } from "./Text";

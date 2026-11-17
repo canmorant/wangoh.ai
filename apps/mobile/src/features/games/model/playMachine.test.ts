@@ -22,7 +22,7 @@ const WALL = Date.parse("2026-01-01T00:00:00.000Z");
 function round(index: number, extra: Partial<GameRoundDto> = {}): GameRoundDto {
   return {
     index,
-    question: { flag: "🏳️", flagUrl: null, countryName: null },
+    question: { flag: "🏳️", flagUrl: null, countryName: null, imageUrl: null, imageCredit: null },
     options: [
       { id: "AA", label: "A" },
       { id: "BB", label: "B" },
@@ -44,7 +44,7 @@ function started(roundsTotal = 10): StartSessionResponseDto {
 function answer(extra: Partial<AnswerResponseDto> = {}): AnswerResponseDto {
   return {
     correct: true,
-    correctAnswer: { code: "AA", label: "A", lat: null, lng: null },
+    correctAnswer: { code: "AA", label: "A", lat: null, lng: null, countryCode: null, citySlug: null, imageCredit: null },
     distanceKm: null,
     nextRound: round(1),
     points: 140,

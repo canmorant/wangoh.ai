@@ -8,7 +8,7 @@ Sözleşme: [`docs/backend-mobil-mimarisi.md`](../../../../docs/backend-mobil-mi
 | --- | --- |
 | `scoring.ts` | Saf puanlama: hız/seri bonusu, haversine, harita puanı, koordinat doğrulama (`scoring.spec.ts`) |
 | `rng.ts` | `Rng` türü, `crypto` tabanlı `cryptoRng`, testler için `seededRng`, `shuffle`, `sample` |
-| `game-engine.ts` | Tür başına strateji (`flagQuizStrategy`, `capitalQuizStrategy`, `mapGuessStrategy`): tur kurma, cevap doğrulama, notlandırma, istemci görünümü (`game-engine.spec.ts`) |
+| `game-engine.ts` | Tür başına strateji (`flagQuizStrategy`, `capitalQuizStrategy`, `mapGuessStrategy`; şehir havuzlu `cityPhotoStrategy`): tur kurma, cevap doğrulama, notlandırma, istemci görünümü (`game-engine.spec.ts`) |
 | `games.service.ts` | Oturum yaşam döngüsü: başlat, geri yükle, cevapla, bitir (kilitler, zaman aşımı, tembel sona erdirme) |
 | `leaderboards.service.ts` | Liderlik listesi, `/me`, sıra hesabı (`finish` da bunu kullanır) |
 | `scores.service.ts` | `users/me/stats`, `users/me/scores`, yönetici puan listesi (`GET /v1/scores`) ve silme |

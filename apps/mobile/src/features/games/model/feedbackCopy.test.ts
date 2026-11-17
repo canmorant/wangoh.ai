@@ -17,7 +17,7 @@ import {
 function result(extra: Partial<AnswerResponseDto> = {}): AnswerResponseDto {
   return {
     correct: true,
-    correctAnswer: { code: "TR", label: "Türkiye", lat: null, lng: null },
+    correctAnswer: { code: "TR", label: "Türkiye", lat: null, lng: null, countryCode: null, citySlug: null, imageCredit: null },
     distanceKm: null,
     nextRound: null,
     points: 140,

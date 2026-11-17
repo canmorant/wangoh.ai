@@ -7,10 +7,11 @@ import { APP_CONFIG } from "../config/config.module.js";
 import type { AppConfig } from "../config/env.js";
 import { DATABASE, type Database } from "../db/client.js";
 import type { GameType } from "../db/schema/enums.js";
-import { countries, gameSessions, scores } from "../db/schema/index.js";
+import { isWebImagePath } from "../content/assets.js";
+import { cities, cityGuides, countries, gameSessions, imageCredits, scores } from "../db/schema/index.js";
 import type { AnswerResponseDto, FinishResponseDto, GameRoundDto, GameSessionDto, StartSessionResponseDto } from "./dto/game.dto.js";
 import type { SubmitAnswerDto } from "./dto/game-requests.dto.js";
-import { type GameStrategy, streakBefore, strategyFor } from "./game-engine.js";
+import { cityPhotoStrategy, countryStrategyFor, type GameRules, streakBefore, strategyFor } from "./game-engine.js";
 import {
   FEEDBACK_GRACE_MS,
   MAX_SESSION_SCORE,
@@ -32,7 +33,7 @@ import {
   sessionNotFound,
 } from "./games.errors.js";
 import { GameClock, GameRandom } from "./games.runtime.js";
-import type { CountryNames, PoolCountry, StoredResult, StoredRound } from "./games.types.js";
+import type { CountryNames, PoolCity, PoolCountry, StoredResult, StoredRound } from "./games.types.js";
 import { LeaderboardsService } from "./leaderboards.service.js";
 
 type SessionRow = typeof gameSessions.$inferSelect;
@@ -87,9 +88,11 @@ export class GamesService {
   // --- başlat -----------------------------------------------------------
 
   async startSession(user: AuthUser, gameType: GameType, lang: Lang): Promise<StartSessionResponseDto> {
-    const strategy = strategyFor(gameType);
-    const pool = await this.loadPool(gameType);
-    const rounds = strategy.buildRounds(pool, () => this.random.next());
+    const rng = (): number => this.random.next();
+    const rounds =
+      gameType === "city-photo"
+        ? cityPhotoStrategy.buildRounds(await this.loadCityPool(), rng)
+        : countryStrategyFor(gameType).buildRounds(await this.loadPool(gameType), rng);
     const now = this.clock.now();
     const nowIso = now.toISOString();
 
@@ -147,7 +150,7 @@ export class GamesService {
       gameType,
       roundsTotal: rounds.length,
       expiresAt: session.expiresAt.toISOString(),
-      round: this.roundView(strategy, rounds[0]!, 0, now, lang),
+      round: this.roundView(strategyFor(gameType), rounds[0]!, 0, now, lang),
     };
   }
 
@@ -336,7 +339,7 @@ export class GamesService {
   }
 
   /** İstemciye giden tur: soru ve seçenekler. `StoredRound`un kendisi (hedef kodu, koordinat, sonuç) buradan çıkmaz. */
-  private roundView(strategy: GameStrategy, round: StoredRound, index: number, startedAt: Date, lang: Lang): GameRoundDto {
+  private roundView(strategy: GameRules, round: StoredRound, index: number, startedAt: Date, lang: Lang): GameRoundDto {
     return {
       index,
       question: strategy.question(round, lang, this.config.assetsBaseUrl),
@@ -379,7 +382,56 @@ export class GamesService {
   }
 
   /** Havuz: `countries` tablosundan türe uygun ülkeler (ad, bayrak, başkent, koordinat). */
-  private async loadPool(gameType: GameType): Promise<PoolCountry[]> {
+  /**
+   * `city-photo` havuzu: rehberi olan ve kendi web görseli (`/images/<ad>.avif`) bulunan şehirler. Harici adresli
+   * görseller (atıf kaydı tutulmaz) oynamaz. Atıf yalnız `attribution_required` ise taşınır (içerik uçlarıyla aynı kural).
+   */
+  private async loadCityPool(): Promise<PoolCity[]> {
+    const rows = await this.db
+      .select({
+        countryCode: cities.countryCode,
+        slug: cities.slug,
+        image: cities.image,
+        continentSlug: countries.continentSlug,
+        nameTr: sql<string | null>`${cities.translations} #>> '{tr,name}'`,
+        nameEn: sql<string | null>`${cities.translations} #>> '{en,name}'`,
+        nameEs: sql<string | null>`${cities.translations} #>> '{es,name}'`,
+        attributionRequired: imageCredits.attributionRequired,
+        author: imageCredits.author,
+        licenseName: imageCredits.licenseName,
+        licenseUrl: imageCredits.licenseUrl,
+        sourceUrl: imageCredits.sourceUrl,
+      })
+      .from(cities)
+      .innerJoin(countries, eq(countries.code, cities.countryCode))
+      .innerJoin(cityGuides, eq(cityGuides.cityId, cities.id))
+      .leftJoin(imageCredits, eq(imageCredits.image, cities.image))
+      .where(isNotNull(cities.image))
+      .orderBy(asc(cities.countryCode), asc(cities.slug));
+
+    const pool: PoolCity[] = [];
+    for (const r of rows) {
+      const nameTr = r.nameTr?.trim();
+      if (!nameTr || !r.image || !isWebImagePath(r.image)) continue;
+      const names: CountryNames = { tr: { name: nameTr } };
+      if (r.nameEn?.trim()) names.en = { name: r.nameEn.trim() };
+      if (r.nameEs?.trim()) names.es = { name: r.nameEs.trim() };
+      pool.push({
+        countryCode: r.countryCode,
+        slug: r.slug,
+        continentSlug: r.continentSlug,
+        names,
+        image: r.image,
+        credit:
+          r.attributionRequired && r.sourceUrl
+            ? { author: r.author, licenseName: r.licenseName, licenseUrl: r.licenseUrl, sourceUrl: r.sourceUrl }
+            : null,
+      });
+    }
+    return pool;
+  }
+
+  private async loadPool(gameType: Exclude<GameType, "city-photo">): Promise<PoolCountry[]> {
     const eligibility =
       gameType === "capital-quiz"
         ? sql`cardinality(${countries.capital}) > 0`

@@ -13,5 +13,6 @@ export const LeaderboardType = {
   'flag-quiz': 'flag-quiz',
   'capital-quiz': 'capital-quiz',
   'map-guess': 'map-guess',
+  'city-photo': 'city-photo',
   overall: 'overall',
 } as const;

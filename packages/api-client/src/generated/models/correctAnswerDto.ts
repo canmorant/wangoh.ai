@@ -5,10 +5,26 @@
  * Wangoh mobil ve web istemcileri için REST API. Tüm yollar `/v1` altındadır. Kimlik doğrulama: `Authorization: Bearer <accessToken>`. Hata gövdesi her yerde `{ statusCode, code, message, details? }`.
  * OpenAPI spec version: 0.1.0
  */
+import type { AnswerImageCreditDto } from './answerImageCreditDto';
 
 export interface CorrectAnswerDto {
-  /** Doğru ülkenin kodu. */
+  /**
+     * Yalnız `city-photo`: şehrin slug'ı.
+     * @nullable
+     */
+  citySlug: string | null;
+  /** Doğru seçeneğin kimliği: ülke kodu (`city-photo`: `ÜLKE:slug`). */
   code: string;
+  /**
+     * Yalnız `city-photo`: şehrin ülke kodu (rehber: `GET /v1/countries/{countryCode}/cities/{citySlug}`).
+     * @nullable
+     */
+  countryCode: string | null;
+  /**
+     * Yalnız `city-photo`: fotoğrafın tam atfı. Atıf gerektirmeyen görselde null.
+     * @nullable
+     */
+  imageCredit: AnswerImageCreditDto | null;
   /** Gösterim metni: ülke adı (`flag-quiz`, `map-guess`) ya da başkent (`capital-quiz`). */
   label: string;
   /**

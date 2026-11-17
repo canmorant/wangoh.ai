@@ -3,7 +3,7 @@
  * İçerik verisi (ülke, bayrak, başkent) burada YOKTUR; yalnız oyunun kendi adı ve açıklaması.
  */
 
-export const PLAYABLE_GAME_TYPES = ["flag-quiz", "capital-quiz", "map-guess"] as const;
+export const PLAYABLE_GAME_TYPES = ["flag-quiz", "capital-quiz", "map-guess", "city-photo"] as const;
 export type PlayableGameType = (typeof PLAYABLE_GAME_TYPES)[number];
 
 export const LEADERBOARD_TYPES = ["overall", ...PLAYABLE_GAME_TYPES] as const;
@@ -60,6 +60,11 @@ export const GAME_INFO: Record<PlayableGameType, GameInfo> = {
     description: "Adı verilen ülkeyi dünya haritasında işaretle; hedefe yaklaştıkça puanın artar.",
     rounds: 5,
   },
+  "city-photo": {
+    title: "Bu Şehir Neresi?",
+    description: "Fotoğrafın nerede çekildiğini dört seçenek arasından bul; oyun sonunda rehberlerini aç.",
+    rounds: 10,
+  },
 };
 
 export const LEADERBOARD_TYPE_LABELS: Record<LeaderboardTypeKey, string> = {
@@ -67,6 +72,7 @@ export const LEADERBOARD_TYPE_LABELS: Record<LeaderboardTypeKey, string> = {
   "flag-quiz": "Bayrak",
   "capital-quiz": "Başkent",
   "map-guess": "Harita",
+  "city-photo": "Şehir",
 };
 
 export const LEADERBOARD_TYPE_TITLES: Record<LeaderboardTypeKey, string> = {
@@ -74,6 +80,7 @@ export const LEADERBOARD_TYPE_TITLES: Record<LeaderboardTypeKey, string> = {
   "flag-quiz": "Bayrak liderliği",
   "capital-quiz": "Başkent liderliği",
   "map-guess": "Harita liderliği",
+  "city-photo": "Şehir liderliği",
 };
 
 export const LEADERBOARD_PERIOD_LABELS: Record<LeaderboardPeriodKey, string> = {

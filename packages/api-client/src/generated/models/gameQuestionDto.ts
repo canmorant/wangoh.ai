@@ -5,6 +5,7 @@
  * Wangoh mobil ve web istemcileri için REST API. Tüm yollar `/v1` altındadır. Kimlik doğrulama: `Authorization: Bearer <accessToken>`. Hata gövdesi her yerde `{ statusCode, code, message, details? }`.
  * OpenAPI spec version: 0.1.0
  */
+import type { QuestionImageCreditDto } from './questionImageCreditDto';
 
 export interface GameQuestionDto {
   /**
@@ -22,4 +23,14 @@ export interface GameQuestionDto {
      * @nullable
      */
   flagUrl: string | null;
+  /**
+     * Yalnız `city-photo`: fotoğrafın atfı (yazar ve lisans). Atıf gerektirmeyen görselde ve öteki oyunlarda null. Fotoğrafla birlikte gösterilmelidir.
+     * @nullable
+     */
+  imageCredit: QuestionImageCreditDto | null;
+  /**
+     * Sorulan şehrin fotoğrafı (JPEG). Yalnız `city-photo` sorusunda dolu.
+     * @nullable
+     */
+  imageUrl: string | null;
 }

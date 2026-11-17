@@ -15,6 +15,13 @@
       "when": 1792728241493,
       "tag": "0001_image_credits",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1794897249013,
+      "tag": "0002_city_photo_game",
+      "breakpoints": true
     }
   ]
 }

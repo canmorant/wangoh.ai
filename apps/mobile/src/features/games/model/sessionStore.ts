@@ -7,7 +7,7 @@
  * Saf modül: depo enjekte edilir (`KeyValueStore`), platform bağlantısı `storage.ts`tedir.
  */
 
-import type { PlayableGameType } from "./gameTypes";
+import { PLAYABLE_GAME_TYPES, type PlayableGameType } from "./gameTypes";
 
 /** expo-secure-store ve Web Storage'ın ortak, asenkron alt kümesi. */
 export interface KeyValueStore {
@@ -34,7 +34,7 @@ function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null && !Array.isArray(value);
 }
 
-const GAME_TYPES: readonly PlayableGameType[] = ["flag-quiz", "capital-quiz", "map-guess"];
+const GAME_TYPES: readonly PlayableGameType[] = PLAYABLE_GAME_TYPES;
 
 /** Depodaki ham metni güvenle çözer; bozuk veri boş kayıt sayılır. */
 export function parseSnapshot(raw: string | null): Snapshot {

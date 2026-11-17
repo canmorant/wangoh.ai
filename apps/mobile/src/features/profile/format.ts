@@ -10,6 +10,7 @@ export const GAME_TYPE_LABELS: Record<string, string> = {
   "flag-quiz": "Bayrağı Bil",
   "capital-quiz": "Başkenti Bil",
   "map-guess": "Haritada Bul",
+  "city-photo": "Bu Şehir Neresi?",
 };
 
 /** Bilinmeyen (ileride eklenen) tür ham adıyla gösterilir; boş kalmaz. */

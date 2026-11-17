@@ -63,6 +63,19 @@ export function RemoteImage({
   );
 }
 
+/**
+ * Görseli önceden indirir (disk/bellek önbelleği): az sonra gösterilecek görsel beklemeden açılsın.
+ * Başarısızlık sessizce yutulur; görsel gösterilirken yeniden denenir.
+ */
+export function prefetchImage(uri: string | null | undefined): void {
+  if (!uri) return;
+  try {
+    void Image.prefetch(uri).catch(() => undefined);
+  } catch {
+    // Önbelleğe alma desteklenmiyorsa yapılacak bir şey yok.
+  }
+}
+
 const styles = StyleSheet.create({
   frame: { overflow: "hidden", backgroundColor: colors.surface },
   placeholder: { alignItems: "center", justifyContent: "center" },

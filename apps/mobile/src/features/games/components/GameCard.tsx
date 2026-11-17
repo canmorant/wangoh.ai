@@ -9,6 +9,7 @@ const ICONS: Record<PlayableGameType, IconName> = {
   "flag-quiz": "flag",
   "capital-quiz": "business",
   "map-guess": "map",
+  "city-photo": "image",
 };
 
 export interface GameCardProps {

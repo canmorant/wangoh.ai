@@ -7,8 +7,8 @@
  */
 
 export interface GameOptionDto {
-  /** Seçenek kimliği = ülke kodu. Cevap olarak bu değer gönderilir. */
+  /** Seçenek kimliği: ülke kodu (`city-photo`: `ÜLKE:slug`, ör. `FR:nice`). Cevap olarak bu değer aynen gönderilir. */
   id: string;
-  /** Gösterilecek metin: `flag-quiz` için ülke adı, `capital-quiz` için başkent. */
+  /** Gösterilecek metin: `flag-quiz` için ülke adı, `capital-quiz` için başkent, `city-photo` için şehir adı. */
   label: string;
 }

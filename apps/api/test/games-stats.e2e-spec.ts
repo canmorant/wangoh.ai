@@ -19,7 +19,7 @@ describe("kullanıcı oyun istatistikleri ve geçmişi", () => {
   const history = (token: string, query = "") => t.http.get(`/v1/users/me/scores${query}`).set(bearer(token));
 
   describe("GET /v1/users/me/stats", () => {
-    it("hiç oynamamış kullanıcı: üç tür de sıfır/null", async () => {
+    it("hiç oynamamış kullanıcı: dört tür de sıfır/null", async () => {
       const u = await registerUser(t.http);
       const res = await stats(u.accessToken);
       expect(res.status).toBe(200);
@@ -28,6 +28,7 @@ describe("kullanıcı oyun istatistikleri ve geçmişi", () => {
           { gameType: "flag-quiz", gamesPlayed: 0, bestScore: null, totalScore: 0, averageScore: null, lastPlayedAt: null },
           { gameType: "capital-quiz", gamesPlayed: 0, bestScore: null, totalScore: 0, averageScore: null, lastPlayedAt: null },
           { gameType: "map-guess", gamesPlayed: 0, bestScore: null, totalScore: 0, averageScore: null, lastPlayedAt: null },
+          { gameType: "city-photo", gamesPlayed: 0, bestScore: null, totalScore: 0, averageScore: null, lastPlayedAt: null },
         ],
         gamesPlayed: 0,
         totalScore: 0,
@@ -110,7 +111,8 @@ describe("kullanıcı oyun istatistikleri ve geçmişi", () => {
       const page3 = await history(u.accessToken, "?pageSize=3&page=3");
       expect(page3.body.items.map((i: { score: number }) => i.score)).toEqual([100]);
       expect((await history(u.accessToken, "?pageSize=3&page=9")).body).toMatchObject({ items: [], total: 7 });
-      expect(JSON.stringify(res.body)).not.toContain("777");
+      // Başkasının puanı (777) listede yok. Alan düzeyinde bakılır: rastgele kimlikler (UUID) "777" içerebilir.
+      expect(res.body.items.some((i: { score: number }) => i.score === 777)).toBe(false);
       expect(JSON.stringify(res.body)).not.toMatch(/userId|sessionId|email/);
     });
 

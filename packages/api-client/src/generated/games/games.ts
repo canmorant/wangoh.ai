@@ -347,7 +347,7 @@ export const useGamesFinishSession = <TError = ErrorType<ErrorResponseDto>,
       > => {
       return useMutation(getGamesFinishSessionMutationOptions(options), queryClient);
     }
-    export const getGamesStartSessionUrl = (gameType: 'flag-quiz' | 'capital-quiz' | 'map-guess',
+    export const getGamesStartSessionUrl = (gameType: 'flag-quiz' | 'capital-quiz' | 'map-guess' | 'city-photo',
     params?: GamesStartSessionParams,) => {
   const normalizedParams = new URLSearchParams();
 
@@ -364,10 +364,10 @@ export const useGamesFinishSession = <TError = ErrorType<ErrorResponseDto>,
 }
 
 /**
- * İlk turu döner. Aynı türde önceki etkin oturum `abandoned` olur (kullanıcı başına tür başına tek etkin oturum). Havuzda yeterli ülke yoksa 409 `GAME_POOL_TOO_SMALL`. Oturum 30 dk geçerlidir. `flag-quiz` ve `capital-quiz` 10 tur, 4 seçenek; `map-guess` 5 tur.
+ * İlk turu döner. Aynı türde önceki etkin oturum `abandoned` olur (kullanıcı başına tür başına tek etkin oturum). Havuzda yeterli ülke (`city-photo`: şehir) yoksa 409 `GAME_POOL_TOO_SMALL`. Oturum 30 dk geçerlidir. `flag-quiz` ve `capital-quiz` 10 tur, 4 seçenek; `map-guess` 5 tur.
  * @summary Yeni oyun oturumu başlatır
  */
-export const gamesStartSession = async (gameType: 'flag-quiz' | 'capital-quiz' | 'map-guess',
+export const gamesStartSession = async (gameType: 'flag-quiz' | 'capital-quiz' | 'map-guess' | 'city-photo',
     params?: GamesStartSessionParams, options?: Parameters<typeof apiFetch>[1]): Promise<StartSessionResponseDto> => {
 
   return apiFetch<StartSessionResponseDto>(getGamesStartSessionUrl(gameType,params),
@@ -415,7 +415,7 @@ const {mutation: mutationOptions, request: requestOptions} = options ?
     export type GamesStartSessionMutationResult = NonNullable<Awaited<ReturnType<typeof gamesStartSession>>>
 
     export type GamesStartSessionMutationError = ErrorType<ErrorResponseDto>
-    export type GamesStartSessionMutationVariables = {gameType: 'flag-quiz' | 'capital-quiz' | 'map-guess';params?: GamesStartSessionParams}
+    export type GamesStartSessionMutationVariables = {gameType: 'flag-quiz' | 'capital-quiz' | 'map-guess' | 'city-photo';params?: GamesStartSessionParams}
 
     /**
  * @summary Yeni oyun oturumu başlatır

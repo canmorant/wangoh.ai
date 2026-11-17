@@ -29,7 +29,7 @@ export class GamesController {
     summary: "Yeni oyun oturumu başlatır",
     description:
       "İlk turu döner. Aynı türde önceki etkin oturum `abandoned` olur (kullanıcı başına tür başına tek etkin oturum). " +
-      "Havuzda yeterli ülke yoksa 409 `GAME_POOL_TOO_SMALL`. Oturum 30 dk geçerlidir. " +
+      "Havuzda yeterli ülke (`city-photo`: şehir) yoksa 409 `GAME_POOL_TOO_SMALL`. Oturum 30 dk geçerlidir. " +
       "`flag-quiz` ve `capital-quiz` 10 tur, 4 seçenek; `map-guess` 5 tur.",
   })
   @ApiParam({ name: "gameType", enum: GAME_TYPES })

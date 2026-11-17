@@ -1,9 +1,9 @@
-import { flagUrl } from "../content/assets.js";
+import { flagUrl, imageUrl } from "../content/assets.js";
 import type { GameType } from "../db/schema/enums.js";
 import { resolveTranslation, type Lang } from "../common/lang.js";
 import { AppException, type FieldErrorDetail } from "../common/errors.js";
 import { CHOICE_OPTIONS, CHOICE_ROUNDS, GameErrorCode, MAP_GUESS_ROUNDS, MIN_POOL_SIZE, SHARED_FLAG_DEPENDENCIES } from "./games.constants.js";
-import type { CountryNames, GradeContext, Graded, PoolCountry, StoredAnswer, StoredOption, StoredRound } from "./games.types.js";
+import type { CountryNames, GradeContext, Graded, PoolCity, PoolCountry, StoredAnswer, StoredOption, StoredRound } from "./games.types.js";
 import { type Rng, sample, shuffle } from "./rng.js";
 import { scoreChoiceRound, scoreMapGuess, validateLatLng } from "./scoring.js";
 
@@ -18,6 +18,21 @@ export interface QuestionView {
   flagUrl: string | null;
   /** Sorulan ülkenin adı (`capital-quiz`, `map-guess`). */
   countryName: string | null;
+  /** Sorulan şehrin fotoğrafı (yalnız `city-photo`). */
+  imageUrl: string | null;
+  /** Fotoğrafın atfı, kaynak bağlantısı OLMADAN (bağlantı dosya adıyla şehri ele verir). Atıf gerekmiyorsa `null`. */
+  imageCredit: QuestionImageCreditView | null;
+}
+
+export interface QuestionImageCreditView {
+  author: string | null;
+  licenseName: string | null;
+  licenseUrl: string | null;
+}
+
+/** Cevap açıklandıktan sonra gönderilen tam atıf. */
+export interface ImageCreditView extends QuestionImageCreditView {
+  sourceUrl: string;
 }
 
 export interface OptionView {
@@ -31,19 +46,20 @@ export interface CorrectAnswerView {
   /** Yalnız `map-guess`: hedef konum. */
   lat: number | null;
   lng: number | null;
+  /** Yalnız `city-photo`: şehrin rehber adresi (`/v1/countries/{countryCode}/cities/{citySlug}`). */
+  countryCode: string | null;
+  citySlug: string | null;
+  /** Yalnız `city-photo`: fotoğrafın tam atfı (kaynak bağlantısıyla). */
+  imageCredit: ImageCreditView | null;
 }
 
 /**
- * Tür başına oyun kuralı. Motor saftır: veritabanı, saat ve rastgelelik dışarıdan gelir (`Rng`), böylece
+ * Tür başına oyun kuralı (havuzdan bağımsız kısım). Motor saftır: veritabanı, saat ve rastgelelik dışarıdan gelir (`Rng`), böylece
  * birim testlerde deterministik, üretimde `crypto` tabanlıdır.
  */
-export interface GameStrategy {
+export interface GameRules {
   readonly type: GameType;
   readonly rounds: number;
-  /** Havuza girmeye uygun ülke mi? (`capital-quiz`: başkenti var; `map-guess`: koordinatı var.) */
-  isEligible(country: PoolCountry): boolean;
-  /** Havuzdan `rounds` turu kurar. Havuz yetersizse 409 `GAME_POOL_TOO_SMALL`. */
-  buildRounds(pool: readonly PoolCountry[], rng: Rng): StoredRound[];
   /**
    * Ham cevabı bu turun biçimine göre doğrular; geçersizse 400 `VALIDATION_FAILED` (doğru cevabı sızdırmaz).
    * `null` ("cevap yok": süre doldu ya da pas) her türde geçerlidir ve `null` döner.
@@ -56,8 +72,21 @@ export interface GameStrategy {
   correctAnswer(round: StoredRound, lang: Lang): CorrectAnswerView;
 }
 
+/** Ülke havuzundan tur kuran oyunlar (`flag-quiz`, `capital-quiz`, `map-guess`). */
+export interface GameStrategy extends GameRules {
+  /** Havuza girmeye uygun ülke mi? (`capital-quiz`: başkenti var; `map-guess`: koordinatı var.) */
+  isEligible(country: PoolCountry): boolean;
+  /** Havuzdan `rounds` turu kurar. Havuz yetersizse 409 `GAME_POOL_TOO_SMALL`. */
+  buildRounds(pool: readonly PoolCountry[], rng: Rng): StoredRound[];
+}
+
+/** Şehir havuzundan tur kuran oyun (`city-photo`). */
+export interface CityGameStrategy extends GameRules {
+  buildRounds(pool: readonly PoolCity[], rng: Rng): StoredRound[];
+}
+
 export function poolTooSmall(): AppException {
-  return AppException.conflict("Bu oyun için yeterli ülke verisi yok. Lütfen daha sonra tekrar deneyin.", GameErrorCode.POOL_TOO_SMALL);
+  return AppException.conflict("Bu oyun için yeterli veri yok. Lütfen daha sonra tekrar deneyin.", GameErrorCode.POOL_TOO_SMALL);
 }
 
 const invalidAnswer = (details: FieldErrorDetail[]): AppException => AppException.validation(details, "Cevap geçersiz.");
@@ -66,10 +95,18 @@ const nameOf = (names: CountryNames, lang: Lang): string => resolveTranslation(n
 
 const norm = (text: string): string => text.normalize("NFKC").trim().toLowerCase();
 
-/** Havuzdaki bir ülkeden, hedefle çakışmayan 3 yanlış seçenek: önce aynı kıta, yetmezse diğer kıtalar. */
-function pickDistractors(target: PoolCountry, pool: readonly PoolCountry[], count: number, keysOf: (c: PoolCountry) => string[], rng: Rng): PoolCountry[] {
+/** Havuzdan, hedefle çakışmayan 3 yanlış seçenek (ülke ya da şehir): önce aynı kıta, yetmezse diğer kıtalar. */
+function pickDistractors<T extends { continentSlug: string }>(
+  target: T,
+  pool: readonly T[],
+  count: number,
+  idOf: (c: T) => string,
+  keysOf: (c: T) => string[],
+  rng: Rng,
+): T[] {
   const used = new Set(keysOf(target));
-  const candidates = pool.filter((c) => c.code !== target.code);
+  const targetId = idOf(target);
+  const candidates = pool.filter((c) => idOf(c) !== targetId);
   const sameContinent = shuffle(
     candidates.filter((c) => c.continentSlug === target.continentSlug),
     rng,
@@ -78,7 +115,7 @@ function pickDistractors(target: PoolCountry, pool: readonly PoolCountry[], coun
     candidates.filter((c) => c.continentSlug !== target.continentSlug),
     rng,
   );
-  const picked: PoolCountry[] = [];
+  const picked: T[] = [];
   for (const candidate of [...sameContinent, ...elsewhere]) {
     if (picked.length === count) break;
     const keys = keysOf(candidate);
@@ -90,6 +127,10 @@ function pickDistractors(target: PoolCountry, pool: readonly PoolCountry[], coun
   if (picked.length < count) throw poolTooSmall();
   return picked;
 }
+
+/** Ülke oyunlarında boş kalan `city-photo` alanları. */
+const NO_IMAGE = { imageUrl: null, imageCredit: null } as const;
+const NO_CITY = { countryCode: null, citySlug: null, imageCredit: null } as const;
 
 function storedOption(c: PoolCountry): StoredOption {
   return { code: c.code, names: c.names, capital: c.capital };
@@ -119,7 +160,7 @@ function choiceStrategy(spec: ChoiceSpec): GameStrategy {
       const eligible = pool.filter(spec.isEligible);
       if (eligible.length < MIN_POOL_SIZE) throw poolTooSmall();
       return sample(eligible, CHOICE_ROUNDS, rng).map((target) => {
-        const distractors = pickDistractors(target, eligible, CHOICE_OPTIONS - 1, spec.keysOf, rng);
+        const distractors = pickDistractors(target, eligible, CHOICE_OPTIONS - 1, (c) => c.code, spec.keysOf, rng);
         // Fisher-Yates: doğru cevap dört konumdan birinde, eşit olasılıkla.
         const options = shuffle([target, ...distractors], rng).map(storedOption);
         return { ...baseRound(target), options };
@@ -148,7 +189,7 @@ function choiceStrategy(spec: ChoiceSpec): GameStrategy {
 
     correctAnswer(round, lang) {
       const target: StoredOption = { code: round.code, names: round.names, capital: round.capital };
-      return { code: round.code, label: spec.optionLabel(target, lang), lat: null, lng: null };
+      return { code: round.code, label: spec.optionLabel(target, lang), lat: null, lng: null, ...NO_CITY };
     },
   };
 }
@@ -158,7 +199,7 @@ export const flagQuizStrategy: GameStrategy = choiceStrategy({
   isEligible: (c) => c.names.tr.name.trim() !== "" && !SHARED_FLAG_DEPENDENCIES.has(c.code),
   keysOf: (c) => [norm(c.names.tr.name)],
   optionLabel: (o, lang) => nameOf(o.names, lang),
-  question: (round, _lang, assetsBase) => ({ flag: round.flag, flagUrl: flagUrl(assetsBase, round.code), countryName: null }),
+  question: (round, _lang, assetsBase) => ({ flag: round.flag, flagUrl: flagUrl(assetsBase, round.code), countryName: null, ...NO_IMAGE }),
 });
 
 export const capitalQuizStrategy: GameStrategy = choiceStrategy({
@@ -166,7 +207,7 @@ export const capitalQuizStrategy: GameStrategy = choiceStrategy({
   isEligible: (c) => c.names.tr.name.trim() !== "" && c.capital.some((x) => x.trim() !== ""),
   keysOf: (c) => c.capital.filter((x) => x.trim() !== "").map(norm),
   optionLabel: (o) => o.capital.filter((x) => x.trim() !== "").join(" / "),
-  question: (round, lang) => ({ flag: null, flagUrl: null, countryName: nameOf(round.names, lang) }),
+  question: (round, lang) => ({ flag: null, flagUrl: null, countryName: nameOf(round.names, lang), ...NO_IMAGE }),
 });
 
 const hasCoordinates = (c: PoolCountry): boolean => c.latitude !== null && c.longitude !== null && validateLatLng({ lat: c.latitude, lng: c.longitude }).length === 0;
@@ -211,19 +252,116 @@ export const mapGuessStrategy: GameStrategy = {
     return { correct: points >= MAP_CORRECT_MIN_POINTS, points, speedBonus: 0, streakBonus: 0, streak: 0, distanceKm };
   },
 
-  question: (round, lang) => ({ flag: null, flagUrl: null, countryName: nameOf(round.names, lang) }),
+  question: (round, lang) => ({ flag: null, flagUrl: null, countryName: nameOf(round.names, lang), ...NO_IMAGE }),
   options: () => null,
-  correctAnswer: (round, lang) => ({ code: round.code, label: nameOf(round.names, lang), lat: round.latitude, lng: round.longitude }),
+  correctAnswer: (round, lang) => ({ code: round.code, label: nameOf(round.names, lang), lat: round.latitude, lng: round.longitude, ...NO_CITY }),
 };
 
-const STRATEGIES: Record<GameType, GameStrategy> = {
+/** Seçenek kimliği: `ÜLKE:slug` (ör. `FR:nice`). Ülke kodu büyük, slug küçük harftir; olduğu gibi karşılaştırılır. */
+export const cityKey = (c: { countryCode: string; slug: string }): string => `${c.countryCode}:${c.slug}`;
+
+/**
+ * Adı ya da fotoğrafı başka bir şehirle aynı olan şehirler oynamaz: fotoğraf iki doğru cevaba, ad iki ayrı
+ * seçeneğe karşılık gelirdi. Çakışanların hepsi çıkar (hangisinin kalacağı keyfî olurdu).
+ */
+function distinctCities(pool: readonly PoolCity[]): PoolCity[] {
+  const named = pool.filter((c) => c.names.tr.name.trim() !== "" && c.image.trim() !== "");
+  const count = (keyOf: (c: PoolCity) => string): Map<string, number> => {
+    const seen = new Map<string, number>();
+    for (const c of named) seen.set(keyOf(c), (seen.get(keyOf(c)) ?? 0) + 1);
+    return seen;
+  };
+  const names = count((c) => norm(c.names.tr.name));
+  const images = count((c) => c.image);
+  return named.filter((c) => names.get(norm(c.names.tr.name)) === 1 && images.get(c.image) === 1);
+}
+
+/**
+ * `city-photo`: şehrin fotoğrafı gösterilir, dört şehir adından doğrusu seçilir. Puanlama öteki çoktan seçmeli
+ * oyunlarla aynıdır. Soru yalnız fotoğrafı ve (varsa) yazar/lisans atfını taşır; şehrin kimliği ve atfın kaynak
+ * bağlantısı cevapla birlikte açıklanır.
+ */
+export const cityPhotoStrategy: CityGameStrategy = {
+  type: "city-photo",
+  rounds: CHOICE_ROUNDS,
+
+  buildRounds(pool, rng) {
+    const eligible = distinctCities(pool);
+    if (eligible.length < MIN_POOL_SIZE) throw poolTooSmall();
+    return sample(eligible, CHOICE_ROUNDS, rng).map((target) => {
+      const distractors = pickDistractors(target, eligible, CHOICE_OPTIONS - 1, cityKey, (c) => [norm(c.names.tr.name)], rng);
+      const options = shuffle([target, ...distractors], rng).map((c): StoredOption => ({ code: cityKey(c), names: c.names, capital: [] }));
+      return {
+        code: cityKey(target),
+        names: target.names,
+        flag: null,
+        capital: [],
+        latitude: null,
+        longitude: null,
+        options,
+        countryCode: target.countryCode,
+        citySlug: target.slug,
+        image: target.image,
+        imageCredit: target.credit,
+      };
+    });
+  },
+
+  parseAnswer(raw, round) {
+    if (raw === null) return null;
+    if (typeof raw !== "string") {
+      throw invalidAnswer([{ field: "answer", code: "isString", message: "Cevap, seçeneklerden birinin kimliği olmalı." }]);
+    }
+    const key = raw.trim();
+    if (!round.options.some((o) => o.code === key)) {
+      throw invalidAnswer([{ field: "answer", code: "isOption", message: "Cevap, sunulan seçeneklerden biri olmalı." }]);
+    }
+    return key;
+  },
+
+  grade(round, answer, ctx) {
+    const correct = answer !== null && answer === round.code;
+    return { correct, ...scoreChoiceRound({ correct, elapsedMs: ctx.elapsedMs, streakBefore: ctx.streakBefore }), distanceKm: null };
+  },
+
+  question(round, _lang, assetsBase) {
+    const credit = round.imageCredit;
+    return {
+      flag: null,
+      flagUrl: null,
+      countryName: null,
+      imageUrl: imageUrl(assetsBase, round.image),
+      imageCredit: credit ? { author: credit.author, licenseName: credit.licenseName, licenseUrl: credit.licenseUrl } : null,
+    };
+  },
+
+  options: (round, lang) => round.options.map((o) => ({ id: o.code, label: nameOf(o.names, lang) })),
+
+  correctAnswer: (round, lang) => ({
+    code: round.code,
+    label: nameOf(round.names, lang),
+    lat: null,
+    lng: null,
+    countryCode: round.countryCode ?? null,
+    citySlug: round.citySlug ?? null,
+    imageCredit: round.imageCredit ?? null,
+  }),
+};
+
+const COUNTRY_STRATEGIES: Record<Exclude<GameType, "city-photo">, GameStrategy> = {
   "flag-quiz": flagQuizStrategy,
   "capital-quiz": capitalQuizStrategy,
   "map-guess": mapGuessStrategy,
 };
 
-export function strategyFor(type: GameType): GameStrategy {
-  return STRATEGIES[type];
+/** Ülke havuzlu oyunun stratejisi (tur kurmak için). */
+export function countryStrategyFor(type: Exclude<GameType, "city-photo">): GameStrategy {
+  return COUNTRY_STRATEGIES[type];
+}
+
+/** Türün kuralları: cevap doğrulama, notlandırma ve istemci görünümü (havuzdan bağımsız). */
+export function strategyFor(type: GameType): GameRules {
+  return type === "city-photo" ? cityPhotoStrategy : COUNTRY_STRATEGIES[type];
 }
 
 /** Bir turdan önceki art arda doğru sayısı (seri bonusu için). Cevaplanmamış tur seriyi bitirir. */

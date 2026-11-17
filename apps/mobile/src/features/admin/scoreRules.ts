@@ -1,6 +1,6 @@
 /** Skor yönetimi için saf yardımcılar: oyun türü etiketleri, "şüpheli" süre ön ayarları, süre biçimi. */
 
-export const GAME_TYPES = ["flag-quiz", "capital-quiz", "map-guess"] as const;
+export const GAME_TYPES = ["flag-quiz", "capital-quiz", "map-guess", "city-photo"] as const;
 export type GameTypeValue = (typeof GAME_TYPES)[number];
 
 /** Arayüz etiketleri (içerik değil). */
@@ -8,6 +8,7 @@ export const GAME_TYPE_LABELS: Record<GameTypeValue, string> = {
   "flag-quiz": "Bayrak",
   "capital-quiz": "Başkent",
   "map-guess": "Harita",
+  "city-photo": "Şehir",
 };
 
 export function gameTypeLabel(type: string): string {

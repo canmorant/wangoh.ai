@@ -13,4 +13,5 @@ export const GameType = {
   'flag-quiz': 'flag-quiz',
   'capital-quiz': 'capital-quiz',
   'map-guess': 'map-guess',
+  'city-photo': 'city-photo',
 } as const;

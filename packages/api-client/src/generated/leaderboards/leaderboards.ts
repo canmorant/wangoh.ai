@@ -51,7 +51,7 @@ const withQueryKey = <T extends object, K>(query: T, queryKey: K): T & { queryKe
   return result;
 };
 
-export const getLeaderboardsGetUrl = (gameType: 'flag-quiz' | 'capital-quiz' | 'map-guess' | 'overall',
+export const getLeaderboardsGetUrl = (gameType: 'flag-quiz' | 'capital-quiz' | 'map-guess' | 'city-photo' | 'overall',
     params?: LeaderboardsGetParams,) => {
   const normalizedParams = new URLSearchParams();
 
@@ -71,7 +71,7 @@ export const getLeaderboardsGetUrl = (gameType: 'flag-quiz' | 'capital-quiz' | '
  * Herkese açık. Kullanıcı başına en iyi tek oyun puanı; eşit puan aynı sırayı paylaşır, listede puana önce ulaşan üstte. `period`: `all`, `week` (son 7 gün), `day` (son 24 saat). Yalnız görünen ad döner (e-posta ve kimlik asla); oturum açıksa kendi satırınızda `isMe: true`. Authorization başlığı VARSA geçerli olmalıdır.
  * @summary Liderlik tablosu
  */
-export const leaderboardsGet = async (gameType: 'flag-quiz' | 'capital-quiz' | 'map-guess' | 'overall',
+export const leaderboardsGet = async (gameType: 'flag-quiz' | 'capital-quiz' | 'map-guess' | 'city-photo' | 'overall',
     params?: LeaderboardsGetParams, options?: Parameters<typeof apiFetch>[1]): Promise<LeaderboardDto> => {
 
   return apiFetch<LeaderboardDto>(getLeaderboardsGetUrl(gameType,params),
@@ -87,7 +87,7 @@ export const leaderboardsGet = async (gameType: 'flag-quiz' | 'capital-quiz' | '
 
 
 
-export const getLeaderboardsGetQueryKey = (gameType: 'flag-quiz' | 'capital-quiz' | 'map-guess' | 'overall',
+export const getLeaderboardsGetQueryKey = (gameType: 'flag-quiz' | 'capital-quiz' | 'map-guess' | 'city-photo' | 'overall',
     params?: LeaderboardsGetParams,) => {
     return [
     `/v1/leaderboards/${gameType}`, ...(params ? [params] : [])
@@ -95,7 +95,7 @@ export const getLeaderboardsGetQueryKey = (gameType: 'flag-quiz' | 'capital-quiz
     }
 
 
-export const getLeaderboardsGetQueryOptions = <TData = Awaited<ReturnType<typeof leaderboardsGet>>, TError = ErrorType<ErrorResponseDto>>(gameType: 'flag-quiz' | 'capital-quiz' | 'map-guess' | 'overall',
+export const getLeaderboardsGetQueryOptions = <TData = Awaited<ReturnType<typeof leaderboardsGet>>, TError = ErrorType<ErrorResponseDto>>(gameType: 'flag-quiz' | 'capital-quiz' | 'map-guess' | 'city-photo' | 'overall',
     params?: LeaderboardsGetParams, options?: { query?:Partial<UseQueryOptions<Awaited<ReturnType<typeof leaderboardsGet>>, TError, TData>>, request?: SecondParameter<typeof apiFetch>}
 ) => {
 
@@ -119,7 +119,7 @@ export type LeaderboardsGetQueryError = ErrorType<ErrorResponseDto>
 
 
 export function useLeaderboardsGet<TData = Awaited<ReturnType<typeof leaderboardsGet>>, TError = ErrorType<ErrorResponseDto>>(
- gameType: 'flag-quiz' | 'capital-quiz' | 'map-guess' | 'overall',
+ gameType: 'flag-quiz' | 'capital-quiz' | 'map-guess' | 'city-photo' | 'overall',
     params: undefined |  LeaderboardsGetParams, options: { query:Partial<UseQueryOptions<Awaited<ReturnType<typeof leaderboardsGet>>, TError, TData>> & Pick<
         DefinedInitialDataOptions<
           Awaited<ReturnType<typeof leaderboardsGet>>,
@@ -130,7 +130,7 @@ export function useLeaderboardsGet<TData = Awaited<ReturnType<typeof leaderboard
  , queryClient?: QueryClient
   ):  DefinedUseQueryResult<TData, TError> & { queryKey: DataTag<QueryKey, TData, TError> }
 export function useLeaderboardsGet<TData = Awaited<ReturnType<typeof leaderboardsGet>>, TError = ErrorType<ErrorResponseDto>>(
- gameType: 'flag-quiz' | 'capital-quiz' | 'map-guess' | 'overall',
+ gameType: 'flag-quiz' | 'capital-quiz' | 'map-guess' | 'city-photo' | 'overall',
     params?: LeaderboardsGetParams, options?: { query?:Partial<UseQueryOptions<Awaited<ReturnType<typeof leaderboardsGet>>, TError, TData>> & Pick<
         UndefinedInitialDataOptions<
           Awaited<ReturnType<typeof leaderboardsGet>>,
@@ -141,7 +141,7 @@ export function useLeaderboardsGet<TData = Awaited<ReturnType<typeof leaderboard
  , queryClient?: QueryClient
   ):  UseQueryResult<TData, TError> & { queryKey: DataTag<QueryKey, TData, TError> }
 export function useLeaderboardsGet<TData = Awaited<ReturnType<typeof leaderboardsGet>>, TError = ErrorType<ErrorResponseDto>>(
- gameType: 'flag-quiz' | 'capital-quiz' | 'map-guess' | 'overall',
+ gameType: 'flag-quiz' | 'capital-quiz' | 'map-guess' | 'city-photo' | 'overall',
     params?: LeaderboardsGetParams, options?: { query?:Partial<UseQueryOptions<Awaited<ReturnType<typeof leaderboardsGet>>, TError, TData>>, request?: SecondParameter<typeof apiFetch>}
  , queryClient?: QueryClient
   ):  UseQueryResult<TData, TError> & { queryKey: DataTag<QueryKey, TData, TError> }
@@ -150,7 +150,7 @@ export function useLeaderboardsGet<TData = Awaited<ReturnType<typeof leaderboard
  */
 
 export function useLeaderboardsGet<TData = Awaited<ReturnType<typeof leaderboardsGet>>, TError = ErrorType<ErrorResponseDto>>(
- gameType: 'flag-quiz' | 'capital-quiz' | 'map-guess' | 'overall',
+ gameType: 'flag-quiz' | 'capital-quiz' | 'map-guess' | 'city-photo' | 'overall',
     params?: LeaderboardsGetParams, options?: { query?:Partial<UseQueryOptions<Awaited<ReturnType<typeof leaderboardsGet>>, TError, TData>>, request?: SecondParameter<typeof apiFetch>}
  , queryClient?: QueryClient
  ):  UseQueryResult<TData, TError> & { queryKey: DataTag<QueryKey, TData, TError> } {
@@ -167,7 +167,7 @@ export function useLeaderboardsGet<TData = Awaited<ReturnType<typeof leaderboard
 
 
 
-export const getLeaderboardsMeUrl = (gameType: 'flag-quiz' | 'capital-quiz' | 'map-guess' | 'overall',
+export const getLeaderboardsMeUrl = (gameType: 'flag-quiz' | 'capital-quiz' | 'map-guess' | 'city-photo' | 'overall',
     params?: LeaderboardsMeParams,) => {
   const normalizedParams = new URLSearchParams();
 
@@ -187,7 +187,7 @@ export const getLeaderboardsMeUrl = (gameType: 'flag-quiz' | 'capital-quiz' | 'm
  * Sıram, en iyi puanım ve toplam oyuncu sayısı. Dönemde puanım yoksa `rank` ve `personalBest` null.
  * @summary Liderlikteki sıram
  */
-export const leaderboardsMe = async (gameType: 'flag-quiz' | 'capital-quiz' | 'map-guess' | 'overall',
+export const leaderboardsMe = async (gameType: 'flag-quiz' | 'capital-quiz' | 'map-guess' | 'city-photo' | 'overall',
     params?: LeaderboardsMeParams, options?: Parameters<typeof apiFetch>[1]): Promise<LeaderboardMeDto> => {
 
   return apiFetch<LeaderboardMeDto>(getLeaderboardsMeUrl(gameType,params),
@@ -203,7 +203,7 @@ export const leaderboardsMe = async (gameType: 'flag-quiz' | 'capital-quiz' | 'm
 
 
 
-export const getLeaderboardsMeQueryKey = (gameType: 'flag-quiz' | 'capital-quiz' | 'map-guess' | 'overall',
+export const getLeaderboardsMeQueryKey = (gameType: 'flag-quiz' | 'capital-quiz' | 'map-guess' | 'city-photo' | 'overall',
     params?: LeaderboardsMeParams,) => {
     return [
     `/v1/leaderboards/${gameType}/me`, ...(params ? [params] : [])
@@ -211,7 +211,7 @@ export const getLeaderboardsMeQueryKey = (gameType: 'flag-quiz' | 'capital-quiz'
     }
 
 
-export const getLeaderboardsMeQueryOptions = <TData = Awaited<ReturnType<typeof leaderboardsMe>>, TError = ErrorType<ErrorResponseDto>>(gameType: 'flag-quiz' | 'capital-quiz' | 'map-guess' | 'overall',
+export const getLeaderboardsMeQueryOptions = <TData = Awaited<ReturnType<typeof leaderboardsMe>>, TError = ErrorType<ErrorResponseDto>>(gameType: 'flag-quiz' | 'capital-quiz' | 'map-guess' | 'city-photo' | 'overall',
     params?: LeaderboardsMeParams, options?: { query?:Partial<UseQueryOptions<Awaited<ReturnType<typeof leaderboardsMe>>, TError, TData>>, request?: SecondParameter<typeof apiFetch>}
 ) => {
 
@@ -235,7 +235,7 @@ export type LeaderboardsMeQueryError = ErrorType<ErrorResponseDto>
 
 
 export function useLeaderboardsMe<TData = Awaited<ReturnType<typeof leaderboardsMe>>, TError = ErrorType<ErrorResponseDto>>(
- gameType: 'flag-quiz' | 'capital-quiz' | 'map-guess' | 'overall',
+ gameType: 'flag-quiz' | 'capital-quiz' | 'map-guess' | 'city-photo' | 'overall',
     params: undefined |  LeaderboardsMeParams, options: { query:Partial<UseQueryOptions<Awaited<ReturnType<typeof leaderboardsMe>>, TError, TData>> & Pick<
         DefinedInitialDataOptions<
           Awaited<ReturnType<typeof leaderboardsMe>>,
@@ -246,7 +246,7 @@ export function useLeaderboardsMe<TData = Awaited<ReturnType<typeof leaderboards
  , queryClient?: QueryClient
   ):  DefinedUseQueryResult<TData, TError> & { queryKey: DataTag<QueryKey, TData, TError> }
 export function useLeaderboardsMe<TData = Awaited<ReturnType<typeof leaderboardsMe>>, TError = ErrorType<ErrorResponseDto>>(
- gameType: 'flag-quiz' | 'capital-quiz' | 'map-guess' | 'overall',
+ gameType: 'flag-quiz' | 'capital-quiz' | 'map-guess' | 'city-photo' | 'overall',
     params?: LeaderboardsMeParams, options?: { query?:Partial<UseQueryOptions<Awaited<ReturnType<typeof leaderboardsMe>>, TError, TData>> & Pick<
         UndefinedInitialDataOptions<
           Awaited<ReturnType<typeof leaderboardsMe>>,
@@ -257,7 +257,7 @@ export function useLeaderboardsMe<TData = Awaited<ReturnType<typeof leaderboards
  , queryClient?: QueryClient
   ):  UseQueryResult<TData, TError> & { queryKey: DataTag<QueryKey, TData, TError> }
 export function useLeaderboardsMe<TData = Awaited<ReturnType<typeof leaderboardsMe>>, TError = ErrorType<ErrorResponseDto>>(
- gameType: 'flag-quiz' | 'capital-quiz' | 'map-guess' | 'overall',
+ gameType: 'flag-quiz' | 'capital-quiz' | 'map-guess' | 'city-photo' | 'overall',
     params?: LeaderboardsMeParams, options?: { query?:Partial<UseQueryOptions<Awaited<ReturnType<typeof leaderboardsMe>>, TError, TData>>, request?: SecondParameter<typeof apiFetch>}
  , queryClient?: QueryClient
   ):  UseQueryResult<TData, TError> & { queryKey: DataTag<QueryKey, TData, TError> }
@@ -266,7 +266,7 @@ export function useLeaderboardsMe<TData = Awaited<ReturnType<typeof leaderboards
  */
 
 export function useLeaderboardsMe<TData = Awaited<ReturnType<typeof leaderboardsMe>>, TError = ErrorType<ErrorResponseDto>>(
- gameType: 'flag-quiz' | 'capital-quiz' | 'map-guess' | 'overall',
+ gameType: 'flag-quiz' | 'capital-quiz' | 'map-guess' | 'city-photo' | 'overall',
     params?: LeaderboardsMeParams, options?: { query?:Partial<UseQueryOptions<Awaited<ReturnType<typeof leaderboardsMe>>, TError, TData>>, request?: SecondParameter<typeof apiFetch>}
  , queryClient?: QueryClient
  ):  UseQueryResult<TData, TError> & { queryKey: DataTag<QueryKey, TData, TError> } {

@@ -7,6 +7,24 @@ const GAME_TYPE_PROPERTY = { enum: GAME_TYPES, enumName: "GameType" } as const;
  * Soru görünümü. Hedefin kodu, koordinatı ya da doğru seçeneği BURADA YOKTUR (bayrak sorusunda bayrağın
  * kendisi sorudur; adres/emoji sorunun parçasıdır).
  */
+/** Sorudaki fotoğrafın atfı. Kaynak bağlantısı (dosya adı şehri ele verir) burada yoktur; cevapla birlikte gelir. */
+export class QuestionImageCreditDto {
+  @ApiProperty({ type: String, nullable: true, example: "Jane Doe", description: "Yazar / telif sahibi, kaynaktaki haliyle." })
+  author!: string | null;
+
+  @ApiProperty({ type: String, nullable: true, example: "CC BY-SA 4.0" })
+  licenseName!: string | null;
+
+  @ApiProperty({ type: String, nullable: true, example: "https://creativecommons.org/licenses/by-sa/4.0" })
+  licenseUrl!: string | null;
+}
+
+/** Cevap açıklandıktan sonraki tam atıf (kaynak sayfasıyla). */
+export class AnswerImageCreditDto extends QuestionImageCreditDto {
+  @ApiProperty({ type: String, example: "https://commons.wikimedia.org/wiki/File:Ornek.jpg", description: "Kaynak sayfa." })
+  sourceUrl!: string;
+}
+
 export class GameQuestionDto {
   @ApiProperty({ type: String, nullable: true, example: "🇫🇷", description: "Emoji bayrak. Yalnız `flag-quiz` sorusunda dolu." })
   flag!: string | null;
@@ -16,13 +34,23 @@ export class GameQuestionDto {
 
   @ApiProperty({ type: String, nullable: true, example: "Fransa", description: "Sorulan ülkenin adı (`capital-quiz` ve `map-guess`), istenen dilde." })
   countryName!: string | null;
+
+  @ApiProperty({ type: String, nullable: true, example: "https://wangoh.com/og/ornek-gorsel-1a2b3c4d.jpg", description: "Sorulan şehrin fotoğrafı (JPEG). Yalnız `city-photo` sorusunda dolu." })
+  imageUrl!: string | null;
+
+  @ApiProperty({
+    type: () => QuestionImageCreditDto,
+    nullable: true,
+    description: "Yalnız `city-photo`: fotoğrafın atfı (yazar ve lisans). Atıf gerektirmeyen görselde ve öteki oyunlarda null. Fotoğrafla birlikte gösterilmelidir.",
+  })
+  imageCredit!: QuestionImageCreditDto | null;
 }
 
 export class GameOptionDto {
-  @ApiProperty({ type: String, example: "FR", description: "Seçenek kimliği = ülke kodu. Cevap olarak bu değer gönderilir." })
+  @ApiProperty({ type: String, example: "FR", description: "Seçenek kimliği: ülke kodu (`city-photo`: `ÜLKE:slug`, ör. `FR:nice`). Cevap olarak bu değer aynen gönderilir." })
   id!: string;
 
-  @ApiProperty({ type: String, example: "Paris", description: "Gösterilecek metin: `flag-quiz` için ülke adı, `capital-quiz` için başkent." })
+  @ApiProperty({ type: String, example: "Paris", description: "Gösterilecek metin: `flag-quiz` için ülke adı, `capital-quiz` için başkent, `city-photo` için şehir adı." })
   label!: string;
 }
 
@@ -137,7 +165,7 @@ export class GameSessionDto {
 }
 
 export class CorrectAnswerDto {
-  @ApiProperty({ type: String, example: "FR", description: "Doğru ülkenin kodu." })
+  @ApiProperty({ type: String, example: "FR", description: "Doğru seçeneğin kimliği: ülke kodu (`city-photo`: `ÜLKE:slug`)." })
   code!: string;
 
   @ApiProperty({ type: String, example: "Paris", description: "Gösterim metni: ülke adı (`flag-quiz`, `map-guess`) ya da başkent (`capital-quiz`)." })
@@ -148,6 +176,15 @@ export class CorrectAnswerDto {
 
   @ApiProperty({ type: "number", nullable: true, description: "Yalnız `map-guess`: hedef boylam." })
   lng!: number | null;
+
+  @ApiProperty({ type: String, nullable: true, example: "FR", description: "Yalnız `city-photo`: şehrin ülke kodu (rehber: `GET /v1/countries/{countryCode}/cities/{citySlug}`)." })
+  countryCode!: string | null;
+
+  @ApiProperty({ type: String, nullable: true, example: "nice", description: "Yalnız `city-photo`: şehrin slug'ı." })
+  citySlug!: string | null;
+
+  @ApiProperty({ type: () => AnswerImageCreditDto, nullable: true, description: "Yalnız `city-photo`: fotoğrafın tam atfı. Atıf gerektirmeyen görselde null." })
+  imageCredit!: AnswerImageCreditDto | null;
 }
 
 export class AnswerResponseDto {

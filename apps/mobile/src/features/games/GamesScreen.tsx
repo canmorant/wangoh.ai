@@ -26,6 +26,7 @@ const LEADERBOARD_ICONS: Record<LeaderboardTypeKey, IconName> = {
   "flag-quiz": "flag",
   "capital-quiz": "business",
   "map-guess": "map",
+  "city-photo": "image",
 };
 
 /**
@@ -46,6 +47,7 @@ export function GamesScreen() {
     "flag-quiz": useResumableSession(userId, "flag-quiz"),
     "capital-quiz": useResumableSession(userId, "capital-quiz"),
     "map-guess": useResumableSession(userId, "map-guess"),
+    "city-photo": useResumableSession(userId, "city-photo"),
   };
 
   // Oyundan dönünce istatistikler (en iyi puan) tazelenir.
@@ -149,7 +151,7 @@ export function GamesScreen() {
 }
 
 function leaderboardSubtitle(type: LeaderboardTypeKey, overallBest: number | null): string {
-  if (type === "overall") return overallBest !== null ? `Toplam en iyin: ${formatNumber(overallBest)}` : "Üç oyunun en iyi puanlarının toplamı";
+  if (type === "overall") return overallBest !== null ? `Toplam en iyin: ${formatNumber(overallBest)}` : "Dört oyunun en iyi puanlarının toplamı";
   return `${GAME_INFO[type].title} sıralaması`;
 }
 

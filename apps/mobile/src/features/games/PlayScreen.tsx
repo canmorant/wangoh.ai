@@ -274,7 +274,7 @@ function RoundView({ state, game, guard }: { state: RoundState; game: PlayGame; 
           </View>
         ) : null}
 
-        <QuestionCard gameType={session.gameType} question={round.question} />
+        <QuestionCard gameType={session.gameType} question={round.question} answerCredit={feedback?.result.correctAnswer.imageCredit ?? null} />
 
         {kind === "choice" ? (
           <View style={styles.options} testID="options">

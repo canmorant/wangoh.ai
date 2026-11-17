@@ -10,7 +10,7 @@ const NOW = 5_000;
 
 const round: GameRoundDto = {
   index: 0,
-  question: { flag: "🏳️", flagUrl: null, countryName: null },
+  question: { flag: "🏳️", flagUrl: null, countryName: null, imageUrl: null, imageCredit: null },
   options: [
     { id: "AA", label: "A" },
     { id: "BB", label: "B" },
@@ -33,7 +33,7 @@ const started: StartSessionResponseDto = {
 
 const answered = (extra: Partial<AnswerResponseDto> = {}): AnswerResponseDto => ({
   correct: false,
-  correctAnswer: { code: "CC", label: "C", lat: null, lng: null },
+  correctAnswer: { code: "CC", label: "C", lat: null, lng: null, countryCode: null, citySlug: null, imageCredit: null },
   distanceKm: null,
   nextRound: null,
   points: 0,

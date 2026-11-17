@@ -115,6 +115,38 @@
         },
         "type": "object"
       },
+      "AnswerImageCreditDto": {
+        "properties": {
+          "author": {
+            "description": "Yazar / telif sahibi, kaynaktaki haliyle.",
+            "example": "Jane Doe",
+            "nullable": true,
+            "type": "string"
+          },
+          "licenseName": {
+            "example": "CC BY-SA 4.0",
+            "nullable": true,
+            "type": "string"
+          },
+          "licenseUrl": {
+            "example": "https://creativecommons.org/licenses/by-sa/4.0",
+            "nullable": true,
+            "type": "string"
+          },
+          "sourceUrl": {
+            "description": "Kaynak sayfa.",
+            "example": "https://commons.wikimedia.org/wiki/File:Ornek.jpg",
+            "type": "string"
+          }
+        },
+        "required": [
+          "author",
+          "licenseName",
+          "licenseUrl",
+          "sourceUrl"
+        ],
+        "type": "object"
+      },
       "AnswerResponseDto": {
         "properties": {
           "correct": {
@@ -1063,10 +1095,32 @@
       },
       "CorrectAnswerDto": {
         "properties": {
+          "citySlug": {
+            "description": "Yalnız `city-photo`: şehrin slug'ı.",
+            "example": "nice",
+            "nullable": true,
+            "type": "string"
+          },
           "code": {
-            "description": "Doğru ülkenin kodu.",
+            "description": "Doğru seçeneğin kimliği: ülke kodu (`city-photo`: `ÜLKE:slug`).",
             "example": "FR",
             "type": "string"
+          },
+          "countryCode": {
+            "description": "Yalnız `city-photo`: şehrin ülke kodu (rehber: `GET /v1/countries/{countryCode}/cities/{citySlug}`).",
+            "example": "FR",
+            "nullable": true,
+            "type": "string"
+          },
+          "imageCredit": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/AnswerImageCreditDto"
+              }
+            ],
+            "description": "Yalnız `city-photo`: fotoğrafın tam atfı. Atıf gerektirmeyen görselde null.",
+            "nullable": true,
+            "type": "object"
           },
           "label": {
             "description": "Gösterim metni: ülke adı (`flag-quiz`, `map-guess`) ya da başkent (`capital-quiz`).",
@@ -1088,7 +1142,10 @@
           "code",
           "label",
           "lat",
-          "lng"
+          "lng",
+          "countryCode",
+          "citySlug",
+          "imageCredit"
         ],
         "type": "object"
       },
@@ -2092,12 +2149,12 @@
       "GameOptionDto": {
         "properties": {
           "id": {
-            "description": "Seçenek kimliği = ülke kodu. Cevap olarak bu değer gönderilir.",
+            "description": "Seçenek kimliği: ülke kodu (`city-photo`: `ÜLKE:slug`, ör. `FR:nice`). Cevap olarak bu değer aynen gönderilir.",
             "example": "FR",
             "type": "string"
           },
           "label": {
-            "description": "Gösterilecek metin: `flag-quiz` için ülke adı, `capital-quiz` için başkent.",
+            "description": "Gösterilecek metin: `flag-quiz` için ülke adı, `capital-quiz` için başkent, `city-photo` için şehir adı.",
             "example": "Paris",
             "type": "string"
           }
@@ -2127,12 +2184,30 @@
             "example": "https://wangoh.com/flags/fr.svg",
             "nullable": true,
             "type": "string"
+          },
+          "imageCredit": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/QuestionImageCreditDto"
+              }
+            ],
+            "description": "Yalnız `city-photo`: fotoğrafın atfı (yazar ve lisans). Atıf gerektirmeyen görselde ve öteki oyunlarda null. Fotoğrafla birlikte gösterilmelidir.",
+            "nullable": true,
+            "type": "object"
+          },
+          "imageUrl": {
+            "description": "Sorulan şehrin fotoğrafı (JPEG). Yalnız `city-photo` sorusunda dolu.",
+            "example": "https://wangoh.com/og/ornek-gorsel-1a2b3c4d.jpg",
+            "nullable": true,
+            "type": "string"
           }
         },
         "required": [
           "flag",
           "flagUrl",
-          "countryName"
+          "countryName",
+          "imageUrl",
+          "imageCredit"
         ],
         "type": "object"
       },
@@ -2283,7 +2358,8 @@
         "enum": [
           "flag-quiz",
           "capital-quiz",
-          "map-guess"
+          "map-guess",
+          "city-photo"
         ],
         "type": "string"
       },
@@ -3060,6 +3136,7 @@
           "flag-quiz",
           "capital-quiz",
           "map-guess",
+          "city-photo",
           "overall"
         ],
         "type": "string"
@@ -3148,6 +3225,32 @@
         "required": [
           "type",
           "text"
+        ],
+        "type": "object"
+      },
+      "QuestionImageCreditDto": {
+        "properties": {
+          "author": {
+            "description": "Yazar / telif sahibi, kaynaktaki haliyle.",
+            "example": "Jane Doe",
+            "nullable": true,
+            "type": "string"
+          },
+          "licenseName": {
+            "example": "CC BY-SA 4.0",
+            "nullable": true,
+            "type": "string"
+          },
+          "licenseUrl": {
+            "example": "https://creativecommons.org/licenses/by-sa/4.0",
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "required": [
+          "author",
+          "licenseName",
+          "licenseUrl"
         ],
         "type": "object"
       },
@@ -5900,7 +6003,7 @@
     },
     "/v1/games/{gameType}/sessions": {
       "post": {
-        "description": "İlk turu döner. Aynı türde önceki etkin oturum `abandoned` olur (kullanıcı başına tür başına tek etkin oturum). Havuzda yeterli ülke yoksa 409 `GAME_POOL_TOO_SMALL`. Oturum 30 dk geçerlidir. `flag-quiz` ve `capital-quiz` 10 tur, 4 seçenek; `map-guess` 5 tur.",
+        "description": "İlk turu döner. Aynı türde önceki etkin oturum `abandoned` olur (kullanıcı başına tür başına tek etkin oturum). Havuzda yeterli ülke (`city-photo`: şehir) yoksa 409 `GAME_POOL_TOO_SMALL`. Oturum 30 dk geçerlidir. `flag-quiz` ve `capital-quiz` 10 tur, 4 seçenek; `map-guess` 5 tur.",
         "operationId": "gamesStartSession",
         "parameters": [
           {
@@ -5911,7 +6014,8 @@
               "enum": [
                 "flag-quiz",
                 "capital-quiz",
-                "map-guess"
+                "map-guess",
+                "city-photo"
               ],
               "type": "string"
             }
@@ -6042,6 +6146,7 @@
                 "flag-quiz",
                 "capital-quiz",
                 "map-guess",
+                "city-photo",
                 "overall"
               ],
               "type": "string"
@@ -6137,6 +6242,7 @@
                 "flag-quiz",
                 "capital-quiz",
                 "map-guess",
+                "city-photo",
                 "overall"
               ],
               "type": "string"

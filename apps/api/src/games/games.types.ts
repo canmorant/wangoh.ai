@@ -16,7 +16,29 @@ export interface PoolCountry {
   longitude: number | null;
 }
 
-/** Çoktan seçmeli bir seçenek: seçeneğin kimliği ülke kodudur. */
+/**
+ * Görsel atfı (`image_credits` satırı; yalnız atıf gerektiren görsellerde). Oturum anında dondurulur.
+ * `sourceUrl` dosya adını, dolayısıyla çoğu zaman şehri taşır: soruyla birlikte DEĞİL, cevap açıklanınca gönderilir.
+ */
+export interface StoredImageCredit {
+  author: string | null;
+  licenseName: string | null;
+  licenseUrl: string | null;
+  sourceUrl: string;
+}
+
+/** Havuzdaki bir şehir (`city-photo` motor girdisi): rehberi ve kendi web görseli olan şehirler. */
+export interface PoolCity {
+  countryCode: string;
+  slug: string;
+  continentSlug: string;
+  names: CountryNames;
+  /** Web görsel yolu (`/images/<ad>.avif`). */
+  image: string;
+  credit: StoredImageCredit | null;
+}
+
+/** Çoktan seçmeli bir seçenek: seçeneğin kimliği ülke kodudur (`city-photo`: `ÜLKE:slug`). */
 export interface StoredOption {
   code: string;
   names: CountryNames;
@@ -56,6 +78,11 @@ export interface StoredRound {
   longitude: number | null;
   /** Çoktan seçmeli: 4 seçenek, görüntülenme sırasıyla (doğru cevap rastgele konumda). `map-guess`: boş. */
   options: StoredOption[];
+  /** Yalnız `city-photo`: hedef şehir (rehber bağlantısı için), sorulan görsel ve atfı. */
+  countryCode?: string;
+  citySlug?: string;
+  image?: string;
+  imageCredit?: StoredImageCredit | null;
   result?: StoredResult;
 }
 

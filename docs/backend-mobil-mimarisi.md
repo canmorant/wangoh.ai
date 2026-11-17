@@ -219,8 +219,16 @@ Tüm oyunlar sunucu kontrollüdür: doğru cevaplar istemciye oturum bitmeden gi
 hesaplar, süreyi **sunucu** ölçer (istemcinin bildirdiği süre kullanılmaz). Oyun uçları giriş ister.
 
 Oyun türleri (`gameType`): `flag-quiz` (bayraktan ülke), `capital-quiz` (ülkeden başkent), `map-guess`
-(ülkeyi haritada işaretle). Her oyun 10 tur (`map-guess` 5 tur). Havuz: `countries` tablosu;
+(ülkeyi haritada işaretle), `city-photo` (fotoğraftan şehir). Her oyun 10 tur (`map-guess` 5 tur). Havuz: `countries` tablosu;
 `capital-quiz` yalnız başkenti olan ülkeler; `map-guess` ülke merkez koordinatı (`latitude`/`longitude`).
+
+`city-photo` ("Bu Şehir Neresi?") havuzu şehirlerdir: rehberi (`city_guides`) ve kendi web görseli (`/images/<ad>.avif`)
+olan, adı ve görseli başka şehirle çakışmayan şehirler; harici adresli görseller oynamaz. Soru şehrin fotoğrafıdır
+(`question.imageUrl`, JPEG) ve atıf gerekiyorsa yalnız yazar + lisans (`question.imageCredit`); seçenek kimliği
+`ÜLKE:slug` (ör. `FR:nice`), etiketi şehir adıdır. Görselin kaynak bağlantısı dosya adıyla şehri ele verdiği için soruda
+yoktur: cevap yanıtındaki `correctAnswer` onu (`imageCredit.sourceUrl`) ve şehrin rehber adresini (`countryCode`,
+`citySlug`) açıklar. İstemci atfı fotoğrafla birlikte, tam atfı cevap sonrasında ve sonuç ekranında gösterir. Puanlama
+öteki çoktan seçmeli oyunlarla aynıdır; geri bildirim payı 3 sn.
 Çoktan seçmeli oyunlarda 4 seçenek (seçenek kimliği = ülke kodu), yanlış seçenekler aynı kıtadan öncelikli
 (yetmezse diğer kıtalardan), seçenekler tekrarsız (aynı ad/başkent iki seçenekte olmaz), doğru cevap rastgele
 konumda. Havuzda 10'dan az uygun ülke varsa oyun başlamaz (409 `GAME_POOL_TOO_SMALL`). Rastgelelik `crypto`
@@ -248,7 +256,7 @@ Akış (`?lang=tr|en|es` başlatma, geri yükleme ve cevap uçlarında etiketler
    bakmadan kurar: kalan süre = `deadlineAt - serverNow`, turun başlamasına kalan = `max(0, startedAt - serverNow)`; cevap
    yanıtındaki `nextRound`te `startedAt - serverNow` ≈ pay, ilk turda ve payı geçmiş turda ≤ 0);
    `question` = `{flag, flagUrl,
-   countryName}` (türe göre dolu olanlar), `options` = `[{id, label}]` (`map-guess`te `null`). Aynı türde
+   countryName, imageUrl, imageCredit}` (türe göre dolu olanlar), `options` = `[{id, label}]` (`map-guess`te `null`). Aynı türde
    önceki aktif oturum `abandoned` (süresi dolmuşsa `expired`) olur: kullanıcı başına tür başına tek aktif
    oturum, kullanıcı satırı kilidiyle (`users` → `game_sessions` → `scores` kilit sırası) garanti edilir.
 2. `POST /v1/games/sessions/:id/answers` `{roundIndex, answer}` (`answer`: seçenek kimliği/ülke kodu ya da
@@ -258,7 +266,7 @@ Akış (`?lang=tr|en|es` başlatma, geri yükleme ve cevap uçlarında etiketler
    yalnız cevaplanan turun yanıtında döner. Sırası bozuk ya da yinelenen `roundIndex` → 409
    (`GAME_ROUND_OUT_OF_ORDER`, `GAME_ROUND_ALREADY_ANSWERED`, `GAME_NO_ROUND_LEFT`); seçenek dışı cevap ya da
    geçersiz koordinat → 400 (tur tüketilmez). **Geri bildirim payı:** sonraki turun sayacı cevap anında değil, cevap anı +
-   `FEEDBACK_GRACE_MS` (çoktan seçmeli 2 sn, `map-guess` 5 sn) sonra başlar; istemci doğru/yanlış gösterimini ya da
+   `FEEDBACK_GRACE_MS` (çoktan seçmeli 2 sn, `city-photo` 3 sn, `map-guess` 5 sn) sonra başlar; istemci doğru/yanlış gösterimini ya da
    mesafe/puan ekranını bu sürede gösterir. `nextRound.startedAt` bu (gelecekteki) andır. Tur süresi `startedAt`'tan ölçülür;
    pay içinde gelen cevabın süresi negatif çıkar ve 0 ms sayılır (tam hız bonusu). Pay yalnız sonraki turun başlangıcını öteler:
    oturum ömrü (`expires_at`) ve `durationMs` değişmez. Zaman aşımı (turun `startedAt`'ından itibaren 20 sn + 3 sn ağ payı,

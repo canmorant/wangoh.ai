@@ -1,6 +1,6 @@
 import { eq } from "drizzle-orm";
 import type { GameType } from "../../src/db/schema/enums.js";
-import { continents, countries, gameSessions, scores } from "../../src/db/schema/index.js";
+import { cities, cityGuides, continents, countries, gameSessions, imageCredits, scores } from "../../src/db/schema/index.js";
 import type { StoredRound } from "../../src/games/games.types.js";
 import { GameClock, GameRandom } from "../../src/games/games.runtime.js";
 import { bearer } from "./users.js";
@@ -25,8 +25,55 @@ export function fixtureCountries(n: number): FixtureCountry[] {
   }));
 }
 
-/** Kıtaları ve ülkeleri veritabanına yazar. Varsayılan: 30 ülke (kıta başına 6). */
-export async function seedGameCountries(t: Pick<TestApp, "db">, list: FixtureCountry[] = fixtureCountries(30)): Promise<FixtureCountry[]> {
+/** Fixture şehrinin görsel yolu (`city-photo` sorusu bu görselden üretilir). */
+export const fixtureCityImage = (code: string, n: number): string => `/images/sehir-${code.toLowerCase()}-${n}.avif`;
+/** Atıf gerektiren fixture görselinin kaynak sayfası (soruda görünmemesi gereken sır). */
+export const fixtureCitySource = (code: string, n: number): string => `https://commons.example.org/wiki/File:Sehir_${code}_${n}.jpg`;
+
+/**
+ * Her ülkeye iki uydurma şehir yazar: ikisinin de rehberi ve kendi görseli var. 1. şehrin görseli atıf gerektirir
+ * (yazar, lisans, kaynak), 2. şehrinki gerektirmez (atıf satırı var ama `attribution_required = false`).
+ */
+export async function seedGameCities(t: Pick<TestApp, "db">, list: FixtureCountry[]): Promise<void> {
+  if (list.length === 0) return;
+  const rows = await t.db
+    .insert(cities)
+    .values(
+      list.flatMap((c) =>
+        [1, 2].map((n) => ({
+          countryCode: c.code,
+          slug: `sehir-${c.code.toLowerCase()}-${n}`,
+          position: n,
+          image: fixtureCityImage(c.code, n),
+          translations: { tr: { name: `Şehir ${c.code} ${n}` }, en: { name: `City ${c.code} ${n}` } },
+        })),
+      ),
+    )
+    .returning({ id: cities.id });
+  await t.db.insert(cityGuides).values(rows.map((r) => ({ cityId: r.id, translations: { tr: {} } })));
+  await t.db.insert(imageCredits).values(
+    list.flatMap((c) =>
+      [1, 2].map((n) => ({
+        image: fixtureCityImage(c.code, n),
+        author: `Yazar ${c.code} ${n}`,
+        licenseName: "CC BY-SA 4.0",
+        licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        sourceUrl: fixtureCitySource(c.code, n),
+        attributionRequired: n === 1,
+      })),
+    ),
+  );
+}
+
+/**
+ * Kıtaları ve ülkeleri (ve `city-photo` için ülke başına iki şehri) veritabanına yazar. Varsayılan: 30 ülke
+ * (kıta başına 6), 60 şehir.
+ */
+export async function seedGameCountries(
+  t: Pick<TestApp, "db">,
+  list: FixtureCountry[] = fixtureCountries(30),
+  opts: { cities?: boolean } = {},
+): Promise<FixtureCountry[]> {
   await t.db
     .insert(continents)
     .values(CONTINENT_SLUGS.map((slug, position) => ({ slug, position, translations: { tr: { name: slug } } })))
@@ -44,12 +91,19 @@ export async function seedGameCountries(t: Pick<TestApp, "db">, list: FixtureCou
       translations: { tr: { name: c.name ?? `Ülke ${c.code}` }, en: { name: c.name ?? `Country ${c.code}` } },
     })),
   );
+  if (opts.cities !== false) await seedGameCities(t, list);
   return list;
 }
 
 export interface RoundBody {
   index: number;
-  question: { flag: string | null; flagUrl: string | null; countryName: string | null };
+  question: {
+    flag: string | null;
+    flagUrl: string | null;
+    countryName: string | null;
+    imageUrl: string | null;
+    imageCredit: { author: string | null; licenseName: string | null; licenseUrl: string | null } | null;
+  };
   options: Array<{ id: string; label: string }> | null;
   timeLimitMs: number;
   startedAt: string;

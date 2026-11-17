@@ -8,10 +8,13 @@ import {
 } from "@wangoh/api-client";
 import { useCallback, useEffect, useReducer, useRef } from "react";
 
+import { prefetchImage } from "@/ui";
+
 import { answerFailureAction, finishFailureAction, restoreFailureAction } from "../model/gameErrors";
 import { GAME_LANG, type PlayableGameType } from "../model/gameTypes";
 import { monotonicNow } from "../model/monotonic";
 import { initialPlayState, liveOf, playReducer, type PlayEvent, type PlayState, type Point } from "../model/playMachine";
+import { cityRecap, recapEntryFrom } from "../model/cityRecap";
 import { resultCache } from "../model/resultCache";
 import { activeSessionStore } from "../storage";
 import { dropSessionQueries, invalidateAfterGame } from "./invalidate";
@@ -182,6 +185,11 @@ export function usePlayGame(gameType: PlayableGameType, userId: string): PlayGam
           data: { roundIndex: clock.round.index, answer },
           params: { lang: GAME_LANG },
         });
+        // Şehir oyunu: açıklanan şehir sonuç ekranındaki liste için saklanır, sıradaki fotoğraf önceden indirilir
+        // (tur süresi sunucuda işler; indirme oyuncunun süresinden yemesin).
+        const revealed = recapEntryFrom(response, clock.round.question, clock.round.index);
+        if (revealed) cityRecap.add(session.sessionId, revealed);
+        prefetchImage(response.nextRound?.question.imageUrl);
         emit({ type: "ANSWERED", response, now: monotonicNow() });
       } catch (error) {
         const action = answerFailureAction(error);

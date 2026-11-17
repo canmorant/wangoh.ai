@@ -2,7 +2,7 @@ import type { GameType } from "../db/schema/enums.js";
 
 /** Liderlikte oyun türlerinin yanında kabul edilen toplam sıralama anahtarı. */
 export const OVERALL = "overall" as const;
-export const LEADERBOARD_TYPES = ["flag-quiz", "capital-quiz", "map-guess", OVERALL] as const;
+export const LEADERBOARD_TYPES = ["flag-quiz", "capital-quiz", "map-guess", "city-photo", OVERALL] as const;
 export type LeaderboardType = (typeof LEADERBOARD_TYPES)[number];
 
 export const PERIODS = ["all", "week", "day"] as const;
@@ -40,6 +40,8 @@ export const FEEDBACK_GRACE_MS: Record<GameType, number> = {
   "flag-quiz": 2_000,
   "capital-quiz": 2_000,
   "map-guess": 5_000,
+  // Fotoğraf doğru şehir adıyla birlikte bir an daha görünsün.
+  "city-photo": 3_000,
 };
 /** Oturumun ömrü: başlangıç + 30 dk. */
 export const SESSION_TTL_MS = 30 * 60 * 1000;
@@ -69,12 +71,14 @@ export const MAX_SESSION_SCORE: Record<GameType, number> = {
   "flag-quiz": 2000,
   "capital-quiz": 2000,
   "map-guess": 5000,
+  "city-photo": 2000,
 };
 
 export const ROUNDS_PER_GAME: Record<GameType, number> = {
   "flag-quiz": CHOICE_ROUNDS,
   "capital-quiz": CHOICE_ROUNDS,
   "map-guess": MAP_GUESS_ROUNDS,
+  "city-photo": CHOICE_ROUNDS,
 };
 
 /** Liderlik listesi sınırları. */

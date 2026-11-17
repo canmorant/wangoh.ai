@@ -9,6 +9,7 @@ import { bearer, createAdmin, createTestApp, registerUser, type TestApp, type Te
 import {
   correctAnswerOf,
   finish,
+  fixtureCitySource,
   fixtureCountries,
   gameClock,
   gameRandom,
@@ -22,7 +23,7 @@ import {
   wrongAnswerOf,
 } from "./helpers/games.js";
 
-const ROUNDS: Record<GameType, number> = { "flag-quiz": 10, "capital-quiz": 10, "map-guess": 5 };
+const ROUNDS: Record<GameType, number> = { "flag-quiz": 10, "capital-quiz": 10, "map-guess": 5, "city-photo": 10 };
 
 /** Oyun saatini sabitler; `advance` ile ilerletilir. */
 function fakeClock(t: TestApp, at = Date.now()) {
@@ -113,10 +114,16 @@ describe("oyunlar: oturum akışı", () => {
         expect(start.round.question.flagUrl).toMatch(/\/flags\/[a-z]{2}\.svg$/);
         expect(start.round.question.flag).toMatch(/^flag-/);
         expect(start.round.question.countryName).toBeNull();
+      } else if (type === "city-photo") {
+        expect(start.round.question.imageUrl).toMatch(/\/og\/sehir-[a-z]{2}-[12]\.jpg$/);
+        expect(start.round.question.countryName).toBeNull();
+        expect(start.round.question.flagUrl).toBeNull();
+        expect(start.round.question.flag).toBeNull();
       } else {
         expect(start.round.question.countryName).toMatch(/^Ülke /);
         expect(start.round.question.flagUrl).toBeNull();
       }
+      if (type !== "city-photo") expect(start.round.question).toMatchObject({ imageUrl: null, imageCredit: null });
 
       const rounds = await secretRounds(t, start.sessionId);
       expect(rounds).toHaveLength(total);
@@ -200,6 +207,91 @@ describe("oyunlar: oturum akışı", () => {
       });
       expect(played.finish.correctCount).toBe(total - 2);
       expect(played.finish.score).toBe(played.answers.reduce((s, a) => s + a.points, 0));
+    });
+  });
+
+  describe("city-photo: fotoğraf, atıf ve rehber bağlantısı", () => {
+    it("soru fotoğrafı ve yalnız yazar/lisans atfını taşır; kaynak bağlantısı ve şehrin rehber adresi cevapla birlikte gelir", async () => {
+      const u = await newUser();
+      const start = await startGame(t, u.accessToken, "city-photo");
+      const rounds = await secretRounds(t, start.sessionId);
+      // Oturum başı ve geri yükleme: hiçbir turun kaynak bağlantısı (dosya adı şehri ele verir) yanıta girmez.
+      const restored = await getSession(u.accessToken, start.sessionId);
+      for (const body of [start, restored.body]) {
+        expect(JSON.stringify(body)).not.toContain("commons.example.org");
+        expect(keysIn(body).has("sourceUrl")).toBe(false);
+        expect(keysIn(body).has("citySlug")).toBe(false);
+      }
+      for (const o of start.round.options!) expect(o.id).toMatch(/^[A-Z]{2}:sehir-[a-z]{2}-[12]$/);
+      expect(start.round.options!.map((o) => o.label).every((label) => /^Şehir [A-Z]{2} [12]$/.test(label))).toBe(true);
+
+      let credited = 0;
+      let plain = 0;
+      let round = start.round;
+      for (let i = 0; i < rounds.length; i++) {
+        const secret = rounds[i]!;
+        const n = Number(secret.citySlug!.slice(-1));
+        expect(round.question.imageUrl).toBe(`https://wangoh.com/og/sehir-${secret.countryCode!.toLowerCase()}-${n}.jpg`);
+        // 1. şehirlerin görseli atıf ister, 2. şehirlerinki istemez (fixture).
+        if (n === 1) {
+          credited++;
+          expect(round.question.imageCredit).toEqual({ author: `Yazar ${secret.countryCode} 1`, licenseName: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0" });
+        } else {
+          plain++;
+          expect(round.question.imageCredit).toBeNull();
+        }
+        const res = await submit(t, u.accessToken, start.sessionId, i, i % 2 === 0 ? secret.code : wrongAnswerOf(secret, "city-photo"));
+        expect(res.status).toBe(200);
+        expect(res.body.correct).toBe(i % 2 === 0);
+        // Doğru da yanlış da cevaplansa doğru şehir, rehber adresi ve tam atıf açıklanır.
+        expect(res.body.correctAnswer).toEqual({
+          code: secret.code,
+          label: `Şehir ${secret.countryCode} ${n}`,
+          lat: null,
+          lng: null,
+          countryCode: secret.countryCode,
+          citySlug: secret.citySlug,
+          imageCredit: n === 1 ? { author: `Yazar ${secret.countryCode} 1`, licenseName: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0", sourceUrl: fixtureCitySource(secret.countryCode!, 1) } : null,
+        });
+        if (res.body.nextRound) {
+          expect(JSON.stringify(res.body.nextRound)).not.toContain("commons.example.org");
+          round = res.body.nextRound;
+        }
+      }
+      expect(credited + plain).toBe(10);
+      const done = await finish(t, u.accessToken, start.sessionId);
+      expect(done.body).toMatchObject({ gameType: "city-photo", correctCount: 5 });
+    });
+
+    it("istenen dilde şehir adı; cevap seçenek kimliğiyle birebir eşleşmeli (ülke kodu, başka şehir, küçük harf 400)", async () => {
+      const u = await newUser();
+      const start = await startGame(t, u.accessToken, "city-photo", "?lang=en");
+      expect(start.round.options!.map((o) => o.label).every((label) => /^City [A-Z]{2} [12]$/.test(label))).toBe(true);
+      const [secret] = await secretRounds(t, start.sessionId);
+      const offered = new Set(secret!.options.map((o) => o.code));
+      const outsider = fixtureCountries(30)
+        .map((c) => `${c.code}:sehir-${c.code.toLowerCase()}-1`)
+        .find((key) => !offered.has(key))!;
+      for (const bad of [secret!.countryCode, outsider, secret!.code.toLowerCase(), 5, { lat: 1, lng: 2 }]) {
+        const res = await submit(t, u.accessToken, start.sessionId, 0, bad);
+        expect(res.status).toBe(400);
+        expect(JSON.stringify(res.body)).not.toContain(secret!.citySlug!);
+      }
+      const ok = await submit(t, u.accessToken, start.sessionId, 0, secret!.code, "?lang=en");
+      expect(ok.body).toMatchObject({ correct: true, correctAnswer: { label: `City ${secret!.countryCode} ${secret!.citySlug!.slice(-1)}` } });
+    });
+
+    it("liderlik ve istatistik yeni türü tanır; genel sıralama dört türün en iyilerinin toplamıdır", async () => {
+      const u = await newUser("Şehirci");
+      const city = await playThrough(t, u.accessToken, "city-photo");
+      const flag = await playThrough(t, u.accessToken, "flag-quiz");
+      const board = await t.http.get("/v1/leaderboards/city-photo");
+      expect(board.status).toBe(200);
+      expect(board.body.entries.some((row: { displayName: string; score: number }) => row.displayName === "Şehirci" && row.score === city.finish.score)).toBe(true);
+      const overall = await t.http.get("/v1/leaderboards/overall/me").set(bearer(u.accessToken));
+      expect(overall.body.personalBest).toBe(city.finish.score + flag.finish.score);
+      const stats = await t.http.get("/v1/users/me/stats").set(bearer(u.accessToken));
+      expect(stats.body.items.find((item: { gameType: string }) => item.gameType === "city-photo")).toMatchObject({ gamesPlayed: 1, bestScore: city.finish.score });
     });
   });
 
@@ -375,8 +467,8 @@ describe("oyunlar: oturum akışı", () => {
   });
 
   describe("geri bildirim payı: sonraki turun sayacı cevap anı + pay'da başlar", () => {
-    it("pay sabitleri: çoktan seçmeli 2 sn, harita 5 sn", () => {
-      expect(FEEDBACK_GRACE_MS).toEqual({ "flag-quiz": 2_000, "capital-quiz": 2_000, "map-guess": 5_000 });
+    it("pay sabitleri: çoktan seçmeli 2 sn, harita 5 sn, şehir fotoğrafı 3 sn", () => {
+      expect(FEEDBACK_GRACE_MS).toEqual({ "flag-quiz": 2_000, "capital-quiz": 2_000, "map-guess": 5_000, "city-photo": 3_000 });
     });
 
     it.each(GAME_TYPES)("%s: nextRound.startedAt = cevap anı + pay, deadlineAt = +20 sn; geri yükleme aynı turu verir; oturum süresi uzamaz", async (type) => {
@@ -1167,7 +1259,7 @@ describe("oyunlar: havuz yetersizliği", () => {
       const res = await t.http.post(`/v1/games/${type}/sessions`).set(bearer(u.accessToken));
       expect(res.status, type).toBe(409);
       expect(res.body).toMatchObject({ statusCode: 409, code: "GAME_POOL_TOO_SMALL" });
-      expect(res.body.message).toMatch(/yeterli ülke/);
+      expect(res.body.message).toMatch(/yeterli veri/);
     }
     expect(await t.db.select().from(gameSessions)).toHaveLength(0);
   });

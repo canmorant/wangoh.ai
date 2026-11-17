@@ -1,8 +1,8 @@
 import { describe, expect, it } from "vitest";
 import { AppException } from "../common/errors.js";
-import { capitalQuizStrategy, flagQuizStrategy, mapGuessStrategy, streakBefore, strategyFor } from "./game-engine.js";
+import { capitalQuizStrategy, cityKey, cityPhotoStrategy, flagQuizStrategy, mapGuessStrategy, streakBefore, strategyFor } from "./game-engine.js";
 import { GAME_TYPES } from "../db/schema/enums.js";
-import type { PoolCountry, StoredRound } from "./games.types.js";
+import type { PoolCity, PoolCountry, StoredRound } from "./games.types.js";
 import { cryptoRng, sample, seededRng, shuffle } from "./rng.js";
 
 const CONTINENTS = ["africa", "americas", "asia", "europe", "oceania"] as const;
@@ -167,12 +167,12 @@ describe("çoktan seçmeli motor (flag-quiz)", () => {
   it("soru görünümü hedefin kodunu ya da doğru seçeneği ele vermez; bayrak sorunun kendisidir", () => {
     const [round] = flagQuizStrategy.buildRounds(pool, seededRng(5));
     const question = flagQuizStrategy.question(round!, "tr", "https://assets.test");
-    expect(question).toEqual({ flag: round!.flag, flagUrl: `https://assets.test/flags/${round!.code.toLowerCase()}.svg`, countryName: null });
+    expect(question).toEqual({ flag: round!.flag, flagUrl: `https://assets.test/flags/${round!.code.toLowerCase()}.svg`, countryName: null, imageUrl: null, imageCredit: null });
     const options = flagQuizStrategy.options(round!, "en")!;
     expect(options).toHaveLength(4);
     expect(options.every((o) => o.label.startsWith("Country "))).toBe(true);
     expect(Object.keys(options[0]!).sort()).toEqual(["id", "label"]);
-    expect(flagQuizStrategy.correctAnswer(round!, "tr")).toEqual({ code: round!.code, label: `Ülke ${round!.code}`, lat: null, lng: null });
+    expect(flagQuizStrategy.correctAnswer(round!, "tr")).toEqual({ code: round!.code, label: `Ülke ${round!.code}`, lat: null, lng: null, countryCode: null, citySlug: null, imageCredit: null });
   });
 
   it("dil çevirisi yoksa Türkçeye düşer", () => {
@@ -226,7 +226,7 @@ describe("capital-quiz", () => {
     expect(capitalQuizStrategy.options(found!, "tr")!.map((o) => o.label)).toContain("Pretoria / Cape Town");
 
     const question = capitalQuizStrategy.question(found!, "en", "https://assets.test");
-    expect(question).toEqual({ flag: null, flagUrl: null, countryName: "Country AA" });
+    expect(question).toEqual({ flag: null, flagUrl: null, countryName: "Country AA", imageUrl: null, imageCredit: null });
     expect(JSON.stringify(question)).not.toMatch(/Pretoria|"AA"/);
   });
 });
@@ -257,9 +257,9 @@ describe("map-guess", () => {
     expect(() => mapGuessStrategy.buildRounds(makePool(9), seededRng(1))).toThrow(AppException);
     const [round] = mapGuessStrategy.buildRounds(makePool(20), seededRng(1));
     const question = mapGuessStrategy.question(round!, "tr", "https://assets.test");
-    expect(question).toEqual({ flag: null, flagUrl: null, countryName: `Ülke ${round!.code}` });
+    expect(question).toEqual({ flag: null, flagUrl: null, countryName: `Ülke ${round!.code}`, imageUrl: null, imageCredit: null });
     const target = mapGuessStrategy.correctAnswer(round!, "tr");
-    expect(target).toEqual({ code: round!.code, label: `Ülke ${round!.code}`, lat: round!.latitude, lng: round!.longitude });
+    expect(target).toEqual({ code: round!.code, label: `Ülke ${round!.code}`, lat: round!.latitude, lng: round!.longitude, countryCode: null, citySlug: null, imageCredit: null });
   });
 });
 
@@ -362,8 +362,136 @@ describe("notlandırma", () => {
     expect(streakBefore(rounds, 7)).toBe(0);
   });
 
-  it("strategyFor üç türü de çözer; tur sayıları belgedeki gibi", () => {
-    expect(GAME_TYPES.map((t) => strategyFor(t).rounds)).toEqual([10, 10, 5]);
+  it("strategyFor dört türü de çözer; tur sayıları belgedeki gibi", () => {
+    expect(GAME_TYPES.map((t) => strategyFor(t).rounds)).toEqual([10, 10, 5, 10]);
     for (const type of GAME_TYPES) expect(strategyFor(type).type).toBe(type);
+  });
+});
+
+/** `n` şehirlik sahte havuz: ülke başına iki şehir, kıtalara sırayla dağıtılmış; tek sayılı şehirlerin görseli atıf ister. */
+function makeCityPool(n: number, continentOf: (i: number) => string = (i) => CONTINENTS[i % CONTINENTS.length]!): PoolCity[] {
+  return Array.from({ length: n }, (_, i) => {
+    const countryCode = `${String.fromCharCode(65 + Math.floor(i / 52))}${String.fromCharCode(65 + (Math.floor(i / 2) % 26))}`;
+    const slug = `sehir-${i}`;
+    return {
+      countryCode,
+      slug,
+      continentSlug: continentOf(i),
+      names: { tr: { name: `Şehir ${i}` }, en: { name: `City ${i}` } },
+      image: `/images/gorsel-${i}.avif`,
+      credit: i % 2 === 1 ? { author: `Yazar ${i}`, licenseName: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0", sourceUrl: `https://commons.example.org/wiki/File:Sehir_${i}.jpg` } : null,
+    };
+  });
+}
+
+describe("city-photo", () => {
+  const pool = makeCityPool(40);
+
+  it("10 tur kurar: hedefler tekil, her turda 4 farklı seçenek var ve doğru cevap bunlardan biri", () => {
+    for (let seed = 1; seed <= 25; seed++) {
+      const rounds = cityPhotoStrategy.buildRounds(pool, seededRng(seed));
+      expect(rounds).toHaveLength(10);
+      expect(new Set(rounds.map((r) => r.code)).size).toBe(10);
+      for (const round of rounds) {
+        expect(round.options).toHaveLength(4);
+        expect(new Set(codesOf(round)).size).toBe(4);
+        expect(codesOf(round)).toContain(round.code);
+        expect(new Set(round.options.map((o) => o.names.tr.name)).size).toBe(4);
+        expect(round.code).toBe(cityKey({ countryCode: round.countryCode!, slug: round.citySlug! }));
+        expect(round.image).toMatch(/^\/images\/gorsel-\d+\.avif$/);
+      }
+    }
+  });
+
+  it("aynı tohum aynı oyunu, farklı tohum farklı oyunu üretir; doğru cevap dört konuma da düşer", () => {
+    expect(cityPhotoStrategy.buildRounds(pool, seededRng(11))).toEqual(cityPhotoStrategy.buildRounds(pool, seededRng(11)));
+    expect(cityPhotoStrategy.buildRounds(pool, seededRng(11))).not.toEqual(cityPhotoStrategy.buildRounds(pool, seededRng(12)));
+    const positions = new Set<number>();
+    for (let seed = 1; seed <= 30; seed++) for (const round of cityPhotoStrategy.buildRounds(pool, seededRng(seed))) positions.add(codesOf(round).indexOf(round.code));
+    expect([...positions].sort()).toEqual([0, 1, 2, 3]);
+  });
+
+  it("yanlış seçenekler önce aynı kıtadan gelir", () => {
+    const europeHeavy = makeCityPool(40, (i) => (i < 30 ? "europe" : "asia"));
+    for (let seed = 1; seed <= 20; seed++) {
+      for (const round of cityPhotoStrategy.buildRounds(europeHeavy, seededRng(seed))) {
+        const index = Number(round.citySlug!.replace("sehir-", ""));
+        if (index >= 30) continue; // Asya hedefi: 9 Asyalı aday da yeter
+        for (const code of codesOf(round)) expect(Number(code.split(":")[1]!.replace("sehir-", ""))).toBeLessThan(30);
+      }
+    }
+  });
+
+  it("adı ya da fotoğrafı başka şehirle aynı olan şehirler ne hedef ne seçenek olur", () => {
+    const dup = makeCityPool(40);
+    dup[3]!.names.tr.name = dup[4]!.names.tr.name; // aynı ad
+    dup[7]!.image = dup[8]!.image; // aynı fotoğraf
+    const banned = new Set([3, 4, 7, 8].map((i) => cityKey(dup[i]!)));
+    for (let seed = 1; seed <= 40; seed++) {
+      for (const round of cityPhotoStrategy.buildRounds(dup, seededRng(seed))) {
+        for (const code of codesOf(round)) expect(banned.has(code)).toBe(false);
+      }
+    }
+  });
+
+  it("havuz küçükse (tekil şehir < 10) 409", () => {
+    expect(() => cityPhotoStrategy.buildRounds(makeCityPool(9), seededRng(1))).toThrow(AppException);
+    const same = makeCityPool(12);
+    for (const c of same) c.names.tr.name = "Hep Aynı";
+    expect(() => cityPhotoStrategy.buildRounds(same, seededRng(1))).toThrow(AppException);
+  });
+
+  it("soru yalnız fotoğrafı ve yazar/lisans atfını taşır: şehrin kimliği, adı ve kaynak bağlantısı yok", () => {
+    const rounds = cityPhotoStrategy.buildRounds(pool, seededRng(5));
+    const credited = rounds.find((r) => r.imageCredit)!;
+    const plain = rounds.find((r) => !r.imageCredit)!;
+    const question = cityPhotoStrategy.question(credited, "tr", "https://assets.test");
+    const n = credited.citySlug!.replace("sehir-", "");
+    expect(question).toEqual({
+      flag: null,
+      flagUrl: null,
+      countryName: null,
+      imageUrl: `https://assets.test/og/gorsel-${n}.jpg`,
+      imageCredit: { author: `Yazar ${n}`, licenseName: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0" },
+    });
+    expect(JSON.stringify(question)).not.toContain("commons.example.org");
+    expect(JSON.stringify(question)).not.toContain(credited.code);
+    expect(cityPhotoStrategy.question(plain, "tr", "https://assets.test").imageCredit).toBeNull();
+  });
+
+  it("seçenek etiketi istenen dilde şehir adıdır; doğru cevap rehber adresini ve tam atfı taşır", () => {
+    const [round] = cityPhotoStrategy.buildRounds(pool, seededRng(9)).filter((r) => r.imageCredit);
+    const n = round!.citySlug!.replace("sehir-", "");
+    expect(cityPhotoStrategy.options(round!, "en")!.map((o) => o.label).every((label) => /^City \d+$/.test(label))).toBe(true);
+    expect(cityPhotoStrategy.options(round!, "es")!.map((o) => o.label).every((label) => /^Şehir \d+$/.test(label))).toBe(true); // çeviri yoksa Türkçe
+    expect(cityPhotoStrategy.correctAnswer(round!, "en")).toEqual({
+      code: round!.code,
+      label: `City ${n}`,
+      lat: null,
+      lng: null,
+      countryCode: round!.countryCode,
+      citySlug: round!.citySlug,
+      imageCredit: { author: `Yazar ${n}`, licenseName: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0", sourceUrl: `https://commons.example.org/wiki/File:Sehir_${n}.jpg` },
+    });
+  });
+
+  it("cevap seçenek kimliğiyle birebir eşleşmeli: başka şehir, büyük/küçük harf farkı ve yanlış tür 400; null geçerli", () => {
+    const [round] = cityPhotoStrategy.buildRounds(pool, seededRng(3));
+    expect(cityPhotoStrategy.parseAnswer(round!.code, round!)).toBe(round!.code);
+    expect(cityPhotoStrategy.parseAnswer(` ${round!.code} `, round!)).toBe(round!.code);
+    expect(cityPhotoStrategy.parseAnswer(null, round!)).toBeNull();
+    const outsider = pool.map(cityKey).find((key) => !codesOf(round!).includes(key))!;
+    for (const bad of [outsider, round!.code.toUpperCase() === round!.code ? "x" : round!.code.toUpperCase(), 7, { lat: 1, lng: 2 }, ""]) {
+      expect(() => cityPhotoStrategy.parseAnswer(bad, round!)).toThrow(AppException);
+    }
+  });
+
+  it("puanlama öteki çoktan seçmeli oyunlarla aynı: doğru 100 + hız + seri, yanlış ve cevapsız 0", () => {
+    const [round] = cityPhotoStrategy.buildRounds(pool, seededRng(4));
+    const wrong = codesOf(round!).find((code) => code !== round!.code)!;
+    expect(cityPhotoStrategy.grade(round!, round!.code, { elapsedMs: 0, streakBefore: 0 })).toMatchObject({ correct: true, points: 150, speedBonus: 50, streakBonus: 0, streak: 1 });
+    expect(cityPhotoStrategy.grade(round!, wrong, { elapsedMs: 0, streakBefore: 3 })).toMatchObject({ correct: false, points: 0, streak: 0 });
+    expect(cityPhotoStrategy.grade(round!, null, { elapsedMs: 0, streakBefore: 3 })).toMatchObject({ correct: false, points: 0, streak: 0 });
+    expect(cityPhotoStrategy.grade(round!, round!.code, { elapsedMs: 0, streakBefore: 0 })).toEqual(flagQuizStrategy.grade({ ...round!, code: "AA" }, "AA", { elapsedMs: 0, streakBefore: 0 }));
   });
 });

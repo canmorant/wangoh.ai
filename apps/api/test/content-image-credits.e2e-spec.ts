@@ -367,7 +367,7 @@ describe("görsel atıfları: migrasyon", () => {
     temp.push(dir);
     mkdirSync(join(dir, "meta"));
     const journal = JSON.parse(readFileSync(join(DRIZZLE_DIR, "meta", "_journal.json"), "utf8")) as { entries: Array<{ idx: number; tag: string }> };
-    expect(journal.entries.map((e) => e.tag)).toEqual(["0000_init", "0001_image_credits"]); // 0000 değiştirilmedi, 0001 yalnız eklendi
+    expect(journal.entries.map((e) => e.tag)).toEqual(["0000_init", "0001_image_credits", "0002_city_photo_game"]); // öncekiler değiştirilmedi, yenileri yalnız eklendi
     writeFileSync(join(dir, "meta", "_journal.json"), JSON.stringify({ ...journal, entries: journal.entries.slice(0, 1) }));
     cpSync(join(DRIZZLE_DIR, "0000_init.sql"), join(dir, "0000_init.sql"));
 
