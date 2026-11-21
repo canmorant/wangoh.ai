@@ -2,14 +2,21 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
   "installCommand": "pnpm install --filter api... --frozen-lockfile",
-  "buildCommand": "pnpm build && node dist/db/seed/cli.js",
+  "buildCommand": "pnpm build && node scripts/bundle-vercel.mjs && node dist/db/seed/cli.js",
   "outputDirectory": "public",
-  "regions": ["fra1"],
+  "regions": [
+    "fra1"
+  ],
   "functions": {
     "api/index.js": {
       "maxDuration": 30,
       "includeFiles": "{package.json,drizzle/**}"
     }
   },
-  "rewrites": [{ "source": "/(.*)", "destination": "/api" }]
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/api"
+    }
+  ]
 }

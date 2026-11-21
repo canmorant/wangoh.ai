@@ -2,10 +2,10 @@
  * Vercel işlevi. Nest uygulaması ilk istekte kurulur (soğuk başlatma) ve aynı örnekteki sonraki isteklerde
  * yeniden kullanılır; `main.ts`teki `listen` yerine Express uygulamasının kendisi istek işleyicisidir.
  * Yapılandırma ortam değişkenlerinden gelir (bkz. docs/backend-mobil-mimarisi.md, bölüm 4 ve README "Yayın").
- * Bu dosya derlenmiş çıktıyı (`dist/`) içe aktarır: önce `pnpm build` çalışmış olmalıdır.
+ * Bu dosya paketlenmiş çıktıyı (`api/_server.mjs`, `scripts/bundle-vercel.mjs`) içe aktarır: önce `pnpm build`
+ * ve paketleme çalışmış olmalıdır (vercel.json derleme komutu).
  */
-import { createApp } from "../dist/bootstrap.js";
-import { formatStartupError } from "../dist/common/startup-error.js";
+import { createApp, formatStartupError } from "./_server.mjs";
 
 let ready;
 

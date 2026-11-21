@@ -260,14 +260,15 @@ it("...", async () => {
 - **Çalışma biçimi:** `api/index.js` tek bir Vercel işlevidir; Nest uygulamasını ilk istekte kurar (`createApp` + `init`) ve
   Express uygulamasını istek işleyicisi olarak çağırır. `vercel.json` tüm yolları bu işleve yönlendirir (bölge `fra1`).
   Vercel projesinin kök dizini `apps/api`'dir.
-- **Derleme:** `pnpm build && node dist/db/seed/cli.js`. Migrasyonlar ve tohum DERLEME sırasında uygulanır (ikisi de
+- **Derleme:** `pnpm build && node scripts/bundle-vercel.mjs && node dist/db/seed/cli.js`. Paketleme (esbuild) API'yi
+  `api/_server.mjs` tek dosyasına toplar: Vercel çalışma zamanı CommonJS paketlerin ESM paketleri `require()` etmesine izin vermiyor. Migrasyonlar ve tohum DERLEME sırasında uygulanır (ikisi de
   idempotent); çalışma anında `MIGRATE_ON_BOOT=false` ve `SEED_ON_BOOT=false` (soğuk başlatma veritabanı şemasına dokunmaz).
 - **Veritabanı:** Supabase PostgreSQL. Vercel yalnız IPv4 çıkışlıdır, bu yüzden doğrudan adres değil paylaşımlı havuzlayıcı
   kullanılır (işlem kipi, 6543). Bağlantı API'ye özel `wangoh_api` rolüyledir; `DATABASE_URL` sonunda
   `?uselibpqcompat=true&sslmode=require` bulunur (şifreli bağlantı).
 - **Ortam değişkenleri (Vercel, Production):** `NODE_ENV=production`, `DATABASE_URL`, `JWT_ACCESS_SECRET`,
-  `MIGRATE_ON_BOOT=false`, `TRUST_PROXY=1`, `NODEJS_HELPERS=0` (gövdeyi Vercel değil uygulama ayrıştırır).
+  `MIGRATE_ON_BOOT=false`, `SEED_ON_BOOT=false`, `SWAGGER_ENABLED=false`, `TRUST_PROXY=1`, `NODEJS_HELPERS=0` (gövdeyi Vercel değil uygulama ayrıştırır).
   Yönetici hesabı için `ADMIN_EMAIL` + `ADMIN_PASSWORD` eklenir (ikisi de varsa açılışta oluşturulur).
 - **Supabase Veri API'si:** uygulama tabloları `wangoh_api` rolüne aittir; `anon`/`authenticated` rollerine yetki verilmez
-  ve tablolarda satır düzeyi güvenlik açıktır. Yeni tablo ekleyen migrasyondan sonra `alter table ... enable row level security`
+  ve tablolarda satır düzeyi güvenlik açıktır (`wangoh_api` sahip olduğu için etkilenmez). Yeni tablo ekleyen migrasyondan sonra `alter table ... enable row level security`
   çalıştırın.

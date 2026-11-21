@@ -1,3 +1,4 @@
 # Yerel PGlite verisi ve derleme çıktısı
 .data/
 dist/
+api/_server.mjs
